@@ -198,20 +198,20 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
-	#Human player flag
-	option = {
-		name = gm_actions.91.t
-		trigger_event = {
-			id = gm_actions.91
-			days = 0
-			popup = yes
-		}
-	}
 	#Truce
 	option = {
 		name = gm_actions.90.t
 		trigger_event = {
 			id = gm_actions.90
+			days = 0
+			popup = yes
+		}
+	}
+	#Human player flag
+	option = {
+		name = gm_actions.91.t
+		trigger_event = {
+			id = gm_actions.91
 			days = 0
 			popup = yes
 		}
@@ -3304,30 +3304,46 @@ gm_actions.90 = {
 	
 	option = {
 		name = gm_actions.90.d
-		scope:recipient = {
-			create_bidirectional_truce = {
-				country = scope:scope_GM_target
-				months = 60
+		every_country = {
+			limit = {
+				is_player = yes
 			}
-		}
-		scope:recipient = {
-			remove_variable = actionee
-			remove_modifier = GM_target
+			add_modifier = started_player
 		}
 		remove_global_variable = GM_taking_action
 	}
 	
 	option = {
 		name = gm_actions.90.e
-		scope:recipient = {
-			end_truce = scope:scope_GM_target  
+		every_country = {
+			limit = {
+				is_ai = yes
+			}
+			remove_modifier = started_player
 		}
 		scope:recipient = {
 			remove_variable = actionee
-			remove_modifier = GM_target
 		}
 		remove_global_variable = GM_taking_action
 	}
+	
+	option = {
+		name = gm_actions.90.f
+		scope:recipient = {
+			add_modifier = started_player
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.90.g
+		scope:recipient = {
+			remove_modifier = started_player
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}	
 }
 
 gm_actions.91 = {
@@ -3358,25 +3374,23 @@ gm_actions.91 = {
 	
 	option = {
 		name = gm_actions.91.a
-		every_country = {
-			limit = {
-				is_player = yes
-			}
-			add_modifier = started_player
+		scope:recipient = {
+			remove_variable = actionee
 		}
 		remove_global_variable = GM_taking_action
 	}
 	
 	option = {
 		name = gm_actions.91.b
-		every_country = {
-			limit = {
-				is_ai = yes
+		scope:recipient = {
+			create_bidirectional_truce = {
+				country = scope:scope_GM_target
+				months = 60
 			}
-			remove_modifier = started_player
 		}
 		scope:recipient = {
 			remove_variable = actionee
+			remove_modifier = GM_target
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -3384,30 +3398,14 @@ gm_actions.91 = {
 	option = {
 		name = gm_actions.91.c
 		scope:recipient = {
-			add_modifier = started_player
-			remove_variable = actionee
+			end_truce = scope:scope_GM_target  
 		}
-		remove_global_variable = GM_taking_action
-	}
-	
-	option = {
-		name = gm_actions.91.d
-		scope:recipient = {
-			remove_modifier = started_player
-			remove_variable = actionee
-		}
-		remove_global_variable = GM_taking_action
-	}
-	
-	
-	option = {
-		name = gm_actions.1.a
 		scope:recipient = {
 			remove_variable = actionee
+			remove_modifier = GM_target
 		}
 		remove_global_variable = GM_taking_action
 	}
-	
 }
 
 gm_actions.95 = {
@@ -3550,1104 +3548,23 @@ gm_actions.100 = {
 	}
 	
 	option = {
-		name = gm_actions.100.b
-		trigger_event = {
-			id = gm_actions.101
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.c
-		trigger_event = {
-			id = gm_actions.102
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.d
-		trigger_event = {
-			id = gm_actions.103
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.e
-		trigger_event = {
-			id = gm_actions.104
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.f
-		trigger_event = {
-			id = gm_actions.105
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.g
-		trigger_event = {
-			id = gm_actions.106
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.h
-		trigger_event = {
-			id = gm_actions.107
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.i1
-		trigger = {
-			NOT = {
-				exists = c:GER
-				scope:recipient = {
-					has_modifier = GM_germany
-				}
-			}
-		}
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = GM_germany
-			remove_variable = actionee
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.i2
-		trigger = {
-			scope:recipient = {
-				has_modifier = GM_germany
-			}
-		}
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = GM_germany
-			remove_variable = actionee
-		}
-	}
-	
-	option = {
-		name = tech_adjustement
+		name = balance_modifier_mod
 		trigger = {
 			any_country = {
 				NOT = {
-					has_modifier = tech_adjustement
+					has_modifier = balance_modifier_mod
 				}
 			}
 		}
 		every_country = {
 			limit = {
 				NOT = {
-					has_modifier = tech_adjustement
+					has_modifier = balance_modifier_mod
 				}
 			}
-			add_modifier = tech_adjustement
+			add_modifier = balance_modifier_mod
 		}
 		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.j
-		scope:recipient = {
-			trigger_event = {
-				id = plague.1 
-				days = 0
-				popup = yes
-			}
-		}
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	
-	option = {
-		name = gm_actions.100.k
-		trigger_event = {
-			id = gm_actions.108
-			days = 0
-			popup = yes
-		}
-	}
-	
-}
-
-gm_actions.101 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.101.t
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.100
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.101.a
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.101.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = SNEED
-				months = 37
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.101.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = SNEED
-			remove_variable = actionee
-		}
-	}	
-
-}
-
-gm_actions.102 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.102.t
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.100
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.102.a
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	
-	option = {
-		name = gm_actions.102.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_austria
-				is_decaying = yes
-				months = 180
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.102.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = gm_austria
-			remove_variable = actionee
-		}
-	}	
-
-}
-
-gm_actions.103 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.103.t
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.100
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.103.a
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.103.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = gm_tuesday_a
-			remove_modifier = gm_tuesday_b
-			remove_modifier = gm_tuesday_c
-			remove_modifier = gm_tuesday_d
-			remove_modifier = gm_tuesday_e
-			remove_modifier = gm_tuesday_f
-			remove_modifier = gm_tuesday_g
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.103.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_tuesday_a
-				is_decaying = yes
-				months = 120
-			}
-			remove_variable = actionee
-		}
-	}	
-	option = {
-		name = gm_actions.103.d
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_tuesday_b
-				is_decaying = yes
-				months = 120
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.103.e
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_tuesday_c
-				is_decaying = yes
-				months = 120
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.103.f
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_tuesday_d
-				is_decaying = yes
-				months = 120
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.103.g
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_tuesday_e
-				is_decaying = yes
-				months = 120
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.103.h
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_tuesday_f
-				is_decaying = yes
-				months = 120
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.103.i
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_tuesday_g
-				is_decaying = yes
-				months = 120
-			}
-			remove_variable = actionee
-		}
-	}
-
-}
-
-gm_actions.104 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.104.t
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.1
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.104.a
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.104.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = gm_tuesday_a
-			remove_modifier = gm_tuesday_b
-			remove_modifier = gm_tuesday_c
-			remove_modifier = gm_tuesday_d
-			remove_modifier = gm_tuesday_e
-			remove_modifier = gm_tuesday_f
-			remove_modifier = gm_tuesday_g
-			remove_modifier = gm_recovery_a
-			remove_modifier = gm_recovery_b
-			remove_modifier = gm_recovery_c
-			remove_modifier = gm_recovery_d
-			remove_modifier = gm_recovery_e
-			remove_modifier = gm_recovery_f
-			remove_modifier = gm_recovery_g
-			remove_modifier = gm_recovery_h
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.104.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_recovery_a
-				is_decaying = yes
-				months = 120
-			}
-			remove_modifier = gm_tuesday_a
-			remove_modifier = gm_tuesday_b
-			remove_modifier = gm_tuesday_c
-			remove_modifier = gm_tuesday_d
-			remove_modifier = gm_tuesday_e
-			remove_modifier = gm_tuesday_f
-			remove_modifier = gm_tuesday_g
-			remove_variable = actionee
-		}
-	}	
-	option = {
-		name = gm_actions.104.d
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_recovery_b
-				is_decaying = yes
-				months = 120
-			}
-			remove_modifier = gm_tuesday_a
-			remove_modifier = gm_tuesday_b
-			remove_modifier = gm_tuesday_c
-			remove_modifier = gm_tuesday_d
-			remove_modifier = gm_tuesday_e
-			remove_modifier = gm_tuesday_f
-			remove_modifier = gm_tuesday_g
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.104.e
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_recovery_c
-				is_decaying = yes
-				months = 120
-			}
-			remove_modifier = gm_tuesday_a
-			remove_modifier = gm_tuesday_b
-			remove_modifier = gm_tuesday_c
-			remove_modifier = gm_tuesday_d
-			remove_modifier = gm_tuesday_e
-			remove_modifier = gm_tuesday_f
-			remove_modifier = gm_tuesday_g
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.104.f
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_recovery_d
-				is_decaying = yes
-				months = 120
-			}
-			remove_modifier = gm_tuesday_a
-			remove_modifier = gm_tuesday_b
-			remove_modifier = gm_tuesday_c
-			remove_modifier = gm_tuesday_d
-			remove_modifier = gm_tuesday_e
-			remove_modifier = gm_tuesday_f
-			remove_modifier = gm_tuesday_g
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.104.g
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_recovery_e
-				is_decaying = yes
-				months = 120
-			}
-			remove_modifier = gm_tuesday_a
-			remove_modifier = gm_tuesday_b
-			remove_modifier = gm_tuesday_c
-			remove_modifier = gm_tuesday_d
-			remove_modifier = gm_tuesday_e
-			remove_modifier = gm_tuesday_f
-			remove_modifier = gm_tuesday_g
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.104.h
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_recovery_f
-				is_decaying = yes
-				months = 120
-			}
-			remove_modifier = gm_tuesday_a
-			remove_modifier = gm_tuesday_b
-			remove_modifier = gm_tuesday_c
-			remove_modifier = gm_tuesday_d
-			remove_modifier = gm_tuesday_e
-			remove_modifier = gm_tuesday_f
-			remove_modifier = gm_tuesday_g
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.104.i
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_recovery_g
-				is_decaying = yes
-				months = 120
-			}
-			remove_modifier = gm_tuesday_a
-			remove_modifier = gm_tuesday_b
-			remove_modifier = gm_tuesday_c
-			remove_modifier = gm_tuesday_d
-			remove_modifier = gm_tuesday_e
-			remove_modifier = gm_tuesday_f
-			remove_modifier = gm_tuesday_g
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.104.j
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_recovery_h
-				months = 120
-			}
-			remove_variable = actionee
-		}
-	}
-}
-
-gm_actions.105 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.105.t
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.100
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.105.a
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.105.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_socialism
-				months = 120
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.105.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = gm_socialism
-			remove_variable = actionee
-		}
-	}	
-	option = {
-		name = gm_actions.105.d
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_radicals = {
-				value = 0.05
-				interest_group = ig_trade_unions
-				strata = lower_strata
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.105.e
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_small_strike
-				months = 24
-			}
-			remove_variable = actionee
-		}
-	}	
-	option = {
-		name = gm_actions.105.f
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_medium_strike
-				months = 24
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.105.g
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_general_strike
-				months = 24
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.105.h
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = gm_small_strike
-			remove_modifier = gm_medium_strike
-			remove_modifier = gm_general_strike
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.105.i
-		remove_global_variable = GM_taking_action
-		scope:recipient = {		
-			create_character = {
-				template = default
-				ideology = ideology_communist
-				interest_group = ig_trade_unions
-				is_agitator = yes
-				 traits = {
-					charismatic
-					ambitious
-				} 
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.105.j
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			create_character = {
-				template = default
-				ideology = ideology_communist
-				interest_group = ig_rural_folk
-				is_agitator = yes
-				 traits = {
-					charismatic
-					ambitious
-				} 
-			}
-			remove_variable = actionee
-		}
-	}
-}
-
-gm_actions.106 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.106.t
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.100
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.106.a
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.106.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = gm_flu
-			remove_modifier = gm_army_debuff
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.106.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_flu
-				is_decaying = yes
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}	
-	option = {
-		name = gm_actions.106.d
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_army_debuff
-				months = 12
-			}
-			remove_variable = actionee
-		}
-	}
-}
-
-gm_actions.107 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.107.t
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.1
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.107.a
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = food_exports_war
-			}
-			remove_modifier = defending_food_supplies
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = food_exports_subject
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.d
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = food_exports_deal
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.e
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = food_imports_1
-			remove_modifier = food_imports_2
-			remove_modifier = food_imports_3
-			remove_modifier = food_imports_4
-			add_modifier = {
-				name = food_imports_1
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.f
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = food_imports_1
-			remove_modifier = food_imports_2
-			remove_modifier = food_imports_3
-			remove_modifier = food_imports_4
-			add_modifier = {
-				name = food_imports_2
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.g
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = food_imports_1
-			remove_modifier = food_imports_2
-			remove_modifier = food_imports_3
-			remove_modifier = food_imports_4
-			add_modifier = {
-				name = food_imports_3
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.h
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = food_imports_1
-			remove_modifier = food_imports_2
-			remove_modifier = food_imports_3
-			remove_modifier = food_imports_4
-			add_modifier = {
-				name = food_imports_4
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.i
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = defending_food_supplies
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.j
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = food_imports_1
-			remove_modifier = food_imports_2
-			remove_modifier = food_imports_3
-			remove_modifier = food_imports_4
-			remove_modifier = defending_food_supplies
-			remove_modifier = food_exports_war
-			remove_modifier = food_exports_deal
-			remove_modifier = food_exports_subject
-			remove_variable = actionee
-		}
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.107.k
-		remove_global_variable = GM_taking_action
-		trigger_event = {
-			id = volcanic_eruption_iceland.2
-			days = 0
-			popup = yes
-		}
-	}
-	option = {
-		name = volcanic_eruption_iceland.3.t
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			trigger_event = {
-				id = volcanic_eruption_iceland.3
-				days = 0
-				popup = yes
-			}
-			remove_variable = actionee
-		}
-	}
-	
-	option = {
-		name = gm_actions.107.m
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			if = {
-				limit = {
-					NOT = {
-						has_modifier = support_katla_worshipper_country_mod
-					}
-				}
-				add_modifier = {
-					name = support_katla_worshipper_country_mod
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_katla_schizo
-						}
-					}
-				}
-			create_political_movement = { type = movement_katla_schizo }
-			}
-			every_political_movement = {
-				limit = {
-					is_political_movement_type = movement_katla_schizo
-					NOT = {
-						has_modifier = support_katla_worshipper_cult_mod
-					}
-				}
-				add_modifier = support_katla_worshipper_cult_mod
-			}
-			remove_variable = actionee
-		}
-	}
-	
-	option = {
-		name = gm_actions.107.n
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_modifier = support_katla_worshipper_country_mod
-			every_political_movement = {
-				limit = {
-					is_political_movement_type = movement_katla_schizo
-					has_modifier = support_katla_worshipper_cult_mod
-				}
-				remove_modifier = support_katla_worshipper_cult_mod
-			}
-			remove_variable = actionee
-		}
-	}
-}
-
-gm_actions.108 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.108.t
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.1
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.108.a
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.108.b
-		remove_global_variable = GM_taking_action
-		every_country = {
-			add_modifier = {
-				name = great_war_mod  
-			}
-		}
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.108.c
-		remove_global_variable = GM_taking_action
-		every_country = {
-			remove_modifier = great_war_mod 
-		}
 		scope:recipient = {
 			remove_variable = actionee
 		}
