@@ -1,0 +1,41 @@
+pmg_base_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/charcoal_kiln.dds"
+	production_methods = {
+		pm_charcoal_kiln_building_charcoal_burner
+		pm_combustion_chamber_building_charcoal_burner
+		pm_machine_coal_building_charcoal_burner
+		
+	}
+}
+
+pmg_refining_building_charcoal_burner = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_refining_disabled_building_charcoal_burner
+		pm_dust_separation_building_charcoal_burner
+		pm_chemical_refining_building_charcoal_burner
+		pm_environmental_refining_building_charcoal_burner
+		
+	}
+}
+
+pmg_automation_building_charcoal_burner = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_hand_assembly_building_charcoal_burner
+		pm_watertube_boiler_building_charcoal_burner
+		pm_rotary_valve_engine_building_charcoal_burner
+		pm_assembly_lines_building_charcoal_burner
+		
+	}
+}
+
+pmg_transportation_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
+	production_methods = {
+		pm_road_carts_building_charcoal_burner
+		pm_rail_transport_building_charcoal_burner
+		pm_rail_bulk_freight_wagon_building_charcoal_burner
+
+	}
+}

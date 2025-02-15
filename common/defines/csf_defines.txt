@@ -1,0 +1,7 @@
+﻿NPops = { 
+	#vanilla is 0.02
+	COLONY_SPEED_PER_PROVINCE_DIFF_FROM_STANDARD = 0.01 # For every province the state region has above or below COLONY_SPEED_PROVINCE_SIZE_STANDARD, increase or decrease colonization speed by this rate (as a percentage)
+	
+	#vanilla is 0.25... this is probably fine.
+	#COLONY_SPEED_MALUS_PER_POPULATION_INCREMENT = 0.1	# Starting at COLONY_SPEED_THRESHOLD_FROM_POPULATION inhabitants, increase the number of days to complete by this amount proportional to population in the colony + state of province being colonized above 200K (e.g. at COLONY_SPEED_THRESHOLD_FROM_POPULATION = 200K, this set to 0.5, and at 300K total inhabitants, multiply growth by 1/1.25 = 0.8; at 600K inhabitants, multiply by 0.25)
+}

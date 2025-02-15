@@ -1,0 +1,10 @@
+﻿l_english:
+ gm_player:0 "Become Game Master"
+ gm_player_desc:0 "If you pick this and are not a GM, your skull will be crushed."
+ GM_Self_Action:0 "GM Self-Action"
+ GM_Self_Action_desc:0 "Use GM Powers on yourself."
+ 
+ remove_FAQ:0 "Remove FAQ"
+ remove_FAQ_desc:0 "Permanently remove the FAQ."
+ read_FAQ:0 "Open FAQ"
+ read_FAQ_desc:0 "FAQ stands for "Frequently Asked Questions."

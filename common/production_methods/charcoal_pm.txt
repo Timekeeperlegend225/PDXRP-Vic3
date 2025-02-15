@@ -1,0 +1,240 @@
+pm_charcoal_kiln_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/charcoal_kiln.dds"
+	
+	pollution_generation = 50
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 40
+			
+			# output goods
+			goods_output_coal_add = 45
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 5000
+		}
+	}
+}
+
+pm_combustion_chamber_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/combustion_chamber.dds"
+	
+	pollution_generation = 25
+
+
+	unlocking_technologies = {
+		mechanical_tools
+	}	
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 80
+			
+			# output goods
+			goods_output_coal_add = 100
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4500
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_machine_coal_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/machine_coal.dds"
+
+	pollution_generation = 15
+
+	unlocking_technologies = {
+		conveyors
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 120
+			goods_input_tools_add = 15
+			
+			# output goods
+			goods_output_coal_add = 165
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_refining_disabled_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/no_selection.dds"
+}
+
+pm_dust_separation_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/dust_separation.dds"
+
+	pollution_generation = 15
+
+	unlocking_technologies = {
+		distillation
+	}
+
+	unlocking_production_methods = {
+		pm_combustion_chamber_building_charcoal_burner
+		pm_machine_coal_building_charcoal_burner
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			
+			# output goods
+			goods_output_coal_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 500
+		}
+	}
+}
+
+pm_chemical_refining_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_refining.dds"
+
+	pollution_generation = 15
+
+	unlocking_technologies = {
+		fractional_distillation
+	}
+
+	unlocking_production_methods = {
+		pm_machine_coal_building_charcoal_burner
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_cloth_add = 10
+			
+			# output goods
+			goods_output_coal_add = 10
+			goods_output_oil_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1000
+		}
+	}
+}
+
+pm_environmental_refining_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/environmental_refining.dds"
+
+	pollution_generation = 15
+
+	unlocking_technologies = {
+		pneumatic_tools
+	}
+	
+	unlocking_production_methods = {
+		pm_machine_coal_building_charcoal_burner
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_cloth_add = 10
+			goods_input_wood_add = -30
+			
+			# output goods
+			goods_output_coal_add = 10
+			goods_output_oil_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1500
+		}
+	}
+}
+
+pm_automation_hand_assembly_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+}
+
+pm_assembly_lines_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+	
+	pollution_generation = 10
+	
+	unlocking_technologies = {
+		conveyors
+	}
+
+	unlocking_production_methods = {
+		pm_machine_coal_building_charcoal_burner
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_oil_add = 10
+			goods_input_electricity_add = 5
+			goods_input_tools_add = -10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -3000
+		}
+	}
+}
+
+pm_road_carts_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
+}
+
+pm_rail_transport_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
+
+	unlocking_technologies = {
+		railways
+	}
+
+	building_modifiers = {
+
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_rail_bulk_freight_wagon_building_charcoal_burner = {
+	texture = "gfx/interface/icons/production_method_icons/bulk_freight_wagon.dds"
+
+	unlocking_technologies = {
+		electric_railway
+	}
+
+	building_modifiers = {
+
+		workforce_scaled = {
+			# input goods
+			goods_input_transportation_add = 8
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1500
+		}
+	}
+}
