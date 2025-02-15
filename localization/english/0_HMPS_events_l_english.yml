@@ -313,18 +313,29 @@
  gm_actions.831.l:0 "Remove all 50% malus%"
  gm_actions.831.m:0 "Remove Pacification"
  
- gm_actions.84.t:0 "Base game Movement"
+ gm_actions.84.t:0 "Conservatives and Reactionaries Movements"
  gm_actions.84.a:0 "Cancel"
- gm_actions.84.b:0 "With an Agitator"
- gm_actions.84.c:0 "Without an Agitator"
+ gm_actions.84.b:0 "Return"
+ 
+ gm_actions.85.t:0 "Liberals Movements"
+ gm_actions.85.a:0 "Cancel"
+ gm_actions.85.b:0 "Return"
+ 
+ gm_actions.86.t:0 "Socialists and Technocrats Movements"
+ gm_actions.86.a:0 "Cancel"
+ gm_actions.86.b:0 "Return"
+ 
+ gm_actions.87.t:0 "Country Specific Movements"
+ gm_actions.87.a:0 "Cancel"
+ gm_actions.87.b:0 "Return"
  
   #Human Modifier
- gm_actions.85:0 "Set player modifier"
- gm_actions.85.t:0 "Set player modifier"
- gm_actions.85.a:0 "Add player modifier on all curent player"
- gm_actions.85.b:0 "Remove player modifier on all current AI"
- gm_actions.85.c:0 "Add player modifier to selected country"
- gm_actions.85.d:0 "Remove player modifier from selected country"
+ gm_actions.91:0 "Set player modifier"
+ gm_actions.91.t:0 "Set player modifier"
+ gm_actions.91.a:0 "Add player modifier on all curent player"
+ gm_actions.91.b:0 "Remove player modifier on all current AI"
+ gm_actions.91.c:0 "Add player modifier to selected country"
+ gm_actions.91.d:0 "Remove player modifier from selected country"
  
  gm_actions.90.t:0 "Truce"
  gm_actions.90.a:0 "Cancel"
