@@ -1,0 +1,111 @@
+﻿GM_kill_char = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
+
+	potential = {
+		owner ?= {
+			has_modifier = game_master
+		}
+	}
+
+	show_requirements = yes
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = owner_scope
+			remove_modifier = GM_target
+		}
+		transfer_character = scope:owner_scope
+		kill_character = yes
+	}
+}
+
+GM_grant_leadership = {
+	icon = "gfx/interface/character_panel/grant_command_not.dds"
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
+
+	potential = {
+		owner ?= {
+			has_modifier = game_master
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = owner_scope
+			remove_modifier = GM_target
+		}
+		transfer_character = scope:owner_scope
+		remove_character_role = agitator
+		add_character_role = politician
+		set_as_interest_group_leader = yes
+	}
+}
+
+GM_grant_rulership = {
+	icon = "gfx/interface/character_panel/grant_command_not.dds"
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
+
+	potential = {
+		owner ?= {
+			has_modifier = game_master
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = owner_scope
+			remove_modifier = GM_target
+		}
+		transfer_character = scope:owner_scope
+		remove_character_role = agitator
+		add_character_role = politician
+		set_character_as_ruler = yes
+	}
+}
+
+transfer_to_GM = {
+	icon = "gfx/interface/character_panel/grant_command_not.dds"
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
+
+	potential = {
+		owner ?= {
+			has_modifier = GM_target
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		add_character_role = agitator
+		ordered_country = {
+			limit = {
+				has_modifier = game_master
+			}
+			save_scope_as = GM_scope
+		}
+		transfer_character = scope:GM_scope
+	}
+}
