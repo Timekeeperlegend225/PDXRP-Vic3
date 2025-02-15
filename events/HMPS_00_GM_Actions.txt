@@ -1335,6 +1335,50 @@ gm_actions.14 = {
 	}	
 	
 	option = {
+		name = gm_actions.14.h
+		trigger = {
+			scope:recipient = {
+				is_at_war = yes
+			}
+		}
+		scope:recipient = {
+			random_scope_war = {
+				add_war_war_support = {
+					target = scope:recipient
+					value = 25
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.14.j
+		trigger = {
+			scope:recipient = {
+				is_at_war = yes
+			}
+		}
+		scope:recipient = {
+			random_scope_war = {
+				add_war_war_support = {
+					target = scope:recipient
+					value = 50
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
 		name = gm_actions.14.g
 		trigger = {
 			scope:recipient = {
@@ -1354,7 +1398,51 @@ gm_actions.14 = {
 			days = 0
 			popup = yes
 		}
-	}		
+	}	
+	
+	option = {
+		name = gm_actions.14.i
+		trigger = {
+			scope:recipient = {
+				is_at_war = yes
+			}
+		}
+		scope:recipient = {
+			random_scope_war = {
+				add_war_war_support = {
+					target = scope:recipient
+					value = -25
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.14
+			days = 0
+			popup = yes
+		}
+	}	
+	
+	option = {
+		name = gm_actions.14.k
+		trigger = {
+			scope:recipient = {
+				is_at_war = yes
+			}
+		}
+		scope:recipient = {
+			random_scope_war = {
+				add_war_war_support = {
+					target = scope:recipient
+					value = -50
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.14
+			days = 0
+			popup = yes
+		}
+	}			
 	
 	option = {
 		name = gm_actions.14.c
