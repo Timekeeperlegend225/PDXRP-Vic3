@@ -5,3 +5,4 @@
  GM_grant_rulership:0 "Great Rulership"
  transfer_to_GM:0 "Transfer to GM"
  GM_send_back_as_agitator:0 "Send Back"
+ GM_set_as_heir:0 "Make Heir"
