@@ -81,6 +81,36 @@ GM_grant_rulership = {
 	}
 }
 
+
+GM_set_as_heir = {
+	icon = "gfx/interface/character_panel/grant_command_not.dds"
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
+
+	potential = {
+		owner ?= {
+			has_modifier = game_master
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = owner_scope
+			set_heir = root
+		}
+		transfer_character = scope:owner_scope
+		remove_character_role = agitator
+		add_character_role = politician
+	}
+}
+
+
 GM_send_back_as_agitator = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
