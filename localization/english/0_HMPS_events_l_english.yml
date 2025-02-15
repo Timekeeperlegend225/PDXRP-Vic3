@@ -249,13 +249,17 @@
  
  
  gm_actions.14.t:0 "Change war support"
- gm_actions.14.d:0 "This will change the selected playerwar support in one of their wars."
+ gm_actions.14.d:0 "This will change the selected player war support in one of their wars."
  gm_actions.14.f:0 "Should the event not have randomly selected the war you desire to end, then reroll."
  gm_actions.14.a:0 "Force [SCOPE.sCountry('recipient').GetName] to capitulate!"
  gm_actions.14.b:0 "Reroll War (It may roll the same war)"
  gm_actions.14.c:0 "Cancel"
  gm_actions.14.e:0 "Add 10 war support"
  gm_actions.14.g:0 "Remove 10 war support"
+ gm_actions.14.h:0 "Add 25 war support"
+ gm_actions.14.i:0 "Remove 25 war support"
+ gm_actions.14.j:0 "Add 50 war support"
+ gm_actions.14.k:0 "Remove 50 war support"
  
  
  
