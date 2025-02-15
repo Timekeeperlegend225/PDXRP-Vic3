@@ -1,0 +1,71 @@
+﻿
+iex_is_subject_action = {
+	effect = {
+		if = {
+			limit = { 
+				is_subject = yes
+				is_player = no
+				NOT = {
+					has_modifier = iex_is_subject_modifier
+				}
+			}
+			add_modifier = iex_is_subject_modifier
+		}
+	}
+}
+
+iex_is_independent_action = {
+	effect = {
+		if = {
+			limit = { 
+				is_subject = no
+				has_modifier = iex_is_subject_modifier
+			}
+			remove_modifier = iex_is_subject_modifier
+		}
+	}
+}
+
+on_yearly_pulse_country = {
+	on_actions = { 
+		iex_is_subject_action
+		iex_is_independent_action
+	}
+}
+
+on_impose_law = {
+	on_actions = { 
+		iex_enacting_law_action
+	}
+}
+
+on_law_enactment_ended = {
+	on_actions = { 
+		iex_not_enacting_law_action
+	}
+}
+
+on_law_enactment_fail = {
+	on_actions = { 
+		iex_not_enacting_law_action
+	}
+}
+
+on_country_released_as_independent = {
+	on_actions = {
+		iex_is_independent_action
+	}
+}
+
+on_wargoal_enforced = {
+	on_actions = {
+		iex_is_subject_action
+		iex_is_independent_action
+	}
+}
+
+on_country_released_as_own_subject = {
+	on_actions = {
+		iex_is_subject_action
+	}
+}

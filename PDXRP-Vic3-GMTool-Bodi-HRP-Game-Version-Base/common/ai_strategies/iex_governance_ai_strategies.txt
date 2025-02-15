@@ -1,0 +1,51 @@
+﻿ai_strategy_colonial_extraction = {
+    icon = "gfx/interface/icons/ai_strategy_icons/resource_expansion.dds"
+    
+    type = administrative   
+    building_group_weights = {
+        bg_rubber = 10
+        bg_oil_extraction = 10
+        bg_mining = 3
+        bg_logging = 1.5
+        bg_plantations = 3
+    }
+    
+    subsidies = {
+        building_tooling_workshops = wants_to_have
+    }
+    
+    goods_stances = {
+        explosives = { 
+            stance = wants_high_supply 
+            trigger = {
+                has_technology_researched = nitroglycerin
+            }           
+        }
+        tools = { stance = wants_high_supply }
+        coal = { stance = wants_export }
+        iron = { stance = wants_export }
+        copper = { stance = wants_export }
+        oil = { stance = wants_export }
+        lead = { stance = wants_export }
+        wood = { stance = wants_export }
+        hardwood = { stance = wants_export }
+        sulfur = { stance = wants_export }
+        fruit = { stance = wants_export }
+        fabric = { stance = wants_export }
+        sugar = { stance = wants_export }
+        coffee = { stance = wants_export }
+        tea = { stance = wants_export }
+        opium = { stance = wants_export }
+        tobacco = { stance = wants_export }
+        dye = { stance = wants_export }
+        silk = { stance = wants_export }    
+    }
+    possible = {
+    	is_subject = yes
+    	is_country_type = colonial
+    }
+    
+    weight = {
+        value = 100
+    }
+}

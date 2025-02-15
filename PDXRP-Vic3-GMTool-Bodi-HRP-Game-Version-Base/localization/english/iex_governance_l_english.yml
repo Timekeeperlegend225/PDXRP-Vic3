@@ -1,0 +1,34 @@
+﻿l_english:
+ iex_is_subject_modifier:0 "Governance from Above"
+ iex_enacting_law_modifier:0 "Political supervision"
+ # Develop
+ develop: "Develop"
+ develop_desc: "A transfer of construction points and income from a suzerain to a subject country."
+ develop_action_name: "$develop$"
+ develop_action_propose_name: "Start Developing"
+ develop_action_break_name: "Stop Developing"
+ develop_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] are developing [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+ develop_pact: "#header $develop$#!\n$TOOLTIP_DELIMITER$\n[concept_develop_desc]"
+ develop_action_notification_name: "[INITIATOR_COUNTRY.GetName] developing us"
+ develop_action_notification_desc: "[INITIATOR_COUNTRY.GetName] have started to develop our country, granting us extra income and construction capacity."
+ develop_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] no longer developing us"
+ develop_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ended their ongoing development of our country."
+ develop_weekly_effect_tooltip: "Will transfer a scaled amount of construction points and income every week."
+
+ develop_effect_desc_global: "Starts to [concept_develop]"
+ develop_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] starts to [concept_develop] [TARGET_COUNTRY.GetName]"
+ develop_effect_desc_third: "[COUNTRY.GetName] starts to [concept_develop] [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
+ 
+ develop_trigger_desc_global: "Is [Concept('concept_develop','$concept_developing$')]"
+ develop_trigger_false_desc_global: "Is #b not#! [Concept('concept_develop','$concept_developing$')]"
+ develop_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] is [Concept('concept_develop','$concept_developing$')] [TARGET_COUNTRY.GetName]"
+ develop_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] is #b not#! [Concept('concept_develop','$concept_developing$')] [TARGET_COUNTRY.GetName]"
+ develop_trigger_desc_third: "[COUNTRY.GetName] is [Concept('concept_develop','$concept_developing$')] [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
+ develop_trigger_false_desc_third: "[COUNTRY.GetName] is #b not#! [Concept('concept_develop','$concept_developing$')] [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
+
+ colonial_development: "Colonial Development"
+ colonial_development_target: "Colonial Development Target"
+ 
+ concept_develop: "Develop"
+ concept_develop_desc: "A transfer of construction points and income from a suzerain to a subject country."
+ 

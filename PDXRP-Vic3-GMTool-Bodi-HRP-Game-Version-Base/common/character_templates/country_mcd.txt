@@ -1,0 +1,24 @@
+# Macedonia - MCD
+
+### Royals
+
+
+MCD_georgios_zariphis = {
+			first_name = Georgios
+			last_name = Zariphis
+			historical = yes
+			culture = primary_culture
+			ruler = yes
+			noble = yes
+			age = 45
+			interest_group = ig_landowners
+			ideology = ideology_market_liberal
+			traits = {
+				master_bureaucrat
+				erudite
+				political_appointee
+			}
+			on_created = {
+				set_variable = is_married
+			}
+}

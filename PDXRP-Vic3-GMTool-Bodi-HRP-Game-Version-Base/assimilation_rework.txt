@@ -1,0 +1,270 @@
+namespace = assimilation_rework
+
+assimilation_rework.1 = {
+	type = country_event
+	placement = ROOT
+	hidden = yes
+
+	title = assimilation_rework.1.t
+
+	flavor = assimilation_rework.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	trigger = {
+		
+	}
+
+	immediate = {
+
+
+		if = {
+			#so temporary uprising dont just assimilate original pops
+			limit = {
+				is_secessionist = no
+			}
+
+			#default value
+			ordered_primary_culture = {
+				position = 0
+				save_scope_as = largest_share_primary_culture
+			}
+
+			#init base value
+			set_variable = {
+				name = largest_share_primary
+				value = 0.0
+			 }
+
+			every_primary_culture = {
+
+				save_scope_as = currently_checking_culture
+
+				if = {
+					limit = {
+							ROOT = {
+								culture_percent_country = {
+									target = scope:currently_checking_culture
+									value  > var:largest_share_primary
+								}
+							}
+					}
+					scope:currently_checking_culture = {
+						save_scope_as = largest_share_primary_culture
+					}
+					set_variable = {
+						name = largest_share_primary
+						value = scope:currently_checking_culture.culture_percent_country
+					 }
+				}
+			}
+
+			every_state = {
+				limit = {
+					owner = root
+				}
+	
+				this = {
+					save_scope_as = executing_state
+				}
+	
+				every_scope_pop = {
+
+					if = {
+						limit = {
+							#largest share primary should not never be assimilated
+							NOT = {
+								this.culture = scope:largest_share_primary_culture
+							}
+							#slaves should not assimilate ever either
+							NOT = {
+								is_pop_type = slaves
+							}
+						}
+
+						this = {
+							save_scope_as = current_pop
+						}
+
+						change_pop_culture = { 
+							target = scope:largest_share_primary_culture 
+							value = {
+								#vanilla base
+								#value = 0.002
+
+								#debuffed base
+								value = 0.0005
+
+								# pop does NOT have a homeland in the current state
+								if = {
+									limit = {
+										this.culture = {
+											NOT = {
+												has_homeland = scope:executing_state
+											}
+										}
+									}
+									multiply = 2
+								}
+
+								# pop shares any heritage with a primary
+
+								if = {
+									limit = {
+										scope:current_pop.culture = {
+											shares_heritage_trait_with_any_primary_culture = root
+										}
+									}
+									multiply = 2
+								}
+
+								# pop shares a cultural/language trait with a primary
+								if = {
+									limit = {
+										scope:current_pop.culture = {
+											shares_non_heritage_trait_with_any_primary_culture = root
+										}
+									}
+									multiply = 2
+								}
+
+								# pop is currently in a homeland of its own culture
+								if = {
+									limit = {
+										scope:current_pop.culture = {
+											has_homeland = scope:executing_state
+										}
+									}
+									divide = 20
+									if = {
+										limit = {
+											NOT = {
+												scope:current_pop.culture = {
+													shares_heritage_trait_with_any_primary_culture = root
+												}
+											}
+										}
+										multiply = 0
+									}
+								}
+
+								# modifier based on acceptance
+								divide = {
+									value = 8
+
+									if = {
+										limit = {
+											pop_acceptance >= acceptance_status_2
+										}
+										divide = 2
+									}
+
+									if = {
+										limit = {
+											pop_acceptance >= acceptance_status_3
+										}
+										divide = 2
+									}
+
+									if = {
+										limit = {
+											pop_acceptance >= acceptance_status_4
+										}
+										divide = 2
+									}
+
+									if = {
+										limit = {
+											pop_acceptance >= acceptance_status_5
+										}
+										divide = 2
+									}
+								}
+
+								# is UNincorporated
+								if = {
+									limit = {
+										scope:executing_state = {
+											is_incorporated = no
+										}
+									}
+									divide = 4
+								}
+
+								if = {
+									limit = {
+										has_game_rule = assimilation_allowed_for_smaller_primaries
+									}
+									if = {
+										limit = {
+											this.culture = {
+												is_primary_culture_of = root
+											}
+										}
+										multiply = 2
+									}
+								}
+
+								# literacy modifiers
+								multiply  = {
+									value = 0.5
+
+									if = {
+										limit = {
+											this.literacy_rate >= 0.3
+										}
+										multiply = 2
+									}
+									if = {
+										limit = {
+											this.literacy_rate >= 0.7
+										}
+										multiply = 1.5
+									}
+								}
+
+								# if the the rule is set to allow assimilation of smaller primaries then we apply a 50% buff, else we set it to 0%
+								# the pop cant be of the largest primary at this point due to an earlier check
+								if = {
+									limit = {
+										this.culture = {
+											is_primary_culture_of = root
+										}
+									}
+									if = {
+										limit = {
+											has_game_rule = assimilation_blocked_for_smaller_primaries
+										}
+										multiply = 0
+									} else = {
+										if = {
+											limit = {
+												has_game_rule = assimilation_allowed_for_smaller_primaries
+											}
+											multiply = 1.5
+										}
+									}
+								}
+
+								multiply = {
+									value = 1
+									add = scope:executing_state.modifier:state_assimilation_mult
+								}
+
+								# boundary violation should not be possible, can probably be removed
+								min = 0
+								max = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

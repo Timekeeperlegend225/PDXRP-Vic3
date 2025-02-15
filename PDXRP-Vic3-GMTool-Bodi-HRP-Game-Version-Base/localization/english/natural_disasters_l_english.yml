@@ -1,0 +1,17 @@
+﻿l_english:
+
+#Negative Harvest Conditions
+ tornadoes: "Tornado Outbreak"
+ tornadoes_desc: "A particularly deadly tornado season has lead to a widespread outbreak, claiming the lives of dozens, and devastating cities."
+
+ earthquake: "Earthquake"
+ earthquake_desc: "A devastating earthquake lead to destruction across a wide array of our states."
+ 
+ volcanic_eruption: "Volcanic Eruption"
+ volcanic_eruption_desc: "In the aftermath of a volcanic eruption, a thick coat of ash covers every building in the immediate vicinity."
+ 
+ blizzard: "Blizzard"
+ blizzard_desc: "A strong storm system in the global north is producing strong winds, ice, and an unmanagable amount of snowfall."
+ 
+ tropical_storm: "Tropical Cyclone"
+ tropical_storm_desc: "Warm conditions over the ocean have produced a strong tropical storm. In the past few months, the storm made landfall."
