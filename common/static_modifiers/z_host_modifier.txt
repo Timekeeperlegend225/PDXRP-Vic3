@@ -413,7 +413,7 @@ started_player = {
 }
 
 GM_target = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 }
 
 GM_germany = {
@@ -493,4 +493,8 @@ GM_movement_radicalism_-25 = {
 GM_movement_radicalism_pacify = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	political_movement_radicalism_add = -1
+}
+
+balance_modifier_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 }
