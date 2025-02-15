@@ -18,8 +18,7 @@
 			limit = {
 				has_modifier = GM_target
 			}
-			save_scope_as = owner_scope
-			remove_modifier = GM_target
+			save_scope_as = owner_scope 
 		}
 		transfer_character = scope:owner_scope
 		kill_character = yes
@@ -45,8 +44,7 @@ GM_grant_leadership = {
 			limit = {
 				has_modifier = GM_target
 			}
-			save_scope_as = owner_scope
-			remove_modifier = GM_target
+			save_scope_as = owner_scope 
 		}
 		transfer_character = scope:owner_scope
 		remove_character_role = agitator
@@ -74,13 +72,37 @@ GM_grant_rulership = {
 			limit = {
 				has_modifier = GM_target
 			}
-			save_scope_as = owner_scope
-			remove_modifier = GM_target
+			save_scope_as = owner_scope 
 		}
 		transfer_character = scope:owner_scope
 		remove_character_role = agitator
 		add_character_role = politician
 		set_character_as_ruler = yes
+	}
+}
+
+GM_send_back_as_agitator = {
+	icon = "gfx/interface/character_panel/grant_command_not.dds"
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
+
+	potential = {
+		owner ?= {
+			has_modifier = game_master
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = owner_scope 
+		}
+		transfer_character = scope:owner_scope
 	}
 }
 
@@ -107,5 +129,4 @@ transfer_to_GM = {
 			save_scope_as = GM_scope
 		}
 		transfer_character = scope:GM_scope
-	}
 }
