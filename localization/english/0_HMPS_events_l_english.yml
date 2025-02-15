@@ -333,20 +333,19 @@
  gm_actions.87.a:0 "Cancel"
  gm_actions.87.b:0 "Return"
  
-  #Human Modifier
- gm_actions.91:0 "Set player modifier"
- gm_actions.91.t:0 "Set player modifier"
- gm_actions.91.a:0 "Add player modifier on all curent player"
- gm_actions.91.b:0 "Remove player modifier on all current AI"
- gm_actions.91.c:0 "Add player modifier to selected country"
- gm_actions.91.d:0 "Remove player modifier from selected country"
- 
- gm_actions.90.t:0 "Truce"
+ gm_actions.90.t:0 "Set GM Target and player modifier"
  gm_actions.90.a:0 "Cancel"
  gm_actions.90.b:0 "Set as the target"
  gm_actions.90.c:0 "Clean all target"
- gm_actions.90.d:0 "Add Truce"
- gm_actions.90.e:0 "Remove Truce"
+ gm_actions.90.d:0 "Add player modifier on all curent player"
+ gm_actions.90.e:0 "Remove player modifier on all current AI"
+ gm_actions.90.f:0 "Add player modifier to selected country"
+ gm_actions.90.g:0 "Remove player modifier from selected country"
+ 
+ gm_actions.91.t:0 "Set Diplomatic pact"
+ gm_actions.91.a:0 "Cancel"
+ gm_actions.91.b:0 "Add Truce"
+ gm_actions.91.c:0 "Remove Truce"
  
  gm_actions.95.t:0 "Convoy Contribution"
  gm_actions.95.a:0 "Cancel"
