@@ -25,6 +25,29 @@
 	}
 }
 
+GM_change_IG = {
+	icon = "gfx/interface/character_panel/grant_command_not.dds"
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
+
+	potential = {
+		owner ?= {
+			has_modifier = game_master
+		}
+	}
+
+	possible = {
+		always = yes
+		NOT = { has_global_variable = GM_taking_action }
+	}
+
+	effect = {
+		save_scope_as = modified_char
+		owner ?= {
+			trigger_event = { id = gm_interaction.1 popup = yes }
+		} 
+	}
+}
+
 GM_grant_leadership = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
