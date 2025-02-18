@@ -6,3 +6,11 @@
  transfer_to_GM:0 "Transfer to GM"
  GM_send_back_as_agitator:0 "Send Back"
  GM_set_as_heir:0 "Make Heir"
+ GM_change_IG:0 "Change IG"
+ 
+ gm_interaction.1.t:0 "Change Character IG"
+ gm_interaction.1.a:0 "Cancel"
+ gm_interaction.1.b:0 "Change Character IG"
+ 
+ gm_interaction.10.t:0 "Change Character IG"
+ gm_interaction.10.a:0 "Cancel"
