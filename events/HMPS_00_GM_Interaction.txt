@@ -1,0 +1,345 @@
+﻿namespace = gm_interaction
+
+gm_interaction.1 = {
+	type = country_event
+	placement = ROOT
+	title = gm_interaction.1.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = GM_taking_action
+			days = 31
+		}
+	}
+	
+	#GM options
+	
+	option = {
+		name = gm_interaction.1.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_interaction.1.b
+		trigger_event = {
+			id = gm_interaction.10
+			days = 0
+			popup = yes
+		}
+	}
+	
+#	option = {
+#		name = gm_interaction.1.c
+#		trigger_event = {
+#			id = gm_interaction.20
+#			days = 0
+#			popup = yes
+#		}
+#	}		
+}
+
+gm_interaction.10 = {
+	type = country_event
+	placement = ROOT
+	title = gm_interaction.10.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = gm_interaction.10.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = ig_armed_forces
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_armed_forces
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_armed_forces
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:modified_char = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_devout
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_devout
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_devout
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:modified_char = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_industrialists
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_industrialists
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_industrialists
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:modified_char = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_intelligentsia
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_intelligentsia
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_intelligentsia
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:modified_char = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_landowners
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_landowners
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_landowners
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:modified_char = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_petty_bourgeoisie
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_petty_bourgeoisie
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:modified_char = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_rural_folk
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_rural_folk
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_rural_folk
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:modified_char = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_trade_unions
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:modified_char = {
+			set_interest_group = scope:relevant_ig
+		}
+	}		
+}

@@ -3128,7 +3128,7 @@ gm_actions.90 = {
 		name = gm_actions.90.c
 		every_country = {
 			limit = {
-				has_variable = GM_target
+				has_modifier = GM_target
 			}
 			remove_modifier = GM_target
 		}
