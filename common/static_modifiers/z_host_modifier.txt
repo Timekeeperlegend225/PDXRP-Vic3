@@ -498,3 +498,7 @@ GM_movement_radicalism_pacify = {
 balance_modifier_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 }
+
+target_character_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
