@@ -1,50 +1,25 @@
-﻿GM_kill_char = {
-	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
-
-	potential = {
-		owner ?= {
-			has_modifier = game_master
-		}
-	}
-
-	show_requirements = yes
-
-	possible = {
-		always = yes
-	}
-
-	effect = {
-		ordered_country = {
-			limit = {
-				has_modifier = GM_target
-			}
-			save_scope_as = owner_scope 
-		}
-		transfer_character = scope:owner_scope
-		kill_character = yes
-	}
-}
-
-GM_change_IG = {
+﻿set_as_character_target = {
 	icon = "gfx/interface/character_panel/grant_command_not.dds"
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
 
 	potential = {
-		owner ?= {
-			has_modifier = game_master
-		}
+		always = yes
 	}
 
 	possible = {
 		always = yes
-		NOT = { has_global_variable = GM_taking_action }
 	}
 
 	effect = {
-		save_scope_as = modified_char
 		owner ?= {
-			trigger_event = { id = gm_interaction.1 popup = yes }
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				remove_modifier = target_character_mod
+			}
 		} 
+		add_modifier = target_character_mod
 	}
 }
 
@@ -157,29 +132,4 @@ GM_send_back_as_agitator = {
 		}
 		transfer_character = scope:owner_scope
 	}
-}
-
-transfer_to_GM = {
-	icon = "gfx/interface/character_panel/grant_command_not.dds"
-	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
-
-	potential = {
-		owner ?= {
-			has_modifier = GM_target
-		}
-	}
-
-	possible = {
-		always = yes
-	}
-
-	effect = {
-		add_character_role = agitator
-		ordered_country = {
-			limit = {
-				has_modifier = game_master
-			}
-			save_scope_as = GM_scope
-		}
-		transfer_character = scope:GM_scope
 }
