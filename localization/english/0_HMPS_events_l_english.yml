@@ -249,7 +249,6 @@
  gm_actions.14.k:0 "Remove 50 war support"
  
  
- 
  gm_actions.15.t:0 "Abdicate GM"
  gm_actions.15.d:0 "Are you sure you want to transfer GM powers to [SCOPE.sCountry('recipient').GetName]?"
  gm_actions.15.f:0 "An AI GM will lose the modifier after a month."
@@ -263,6 +262,19 @@
  gm_actions.17.t:0 "(Un)Incorporate a State"
  gm_actions.17.d:0 "All states with the "GM Scope" decree targeting them will be incorporated if unincorporated and vice versa."
  gm_actions.17.a:0 "(Un)Incorporate this state"
+ 
+ gm_actions.40.t:0 "Character Interaction"
+ gm_actions.40.a:0 "Cancel"
+ gm_actions.40.b:0 "Kill"
+ gm_actions.40.c:0 "Make Ruler"
+ gm_actions.40.d:0 "Make Heir"
+ gm_actions.40.e:0 "Make IG Leader"
+ 
+ gm_actions.400.t:0 "Change Character IG"
+ gm_actions.400.a:0 "Cancel"
+ 
+ gm_actions.401.t:0 "Change Character Ideology (Not Ready yet)"
+ gm_actions.401.a:0 "Cancel"
 
  #Loyalists or Radicals
  gm_actions.70.t:0 "Add Loyalists or Radicals to a State"
@@ -334,13 +346,6 @@
  gm_actions.91.b:0 "Add Truce"
  gm_actions.91.c:0 "Remove Truce"
  
- gm_actions.95.t:0 "Convoy Contribution"
- gm_actions.95.a:0 "Cancel"
- gm_actions.95.b:0 "+5%"
- gm_actions.95.c:0 "+10%"
- gm_actions.95.d:0 "+25%"
- gm_actions.95.e:0 "Remove Modifiers"
- 
  gm_actions.100.t:0 "Special Event Menu"
  gm_actions.100.a:0 "Cancel"
  gm_actions.100.b:0 "SNEED Modifier"
@@ -353,79 +358,13 @@
  gm_actions.100.j:0 "Start plague"
  gm_actions.100.k:0 "Great War Actions"
  
- gm_actions.101.t:0 "Change SNEED Modifier"
+ gm_actions.101.t:0 "Convoy Contribution"
  gm_actions.101.a:0 "Cancel"
- gm_actions.101.b:0 "Add Modifier"
- gm_actions.101.c:0 "Remove Modifier"
- 
- gm_actions.102.t:0 "Change Austria Modifier"
- gm_actions.102.a:0 "Cancel"
- gm_actions.102.b:0 "Add Modifier"
- gm_actions.102.c:0 "Remove Modifier"
- 
- gm_actions.103.t:0 "Black Tuesday"
- gm_actions.103.a:0 "Cancel"
- gm_actions.103.b:0 "Remove all Modifiers"
- gm_actions.103.c:0 "Germany"
- gm_actions.103.d:0 "France"
- gm_actions.103.e:0 "Britain"
- gm_actions.103.f:0 "Spain"
- gm_actions.103.g:0 "It, Rus, Aus, Pt"
- gm_actions.103.h:0 "Krakow, Dutch"
- gm_actions.103.i:0 "Other"
- 
- gm_actions.104.t:0 "Black Tuesday Recovery"
- gm_actions.104.a:0 "Cancel"
- gm_actions.104.b:0 "Remove all Modifiers"
- gm_actions.104.c:0 "Germany"
- gm_actions.104.d:0 "France"
- gm_actions.104.e:0 "Britain"
- gm_actions.104.f:0 "Spain"
- gm_actions.104.g:0 "It, Rus, Aus, Pt"
- gm_actions.104.h:0 "Krakow, Dutch"
- gm_actions.104.i:0 "Other"
- gm_actions.104.j:0 "Persia Interest Rates"
- 
- gm_actions.105.t:0 "Change Socialist Unrest"
- gm_actions.105.a:0 "Cancel"
- gm_actions.105.b:0 "Add Unrest Modifier"
- gm_actions.105.c:0 "Remove Unrest Modifier"
- gm_actions.105.d:0 "Add Radicals"
- gm_actions.105.e:0 "Localized Strike"
- gm_actions.105.f:0 "Widespread Strike"
- gm_actions.105.g:0 "General Strike"
- gm_actions.105.h:0 "Remove Strike"
- gm_actions.105.i:0 "Spawn TU Agitator"
- gm_actions.105.j:0 "Spawn RF Agitator"
- 
- gm_actions.106.t:0 "Flu Epidemic"
- gm_actions.106.a:0 "Cancel"
- gm_actions.106.b:0 "Remove all Modifiers"
- gm_actions.106.c:0 "Add Local Flu Epidemic"
- gm_actions.106.d:0 "Add Army Debuff"
- 
- gm_actions.107.t:0 "Katla Actions"
- gm_actions.107.a:0 "Cancel"
- gm_actions.107.b:0 "Add Exporting Food (War)"
- gm_actions.107.c:0 "Add Exporting Food (Subject)"
- gm_actions.107.d:0 "Add Exporting Food (Deal)"
- gm_actions.107.e:0 "Add Importing Food Lv1"
- gm_actions.107.f:0 "Add Importing Food Lv2"
- gm_actions.107.g:0 "Add Importing Food Lv3"
- gm_actions.107.h:0 "Add Importing Food Lv4"
- gm_actions.107.i:0 "Add Defensive Modifier"
- gm_actions.107.j:0 "Remove All Modifier"
- gm_actions.107.k:0 "Global End of the Winter"
- gm_actions.107.l:0 "Local End of the Winter"
- gm_actions.107.m:0 "Add Supporting Katla Cult modifier"
- gm_actions.107.n:0 "Remove Supporting Katla Cult modifier"
- 
- gm_actions.108.t:0 "Great War Modifier"
- gm_actions.108.a:0 "Cancel"
- gm_actions.108.b:0 "Add Great War Modifier"
- gm_actions.108.c:0 "Remove Great War Modifier"
- gm_actions.108.d:0 "Reduce War Exhaustion"
- gm_actions.108.e:0 "Increase War Exhaustion"
+ gm_actions.101.b:0 "+5%"
+ gm_actions.101.c:0 "+10%"
+ gm_actions.101.d:0 "+25%"
+ gm_actions.101.e:0 "Remove Modifiers"
+
  
  
  ### FAQ

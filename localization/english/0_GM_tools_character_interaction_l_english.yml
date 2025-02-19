@@ -1,16 +1,9 @@
 ﻿l_english:
  
- GM_kill_char:0 "Kill"
- GM_grant_leadership:0 "Great Leadearship"
- GM_grant_rulership:0 "Great Rulership"
- transfer_to_GM:0 "Transfer to GM"
- GM_send_back_as_agitator:0 "Send Back"
- GM_set_as_heir:0 "Make Heir"
- GM_change_IG:0 "Change IG"
+ GM_grant_leadership:0 "Transfer as IG Leader"
+ GM_grant_rulership:0 "Transfer as Ruler"
+ GM_set_as_heir:0 "Transfer as Heir"
+ GM_send_back_as_agitator:0 "Transfer as Agitator"
+ set_as_character_target:0 "Set as character target"
  
- gm_interaction.1.t:0 "Change Character IG"
- gm_interaction.1.a:0 "Cancel"
- gm_interaction.1.b:0 "Change Character IG"
- 
- gm_interaction.10.t:0 "Change Character IG"
- gm_interaction.10.a:0 "Cancel"
+ target_character_mod:0 "Target Character"
