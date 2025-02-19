@@ -1422,11 +1422,13 @@ gm_actions.40 = {
 			}
 			save_scope_as = recipient
 		}
-		every_scope_character = {
-			limit = {
-				has_modifier = target_character_mod
+		scope:recipient = {
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				save_scope_as = target_character
 			}
-			save_scope_as = target_character
 		}
 	}
 	
@@ -1571,10 +1573,7 @@ gm_actions.400 = {
 			}
 			save_scope_as = relevant_ig
 		}
-		ordered_country = {
-			limit = {
-				has_modifier = GM_target
-			}
+		scope:recipient = {
 			ordered_interest_group = {
 				limit = {
 					is_interest_group_type = ig_armed_forces
@@ -1602,10 +1601,7 @@ gm_actions.400 = {
 			}
 			save_scope_as = relevant_ig
 		}
-		ordered_country = {
-			limit = {
-				has_modifier = GM_target
-			}
+		scope:recipient = {
 			ordered_interest_group = {
 				limit = {
 					is_interest_group_type = ig_devout
@@ -1633,10 +1629,7 @@ gm_actions.400 = {
 			}
 			save_scope_as = relevant_ig
 		}
-		ordered_country = {
-			limit = {
-				has_modifier = GM_target
-			}
+		scope:recipient = {
 			ordered_interest_group = {
 				limit = {
 					is_interest_group_type = ig_industrialists
@@ -1664,10 +1657,7 @@ gm_actions.400 = {
 			}
 			save_scope_as = relevant_ig
 		}
-		ordered_country = {
-			limit = {
-				has_modifier = GM_target
-			}
+		scope:recipient = {
 			ordered_interest_group = {
 				limit = {
 					is_interest_group_type = ig_intelligentsia
@@ -1695,10 +1685,7 @@ gm_actions.400 = {
 			}
 			save_scope_as = relevant_ig
 		}
-		ordered_country = {
-			limit = {
-				has_modifier = GM_target
-			}
+		scope:recipient = {
 			ordered_interest_group = {
 				limit = {
 					is_interest_group_type = ig_landowners
@@ -1726,10 +1713,7 @@ gm_actions.400 = {
 			}
 			save_scope_as = relevant_ig
 		}
-		ordered_country = {
-			limit = {
-				has_modifier = GM_target
-			}
+		scope:recipient = {
 			ordered_interest_group = {
 				limit = {
 					is_interest_group_type = ig_petty_bourgeoisie
@@ -1757,10 +1741,7 @@ gm_actions.400 = {
 			}
 			save_scope_as = relevant_ig
 		}
-		ordered_country = {
-			limit = {
-				has_modifier = GM_target
-			}
+		scope:recipient = {
 			ordered_interest_group = {
 				limit = {
 					is_interest_group_type = ig_rural_folk
@@ -1788,10 +1769,7 @@ gm_actions.400 = {
 			}
 			save_scope_as = relevant_ig
 		}
-		ordered_country = {
-			limit = {
-				has_modifier = GM_target
-			}
+		scope:recipient = {
 			ordered_interest_group = {
 				limit = {
 					is_interest_group_type = ig_trade_unions
