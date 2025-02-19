@@ -66,16 +66,6 @@ gm_actions.1 = {
 		}
 	}
 	
-	#Building
-	option = {
-		name = gm_actions.1.e
-		trigger_event = {
-			id = gm_actions.16
-			days = 0
-			popup = yes
-		}
-	}
-	
 	#War_exhaustion/capitulation
 	
 	option = {
@@ -162,6 +152,16 @@ gm_actions.1 = {
 		}
 	}
 	
+	#Modifiers
+	option = {
+		name = gm_actions.40.t
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
 	option = {
 		name = gm_actions.34.a
 		trigger_event = {
@@ -207,17 +207,6 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
-	#Balance modifier
-	option = {
-		name = gm_actions.95.t
-		trigger_event = {
-			id = gm_actions.95
-			days = 0
-			popup = yes
-		}
-	}
-
-	
 }
 
 gm_actions.20 = {
@@ -1335,105 +1324,6 @@ gm_actions.15 = {
 	
 }
 
-gm_actions.16 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.16.t
-	desc = gm_actions.16.d
-	flavor = gm_actions.16.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.16.a
-		scope:recipient = {
-			if = {
-				limit = {
-					any_scope_state = {
-						has_decree = decree_host_scope
-					}
-				}
-				random_scope_state = {
-					limit = {
-						has_decree = decree_host_scope
-					}
-					add_building_level = {
-						BUILDING = building_university
-						WANTED_INCREASE = 1
-					}
-				}
-			}
-			else = {
-				random_scope_state = {
-					add_building_level = {
-						BUILDING = building_university
-						WANTED_INCREASE = 1
-					}
-				}
-			}
-			remove_variable = actionee
-		}
-		remove_global_variable = GM_taking_action
-	}
-	
-	option = {
-		name = gm_actions.16.b
-		scope:recipient = {
-			if = {
-				limit = {
-					any_scope_state = {
-						has_decree = decree_host_scope
-					}
-				}
-				random_scope_state = {
-					limit = {
-						has_decree = decree_host_scope
-					}
-					add_building_level = {
-						BUILDING = building_government_administration
-						WANTED_INCREASE = 1
-					}
-				}
-			}
-			else = {
-				random_scope_state = {
-					add_building_level = {
-						BUILDING = building_government_administration
-						WANTED_INCREASE = 1
-					}
-				}
-			}
-			remove_variable = actionee
-		}
-		remove_global_variable = GM_taking_action
-	}
-	
-	option = {
-		name = gm_actions.14.c
-		scope:recipient = {
-			remove_variable = actionee
-		}
-		remove_global_variable = GM_taking_action
-	}
-}
-
 gm_actions.17 = {
 	type = country_event
 	placement = ROOT
@@ -1508,6 +1398,411 @@ gm_actions.17 = {
 		}
 		remove_global_variable = GM_taking_action
 	}
+}
+
+gm_actions.40 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.40.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		every_scope_character = {
+			limit = {
+				has_modifier = target_character_mod
+			}
+			save_scope_as = target_character
+		}
+	}
+	
+	option = { #Cancel
+		name = gm_actions.40.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #Change IG
+		name = gm_actions.400.t
+		trigger_event = {
+			id = gm_actions.400
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Change ideology
+		name = gm_actions.401.t
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Kill
+		name = gm_actions.40.b
+		scope:target_character = {
+			kill_character = yes
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #Make ruler
+		name = gm_actions.40.c
+		scope:target_character = {
+			add_character_role = politician
+			set_character_as_ruler = yes
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #Make Heir
+		name = gm_actions.40.d
+		scope:target_character = {
+			add_character_role = politician
+		}
+		set_heir = scope:target_character
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #Make IG leader 
+		name = gm_actions.40.e
+		scope:target_character = {
+			add_character_role = politician
+			set_as_interest_group_leader = yes
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
+gm_actions.400 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.400.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = gm_actions.400.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = ig_armed_forces
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_armed_forces
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_armed_forces
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:target_character = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_devout
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_devout
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_devout
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:target_character = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_industrialists
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_industrialists
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_industrialists
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:target_character = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_intelligentsia
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_intelligentsia
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_intelligentsia
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:target_character = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_landowners
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_landowners
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_landowners
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:target_character = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_petty_bourgeoisie
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_petty_bourgeoisie
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:target_character = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_rural_folk
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_rural_folk
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_rural_folk
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:target_character = {
+			set_interest_group = scope:relevant_ig
+		}
+	}
+	
+	option = {
+		name = ig_trade_unions
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+			}
+			save_scope_as = relevant_ig
+		}
+		ordered_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:target_character = {
+			set_interest_group = scope:relevant_ig
+		}
+	}		
 }
 
 gm_actions.70 = {
@@ -2669,7 +2964,6 @@ gm_actions.830 = {
 	duration = 1
 	
 	trigger = {
-		#triggered by gm_actions.100
 	}
 
 	immediate = {
@@ -2883,7 +3177,6 @@ gm_actions.831 = {
 	duration = 1
 	
 	trigger = {
-		#triggered by gm_actions.100
 	}
 
 	immediate = {
@@ -3244,107 +3537,6 @@ gm_actions.91 = {
 	}
 }
 
-gm_actions.95 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.95.t
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.100
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.95.a
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.95.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = GM_convoy_5
-			}
-		}
-	}
-	option = {
-		name = gm_actions.95.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = GM_convoy_10
-			}
-			remove_variable = actionee
-		}
-	}	
-	option = {
-		name = gm_actions.95.d
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = GM_convoy_25
-			}
-			remove_variable = actionee
-		}
-	}	
-	option = {
-		name = gm_actions.95.e
-		trigger = {
-			scope:recipient = {
-				OR = {
-					has_modifier = GM_convoy_5
-					has_modifier = GM_convoy_10
-					has_modifier = GM_convoy_25
-				}
-			}
-		}
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			if = {
-				limit = {
-					has_modifier = GM_convoy_5
-				}
-				remove_modifier = GM_convoy_5
-			}
-			else_if = {
-				limit = {
-					has_modifier = GM_convoy_10
-				}
-				remove_modifier = GM_convoy_10
-			}
-			else_if = {
-				limit = {
-					has_modifier = GM_convoy_25
-				}
-				remove_modifier = GM_convoy_25
-			}
-			remove_variable = actionee
-		}
-	}
-}
-
 gm_actions.100 = {
 	type = country_event
 	placement = ROOT
@@ -3402,6 +3594,116 @@ gm_actions.100 = {
 		}
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.101.t
+		trigger_event = {
+			id = gm_actions.101
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.101 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.101.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.100
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.101.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.101.b
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = GM_convoy_5
+			}
+		}
+	}
+	option = {
+		name = gm_actions.101.c
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = GM_convoy_10
+			}
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.101.d
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			add_modifier = {
+				name = GM_convoy_25
+			}
+			remove_variable = actionee
+		}
+	}	
+	option = {
+		name = gm_actions.101.e
+		trigger = {
+			scope:recipient = {
+				OR = {
+					has_modifier = GM_convoy_5
+					has_modifier = GM_convoy_10
+					has_modifier = GM_convoy_25
+				}
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			if = {
+				limit = {
+					has_modifier = GM_convoy_5
+				}
+				remove_modifier = GM_convoy_5
+			}
+			else_if = {
+				limit = {
+					has_modifier = GM_convoy_10
+				}
+				remove_modifier = GM_convoy_10
+			}
+			else_if = {
+				limit = {
+					has_modifier = GM_convoy_25
+				}
+				remove_modifier = GM_convoy_25
+			}
 			remove_variable = actionee
 		}
 	}
