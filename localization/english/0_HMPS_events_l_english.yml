@@ -273,8 +273,32 @@
  gm_actions.400.t:0 "Change Character IG"
  gm_actions.400.a:0 "Cancel"
  
- gm_actions.401.t:0 "Change Character Ideology (Not Ready yet)"
+ gm_actions.401.t:0 "Change Character Ideology"
  gm_actions.401.a:0 "Cancel"
+ 
+ gm_actions.402.t:0 "Nationalist and Authoritarian"
+ gm_actions.402.a:0 "Cancel"
+ gm_actions.402.b:0 "Return"
+ 
+ gm_actions.403.t:0 "Moderate Conservative"
+ gm_actions.403.a:0 "Cancel"
+ gm_actions.403.b:0 "Return"
+ 
+ gm_actions.404.t:0 "Economical and Reformer"
+ gm_actions.404.a:0 "Cancel"
+ gm_actions.404.b:0 "Return"
+ 
+ gm_actions.405.t:0 "Liberals"
+ gm_actions.405.a:0 "Cancel"
+ gm_actions.405.b:0 "Return"
+ 
+ gm_actions.406.t:0 "Socialist and Technocrats"
+ gm_actions.406.a:0 "Cancel"
+ gm_actions.406.b:0 "Return"
+ 
+ gm_actions.407.t:0 "Country Specifics"
+ gm_actions.407.a:0 "Cancel"
+ gm_actions.407.b:0 "Return"
 
  #Loyalists or Radicals
  gm_actions.70.t:0 "Add Loyalists or Radicals to a State"
