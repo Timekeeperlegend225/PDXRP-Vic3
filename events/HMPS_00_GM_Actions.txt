@@ -2260,21 +2260,6 @@ gm_actions.404 = {
 	}
 	
 	option = { 
-		name =ideology_pacifist
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:target_character = {
-			set_ideology = ideology:ideology_pacifist
-		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
-		}
-	}
-	
-	option = { 
 		name =ideology_market_liberal
 		default_option = yes
 		remove_global_variable = GM_taking_action
@@ -2499,6 +2484,21 @@ gm_actions.405 = {
 		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_radical
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_pacifist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_pacifist
 		}
 		random_country = {
 			limit = {
@@ -4456,8 +4456,6 @@ gm_actions.91 = {
 	type = country_event
 	placement = ROOT
 	title = gm_actions.91.t
-	desc = gm_actions.91.d
-	#flavor = gm_actions.91.f
 
 	event_image = {
 		video = "unspecific_signed_contract"
