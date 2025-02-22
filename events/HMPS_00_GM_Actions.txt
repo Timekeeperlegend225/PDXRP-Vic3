@@ -535,7 +535,7 @@ gm_actions.230 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.230
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -549,7 +549,7 @@ gm_actions.230 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.230
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -563,7 +563,7 @@ gm_actions.230 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.230
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -577,7 +577,7 @@ gm_actions.230 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.230
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -593,7 +593,7 @@ gm_actions.230 = {
 			remove_modifier = gm_education_gen_innov_a
 		}
 		trigger_event = {
-			id = gm_actions.230
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -609,7 +609,7 @@ gm_actions.230 = {
 			remove_modifier = gm_education_gen_innov_b
 		}
 		trigger_event = {
-			id = gm_actions.230
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -625,7 +625,7 @@ gm_actions.230 = {
 			remove_modifier = gm_education_gen_innov_c
 		}
 		trigger_event = {
-			id = gm_actions.230
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -641,7 +641,7 @@ gm_actions.230 = {
 			remove_modifier = gm_education_gen_innov_d
 		}
 		trigger_event = {
-			id = gm_actions.230
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -701,7 +701,7 @@ gm_actions.231 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.231
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -715,7 +715,7 @@ gm_actions.231 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.231
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -730,7 +730,7 @@ gm_actions.231 = {
 		
 		}
 		trigger_event = {
-			id = gm_actions.231
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -744,7 +744,7 @@ gm_actions.231 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.231
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -760,7 +760,7 @@ gm_actions.231 = {
 			remove_modifier = gm_education_prod_innov_a
 		}
 		trigger_event = {
-			id = gm_actions.231
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -776,7 +776,7 @@ gm_actions.231 = {
 			remove_modifier = gm_education_prod_innov_b
 		}
 		trigger_event = {
-			id = gm_actions.231
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -792,7 +792,7 @@ gm_actions.231 = {
 			remove_modifier = gm_education_prod_innov_c
 		}
 		trigger_event = {
-			id = gm_actions.231
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -808,7 +808,7 @@ gm_actions.231 = {
 			remove_modifier = gm_education_prod_innov_d
 		}
 		trigger_event = {
-			id = gm_actions.231
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -868,7 +868,7 @@ gm_actions.232 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.232
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -882,7 +882,7 @@ gm_actions.232 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.232
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -897,7 +897,7 @@ gm_actions.232 = {
 		
 		}
 		trigger_event = {
-			id = gm_actions.232
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -911,7 +911,7 @@ gm_actions.232 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.232
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -927,7 +927,7 @@ gm_actions.232 = {
 			remove_modifier = gm_education_mil_innov_a
 		}
 		trigger_event = {
-			id = gm_actions.232
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -943,7 +943,7 @@ gm_actions.232 = {
 			remove_modifier = gm_education_mil_innov_b
 		}
 		trigger_event = {
-			id = gm_actions.232
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -959,7 +959,7 @@ gm_actions.232 = {
 			remove_modifier = gm_education_mil_innov_c
 		}
 		trigger_event = {
-			id = gm_actions.232
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -975,7 +975,7 @@ gm_actions.232 = {
 			remove_modifier = gm_education_mil_innov_d
 		}
 		trigger_event = {
-			id = gm_actions.232
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1035,7 +1035,7 @@ gm_actions.233 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.233
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1049,7 +1049,7 @@ gm_actions.233 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.233
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1064,7 +1064,7 @@ gm_actions.233 = {
 		
 		}
 		trigger_event = {
-			id = gm_actions.233
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1078,7 +1078,7 @@ gm_actions.233 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.233
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1094,7 +1094,7 @@ gm_actions.233 = {
 			remove_modifier = gm_education_soc_innov_a
 		}
 		trigger_event = {
-			id = gm_actions.233
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1110,7 +1110,7 @@ gm_actions.233 = {
 			remove_modifier = gm_education_soc_innov_b
 		}
 		trigger_event = {
-			id = gm_actions.233
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1126,7 +1126,7 @@ gm_actions.233 = {
 			remove_modifier = gm_education_soc_innov_c
 		}
 		trigger_event = {
-			id = gm_actions.233
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1142,7 +1142,7 @@ gm_actions.233 = {
 			remove_modifier = gm_education_soc_innov_d
 		}
 		trigger_event = {
-			id = gm_actions.233
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1285,7 +1285,7 @@ gm_actions.240 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.240
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1299,7 +1299,7 @@ gm_actions.240 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.240
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1314,7 +1314,7 @@ gm_actions.240 = {
 		
 		}
 		trigger_event = {
-			id = gm_actions.240
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1328,7 +1328,7 @@ gm_actions.240 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.240
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1344,7 +1344,7 @@ gm_actions.240 = {
 			remove_modifier = gm_education_gen_spread_a
 		}
 		trigger_event = {
-			id = gm_actions.240
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1360,7 +1360,7 @@ gm_actions.240 = {
 			remove_modifier = gm_education_gen_spread_b
 		}
 		trigger_event = {
-			id = gm_actions.240
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1376,7 +1376,7 @@ gm_actions.240 = {
 			remove_modifier = gm_education_gen_spread_c
 		}
 		trigger_event = {
-			id = gm_actions.240
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1392,7 +1392,7 @@ gm_actions.240 = {
 			remove_modifier = gm_education_gen_spread_d
 		}
 		trigger_event = {
-			id = gm_actions.240
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1452,7 +1452,7 @@ gm_actions.241 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.241
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1466,7 +1466,7 @@ gm_actions.241 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.241
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1481,7 +1481,7 @@ gm_actions.241 = {
 		
 		}
 		trigger_event = {
-			id = gm_actions.241
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1495,7 +1495,7 @@ gm_actions.241 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.241
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1511,7 +1511,7 @@ gm_actions.241 = {
 			remove_modifier = gm_education_prod_spread_a
 		}
 		trigger_event = {
-			id = gm_actions.241
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1527,7 +1527,7 @@ gm_actions.241 = {
 			remove_modifier = gm_education_prod_spread_b
 		}
 		trigger_event = {
-			id = gm_actions.241
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1543,7 +1543,7 @@ gm_actions.241 = {
 			remove_modifier = gm_education_prod_spread_c
 		}
 		trigger_event = {
-			id = gm_actions.241
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1559,7 +1559,7 @@ gm_actions.241 = {
 			remove_modifier = gm_education_prod_spread_d
 		}
 		trigger_event = {
-			id = gm_actions.241
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1619,7 +1619,7 @@ gm_actions.242 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.242
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1633,7 +1633,7 @@ gm_actions.242 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.242
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1648,7 +1648,7 @@ gm_actions.242 = {
 		
 		}
 		trigger_event = {
-			id = gm_actions.242
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1662,7 +1662,7 @@ gm_actions.242 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.242
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1678,7 +1678,7 @@ gm_actions.242 = {
 			remove_modifier = gm_education_mil_spread_a
 		}
 		trigger_event = {
-			id = gm_actions.242
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1694,7 +1694,7 @@ gm_actions.242 = {
 			remove_modifier = gm_education_mil_spread_b
 		}
 		trigger_event = {
-			id = gm_actions.242
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1710,7 +1710,7 @@ gm_actions.242 = {
 			remove_modifier = gm_education_mil_spread_c
 		}
 		trigger_event = {
-			id = gm_actions.242
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1726,7 +1726,7 @@ gm_actions.242 = {
 			remove_modifier = gm_education_mil_spread_d
 		}
 		trigger_event = {
-			id = gm_actions.242
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1786,7 +1786,7 @@ gm_actions.243 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.243
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1800,7 +1800,7 @@ gm_actions.243 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.243
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1815,7 +1815,7 @@ gm_actions.243 = {
 		
 		}
 		trigger_event = {
-			id = gm_actions.243
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1829,7 +1829,7 @@ gm_actions.243 = {
 			}
 		}
 		trigger_event = {
-			id = gm_actions.243
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1845,7 +1845,7 @@ gm_actions.243 = {
 			remove_modifier = gm_education_soc_spread_a
 		}
 		trigger_event = {
-			id = gm_actions.243
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1861,7 +1861,7 @@ gm_actions.243 = {
 			remove_modifier = gm_education_soc_spread_b
 		}
 		trigger_event = {
-			id = gm_actions.243
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1877,7 +1877,7 @@ gm_actions.243 = {
 			remove_modifier = gm_education_soc_spread_c
 		}
 		trigger_event = {
-			id = gm_actions.243
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -1893,7 +1893,7 @@ gm_actions.243 = {
 			remove_modifier = gm_education_soc_spread_d
 		}
 		trigger_event = {
-			id = gm_actions.243
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
@@ -2486,13 +2486,6 @@ gm_actions.400 = {
 	
 	option = {
 		name = ig_armed_forces
-		remove_global_variable = GM_taking_action
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
-		}
 		ordered_interest_group = {
 			limit = {
 				is_interest_group_type = ig_armed_forces
@@ -2510,17 +2503,15 @@ gm_actions.400 = {
 		scope:target_character = {
 			set_interest_group = scope:relevant_ig
 		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
 	}
 	
 	option = {
 		name = ig_devout
-		remove_global_variable = GM_taking_action
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
-		}
 		ordered_interest_group = {
 			limit = {
 				is_interest_group_type = ig_devout
@@ -2538,17 +2529,15 @@ gm_actions.400 = {
 		scope:target_character = {
 			set_interest_group = scope:relevant_ig
 		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
 	}
 	
 	option = {
 		name = ig_industrialists
-		remove_global_variable = GM_taking_action
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
-		}
 		ordered_interest_group = {
 			limit = {
 				is_interest_group_type = ig_industrialists
@@ -2566,17 +2555,15 @@ gm_actions.400 = {
 		scope:target_character = {
 			set_interest_group = scope:relevant_ig
 		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
 	}
 	
 	option = {
 		name = ig_intelligentsia
-		remove_global_variable = GM_taking_action
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
-		}
 		ordered_interest_group = {
 			limit = {
 				is_interest_group_type = ig_intelligentsia
@@ -2594,17 +2581,15 @@ gm_actions.400 = {
 		scope:target_character = {
 			set_interest_group = scope:relevant_ig
 		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
 	}
 	
 	option = {
 		name = ig_landowners
-		remove_global_variable = GM_taking_action
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
-		}
 		ordered_interest_group = {
 			limit = {
 				is_interest_group_type = ig_landowners
@@ -2622,17 +2607,15 @@ gm_actions.400 = {
 		scope:target_character = {
 			set_interest_group = scope:relevant_ig
 		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
 	}
 	
 	option = {
 		name = ig_petty_bourgeoisie
-		remove_global_variable = GM_taking_action
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
-		}
 		ordered_interest_group = {
 			limit = {
 				is_interest_group_type = ig_petty_bourgeoisie
@@ -2650,17 +2633,15 @@ gm_actions.400 = {
 		scope:target_character = {
 			set_interest_group = scope:relevant_ig
 		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
 	}
 	
 	option = {
 		name = ig_rural_folk
-		remove_global_variable = GM_taking_action
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
-		}
 		ordered_interest_group = {
 			limit = {
 				is_interest_group_type = ig_rural_folk
@@ -2678,17 +2659,15 @@ gm_actions.400 = {
 		scope:target_character = {
 			set_interest_group = scope:relevant_ig
 		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
 	}
 	
 	option = {
 		name = ig_trade_unions
-		remove_global_variable = GM_taking_action
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
-		}
 		ordered_interest_group = {
 			limit = {
 				is_interest_group_type = ig_trade_unions
@@ -2705,6 +2684,11 @@ gm_actions.400 = {
 		}
 		scope:target_character = {
 			set_interest_group = scope:relevant_ig
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}		
 }
@@ -2852,7 +2836,7 @@ gm_actions.402 = {
 		}
 	}
 	
-	option = { #Authoritarian Nationalist
+	option = { 
 		name = gm_actions.403.b
 		trigger_event = {
 			id = gm_actions.401
@@ -2864,75 +2848,65 @@ gm_actions.402 = {
 	option = {
 		name =ideology_jingoist_leader
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_jingoist_leader
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = {
 		name =ideology_fascist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_fascist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = {
 		name =ideology_ethno_nationalist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_ethno_nationalist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = {
 		name =ideology_authoritarian
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_authoritarian
 		}
-		random_country = {
-			limit = {
-				has_variable = ideology:actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_integralist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_integralist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 }
@@ -2997,101 +2971,88 @@ gm_actions.403 = {
 		scope:target_character = {
 			set_ideology = ideology:ideology_moderate
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_traditionalist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_traditionalist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_traditionalist_minoritarian
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_traditionalist_minoritarian
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_slaver
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_slaver
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_royalist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_royalist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_luddite
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_luddite
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_theocrat
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_theocrat
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 }
@@ -3152,105 +3113,91 @@ gm_actions.404 = {
 	option = { 
 		name =ideology_reformer
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_reformer
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_market_liberal
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_market_liberal
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_protectionist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_protectionist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_land_reformer
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_land_reformer
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_utilitarian_leader
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_utilitarian_leader
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_sovereignist_leader
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_sovereignist_leader
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_corporatist_leader
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_corporatist_leader
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 }
@@ -3311,105 +3258,91 @@ gm_actions.405 = {
 	option = { 
 		name =ideology_republican_leader
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_republican_leader
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_feminist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_feminist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_abolitionist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_abolitionist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_humanitarian
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_humanitarian
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_liberal_leader
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_liberal_leader
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_radical
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_radical
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_pacifist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_pacifist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 }
@@ -3470,90 +3403,78 @@ gm_actions.406 = {
 	option = { 
 		name =ideology_social_democrat
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_social_democrat
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_communist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_communist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_vanguardist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_vanguardist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_anarchist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_anarchist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_positivist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_positivist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_atheist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_atheist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 }
@@ -3614,75 +3535,65 @@ gm_actions.407 = {
 	option = { 
 		name =ideology_orleanist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_orleanist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_legitimist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_legitimist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_bonapartist
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_bonapartist
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_despotic_utopian
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_despotic_utopian
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 	
 	option = { 
 		name =ideology_jacksonian_democrat
 		default_option = yes
-		remove_global_variable = GM_taking_action
 		scope:target_character = {
 			set_ideology = ideology:ideology_jacksonian_democrat
 		}
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			remove_variable = actionee
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
 		}
 	}
 }
