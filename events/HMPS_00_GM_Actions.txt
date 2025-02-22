@@ -124,19 +124,9 @@ gm_actions.1 = {
 	
 	# Innovation
 	option = {
-		name = gm_actions.23.a
+		name = gm_actions.23.t
 		trigger_event = {
 			id = gm_actions.23
-			days = 0
-			popup = yes
-		}
-	}
-
-	# Spread
-	option = {
-		name = gm_actions.27.a
-		trigger_event = {
-			id = gm_actions.27
 			days = 0
 			popup = yes
 		}
@@ -396,8 +386,7 @@ gm_actions.22 = {
 gm_actions.23 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.23.a
-	desc = gm_actions.23.b
+	title = gm_actions.23.t
 
 	event_image = {
 		video = "unspecific_signed_contract"
@@ -414,8 +403,52 @@ gm_actions.23 = {
 	}
 	
 	option = {
-		name = gm_actions.23.c
+		name = gm_actions.23.a
 		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.230.t
+		trigger_event = {
+			id = gm_actions.230
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.231.t
+		trigger_event = {
+			id = gm_actions.231
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.232.t
+		trigger_event = {
+			id = gm_actions.232
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.233.t
+		trigger_event = {
+			id = gm_actions.233
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.24.t
 		trigger_event = {
 			id = gm_actions.24
 			days = 0
@@ -424,18 +457,692 @@ gm_actions.23 = {
 	}
 	
 	option = {
-		name = gm_actions.23.d
+		name = gm_actions.23.b
+		remove_modifier = gm_education_gen_innov_a
+		remove_modifier = gm_education_gen_innov_b
+		remove_modifier = gm_education_gen_innov_c
+		remove_modifier = gm_education_gen_innov_d
+		remove_modifier = gm_education_mil_innov_a
+		remove_modifier = gm_education_mil_innov_b
+		remove_modifier = gm_education_mil_innov_c
+		remove_modifier = gm_education_mil_innov_d
+		remove_modifier = gm_education_prod_innov_a
+		remove_modifier = gm_education_prod_innov_b
+		remove_modifier = gm_education_prod_innov_c
+		remove_modifier = gm_education_prod_innov_d
+		remove_modifier = gm_education_soc_innov_a
+		remove_modifier = gm_education_soc_innov_b
+		remove_modifier = gm_education_soc_innov_c
+		remove_modifier = gm_education_soc_innov_d
 		trigger_event = {
-			id = gm_actions.25
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
 	}
+}
+
+gm_actions.230 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.230.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.23
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
 	
 	option = {
-		name = gm_actions.23.e
+		name = gm_actions.230.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.230.b
 		trigger_event = {
-			id = gm_actions.26
+			id = gm_actions.23
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.230.c
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_gen_innov_a
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.230
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.230.d
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_gen_innov_b
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.230
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.230.e
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_gen_innov_c
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.230
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.230.f
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_gen_innov_d
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.230
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.230.g
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_gen_innov_a
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_gen_innov_a
+		}
+		trigger_event = {
+			id = gm_actions.230
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.230.h
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_gen_innov_b
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_gen_innov_b
+		}
+		trigger_event = {
+			id = gm_actions.230
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.230.i
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_gen_innov_c
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_gen_innov_c
+		}
+		trigger_event = {
+			id = gm_actions.230
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.230.j
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_gen_innov_d
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_gen_innov_d
+		}
+		trigger_event = {
+			id = gm_actions.230
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.231 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.231.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.23
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.231.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.231.b
+		trigger_event = {
+			id = gm_actions.23
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.231.c
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_prod_innov_a
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.231
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.231.d
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_prod_innov_b
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.231
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.231.e
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_prod_innov_c
+				months = 122
+			}
+		
+		}
+		trigger_event = {
+			id = gm_actions.231
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.231.f
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_prod_innov_d
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.231
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.231.g
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_prod_innov_a
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_prod_innov_a
+		}
+		trigger_event = {
+			id = gm_actions.231
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.231.h
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_prod_innov_b
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_prod_innov_b
+		}
+		trigger_event = {
+			id = gm_actions.231
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.231.i
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_prod_innov_c
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_prod_innov_c
+		}
+		trigger_event = {
+			id = gm_actions.231
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.231.j
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_prod_innov_d
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_prod_innov_d
+		}
+		trigger_event = {
+			id = gm_actions.231
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.232 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.232.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.23
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.232.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.232.b
+		trigger_event = {
+			id = gm_actions.23
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.232.c
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_mil_innov_a
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.232
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.232.d
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_mil_innov_b
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.232
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.232.e
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_mil_innov_c
+				months = 122
+			}
+		
+		}
+		trigger_event = {
+			id = gm_actions.232
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.232.f
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_mil_innov_d
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.232
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.232.g
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_mil_innov_a
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_mil_innov_a
+		}
+		trigger_event = {
+			id = gm_actions.232
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.232.h
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_mil_innov_b
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_mil_innov_b
+		}
+		trigger_event = {
+			id = gm_actions.232
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.232.i
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_mil_innov_c
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_mil_innov_c
+		}
+		trigger_event = {
+			id = gm_actions.232
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.232.j
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_mil_innov_d
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_mil_innov_d
+		}
+		trigger_event = {
+			id = gm_actions.232
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.233 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.233.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.23
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.233.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.233.b
+		trigger_event = {
+			id = gm_actions.23
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.233.c
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_soc_innov_a
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.233
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.233.d
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_soc_innov_b
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.233
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.233.e
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_soc_innov_c
+				months = 122
+			}
+		
+		}
+		trigger_event = {
+			id = gm_actions.233
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.233.f
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_soc_innov_d
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.233
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.233.g
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_soc_innov_a
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_soc_innov_a
+		}
+		trigger_event = {
+			id = gm_actions.233
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.233.h
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_soc_innov_b
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_soc_innov_b
+		}
+		trigger_event = {
+			id = gm_actions.233
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.233.i
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_soc_innov_c
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_soc_innov_c
+		}
+		trigger_event = {
+			id = gm_actions.233
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.233.j
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_soc_innov_d
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_soc_innov_d
+		}
+		trigger_event = {
+			id = gm_actions.233
 			days = 0
 			popup = yes
 		}
@@ -445,260 +1152,7 @@ gm_actions.23 = {
 gm_actions.24 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.24.e
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.23
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.24.f
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.24.a
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_prod_innov_a
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.24.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_prod_innov_b
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.24.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_prod_innov_c
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.24.d
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_prod_innov_d
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}	
-	
-
-}
-
-gm_actions.25 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.25.e
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.23
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.25.f
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.25.a
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_mil_innov_a
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.25.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_mil_innov_b
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.25.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_mil_innov_c
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.25.d
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_mil_innov_d
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}	
-	
-
-}
-
-gm_actions.26 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.26.e
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-
-	duration = 1
-	
-	trigger = {
-		#triggered by gm_actions.23
-	}
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.26.f
-		default_option = yes
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.26.a
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_soc_innov_a
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.26.b
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_soc_innov_b
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.26.c
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_soc_innov_c
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}
-	option = {
-		name = gm_actions.26.d
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			add_modifier = {
-				name = gm_education_soc_innov_d
-				months = 36
-			}
-			remove_variable = actionee
-		}
-	}	
-	
-
-}
-
-gm_actions.27 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.27.a
-	desc = gm_actions.27.b
+	title = gm_actions.24.t
 
 	event_image = {
 		video = "unspecific_signed_contract"
@@ -715,38 +1169,73 @@ gm_actions.27 = {
 	}
 	
 	option = {
-		name = gm_actions.27.c
+		name = gm_actions.240.t
 		default_option = yes
 		trigger_event = {
-			id = gm_actions.28
+			id = gm_actions.240
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = gm_actions.27.d
+		name = gm_actions.241.t
+		default_option = yes
 		trigger_event = {
-			id = gm_actions.29
+			id = gm_actions.241
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = gm_actions.27.e
+		name = gm_actions.242.t
 		trigger_event = {
-			id = gm_actions.30
+			id = gm_actions.242.t
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.243.t
+		trigger_event = {
+			id = gm_actions.243
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.24.b
+		remove_modifier = gm_education_gen_spread_a
+		remove_modifier = gm_education_gen_spread_b
+		remove_modifier = gm_education_gen_spread_c
+		remove_modifier = gm_education_gen_spread_d
+		remove_modifier = gm_education_soc_spread_a
+		remove_modifier = gm_education_soc_spread_b
+		remove_modifier = gm_education_soc_spread_c
+		remove_modifier = gm_education_soc_spread_d
+		remove_modifier = gm_education_prod_spread_a
+		remove_modifier = gm_education_prod_spread_b
+		remove_modifier = gm_education_prod_spread_c
+		remove_modifier = gm_education_prod_spread_d
+		remove_modifier = gm_education_mil_spread_a
+		remove_modifier = gm_education_mil_spread_b
+		remove_modifier = gm_education_mil_spread_c
+		remove_modifier = gm_education_mil_spread_d
+		trigger_event = {
+			id = gm_actions.23
 			days = 0
 			popup = yes
 		}
 	}
 }
 
-gm_actions.28 = {
+gm_actions.240 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.28.e
+	title = gm_actions.240.t
 
 	event_image = {
 		video = "unspecific_signed_contract"
@@ -759,7 +1248,7 @@ gm_actions.28 = {
 	duration = 1
 	
 	trigger = {
-		#triggered by gm_actions.27
+		#triggered by gm_actions.24
 	}
 
 	immediate = {
@@ -772,7 +1261,7 @@ gm_actions.28 = {
 	}
 	
 	option = {
-		name = gm_actions.28.f
+		name = gm_actions.240.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
@@ -780,57 +1269,307 @@ gm_actions.28 = {
 		}
 	}
 	option = {
-		name = gm_actions.28.a
+		name = gm_actions.240.b
+		trigger_event = {
+			id = gm_actions.24
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.240.c
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_gen_spread_a
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.240
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.240.d
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_gen_spread_b
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.240
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.240.e
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_gen_spread_c
+				months = 122
+			}
+		
+		}
+		trigger_event = {
+			id = gm_actions.240
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.240.f
+		scope:recipient = {
+			add_modifier = {
+				name = gm_education_gen_spread_d
+				months = 122
+			}
+		}
+		trigger_event = {
+			id = gm_actions.240
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.240.g
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_gen_spread_a
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_gen_spread_a
+		}
+		trigger_event = {
+			id = gm_actions.240
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.240.h
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_gen_spread_b
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_gen_spread_b
+		}
+		trigger_event = {
+			id = gm_actions.240
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.240.i
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_gen_spread_c
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_gen_spread_c
+		}
+		trigger_event = {
+			id = gm_actions.240
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.240.j
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_gen_spread_d
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_gen_spread_d
+		}
+		trigger_event = {
+			id = gm_actions.240
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.241 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.241.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.24
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.241.a
+		default_option = yes
 		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	option = {
+		name = gm_actions.241.b
+		trigger_event = {
+			id = gm_actions.24
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.241.c
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_prod_spread_a
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
+		}
+		trigger_event = {
+			id = gm_actions.241
+			days = 0
+			popup = yes
 		}
 	}
 	option = {
-		name = gm_actions.28.b
-		remove_global_variable = GM_taking_action
+		name = gm_actions.241.d
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_prod_spread_b
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
+		}
+		trigger_event = {
+			id = gm_actions.241
+			days = 0
+			popup = yes
 		}
 	}
 	option = {
-		name = gm_actions.28.c
-		remove_global_variable = GM_taking_action
+		name = gm_actions.241.e
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_prod_spread_c
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
+		
+		}
+		trigger_event = {
+			id = gm_actions.241
+			days = 0
+			popup = yes
 		}
 	}
 	option = {
-		name = gm_actions.28.d
-		remove_global_variable = GM_taking_action
+		name = gm_actions.241.f
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_prod_spread_d
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
 		}
-	}	
-	
-
+		trigger_event = {
+			id = gm_actions.241
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.241.g
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_prod_spread_a
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_prod_spread_a
+		}
+		trigger_event = {
+			id = gm_actions.241
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.241.h
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_prod_spread_b
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_prod_spread_b
+		}
+		trigger_event = {
+			id = gm_actions.241
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.241.i
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_prod_spread_c
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_prod_spread_c
+		}
+		trigger_event = {
+			id = gm_actions.241
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.241.j
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_prod_spread_d
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_prod_spread_d
+		}
+		trigger_event = {
+			id = gm_actions.241
+			days = 0
+			popup = yes
+		}
+	}
 }
 
-gm_actions.29 = {
+gm_actions.242 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.29.e
+	title = gm_actions.242.t
 
 	event_image = {
 		video = "unspecific_signed_contract"
@@ -843,7 +1582,7 @@ gm_actions.29 = {
 	duration = 1
 	
 	trigger = {
-		#triggered by gm_actions.27
+		#triggered by gm_actions.24
 	}
 
 	immediate = {
@@ -856,7 +1595,7 @@ gm_actions.29 = {
 	}
 	
 	option = {
-		name = gm_actions.29.f
+		name = gm_actions.242.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
@@ -864,57 +1603,140 @@ gm_actions.29 = {
 		}
 	}
 	option = {
-		name = gm_actions.29.a
-		remove_global_variable = GM_taking_action
+		name = gm_actions.242.b
+		trigger_event = {
+			id = gm_actions.24
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.242.c
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_mil_spread_a
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
+		}
+		trigger_event = {
+			id = gm_actions.242
+			days = 0
+			popup = yes
 		}
 	}
 	option = {
-		name = gm_actions.29.b
-		remove_global_variable = GM_taking_action
+		name = gm_actions.242.d
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_mil_spread_b
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
+		}
+		trigger_event = {
+			id = gm_actions.242
+			days = 0
+			popup = yes
 		}
 	}
 	option = {
-		name = gm_actions.29.c
-		remove_global_variable = GM_taking_action
+		name = gm_actions.242.e
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_mil_spread_c
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
+		
+		}
+		trigger_event = {
+			id = gm_actions.242
+			days = 0
+			popup = yes
 		}
 	}
 	option = {
-		name = gm_actions.29.d
-		remove_global_variable = GM_taking_action
+		name = gm_actions.242.f
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_mil_spread_d
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
 		}
-	}	
-	
-
+		trigger_event = {
+			id = gm_actions.242
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.242.g
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_mil_spread_a
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_mil_spread_a
+		}
+		trigger_event = {
+			id = gm_actions.242
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.242.h
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_mil_spread_b
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_mil_spread_b
+		}
+		trigger_event = {
+			id = gm_actions.242
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.242.i
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_mil_spread_c
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_mil_spread_c
+		}
+		trigger_event = {
+			id = gm_actions.242
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.242.j
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_mil_spread_d
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_mil_spread_d
+		}
+		trigger_event = {
+			id = gm_actions.242
+			days = 0
+			popup = yes
+		}
+	}
 }
 
-gm_actions.30 = {
+gm_actions.243 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.26.e
+	title = gm_actions.243.t
 
 	event_image = {
 		video = "unspecific_signed_contract"
@@ -927,7 +1749,7 @@ gm_actions.30 = {
 	duration = 1
 	
 	trigger = {
-		#triggered by gm_actions.27
+		#triggered by gm_actions.24
 	}
 
 	immediate = {
@@ -940,7 +1762,7 @@ gm_actions.30 = {
 	}
 	
 	option = {
-		name = gm_actions.30.f
+		name = gm_actions.243.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		scope:recipient = {
@@ -948,51 +1770,134 @@ gm_actions.30 = {
 		}
 	}
 	option = {
-		name = gm_actions.30.a
-		remove_global_variable = GM_taking_action
+		name = gm_actions.243.b
+		trigger_event = {
+			id = gm_actions.24
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.243.c
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_soc_spread_a
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
+		}
+		trigger_event = {
+			id = gm_actions.243
+			days = 0
+			popup = yes
 		}
 	}
 	option = {
-		name = gm_actions.30.b
-		remove_global_variable = GM_taking_action
+		name = gm_actions.243.d
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_soc_spread_b
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
+		}
+		trigger_event = {
+			id = gm_actions.243
+			days = 0
+			popup = yes
 		}
 	}
 	option = {
-		name = gm_actions.30.c
-		remove_global_variable = GM_taking_action
+		name = gm_actions.243.e
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_soc_spread_c
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
+		
+		}
+		trigger_event = {
+			id = gm_actions.243
+			days = 0
+			popup = yes
 		}
 	}
 	option = {
-		name = gm_actions.30.d
-		remove_global_variable = GM_taking_action
+		name = gm_actions.243.f
 		scope:recipient = {
 			add_modifier = {
 				name = gm_education_soc_spread_d
-				months = 36
+				months = 122
 			}
-			remove_variable = actionee
 		}
-	}	
-	
-
+		trigger_event = {
+			id = gm_actions.243
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.243.g
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_soc_spread_a
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_soc_spread_a
+		}
+		trigger_event = {
+			id = gm_actions.243
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.243.h
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_soc_spread_b
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_soc_spread_b
+		}
+		trigger_event = {
+			id = gm_actions.243
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.243.i
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_soc_spread_c
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_soc_spread_c
+		}
+		trigger_event = {
+			id = gm_actions.243
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.243.j
+		trigger = {
+			scope:recipient = {	
+				has_modifier = gm_education_soc_spread_d
+			}
+		}
+		scope:recipient = {
+			remove_modifier = gm_education_soc_spread_d
+		}
+		trigger_event = {
+			id = gm_actions.243
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 gm_actions.34 = {
