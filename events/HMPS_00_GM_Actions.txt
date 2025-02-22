@@ -1520,6 +1520,27 @@ gm_actions.40 = {
 			remove_variable = actionee
 		}
 	}
+	
+	option = { #Pull to GM
+		name = gm_actions.40.e
+		random_country = {
+			limit = {
+				has_modifier = game_master
+			}
+			save_scope_as = GM
+		}
+		scope:target_character = {
+			add_character_role = agitator
+			transfer_character = scope:GM
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
 }
 
 gm_actions.400 = {
@@ -1781,6 +1802,984 @@ gm_actions.400 = {
 			set_interest_group = scope:relevant_ig
 		}
 	}		
+}
+
+gm_actions.401 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.401.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		scope:recipient = {
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				save_scope_as = target_character
+			}
+		}
+	}
+	
+	option = { #Cancel
+		name = gm_actions.401.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #Authoritarian Nationalist
+		name = gm_actions.402.t
+		trigger_event = {
+			id = gm_actions.402
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Conservative
+		name = gm_actions.403.t
+		trigger_event = {
+			id = gm_actions.403
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Reformer
+		name = gm_actions.404.t
+		trigger_event = {
+			id = gm_actions.404
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Liberal
+		name = gm_actions.405.t
+		trigger_event = {
+			id = gm_actions.405
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Socialist
+		name = gm_actions.406.t
+		trigger_event = {
+			id = gm_actions.406
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Flavor
+		name = gm_actions.407.t
+		trigger_event = {
+			id = gm_actions.407
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.402 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.402.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		scope:recipient = {
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				save_scope_as = target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.402.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #Authoritarian Nationalist
+		name = gm_actions.403.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name =ideology_jingoist_leader
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_jingoist_leader
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name =ideology_fascist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_fascist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name =ideology_ethno_nationalist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_ethno_nationalist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name =ideology_authoritarian
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_authoritarian
+		}
+		random_country = {
+			limit = {
+				has_variable = ideology:actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_integralist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_integralist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
+gm_actions.403 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.403.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		scope:recipient = {
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				save_scope_as = target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.403.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.403.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name =ideology_moderate
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_moderate
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_traditionalist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_traditionalist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_traditionalist_minoritarian
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_traditionalist_minoritarian
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_slaver
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_slaver
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_royalist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_royalist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_luddite
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_luddite
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_theocrat
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_theocrat
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
+gm_actions.404 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.404.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		scope:recipient = {
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				save_scope_as = target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.404.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.404.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name =ideology_reformer
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_reformer
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_pacifist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_pacifist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_market_liberal
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_market_liberal
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_protectionist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_protectionist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_land_reformer
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_land_reformer
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_utilitarian_leader
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_utilitarian_leader
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_sovereignist_leader
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_sovereignist_leader
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_corporatist_leader
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_corporatist_leader
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
+gm_actions.405 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.405.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		scope:recipient = {
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				save_scope_as = target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.405.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.405.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name =ideology_republican_leader
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_republican_leader
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_feminist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_feminist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_abolitionist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_abolitionist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_humanitarian
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_humanitarian
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_liberal_leader
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_liberal_leader
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_radical
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_radical
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
+gm_actions.406 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.406.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		scope:recipient = {
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				save_scope_as = target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.406.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.406.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name =ideology_social_democrat
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_social_democrat
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_communist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_communist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_vanguardist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_vanguardist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_anarchist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_anarchist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_positivist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_positivist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_atheist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_atheist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
+gm_actions.407 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.407.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		scope:recipient = {
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				save_scope_as = target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.407.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.407.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name =ideology_orleanist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_orleanist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_legitimist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_legitimist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_bonapartist
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_bonapartist
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_despotic_utopian
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_despotic_utopian
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { 
+		name =ideology_jacksonian_democrat
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:target_character = {
+			set_ideology = ideology:ideology_jacksonian_democrat
+		}
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
 }
 
 gm_actions.70 = {
