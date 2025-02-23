@@ -1,0 +1,41 @@
+hrp_disarmed_nation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	# Disarmed Nations are less able to resist the influence of international blocs
+	country_leverage_resistance_mult = -0.5
+	# Your armies are unable to fight as well
+	unit_army_offense_mult = -0.25
+	# 50% less military research speed, as your treaty obligations actively curtail innovation
+	country_military_research_speed_mult = -0.5
+	# You train troops 50% slower.
+	building_training_rate_mult = -0.5
+	# Heavy industry is curtailed entirely by 10%
+	building_group_bg_heavy_industry_throughput_add = -0.1
+	# We don't want you building up, do we?
+	building_construction_sector_throughput_add = -0.15
+}
+
+hrp_demilitarized_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	# Construction is curtailed even more
+	building_construction_sector_throughput_add = -0.25
+	# Construction in state itself is harmed
+	state_construction_mult = -0.2
+}
+
+hrp_occupied_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	# Troops in nation protect interests
+	state_turmoil_effects_mult = -0.25
+	# ...violently
+	state_mortality_mult = 0.1
+	state_mortality_turmoil_mult = 0.1
+	# "National Values" will be de-emphasized
+	state_assimilation_mult = -0.75
+	state_conversion_mult = -0.75
+	# Troops in nation are ready to seize from enemy immediately
+	battle_defense_owned_province_mult = -0.8
+	# State taxes funneled to enemy (abstracted away as occupying costs)
+	state_tax_collection_mult = -1.0
+	# No one likes the occupation
+	state_pop_support_movement_fascist_add = 0.15
+}
