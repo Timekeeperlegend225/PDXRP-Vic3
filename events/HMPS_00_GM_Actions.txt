@@ -132,6 +132,15 @@ gm_actions.1 = {
 		}
 	}
 	
+	option = {
+		name = gm_actions.34.a
+		trigger_event = {
+			id = gm_actions.34
+			days = 0
+			popup = yes
+		}
+	}
+	
 	#Modifiers
 	option = {
 		name = gm_actions.100.t
@@ -142,20 +151,21 @@ gm_actions.1 = {
 		}
 	}
 	
-	#Modifiers
+	#Laws
 	option = {
-		name = gm_actions.40.t
+		name = gm_actions.30.t
 		trigger_event = {
-			id = gm_actions.40
+			id = gm_actions.30
 			days = 0
 			popup = yes
 		}
 	}
 	
+	#Modifiers
 	option = {
-		name = gm_actions.34.a
+		name = gm_actions.40.t
 		trigger_event = {
-			id = gm_actions.34
+			id = gm_actions.40
 			days = 0
 			popup = yes
 		}
@@ -379,8 +389,6 @@ gm_actions.22 = {
 			remove_variable = actionee
 		}
 	}	
-	
-
 }
 
 gm_actions.23 = {
@@ -1894,6 +1902,2487 @@ gm_actions.243 = {
 		}
 		trigger_event = {
 			id = gm_actions.23
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.30 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.30.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.1
+	}
+	
+	option = {
+		name = gm_actions.30.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.t
+		trigger_event = {
+			id = gm_actions.31
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.32.t
+		trigger_event = {
+			id = gm_actions.32
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.33.t
+		trigger_event = {
+			id = gm_actions.33
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.31 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.31.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_governance_principles
+		trigger_event = {
+			id = gm_actions.310
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_distribution_of_power
+		trigger_event = {
+			id = gm_actions.311
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_citizenship
+		trigger_event = {
+			id = gm_actions.312
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_caste_hegemony
+		trigger = {
+			scope:recipient = {
+			has_social_hierarchy = british_indian_caste_system
+			}
+		}
+		trigger_event = {
+			id = gm_actions.313
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_church_and_state
+		trigger_event = {
+			id = gm_actions.314
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_bureaucracy
+		trigger_event = {
+			id = gm_actions.315
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_army_model
+		trigger_event = {
+			id = gm_actions.316
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_internal_security
+		trigger_event = {
+			id = gm_actions.317
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.310 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_governance_principles
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.31
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_monarchy
+		scope:recipient = {
+			activate_law = law_type:law_monarchy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_presidential_republic
+		scope:recipient = {
+			activate_law = law_type:law_presidential_republic
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_parliamentary_republic
+		scope:recipient = {
+			activate_law = law_type:law_parliamentary_republic
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_theocracy
+		scope:recipient = {
+			activate_law = law_type:law_theocracy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_council_republic
+		scope:recipient = {
+			activate_law = law_type:law_council_republic
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_corporate_state
+		scope:recipient = {
+			activate_law = law_type:law_corporate_state
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.311 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_distribution_of_power
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_autocracy
+		scope:recipient = {
+			activate_law = law_type:law_autocracy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_technocracy
+		scope:recipient = {
+			activate_law = law_type:law_technocracy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_oligarchy
+		scope:recipient = {
+			activate_law = law_type:law_oligarchy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_landed_voting
+		scope:recipient = {
+			activate_law = law_type:law_landed_voting
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_wealth_voting
+		scope:recipient = {
+			activate_law = law_type:law_wealth_voting
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_census_voting
+		scope:recipient = {
+			activate_law = law_type:law_census_voting
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_universal_suffrage
+		scope:recipient = {
+			activate_law = law_type:law_universal_suffrage
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_anarchy
+		scope:recipient = {
+			activate_law = law_type:law_anarchy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_single_party_state
+		scope:recipient = {
+			activate_law = law_type:law_single_party_state
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.312 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_citizenship
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_ethnostate
+		scope:recipient = {
+			activate_law = law_type:law_ethnostate
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_national_supremacy
+		scope:recipient = {
+			activate_law = law_type:law_national_supremacy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_racial_segregation
+		scope:recipient = {
+			activate_law = law_type:law_racial_segregation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_cultural_exclusion
+		scope:recipient = {
+			activate_law = law_type:law_cultural_exclusion
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_multicultural
+		scope:recipient = {
+			activate_law = law_type:law_multicultural
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.313 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_caste_hegemony
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_hindu_caste_enforced
+		scope:recipient = {
+			activate_law = law_type:law_hindu_caste_enforced
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_hindu_caste_codified
+		scope:recipient = {
+			activate_law = law_type:law_hindu_caste_codified
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_hindu_caste_not_enforced
+		scope:recipient = {
+			activate_law = law_type:law_hindu_caste_not_enforced
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_affirmative_action
+		scope:recipient = {
+			activate_law = law_type:law_affirmative_action
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.314 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_church_and_state
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_state_religion
+		scope:recipient = {
+			activate_law = law_type:law_state_religion
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_freedom_of_conscience
+		scope:recipient = {
+			activate_law = law_type:law_freedom_of_conscience
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_total_separation
+		scope:recipient = {
+			activate_law = law_type:law_total_separation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_state_atheism
+		scope:recipient = {
+			activate_law = law_type:law_state_atheism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.315 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_bureaucracy
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_hereditary_bureaucrats
+		scope:recipient = {
+			activate_law = law_type:law_hereditary_bureaucrats
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_appointed_bureaucrats
+		scope:recipient = {
+			activate_law = law_type:law_appointed_bureaucrats
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_elected_bureaucrats
+		scope:recipient = {
+			activate_law = law_type:law_elected_bureaucrats
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.316 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_army_model
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_peasant_levies
+		scope:recipient = {
+			activate_law = law_type:law_peasant_levies
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_professional_army
+		scope:recipient = {
+			activate_law = law_type:law_professional_army
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_national_militia
+		scope:recipient = {
+			activate_law = law_type:law_national_militia
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_mass_conscription
+		scope:recipient = {
+			activate_law = law_type:law_mass_conscription
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.317 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_internal_security
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_home_affairs
+		scope:recipient = {
+			activate_law = law_type:law_no_home_affairs
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_national_guard
+		scope:recipient = {
+			activate_law = law_type:law_national_guard
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_secret_police
+		scope:recipient = {
+			activate_law = law_type:law_secret_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_guaranteed_liberties
+		scope:recipient = {
+			activate_law = law_type:law_guaranteed_liberties
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.32 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.32.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.32.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.32.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_economic_system
+		trigger_event = {
+			id = gm_actions.320
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_trade_policy
+		trigger_event = {
+			id = gm_actions.321
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_taxation
+		trigger_event = {
+			id = gm_actions.322
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_land_reform
+		trigger_event = {
+			id = gm_actions.323
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_colonization
+		trigger_event = {
+			id = gm_actions.324
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_policing
+		trigger_event = {
+			id = gm_actions.325
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_education_system
+		trigger_event = {
+			id = gm_actions.326
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_health_system
+		trigger_event = {
+			id = gm_actions.327
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.320 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_economic_system
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_traditionalism
+		scope:recipient = {
+			activate_law = law_type:law_traditionalism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_interventionism
+		scope:recipient = {
+			activate_law = law_type:law_interventionism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_agrarianism
+		scope:recipient = {
+			activate_law = law_type:law_agrarianism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_industry_banned
+		scope:recipient = {
+			activate_law = law_type:law_industry_banned
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_extraction_economy
+		scope:recipient = {
+			activate_law = law_type:law_extraction_economy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_laissez_faire
+		scope:recipient = {
+			activate_law = law_type:law_laissez_faire
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_cooperative_ownership
+		scope:recipient = {
+			activate_law = law_type:law_cooperative_ownership
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_command_economy
+		scope:recipient = {
+			activate_law = law_type:law_command_economy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.321 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_trade_policy
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_mercantilism
+		scope:recipient = {
+			activate_law = law_type:law_mercantilism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_protectionism
+		scope:recipient = {
+			activate_law = law_type:law_protectionism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_free_trade
+		scope:recipient = {
+			activate_law = law_type:law_free_trade
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_isolationism
+		scope:recipient = {
+			activate_law = law_type:law_isolationism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.322 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_taxation
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_consumption_based_taxation
+		scope:recipient = {
+			activate_law = law_type:law_consumption_based_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_land_based_taxation
+		scope:recipient = {
+			activate_law = law_type:law_land_based_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_per_capita_based_taxation
+		scope:recipient = {
+			activate_law = law_type:law_per_capita_based_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_proportional_taxation
+		scope:recipient = {
+			activate_law = law_type:law_proportional_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_graduated_taxation
+		scope:recipient = {
+			activate_law = law_type:law_graduated_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.323 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_land_reform
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_serfdom
+		scope:recipient = {
+			activate_law = law_type:law_serfdom
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_tenant_farmers
+		scope:recipient = {
+			activate_law = law_type:law_tenant_farmers
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_commercialized_agriculture
+		scope:recipient = {
+			activate_law = law_type:law_commercialized_agriculture
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_homesteading
+		scope:recipient = {
+			activate_law = law_type:law_homesteading
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_collectivized_agriculture
+		scope:recipient = {
+			activate_law = law_type:law_collectivized_agriculture
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.324 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_colonization
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_colonial_affairs
+		scope:recipient = {
+			activate_law = law_type:law_no_colonial_affairs
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_frontier_colonization
+		scope:recipient = {
+			activate_law = law_type:law_frontier_colonization
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_colonial_resettlement
+		scope:recipient = {
+			activate_law = law_type:law_colonial_resettlement
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_colonial_exploitation
+		scope:recipient = {
+			activate_law = law_type:law_colonial_exploitation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.325 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_policing = {
+
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_police
+		scope:recipient = {
+			activate_law = law_type:law_no_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_local_police
+		scope:recipient = {
+			activate_law = law_type:law_local_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_dedicated_police
+		scope:recipient = {
+			activate_law = law_type:law_dedicated_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_militarized_police
+		scope:recipient = {
+			activate_law = law_type:law_militarized_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.326 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_education_system
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_schools
+		scope:recipient = {
+			activate_law = law_type:law_no_schools
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_religious_schools
+		scope:recipient = {
+			activate_law = law_type:law_religious_schools
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_private_schools
+		scope:recipient = {
+			activate_law = law_type:law_private_schools
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_public_schools
+		scope:recipient = {
+			activate_law = law_type:law_public_schools
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.327 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_health_system
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_health_system
+		scope:recipient = {
+			activate_law = law_type:law_no_health_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_charitable_health_system
+		scope:recipient = {
+			activate_law = law_type:law_charitable_health_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_private_health_insurance
+		scope:recipient = {
+			activate_law = law_type:law_private_health_insurance
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_public_health_insurance
+		scope:recipient = {
+			activate_law = law_type:law_public_health_insurance
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.33 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.33.t
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.33.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.33.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_free_speech
+		trigger_event = {
+			id = gm_actions.330
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_labor_rights
+		trigger_event = {
+			id = gm_actions.331
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_childrens_rights
+		trigger_event = {
+			id = gm_actions.332
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_rights_of_women
+		trigger_event = {
+			id = gm_actions.333
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_welfare
+		trigger_event = {
+			id = gm_actions.334
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_migration
+		trigger_event = {
+			id = gm_actions.335
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_slavery
+		trigger_event = {
+			id = gm_actions.336
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.330 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_free_speech
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_outlawed_dissent
+		scope:recipient = {
+			activate_law = law_type:law_outlawed_dissent
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_censorship
+		scope:recipient = {
+			activate_law = law_type:law_censorship
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_right_of_assembly
+		scope:recipient = {
+			activate_law = law_type:law_right_of_assembly
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_protected_speech
+		scope:recipient = {
+			activate_law = law_type:law_protected_speech
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.331 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_labor_rights
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_workers_rights
+		scope:recipient = {
+			activate_law = law_type:law_no_workers_rights
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_regulatory_bodies
+		scope:recipient = {
+			activate_law = law_type:law_regulatory_bodies
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_worker_protections
+		scope:recipient = {
+			activate_law = law_type:law_worker_protections
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.332 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_childrens_rights
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_child_labor_allowed
+		scope:recipient = {
+			activate_law = law_type:law_child_labor_allowed
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_restricted_child_labor
+		scope:recipient = {
+			activate_law = law_type:law_restricted_child_labor
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_compulsory_primary_school
+		scope:recipient = {
+			activate_law = law_type:law_compulsory_primary_school
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.333 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_rights_of_women
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_womens_rights
+		scope:recipient = {
+			activate_law = law_type:law_no_womens_rights
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_women_own_property
+		scope:recipient = {
+			activate_law = law_type:law_women_own_property
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_women_in_the_workplace
+		scope:recipient = {
+			activate_law = law_type:law_women_in_the_workplace
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_womens_suffrage
+		scope:recipient = {
+			activate_law = law_type:law_womens_suffrage
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.334 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_welfare
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_social_security
+		scope:recipient = {
+			activate_law = law_type:law_no_social_security
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_poor_laws
+		scope:recipient = {
+			activate_law = law_type:law_poor_laws
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_wage_subsidies
+		scope:recipient = {
+			activate_law = law_type:law_wage_subsidies
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_old_age_pension
+		scope:recipient = {
+			activate_law = law_type:law_old_age_pension
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.335 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_migration
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_migration_controls
+		scope:recipient = {
+			activate_law = law_type:law_no_migration_controls
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_migration_controls
+		scope:recipient = {
+			activate_law = law_type:law_migration_controls
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_closed_borders
+		scope:recipient = {
+			activate_law = law_type:law_closed_borders
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.336 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_slavery
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.30
+	}
+	
+	option = {
+		name = gm_actions.31.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.b
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_slavery_banned
+		scope:recipient = {
+			activate_law = law_type:law_slavery_banned
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_debt_slavery
+		scope:recipient = {
+			activate_law = law_type:law_debt_slavery
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_slave_trade
+		scope:recipient = {
+			activate_law = law_type:law_slave_trade
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_legacy_slavery
+		scope:recipient = {
+			activate_law = law_type:law_legacy_slavery
+		}
+		trigger_event = {
+			id = gm_actions.30
 			days = 0
 			popup = yes
 		}
