@@ -147,6 +147,21 @@
  gm_actions.34.d:0 "Add Authority"
  gm_actions.34.e:0 "Remove All"
  gm_actions.34.f:0 "Lower Authority"
+ 
+ gm_actions.30.t:0 "Change Laws"
+ gm_actions.30.a:0 "Cancel"
+ 
+ gm_actions.31.t:0 "Power Structure Laws"
+ gm_actions.31.a:0 "Cancel"
+ gm_actions.31.b:0 "Return"
+ 
+ gm_actions.32.t:0 "Economy Laws"
+ gm_actions.32.a:0 "Cancel"
+ gm_actions.32.b:0 "Return"
+ 
+ gm_actions.33.t:0 "Human Rights Laws"
+ gm_actions.33.a:0 "Cancel"
+ gm_actions.33.b:0 "Return"
 
  
  ###Infamy
