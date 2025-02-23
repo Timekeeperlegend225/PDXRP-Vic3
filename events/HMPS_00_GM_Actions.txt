@@ -8,12 +8,8 @@ gm_actions.1 = {
 	flavor = gm_actions.1.v
 
 	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+		texture = "gfx/event_pictures/void.dds"
+	} 
 
 	duration = 1
 	
@@ -216,12 +212,9 @@ gm_actions.20 = {
 	desc = gm_actions.20.b
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -255,12 +248,9 @@ gm_actions.21 = {
 	title = gm_actions.21.e
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -327,12 +317,9 @@ gm_actions.22 = {
 	title = gm_actions.22.e
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -397,12 +384,9 @@ gm_actions.23 = {
 	title = gm_actions.23.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -496,12 +480,9 @@ gm_actions.230 = {
 	title = gm_actions.230.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -662,12 +643,9 @@ gm_actions.231 = {
 	title = gm_actions.231.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -829,12 +807,9 @@ gm_actions.232 = {
 	title = gm_actions.232.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -996,12 +971,9 @@ gm_actions.233 = {
 	title = gm_actions.233.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -1163,12 +1135,9 @@ gm_actions.24 = {
 	title = gm_actions.24.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -1246,12 +1215,9 @@ gm_actions.240 = {
 	title = gm_actions.240.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -1413,12 +1379,9 @@ gm_actions.241 = {
 	title = gm_actions.241.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -1580,12 +1543,9 @@ gm_actions.242 = {
 	title = gm_actions.242.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -1747,12 +1707,9 @@ gm_actions.243 = {
 	title = gm_actions.243.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -1914,12 +1871,9 @@ gm_actions.30 = {
 	title = gm_actions.30.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -1970,12 +1924,9 @@ gm_actions.31 = {
 	title = gm_actions.31.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2085,12 +2036,9 @@ gm_actions.310 = {
 	title = lawgroup_governance_principles
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2195,12 +2143,9 @@ gm_actions.311 = {
 	title = lawgroup_distribution_of_power
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2341,12 +2286,9 @@ gm_actions.312 = {
 	title = lawgroup_citizenship
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2439,12 +2381,9 @@ gm_actions.313 = {
 	title = lawgroup_caste_hegemony
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2525,12 +2464,9 @@ gm_actions.314 = {
 	title = lawgroup_church_and_state
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2611,12 +2547,9 @@ gm_actions.315 = {
 	title = lawgroup_bureaucracy
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2685,12 +2618,9 @@ gm_actions.316 = {
 	title = lawgroup_army_model
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2771,12 +2701,9 @@ gm_actions.317 = {
 	title = lawgroup_internal_security
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2857,12 +2784,9 @@ gm_actions.32 = {
 	title = gm_actions.32.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -2967,12 +2891,9 @@ gm_actions.320 = {
 	title = lawgroup_economic_system
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3101,12 +3022,9 @@ gm_actions.321 = {
 	title = lawgroup_trade_policy
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3187,12 +3105,9 @@ gm_actions.322 = {
 	title = lawgroup_taxation
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3285,12 +3200,9 @@ gm_actions.323 = {
 	title = lawgroup_land_reform
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3383,12 +3295,9 @@ gm_actions.324 = {
 	title = lawgroup_colonization
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3470,12 +3379,9 @@ gm_actions.325 = {
 
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3556,12 +3462,9 @@ gm_actions.326 = {
 	title = lawgroup_education_system
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3642,12 +3545,9 @@ gm_actions.327 = {
 	title = lawgroup_health_system
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3728,12 +3628,9 @@ gm_actions.33 = {
 	title = gm_actions.33.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3829,12 +3726,9 @@ gm_actions.330 = {
 	title = lawgroup_free_speech
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3915,12 +3809,9 @@ gm_actions.331 = {
 	title = lawgroup_labor_rights
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -3989,12 +3880,9 @@ gm_actions.332 = {
 	title = lawgroup_childrens_rights
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -4063,12 +3951,9 @@ gm_actions.333 = {
 	title = lawgroup_rights_of_women
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -4149,12 +4034,9 @@ gm_actions.334 = {
 	title = lawgroup_welfare
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -4235,12 +4117,9 @@ gm_actions.335 = {
 	title = lawgroup_migration
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -4252,7 +4131,6 @@ gm_actions.335 = {
 		name = gm_actions.31.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
-		scope:recipient = {
 			remove_variable = actionee
 		}
 	}
@@ -4309,12 +4187,9 @@ gm_actions.336 = {
 	title = lawgroup_slavery
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -4395,12 +4270,9 @@ gm_actions.34 = {
 	title = gm_actions.34.a
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -4480,12 +4352,9 @@ gm_actions.14 = {
 	flavor = gm_actions.14.f
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -4680,12 +4549,9 @@ gm_actions.15 = {
 	desc = gm_actions.15.d
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -4726,12 +4592,9 @@ gm_actions.17 = {
 	#flavor = gm_actions.17.f
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -4800,12 +4663,9 @@ gm_actions.40 = {
 	title = gm_actions.40.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -4943,12 +4803,9 @@ gm_actions.400 = {
 	title = gm_actions.400.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -5188,12 +5045,9 @@ gm_actions.401 = {
 	title = gm_actions.401.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -5287,12 +5141,9 @@ gm_actions.402 = {
 	title = gm_actions.402.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -5406,12 +5257,9 @@ gm_actions.403 = {
 	title = gm_actions.403.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -5552,12 +5400,9 @@ gm_actions.404 = {
 	title = gm_actions.404.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -5697,12 +5542,9 @@ gm_actions.405 = {
 	title = gm_actions.405.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -5842,12 +5684,9 @@ gm_actions.406 = {
 	title = gm_actions.406.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -5974,12 +5813,9 @@ gm_actions.407 = {
 	title = gm_actions.407.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -6095,12 +5931,9 @@ gm_actions.70 = {
 	#flavor = gm_actions.70.f
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -6184,12 +6017,9 @@ gm_actions.83 = {
 	#flavor = gm_actions.83.f
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -6259,12 +6089,9 @@ gm_actions.84 = {
 	#flavor = gm_actions.84.f
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -6540,12 +6367,9 @@ gm_actions.85 = {
 	#flavor = gm_actions.85.f
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -6734,12 +6558,9 @@ gm_actions.86 = {
 	#flavor = gm_actions.86.f
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -6986,12 +6807,9 @@ gm_actions.87 = {
 	#flavor = gm_actions.87.f
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -7236,12 +7054,9 @@ gm_actions.830 = {
 	title = gm_actions.830.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -7449,12 +7264,9 @@ gm_actions.831 = {
 	title = gm_actions.831.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
@@ -7652,12 +7464,9 @@ gm_actions.90 = {
 #	desc = gm_actions.90.u
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -7763,12 +7572,9 @@ gm_actions.91 = {
 	title = gm_actions.91.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -7825,12 +7631,9 @@ gm_actions.100 = {
 	#flavor = gm_actions.100.f
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 
@@ -7894,12 +7697,9 @@ gm_actions.101 = {
 	title = gm_actions.101.t
 
 	event_image = {
-		video = "unspecific_signed_contract"
+		texture = "gfx/event_pictures/1character_4flags.dds"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+ 
 
 	duration = 1
 	
