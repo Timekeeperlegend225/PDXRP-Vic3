@@ -185,7 +185,7 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
-	#Truce
+	#Human player flag
 	option = {
 		name = gm_actions.90.t
 		trigger_event = {
@@ -194,7 +194,7 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
-	#Human player flag
+	#Diploe
 	option = {
 		name = gm_actions.91.t
 		trigger_event = {
@@ -3375,7 +3375,7 @@ gm_actions.324 = {
 gm_actions.325 = {
 	type = country_event
 	placement = ROOT
-	title = lawgroup_policing = {
+	title = lawgroup_policing
 
 
 	event_image = {
@@ -4131,6 +4131,7 @@ gm_actions.335 = {
 		name = gm_actions.31.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
+		scope:recipient = {
 			remove_variable = actionee
 		}
 	}
@@ -5928,7 +5929,6 @@ gm_actions.70 = {
 	placement = ROOT
 	title = gm_actions.70.t
 	desc = gm_actions.70.u
-	#flavor = gm_actions.70.f
 
 	event_image = {
 		texture = "gfx/event_pictures/1character_4flags.dds"
@@ -6006,6 +6006,34 @@ gm_actions.70 = {
 			remove_variable = actionee
 		}
 		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.70.d
+		scope:recipient = {
+			add_loyalists = {
+				value = 0.05
+			}
+		}
+		trigger_event = {
+			id = gm_actions.70
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.70.e
+		scope:recipient = {
+			add_radicals = {
+				value = 0.05
+			}
+		}
+		trigger_event = {
+			id = gm_actions.70
+			days = 0
+			popup = yes
+		}
 	}
 }
 
@@ -7585,10 +7613,17 @@ gm_actions.91 = {
 			}
 			save_scope_as = recipient
 		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
 	}
 	
 	option = {
 		name = gm_actions.91.a
+		default_option = yes
 		scope:recipient = {
 			remove_variable = actionee
 		}
@@ -7597,6 +7632,13 @@ gm_actions.91 = {
 	
 	option = {
 		name = gm_actions.91.b
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_truce_with = scope:scope_GM_target 
+				}
+			}
+		}
 		scope:recipient = {
 			create_bidirectional_truce = {
 				country = scope:scope_GM_target
@@ -7605,19 +7647,700 @@ gm_actions.91 = {
 		}
 		scope:recipient = {
 			remove_variable = actionee
-			remove_modifier = GM_target
 		}
 		remove_global_variable = GM_taking_action
 	}
 	
 	option = {
 		name = gm_actions.91.c
+		trigger = {
+			scope:recipient = {
+				has_truce_with = scope:scope_GM_target 
+			}
+		}
 		scope:recipient = {
 			end_truce = scope:scope_GM_target  
 		}
 		scope:recipient = {
 			remove_variable = actionee
-			remove_modifier = GM_target
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.91.d
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = defensive_pact
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = defensive_pact
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.91.e
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = defensive_pact
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = defensive_pact
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.91.f
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = alliance
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = alliance
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.91.g
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = alliance
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = alliance
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.91.h
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = guarantee_independence
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = guarantee_independence
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.91.i
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = guarantee_independence
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = guarantee_independence
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.t
+		trigger_event = {
+			id = gm_actions.92
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.91.j
+		trigger_event = {
+			id = gm_actions.910
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.910 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.910.t
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.910.a
+		default_option = yes
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.910.b
+		trigger_event = {
+			id = gm_actions.91
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.910.c
+		scope:recipient = {
+			annex = scope:scope_GM_target
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.910.d
+		scope:recipient = {
+			annex_with_incorporation = scope:scope_GM_target
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+}
+
+gm_actions.92 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.92.t
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.92.a
+		default_option = yes
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.b
+		trigger_event = {
+			id = gm_actions.91
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.92.c
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = protectorate
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				NOT = {
+					is_country_type = colonial
+				}
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = protectorate
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.d
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = protectorate
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = protectorate
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.e
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = puppet
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				NOT = {
+					is_country_type = colonial
+				}
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = puppet
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.f
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = puppet
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = puppet
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.g
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = tributary
+					}
+				}
+				is_country_type = unrecognized
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = tributary
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.h
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = tributary
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = tributary
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.i
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = vassal
+					}
+				}
+				is_country_type = unrecognized
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = vassal
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.j
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = vassal
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = vassal
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.k
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = dominion
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				is_country_type = colonial
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = dominion
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.l
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = dominion
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = dominion
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.m
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = chartered_company
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				is_country_type = colonial
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = chartered_company
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.n
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = chartered_company
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = chartered_company
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.o
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = colony
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				is_country_type = colonial
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = colony
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.p
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = colony
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = colony
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.q
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = personal_union
+					}
+				}
+				has_law = law_type:law_monarchy
+			}
+			scope:scope_GM_target = {
+				has_law = law_type:law_monarchy
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = personal_union
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.92.r
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = personal_union
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = personal_union
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
 		}
 		remove_global_variable = GM_taking_action
 	}
@@ -7682,11 +8405,25 @@ gm_actions.100 = {
 	}
 	
 	option = {
-		name = gm_actions.101.t
+		name = gm_actions.100.b
 		trigger_event = {
 			id = gm_actions.101
 			days = 0
 			popup = yes
+		}
+	}
+	
+	option = {
+		name = balance_modifier_mod
+		trigger = {
+			scope:recipient = {
+				has_modifier = declared_bankruptcy
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+			remove_modifier = declared_bankruptcy
 		}
 	}
 }
