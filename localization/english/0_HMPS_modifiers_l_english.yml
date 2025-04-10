@@ -128,3 +128,13 @@
  GM_movement_radicalism_-10:0 "Small Radicalism Malus"
  GM_movement_radicalism_-25:0 "Medium Radicalism Malus"
  GM_movement_radicalism_pacify:0 "Pacification"
+ 
+ broken_treaty_small_mod:0 "Broke a diplomatic early"
+ broken_treaty_medium_mod:0 "Broke a treaty too early"
+ broken_treaty_large_mod:0 "Broke a treaty just after signing it"
+ 
+ broken_rule_small_mod:0 "Broke a small rule"
+ broken_rule_medium_mod:0 "Broke a medium rule"
+ broken_rule_large_mod:0 "Broke an important rule"
+ 
+ balance_modifier_mod:0 "Balance modifier"
