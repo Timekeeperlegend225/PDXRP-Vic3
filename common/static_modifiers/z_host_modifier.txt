@@ -2,6 +2,26 @@ game_master = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 }
 
+gm_education_gen_spread_a = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_mult = 0.10
+}
+
+gm_education_gen_spread_b = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_mult = 0.25
+}
+
+gm_education_gen_spread_c = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_mult = 0.50
+}
+
+gm_education_gen_spread_d = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_mult = 1.0
+}
+
 gm_education_soc_spread_a = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_society_tech_spread_mult = 0.10
@@ -100,6 +120,26 @@ gm_prestige_neg_c = {
 gm_prestige_neg_d = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_prestige_add = -200
+}
+
+gm_education_gen_innov_a = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_research_speed_mult = 0.10
+}
+
+gm_education_gen_innov_b = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_research_speed_mult = 0.25
+}
+
+gm_education_gen_innov_c = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_research_speed_mult = 0.5
+}
+
+gm_education_gen_innov_d = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_research_speed_mult = 1.0
 }
 
 gm_education_mil_innov_a = {
@@ -501,4 +541,48 @@ balance_modifier_mod = {
 
 target_character_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
+
+broken_treaty_small_mod = {
+	icon = gfx/interface/icons/infamy_icons/infamous.dds
+	country_prestige_mult = -0.05
+	country_influence_mult = -0.10
+}
+
+broken_treaty_medium_mod = {
+	icon = gfx/interface/icons/infamy_icons/notorious.dds
+	country_prestige_mult = -0.10
+	country_influence_mult = -0.20
+}
+
+broken_treaty_large_mod = {
+	icon = gfx/interface/icons/infamy_icons/pariah.dds
+	country_prestige_mult = -0.25
+	country_influence_mult = -0.25
+}
+
+broken_rule_small_mod = {
+	icon = gfx/interface/icons/infamy_icons/infamous.dds
+	country_authority_mult = -0.05
+	country_influence_mult = -0.05
+	country_loan_interest_rate_mult = 0.10
+}
+
+broken_rule_medium_mod = {
+	icon = gfx/interface/icons/infamy_icons/notorious.dds
+	country_authority_mult = -0.10
+	country_influence_mult = -0.10
+	country_loan_interest_rate_mult = 0.15
+	country_law_enactment_stall_mult = 0.10
+	building_throughput_add = -0.07
+}
+
+broken_rule_large_mod = {
+	icon = gfx/interface/icons/infamy_icons/pariah.dds
+	country_authority_mult = -0.20
+	country_influence_mult = -0.20
+	country_loan_interest_rate_mult = 0.20
+	country_law_enactment_stall_mult = 0.20
+	building_throughput_add = -0.15
+	country_infamy_generation_mult = 0.25
 }
