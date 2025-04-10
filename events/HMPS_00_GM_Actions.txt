@@ -4751,7 +4751,9 @@ gm_actions.40 = {
 		scope:target_character = {
 			add_character_role = politician
 		}
-		set_heir = scope:target_character
+		scope:recipient = {
+			set_heir = scope:target_character
+		}
 		remove_global_variable = GM_taking_action
 		random_country = {
 			limit = {
@@ -7806,6 +7808,52 @@ gm_actions.91 = {
 	}
 	
 	option = {
+		name = gm_actions.91.j
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = war_reparations
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			create_diplomatic_pact = {
+				type = war_reparations
+				country = scope:scope_GM_target
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = gm_actions.91.k
+		trigger = {
+			scope:recipient = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = war_reparations
+				}
+			}
+		}
+		scope:recipient = {
+			remove_diplomatic_pact = {
+				type = war_reparations
+				country = scope:scope_GM_target
+			}  
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
 		name = gm_actions.92.t
 		trigger_event = {
 			id = gm_actions.92
@@ -7815,7 +7863,7 @@ gm_actions.91 = {
 	}
 	
 	option = {
-		name = gm_actions.91.j
+		name = gm_actions.910.t
 		trigger_event = {
 			id = gm_actions.910
 			days = 0
@@ -8405,7 +8453,7 @@ gm_actions.100 = {
 	}
 	
 	option = {
-		name = gm_actions.100.b
+		name = gm_actions.101.t
 		trigger_event = {
 			id = gm_actions.101
 			days = 0
@@ -8414,7 +8462,7 @@ gm_actions.100 = {
 	}
 	
 	option = {
-		name = balance_modifier_mod
+		name = gm_actions.100.b
 		trigger = {
 			scope:recipient = {
 				has_modifier = declared_bankruptcy
@@ -8424,6 +8472,15 @@ gm_actions.100 = {
 		scope:recipient = {
 			remove_variable = actionee
 			remove_modifier = declared_bankruptcy
+		}
+	}
+	
+	option = {
+		name = gm_actions.102.t
+		trigger_event = {
+			id = gm_actions.102
+			days = 0
+			popup = yes
 		}
 	}
 }
@@ -8461,6 +8518,7 @@ gm_actions.101 = {
 			remove_variable = actionee
 		}
 	}
+	
 	option = {
 		name = gm_actions.101.b
 		remove_global_variable = GM_taking_action
@@ -8520,6 +8578,192 @@ gm_actions.101 = {
 					has_modifier = GM_convoy_25
 				}
 				remove_modifier = GM_convoy_25
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
+gm_actions.102 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.102.t
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.100
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.102.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.102.b
+		trigger_event = {
+			id = gm_actions.100
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = broken_treaty_small_mod
+		scope:recipient = {
+			add_modifier = {
+				name = broken_treaty_small_mod
+				months = 60
+			}
+			change_infamy = 15
+		}
+		trigger_event = {
+			id = gm_actions.102
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = broken_treaty_medium_mod
+		scope:recipient = {
+			add_modifier = {
+				name = broken_treaty_medium_mod
+				months = 60
+			}
+			change_infamy = 20
+		}
+		trigger_event = {
+			id = gm_actions.102
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = broken_treaty_large_mod
+		scope:recipient = {
+			add_modifier = {
+				name = broken_treaty_large_mod
+				months = 60
+			}
+			change_infamy = 25
+		}
+		trigger_event = {
+			id = gm_actions.102
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = broken_rule_small_mod
+		scope:recipient = {
+			add_modifier = {
+				name = broken_rule_small_mod
+				months = 60
+			}
+		}
+		trigger_event = {
+			id = gm_actions.102
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = broken_rule_medium_mod
+		scope:recipient = {
+			add_modifier = {
+				name = broken_rule_medium_mod
+				months = 60
+			}
+		}
+		trigger_event = {
+			id = gm_actions.102
+			days = 0
+			popup = yes
+		}
+	}	
+	option = {
+		name = broken_rule_large_mod
+		scope:recipient = {
+			add_modifier = {
+				name = broken_rule_large_mod
+				months = 60
+			}
+		}
+		trigger_event = {
+			id = gm_actions.102
+			days = 0
+			popup = yes
+		}
+	}
+	option = {
+		name = gm_actions.102.c
+		trigger = {
+			scope:recipient = {
+				OR = {
+					has_modifier = broken_treaty_small_mod
+					has_modifier = broken_treaty_medium_mod
+					has_modifier = broken_treaty_large_mod
+					has_modifier = broken_rule_small_mod
+					has_modifier = broken_rule_medium_mod
+					has_modifier = broken_rule_large_mod
+				}
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			if = {
+				limit = {
+					has_modifier = broken_treaty_small_mod
+				}
+				remove_modifier = broken_treaty_small_mod
+			}
+			else_if = {
+				limit = {
+					has_modifier = broken_treaty_medium_mod
+				}
+				remove_modifier = broken_treaty_medium_mod
+			}
+			else_if = {
+				limit = {
+					has_modifier = broken_treaty_large_mod
+				}
+				remove_modifier = broken_treaty_large_mod
+			}
+			else_if = {
+				limit = {
+					has_modifier = broken_rule_small_mod
+				}
+				remove_modifier = broken_rule_small_mod
+			}
+			else_if = {
+				limit = {
+					has_modifier = broken_rule_medium_mod
+				}
+				remove_modifier = broken_rule_medium_mod
+			}
+			else_if = {
+				limit = {
+					has_modifier = broken_rule_large_mod
+				}
+				remove_modifier = broken_rule_large_mod
 			}
 			remove_variable = actionee
 		}
