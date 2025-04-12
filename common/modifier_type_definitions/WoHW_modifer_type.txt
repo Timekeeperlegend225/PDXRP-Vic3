@@ -13,3 +13,20 @@ unit_combat_unit_type_squirmish_infantry_offense_add={
 		ai_value=0
 	}
 }
+
+state_dracaryans_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_dragokins_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
