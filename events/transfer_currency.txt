@@ -1,0 +1,209 @@
+namespace = transfer_currency
+
+transfer_currency.1 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = transfer_currency.1.t
+	desc = transfer_currency.1.d
+	flavor = transfer_currency.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/invention_icons/currency_standards.dds"
+
+	duration = 1
+
+	option = {
+		name = transfer_currency.1.z
+		default_option = yes
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.a
+		trigger = {
+			fm_transferable_currency > 10000
+		}
+		add_treasury = -10000
+		scope:target_country = {
+			add_treasury = 10000
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.b
+		trigger = {
+			fm_transferable_currency > 25000
+		}
+		add_treasury = -25000
+		scope:target_country = {
+			add_treasury = 25000
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.c
+		trigger = {
+			fm_transferable_currency > 50000
+		}
+		add_treasury = -50000
+		scope:target_country = {
+			add_treasury = 50000
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.e
+		trigger = {
+			fm_transferable_currency > 100000
+		}
+		add_treasury = -100000
+		scope:target_country = {
+			add_treasury = 100000
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.g
+		trigger = {
+			fm_transferable_currency > 200000
+		}
+		add_treasury = -200000
+		scope:target_country = {
+			add_treasury = 200000
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.h
+		trigger = {
+			fm_transferable_currency > 350000
+		}
+		add_treasury = -350000
+		scope:target_country = {
+			add_treasury = 350000
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.i
+		trigger = {
+			fm_transferable_currency > 500000
+		}
+		add_treasury = -500000
+		scope:target_country = {
+			add_treasury = 500000
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.l
+		trigger = {
+			fm_transferable_currency > 750000
+		}
+		add_treasury = -750000
+		scope:target_country = {
+			add_treasury = 750000
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.m
+		trigger = {
+			fm_transferable_currency > 1000000
+		}
+		add_treasury = -1000000
+		scope:target_country = {
+			add_treasury = 1000000
+		}
+		change_relations = {
+			country = scope:target_country
+			value = 5
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.n
+		trigger = {
+			fm_transferable_currency > 1500000
+		}
+		add_treasury = -1500000
+		scope:target_country = {
+			add_treasury = 1500000
+		}
+		change_relations = {
+			country = scope:target_country
+			value = 10
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.o
+		trigger = {
+			fm_transferable_currency > 2500000
+		}
+		add_treasury = -2500000
+		scope:target_country = {
+			add_treasury = 2500000
+		}
+		change_relations = {
+			country = scope:target_country
+			value = 10
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.p
+		trigger = {
+			fm_transferable_currency > 5000000
+		}
+		add_treasury = -5000000
+		scope:target_country = {
+			add_treasury = 5000000
+		}
+		change_relations = {
+			country = scope:target_country
+			value = 20
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.q
+		trigger = {
+			fm_transferable_currency > 7500000
+		}
+		add_treasury = -7500000
+		scope:target_country = {
+			add_treasury = 7500000
+		}
+		change_relations = {
+			country = scope:target_country
+			value = 20
+		}
+		remove_variable = currency_one
+	}
+	option = {
+		name = transfer_currency.1.r
+		trigger = {
+			fm_transferable_currency > 10000000
+		}
+		add_treasury = -10000000
+		scope:target_country = {
+			add_treasury = 10000000
+		}
+		change_relations = {
+			country = scope:target_country
+			value = 25
+		}
+		remove_variable = currency_one
+	}
+}
