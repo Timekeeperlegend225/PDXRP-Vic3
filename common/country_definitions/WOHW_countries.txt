@@ -5,6 +5,6 @@
 
 	tier = empire
 	
-	cultures = { dracaryans dragokins }
-	capital = STATE_BRANDENBURG
+	cultures = { dracaryans }
+	capital = STATE_CANARY_ISLANDS
 }
