@@ -1,0 +1,19 @@
+﻿building_hole = {
+	building_group = bg_construction
+	icon = "gfx/interface/icons/building_icons/construction_camp.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	terrain_manipulator = mining
+	
+	required_construction = construction_cost_medium
+	unlocking_technologies = {
+		urbanization
+	}
+	production_method_groups = {
+		pmg_wohw_hole
+	}
+	
+	ai_value = 1000 # Construction sector should generally be preferred over other equal-priority spending items
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}

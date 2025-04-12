@@ -1,0 +1,33 @@
+﻿pm_wohw_hole = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			
+			# output goods
+			goods_output_iron_add = 1
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 10
+		}
+	}
+}
+
+pm_wohw_hole_emb = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			
+			# output goods
+			goods_output_grain_add = 10000
+			goods_output_coal_add = 2000
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_slave_add = 20000
+		}
+	}
+}
