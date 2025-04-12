@@ -1,0 +1,6 @@
+EMB = { #Wei
+	flag_definition = {
+		coa = EMB
+		priority = 1		
+	}	
+}

@@ -1,0 +1,7 @@
+﻿underworld_heritage = {
+	heritage = yes
+}
+
+draconic = {}
+
+humanoid = {}

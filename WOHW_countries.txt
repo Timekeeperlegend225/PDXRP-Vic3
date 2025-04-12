@@ -1,0 +1,10 @@
+﻿EMB = {
+	color = { 41 11 9 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { dracaryans dragokins  }
+	capital = STATE_BRANDENBURG
+}

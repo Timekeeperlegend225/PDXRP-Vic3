@@ -23,25 +23,25 @@ demand_conquest = {
 	}
 	
 	possible = {
-	OR = {
-	ROOT = { limit = { is_ai = yes }
-	has_game_rule = ai_wargoals_allowed
-	NOT = { root = { infamy >= 24.9 } }
-	}
-	ROOT = { is_ai = no }
-	}
-	custom_tooltip = {
-		text = "WAR_NOT_WELL_ENOUGH"
-		ROOT = {
-		  NOT = { enemy_occupation > 0.15 }
+		OR = {
+			ROOT = { limit = { is_ai = yes }
+			has_game_rule = ai_wargoals_allowed
+			NOT = { root = { infamy >= 24.9 } }
+			}
+			ROOT = { is_ai = no }
 		}
-	 }
-	custom_tooltip = {
-		text = "WARGOAL_ON_COOLDOWN"
-		ROOT = {
-			NOT = { has_variable = war_goal_add_cooldown }
-		}
-	 }
+		custom_tooltip = {
+			text = "WAR_NOT_WELL_ENOUGH"
+			ROOT = {
+			  NOT = { enemy_occupation > 0.15 }
+			}
+		 }
+		custom_tooltip = {
+			text = "WARGOAL_ON_COOLDOWN"
+			ROOT = {
+				NOT = { has_variable = war_goal_add_cooldown }
+			}
+		 }
 	}
 
 	second_state_trigger = {

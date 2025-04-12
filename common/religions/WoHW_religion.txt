@@ -1,0 +1,7 @@
+﻿nizoism = {
+	texture = "gfx/interface/icons/religion_icons/dragonbone.dds"
+	traits = {
+		dragonic
+	}
+	color = { 41 11 9 }
+}
