@@ -53,7 +53,7 @@ become_EMB = {
 				interest_group = ig:ig_armed_forces
 				ruler = yes
 				is_general = yes
-				ideology = ideology_jingoist
+				ideology = ideology_jingoist_leader
 				traits = {
 					imperious
 					cruel
@@ -219,7 +219,7 @@ become_PNR = {
 				interest_group = ig:ig_devout
 				ruler = yes
 				is_general = yes
-				ideology = ideology_jingoist
+				ideology = ideology_jingoist_leader
 				traits = {
 					honorable
 					persistent
