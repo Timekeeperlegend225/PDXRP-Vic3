@@ -1,6 +1,7 @@
-country1 = {
+become_EMB = {
 	is_shown = {
-		always = yes
+		has_modifier = game_master
+		exist = c:EMB
 	}
 	possible = {
 		always = yes
@@ -9,7 +10,7 @@ country1 = {
 	when_taken = {
 		create_country = {
 			tag = EMB
-			origin = c:SOK
+			origin = c:GBR
 			state = s:STATE_CANARY_ISLANDS.region_state:SPA
 		}
 		c:EMB ={
@@ -36,7 +37,38 @@ country1 = {
 			activate_law = law_type:law_closed_borders
 			activate_law = law_type:law_slave_trade
 		}
+		remove_modifier = game_master
 		play_as = c:EMB
+		add_modifier = game_master
+		add_technology_researched = ember_empire_starting_boost
+		s:STATE_CANARY_ISLANDS.region_state:EMB = {
+		every_scope_pop = {
+				change_poptype = pop_type:slaves
+			}
+			create_pop = {
+				pop_type = aristocrats
+				culture = dracaryans
+				religion = nizoism
+				size = 4000000
+			}
+			create_pop = {
+				pop_type = soldiers
+				culture = dragokins
+				religion = nizoism
+				qualifications = 40
+				size = 12000000
+			}
+			state_region = {
+				add_homeland = cu:dracaryans
+				add_homeland = cu:dragokins
+			}
+		}
+		s:STATE_CANARY_ISLANDS.region_state:EMB = {
+			create_building = {
+				building = building_hole_emb
+				level = 20
+			}
+		}
 	}
 
 	ai_chance = {

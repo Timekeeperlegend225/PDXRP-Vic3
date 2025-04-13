@@ -135,9 +135,9 @@
 		Zhordania
 	}
 	ethnicities = {
-		1 = dragon
+		1 = indian
 	}
-	graphics = east_asian
+	graphics = european
 }
 
 
@@ -279,7 +279,7 @@ dragokins ={
 		Zhordania
 	}
 	ethnicities = {
-		1 = dragon
+		1 = indian
 	}
-	graphics = east_asian
+	graphics = european
 }

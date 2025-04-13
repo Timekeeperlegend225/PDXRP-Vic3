@@ -1,19 +1,23 @@
-﻿building_hole = {
+﻿building_hole_emb = {
 	building_group = bg_construction
-	icon = "gfx/interface/icons/building_icons/construction_camp.dds"
-	city_type = mine
+	icon = "gfx/interface/icons/building_icons/hole_emb.dds"
+	city_type = none
 	levels_per_mesh = 5
-	terrain_manipulator = mining
 	
 	required_construction = construction_cost_medium
 	unlocking_technologies = {
 		urbanization
 	}
 	production_method_groups = {
-		pmg_wohw_hole
+		pmg_wohw_hole_emb
 	}
+	slaves_role = laborers
 	
-	ai_value = 1000 # Construction sector should generally be preferred over other equal-priority spending items
+	potential = {
+		owner = c:EMB
+		state_region = s:STATE_CANARY_ISLANDS
+	}
+	ai_value = 0 # Construction sector should generally be preferred over other equal-priority spending items
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
