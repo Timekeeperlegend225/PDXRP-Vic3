@@ -4,11 +4,11 @@ ember_empire_starting_boost = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/anarchy.dds"
 	category = society
+	can_research = no
 	
 	modifier = {
 	unit_army_offense_add = 75
 	unit_army_defense_add = 65
-	unit_supply_consumption_mult = -1
 	unit_devastation_mult = 0.25
 	unit_kill_rate_add = 0.25
 	country_standard_of_living_full_acceptance_add = 30
@@ -47,11 +47,11 @@ naga_empire_starting_boost = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/anarchy.dds"
 	category = society
+	can_research = no
 	
 	modifier = {
 	unit_army_offense_add = 65
 	unit_army_defense_add = 55
-	unit_supply_consumption_mult = -1
 	unit_devastation_mult = 0.25
 	unit_kill_rate_add = 0.25
 	country_standard_of_living_full_acceptance_add = 30
