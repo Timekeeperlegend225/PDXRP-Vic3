@@ -47,7 +47,7 @@ become_EMB = {
 			add_modifier = game_master
 			add_technology_researched = ember_empire_starting_boost
 			create_character = {
-				first_name = "Qerzech Tuguzh"     
+				first_name = "Qerzech_Tuguzh"     
 				last_name = "Shirikhuqo"
 				birth_date = 1799.08.17 
 				interest_group = ig:ig_armed_forces
@@ -212,6 +212,24 @@ become_PNR = {
 		}
 		c:PNR = {
 			add_technology_researched = naga_empire_starting_boost
+			create_character = {
+				first_name = "Shesha"     
+				last_name = "Mahanagaraja"
+				birth_date = 1799.08.17 
+				interest_group = ig:ig_devout
+				ruler = yes
+				is_general = yes
+				ideology = ideology_jingoist
+				traits = {
+					honorable
+					persistent
+					pious
+					expert_offensive_planner
+					experienced_political_operator
+					popular_commander
+					political_appointee
+				}
+			}
 		}
 	}
 
