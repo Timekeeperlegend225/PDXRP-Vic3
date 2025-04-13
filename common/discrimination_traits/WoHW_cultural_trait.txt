@@ -5,3 +5,5 @@
 draconic = {}
 
 humanoid = {}
+
+naga = {}

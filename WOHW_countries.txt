@@ -6,5 +6,16 @@
 	tier = empire
 	
 	cultures = { dracaryans dragokins  }
-	capital = STATE_BRANDENBURG
+	capital = STATE_CANARY_ISLANDS
+}
+
+PNR = {
+	color = { 176 224 230 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { jungle_naga nagavanshi }
+	capital = STATE_PEGU
 }

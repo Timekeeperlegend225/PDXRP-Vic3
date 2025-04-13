@@ -6,3 +6,11 @@
 	}
 }
 
+naga = {
+	template = "flat_template"
+
+	base_skins = {
+		1 = { name = gene_naga_skin range = { 0.0 1.0 } }
+	}
+}
+

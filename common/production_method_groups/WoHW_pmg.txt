@@ -4,3 +4,10 @@
 		pm_wohw_hole_emb
 	}
 }
+
+pmg_wohw_hole_naga = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_wohw_hole_naga
+	}
+}

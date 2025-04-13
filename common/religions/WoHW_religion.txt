@@ -5,3 +5,11 @@
 	}
 	color = { 41 11 9 }
 }
+
+chakravadah = {
+	texture = "gfx/interface/icons/religion_icons/theravada.dds"
+	traits = {
+		nagan eastern
+	}
+	color = { 127 255 212 }
+}

@@ -4,3 +4,10 @@ EMB = { #Wei
 		priority = 1		
 	}	
 }
+
+PNR = { #Naga
+	flag_definition = {
+		coa = PNR
+		priority = 1
+	}
+}

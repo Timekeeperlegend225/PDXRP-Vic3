@@ -21,3 +21,11 @@ animist = {
 buddhist = {
 	heritage = yes
 }
+
+dragonic = {
+	heritage = yes
+}
+
+nagan = {
+	heritage = yes
+}

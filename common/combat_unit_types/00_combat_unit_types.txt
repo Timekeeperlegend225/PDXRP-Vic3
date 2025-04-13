@@ -149,12 +149,22 @@ combat_unit_type_skirmish_infantry = {
     combat_unit_image = {
         trigger = { 
 			OR = {
-				THIS = cu:tuvan
-				THIS = cu:sara
+				THIS = cu:dracaryans
+				THIS = cu:dragokins
 			}
         }
         texture = "gfx/unit_illustrations/WhOW_unit_ember_infantry.dds"
     }
+	
+	combat_unit_image = {
+		trigger = {
+			OR = {
+				THIS = cu:jungle_naga
+				THIS = cu:nagavanshi
+			}
+		}
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_warriors.dds"
+	}
 
     combat_unit_image = {
         trigger = { 
@@ -212,6 +222,26 @@ combat_unit_type_trench_infantry = {
 
 	unlocking_technologies = { trench_works }
 
+	combat_unit_image = {
+        trigger = { 
+			OR = {
+				THIS = cu:dracaryans
+				THIS = cu:dragokins
+			}
+        }
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_infantry.dds"
+    }
+	
+	combat_unit_image = {
+		trigger = {
+			OR = {
+				THIS = cu:jungle_naga
+				THIS = cu:nagavanshi
+			}
+		}
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_warriors.dds"
+	}
+
     combat_unit_image = {
         trigger = { 
             has_culture_graphics = east_asian
@@ -267,7 +297,27 @@ combat_unit_type_squad_infantry = {
     }
 
 	unlocking_technologies = { nco_training }
-
+	
+	combat_unit_image = {
+        trigger = { 
+			OR = {
+				THIS = cu:dracaryans
+				THIS = cu:dragokins
+			}
+        }
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_infantry.dds"
+    }
+	
+	combat_unit_image = {
+		trigger = {
+			OR = {
+				THIS = cu:jungle_naga
+				THIS = cu:nagavanshi
+			}
+		}
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_warriors.dds"
+	}
+	
     combat_unit_image = {
         trigger = { 
             has_culture_graphics = east_asian
@@ -988,12 +1038,22 @@ combat_unit_type_frigate = {
     combat_unit_image = {
         trigger = { 
 			OR = {
-				THIS = cu:tuvan
-				THIS = cu:sara
+				THIS = cu:dracaryans
+				THIS = cu:dragokins
 			}
         }
         texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
     }
+	
+	combat_unit_image = {
+		trigger = {
+			OR = {
+				THIS = cu:jungle_naga
+				THIS = cu:nagavanshi
+			}
+		}
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
+	}
 	
     combat_unit_image = {
         texture = "gfx/unit_illustrations/light_ships_frigate.dds"
@@ -1027,6 +1087,26 @@ combat_unit_type_monitor = {
     }
 
     unlocking_technologies = { monitor_tech }
+	
+	combat_unit_image = {
+        trigger = { 
+			OR = {
+				THIS = cu:dracaryans
+				THIS = cu:dragokins
+			}
+        }
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
+    }
+	
+	combat_unit_image = {
+		trigger = {
+			OR = {
+				THIS = cu:jungle_naga
+				THIS = cu:nagavanshi
+			}
+		}
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
+	}
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_monitor.dds"
@@ -1054,6 +1134,27 @@ combat_unit_type_destroyer = {
     }
 
 	unlocking_technologies = { destroyer }
+	
+	combat_unit_image = {
+        trigger = { 
+			OR = {
+				THIS = cu:dracaryans
+				THIS = cu:dragokins
+			}
+        }
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
+    }
+	
+	combat_unit_image = {
+		trigger = {
+			OR = {
+				THIS = cu:jungle_naga
+				THIS = cu:nagavanshi
+			}
+		}
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
+	}
+	
     combat_unit_image = {
         texture = "gfx/unit_illustrations/light_ships_destroyer.dds"
     }
@@ -1083,7 +1184,27 @@ combat_unit_type_torpedo_boat = {
     }
 
 	unlocking_technologies = { self_propelled_torpedoes }
-
+	
+	combat_unit_image = {
+        trigger = { 
+			OR = {
+				THIS = cu:dracaryans
+				THIS = cu:dragokins
+			}
+        }
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
+    }
+	
+	combat_unit_image = {
+		trigger = {
+			OR = {
+				THIS = cu:jungle_naga
+				THIS = cu:nagavanshi
+			}
+		}
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
+	}
+	
     combat_unit_image = {
         texture = "gfx/unit_illustrations/light_ships_torpedo_boat.dds"
     }
@@ -1115,7 +1236,27 @@ combat_unit_type_scout_cruiser = {
     }
 
 	unlocking_technologies = { sea_lane_strategies }
-
+	
+	combat_unit_image = {
+        trigger = { 
+			OR = {
+				THIS = cu:dracaryans
+				THIS = cu:dragokins
+			}
+        }
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
+    }
+	
+	combat_unit_image = {
+		trigger = {
+			OR = {
+				THIS = cu:jungle_naga
+				THIS = cu:nagavanshi
+			}
+		}
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
+	}
+	
     combat_unit_image = {
         texture = "gfx/unit_illustrations/light_ships_scout_cruiser.dds"
     }

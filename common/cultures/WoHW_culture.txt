@@ -135,9 +135,9 @@
 		Zhordania
 	}
 	ethnicities = {
-		1 = indian
+		1 = dragon
 	}
-	graphics = european
+	graphics = east_asian
 }
 
 
@@ -279,7 +279,248 @@ dragokins ={
 		Zhordania
 	}
 	ethnicities = {
-		1 = indian
+		1 = dragon
 	}
-	graphics = european
+	graphics = east_asian
+}
+
+jungle_naga={
+	color= hsv{ 0.39 0.45 0.74 }
+	religion = chakravadah
+	traits = { naga underworld_heritage}
+	
+	
+	male_common_first_names={
+		Amar
+		Bhakti
+		Bhim_Shamsher
+		Bhimsen
+		Bir_Shamsher
+		Chandra_Shamsher
+		Deva_Shamsher
+		Jang
+		Ranjur
+		Renaudip
+		Shamsher
+		Aakash
+		Bhanwari
+		Dharmraj
+		Govind
+		Nitin Nikhil Nathuram Narendra
+		Pawan
+		Santosh
+		Chao Chulalongkorn Charoon
+		Kashemsri
+		Isariyalongkorn
+		Mongkut Mahidol
+		Nangklao Naritsaranuwatiwong Nuam
+		Phya Plaek Prajadhipok Piyararangsit
+		Rangsit
+		Sirivongse Sanidh_Prayurasakdi
+		Tuam Traidos
+		Vajiravudh
+		Yod
+	}
+	female_common_first_names = {
+		Anuradha 
+		Divyeshwari
+		Durga
+		Lakshmi
+		Sangita
+		Sunita
+		Yogmaya 
+		Alka Abhilasha Aruna
+		Chandrama
+		Hema
+		Jaya
+		Omvati
+		Priyanka
+		Subhashini Sucheta
+		Uma
+		Adorndibyanibha Abbhantripaja
+		Bandhavanna Bismai
+		Chandra Chudharatana
+		Debsirindra
+		Javalit
+		Prabha Prabai Pun
+		Sirikit Sirabhorn
+		Thao
+		Valaya Vichitra
+		Yaovabha
+	}	
+	noble_last_names = {
+		Basnyat
+		Bahadur_Rana
+		Bhandari
+		Chautariya
+		Koirala
+		Kunwar
+		Mahat
+		Pande
+		Singh
+		Singh_Thapa
+		Thapa
+		Rana
+		Arkvanshi
+		Bajpai
+		Choudhary Chauhan 
+		Nehru
+		Tiwari
+		Chakri
+		Praya_Siri
+	}
+	common_last_names={
+		Acharya
+		Ban
+		Das
+		Devi
+		Neupane
+		Sob
+		Agrahari
+		Bharti
+		Gandhi Gautam Giri Gupta
+		Joshi 
+		Kardam Katiyar Kumari 
+		Nayar
+		Tandon
+		Verma Varun
+		Yadav
+		Bunnag
+		Chichalerm
+		Devahastin
+		Hutasingha
+		Inswang
+		Kridakorn 
+		Nitithada
+		Phonphayuhasena Phahonyothin Praband Polphantin
+		Rabibadhana
+		Saovabha Suriyawongse Sinhaseni Sumontame Silpikul
+		Thephatsadin
+		Yuktanandana
+	}
+	ethnicities = {
+		1 = naga
+	}
+	graphics = east_asian
+}
+
+nagavanshi={
+	color= hsv{ 0.38 0.23 0.82 }
+	religion = chakravadah
+	traits = { humanoid underworld_heritage}
+	
+	
+	male_common_first_names={
+		Amar
+		Bhakti
+		Bhim_Shamsher
+		Bhimsen
+		Bir_Shamsher
+		Chandra_Shamsher
+		Deva_Shamsher
+		Jang
+		Ranjur
+		Renaudip
+		Shamsher
+		Aakash
+		Bhanwari
+		Dharmraj
+		Govind
+		Nitin Nikhil Nathuram Narendra
+		Pawan
+		Santosh
+		Chao Chulalongkorn Charoon
+		Kashemsri
+		Isariyalongkorn
+		Mongkut Mahidol
+		Nangklao Naritsaranuwatiwong Nuam
+		Phya Plaek Prajadhipok Piyararangsit
+		Rangsit
+		Sirivongse Sanidh_Prayurasakdi
+		Tuam Traidos
+		Vajiravudh
+		Yod
+	}
+	female_common_first_names = {
+		Anuradha 
+		Divyeshwari
+		Durga
+		Lakshmi
+		Sangita
+		Sunita
+		Yogmaya 
+		Alka Abhilasha Aruna
+		Chandrama
+		Hema
+		Jaya
+		Omvati
+		Priyanka
+		Subhashini Sucheta
+		Uma
+		Adorndibyanibha Abbhantripaja
+		Bandhavanna Bismai
+		Chandra Chudharatana
+		Debsirindra
+		Javalit
+		Prabha Prabai Pun
+		Sirikit Sirabhorn
+		Thao
+		Valaya Vichitra
+		Yaovabha
+	}	
+	noble_last_names = {
+		Basnyat
+		Bahadur_Rana
+		Bhandari
+		Chautariya
+		Koirala
+		Kunwar
+		Mahat
+		Pande
+		Singh
+		Singh_Thapa
+		Thapa
+		Rana
+		Arkvanshi
+		Bajpai
+		Choudhary Chauhan 
+		Nehru
+		Tiwari
+		Chakri
+		Praya_Siri
+	}
+	common_last_names={
+		Acharya
+		Ban
+		Das
+		Devi
+		Neupane
+		Sob
+		Agrahari
+		Bharti
+		Gandhi Gautam Giri Gupta
+		Joshi 
+		Kardam Katiyar Kumari 
+		Nayar
+		Tandon
+		Verma Varun
+		Yadav
+		Bunnag
+		Chichalerm
+		Devahastin
+		Hutasingha
+		Inswang
+		Kridakorn 
+		Nitithada
+		Phonphayuhasena Phahonyothin Praband Polphantin
+		Rabibadhana
+		Saovabha Suriyawongse Sinhaseni Sumontame Silpikul
+		Thephatsadin
+		Yuktanandana
+	}
+	ethnicities = {
+		1 = asian
+		2 = indian
+	}
+	graphics = south_asian
 }
