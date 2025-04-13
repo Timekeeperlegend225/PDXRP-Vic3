@@ -33,7 +33,7 @@ building_hole_naga = {
 		urbanization
 	}
 	production_method_groups = {
-		pmg_wohw_hole_naga
+		pmg_wohw_hole_emb
 	}
 	slaves_role = laborers
 	
