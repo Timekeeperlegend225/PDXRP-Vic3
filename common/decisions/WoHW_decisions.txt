@@ -195,3 +195,65 @@ become_PNR = {
 		base = 0	
 	}
 }
+
+go_to_war_EMB = {
+	is_shown = {
+		this = c:EMB
+		s:STATE_CANARY_ISLANDS.region_state:EMB = {
+			state_has_building_type_levels = {  
+				target = bt:building_barracks  
+				value < 100
+			}
+		}
+	}
+	possible = {
+    }
+	
+	when_taken = {
+		s:STATE_CANARY_ISLANDS.region_state:EMB = {
+			create_building = {
+				building = building_barracks
+				level = 200
+			} 
+			create_building = {
+				building = building_naval_base
+				level = 100
+			} 
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+go_to_war_naga = {
+	is_shown = {
+		this = c:PNR
+		s:STATE_PEGU.region_state:PNR = {
+			state_has_building_type_levels = {  
+				target = bt:building_barracks  
+				value < 100
+			}
+		}
+	}
+	possible = {
+    }
+	
+	when_taken = {
+		s:STATE_PEGU.region_state:PNR = {
+			create_building = {
+				building = building_barracks
+				level = 100
+			} 
+			create_building = {
+				building = building_naval_base
+				level = 100
+			} 
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
