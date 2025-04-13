@@ -240,7 +240,7 @@ become_PNR = {
 
 go_to_war_EMB = {
 	is_shown = {
-		c:EMB = exist
+		exists = c:EMB
 		this = c:EMB
 		s:STATE_CANARY_ISLANDS.region_state:EMB = {
 			state_has_building_type_levels = {  
@@ -272,7 +272,7 @@ go_to_war_EMB = {
 
 go_to_war_naga = {
 	is_shown = {
-		c:PNR = exist
+		exists = c:PNR
 		this = c:PNR
 		s:STATE_PEGU.region_state:PNR = {
 			state_has_building_type_levels = {  
