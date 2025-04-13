@@ -3,3 +3,11 @@
  EMB_ADJ:0 "Emberian"
  PNR:0 "Patala Naga Raj"
  PNR_ADJ:0 "Nagan"
+
+ gov_governor_general:0 "Expeditionary Governorship"
+ gov_governor_general_desc:0 "An expedition led by a Governor-General."
+ RULER_TITLE_DRAGON:0 "Governor-General"
+
+ gov_nagaraja:0 "Nagaraj"
+ gov_nagaraja_desc:0 "The Imperial State of the Naga, led by the Nagaraja"
+ RULER_TITLE_NAGA:0 "Nagaraja"
