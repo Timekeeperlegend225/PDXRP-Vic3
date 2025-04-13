@@ -41,8 +41,10 @@ become_EMB = {
 		}
 		remove_modifier = game_master
 		play_as = c:EMB
-		add_modifier = game_master
-		add_technology_researched = ember_empire_starting_boost
+		c:PNR = {
+			add_modifier = game_master
+			add_technology_researched = ember_empire_starting_boost
+		}
 		s:STATE_CANARY_ISLANDS.region_state:EMB = {
 		every_scope_pop = {
 				change_poptype = pop_type:slaves
