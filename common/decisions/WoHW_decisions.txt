@@ -244,7 +244,7 @@ go_to_war_naga = {
 		s:STATE_PEGU.region_state:PNR = {
 			create_building = {
 				building = building_barracks
-				level = 100
+				level = 200
 			} 
 			create_building = {
 				building = building_naval_base
