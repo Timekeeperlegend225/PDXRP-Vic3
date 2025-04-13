@@ -1,9 +1,0 @@
-female_dragon_997 = {
-        set_tags = "base_model"
-        entity = { required_tags = "" shared_pose_entity = head entity = "female_dragon_997_entity" }
-    }
-
-male_dragon_998 = {
-        set_tags = "base_model"
-        entity = { required_tags = "" shared_pose_entity = head entity = "male_naga_998_entity" }
-    }
