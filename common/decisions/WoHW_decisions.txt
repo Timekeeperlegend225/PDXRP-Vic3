@@ -41,7 +41,7 @@ become_EMB = {
 		}
 		remove_modifier = game_master
 		play_as = c:EMB
-		c:PNR = {
+		c:EMB = {
 			add_modifier = game_master
 			add_technology_researched = ember_empire_starting_boost
 		}
