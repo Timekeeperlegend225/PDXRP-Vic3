@@ -6,13 +6,15 @@ become_EMB = {
 		}
 	}
 	possible = {
-		always = yes
+		NOT = {
+			exist = c:EMB
+		}
     }
 	
 	when_taken = {
 		create_country = {
 			tag = EMB
-			origin = c:GBR
+			origin = c:PRU
 			state = s:STATE_CANARY_ISLANDS.region_state:SPA
 		}
 		c:EMB ={
@@ -65,6 +67,7 @@ become_EMB = {
 			state_region = {
 				add_homeland = cu:dracaryans
 				add_homeland = cu:dragokins
+				add_arable_land = 300
 			}
 		}
 		s:STATE_CANARY_ISLANDS.region_state:EMB = {
@@ -88,7 +91,9 @@ become_PNR = {
 		}
 	}
 	possible = {
-		always = yes
+		NOT = {
+			exist = c:PNR
+		}
     }
 	
 	when_taken = {
@@ -180,6 +185,7 @@ become_PNR = {
 			state_region = {
 				add_homeland = cu:jungle_naga
 				add_homeland = cu:nagavanshi
+				add_arable_land = 300
 			}
 		}
 		s:STATE_PEGU.region_state:PNR = {
