@@ -1,3 +1,0 @@
-ai_wargoal_are_blocked = {
-	country_authority_add = 0
-}
