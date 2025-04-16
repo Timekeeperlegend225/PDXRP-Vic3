@@ -1,0 +1,4 @@
+﻿country_leverage_resistance_per_population_add = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_leverage_resistance_add = 25
+}
