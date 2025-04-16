@@ -33,13 +33,36 @@ building_hole_naga = {
 		urbanization
 	}
 	production_method_groups = {
-		pmg_wohw_hole_emb
+		pmg_wohw_hole_naga
 	}
 	slaves_role = laborers
 	
 	potential = {
 		owner = c:PNR
 		state_region = s:STATE_PEGU
+	}
+	ai_value = 0 # Construction sector should generally be preferred over other equal-priority spending items
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_hole_ALA = {
+	building_group = bg_construction
+	icon = "gfx/interface/icons/building_icons/hole_ala.dds"
+	city_type = none
+	levels_per_mesh = 5
+	
+	required_construction = construction_cost_medium
+	unlocking_technologies = {
+		urbanization
+	}
+	production_method_groups = {
+		pmg_wohw_hole_ala
+	}
+	
+	potential = {
+		owner = c:ALA
+		state_region = s:STATE_KENYA
 	}
 	ai_value = 0 # Construction sector should generally be preferred over other equal-priority spending items
 

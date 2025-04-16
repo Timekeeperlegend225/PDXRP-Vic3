@@ -17,3 +17,13 @@ PNR = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
 	}
 }
+
+ALA = {
+	pattern = "pattern_solid.tga"
+	color1 = { 41 11 9 }
+	
+	textured_emblem = {
+		texture = "ALA_flag.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}

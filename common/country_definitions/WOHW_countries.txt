@@ -19,3 +19,14 @@ PNR = {
 	cultures = { jungle_naga }
 	capital = STATE_PEGU
 }
+
+ALA = {
+	color = { 255 250 240 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { alarian }
+	capital = STATE_KENYA
+}

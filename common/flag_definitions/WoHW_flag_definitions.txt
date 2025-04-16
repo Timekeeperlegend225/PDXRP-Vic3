@@ -11,3 +11,10 @@ PNR = { #Naga
 		priority = 1
 	}
 }
+
+ALA = { 
+	flag_definition = {
+		coa = ALA
+		priority = 1
+	}
+}

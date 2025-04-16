@@ -47,7 +47,7 @@ become_EMB = {
 			add_modifier = game_master
 			add_technology_researched = ember_empire_starting_boost
 			create_character = {
-				first_name = "Tars "     
+				first_name = "Tars"     
 				last_name = "Halden"
 				birth_date = 1799.08.17 
 				interest_group = ig:ig_armed_forces
@@ -294,6 +294,122 @@ go_to_war_naga = {
 				building = building_naval_base
 				level = 100
 			} 
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+become_ALA = {
+	is_shown = {
+		this = c:KON
+		NOT = {
+			exist = c:ALA
+		}
+	}
+	possible = {
+		NOT = {
+			exist = c:ALA
+		}
+    }
+	
+	when_taken = {
+		s:STATE_KENYA = {
+			set_owner_of_provinces = { 
+				country = c:BUG
+				provinces = { 5612 }
+			}
+		} 
+		create_country = {
+			tag = ALA
+			origin = c:GBR
+			state = s:STATE_KENYA.region_state:BUG
+		}
+		c:ALA ={
+			activate_law = law_type:law_presidential_republic
+			activate_law = law_type:law_anarchy
+			activate_law = law_type:law_racial_segregation
+			activate_law = law_type:law_freedom_of_conscience
+			activate_law = law_type:law_elected_bureaucrats
+			activate_law = law_type:law_national_militia
+			activate_law = law_type:law_no_home_affairs
+			activate_law = law_type:law_cooperative_ownership
+			activate_law = law_type:law_isolationism
+			activate_law = law_type:law_consumption_based_taxation
+			activate_law = law_type:law_homesteading
+			activate_law = law_type:law_colonial_resettlement
+			activate_law = law_type:law_no_police
+			activate_law = law_type:law_private_schools
+			activate_law = law_type:law_charitable_health_system
+			activate_law = law_type:law_private_health_insurance
+			activate_law = law_type:law_no_workers_rights
+			activate_law = law_type:law_restricted_child_labor
+			activate_law = law_type:law_womens_suffrage
+			activate_law = law_type:law_no_social_security
+			activate_law = law_type:law_closed_borders
+			activate_law = law_type:law_slavery_banned
+		}
+		play_as = c:ALA
+		s:STATE_KENYA.region_state:ALA = {
+			create_pop = {
+				pop_type = clergymen
+				culture = alarian
+				religion = yhawhamism
+				size = 1000000
+			}
+			create_pop = {
+				pop_type = academics
+				culture = alarian
+				religion = yhawhamism
+				size = 1000000
+			}
+			create_pop = {
+				pop_type = bureaucrats
+				culture = alarian
+				religion = yhawhamism
+				size = 500000
+			}
+			create_pop = {
+				pop_type = soldiers
+				culture = alarian
+				religion = yhawhamism
+				qualifications = 40
+				size = 2000000
+			}
+			create_pop = {
+				pop_type = clerks
+				culture = alarian
+				religion = yhawhamism
+				qualifications = 40
+				size = 3000000
+			}
+			create_pop = {
+				pop_type = mechinists
+				culture = alarian
+				religion = yhawhamism
+				qualifications = 40
+				size = 3000000
+			}
+			state_region = {
+				add_homeland = cu:alarian
+				add_arable_land = 50
+			}
+		}
+		s:STATE_KENYA.region_state:ALA = {
+			create_building = {
+				building = building_hole_ALA
+				level = 10
+			}
+		}
+		c:ALA = {
+			add_technology_researched = alarian_empire_starting_boost
+			create_character = {
+				interest_group = ig:ig_inteligentsia
+				ruler = yes
+				ideology = ideology_utilitarian_leader
+			}
 		}
 	}
 
