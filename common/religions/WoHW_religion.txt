@@ -13,3 +13,10 @@ chakravadah = {
 	}
 	color = { 127 255 212 }
 }
+
+yhawhamism = {
+	texture = "gfx/interface/icons/religion_icons/coptic.dds"
+	traits = {
+	}
+	color = { 255 250 240 }
+}
