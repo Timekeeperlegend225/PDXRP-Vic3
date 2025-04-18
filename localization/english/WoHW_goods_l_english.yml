@@ -1,0 +1,7 @@
+﻿l_english:
+ memorite:0 "Memorite"
+ modifier_goods_output_memorite_add:0 "@memorite! output per level"
+ modifier_goods_output_memorite_add_desc:0 "The amount of @memorite! produced by buildings"
+
+ modifier_goods_input_memorite_add:0 "@memorite! input per level"
+ modifier_goods_input_memorite_add_desc:0 "The amount of @memorite! consumed by buildings"

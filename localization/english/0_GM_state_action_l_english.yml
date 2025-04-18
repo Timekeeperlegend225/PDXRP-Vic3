@@ -1,0 +1,6 @@
+﻿l_english:
+ GM_state_action: "GM Action"
+ GM_state_action:0 "GM Action"
+ 
+ gm_state_actions.1.t:0 "GM State Actions"
+ gm_state_actions.1.a:0 "Cancel"
