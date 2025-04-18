@@ -1,0 +1,15 @@
+﻿####################
+# Original: STAPLE #
+
+memorite = {
+	texture = "gfx/interface/icons/goods_icons/memorite.dds"
+	cost = 50
+	category = industrial
+	
+	prestige_factor = 25
+	
+	traded_quantity = 1
+	convoy_cost_multiplier = 0.25
+	
+	consumption_tax_cost = 200
+}

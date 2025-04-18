@@ -1,0 +1,29 @@
+GM_state_action = {
+	scope = state
+	saved_scopes = {
+		country
+	}
+	is_shown = {
+		scope:country = {
+			has_modifier = game_master
+		}
+	}
+	is_valid = {
+		NOT = { has_global_variable = GM_taking_action }
+	}
+	effect = {
+		set_variable = var_target_state
+		save_scope_as = scope_target_state
+		set_global_variable = {
+			name = GM_taking_action
+			days = 31
+		}
+		scope:country = {
+			trigger_event = {
+				id = gm_state_actions.1
+				days = 0
+				popup = yes
+			}
+		}
+	}
+}

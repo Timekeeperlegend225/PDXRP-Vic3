@@ -2,12 +2,12 @@ become_EMB = {
 	is_shown = {
 		has_modifier = game_master
 		NOT = {
-			exist = c:EMB
+			exists = c:EMB
 		}
 	}
 	possible = {
 		NOT = {
-			exist = c:EMB
+			exists = c:EMB
 		}
     }
 	
@@ -103,12 +103,12 @@ become_PNR = {
 	is_shown = {
 		this = c:SIA
 		NOT = {
-			exist = c:PNR
+			exists = c:PNR
 		}
 	}
 	possible = {
 		NOT = {
-			exist = c:PNR
+			exists = c:PNR
 		}
     }
 	
@@ -306,12 +306,12 @@ become_ALA = {
 	is_shown = {
 		this = c:KON
 		NOT = {
-			exist = c:ALA
+			exists = c:ALA
 		}
 	}
 	possible = {
 		NOT = {
-			exist = c:ALA
+			exists = c:ALA
 		}
     }
 	
