@@ -18,3 +18,20 @@ pmg_wohw_hole_ala = {
 		pm_wohw_hole_ala
 	}
 }
+
+pmg_subtarean_studies = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_studies
+		pm_ALA_studies
+	}
+}
+
+
+pmg_construction_assistance = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_assistance
+		pm_levitating_assistance
+	}
+}
