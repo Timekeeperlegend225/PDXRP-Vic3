@@ -10,9 +10,13 @@ GM_state_action = {
 	}
 	is_valid = {
 		NOT = { has_global_variable = GM_taking_action }
+		NOT = { has_modifier = GM_working_on_state_mod }
 	}
 	effect = {
-		set_variable = var_target_state
+		add_modifier = {
+			name = GM_working_on_state_mod           
+			months = 1
+   		}
 		save_scope_as = scope_target_state
 		set_global_variable = {
 			name = GM_taking_action

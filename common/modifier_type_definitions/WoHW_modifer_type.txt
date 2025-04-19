@@ -46,9 +46,33 @@ state_nagavanshi_standard_of_living_add = {
 	}
 }
 
-state_alarian_standard_of_living_add = {
+goods_input_memorite_add = {
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+goods_output_memorite_add = {
 	decimals=1
 	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_memorite_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+goods_output_memorite_mult={
+	decimals=1
+	color=good
+	percent=yes
 	game_data={
 		ai_value=0
 	}
