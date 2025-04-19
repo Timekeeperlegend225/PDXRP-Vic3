@@ -1,0 +1,57 @@
+﻿l_english:
+ Subterran_state_action: "State Action"
+ 
+ EMB_state_actions.1.t:0 "Emberrian State Actions"
+ EMB_state_actions.1.a:0 "Cancel"
+ 
+ ALA_state_actions.1.t:0 "Alarian State Actions"
+ ALA_state_actions.1.a:0 "Cancel"
+ 
+ PNR_state_actions.1.t:0 "Nagan State Actions"
+ PNR_state_actions.1.a:0 "Cancel"
+
+ ember_empire_starting_boost:0 "Council of Embers Superiority"
+ ember_empire_starting_boost_desc:0 "The Council of Embers possess unmatched fire magic that grant them a superior position over the surface people"
+ naga_empire_starting_boost:0 "Naga Raj Superiority"
+ naga_empire_starting_boost_desc:0 "The Naga possess water and fire magic that grant them a superior position over the surface people"
+ alarian_empire_starting_boost:0 "Alarian Order Superiority"
+ alarian_empire_starting_boost_desc:0 "The manipulation of memorite and light grant the Alarians a superior position over the surface people"
+ 
+ memorite_manipulation:0 "Memorite Studies"
+ memorite_manipulation_desc:0 "We were just able to get access to memorite, it's the time to begin to study the specificity of this strange ore."
+ 
+ energy_focalisation:0 "Energy Focalisation"
+ energy_focalisation_desc:0 "By compacting memorite we can produce energy ray able to hurt our oponents. It's weaker that riffle but generally more pratical to use "
+ 
+ basic_levitation:0 "Basic Levitation"
+ basic_levitation_desc:0 "By adding large quantity of memorit to ligh material, we can make floating platform helping in construction sector"
+ 
+ purification:0 "Purification"
+ purification_desc:0 "The teaching of the Alarians allow us to purify our minds, our bodies and our environement. Some rare individual showed Ã¢rticulary improved health and ability to think more clearly"
+ 
+ memorite_treatment:0 "Memorite Treatment"
+ memorite_treatment_desc:0 "We have learned to extract some Memorite by ourself using glass and prayers. By treating it with other ore we can also make glass out of it"
+ 
+ flying_machine:0 "Flying Machine"
+ flying_machine_desc:0 "Implementing memorite into base cars and projecting it's energy correctly we have learned to make new machines allowing us to fulfill the oldest dream of man"
+ 
+ miracle_healing:0 "Miracle Healing"
+ miracle_healing_desc:0 "Learning about the nature of the reality and faith allow us to heal sickness that were previously considered incurable"
+ 
+ memoritic_reaction:0 "Memoritic Reaction"
+ memoritic_reaction_desc:0 "Desc"
+ 
+ floating_warfare:0 "Alarian Order Superiority"
+ floating_warfare_desc:0 "Desc"
+ 
+ holy_light:0 "Alarian Order Superiority"
+ holy_light_desc:0 "Desc"
+ 
+ connectic:0 "Alarian Order Superiority"
+ connectic_desc:0 "Desc"
+ 
+ heavy_floating_vessel:0 "Alarian Order Superiority"
+ heavy_floating_vessel_desc:0 "Desc"
+ 
+ ascension:0 "Alarian Order Superiority"
+ ascension_desc:0 "Desc"
