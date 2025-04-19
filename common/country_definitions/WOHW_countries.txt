@@ -30,3 +30,14 @@ ALA = {
 	cultures = { alarian }
 	capital = STATE_KENYA
 }
+
+ELD = {
+	color = { 62 50 168 }
+	
+	country_type = recognized
+	
+	tier = empire
+	
+	cultures = { noldor }
+	capital = STATE_AMAZONAS
+}

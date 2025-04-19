@@ -7,3 +7,5 @@ draconic = {}
 humanoid = {}
 
 naga = {}
+
+eldar = {}

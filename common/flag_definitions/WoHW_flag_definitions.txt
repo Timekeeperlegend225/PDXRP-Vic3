@@ -18,3 +18,10 @@ ALA = {
 		priority = 1
 	}
 }
+
+ELD = { 
+	flag_definition = {
+		coa = ELD
+		priority = 1
+	}
+}
