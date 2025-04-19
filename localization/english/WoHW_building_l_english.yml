@@ -1,9 +1,9 @@
 ﻿l_english:
  building_hole_emb:0 "Emergence Hole"
- building_hole_naga:0 "Flaming Gate of Patala"
+ building_hole_naga:0 "Emergence Hole"
  pmg_wohw_hole_emb:0 "The Hole"
- pmg_wohw_hole_naga:0 "Holy Portal"
- pm_wohw_hole_naga:0 "Holy Portal"
+ pmg_wohw_hole_naga:0 "The Hole"
+ pm_wohw_hole_naga:0 "The Hole"
  pm_wohw_hole_emb:0 "The Hole"
  building_hole_ALA:0 "Surface Operation Basis"
  pmg_wohw_hole_ala:0 "Hyperail Transportation"

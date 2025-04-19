@@ -109,6 +109,10 @@
  
  gm_army_debuff:0 "Weakened Army"
 
+ GM_target_state_mod:0 "Target State"
+ 
+ GM_working_on_state_mod:0 "State being worked on"
+ 
  GM_target:0 "GM Target"
  
  GM_convoy_5:0 "Increased Convoy Contribution to the Market"

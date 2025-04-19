@@ -10,6 +10,6 @@
  gov_governor_general_desc:0 "An expedition led by a Governor-General."
  RULER_TITLE_DRAGON:0 "Governor-General"
 
- gov_nagaraja:0 "Missionary Pilgrimage of the Nagaraj"
- gov_nagaraja_desc:0 "A mission in the name of Enlightenment from The Imperial State of Patala, led by the MahaNagaraja, First King of the Emperor"
- RULER_TITLE_NAGA:0 "Mahanagaraja"
+ gov_nagaraja:0 "Nagaraj"
+ gov_nagaraja_desc:0 "The Imperial State of the Naga, led by the Nagaraja"
+ RULER_TITLE_NAGA:0 "Nagaraja"

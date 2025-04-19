@@ -1162,6 +1162,20 @@ types state_panel_types
 							}
 						}
 					}
+					hbox = {
+						vbox = {
+							button = {
+								size = { 100 40 }
+								text = "Subterran_state_action"
+								using = default_button_action
+								tooltip = "[GetScriptedGui('Subterran_state_action').BuildTooltip( GuiScope.SetRoot( StatesPanel.GetState.MakeScope ).AddScope('country',GetPlayer.MakeScope).End )]"
+								onclick = "[GetScriptedGui('Subterran_state_action').Execute( GuiScope.SetRoot(StatesPanel.GetState.MakeScope).AddScope('country',GetPlayer.MakeScope).End )]"
+								enabled = "[GetScriptedGui('Subterran_state_action').IsValid( GuiScope.SetRoot(StatesPanel.GetState.MakeScope).AddScope('country',GetPlayer.MakeScope).End )]"
+								visible = "[GetScriptedGui('Subterran_state_action').IsShown(GuiScope.SetRoot(StatesPanel.GetState.MakeScope).AddScope('country',GetPlayer.MakeScope).End)]"
+								using = ui_close
+							}
+						}
+					}
 				}
 			}
 		}

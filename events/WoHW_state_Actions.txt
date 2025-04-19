@@ -1,0 +1,80 @@
+﻿namespace = EMB_state_actions
+
+EMB_state_actions.1 = {
+	type = country_event
+	placement = ROOT
+	title = EMB_state_actions.1.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = EMB_state_actions.1.a
+		default_option = yes
+		scope:EMB_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
+
+namespace = PNR_state_actions
+
+PNR_state_actions.1 = {
+	type = country_event
+	placement = ROOT
+	title = PNR_state_actions.1.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = PNR_state_actions.1.a
+		default_option = yes
+		scope:PNR_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
+
+namespace = ALA_state_actions
+
+ALA_state_actions.1 = {
+	type = country_event
+	placement = ROOT
+	title = ALA_state_actions.1.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = ALA_state_actions.1.a
+		default_option = yes
+		scope:ALA_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
