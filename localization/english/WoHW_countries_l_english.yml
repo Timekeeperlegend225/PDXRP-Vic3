@@ -5,6 +5,8 @@
  PNR_ADJ:0 "Nagan"
  ALA:0 "Surface Exploration Association"
  ALA_ADJ:0 "Alarian"
+ ELD:0 "Eldar Realm"
+ ELD_ADJ:0 "Eldar"
 
  gov_governor_general:0 "Expeditionary Governorship"
  gov_governor_general_desc:0 "An expedition led by a Governor-General."
