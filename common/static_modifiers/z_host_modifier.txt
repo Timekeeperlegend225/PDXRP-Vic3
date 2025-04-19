@@ -543,6 +543,14 @@ target_character_mod = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 }
 
+GM_working_on_state_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+}
+
+GM_target_state_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+}
+
 broken_treaty_small_mod = {
 	icon = gfx/interface/icons/infamy_icons/infamous.dds
 	country_prestige_mult = -0.05
