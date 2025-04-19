@@ -66,6 +66,10 @@ je_liberalism_1 = {
 			}
 		}
 	}
+
+	invalid = {
+		has_modifier = subterranean_mod
+	}
 	
 	on_complete = {
 		set_variable = liberalism_1_done

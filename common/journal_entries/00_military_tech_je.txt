@@ -29,6 +29,10 @@
             id = military_tech_events.401 
         }
     }
+
+	invalid = {
+		has_modifier = subterranean_mod
+	}
 	
 	fail = {
 		has_technology_researched = repeaters

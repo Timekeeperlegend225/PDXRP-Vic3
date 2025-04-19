@@ -38,6 +38,10 @@
 		}
 	}
 
+	invalid = {
+		has_modifier = subterranean_mod
+	}
+
 	on_complete = {
 		trigger_event = { id = dan_society_tech_events.1 }
 		set_variable = {

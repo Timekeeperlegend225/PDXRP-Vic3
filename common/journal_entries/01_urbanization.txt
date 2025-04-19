@@ -98,6 +98,10 @@ je_urbanization_events_2 = {
 			20 = urbanization_events.6
 		}
 	}
+
+	invalid = {
+		has_modifier = subterranean_mod
+	}
 	
 	on_complete = {
 		trigger_event = { id = urbanization_events.5 }

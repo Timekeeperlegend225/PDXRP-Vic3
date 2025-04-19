@@ -73,6 +73,10 @@ je_romanticism = {
 		}
 	}
 
+	invalid = {
+		has_modifier = subterranean_mod
+	}
+
 	fail = {
 		has_technology_researched = realism
 	}

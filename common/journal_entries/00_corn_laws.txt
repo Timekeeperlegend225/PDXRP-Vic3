@@ -67,8 +67,11 @@
 	}
 
 	invalid = {
-		ig:ig_landowners = {
-			is_marginal = yes
+		OR = {
+			ig:ig_landowners = {
+				is_marginal = yes
+			}
+			has_modifier = subterranean_mod
 		}
 	}
 

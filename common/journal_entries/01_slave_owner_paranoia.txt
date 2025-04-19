@@ -69,6 +69,10 @@
 
 	# 5 years
 	timeout = 1825
+
+	invalid = {
+		has_modifier = subterranean_mod
+	}
 	
 	on_yearly_pulse = {
 		random_events = {
