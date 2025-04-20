@@ -483,12 +483,12 @@ become_ELD = {
 			}
 		}
 		s:STATE_AMAZONAS.region_state:ELD = {
-			create_pop = {
-				pop_type = aristocrats
-				culture = noldor
-				religion = song_of_creation
-				size = 4000000
-			}
+#			create_pop = {
+#				pop_type = aristocrats
+#				culture = noldor
+#				religion = song_of_creation
+#				size = 4000000
+#			}
 			state_region = {
 				add_homeland = cu:noldor
 				add_arable_land = 300
