@@ -68,7 +68,6 @@ combat_unit_type_irregular_infantry = {
 	upgrades = {
 		combat_unit_type_line_infantry
 		combat_unit_type_skirmish_infantry
-		combat_unit_type_energy_infantry
         combat_unit_type_trench_infantry
         combat_unit_type_squad_infantry
         combat_unit_type_mechanized_infantry
@@ -125,7 +124,6 @@ combat_unit_type_line_infantry = {
 
 	upgrades = {	
 		combat_unit_type_skirmish_infantry
-		combat_unit_type_energy_infantry
         combat_unit_type_trench_infantry
         combat_unit_type_squad_infantry
         combat_unit_type_mechanized_infantry
@@ -199,36 +197,6 @@ combat_unit_type_skirmish_infantry = {
     combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_skirmish.dds"
-    }
-
-	upgrades = {
-		combat_unit_type_energy_infantry
-		combat_unit_type_trench_infantry
-        combat_unit_type_squad_infantry
-        combat_unit_type_mechanized_infantry
-	}
-}
-
-combat_unit_type_energy_infantry = {
-    group = combat_unit_group_infantry
-
-    upkeep_modifier = {
-        goods_input_small_arms_add = 2
-        goods_input_memorite_add = 1
-    }
-
-    battle_modifier = {
-        unit_offense_add = 30
-        unit_defense_add = 35
-        unit_morale_loss_add = 10
-    }
-
-	unlocking_technologies = { energy_focalisation }
-
-
-    combat_unit_image = {
-		# fallback
-        texture = "gfx/unit_illustrations/WhOW_unit_colonial_millitia.dds"
     }
 
 	upgrades = {

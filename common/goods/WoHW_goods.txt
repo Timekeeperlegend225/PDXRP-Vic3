@@ -3,8 +3,21 @@
 
 memorite = {
 	texture = "gfx/interface/icons/goods_icons/memorite.dds"
-	cost = 50
+	cost = 20
 	category = industrial
+	
+	prestige_factor = 25
+	
+	traded_quantity = 1
+	convoy_cost_multiplier = 0.25
+	
+	consumption_tax_cost = 200
+}
+
+flamecaster = {
+	texture = "gfx/interface/icons/goods_icons/flamecaster.dds"
+	cost = 50
+	category = military
 	
 	prestige_factor = 25
 	
