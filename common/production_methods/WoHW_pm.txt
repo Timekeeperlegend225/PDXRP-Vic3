@@ -30,6 +30,7 @@
 			goods_output_explosives_add = 2
 			goods_output_luxury_furniture_add = 5
 			goods_explosives_fine_art_add = 2
+			goods_output_flamecaster_add = 2
 		}
 
 		level_scaled = {
@@ -173,6 +174,29 @@ pm_ALA_studies = {
 	required_input_goods = memorite
 }
 
+pm_EMB_studies = {
+	texture = "gfx/interface/icons/production_method_icons/analytical_philosophy_department.dds"
+
+	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
+
+	unlocking_technologies = {
+		dracaryan_studies
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_sulfur_add = 2
+		}
+
+		level_scaled = {
+			building_employment_officers_add = 100
+			building_employment_academics_add = 150
+		}
+	}
+
+	required_input_goods = memorite
+}
+
 pm_no_assistance = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 
@@ -197,8 +221,7 @@ pm_levitating_assistance = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_fabric_add = 25
-			goods_input_wood_add = 75
+			goods_input_memorite_add = 2
 		}
 
 		level_scaled = {
@@ -208,5 +231,11 @@ pm_levitating_assistance = {
 		unscaled = {
 			building_laborers_mortality_mult = -0.1
 		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.001
+		}	
 	}
 }

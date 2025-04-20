@@ -69,3 +69,4 @@ law_worker_protections = {
 		}
 	}
 }
+

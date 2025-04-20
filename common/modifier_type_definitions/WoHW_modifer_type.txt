@@ -69,6 +69,7 @@ goods_input_memorite_add = {
 		ai_value=0
 	}
 }
+
 goods_output_memorite_add = {
 	decimals=1
 	color=good
@@ -86,6 +87,48 @@ goods_input_memorite_mult={
 	}
 }
 goods_output_memorite_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_enactment_time_law_right_to_work_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_flamecaster_add = {
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_flamecaster_add = {
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_flamecaster_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+goods_output_flamecaster_mult={
 	decimals=1
 	color=good
 	percent=yes
