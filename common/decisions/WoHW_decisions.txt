@@ -482,19 +482,19 @@ become_ELD = {
 				}
 			}
 		}
-#		s:STATE_AMAZONAS.region_state:ELD = {
-#			create_pop = {
-#				pop_type = aristocrats
-#				culture = noldor
-#				religion = song_of_creation
-#				size = 4000000
-#			}
+		s:STATE_AMAZONAS.region_state:ELD = {
+			create_pop = {
+				pop_type = aristocrats
+				culture = noldor
+				religion = song_of_creation
+				size = 4000000
+			}
 			state_region = {
 				add_homeland = cu:noldor
 				add_arable_land = 300
 			}
 		}
-		s:STATE_CANARY_ISLANDS.region_state:EMB = {
+		s:STATE_AMAZONAS.region_state:ELD = {
 			create_building = {
 				building = building_hole_emb
 				level = 20
