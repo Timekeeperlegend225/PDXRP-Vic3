@@ -1,0 +1,257 @@
+﻿# Bonus tech
+
+ember_empire_starting_boost = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/ember_empire_starting_boost.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 0.50
+		interest_group_ig_landowners_pol_str_mult = 0.25
+		interest_group_ig_devout_pol_str_mult = 0.10
+		country_military_wages_mult = -0.25
+		state_working_adult_ratio_add = 0.10
+		state_building_barracks_max_level_add = 150
+		state_building_conscription_center_max_level_add = 350
+		state_birth_rate_mult = 0.05
+		building_training_rate_add = 500
+		building_throughput_add = 0.25
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+# Tier 1 
+
+dracaryan_studies = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/dracaryan_studies.dds"
+	category = military
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+# Tier 2
+
+volcanic_mining = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/volcanic_mining.dds"
+	category = production
+	
+	unlocking_technologies = {
+		dracaryan_studies
+	}
+	
+	modifier = {
+		building_coal_mine_throughput_add = 0.25
+		building_sulfur_mine_throughput_add = 0.25
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+flameclad_tech = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/flameclad_tech.dds"
+	category = military
+	
+	unlocking_technologies = {
+		dracaryan_studies
+	}
+	
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 0.10
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+efficient_authority = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/efficient_authority.dds"
+	category = society
+	
+	unlocking_technologies = {
+		dracaryan_studies
+	}
+	
+	modifier = {
+		country_authority_mult = 0.10
+		state_bureaucracy_population_base_cost_factor_mult = -0.10
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+#Tier 3
+
+flamecaster_tech = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/flamecaster_tech.dds"
+	category = production
+	
+	unlocking_technologies = {
+		volcanic_mining
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+ember_hellcanon_tech = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/ember_hellcanon_tech.dds"
+	category = military
+	
+	unlocking_technologies = {
+		flameclad_tech
+	}
+	
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 0.10
+		unit_devastation_mult = 0.25
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+dragon_baby = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/dragon_baby.dds"
+	category = society
+	
+	unlocking_technologies = {
+		efficient_authority
+	}
+	
+	modifier = {
+		country_authority_mult = 0.10
+		state_birth_rate_mult = 0.05
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+#Tier 4
+
+industrial_flamecaster = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/industrial_flamecaster.dds"
+	category = production
+	
+	unlocking_technologies = {
+		flamecaster_tech
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+flamecaster_infantry_tech = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/flamecaster_infantry_tech.dds"
+	category = military
+	
+	unlocking_technologies = {
+		ember_hellcanon_tech
+	}
+	
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 0.10
+		country_military_goods_cost_mult = -0.25
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+more_work = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/more_work.dds"
+	category = society
+	
+	unlocking_technologies = {
+		dragon_baby
+	}
+	
+	modifier = {
+		country_authority_mult = 0.10
+		state_expected_sol_from_literacy = -3
+		state_working_adult_ratio_add = 0.05
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+#Tier 5
+
+flamecaster_production = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/flamecaster_production.dds"
+	category = production
+	
+	unlocking_technologies = {
+		industrial_flamecaster
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+emberian_conscription_tech = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/emberian_conscription_tech.dds"
+	category = military
+	
+	unlocking_technologies = {
+		flamecaster_infantry_tech
+	}
+	
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 0.20
+		state_building_naval_base_max_level_add = 20
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+militarized_education_tech = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/militarized_education_tech.dds"
+	category = society
+	
+	unlocking_technologies = {
+		more_work
+	}
+	
+	modifier = {
+		country_authority_mult = 0.20
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}

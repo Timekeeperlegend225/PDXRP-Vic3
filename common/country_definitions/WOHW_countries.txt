@@ -38,6 +38,6 @@ ELD = {
 	
 	tier = empire
 	
-	cultures = { noldor }
+	cultures = { tuvan }
 	capital = STATE_AMAZONAS
 }

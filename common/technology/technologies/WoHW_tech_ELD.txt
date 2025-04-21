@@ -1,0 +1,248 @@
+﻿# Bonus tech
+
+eldar_empire_starting_boost = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/eldar_empire_starting_boost.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.10
+		state_working_adult_ratio_add = 0.50
+		state_birth_rate_mult = -0.20
+		state_building_naval_base_max_level_add = 50
+		building_throughput_add = 0.40
+		state_construction_mult = 0.30
+		state_infrastructure_mult = 0.30
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+# Tier 1 
+
+eldar_studies = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
+	category = military
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+# Tier 2
+
+forest_harmony = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/forest_harmony.dds"
+	category = production
+	
+	unlocking_technologies = {
+		eldar_studies
+	}
+	
+	modifier = {
+		building_coal_mine_throughput_add = 0.25
+		building_sulfur_mine_throughput_add = 0.25
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+elven_first_aid = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/elven_first_aid.dds"
+	category = military
+	
+	unlocking_technologies = {
+		eldar_studies
+	}
+	
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 0.10
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+elven_aura = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/elven_aura.dds"
+	category = society
+	
+	unlocking_technologies = {
+		eldar_studies
+	}
+	
+	modifier = {
+		country_authority_mult = 0.10
+		state_bureaucracy_population_base_cost_factor_mult = -0.10
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+#Tier 3
+
+natural_culture = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/natural_culture.dds"
+	category = production
+	
+	unlocking_technologies = {
+		forest_harmony
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+precision_archery = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/precision_archery.dds"
+	category = military
+	
+	unlocking_technologies = {
+		elven_first_aid
+	}
+	
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 0.10
+		unit_devastation_mult = 0.25
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+plantiri_tech = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/plantiri_tech.dds"
+	category = society
+	
+	unlocking_technologies = {
+		elven_aura
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+#Tier 4
+
+alchemy = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/alchemy.dds"
+	category = production
+	
+	unlocking_technologies = {
+		natural_culture
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+efficient_logistics = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/efficient_logistics.dds"
+	category = military
+	
+	unlocking_technologies = {
+		precision_archery
+	}
+	
+	modifier = {
+		country_military_goods_cost_mult = -0.20
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+naturalism_tech = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/naturalism_tech.dds"
+	category = society
+	
+	unlocking_technologies = {
+		plantiri_tech
+	}
+	
+	modifier = {
+		country_authority_mult = 0.10
+		state_expected_sol_from_literacy = -3
+		state_working_adult_ratio_add = 0.05
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+#Tier 5
+
+evlven_smithing = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/evlven_smithing.dds"
+	category = production
+	
+	unlocking_technologies = {
+		alchemy
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+elven_healing = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/elven_healing.dds"
+	category = military
+	
+	unlocking_technologies = {
+		efficient_logistics
+	}
+	
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 0.20
+		state_building_naval_base_max_level_add = 20
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+divion_of_labour_tech = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/divion_of_labour_tech.dds"
+	category = society
+	
+	unlocking_technologies = {
+		naturalism_tech
+	}
+	
+	modifier = {
+		country_authority_mult = 0.20
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
