@@ -26,3 +26,16 @@ flamecaster = {
 	
 	consumption_tax_cost = 200
 }
+
+lasse = {
+	texture = "gfx/interface/icons/goods_icons/lasse.dds"
+	cost = 50
+	category = staple
+	
+	prestige_factor = 25
+	
+	traded_quantity = 1
+	convoy_cost_multiplier = 0.25
+	
+	consumption_tax_cost = 200
+}

@@ -303,9 +303,8 @@ combat_unit_type_flamecaster_infantry = {
     group = combat_unit_group_infantry
 
     upkeep_modifier = {
-        goods_input_small_arms_add = 3
         goods_input_ammunition_add = 2
-        goods_input_flamecaster_add = 2
+        goods_input_flamecaster_add = 4
     }
     
     battle_modifier = {
@@ -448,9 +447,8 @@ combat_unit_type_flamecaster_squadron = {
     group = combat_unit_group_infantry
 
     upkeep_modifier = {
-        goods_input_small_arms_add = 3
         goods_input_ammunition_add = 3
-        goods_input_flamecaster_add = 3
+        goods_input_flamecaster_add = 7
     }
     
     battle_modifier = {

@@ -434,7 +434,7 @@ become_ELD = {
 	when_taken = {
 		create_country = {
 			tag = ELD
-			origin = c:PRU
+			origin = c:GBR
 			state = s:STATE_AMAZONAS.region_state:BRZ
 			state = s:STATE_AMAZONAS.region_state:CLM
 			state = s:STATE_PARA.region_state:BRZ
@@ -463,41 +463,15 @@ become_ELD = {
 			activate_law = law_type:law_closed_borders
 			activate_law = law_type:law_slavery_banned
 		}
-		c:ELD = {
-			add_technology_researched = ember_empire_starting_boost
-			create_character = {
-				first_name = "Tars"     
-				last_name = "Halden"
-				birth_date = 1799.08.17 
-				interest_group = ig:ig_armed_forces
-				ruler = yes
-				is_general = yes
-				ideology = ideology_jingoist_leader
-				traits = {
-					imperious
-					cruel
-					expert_offensive_planner
-					experienced_colonial_administrator
-					political_appointee
-				}
-			}
-		}
 		s:STATE_AMAZONAS.region_state:ELD = {
-#			create_pop = {
-#				pop_type = aristocrats
-#				culture = noldor
-#				religion = song_of_creation
-#				size = 4000000
-#			}
+			create_pop = {
+				pop_type = aristocrats
+				culture = tuvan
+				religion = song_of_creation
+				size = 4000
+			}
 			state_region = {
-				add_homeland = cu:noldor
-				add_arable_land = 300
-			}
-		}
-		s:STATE_AMAZONAS.region_state:ELD = {
-			create_building = {
-				building = building_hole_emb
-				level = 20
+				add_homeland = cu:tuvan
 			}
 		}
 	}

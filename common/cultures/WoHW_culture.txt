@@ -599,7 +599,7 @@ alarian ={
 	}
 }
 
-noldor ={
+tuvan ={
 	color = { 62 50 168 }
 	religion = song_of_creation 
 	traits = { eldar underworld_heritage }
