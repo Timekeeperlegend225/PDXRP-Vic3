@@ -30,7 +30,7 @@
 			goods_output_explosives_add = 2
 			goods_output_luxury_furniture_add = 5
 			goods_explosives_fine_art_add = 2
-			goods_output_flamecaster_add = 2
+			goods_output_flamecaster_add = 20
 		}
 
 		level_scaled = {
@@ -123,7 +123,7 @@ pm_wohw_hole_ala = {
 			goods_output_explosives_add = 2
 			goods_output_luxury_furniture_add = 5
 			goods_explosives_fine_art_add = 2
-			goods_output_memorite_add = 10
+			goods_output_memorite_add = 20
 		}
 
 		level_scaled = {
@@ -135,107 +135,5 @@ pm_wohw_hole_ala = {
 			building_employment_clergymen_add = 500
 			building_employment_machinists_add = 5000
 		}
-	}
-}
-
-pm_no_studies = {
-	texture = "gfx/interface/icons/production_method_icons/unused/no_philosophy_dept.dds"
-
-	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
-
-	unlocking_technologies = {
-		academia
-	}
-
-	building_modifiers = {
-	}
-}
-
-pm_ALA_studies = {
-	texture = "gfx/interface/icons/production_method_icons/analytical_philosophy_department.dds"
-
-	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
-
-	unlocking_technologies = {
-		memorite_manipulation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_memorite_add = 2
-		}
-
-		level_scaled = {
-			building_employment_clergymen_add = 100
-			building_employment_academics_add = 150
-		}
-	}
-
-	required_input_goods = memorite
-}
-
-pm_EMB_studies = {
-	texture = "gfx/interface/icons/production_method_icons/analytical_philosophy_department.dds"
-
-	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
-
-	unlocking_technologies = {
-		dracaryan_studies
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_sulfur_add = 2
-		}
-
-		level_scaled = {
-			building_employment_officers_add = 100
-			building_employment_academics_add = 150
-		}
-	}
-
-	required_input_goods = memorite
-}
-
-pm_no_assistance = {
-	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
-
-	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
-
-	unlocking_technologies = {
-		urbanization
-	}
-
-	building_modifiers = {
-	}
-}
-
-pm_levitating_assistance = {
-	texture = "gfx/interface/icons/production_method_icons/airship_mooring_post.dds"
-
-	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
-
-	unlocking_technologies = {
-		basic_levitation
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_memorite_add = 2
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -200
-			building_employment_clergymen_add = 200
-		}
-		unscaled = {
-			building_laborers_mortality_mult = -0.1
-		}
-	}
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_construction_mult = 0.001
-		}	
 	}
 }

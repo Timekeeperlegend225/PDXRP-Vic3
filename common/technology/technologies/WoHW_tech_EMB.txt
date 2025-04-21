@@ -96,9 +96,9 @@ efficient_authority = {
 
 #Tier 3
 
-flamecaster_production = {
+flamecaster_tech = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/flamecaster_production.dds"
+	texture = "gfx/interface/icons/invention_icons/flamecaster_tech.dds"
 	category = production
 	
 	unlocking_technologies = {
@@ -150,13 +150,13 @@ dragon_baby = {
 
 #Tier 4
 
-right_to_work_tech = {
+industrial_flamecaster = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/right_to_work_tech.dds"
+	texture = "gfx/interface/icons/invention_icons/industrial_flamecaster.dds"
 	category = production
 	
 	unlocking_technologies = {
-		flamecaster_production
+		flamecaster_tech
 	}
 	
 	ai_weight = {
@@ -205,13 +205,13 @@ more_work = {
 
 #Tier 5
 
-official_flamecaster_production = {
+flamecaster_production = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/official_flamecaster_production.dds"
+	texture = "gfx/interface/icons/invention_icons/flamecaster_production.dds"
 	category = production
 	
 	unlocking_technologies = {
-		right_to_work_tech
+		industrial_flamecaster
 	}
 	
 	ai_weight = {

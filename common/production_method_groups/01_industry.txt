@@ -108,6 +108,7 @@ pmg_automation_building_tooling_workshops = {
 		pm_watertube_boiler_building_tooling_workshops
 		pm_rotary_valve_engine_building_tooling_workshops
 		pm_assembly_lines_building_tooling_workshops
+		pm_flamecaster_tooling_workshops
 	}
 }
 
@@ -135,6 +136,7 @@ pmg_glassblowing = {
 	production_methods = {
 		pm_manual_glassblowing
 		pm_automatic_bottle_blowers
+		pm_flamecaster_blowing
 	}
 }
 
@@ -206,6 +208,7 @@ pmg_automation_building_steel_mills = {
 		pm_automation_disabled
 		pm_watertube_boiler_building_steel_mills
 		pm_rotary_valve_engine_building_steel_mills
+		pm_flame_caster_melting_steel_mills
 	}
 }
 
@@ -233,6 +236,7 @@ pmg_automation_building_motor_industry = {
 		pm_watertube_boiler_building_motor_industry
 		pm_rotary_valve_engine_building_motor_industry
 		pm_assembly_lines_building_motor_industry
+		pm_flamecaster_melting_motor_industry
 	}
 }
 
@@ -245,6 +249,7 @@ pmg_base_building_shipyards = {
 		pm_complex_shipbuilding
 		pm_metal_shipbuilding
 		pm_arc_welding_shipbuilding
+		pm_flamecaster_shipbuilding
 	}
 }
 
@@ -257,6 +262,7 @@ pmg_military_base = {
 		pm_military_shipbuilding_wooden_2
 		pm_military_shipbuilding_steam
 		pm_military_shipbuilding_steam_2
+		pm_military_flamecaster_shipbuilding
 	}
 }
 
@@ -272,6 +278,7 @@ pmg_tanks = {
 	production_methods = {
 		pm_no_tank_production
 		pm_tank_production
+		pm_flamecaster_tank_production
 	}
 }
 
@@ -299,7 +306,9 @@ pmg_firearms_manufacturing = {
 		pm_rifles
 		pm_repeaters
 		pm_bolt_action_rifles
-		pm_energy_arms
+		pm_unsanctioned_flamecaster_production
+		pm_sanctioned_flamecaster_production
+		pm_unsanctioned_mixed_production
 	}
 }
 
@@ -309,6 +318,7 @@ pmg_automation_building_arms_industry = {
 		pm_automation_disabled
 		pm_rotary_valve_engine_building_arms_industry
 		pm_assembly_lines_building_arms_industry
+		pm_flamecaster_arms_industry
 	}
 }
 
@@ -321,6 +331,7 @@ pmg_foundries = {
 		pm_smoothbores
 		pm_breech_loaders
 		pm_recoiled_barrels
+		pm_flamecaster_canon
 	}
 }
 

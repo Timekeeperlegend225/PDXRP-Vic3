@@ -7,16 +7,13 @@ eldar_empire_starting_boost = {
 	can_research = no
 	
 	modifier = {
-		interest_group_ig_armed_forces_pol_str_mult = 0.50
-		interest_group_ig_landowners_pol_str_mult = 0.25
-		interest_group_ig_devout_pol_str_mult = 0.10
-		country_military_wages_mult = -0.25
-		state_working_adult_ratio_add = 0.10
-		state_building_barracks_max_level_add = 150
-		state_building_conscription_center_max_level_add = 350
-		state_birth_rate_mult = 0.05
-		building_training_rate_add = 500
-		building_throughput_add = 0.25
+		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.10
+		state_working_adult_ratio_add = 0.50
+		state_birth_rate_mult = -0.20
+		state_building_naval_base_max_level_add = 50
+		building_throughput_add = 0.40
+		state_construction_mult = 0.30
+		state_infrastructure_mult = 0.30
 	}
 	
 	ai_weight = {
