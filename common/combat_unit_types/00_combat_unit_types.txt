@@ -70,7 +70,9 @@ combat_unit_type_irregular_infantry = {
 		combat_unit_type_skirmish_infantry
         combat_unit_type_trench_infantry
         combat_unit_type_squad_infantry
+		combat_unit_type_flamecaster_infantry
         combat_unit_type_mechanized_infantry
+		combat_unit_type_flamecaster_squadron
 	}
 }
 
@@ -126,7 +128,9 @@ combat_unit_type_line_infantry = {
 		combat_unit_type_skirmish_infantry
         combat_unit_type_trench_infantry
         combat_unit_type_squad_infantry
+		combat_unit_type_flamecaster_infantry
         combat_unit_type_mechanized_infantry
+		combat_unit_type_flamecaster_squadron
 	}
 }
 
@@ -202,7 +206,9 @@ combat_unit_type_skirmish_infantry = {
 	upgrades = {
 		combat_unit_type_trench_infantry
         combat_unit_type_squad_infantry
+		combat_unit_type_flamecaster_infantry
         combat_unit_type_mechanized_infantry
+		combat_unit_type_flamecaster_squadron
 	}
 }
 
@@ -277,7 +283,9 @@ combat_unit_type_trench_infantry = {
 
     upgrades = {
         combat_unit_type_squad_infantry
+		combat_unit_type_flamecaster_infantry
         combat_unit_type_mechanized_infantry
+		combat_unit_type_flamecaster_squadron
     }
 }
 
@@ -352,7 +360,37 @@ combat_unit_type_squad_infantry = {
     }
 
     upgrades = {
+		combat_unit_type_flamecaster_infantry
         combat_unit_type_mechanized_infantry
+		combat_unit_type_flamecaster_squadron
+    }
+}
+
+combat_unit_type_flamecaster_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 3
+        goods_input_ammunition_add = 2
+        goods_input_flamecaster_add = 2
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 45
+        unit_defense_add = 60
+        unit_morale_loss_add = 8
+    }
+
+	unlocking_technologies = { flamecaster_infantry_tech }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_infantry.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mechanized_infantry
+		combat_unit_type_flamecaster_squadron
     }
 }
 
@@ -413,6 +451,29 @@ combat_unit_type_mechanized_infantry = {
     combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_mechanized.dds"
+    }
+}
+
+combat_unit_type_flamecaster_squadron = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_flamecaster_add = 3
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 60
+        unit_defense_add = 75
+        unit_morale_loss_add = 6
+    }
+
+	unlocking_technologies = { ember_empire_starting_boost }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_infantry.dds"
     }
 }
 
@@ -617,6 +678,75 @@ combat_unit_type_shrapnel_artillery = {
 
     upgrades = {
         combat_unit_type_siege_artillery
+        combat_unit_type_ember_hellcanon
+    }
+}
+
+combat_unit_type_ember_hellcanon = {
+    group = combat_unit_group_artillery
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_artillery_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_flamecaster_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 25
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.3
+        unit_devastation_mult = 0.20
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { ember_hellcanon_tech }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_east_asian_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_south_asian_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/artillery_african_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/artillery_arabic_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_shrapnel.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_siege_artillery
     }
 }
 
@@ -716,6 +846,43 @@ combat_unit_type_heavy_tank = {
     }
 
 	unlocking_technologies = { mobile_armor }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/artillery_heavy_tank.dds"
+    }
+}
+
+combat_unit_type_ember_tank = {
+    group = combat_unit_group_artillery
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+	unlocking_technologies = { ember_empire_starting_boost }
+    
+    upkeep_modifier = {
+        goods_input_artillery_add = 4
+		goods_input_ammunition_add = 4
+        goods_input_flamecaster_add = 5
+		goods_input_coal_add = 5
+    }
+
+    battle_modifier = {
+        unit_offense_add = 105
+        unit_defense_add = 105
+        unit_morale_loss_add = 4
+        unit_kill_rate_add = 0.25
+        unit_morale_damage_mult = 0.15
+        unit_devastation_mult = 0.2
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/artillery_heavy_tank.dds"
@@ -1034,26 +1201,6 @@ combat_unit_type_frigate = {
     }
 
 	unlocking_technologies = { navigation }
-
-    combat_unit_image = {
-        trigger = { 
-			OR = {
-				THIS = cu:dracaryans
-				THIS = cu:dragokins
-			}
-        }
-        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
-    }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
-	}
 	
     combat_unit_image = {
         texture = "gfx/unit_illustrations/light_ships_frigate.dds"
@@ -1087,26 +1234,6 @@ combat_unit_type_monitor = {
     }
 
     unlocking_technologies = { monitor_tech }
-	
-	combat_unit_image = {
-        trigger = { 
-			OR = {
-				THIS = cu:dracaryans
-				THIS = cu:dragokins
-			}
-        }
-        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
-    }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
-	}
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_monitor.dds"
@@ -1134,26 +1261,6 @@ combat_unit_type_destroyer = {
     }
 
 	unlocking_technologies = { destroyer }
-	
-	combat_unit_image = {
-        trigger = { 
-			OR = {
-				THIS = cu:dracaryans
-				THIS = cu:dragokins
-			}
-        }
-        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
-    }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
-	}
 	
     combat_unit_image = {
         texture = "gfx/unit_illustrations/light_ships_destroyer.dds"
@@ -1184,26 +1291,6 @@ combat_unit_type_torpedo_boat = {
     }
 
 	unlocking_technologies = { self_propelled_torpedoes }
-	
-	combat_unit_image = {
-        trigger = { 
-			OR = {
-				THIS = cu:dracaryans
-				THIS = cu:dragokins
-			}
-        }
-        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
-    }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
-	}
 	
     combat_unit_image = {
         texture = "gfx/unit_illustrations/light_ships_torpedo_boat.dds"
@@ -1237,28 +1324,36 @@ combat_unit_type_scout_cruiser = {
 
 	unlocking_technologies = { sea_lane_strategies }
 	
-	combat_unit_image = {
-        trigger = { 
-			OR = {
-				THIS = cu:dracaryans
-				THIS = cu:dragokins
-			}
-        }
-        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
-    }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
-	}
-	
     combat_unit_image = {
         texture = "gfx/unit_illustrations/light_ships_scout_cruiser.dds"
+    }
+}
+
+combat_unit_type_ember_steamship = {
+    group = combat_unit_group_light_ship
+
+	unlocking_technologies = { ember_empire_starting_boost }
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_artillery_add = 1
+        goods_input_flamecaster_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 60
+        unit_defense_add = 60
+        unit_morale_loss_add = 6
+		unit_convoy_defense_mult = 0.5
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = 0.2
+    }
+	
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
     }
 }
 
@@ -1314,6 +1409,38 @@ combat_unit_type_ironclad = {
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_ironclad.dds"
     }
+	
+	upgrades = {
+		combat_unit_type_flameclad
+	}
+}
+
+combat_unit_type_flameclad = {
+    group = combat_unit_group_capital_ship
+
+	unlocking_technologies = { flameclad_tech }
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 3
+        goods_input_artillery_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_flamecaster_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 65
+        unit_defense_add = 65
+        unit_morale_loss_add = 7
+		unit_convoy_raiding_mult = -0.5
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = -0.2
+    }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
+    }
 }
 
 combat_unit_type_dreadnought = {
@@ -1341,6 +1468,36 @@ combat_unit_type_dreadnought = {
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_dreadnought.dds"
+    }
+}
+
+combat_unit_type_ember_dreadship = {
+    group = combat_unit_group_capital_ship
+
+	unlocking_technologies = { ember_empire_starting_boost }
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 6
+		goods_input_artillery_add = 4
+		combat_unit_type_flameclad = 4
+        goods_input_ammunition_add = 6
+    }
+
+    battle_modifier = {
+        unit_offense_add = 90
+        unit_defense_add = 90
+        unit_morale_loss_add = 6
+		unit_convoy_raiding_mult = -0.5
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { dreadnought }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_steamship.dds"
     }
 }
 
