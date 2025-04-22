@@ -478,16 +478,6 @@ combat_unit_type_cannon_artillery = {
         # fallback
         texture = "gfx/unit_illustrations/artillery_eu_cannon.dds"
     }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_artillery.dds"
-	}
 
     upgrades = {
         combat_unit_type_mobile_artillery
@@ -598,16 +588,6 @@ combat_unit_type_shrapnel_artillery = {
         }
         texture = "gfx/unit_illustrations/artillery_east_asian_shrapnel.dds"
     }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_artillery.dds"
-	}
 
     combat_unit_image = {
         trigger = { 
@@ -690,16 +670,6 @@ combat_unit_type_siege_artillery = {
         }
         texture = "gfx/unit_illustrations/artillery_african_siege.dds"
     }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_artillery.dds"
-	}
 
     combat_unit_image = {
         trigger = { 
@@ -793,16 +763,6 @@ combat_unit_type_hussars = {
         }
         texture = "gfx/unit_illustrations/cavalry_south_asian_hussar.dds"
     }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_cavalry.dds"
-	}
 
     combat_unit_image = {
         trigger = { 
@@ -874,16 +834,6 @@ combat_unit_type_dragoons = {
         }
         texture = "gfx/unit_illustrations/cavalry_african_dragoon.dds"
     }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_cavalry.dds"
-	}
 
     combat_unit_image = {
         trigger = { 
@@ -946,16 +896,6 @@ combat_unit_type_cuirassiers = {
         }
         texture = "gfx/unit_illustrations/cavalry_african_cuirassier.dds"
     }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_cavalry.dds"
-	}
 
     combat_unit_image = {
         trigger = { 
@@ -1021,16 +961,6 @@ combat_unit_type_lancers = {
         }
         texture = "gfx/unit_illustrations/cavalry_african_lancer.dds"
     }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_cavalry.dds"
-	}
 
     combat_unit_image = {
         trigger = { 
@@ -1122,7 +1052,7 @@ combat_unit_type_frigate = {
 				THIS = cu:nagavanshi
 			}
 		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_snakeship.dds"
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
 	}
 	
     combat_unit_image = {
@@ -1175,7 +1105,7 @@ combat_unit_type_monitor = {
 				THIS = cu:nagavanshi
 			}
 		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_snakeship.dds"
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
 	}
 
     combat_unit_image = {
@@ -1222,7 +1152,7 @@ combat_unit_type_destroyer = {
 				THIS = cu:nagavanshi
 			}
 		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_snakeship.dds"
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
 	}
 	
     combat_unit_image = {
@@ -1272,7 +1202,7 @@ combat_unit_type_torpedo_boat = {
 				THIS = cu:nagavanshi
 			}
 		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_snakeship.dds"
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
 	}
 	
     combat_unit_image = {
@@ -1324,7 +1254,7 @@ combat_unit_type_scout_cruiser = {
 				THIS = cu:nagavanshi
 			}
 		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_snakeship.dds"
+		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
 	}
 	
     combat_unit_image = {
@@ -1349,17 +1279,7 @@ combat_unit_type_man_o_war = {
     }
 
 	unlocking_technologies = { drydocks }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
-	}
-	
+
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_manowar.dds"
     }
@@ -1390,17 +1310,7 @@ combat_unit_type_ironclad = {
     }
 
 	unlocking_technologies = { ironclad_tech }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
-	}
-	
+
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_ironclad.dds"
     }
@@ -1428,17 +1338,7 @@ combat_unit_type_dreadnought = {
     }
 
 	unlocking_technologies = { dreadnought }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
-	}
-	
+
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_dreadnought.dds"
     }
@@ -1466,17 +1366,7 @@ combat_unit_type_battleship = {
     }
 
 	unlocking_technologies = { battleship_tech }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
-	}
-	
+
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_battleship.dds"
     }
@@ -1506,17 +1396,7 @@ combat_unit_type_submarine = {
     }
 
 	unlocking_technologies = { submarine }
-	
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_snakesubs.dds"
-	}
-	
+
     combat_unit_image = {
         texture = "gfx/unit_illustrations/support_ships_submarine.dds"
     }
@@ -1544,16 +1424,6 @@ combat_unit_type_carrier = {
     }
 
 	unlocking_technologies = { carrier_tech }
-
-	combat_unit_image = {
-		trigger = {
-			OR = {
-				THIS = cu:jungle_naga
-				THIS = cu:nagavanshi
-			}
-		}
-		texture = "gfx/unit_illustrations/WhOW_unit_naga_snakecarrier.dds"
-	}
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/support_ships_carrier.dds"
