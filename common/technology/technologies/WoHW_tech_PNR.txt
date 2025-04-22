@@ -1,0 +1,226 @@
+﻿# Bonus
+
+naga_empire_starting_boost = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/naga_empire_starting_boost.dds"
+	category = society
+	can_research = no
+	
+	modifier = {
+	country_military_wages_mult = -0.25
+	interest_group_ig_devout_pol_str_mult = 0.50
+	interest_group_ig_armed_forces_pol_str_mult = 0.25
+	interest_group_ig_industrialists_pol_str_mult = 0.10
+	interest_group_ig_landowners_pol_str_mult = 0.10
+	state_birth_rate_mult = 0.15
+	building_training_rate_add = 500
+	building_throughput_add = 0.25
+	state_working_adult_ratio_add = 0.10
+	military_formation_mobilization_speed_mult = 0.10
+	military_formation_movement_speed_mult = 0.10
+	state_building_barracks_max_level_add = 50
+	state_building_naval_base_max_level_add = 150
+	state_pollution_reduction_health_mult = -0.30
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+
+
+# Tier 1 
+
+nagan_studies = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/nagan_studies.dds"
+	category = production
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+# Tier 2
+
+rural_society = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/rural_society.dds"
+	category = production
+	
+	unlocking_technologies = {
+		nagan_studies
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+snakeship_tech = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/snakeship_tech.dds"
+	category = military
+	
+	unlocking_technologies = {
+		nagan_studies
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+religious_bureaucracy = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/religious_bureaucracy.dds"
+	category = society
+	
+	unlocking_technologies = {
+		nagan_studies
+	}
+	
+	modifier = {	
+		state_pollution_reduction_health_mult = -0.10
+		state_harvest_condition_drought_impact_mult= -0.05
+		state_harvest_condition_disease_outbreak_duration_mult= -0.1
+		state_standard_of_living_add = 2
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+#Tier 3
+
+nagan_cattle_tech = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_tech.dds"
+	category = production
+	
+	unlocking_technologies = {
+		rural_society
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+beast_cavalry_tech = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/beast_cavalry_tech.dds"
+	category = military
+	
+	unlocking_technologies = {
+		snakeship_tech
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+forced_conversion = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/forced_conversion.dds"
+	category = society
+	
+	unlocking_technologies = {
+		religious_bureaucracy
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+#Tier 4
+
+nagan_cattle_fertilizer = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_fertilizer.dds"
+	category = production
+	
+	unlocking_technologies = {
+		nagan_cattle_tech
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+goldspear_infantry_tech = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/goldspear_infantry_tech.dds"
+	category = military
+	
+	unlocking_technologies = {
+		beast_cavalry_tech
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+chakravadach_enlightmen = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/chakravadach_enlightmen.dds"
+	category = society
+	
+	unlocking_technologies = {
+		forced_conversion
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+#Tier 5
+
+nagan_cattle_breeding = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_breeding.dds"
+	category = production
+	
+	unlocking_technologies = {
+		nagan_cattle_fertilizer
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+guerilla_warfare = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/guerilla_warfare.dds"
+	category = military
+	
+	unlocking_technologies = {
+		goldspear_infantry_tech
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+baby_and_work = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/baby_and_work.dds"
+	category = society
+	
+	unlocking_technologies = {
+		chakravadach_enlightmen
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
