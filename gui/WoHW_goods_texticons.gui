@@ -1,0 +1,39 @@
+texticon = {
+	icon = memorite
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/memorite.dds"
+		size = { 25 	 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = flamecaster
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/flamecaster.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+lasse = {
+	icon = lasse
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/lasse.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+nagan_cattle = {
+	icon = nagan_cattle
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/nagan_cattle.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
