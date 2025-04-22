@@ -71,8 +71,10 @@ combat_unit_type_irregular_infantry = {
         combat_unit_type_trench_infantry
         combat_unit_type_squad_infantry
 		combat_unit_type_flamecaster_infantry
+        combat_unit_type_goldspear_infantry
         combat_unit_type_mechanized_infantry
 		combat_unit_type_flamecaster_squadron
+		combat_unit_type_nagavanshi_warriors
 	}
 }
 
@@ -129,8 +131,10 @@ combat_unit_type_line_infantry = {
         combat_unit_type_trench_infantry
         combat_unit_type_squad_infantry
 		combat_unit_type_flamecaster_infantry
+        combat_unit_type_goldspear_infantry
         combat_unit_type_mechanized_infantry
 		combat_unit_type_flamecaster_squadron
+		combat_unit_type_nagavanshi_warriors
 	}
 }
 
@@ -187,8 +191,10 @@ combat_unit_type_skirmish_infantry = {
 		combat_unit_type_trench_infantry
         combat_unit_type_squad_infantry
 		combat_unit_type_flamecaster_infantry
+		combat_unit_type_goldspear_infantry
         combat_unit_type_mechanized_infantry
 		combat_unit_type_flamecaster_squadron
+		combat_unit_type_nagavanshi_warriors
 	}
 }
 
@@ -246,6 +252,7 @@ combat_unit_type_trench_infantry = {
 		combat_unit_type_flamecaster_infantry
         combat_unit_type_mechanized_infantry
 		combat_unit_type_flamecaster_squadron
+		combat_unit_type_nagavanshi_warriors
     }
 }
 
@@ -296,6 +303,7 @@ combat_unit_type_squad_infantry = {
 		combat_unit_type_flamecaster_infantry
         combat_unit_type_mechanized_infantry
 		combat_unit_type_flamecaster_squadron
+		combat_unit_type_nagavanshi_warriors
     }
 }
 
@@ -323,6 +331,39 @@ combat_unit_type_flamecaster_infantry = {
     upgrades = {
         combat_unit_type_mechanized_infantry
 		combat_unit_type_flamecaster_squadron
+    }
+}
+
+combat_unit_type_goldspear_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 2
+        goods_input_ammunition_add = 1
+		goods_input_iron_add = 1
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 35
+        unit_defense_add = 45
+        unit_morale_loss_add = 6
+    }
+	
+	formation_modifier = {
+        military_formation_mobilization_speed_mult = 0.05
+	}
+
+	unlocking_technologies = { goldspear_infantry_tech }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/WhOW_unit_goldspear_infantry.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+		combat_unit_type_nagavanshi_warriors
     }
 }
 
@@ -458,6 +499,29 @@ combat_unit_type_flamecaster_squadron = {
     }
 
 	unlocking_technologies = { ember_empire_starting_boost }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_ember_infantry.dds"
+    }
+}
+
+combat_unit_type_nagavanshi_warriors = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_ammunition_add = 2
+        goods_input_small_arms_add = 3
+		goods_input_opium_add = 0.5
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 55
+        unit_defense_add = 80
+        unit_morale_loss_add = 4
+		unit_morale_damage_mult = 0.1
+    }
+
+	unlocking_technologies = { naga_empire_starting_boost }
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/WhOW_unit_ember_infantry.dds"
@@ -666,6 +730,7 @@ combat_unit_type_shrapnel_artillery = {
     upgrades = {
         combat_unit_type_siege_artillery
         combat_unit_type_ember_hellcanon
+		combat_unit_type_fireadders
     }
 }
 
@@ -706,6 +771,42 @@ combat_unit_type_ember_hellcanon = {
 
     upgrades = {
         combat_unit_type_siege_artillery
+    }
+}
+
+combat_unit_type_fireadders = {
+	group = combat_unit_group_artillery
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+		goods_input_nagan_cattle_add = 2
+        goods_input_artillery_add = 1
+        goods_input_ammunition_add = 3
+        goods_input_meat_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 25
+        unit_morale_loss_add = 4
+        unit_kill_rate_add = 0.2
+        unit_devastation_mult = 0.10
+    }
+
+	unlocking_technologies = { naga_empire_starting_boost }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/WhOW_unit_naga_artillery.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_heavy_tank
     }
 }
 
@@ -980,6 +1081,8 @@ combat_unit_type_hussars = {
         combat_unit_type_dragoons
         combat_unit_type_cuirassiers
         combat_unit_type_lancers
+		combat_unit_type_beast_cav
+		combat_unit_type_scarbeast
     }
 }
 
@@ -1043,6 +1146,8 @@ combat_unit_type_dragoons = {
     upgrades = {
         combat_unit_type_cuirassiers
         combat_unit_type_lancers
+		combat_unit_type_beast_cav
+		combat_unit_type_scarbeast
     }
 }
 
@@ -1105,6 +1210,8 @@ combat_unit_type_cuirassiers = {
     upgrades = {
         combat_unit_type_dragoons
         combat_unit_type_lancers
+		combat_unit_type_beast_cav
+		combat_unit_type_scarbeast
     }
 }
 
@@ -1170,6 +1277,8 @@ combat_unit_type_lancers = {
     upgrades = {
         combat_unit_type_dragoons
         combat_unit_type_cuirassiers
+		combat_unit_type_beast_cav
+		combat_unit_type_scarbeast
     }
 }
 
@@ -1209,6 +1318,43 @@ combat_unit_mobile_assault_group = {
     }
 }
 
+combat_unit_type_beast_cav = {
+    group = combat_unit_group_cavalry
+	
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_meat_add = 2
+        goods_input_small_arms_add = 1
+		goods_input_iron_add = 1
+		goods_input_nagan_cattle_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 45
+        unit_defense_add = 30
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.05
+        unit_morale_damage_mult = 0.1
+        unit_occupation_mult = 0.3
+    }
+	
+	formation_modifier = {
+        military_formation_mobilization_speed_mult = 0.10
+        military_formation_movement_speed_mult = 0.1
+    }
+
+	unlocking_technologies = { beast_cavalry_tech }
+
+	combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_beast_cavalry.dds"
+    }
+}
+
 combat_unit_type_light_tanks = {
     group = combat_unit_group_cavalry
 
@@ -1242,6 +1388,45 @@ combat_unit_type_light_tanks = {
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/cavalry_light_tank.dds"
+    }
+}
+
+combat_unit_type_scarbeast = {
+    group = combat_unit_group_cavalry
+	
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_meat_add = 3
+        goods_input_small_arms_add = 2
+		goods_input_ammunition_add = 2
+		goods_input_artillery_add = 2
+		goods_input_nagan_cattle_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 65
+        unit_defense_add = 65
+        unit_morale_loss_add = 5
+        unit_kill_rate_add = 0.10
+        unit_morale_damage_mult = 0.20
+        unit_occupation_mult = 0.3
+		unit_advancement_speed_mult = 0.2
+    }
+	
+	formation_modifier = {
+        military_formation_mobilization_speed_mult = 0.20
+        military_formation_movement_speed_mult = 0.2
+    }
+
+	unlocking_technologies = { naga_empire_starting_boost }
+
+	combat_unit_image = {
+        texture = "WhOW_unit_naga_cavalry.dds"
     }
 }
 
@@ -1427,6 +1612,35 @@ combat_unit_type_scout_cruiser = {
     }
 }
 
+combat_unit_type_seasnake = {
+	group = combat_unit_group_light_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 1
+        goods_input_ammunition_add = 3
+        goods_input_artillery_add = 1
+        goods_input_nagan_cattle_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 60
+        unit_defense_add = 65
+        unit_morale_loss_add = 4
+		unit_convoy_defense_mult = 0.5
+		unit_convoy_raiding_mult = 0.3
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = 0.3
+    }
+
+	unlocking_technologies = { naga_empire_starting_boost }
+	
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_naga_seasnake.dds"
+    }
+}
+
 combat_unit_type_ember_steamship = {
     group = combat_unit_group_light_ship
 
@@ -1571,6 +1785,31 @@ combat_unit_type_flameclad = {
     }
 }
 
+combat_unit_type_snakeship = {
+	group = combat_unit_group_capital_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 2
+        goods_input_ammunition_add = 3
+        goods_input_artillery_add = 3
+        goods_input_nagan_cattle_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 65
+        unit_defense_add = 70
+        unit_morale_loss_add = 7
+		unit_convoy_defense_mult = 0.1
+		unit_convoy_raiding_mult = -0.25
+    }
+
+	unlocking_technologies = { snakeship_tech }
+	
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_naga_snakeship.dds"
+    }
+}
+
 combat_unit_type_dreadnought = {
     group = combat_unit_group_capital_ship
 
@@ -1596,6 +1835,31 @@ combat_unit_type_dreadnought = {
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_dreadnought.dds"
+    }
+}
+
+combat_unit_type_cobraship = {
+	group = combat_unit_group_capital_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 6
+        goods_input_ammunition_add = 3
+        goods_input_artillery_add = 3
+        goods_input_nagan_cattle_add = 8
+    }
+
+    battle_modifier = {
+        unit_offense_add = 90
+        unit_defense_add = 90
+        unit_morale_loss_add = 5
+		unit_convoy_defense_mult = 0.1
+		unit_convoy_raiding_mult = -0.1
+    }
+	unlocking_technologies = { naga_empire_starting_boost }
+	unlocking_technologies = { dreadnought }
+	
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_naga_snakeship.dds"
     }
 }
 
@@ -1714,6 +1978,35 @@ combat_unit_type_submarine = {
     }
 }
 
+combat_unit_type_snakesub = {
+    group = combat_unit_group_support_ship
+
+    upkeep_modifier = {
+        goods_input_nagan_cattle_add = 2
+		goods_input_ironclads_add = 1
+        goods_input_artillery_add = 2
+        goods_input_ammunition_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 60
+        unit_defense_add = 20
+        unit_morale_loss_add = 8
+        unit_convoy_raiding_mult = 1.0
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = 0.2
+    }
+
+	unlocking_technologies = { naga_empire_starting_boost }
+	unlocking_technologies = { submarine }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_naga_snakesubs.dds"
+    }
+}
+
 combat_unit_type_carrier = {
     group = combat_unit_group_support_ship
 
@@ -1739,6 +2032,32 @@ combat_unit_type_carrier = {
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/support_ships_carrier.dds"
+    }
+}
+
+combat_unit_type_snakecarrier = {
+    group = combat_unit_group_support_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 4
+        goods_input_ammunition_add = 8
+        goods_input_radios_add = 4
+        goods_input_aeroplanes_add = 8
+		goods_input_nagan_cattle_add = 6
+    }
+
+    battle_modifier = {
+        unit_offense_add = 120
+        unit_defense_add = 60
+        unit_morale_loss_add = 6
+		unit_convoy_defense_mult = 0.25
+    }
+
+	unlocking_technologies = { naga_empire_starting_boost }
+	unlocking_technologies = { carrier_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/WhOW_unit_naga_snakecarrier.dds"
     }
 }
 
