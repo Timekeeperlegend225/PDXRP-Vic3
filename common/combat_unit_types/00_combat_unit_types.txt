@@ -256,6 +256,39 @@ combat_unit_type_trench_infantry = {
     }
 }
 
+combat_unit_type_goldspear_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 2
+        goods_input_ammunition_add = 1
+		goods_input_iron_add = 1
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 35
+        unit_defense_add = 45
+        unit_morale_loss_add = 6
+    }
+	
+	formation_modifier = {
+        military_formation_mobilization_speed_mult = 0.05
+	}
+
+	unlocking_technologies = { goldspear_infantry_tech }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/WhOW_unit_goldspear_infantry.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+		combat_unit_type_nagavanshi_warriors
+    }
+}
+
 combat_unit_type_squad_infantry = {
     group = combat_unit_group_infantry
 
@@ -331,39 +364,6 @@ combat_unit_type_flamecaster_infantry = {
     upgrades = {
         combat_unit_type_mechanized_infantry
 		combat_unit_type_flamecaster_squadron
-    }
-}
-
-combat_unit_type_goldspear_infantry = {
-    group = combat_unit_group_infantry
-
-    upkeep_modifier = {
-        goods_input_small_arms_add = 2
-        goods_input_ammunition_add = 1
-		goods_input_iron_add = 1
-    }
-    
-    battle_modifier = {
-        unit_offense_add = 35
-        unit_defense_add = 45
-        unit_morale_loss_add = 6
-    }
-	
-	formation_modifier = {
-        military_formation_mobilization_speed_mult = 0.05
-	}
-
-	unlocking_technologies = { goldspear_infantry_tech }
-
-    combat_unit_image = {
-		# fallback
-        texture = "gfx/unit_illustrations/WhOW_unit_goldspear_infantry.dds"
-    }
-
-    upgrades = {
-        combat_unit_type_squad_infantry
-        combat_unit_type_mechanized_infantry
-		combat_unit_type_nagavanshi_warriors
     }
 }
 
@@ -524,7 +524,7 @@ combat_unit_type_nagavanshi_warriors = {
 	unlocking_technologies = { naga_empire_starting_boost }
 
     combat_unit_image = {
-        texture = "gfx/unit_illustrations/WhOW_unit_ember_infantry.dds"
+        texture = "gfx/unit_illustrations/WhOW_unit_naga_warriors.dds"
     }
 }
 
@@ -1426,7 +1426,7 @@ combat_unit_type_scarbeast = {
 	unlocking_technologies = { naga_empire_starting_boost }
 
 	combat_unit_image = {
-        texture = "WhOW_unit_naga_cavalry.dds"
+        texture = "gfx/unit_illustrations/WhOW_unit_naga_cavalry.dds"
     }
 }
 
