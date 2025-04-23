@@ -41,6 +41,10 @@ dp_open_market = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 
 	ai_acceptance_max = 100
@@ -65,7 +69,11 @@ dp_regime_change = {
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
-		}	
+		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	ai_acceptance_max = 90
@@ -89,7 +97,11 @@ dp_ban_slavery = {
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
-		}	
+		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 
 	ai_acceptance_max = 90
@@ -114,7 +126,11 @@ dp_conquer_state = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
 		}	
-		diplomatic_play_has_no_relations_blockers = yes		
+		diplomatic_play_has_no_relations_blockers = yes
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	ai_acceptance_max = 75
@@ -141,6 +157,10 @@ dp_return_state = {
 			NOT = { is_country_type = decentralized }
 		}
 		diplomatic_play_has_no_relations_blockers = yes
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	ai_acceptance_max = 90
@@ -167,6 +187,10 @@ dp_liberate_subject = {
 			NOT = { is_subject_of = root }
 		}
 		diplomatic_play_has_no_relations_blocker_with_overlord = yes
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 
 	ai_acceptance_max = 90
@@ -188,6 +212,10 @@ dp_liberate_country = {
 		aggressive_diplomatic_plays_permitted = yes
 		NOT = { is_subject_of = scope:target_country }	
 		diplomatic_play_has_no_relations_blockers = yes
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 
 	ai_acceptance_max = 90
@@ -339,6 +367,10 @@ dp_make_tributary = {
 	
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes	
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	ai_acceptance_max = 90
@@ -357,6 +389,10 @@ dp_make_dominion = {
 	
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes	
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	ai_acceptance_max = 90
@@ -374,7 +410,11 @@ dp_make_protectorate = {
 	texture = "gfx/interface/icons/war_goals/make_protectorate.dds"
 	
 	possible = {	
-		aggressive_diplomatic_plays_permitted = yes				
+		aggressive_diplomatic_plays_permitted = yes	
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}			
 	}
 	
 	ai_acceptance_max = 90
@@ -419,7 +459,11 @@ dp_transfer_subject = {
 			is_subject = yes
 			NOT = { is_subject_of = root }
 		}
-		diplomatic_play_has_no_relations_blocker_with_overlord = yes			
+		diplomatic_play_has_no_relations_blocker_with_overlord = yes
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}			
 	}
 	
 	ai_acceptance_max = 90
@@ -475,6 +519,10 @@ dp_annex_subject = {
 					country_has_primary_culture = cu:south_andean
 				}
 			}
+		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
 		}
 	}
 	
@@ -563,6 +611,10 @@ dp_revolution = {
 			has_interest_marker_in_region = scope:target_capital_region
 			has_interest_marker_in_region = scope:initiator_capital_region
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	on_weekly_pulse = {}
@@ -607,6 +659,10 @@ dp_secession = {
 			has_interest_marker_in_region = scope:secession_capital_region
 			is_home_country_for = scope:initiator
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	on_weekly_pulse = {}
@@ -641,12 +697,20 @@ dp_contain_threat = {
 			text = DIPLO_PLAY_OUTRAGED_TRIGGER
 			"scope:target_country.infamy" >= infamy_threshold:pariah
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 
 	additional_involvement_trigger = {
 		NOT = { is_country_type = decentralized }
 		country_rank >= rank_value:great_power
 		aggressive_diplomatic_plays_permitted = yes
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	ai_acceptance_max = 100
@@ -692,6 +756,10 @@ dp_taiping_rebellion = {
 			has_interest_marker_in_region = scope:target_capital_region
 			is_home_country_for = scope:target_country
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	on_weekly_pulse = {}
@@ -716,6 +784,10 @@ dp_join_power_bloc = {
 				target = scope:target_country
 			}			
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	ai_acceptance_max = 100
@@ -737,6 +809,10 @@ dp_force_nationalization = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
 		diplomatic_play_has_no_relations_blockers = yes
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	selectable_in_lens = {
@@ -763,6 +839,10 @@ dp_give_foreign_investment_rights = {
 		NOT = { is_country_type = decentralized }
 		aggressive_diplomatic_plays_permitted = yes
 		diplomatic_play_has_no_relations_blockers = yes
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	selectable_in_lens = {
@@ -932,6 +1012,10 @@ dp_unify_ethiopia = {
 				can_form_nation = ETH
 			}
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	on_weekly_pulse = {}
@@ -970,6 +1054,10 @@ dp_unify_china = {
 				global_var:chinese_central_government ?= THIS
 			}
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	on_weekly_pulse = {}
@@ -1002,6 +1090,10 @@ dp_unify_arabia = {
 				text = ARA_tt
 				can_form_nation = ARA
 			}
+		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
 		}
 	}
 	
@@ -1038,6 +1130,10 @@ dp_unify_india = {
 				can_form_nation = BHT
 			}
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	on_weekly_pulse = {}
@@ -1073,6 +1169,10 @@ dp_unify_indonesia = {
 				can_form_nation = IDN
 			}
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	on_weekly_pulse = {}
@@ -1103,6 +1203,10 @@ dp_unify_andes = {
 			text = FND_tt
 			can_form_nation = FND
 		}
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 }
 
@@ -1119,7 +1223,11 @@ dp_leadership_germany = {
 	}	
 	
 	possible = {
-		has_technology_researched = nationalism			
+		has_technology_researched = nationalism		
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}	
 	}
 	
 	on_weekly_pulse = {}
@@ -1142,7 +1250,11 @@ dp_leadership_italy = {
 	}	
 	
 	possible = {
-		has_technology_researched = nationalism			
+		has_technology_researched = nationalism	
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}		
 	}
 	
 	on_weekly_pulse = {}
@@ -1165,7 +1277,11 @@ dp_leadership_scandinavia = {
 	}	
 	
 	possible = {
-		has_technology_researched = pan-nationalism			
+		has_technology_researched = pan-nationalism	
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}		
 	}
 	
 	on_weekly_pulse = {}
@@ -1188,7 +1304,11 @@ dp_leadership_andes = {
 	}	
 	
 	possible = {
-		has_technology_researched = pan-nationalism			
+		has_technology_researched = pan-nationalism	
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}		
 	}
 }
 
@@ -1199,6 +1319,10 @@ dp_humiliation = {
 	
 	possible = {	
 		aggressive_diplomatic_plays_permitted = yes		
+		NAND = {
+			has_modifier = started_player
+			is_player = no
+		}
 	}
 	
 	on_weekly_pulse = {}
