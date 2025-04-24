@@ -10,7 +10,7 @@
 }
 
 PNR = {
-	color = { 176 224 230 }
+	color = { 0 128 128 }
 	
 	country_type = recognized
 	
