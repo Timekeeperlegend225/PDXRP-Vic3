@@ -359,7 +359,21 @@
 				1 = male_dragonborn_red_119
 				1 = male_dragonborn_red_120
 				1 = male_dragonborn_red_121
-
+				1 = male_dragonborn_yellow_133
+				1 = male_dragonborn_yellow_134
+				1 = male_dragonborn_yellow_135
+				1 = male_dragonborn_yellow_136
+				1 = male_dragonborn_yellow_137
+				1 = male_dragonborn_yellow_138
+				1 = male_dragonborn_yellow_139
+				1 = male_dragonborn_yellow_140
+				1 = male_dragonborn_yellow_141
+				1 = male_dragonborn_yellow_142
+				1 = male_dragonborn_yellow_143
+				1 = male_dragonborn_yellow_144
+				1 = male_dragonborn_yellow_145
+				1 = male_dragonborn_yellow_146
+				1 = male_dragonborn_yellow_147
 			}
 			female = {
 				1 = female_dragonborn_red_96
@@ -370,7 +384,17 @@
 				1 = female_dragonborn_red_101
 				1 = female_dragonborn_red_102
 				1 = female_dragonborn_red_103
-
+				1 = female_dragonborn_yellow_122
+				1 = female_dragonborn_yellow_123
+				1 = female_dragonborn_yellow_124
+				1 = female_dragonborn_yellow_125
+				1 = female_dragonborn_yellow_126
+				1 = female_dragonborn_yellow_127
+				1 = female_dragonborn_yellow_128
+				1 = female_dragonborn_yellow_129
+				1 = female_dragonborn_yellow_130
+				1 = female_dragonborn_yellow_131
+				1 = female_dragonborn_yellow_132
 			}
 			boy = male
 			girl = female
