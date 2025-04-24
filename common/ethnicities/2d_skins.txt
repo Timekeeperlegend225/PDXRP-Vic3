@@ -2,7 +2,7 @@
 	template = "flat_template"
 
 	base_skins = {
-		1 = { name = gene_dragon_skin range = { 0.0 1.0 } }
+		1 = { name = gene_dragonborn_red_skin = { 0.0 1.0 } }
 	}
 }
 
@@ -13,4 +13,3 @@ naga = {
 		1 = { name = gene_naga_skin range = { 0.0 1.0 } }
 	}
 }
-

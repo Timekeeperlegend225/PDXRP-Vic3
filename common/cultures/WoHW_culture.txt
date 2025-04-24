@@ -211,9 +211,9 @@ dragokins ={
 		Merwummu
 	}
 	ethnicities = {
-		1 = dragon
+		1 = caucasian
 	}
-	graphics = east_asian
+	graphics = european
 }
 
 jungle_naga={

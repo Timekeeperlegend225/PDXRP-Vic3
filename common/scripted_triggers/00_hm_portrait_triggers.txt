@@ -1,0 +1,27 @@
+﻿no_portrait_trigger = {
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = {
+					OR = {
+						has_discrimination_trait = draconic
+						has_discrimination_trait = naga
+					}
+				}
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = {
+					OR = {
+						has_discrimination_trait = draconic
+						has_discrimination_trait = naga
+					}
+					
+				}
+			}
+		}
+	}
+}
