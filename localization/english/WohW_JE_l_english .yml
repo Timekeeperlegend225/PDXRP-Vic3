@@ -1,0 +1,28 @@
+﻿l_english:
+  je_WhOW_tech_EMB_pro_progress_bar: "Emberian Production Tech Progress"
+  je_WhOW_tech_EMB_pro_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+  je_WhOW_tech_EMB_mil_progress_bar: "Emberian Military Tech Progress"
+  je_WhOW_tech_EMB_mil_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+  je_WhOW_tech_EMB_soc_progress_bar: "Emberian Society Tech Progress"
+  je_WhOW_tech_EMB_soc_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+
+  je_WhOW_tech_PNR_pro_progress_bar: "Nagan Production Tech Progress"
+  je_WhOW_tech_PNR_pro_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+  je_WhOW_tech_PNR_mil_progress_bar: "Nagan Military Tech Progress"
+  je_WhOW_tech_PNR_mil_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+  je_WhOW_tech_PNR_soc_progress_bar: "Nagan Society Tech Progress"
+  je_WhOW_tech_PNR_soc_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+
+  je_WhOW_tech_ALA_pro_progress_bar: "Alarian Production Tech Progress"
+  je_WhOW_tech_ALA_pro_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+  je_WhOW_tech_ALA_mil_progress_bar: "Alarian Military Tech Progress"
+  je_WhOW_tech_ALA_mil_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+  je_WhOW_tech_ALA_soc_progress_bar: "Alarian Society Tech Progress"
+  je_WhOW_tech_ALA_soc_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+
+  je_WhOW_tech_ELD_pro_progress_bar: "Eldar Production Tech Progress"
+  je_WhOW_tech_ELD_pro_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+  je_WhOW_tech_ELD_mil_progress_bar: "Eldar Military Tech Progress"
+  je_WhOW_tech_ELD_mil_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
+  je_WhOW_tech_ELD_soc_progress_bar: "Eldar Society Tech Progress"
+  je_WhOW_tech_ELD_soc_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000)"
