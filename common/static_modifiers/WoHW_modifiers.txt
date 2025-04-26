@@ -1,3 +1,69 @@
 subterranean_mod = {
+	icon = gfx/interface/icons/invention_icons/subterranean.dds
+}
+
+studying_all_OPM = {
+	icon = gfx/interface/icons/invention_icons/subterranean.dds
+}
+
+EMB_studies = {
+	icon = gfx/interface/icons/invention_icons/dracaryan_studies.dds
+}
+PNR_studies = {
+	icon = gfx/interface/icons/invention_icons/nagan_studies.dds
+}
+ALA_studies = {
+	icon = gfx/interface/icons/timed_modifier_icons/memorite_manipulation.dds
+}
+ELD_studies = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
+VAM_studies = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
+
+focus_on_studying_EMB = {
+	icon = gfx/interface/icons/invention_icons/dracaryan_studies.dds
+}
+focus_on_studying_PNR = {
+	icon = gfx/interface/icons/invention_icons/nagan_studies.dds
+}
+focus_on_studying_ALA = {
+	icon = gfx/interface/icons/timed_modifier_icons/memorite_manipulation.dds
+}
+focus_on_studying_ELD = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
+focus_on_studying_VAM = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
+
+EMB_focus_prod = {
+	icon = gfx/interface/icons/invention_icons/dracaryan_studies.dds
+}
+EMB_focus_mil = {
+	icon = gfx/interface/icons/invention_icons/dracaryan_studies.dds
+}
+EMB_focus_soc = {
+	icon = gfx/interface/icons/invention_icons/dracaryan_studies.dds
+}
+
+PNR_focus_prod = {
+	icon = gfx/interface/icons/invention_icons/nagan_studies.dds
+}
+PNR_focus_mil = {
+	icon = gfx/interface/icons/invention_icons/nagan_studies.dds
+}
+PNR_focus_soc = {
+	icon = gfx/interface/icons/invention_icons/nagan_studies.dds
+}
+
+ALA_focus_prod = {
+	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
+}
+ALA_focus_mil = {
+	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
+}
+ALA_focus_soc = {
+	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
 }
