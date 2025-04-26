@@ -1,9 +1,7 @@
 ﻿pm_nagan_cattle_breeding = {
 	texture = "gfx/interface/icons/production_method_icons/nagan_cattle.dds"
 	is_hidden_when_unavailable = yes
-	unlocking_technologies = {
-		naga_empire_starting_boost
-	}
+	unlocking_identity = PNR_Empire
 
 	building_modifiers = {
 		workforce_scaled = {
