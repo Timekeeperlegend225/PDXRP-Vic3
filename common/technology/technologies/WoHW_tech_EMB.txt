@@ -30,6 +30,7 @@ dracaryan_studies = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/dracaryan_studies.dds"
 	category = military
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -42,10 +43,7 @@ volcanic_mining = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/volcanic_mining.dds"
 	category = production
-	
-	unlocking_technologies = {
-		dracaryan_studies
-	}
+	can_research = no
 	
 	modifier = {
 		building_coal_mine_throughput_add = 0.25
@@ -61,10 +59,7 @@ flameclad_tech = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/flameclad_tech.dds"
 	category = military
-	
-	unlocking_technologies = {
-		dracaryan_studies
-	}
+	can_research = no
 	
 	modifier = {
 		interest_group_ig_armed_forces_pol_str_mult = 0.10
@@ -79,10 +74,7 @@ efficient_authority = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/efficient_authority.dds"
 	category = society
-	
-	unlocking_technologies = {
-		dracaryan_studies
-	}
+	can_research = no
 	
 	modifier = {
 		country_authority_mult = 0.10
@@ -100,10 +92,7 @@ flamecaster_tech = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/flamecaster_tech.dds"
 	category = production
-	
-	unlocking_technologies = {
-		volcanic_mining
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -114,10 +103,7 @@ ember_hellcanon_tech = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/ember_hellcanon_tech.dds"
 	category = military
-	
-	unlocking_technologies = {
-		flameclad_tech
-	}
+	can_research = no
 	
 	modifier = {
 		interest_group_ig_armed_forces_pol_str_mult = 0.10
@@ -133,10 +119,7 @@ dragon_baby = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/dragon_baby.dds"
 	category = society
-	
-	unlocking_technologies = {
-		efficient_authority
-	}
+	can_research = no
 	
 	modifier = {
 		country_authority_mult = 0.10
@@ -154,10 +137,7 @@ industrial_flamecaster = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/industrial_flamecaster.dds"
 	category = production
-	
-	unlocking_technologies = {
-		flamecaster_tech
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -168,10 +148,7 @@ flamecaster_infantry_tech = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/flamecaster_infantry_tech.dds"
 	category = military
-	
-	unlocking_technologies = {
-		ember_hellcanon_tech
-	}
+	can_research = no
 	
 	modifier = {
 		interest_group_ig_armed_forces_pol_str_mult = 0.10
@@ -187,10 +164,7 @@ more_work = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/more_work.dds"
 	category = society
-	
-	unlocking_technologies = {
-		dragon_baby
-	}
+	can_research = no
 	
 	modifier = {
 		country_authority_mult = 0.10
@@ -209,10 +183,7 @@ flamecaster_production = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/flamecaster_production.dds"
 	category = production
-	
-	unlocking_technologies = {
-		industrial_flamecaster
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -223,10 +194,7 @@ emberian_conscription_tech = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/emberian_conscription_tech.dds"
 	category = military
-	
-	unlocking_technologies = {
-		flamecaster_infantry_tech
-	}
+	can_research = no
 	
 	modifier = {
 		interest_group_ig_armed_forces_pol_str_mult = 0.20
@@ -242,10 +210,7 @@ militarized_education_tech = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/militarized_education_tech.dds"
 	category = society
-	
-	unlocking_technologies = {
-		more_work
-	}
+	can_research = no
 	
 	modifier = {
 		country_authority_mult = 0.20

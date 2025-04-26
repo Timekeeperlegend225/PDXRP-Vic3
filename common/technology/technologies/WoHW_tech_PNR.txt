@@ -37,6 +37,7 @@ nagan_studies = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/nagan_studies.dds"
 	category = production
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -49,10 +50,7 @@ rural_society = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/rural_society.dds"
 	category = production
-	
-	unlocking_technologies = {
-		nagan_studies
-	}
+	can_research = no
 	
 	modifier = {
 		building_group_bg_agriculture_throughput_add = 0.10
@@ -69,10 +67,7 @@ snakeship_tech = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/snakeship_tech.dds"
 	category = military
-	
-	unlocking_technologies = {
-		nagan_studies
-	}
+	can_research = no
 	
 	modifier = {
 		unit_navy_offense_mult = 0.10
@@ -89,10 +84,7 @@ religious_bureaucracy = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/religious_bureaucracy.dds"
 	category = society
-	
-	unlocking_technologies = {
-		nagan_studies
-	}
+	can_research = no
 	
 	modifier = {	
 		country_authority_mult = 0.1
@@ -112,10 +104,7 @@ nagan_cattle_tech = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/nagan_cattle_tech.dds"
 	category = production
-	
-	unlocking_technologies = {
-		rural_society
-	}
+	can_research = no
 	
 	modifier = {
 		state_pollution_reduction_health_mult = -0.15
@@ -130,10 +119,7 @@ beast_cavalry_tech = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/beast_cavalry_tech.dds"
 	category = military
-	
-	unlocking_technologies = {
-		snakeship_tech
-	}
+	can_research = no
 	
 	modifier = {
 		military_formation_mobilization_speed_mult = 0.1
@@ -150,10 +136,7 @@ forced_conversion = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/forced_conversion.dds"
 	category = society
-	
-	unlocking_technologies = {
-		religious_bureaucracy
-	}
+	can_research = no
 	
 	modifier = {
 		country_authority_mult = 0.1
@@ -175,10 +158,7 @@ nagan_cattle_fertilizer = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/nagan_cattle_fertilizer.dds"
 	category = production
-	
-	unlocking_technologies = {
-		nagan_cattle_tech
-	}
+	can_research = no
 	
 	modifier = {
       state_food_security_add = 0.2
@@ -197,10 +177,7 @@ goldspear_infantry_tech = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/goldspear_infantry_tech.dds"
 	category = military
-	
-	unlocking_technologies = {
-		beast_cavalry_tech
-	}
+	can_research = no
 	
 	modifier = {
 		unit_morale_damage_mult = 0.1
@@ -216,10 +193,7 @@ chakravadach_enlightmen = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/chakravadach_enlightmen.dds"
 	category = society
-	
-	unlocking_technologies = {
-		forced_conversion
-	}
+	can_research = no
 	
 	modifier = {
 		country_authority_mult = 0.1
@@ -238,10 +212,7 @@ nagan_cattle_breeding = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/nagan_cattle_breeding.dds"
 	category = production
-	
-	unlocking_technologies = {
-		nagan_cattle_fertilizer
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -252,10 +223,7 @@ guerilla_warfare = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/guerilla_warfare.dds"
 	category = military
-	
-	unlocking_technologies = {
-		goldspear_infantry_tech
-	}
+	can_research = no
 	
 	modifier = {
 		unit_army_defense_mult = 0.1
@@ -274,10 +242,7 @@ baby_and_work = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/baby_and_work.dds"
 	category = society
-	
-	unlocking_technologies = {
-		chakravadach_enlightmen
-	}
+	can_research = no
 	
 	modifier = {
 		country_authority_mult = 0.2

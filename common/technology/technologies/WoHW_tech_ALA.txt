@@ -7,7 +7,8 @@ alarian_empire_starting_boost = {
 	can_research = no
 	
 	modifier = {
-	state_colony_growth_creation_factor = 2
+	state_colony_growth_creation_factor = 5
+	state_colony_growth_speed_mult = 2
 	}
 	
 	ai_weight = {
@@ -23,6 +24,7 @@ memorite_manipulation = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/memorite_manipulation.dds"
 	category = production
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -35,10 +37,7 @@ energy_focalisation = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/energy_focalisation.dds"
 	category = production
-	
-	unlocking_technologies = {
-		memorite_manipulation
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -49,10 +48,7 @@ basic_levitation = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/basic_levitation.dds"
 	category = military
-	
-	unlocking_technologies = {
-		memorite_manipulation
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -63,10 +59,7 @@ purification = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/purification.dds"
 	category = society
-	
-	unlocking_technologies = {
-		memorite_manipulation
-	}
+	can_research = no
 	
 	modifier = {	
 		state_pollution_reduction_health_mult = -0.10
@@ -86,10 +79,7 @@ memorite_treatment = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/memorite_treatment.dds"
 	category = production
-	
-	unlocking_technologies = {
-		energy_focalisation
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -100,10 +90,7 @@ flying_machine = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/flying_machine.dds"
 	category = military
-	
-	unlocking_technologies = {
-		basic_levitation
-	}
+	can_research = no
 	
 	modifier = {
 		state_building_airport_max_level_add = 2
@@ -118,10 +105,7 @@ miracle_healing = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/purification.dds"
 	category = society
-	
-	unlocking_technologies = {
-		purification
-	}
+	can_research = no
 	
 	modifier = {	
 		country_institution_health_system_max_investment_add = 2
@@ -139,10 +123,7 @@ memoritic_reaction = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/memoritic_reaction.dds"
 	category = production
-	
-	unlocking_technologies = {
-		memorite_treatment
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -153,10 +134,7 @@ floating_warfare = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/floating_warfare.dds"
 	category = military
-	
-	unlocking_technologies = {
-		flying_machine
-	}
+	can_research = no
 	
 	modifier = {
 		country_ignores_landing_craft_penalty_bool = yes
@@ -172,10 +150,7 @@ holy_light = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/holy_light.dds"
 	category = society
-	
-	unlocking_technologies = {
-		miracle_healing
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -188,10 +163,7 @@ connectic = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/connectic.dds"
 	category = production
-	
-	unlocking_technologies = {
-		memoritic_reaction
-	}
+	can_research = no
 	
 	ai_weight = {
 		value = 0
@@ -202,10 +174,7 @@ heavy_floating_vessel = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/heavy_floating_vessel.dds"
 	category = military
-	
-	unlocking_technologies = {
-		floating_warfare
-	}
+	can_research = no
 	
 	modifier = {
 		state_building_airport_max_level_add = 2
@@ -220,10 +189,7 @@ ascension = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/ascension.dds"
 	category = society
-	
-	unlocking_technologies = {
-		holy_light
-	}
+	can_research = no
 	
 	modifier = {	
 		state_mortality_mult = -0.10	
