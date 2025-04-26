@@ -84,8 +84,8 @@ building_hole_ELD = {
 	}
 	
 	potential = {
-		owner = c:ALA
-		state_region = s:STATE_KENYA
+		owner = c:ELD
+		state_region = s:STATE_AMAZONAS
 	}
 	ai_value = 0 # Construction sector should generally be preferred over other equal-priority spending items
 
@@ -93,24 +93,38 @@ building_hole_ELD = {
 }
 
 building_memorite_extraction = {
-	building_group = bg_construction
+	building_group = bg_mine
 	icon = "gfx/interface/icons/building_icons/hole_ala.dds"
 	city_type = none
 	levels_per_mesh = 5
 	
 	required_construction = construction_cost_medium
 	unlocking_technologies = {
-		urbanization
+		memorite_treatment
 	}
 	production_method_groups = {
-		pmg_wohw_hole_ala
+		pmg_memorite_extraction
 	}
-	
-	potential = {
-		owner = c:ALA
-		state_region = s:STATE_KENYA
-	}
-	ai_value = 0 # Construction sector should generally be preferred over other equal-priority spending items
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_airport = {
+	building_group = bg_public_infrastructure
+	city_type = port
+	icon = "gfx/interface/icons/building_icons/building_port.dds"
+
+	has_max_level = yes
+	ignore_stateregion_max_level = yes
+	port = yes
+
+	unlocking_technologies = { flying_machine }
+
+	production_method_groups = {
+		pmg_base_building_airport
+	}
+
+	required_construction = construction_cost_medium
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
