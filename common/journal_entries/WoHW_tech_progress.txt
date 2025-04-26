@@ -1,5 +1,5 @@
 ﻿je_WhOW_tech_EMB = {
-	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+	icon = "gfx/interface/icons/invention_icons/dracaryan_studies.dds"
 
 	group = je_group_historical_content
 
@@ -54,7 +54,7 @@
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_EMB_pro_progress_bar
-                            value = -2000
+                            value = -1000
                         }
                     }
 				}
@@ -75,7 +75,7 @@
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_EMB_pro_progress_bar
-                            value = -500
+                            value = -1000
                         }
                     }
 				}
@@ -83,7 +83,7 @@
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_milgress(je_WhOW_tech_EMB_mil_milgress_bar)" >= 1000
+						"scripted_bar_progress(je_WhOW_tech_EMB_mil_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -98,9 +98,9 @@
 					}
                     add_technology_researched = flamecaster_infantry_tech
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_EMB_mil_milgress_bar
-                            value = -2000
+                        add_progress = {
+                            name = je_WhOW_tech_EMB_mil_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -110,8 +110,8 @@
 					}
                     add_technology_researched = ember_hellcanon_tech
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_EMB_mil_milgress_bar
+                        add_progress = {
+                            name = je_WhOW_tech_EMB_mil_progress_bar
                             value = -1000
                         }
                     }
@@ -119,9 +119,9 @@
 				else = {
                     add_technology_researched = flameclad_tech
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_EMB_mil_milgress_bar
-                            value = -500
+                        add_progress = {
+                            name = je_WhOW_tech_EMB_mil_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -129,7 +129,7 @@
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_socgress(je_WhOW_tech_EMB_soc_socgress_bar)" >= 1000
+						"scripted_bar_progress(je_WhOW_tech_EMB_soc_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -144,9 +144,9 @@
 					}
                     add_technology_researched = more_work
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_EMB_soc_socgress_bar
-                            value = -2000
+                        add_progress = {
+                            name = je_WhOW_tech_EMB_soc_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -156,8 +156,8 @@
 					}
                     add_technology_researched = dragon_baby
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_EMB_soc_socgress_bar
+                        add_progress = {
+                            name = je_WhOW_tech_EMB_soc_progress_bar
                             value = -1000
                         }
                     }
@@ -165,9 +165,9 @@
 				else = {
                     add_technology_researched = efficient_authority
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_EMB_soc_socgress_bar
-                            value = -500
+                        add_progress = {
+                            name = je_WhOW_tech_EMB_soc_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -178,7 +178,7 @@
 }
 
 je_WhOW_tech_PNR = {
-	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+	icon = "gfx/interface/icons/invention_icons/nagan_studies.dds"
 
 	group = je_group_historical_content
 
@@ -233,7 +233,7 @@ je_WhOW_tech_PNR = {
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_PNR_pro_progress_bar
-                            value = -2000
+                            value = -1000
                         }
                     }
 				}
@@ -254,7 +254,7 @@ je_WhOW_tech_PNR = {
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_PNR_pro_progress_bar
-                            value = -500
+                            value = -1000
                         }
                     }
 				}
@@ -262,7 +262,7 @@ je_WhOW_tech_PNR = {
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_milgress(je_WhOW_tech_PNR_mil_milgress_bar)" >= 1000
+						"scripted_bar_progress(je_WhOW_tech_PNR_mil_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -277,9 +277,9 @@ je_WhOW_tech_PNR = {
 					}
                     add_technology_researched = goldspear_infantry_tech
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_PNR_mil_milgress_bar
-                            value = -2000
+                        add_progress = {
+                            name = je_WhOW_tech_PNR_mil_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -289,8 +289,8 @@ je_WhOW_tech_PNR = {
 					}
                     add_technology_researched = beast_cavalry_tech
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_PNR_mil_milgress_bar
+                        add_progress = {
+                            name = je_WhOW_tech_PNR_mil_progress_bar
                             value = -1000
                         }
                     }
@@ -298,9 +298,9 @@ je_WhOW_tech_PNR = {
 				else = {
                     add_technology_researched = snakeship_tech
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_PNR_mil_milgress_bar
-                            value = -500
+                        add_progress = {
+                            name = je_WhOW_tech_PNR_mil_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -308,7 +308,7 @@ je_WhOW_tech_PNR = {
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_socgress(je_WhOW_tech_PNR_soc_socgress_bar)" >= 1000
+						"scripted_bar_progress(je_WhOW_tech_PNR_soc_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -323,9 +323,9 @@ je_WhOW_tech_PNR = {
 					}
                     add_technology_researched = chakravadach_enlightmen
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_PNR_soc_socgress_bar
-                            value = -2000
+                        add_progress = {
+                            name = je_WhOW_tech_PNR_soc_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -335,8 +335,8 @@ je_WhOW_tech_PNR = {
 					}
                     add_technology_researched = forced_conversion
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_PNR_soc_socgress_bar
+                        add_progress = {
+                            name = je_WhOW_tech_PNR_soc_progress_bar
                             value = -1000
                         }
                     }
@@ -344,9 +344,9 @@ je_WhOW_tech_PNR = {
 				else = {
                     add_technology_researched = religious_bureaucracy 
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_PNR_soc_socgress_bar
-                            value = -500
+                        add_progress = {
+                            name = je_WhOW_tech_PNR_soc_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -357,7 +357,7 @@ je_WhOW_tech_PNR = {
 }
 
 je_WhOW_tech_ALA = {
-	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+	icon = "gfx/interface/icons/invention_icons/memorite_manipulation.dds"
 
 	group = je_group_historical_content
 
@@ -412,7 +412,7 @@ je_WhOW_tech_ALA = {
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_ALA_pro_progress_bar
-                            value = -2000
+                            value = -1000
                         }
                     }
 				}
@@ -433,7 +433,7 @@ je_WhOW_tech_ALA = {
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_ALA_pro_progress_bar
-                            value = -500
+                            value = -1000
                         }
                     }
 				}
@@ -441,7 +441,7 @@ je_WhOW_tech_ALA = {
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_milgress(je_WhOW_tech_ALA_mil_milgress_bar)" >= 1000
+						"scripted_bar_progress(je_WhOW_tech_ALA_mil_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -456,9 +456,9 @@ je_WhOW_tech_ALA = {
 					}
                     add_technology_researched = floating_warfare
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_ALA_mil_milgress_bar
-                            value = -2000
+                        add_progress = {
+                            name = je_WhOW_tech_ALA_mil_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -468,8 +468,8 @@ je_WhOW_tech_ALA = {
 					}
                     add_technology_researched = flying_machine
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_ALA_mil_milgress_bar
+                        add_progress = {
+                            name = je_WhOW_tech_ALA_mil_progress_bar
                             value = -1000
                         }
                     }
@@ -477,9 +477,9 @@ je_WhOW_tech_ALA = {
 				else = {
                     add_technology_researched = basic_levitation
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_ALA_mil_milgress_bar
-                            value = -500
+                        add_progress = {
+                            name = je_WhOW_tech_ALA_mil_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -487,7 +487,7 @@ je_WhOW_tech_ALA = {
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_socgress(je_WhOW_tech_ALA_soc_socgress_bar)" >= 1000
+						"scripted_bar_progress(je_WhOW_tech_ALA_soc_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -502,9 +502,9 @@ je_WhOW_tech_ALA = {
 					}
                     add_technology_researched = holy_light
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_ALA_soc_socgress_bar
-                            value = -2000
+                        add_progress = {
+                            name = je_WhOW_tech_ALA_soc_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -514,8 +514,8 @@ je_WhOW_tech_ALA = {
 					}
                     add_technology_researched = miracle_healing
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_ALA_soc_socgress_bar
+                        add_progress = {
+                            name = je_WhOW_tech_ALA_soc_progress_bar
                             value = -1000
                         }
                     }
@@ -523,9 +523,9 @@ je_WhOW_tech_ALA = {
 				else = {
                     add_technology_researched = purification
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_ALA_soc_socgress_bar
-                            value = -500
+                        add_progress = {
+                            name = je_WhOW_tech_ALA_soc_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -536,7 +536,7 @@ je_WhOW_tech_ALA = {
 }
 
 je_WhOW_tech_ELD = {
-	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+	icon = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 
 	group = je_group_historical_content
 
@@ -591,7 +591,7 @@ je_WhOW_tech_ELD = {
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_ELD_pro_progress_bar
-                            value = -2000
+                            value = -1000
                         }
                     }
 				}
@@ -612,7 +612,7 @@ je_WhOW_tech_ELD = {
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_ELD_pro_progress_bar
-                            value = -500
+                            value = -1000
                         }
                     }
 				}
@@ -620,7 +620,7 @@ je_WhOW_tech_ELD = {
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_milgress(je_WhOW_tech_ELD_mil_milgress_bar)" >= 1000
+						"scripted_bar_progress(je_WhOW_tech_ELD_mil_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -635,9 +635,9 @@ je_WhOW_tech_ELD = {
 					}
                     add_technology_researched = efficient_logistics
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_ELD_mil_milgress_bar
-                            value = -2000
+                        add_progress = {
+                            name = je_WhOW_tech_ELD_mil_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -647,8 +647,8 @@ je_WhOW_tech_ELD = {
 					}
                     add_technology_researched = precision_archery
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_ELD_mil_milgress_bar
+                        add_progress = {
+                            name = je_WhOW_tech_ELD_mil_progress_bar
                             value = -1000
                         }
                     }
@@ -656,9 +656,9 @@ je_WhOW_tech_ELD = {
 				else = {
                     add_technology_researched = elven_first_aid
                     scope:journal_entry = {
-                        add_milgress = {
-                            name = je_WhOW_tech_ELD_mil_milgress_bar
-                            value = -500
+                        add_progress = {
+                            name = je_WhOW_tech_ELD_mil_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -666,7 +666,7 @@ je_WhOW_tech_ELD = {
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_socgress(je_WhOW_tech_ELD_soc_socgress_bar)" >= 1000
+						"scripted_bar_progress(je_WhOW_tech_ELD_soc_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -681,9 +681,9 @@ je_WhOW_tech_ELD = {
 					}
                     add_technology_researched = naturalism_tech
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_ELD_soc_socgress_bar
-                            value = -2000
+                        add_progress = {
+                            name = je_WhOW_tech_ELD_soc_progress_bar
+                            value = -1000
                         }
                     }
 				}
@@ -693,8 +693,8 @@ je_WhOW_tech_ELD = {
 					}
                     add_technology_researched = plantiri_tech
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_ELD_soc_socgress_bar
+                        add_progress = {
+                            name = je_WhOW_tech_ELD_soc_progress_bar
                             value = -1000
                         }
                     }
@@ -702,9 +702,9 @@ je_WhOW_tech_ELD = {
 				else = {
                     add_technology_researched = elven_aura
                     scope:journal_entry = {
-                        add_socgress = {
-                            name = je_WhOW_tech_ELD_soc_socgress_bar
-                            value = -500
+                        add_progress = {
+                            name = je_WhOW_tech_ELD_soc_progress_bar
+                            value = -1000
                         }
                     }
 				}
