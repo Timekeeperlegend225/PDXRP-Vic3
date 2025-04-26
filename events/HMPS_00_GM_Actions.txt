@@ -8483,6 +8483,15 @@ gm_actions.100 = {
 			popup = yes
 		}
 	}
+	
+	option = {
+		name = gm_actions.110.t
+		trigger_event = {
+			id = gm_actions.110
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 gm_actions.101 = {
