@@ -1,0 +1,110 @@
+﻿je_WhOW_tech_EMB = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		NOT = { has_technology_researched = subterranean_mod }
+	}
+
+	possible = {
+		has_technology_researched = dracaryan_studies
+	}
+
+	immediate = {
+		set_variable = {
+			name = je_WhOW_tech_EMB_pro_cost
+			value = 500
+		}
+		set_variable = {
+			name = je_WhOW_tech_EMB_mil_cost
+			value = 500
+		}
+		set_variable = {
+			name = je_WhOW_tech_EMB_soc_cost
+			value = 500
+		}
+	}
+
+	scripted_progress_bar = je_WhOW_tech_EMB_pro_progress_bar
+	scripted_progress_bar = je_WhOW_tech_EMB_mil_progress_bar
+	scripted_progress_bar = je_WhOW_tech_EMB_soc_progress_bar
+
+	complete = {
+	}
+
+	scripted_button = je_WhOW_tech_EMB_focus
+	scripted_button = je_WhOW_tech_EMB_pro
+	scripted_button = je_WhOW_tech_EMB_mil
+	scripted_button = je_WhOW_tech_EMB_soc
+
+	status_desc = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			je_WhOW_tech_EMB_pro_progress = yes 
+			je_WhOW_tech_EMB_mil_progress = yes
+			je_WhOW_tech_EMB_soc_progress = yes
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_progress(je_WhOW_tech_EMB_pro_progress_bar)" >= je_WhOW_tech_EMB_pro_cost
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = industrial_flamecaster
+					}
+                    add_technology_researched = flamecaster_production
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = flamecaster_tech
+					}
+                    add_technology_researched = industrial_flamecaster
+					set_variable = {
+						name = je_WhOW_tech_EMB_pro_cost
+						value = 4000
+					}
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_EMB_pro_progress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = volcanic_mining
+					}
+                    add_technology_researched = flamecaster_tech
+					set_variable = {
+						name = je_WhOW_tech_EMB_pro_cost
+						value = 2000
+					}
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_EMB_pro_progress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = volcanic_mining
+					set_variable = {
+						name = je_WhOW_tech_EMB_pro_cost
+						value = 1000
+					}
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_EMB_pro_progress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+		}
+	}
+	should_be_pinned_by_default = yes
+}
