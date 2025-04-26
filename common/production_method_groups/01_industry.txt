@@ -155,6 +155,9 @@ pmg_base_building_paper_mills = {
 		pm_pulp_pressing
 		pm_sulfite_pulping
 		pm_bleached_paper
+		pm_lasse_pulp_pressing
+		pm_lasse_sulfite_pulping
+		pm_lasse_bleached_paper
 	}
 }
 
@@ -192,6 +195,7 @@ pmg_synthetic_dyes = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_dye_production
+		pm_cattle_building_synthetics_plant
 	}
 }
 
@@ -210,6 +214,10 @@ pmg_steelmaking_process = {
 		pm_bessemer_process
 		pm_open_hearth_process
 		pm_electric_arc_process
+		pm_lasse_blister_steel_process
+		pm_lasse_bessemer_process
+		pm_lasse_open_hearth_process
+		pm_lasse_electric_arc_process
 	}
 }
 

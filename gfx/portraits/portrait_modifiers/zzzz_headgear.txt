@@ -1,0 +1,33 @@
+﻿headgear = {
+	usage = game
+	selection_behavior = weighted_random
+	fallback = no_headgear
+
+    no_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 96000
+                OR = {
+                    scope:character ?= {
+                        OR = {
+                            has_role = agitator
+                            
+                        }
+                        is_historical = yes
+                    }
+                    no_portrait_trigger = yes
+                }
+
+            }
+        }
+    }
+}

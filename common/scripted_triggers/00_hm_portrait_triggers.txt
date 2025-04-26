@@ -25,3 +25,44 @@
 		}
 	}
 }
+
+native_american_clothes_trigger = {
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = cu:tuvan
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = cu:tuvan
+			}
+		}
+	}
+}
+
+siamese_clothes_trigger = { #Pretty sure this is actual burmese
+	exists = scope:pop
+	scope:pop = {
+		culture = cu:nagavanshi
+	}
+}
+
+jewish_clothes_pop_trigger = {
+	OR = {
+		AND = {
+			exists = scope:character
+			scope:character = {
+				culture = cu:alarian
+			}
+		}
+		AND = {
+			exists = scope:pop
+			scope:pop = {
+				culture = cu:alarian
+			}
+		}
+	}
+}

@@ -12,6 +12,7 @@ pmg_train_automation_building_coffee_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }
 
@@ -29,6 +30,7 @@ pmg_train_automation_building_cotton_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }
 
@@ -46,6 +48,7 @@ pmg_train_automation_building_dye_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }
 
@@ -63,6 +66,7 @@ pmg_train_automation_building_opium_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }
 
@@ -80,6 +84,7 @@ pmg_train_automation_building_tea_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }
 
@@ -97,6 +102,7 @@ pmg_train_automation_building_tobacco_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }
 
@@ -114,6 +120,7 @@ pmg_train_automation_building_sugar_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }
 
@@ -131,6 +138,7 @@ pmg_train_automation_building_banana_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }
 
@@ -148,6 +156,7 @@ pmg_train_automation_building_silk_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }
 
@@ -165,5 +174,6 @@ pmg_train_automation_building_vineyard_plantation = {
 		pm_road_carts
 		pm_steam_rail_transport
 		pm_cattle_plantations
+		pm_lasse_plantations
 	}
 }

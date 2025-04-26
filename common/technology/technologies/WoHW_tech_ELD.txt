@@ -14,6 +14,8 @@ eldar_empire_starting_boost = {
 		building_throughput_add = 0.40
 		state_construction_mult = 0.30
 		state_infrastructure_mult = 0.30
+		state_mortality_mult = -0.25
+		character_health_add = 0.5
 	}
 	
 	ai_weight = {
@@ -45,8 +47,7 @@ forest_harmony = {
 	}
 	
 	modifier = {
-		building_coal_mine_throughput_add = 0.25
-		building_sulfur_mine_throughput_add = 0.25
+		building_logging_camp_throughput_add = 0.2
 	}
 	
 	ai_weight = {
@@ -64,7 +65,9 @@ elven_first_aid = {
 	}
 	
 	modifier = {
-		interest_group_ig_armed_forces_pol_str_mult = 0.10
+		unit_recovery_rate_add = 0.1
+		battle_casualties_mult = -0.1
+		state_mortality_mult = -0.025
 	}
 	
 	ai_weight = {
@@ -82,8 +85,9 @@ elven_aura = {
 	}
 	
 	modifier = {
-		country_authority_mult = 0.10
+		country_authority_mult = 0.15
 		state_bureaucracy_population_base_cost_factor_mult = -0.10
+		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.10
 	}
 	
 	ai_weight = {
@@ -102,6 +106,10 @@ natural_culture = {
 		forest_harmony
 	}
 	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.20
+		building_group_bg_agriculture_standard_of_living_add = 0.5
+	
 	ai_weight = {
 		value = 0
 	}
@@ -117,8 +125,8 @@ precision_archery = {
 	}
 	
 	modifier = {
-		interest_group_ig_armed_forces_pol_str_mult = 0.10
-		unit_devastation_mult = 0.25
+		unit_kill_rate_add = 0.1
+		unit_devastation_mult = -0.2
 	}
 	
 	ai_weight = {
@@ -133,6 +141,12 @@ plantiri_tech = {
 	
 	unlocking_technologies = {
 		elven_aura
+	}
+	
+	modifier = {
+		country_legitimacy_headofstate_add = 10
+		country_loyalists_from_legitimacy_mult = 0.05
+		state_loyalists_from_political_movements_mult = 0.15
 	}
 	
 	ai_weight = {
@@ -151,6 +165,9 @@ alchemy = {
 		natural_culture
 	}
 	
+	modifier = {
+		
+	
 	ai_weight = {
 		value = 0
 	}
@@ -164,9 +181,10 @@ efficient_logistics = {
 	unlocking_technologies = {
 		precision_archery
 	}
-	
+		
 	modifier = {
-		country_military_goods_cost_mult = -0.20
+		country_military_goods_cost_mult = -0.2
+		unit_supply_consumption_mult = -0.1
 	}
 	
 	ai_weight = {
@@ -185,8 +203,10 @@ naturalism_tech = {
 	
 	modifier = {
 		country_authority_mult = 0.10
-		state_expected_sol_from_literacy = -3
-		state_working_adult_ratio_add = 0.05
+		state_pollution_generation_add = -10
+		state_pollution_reduction_health_mult = -0.2
+		country_migration_restrictiveness_add = -5
+		state_migration_pull_mult = 0.3
 	}
 	
 	ai_weight = {
@@ -220,8 +240,8 @@ elven_healing = {
 	}
 	
 	modifier = {
-		interest_group_ig_armed_forces_pol_str_mult = 0.20
-		state_building_naval_base_max_level_add = 20
+		unit_recovery_rate_add = 0.2
+		battle_casualties_mult = -0.1
 	}
 	
 	ai_weight = {
@@ -239,7 +259,11 @@ divion_of_labour_tech = {
 	}
 	
 	modifier = {
-		country_authority_mult = 0.20
+		country_authority_mult = -0.1
+		state_working_adult_ratio_add = 0.20
+		state_birth_rate_mult = -0.05
+		state_dependent_political_participation_add = 0.33
+	}
 	}
 	
 	ai_weight = {

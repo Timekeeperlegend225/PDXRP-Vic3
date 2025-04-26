@@ -1,0 +1,52 @@
+﻿accessories = {
+	usage = game
+	selection_behavior = weighted_random
+	#fallback = no_headgear
+
+    #no_acessories = {
+    #    dna_modifiers = {
+    #        accessory = {
+    #            mode = add
+    #            gene = 
+    #            template = no_headgear
+    #            range = { 0 1 } # For the randomness to work correctly
+    #        }
+    #    }   
+    #    weight = {
+    #        base = 0
+    #    }
+    #}
+
+    no_portrait_accesories = {
+        dna_modifiers = {
+            accessory = {
+               mode = add
+               gene = top_layer
+               template = no_top_layer
+               range = { 0 1 } # sovereign
+            }
+            accessory = {
+                mode = add
+                gene = epaulettes
+                template = no_epaulette # DID I STUTTER
+                range = { 0 1 }
+            }
+            accessory = {
+               mode = add
+               gene = necklaces
+               template = no_necklace
+               range = { 0 1 } # sovereign
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 98000
+                no_portrait_trigger = yes
+            }
+        }
+    }
+}
+
+   

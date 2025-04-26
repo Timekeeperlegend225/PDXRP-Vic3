@@ -1005,6 +1005,6 @@ tuvan ={
 	}
 	graphics = decentralised_americas
 	ethnicities = {
-		1 = caucasian
+		1 = elf_wood
 	}
 }
