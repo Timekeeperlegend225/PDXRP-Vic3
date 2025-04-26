@@ -1,0 +1,20 @@
+﻿principle_alarian_guidance = {
+	primary_for_identity = surface_mission
+	unlocking_identity = surface_mission
+
+	levels = {
+		principle_alarian_guidance_1
+		principle_alarian_guidance_2
+		principle_alarian_guidance_3
+	}
+}
+
+
+principle_group_military_industry = {
+	primary_for_identity = EMB_Empire
+	levels = {
+		principle_military_industry_1
+		principle_military_industry_2
+		principle_military_industry_3
+	}
+}

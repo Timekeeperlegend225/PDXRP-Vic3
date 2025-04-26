@@ -12,18 +12,6 @@
 	}
 
 	immediate = {
-		set_variable = {
-			name = je_WhOW_tech_EMB_pro_cost
-			value = 500
-		}
-		set_variable = {
-			name = je_WhOW_tech_EMB_mil_cost
-			value = 500
-		}
-		set_variable = {
-			name = je_WhOW_tech_EMB_soc_cost
-			value = 500
-		}
 	}
 
 	scripted_progress_bar = je_WhOW_tech_EMB_pro_progress_bar
@@ -49,7 +37,7 @@
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_progress(je_WhOW_tech_EMB_pro_progress_bar)" >= je_WhOW_tech_EMB_pro_cost
+						"scripted_bar_progress(je_WhOW_tech_EMB_pro_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -63,10 +51,6 @@
 						has_technology_researched = flamecaster_tech
 					}
                     add_technology_researched = industrial_flamecaster
-					set_variable = {
-						name = je_WhOW_tech_EMB_pro_cost
-						value = 4000
-					}
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_EMB_pro_progress_bar
@@ -79,10 +63,6 @@
 						has_technology_researched = volcanic_mining
 					}
                     add_technology_researched = flamecaster_tech
-					set_variable = {
-						name = je_WhOW_tech_EMB_pro_cost
-						value = 2000
-					}
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_EMB_pro_progress_bar
@@ -92,13 +72,638 @@
 				}
 				else = {
                     add_technology_researched = volcanic_mining
-					set_variable = {
-						name = je_WhOW_tech_EMB_pro_cost
-						value = 1000
-					}
                     scope:journal_entry = {
                         add_progress = {
                             name = je_WhOW_tech_EMB_pro_progress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_milgress(je_WhOW_tech_EMB_mil_milgress_bar)" >= 1000
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = flamecaster_infantry_tech
+					}
+                    add_technology_researched = emberian_conscription_tech
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = ember_hellcanon_tech
+					}
+                    add_technology_researched = flamecaster_infantry_tech
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_EMB_mil_milgress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = flameclad_tech
+					}
+                    add_technology_researched = ember_hellcanon_tech
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_EMB_mil_milgress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = flameclad_tech
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_EMB_mil_milgress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_socgress(je_WhOW_tech_EMB_soc_socgress_bar)" >= 1000
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = more_work
+					}
+                    add_technology_researched = militarized_education_tech
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = dragon_baby
+					}
+                    add_technology_researched = more_work
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_EMB_soc_socgress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = efficient_authority
+					}
+                    add_technology_researched = dragon_baby
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_EMB_soc_socgress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = efficient_authority
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_EMB_soc_socgress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+		}
+	}
+	should_be_pinned_by_default = yes
+}
+
+je_WhOW_tech_PNR = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		NOT = { has_technology_researched = subterranean_mod }
+	}
+
+	possible = {
+		has_technology_researched = dracaryan_studies
+	}
+
+	immediate = {
+	}
+
+	scripted_progress_bar = je_WhOW_tech_PNR_pro_progress_bar
+	scripted_progress_bar = je_WhOW_tech_PNR_mil_progress_bar
+	scripted_progress_bar = je_WhOW_tech_PNR_soc_progress_bar
+
+	complete = {
+	}
+
+	scripted_button = je_WhOW_tech_PNR_focus
+	scripted_button = je_WhOW_tech_PNR_pro
+	scripted_button = je_WhOW_tech_PNR_mil
+	scripted_button = je_WhOW_tech_PNR_soc
+
+	status_desc = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			je_WhOW_tech_PNR_pro_progress = yes 
+			je_WhOW_tech_PNR_mil_progress = yes
+			je_WhOW_tech_PNR_soc_progress = yes
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_progress(je_WhOW_tech_PNR_pro_progress_bar)" >= je_WhOW_tech_PNR_pro_cost
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = nagan_cattle_fertilizer
+					}
+                    add_technology_researched = nagan_cattle_breeding
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = nagan_cattle_tech
+					}
+                    add_technology_researched = nagan_cattle_fertilizer
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_PNR_pro_progress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = rural_society
+					}
+                    add_technology_researched = nagan_cattle_tech
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_PNR_pro_progress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = rural_society
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_PNR_pro_progress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_milgress(je_WhOW_tech_PNR_mil_milgress_bar)" >= 1000
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = goldspear_infantry_tech
+					}
+                    add_technology_researched = guerilla_warfare
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = beast_cavalry_tech
+					}
+                    add_technology_researched = goldspear_infantry_tech
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_PNR_mil_milgress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = snakeship_tech
+					}
+                    add_technology_researched = beast_cavalry_tech
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_PNR_mil_milgress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = snakeship_tech
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_PNR_mil_milgress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_socgress(je_WhOW_tech_PNR_soc_socgress_bar)" >= 1000
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = chakravadach_enlightmen
+					}
+                    add_technology_researched = baby_and_work
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = forced_conversion
+					}
+                    add_technology_researched = chakravadach_enlightmen
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_PNR_soc_socgress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = religious_bureaucracy
+					}
+                    add_technology_researched = forced_conversion
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_PNR_soc_socgress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = religious_bureaucracy 
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_PNR_soc_socgress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+		}
+	}
+	should_be_pinned_by_default = yes
+}
+
+je_WhOW_tech_ALA = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		NOT = { has_technology_researched = subterranean_mod }
+	}
+
+	possible = {
+		has_technology_researched = dracaryan_studies
+	}
+
+	immediate = {
+	}
+
+	scripted_progress_bar = je_WhOW_tech_ALA_pro_progress_bar
+	scripted_progress_bar = je_WhOW_tech_ALA_mil_progress_bar
+	scripted_progress_bar = je_WhOW_tech_ALA_soc_progress_bar
+
+	complete = {
+	}
+
+	scripted_button = je_WhOW_tech_ALA_focus
+	scripted_button = je_WhOW_tech_ALA_pro
+	scripted_button = je_WhOW_tech_ALA_mil
+	scripted_button = je_WhOW_tech_ALA_soc
+
+	status_desc = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			je_WhOW_tech_ALA_pro_progress = yes 
+			je_WhOW_tech_ALA_mil_progress = yes
+			je_WhOW_tech_ALA_soc_progress = yes
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_progress(je_WhOW_tech_ALA_pro_progress_bar)" >= je_WhOW_tech_ALA_pro_cost
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = memoritic_reaction
+					}
+                    add_technology_researched = connectic
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = memorite_treatment
+					}
+                    add_technology_researched = memoritic_reaction
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_ALA_pro_progress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = energy_focalisation
+					}
+                    add_technology_researched = memorite_treatment
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_ALA_pro_progress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = energy_focalisation
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_ALA_pro_progress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_milgress(je_WhOW_tech_ALA_mil_milgress_bar)" >= 1000
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = floating_warfare
+					}
+                    add_technology_researched = heavy_floating_vessel
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = flying_machine
+					}
+                    add_technology_researched = floating_warfare
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_ALA_mil_milgress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = basic_levitation
+					}
+                    add_technology_researched = flying_machine
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_ALA_mil_milgress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = basic_levitation
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_ALA_mil_milgress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_socgress(je_WhOW_tech_ALA_soc_socgress_bar)" >= 1000
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = holy_light
+					}
+                    add_technology_researched = ascension
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = miracle_healing
+					}
+                    add_technology_researched = holy_light
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_ALA_soc_socgress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = purification
+					}
+                    add_technology_researched = miracle_healing
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_ALA_soc_socgress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = purification
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_ALA_soc_socgress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+		}
+	}
+	should_be_pinned_by_default = yes
+}
+
+je_WhOW_tech_ELD = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		NOT = { has_technology_researched = subterranean_mod }
+	}
+
+	possible = {
+		has_technology_researched = dracaryan_studies
+	}
+
+	immediate = {
+	}
+
+	scripted_progress_bar = je_WhOW_tech_ELD_pro_progress_bar
+	scripted_progress_bar = je_WhOW_tech_ELD_mil_progress_bar
+	scripted_progress_bar = je_WhOW_tech_ELD_soc_progress_bar
+
+	complete = {
+	}
+
+	scripted_button = je_WhOW_tech_ELD_focus
+	scripted_button = je_WhOW_tech_ELD_pro
+	scripted_button = je_WhOW_tech_ELD_mil
+	scripted_button = je_WhOW_tech_ELD_soc
+
+	status_desc = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			je_WhOW_tech_ELD_pro_progress = yes 
+			je_WhOW_tech_ELD_mil_progress = yes
+			je_WhOW_tech_ELD_soc_progress = yes
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_progress(je_WhOW_tech_ELD_pro_progress_bar)" >= je_WhOW_tech_ELD_pro_cost
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = alchemy
+					}
+                    add_technology_researched = evlven_smithing
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = natural_culture
+					}
+                    add_technology_researched = alchemy
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_ELD_pro_progress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = forest_harmony
+					}
+                    add_technology_researched = natural_culture
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_ELD_pro_progress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = forest_harmony
+                    scope:journal_entry = {
+                        add_progress = {
+                            name = je_WhOW_tech_ELD_pro_progress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_milgress(je_WhOW_tech_ELD_mil_milgress_bar)" >= 1000
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = efficient_logistics
+					}
+                    add_technology_researched = elven_healing
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = precision_archery
+					}
+                    add_technology_researched = efficient_logistics
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_ELD_mil_milgress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = elven_first_aid
+					}
+                    add_technology_researched = precision_archery
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_ELD_mil_milgress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = elven_first_aid
+                    scope:journal_entry = {
+                        add_milgress = {
+                            name = je_WhOW_tech_ELD_mil_milgress_bar
+                            value = -500
+                        }
+                    }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_socgress(je_WhOW_tech_ELD_soc_socgress_bar)" >= 1000
+					}
+				}
+				if = {
+					limit = {
+						has_technology_researched = naturalism_tech
+					}
+                    add_technology_researched = divion_of_labour_tech
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = plantiri_tech
+					}
+                    add_technology_researched = naturalism_tech
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_ELD_soc_socgress_bar
+                            value = -2000
+                        }
+                    }
+				}
+				else_if = {
+					limit = {
+						has_technology_researched = elven_aura
+					}
+                    add_technology_researched = plantiri_tech
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_ELD_soc_socgress_bar
+                            value = -1000
+                        }
+                    }
+				}
+				else = {
+                    add_technology_researched = elven_aura
+                    scope:journal_entry = {
+                        add_socgress = {
+                            name = je_WhOW_tech_ELD_soc_socgress_bar
                             value = -500
                         }
                     }

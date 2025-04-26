@@ -437,8 +437,6 @@ pm_flamecaster_canon = {
 			building_employment_officers_add = 500
 		}
 	}
-	
-	required_input_goods = flamecaster
 }
 
 pm_unsanctioned_flamecaster_production = {
@@ -481,9 +479,7 @@ pm_unsanctioned_flamecaster_production = {
 pm_sanctioned_flamecaster_production = {
 	texture = "gfx/interface/icons/production_method_icons/flamecaster.dds"
 
-	unlocking_technologies = {
-		ember_empire_starting_boost
-	}
+	unlocking_identity = EMB_Empire
 
 	state_modifiers = {
 		workforce_scaled = {
@@ -511,8 +507,6 @@ pm_sanctioned_flamecaster_production = {
 			building_employment_officers_add = 1000
 		}
 	}
-	
-	required_input_goods = flamecaster
 }
 
 pm_unsanctioned_mixed_production = {
@@ -550,7 +544,5 @@ pm_unsanctioned_mixed_production = {
 			building_employment_officers_add = 250
 		}
 	}
-	
-	required_input_goods = flamecaster
 }
 
