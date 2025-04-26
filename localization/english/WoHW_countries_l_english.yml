@@ -12,6 +12,6 @@
  gov_governor_general_desc:0 "An expedition led by a Governor-General."
  RULER_TITLE_DRAGON:0 "Governor-General"
 
- gov_nagaraja:0 "Nagaraj"
- gov_nagaraja_desc:0 "The Imperial State of the Naga, led by the Nagaraja"
- RULER_TITLE_NAGA:0 "Nagaraja"
+ gov_nagaraja:0 "Patalan Royal Divine Expedition"
+ gov_nagaraja_desc:0 "A religious expedition to bring Enlightenment to the Surfaceborn, led by the Mahanagaraja on behalf of the Divine Patalan Imperial State."
+ RULER_TITLE_NAGA:0 "Mahanagaraja"

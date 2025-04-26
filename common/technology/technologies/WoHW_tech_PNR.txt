@@ -180,14 +180,11 @@ nagan_cattle_fertilizer = {
 	}
 	
 	modifier = {
-      limit = {
-        building_groups = {
-          bg_agriculture	# Farms, orchards, etc.
-          bg_plantations	# Plantations (tropical cash crops)
-          bg_ranching	# Ranches (livestock)
-        }
-      }
-      building_goods_input_mult = -0.10  # –10 % input goods consumed
+      state_food_security_add = 0.2
+	  building_group_bg_agriculture_standard_of_living_add = 1
+	  building_group_bg_plantations_standard_of_living_add = 1
+	  building_group_bg_ranching_standard_of_living_add = 1
+	  goods_output_explosives_mult = 0.15
     }
 	
 	ai_weight = {

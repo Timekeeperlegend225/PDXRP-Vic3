@@ -5,3 +5,10 @@
 
  modifier_goods_input_memorite_add:0 "@memorite! input per level"
  modifier_goods_input_memorite_add_desc:0 "The amount of @memorite! consumed by buildings"
+
+ nagan_cattle:0 "Nagan Cattle"
+ modifier_goods_output_nagan_cattle_add:0 "@nagan_cattle! output per level"
+ mofidier_goods_output_nagan_cattle_add_desc:0 "The amount of @nagan_cattle! produced by buildings"
+
+ modifier_goods_input_nagan_cattle_add:0 "@nagan_cattle! input per level"
+ modifier_goods_input_nagan_cattle_add_desc:0 "The amount of @nagan_cattle! consumed by buildings"
