@@ -499,7 +499,7 @@ pm_flying_cattle_production = {
 	texture = "gfx/interface/icons/production_method_icons/nagan_cattle.dds"
 	is_hidden_when_unavailable = yes	
 	unlocking_technologies = {
-		nagan_cattle_tech
+		guerilla_warfare
 	}
 
 	building_modifiers = {
