@@ -463,8 +463,8 @@ combat_unit_type_advanced_support_group = {
     }
     
     battle_modifier = {
-        unit_offense_add = 30
-        unit_defense_add = 50
+        unit_offense_add = 40
+        unit_defense_add = 80
         unit_morale_loss_add = 4
         unit_kill_rate_add = -0.20
         unit_morale_damage_mult = 0.20
@@ -473,8 +473,6 @@ combat_unit_type_advanced_support_group = {
     formation_modifier = {
         military_formation_mobilization_speed_mult = 0.2
 		character_battle_condition_lost_mult = -0.5
-		unit_offense_mult = 0.05
-		unit_defense_mult = 0.05
 		unit_morale_loss_mult = -0.20
     }
 
@@ -961,7 +959,6 @@ combat_unit_type_light_artillery = {
 	unlocking_technologies = { holy_light }
 
     upkeep_modifier = {
-        goods_input_artillery_add = 1
 		goods_input_glass_add = 1
 		goods_input_memorite_add = 3
         goods_input_radios_add = 1
@@ -1298,7 +1295,7 @@ combat_unit_mobile_assault_group = {
     }
     
     battle_modifier = {
-        unit_offense_add = 40
+        unit_offense_add = 45
         unit_defense_add = 35
         unit_morale_loss_add = 4
         unit_kill_rate_add = -0.20
@@ -1307,8 +1304,8 @@ combat_unit_mobile_assault_group = {
     }
 
     formation_modifier = {
-        military_formation_mobilization_speed_mult = 0.10
-        military_formation_movement_speed_mult = 0.25
+        military_formation_mobilization_speed_mult = 0.15
+        military_formation_movement_speed_mult = 0.50
     }
 
 	unlocking_technologies = { floating_warfare }
@@ -1683,7 +1680,7 @@ combat_unit_type_floating_destroyer = {
     
     battle_modifier = {
         unit_offense_add = 50
-        unit_defense_add = 50
+        unit_defense_add = 60
         unit_morale_loss_add = 6
         unit_kill_rate_add = -0.20
         unit_morale_damage_mult = 0.20
@@ -1691,7 +1688,7 @@ combat_unit_type_floating_destroyer = {
     }
 
     formation_modifier = {
-        military_formation_movement_speed_mult = 0.25
+        military_formation_movement_speed_mult = 0.40
     }
 	
     combat_unit_image = {
