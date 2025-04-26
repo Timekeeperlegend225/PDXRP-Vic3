@@ -1,5 +1,5 @@
 ﻿acolyte  = {
- 	type = condition
+ 	type = skill
 	texture = gfx/interface/icons/character_trait_icons/pious.dds
 
 	character_modifier = {
@@ -9,6 +9,7 @@
 
 	country_modifier = {
 		country_influence_mult = 0.05
+		country_legitimacy_base_add = 3
 	}
 
 	country_modifier = {
@@ -27,21 +28,24 @@
 	command_modifier = {
 		character_command_limit_mult = 0.05
 		unit_morale_recovery_mult = 0.05
+		unit_combat_unit_type_light_artillery_offense_add = 10
 	}
 
  	possible = {
  		owner ?= {
  			has_technology_researched = purification
  		}
- 		NOR = {
- 			has_trait = experienced_artillery_commander
- 			has_trait = expert_artillery_commander
- 		}
  		NOT = { age < define:NCharacters|ADULT_AGE }
  	}
 
  	weight = {
  		value = 1
+		if = {
+			limit = {
+				has_trait = pious
+			}
+			multiply = 5
+		}
  	}
 
  	replace = {
@@ -49,4 +53,265 @@
  	}
 
  	value = 1
+}
+
+inquisitor = {
+ 	type = skill
+	texture = gfx/interface/icons/character_trait_icons/pious.dds
+
+	character_modifier = {
+		character_health_add = 0.5
+	}
+
+	country_modifier = {
+		country_authority_mult = 0.10
+	}
+
+	country_modifier = {
+		country_prestige_add = 5
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.10
+	}
+
+	agitator_modifier = {
+		political_movement_radicalism_add = 0.10
+	}
+
+	command_modifier = {
+		character_command_limit_mult = 0.05
+		unit_army_offense_mult = 0.05
+		unit_morale_loss_mult = -0.10
+		unit_morale_damage_mult = 0.10
+		unit_combat_unit_type_light_artillery_offense_add = 50
+	}
+
+ 	possible = {
+ 		owner ?= {
+ 			has_technology_researched = holy_light
+ 		}
+ 		NOT = { age < define:NCharacters|ADULT_AGE }
+ 	}
+
+ 	weight = {
+ 		value = 1
+		if = {
+			limit = {
+				has_trait = acolyte
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_role = general
+			}
+			multiply = 5
+		}
+		if = {
+			limit = {
+				owner ?= {
+					has_technology_researched = ascension
+				}
+			}
+			multiply = 5
+		}
+ 	}
+
+ 	replace = {
+		acolyte
+ 	}
+
+ 	value = 2
+}
+
+enlightened  = {
+ 	type = skill
+	texture = gfx/interface/icons/character_trait_icons/pious.dds
+
+	character_modifier = {
+		character_health_add = 0.5
+		character_popularity_add = 10
+	}
+
+	country_modifier = {
+		country_influence_mult = 0.07
+		country_legitimacy_base_add = 5
+		country_authority_mult = 0.05
+	}
+
+	country_modifier = {
+		country_prestige_add = 25
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.15
+		interest_group_pop_attraction_mult = 0.15
+	}
+
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = 0.10
+	}
+
+	command_modifier = {
+		character_command_limit_mult = 0.10
+		unit_morale_recovery_mult = 0.10
+		unit_combat_unit_type_light_artillery_offense_add = 40
+		unit_morale_loss_mult = -0.10
+	}
+
+ 	possible = {
+ 		owner ?= {
+ 			has_technology_researched = holy_light
+ 		}
+ 		NOT = { age < define:NCharacters|ADULT_AGE }
+ 	}
+
+ 	weight = {
+ 		value = 1
+		if = {
+			limit = {
+				has_trait = acolyte
+			}
+			multiply = 10
+		}
+		if = {
+			limit = {
+				owner ?= {
+					has_technology_researched = ascension
+				}
+			}
+			add = 100
+		}
+ 	}
+
+ 	replace = {
+		acolyte
+ 	}
+
+ 	value = 2
+}
+
+beatified = {
+ 	type = skill
+	texture = gfx/interface/icons/character_trait_icons/pious.dds
+
+	character_modifier = {
+		character_health_add = 1
+		character_popularity_add = 25
+	}
+
+	country_modifier = {
+		country_influence_mult = 0.10
+		country_legitimacy_base_add = 7
+		country_authority_mult = 0.07
+	}
+
+	country_modifier = {
+		country_prestige_add = 20
+		country_prestige_mult = 0.05
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.20
+		interest_group_pop_attraction_mult = 0.20
+	}
+
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = 0.20
+	}
+
+	command_modifier = {
+		character_command_limit_mult = 0.10
+		unit_morale_recovery_mult = 0.10
+		unit_combat_unit_type_light_artillery_offense_add = 50
+		unit_morale_loss_mult = -0.10
+	}
+
+ 	possible = {
+ 		owner ?= {
+ 			has_technology_researched = ascension
+ 		}
+ 		NOT = { age < define:NCharacters|ADULT_AGE }
+ 	}
+
+ 	weight = {
+ 		value = 5
+		if = {
+			limit = {
+				owner ?= {
+					has_technology_researched = alarian_empire_starting_boost
+				}
+			}
+			multiply = 5
+		}
+ 	}
+
+ 	replace = {
+		enlightened
+ 	}
+
+ 	value = 3
+}
+
+saint = {
+ 	type = skill
+	texture = gfx/interface/icons/character_trait_icons/pious.dds
+
+	character_modifier = {
+		character_health_add = 1.5
+		character_popularity_add = 50
+	}
+
+	country_modifier = {
+		country_influence_mult = 0.20
+		country_legitimacy_base_add = 10
+		country_authority_mult = 0.10
+	}
+
+	country_modifier = {
+		country_prestige_add = 25
+		country_prestige_mult = 0.10
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.25
+		interest_group_pop_attraction_mult = 0.25
+	}
+
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = 0.25
+	}
+
+	command_modifier = {
+		unit_combat_unit_type_light_artillery_offense_add = 60
+		character_command_limit_mult = 0.20
+		unit_morale_recovery_mult = 0.20
+		unit_morale_loss_mult = -0.15
+	}
+
+ 	possible = {
+ 		owner ?= {
+ 			has_technology_researched = ascension
+ 		}
+ 		NOT = { age < define:NCharacters|ADULT_AGE }
+ 	}
+
+ 	weight = {
+ 		value = 1
+		if = {
+			limit = {
+				owner ?= {
+					has_technology_researched = alarian_empire_starting_boost
+				}
+			}
+			multiply = 5
+		}
+ 	}
+
+ 	replace = {
+		beatified
+ 	}
+
+ 	value = 4
 }
