@@ -105,6 +105,10 @@ flying_machine = {
 		basic_levitation
 	}
 	
+	modifier = {
+		state_building_airport_max_level_add = 2
+	}
+	
 	ai_weight = {
 		value = 0
 	}
@@ -117,6 +121,11 @@ miracle_healing = {
 	
 	unlocking_technologies = {
 		purification
+	}
+	
+	modifier = {	
+		country_institution_health_system_max_investment_add = 2
+		state_mortality_mult = -0.10	
 	}
 	
 	ai_weight = {
@@ -147,6 +156,11 @@ floating_warfare = {
 	
 	unlocking_technologies = {
 		flying_machine
+	}
+	
+	modifier = {
+		country_ignores_landing_craft_penalty_bool = yes
+		state_building_airport_max_level_add = 2
 	}
 	
 	ai_weight = {
@@ -193,6 +207,10 @@ heavy_floating_vessel = {
 		floating_warfare
 	}
 	
+	modifier = {
+		state_building_airport_max_level_add = 2
+	}
+	
 	ai_weight = {
 		value = 0
 	}
@@ -205,6 +223,15 @@ ascension = {
 	
 	unlocking_technologies = {
 		holy_light
+	}
+	
+	modifier = {	
+		state_mortality_mult = -0.10	
+		state_education_access_add = 0.10
+		state_standard_of_living_add = 7
+		state_lower_strata_expected_sol_add = 5
+		state_middle_strata_expected_sol_add = 5
+		state_upper_strata_expected_sol_add = 5
 	}
 	
 	ai_weight = {
