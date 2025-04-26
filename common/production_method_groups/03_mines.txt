@@ -23,6 +23,7 @@ pmg_steam_automation_building_coal_mine = {
 	production_methods = {
 		pm_no_steam_automation
 		pm_steam_donkey_building_coal_mine
+		pm_nagan_cattle_building_coal_mine
 	}
 }
 
@@ -59,6 +60,7 @@ pmg_steam_automation_building_iron_mine = {
 	production_methods = {
 		pm_no_steam_automation
 		pm_steam_donkey_mine
+		pm_nagan_cattle_building_iron_mine
 	}
 }
 
@@ -95,6 +97,7 @@ pmg_steam_automation_building_lead_mine = {
 	production_methods = {
 		pm_no_steam_automation
 		pm_steam_donkey_mine
+		pm_nagan_cattle_building_lead_mine
 	}
 }
 
@@ -131,6 +134,7 @@ pmg_steam_automation_building_sulfur_mine = {
 	production_methods = {
 		pm_no_steam_automation
 		pm_steam_donkey_mine
+		pm_nagan_cattle_building_sulfur_mine
 	}
 }
 
@@ -167,6 +171,7 @@ pmg_steam_automation_building_gold_mine = {
 	production_methods = {
 		pm_no_steam_automation
 		pm_steam_donkey_mine
+		pm_nagan_cattle_building_gold_mine
 	}
 }
 

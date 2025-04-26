@@ -480,3 +480,69 @@ become_ELD = {
 		base = 0	
 	}
 }
+
+chakravadah_decision = {
+	is_shown = {
+		exists = c:PNR
+		NOT = { country_has_state_religion = rel:chakravadah }
+		has_variable = chakravadah
+	}
+
+	possible = {
+		ig:ig_devout = {
+			is_marginal = no
+		}
+		has_technology_researched = forced_conversion
+		has_variable = chakravadah
+	}
+
+	when_taken = {
+		set_state_religion = rel:chakravadah
+		state_religion_switch_effect = yes
+		ig:ig_devout = {
+			hidden_effect = { set_interest_group_name = ig_chakravadah }
+			remove_ideology = { 
+				ideology_buddhist_moralist
+				ideology_papal_moralist
+				ideology_confucian
+				ideology_shinto_moralist
+				ideology_hindu_moralist_british_india
+				ideology_sikh_moralist
+				ideology_heavenly_kingdom_theocratic
+				ideology_moralist
+			}				
+			add_ideology = ideology_hindu_moralist
+			set_ig_trait = ig_trait:ig_trait_haibutsu_kishaku
+			set_ig_trait = ig_trait:ig_trait_yeshivot
+			set_ig_trait = ig_trait:ig_trait_the_best_revenge
+			leader ?= {
+				change_character_religion = rel:chakravadah
+			}
+		}
+		random_scope_state = {
+			limit = {
+				owner = ROOT
+				is_capital = yes
+			}
+			convert_population = {
+				target = rel:chakravadah
+				value = 0.4
+			}
+		}
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+				is_incorporated = yes
+				NOT = { is_capital = yes }
+			}
+			convert_population = {
+				target = rel:chakravadah
+				value = 0.2
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}

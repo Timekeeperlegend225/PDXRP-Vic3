@@ -3,3 +3,5 @@
  become_EMB_desc:0 "And start the age of the hollow world"
  go_to_war_EMB:0 "Raise an Army"
  go_to_war_EMB_desc:0 "You'll have to wait 10 weeks to recruit everyone but you'll still get 20 army and 10 flotilla by weeks"
+ chakravadah_decision:0 "Embrace Enlightenment"
+ chakravadah_decision_desc:0 "Your leaders and nation have seen the error of their old ways, and have elected to accept their place on the Eternal Coil via adopting Chakravadah as their state religion."

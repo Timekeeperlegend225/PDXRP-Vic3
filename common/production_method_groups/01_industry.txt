@@ -60,6 +60,7 @@ pmg_automation_building_textile_mills = {
 		pm_traditional_looms
 		pm_mechanized_looms
 		pm_automatic_power_looms
+		pm_cattle_powered_looms
 	}
 }
 
@@ -88,6 +89,7 @@ pmg_automation_building_furniture_manufacturies = {
 		pm_watertube_boiler_building_furniture_manufacturies
 		pm_rotary_valve_engine_building_furniture_manufacturies
 		pm_assembly_lines_building_furniture_manufacturies
+		pm_cattle_building_furniture_manufacturies
 	}
 }
 
@@ -109,6 +111,7 @@ pmg_automation_building_tooling_workshops = {
 		pm_rotary_valve_engine_building_tooling_workshops
 		pm_assembly_lines_building_tooling_workshops
 		pm_flamecaster_tooling_workshops
+		pm_cattle_building_tooling_workshops
 	}
 }
 
@@ -155,6 +158,7 @@ pmg_automation_building_paper_mills = {
 		pm_automation_disabled
 		pm_watertube_boiler_building_paper_mills
 		pm_rotary_valve_engine_building_paper_mills
+		pm_cattle_building_paper_mills
 	}
 }
 
@@ -209,6 +213,7 @@ pmg_automation_building_steel_mills = {
 		pm_watertube_boiler_building_steel_mills
 		pm_rotary_valve_engine_building_steel_mills
 		pm_flame_caster_melting_steel_mills
+		pm_cattle_building_steel_mills
 	}
 }
 
@@ -237,6 +242,7 @@ pmg_automation_building_motor_industry = {
 		pm_rotary_valve_engine_building_motor_industry
 		pm_assembly_lines_building_motor_industry
 		pm_flamecaster_melting_motor_industry
+		pm_cattle_building_motor_industry
 	}
 }
 
@@ -270,6 +276,7 @@ pmg_aeroplanes = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_aeroplane_production
+		pm_flying_cattle_production
 	}
 }
 
@@ -319,6 +326,7 @@ pmg_automation_building_arms_industry = {
 		pm_rotary_valve_engine_building_arms_industry
 		pm_assembly_lines_building_arms_industry
 		pm_flamecaster_arms_industry
+		pm_cattle_building_arms_industries
 	}
 }
 
@@ -353,5 +361,6 @@ pmg_automation_building_munition_plants = {
 		pm_automation_disabled
 		pm_rotary_valve_engine_building_munition_plants
 		pm_assembly_lines_building_munition_plants
+		pm_cattle_building_munitions_plants
 	}
 }

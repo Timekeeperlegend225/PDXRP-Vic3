@@ -53,6 +53,12 @@ rural_society = {
 		nagan_studies
 	}
 	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
+		building_group_bg_ranching_throughput_add = 0.15
+	}
+	
 	ai_weight = {
 		value = 0
 	}
@@ -65,6 +71,12 @@ snakeship_tech = {
 	
 	unlocking_technologies = {
 		nagan_studies
+	}
+	
+	modifier = {
+		unit_navy_offense_mult = 0.10
+		unit_convoy_raiding_mult = 0.1
+		unit_convoy_requirements_mult = -0.1
 	}
 	
 	ai_weight = {
@@ -82,10 +94,10 @@ religious_bureaucracy = {
 	}
 	
 	modifier = {	
-		state_pollution_reduction_health_mult = -0.10
-		state_harvest_condition_drought_impact_mult= -0.05
+		country_authority_mult = 0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+		state_harvest_condition_drought_impact_mult= -0.1
 		state_harvest_condition_disease_outbreak_duration_mult= -0.1
-		state_standard_of_living_add = 2
 	}
 	
 	ai_weight = {
@@ -104,6 +116,10 @@ nagan_cattle_tech = {
 		rural_society
 	}
 	
+	modifier = {
+		state_pollution_reduction_health_mult = -0.15
+	}
+	
 	ai_weight = {
 		value = 0
 	}
@@ -116,6 +132,12 @@ beast_cavalry_tech = {
 	
 	unlocking_technologies = {
 		snakeship_tech
+	}
+	
+	modifier = {
+		military_formation_mobilization_speed_mult = 0.1
+		military_formation_movement_speed_mult = 0.1
+		unit_occupation_mult = 0.1
 	}
 	
 	ai_weight = {
@@ -132,6 +154,15 @@ forced_conversion = {
 		religious_bureaucracy
 	}
 	
+	modifier = {
+		country_authority_mult = 0.1
+		state_birth_rate_mult = 0.05
+		interest_group_ig_devout_pol_str_mult = 0.1
+		tax_heathen_add = 0.25
+	}
+	
+	set_variable = chakravadah
+
 	ai_weight = {
 		value = 0
 	}
@@ -148,6 +179,17 @@ nagan_cattle_fertilizer = {
 		nagan_cattle_tech
 	}
 	
+	modifier = {
+      limit = {
+        building_groups = {
+          bg_agriculture	# Farms, orchards, etc.
+          bg_plantations	# Plantations (tropical cash crops)
+          bg_ranching	# Ranches (livestock)
+        }
+      }
+      building_goods_input_mult = -0.10  # –10 % input goods consumed
+    }
+	
 	ai_weight = {
 		value = 0
 	}
@@ -162,6 +204,11 @@ goldspear_infantry_tech = {
 		beast_cavalry_tech
 	}
 	
+	modifier = {
+		unit_morale_damage_mult = 0.1
+		country_military_goods_cost_mult = -0.2
+	}
+	
 	ai_weight = {
 		value = 0
 	}
@@ -174,6 +221,12 @@ chakravadach_enlightmen = {
 	
 	unlocking_technologies = {
 		forced_conversion
+	}
+	
+	modifier = {
+		country_authority_mult = 0.1
+		state_conversion_mult = 0.2
+		state_education_access_add = 0.1
 	}
 	
 	ai_weight = {
@@ -206,6 +259,14 @@ guerilla_warfare = {
 		goldspear_infantry_tech
 	}
 	
+	modifier = {
+		unit_army_defense_mult = 0.1
+		unit_kill_rate_add = 0.1
+		unit_supply_consumption_mult = -0.1
+		unit_recovery_rate_add = 0.1
+		state_building_naval_base_max_level_add = 20
+	}
+	
 	ai_weight = {
 		value = 0
 	}
@@ -218,6 +279,13 @@ baby_and_work = {
 	
 	unlocking_technologies = {
 		chakravadach_enlightmen
+	}
+	
+	modifier = {
+		country_authority_mult = 0.2
+		state_birth_rate_mult = 0.05
+		state_working_adult_ratio_add = 0.05
+		state_dependent_political_participation_add = 0.33
 	}
 	
 	ai_weight = {
