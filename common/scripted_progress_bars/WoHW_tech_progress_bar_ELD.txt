@@ -1,0 +1,660 @@
+﻿je_WhOW_tech_ELD_pro_progress_bar = {
+	name = "je_WhOW_tech_ELD_pro_progress_bar"
+	desc = "je_WhOW_tech_ELD_pro_progress_bar_desc"
+
+	default_green = yes
+
+	weekly_progress = {
+		if = {
+			limit = {
+				has_modifier = ELD_studies
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_modifier = studying_all_OPM
+			}
+			add = 0.5
+		}
+		else_if = {
+			limit = {
+				has_modifier = focus_on_studying_ELD
+			}
+			add = 2
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_modifier = focus_on_studying_EMB
+					has_modifier = focus_on_studying_PNR
+					has_modifier = focus_on_studying_ALA
+					has_modifier = focus_on_studying_VAM
+				}
+			}
+			add = -0.5
+		}
+		if = {
+			limit = {
+				is_in_same_power_bloc = c:ELD
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				is_subject_of = c:ELD
+			}
+			add = 0.5
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_subject_of = c:EMB
+					is_subject_of = c:PNR
+					is_subject_of = c:ALA
+					is_subject_of = c:VAM
+				}
+			}
+			add = -0.25
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = trade_agreement
+				}
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = foreign_investment_rights
+				}
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = alliance
+				}
+			}
+			add = 0.5
+		}
+		else_if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = defensive_pact
+				}
+			}
+			add = 0.5
+		}
+		if = {
+			limit = {
+				C:ELD.relations:root >= 50
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				has_modifier = ELD_focus_prod
+			}
+			add = 1
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_modifier = ELD_focus_mil
+					has_modifier = ELD_focus_soc
+				}
+			}
+			add = -0.25
+		}
+		if = {
+			limit = {
+				has_war_with = c:ELD
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = forest_harmony }
+				OR = {
+					has_technology_researched = elven_first_aid
+					has_technology_researched = precision_archery
+					has_technology_researched = efficient_logistics
+					has_technology_researched = elven_healing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = natural_culture }
+				OR = {
+					has_technology_researched = precision_archery
+					has_technology_researched = efficient_logistics
+					has_technology_researched = elven_healing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = alchemy }
+				OR = {
+					has_technology_researched = efficient_logistics
+					has_technology_researched = elven_healing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = evlven_smithing }
+				has_technology_researched = elven_healing
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = forest_harmony }
+				OR = {
+					has_technology_researched = elven_aura
+					has_technology_researched = plantiri_tech
+					has_technology_researched = naturalism_tech
+					has_technology_researched = divion_of_labour_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = natural_culture }
+				OR = {
+					has_technology_researched = plantiri_tech
+					has_technology_researched = naturalism_tech
+					has_technology_researched = divion_of_labour_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = alchemy }
+				OR = {
+					has_technology_researched = naturalism_tech
+					has_technology_researched = divion_of_labour_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = evlven_smithing }
+				has_technology_researched = divion_of_labour_tech
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = forest_harmony }
+			}
+			multiply = 2
+		}
+		else_if = {
+			limit = {
+				has_technology_researched = natural_culture
+			}
+			multiply = 0.5
+		}
+		else_if = {
+			limit = {
+				has_technology_researched = alchemy
+			}
+			multiply = 0.25
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 1000
+
+}
+
+je_WhOW_tech_ELD_mil_progress_bar = {
+	name = "je_WhOW_tech_ELD_mil_progress_bar"
+	desc = "je_WhOW_tech_ELD_mil_progress_bar_desc"
+
+	default_bad = yes
+
+	weekly_progress = {
+		if = {
+			limit = {
+				has_modifier = ELD_studies
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_modifier = studying_all_OPM
+			}
+			add = 0.5
+		}
+		else_if = {
+			limit = {
+				has_modifier = focus_on_studying_ELD
+			}
+			add = 2
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_modifier = focus_on_studying_EMB
+					has_modifier = focus_on_studying_PNR
+					has_modifier = focus_on_studying_ALA
+					has_modifier = focus_on_studying_VAM
+				}
+			}
+			add = -0.5
+		}
+		if = {
+			limit = {
+				is_in_same_power_bloc = c:ELD
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				is_subject_of = c:ELD
+			}
+			add = 0.5
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_subject_of = c:EMB
+					is_subject_of = c:PNR
+					is_subject_of = c:ALA
+					is_subject_of = c:VAM
+				}
+			}
+			add = -0.25
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = trade_agreement
+				}
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = foreign_investment_rights
+				}
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = alliance
+				}
+			}
+			add = 0.5
+		}
+		else_if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = defensive_pact
+				}
+			}
+			add = 0.5
+		}
+		if = {
+			limit = {
+				C:ELD.relations:root >= 50
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				has_modifier = ELD_focus_mil
+			}
+			add = 1
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_modifier = ELD_focus_prod
+					has_modifier = ELD_focus_soc
+				}
+			}
+			add = -0.25
+		}
+		if = {
+			limit = {
+				has_war_with = c:ELD
+			}
+			add = 2
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = elven_first_aid }
+				OR = {
+					has_technology_researched = forest_harmony
+					has_technology_researched = natural_culture
+					has_technology_researched = alchemy
+					has_technology_researched = evlven_smithing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = precision_archery }
+				OR = {
+					has_technology_researched = natural_culture
+					has_technology_researched = alchemy
+					has_technology_researched = evlven_smithing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = efficient_logistics }
+				OR = {
+					has_technology_researched = alchemy
+					has_technology_researched = evlven_smithing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = elven_healing }
+				has_technology_researched = evlven_smithing
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = elven_first_aid }
+				OR = {
+					has_technology_researched = elven_aura
+					has_technology_researched = plantiri_tech
+					has_technology_researched = naturalism_tech
+					has_technology_researched = divion_of_labour_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = precision_archery }
+				OR = {
+					has_technology_researched = plantiri_tech
+					has_technology_researched = naturalism_tech
+					has_technology_researched = divion_of_labour_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = efficient_logistics }
+				OR = {
+					has_technology_researched = naturalism_tech
+					has_technology_researched = divion_of_labour_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = elven_healing }
+				has_technology_researched = divion_of_labour_tech
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = elven_first_aid }
+			}
+			multiply = 2
+		}
+		else_if = {
+			limit = {
+				has_technology_researched = precision_archery
+			}
+			multiply = 0.5
+		}
+		else_if = {
+			limit = {
+				has_technology_researched = efficient_logistics
+			}
+			multiply = 0.25
+		}
+	}
+	
+	start_value = 0
+	min_value = 0
+	max_value = 1000
+}
+
+je_WhOW_tech_ELD_soc_progress_bar = {
+	name = "je_WhOW_tech_ELD_soc_progress_bar"
+	desc = "je_WhOW_tech_ELD_mil_progress_bar_desc"
+
+	default = yes
+
+	weekly_progress = {
+		if = {
+			limit = {
+				has_modifier = ELD_studies
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_modifier = studying_all_OPM
+			}
+			add = 0.5
+		}
+		else_if = {
+			limit = {
+				has_modifier = focus_on_studying_ELD
+			}
+			add = 2
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_modifier = focus_on_studying_EMB
+					has_modifier = focus_on_studying_PNR
+					has_modifier = focus_on_studying_ALA
+					has_modifier = focus_on_studying_VAM
+				}
+			}
+			add = -0.5
+		}
+		if = {
+			limit = {
+				is_in_same_power_bloc = c:ELD
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				is_subject_of = c:ELD
+			}
+			add = 0.5
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_subject_of = c:EMB
+					is_subject_of = c:PNR
+					is_subject_of = c:ALA
+					is_subject_of = c:VAM
+				}
+			}
+			add = -0.25
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = trade_agreement
+				}
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = foreign_investment_rights
+				}
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = alliance
+				}
+			}
+			add = 0.5
+		}
+		else_if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:ELD
+					type = defensive_pact
+				}
+			}
+			add = 0.5
+		}
+		if = {
+			limit = {
+				C:ELD.relations:root >= 50
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = elven_aura }
+				OR = {
+					has_technology_researched = forest_harmony
+					has_technology_researched = natural_culture
+					has_technology_researched = alchemy
+					has_technology_researched = evlven_smithing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = plantiri_tech }
+				OR = {
+					has_technology_researched = natural_culture
+					has_technology_researched = alchemy
+					has_technology_researched = evlven_smithing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = naturalism_tech }
+				OR = {
+					has_technology_researched = alchemy
+					has_technology_researched = evlven_smithing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = divion_of_labour_tech }
+				has_technology_researched = evlven_smithing
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = elven_aura }
+				OR = {
+					has_technology_researched = elven_first_aid
+					has_technology_researched = precision_archery
+					has_technology_researched = efficient_logistics
+					has_technology_researched = elven_healing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = plantiri_tech }
+				OR = {
+					has_technology_researched = precision_archery
+					has_technology_researched = efficient_logistics
+					has_technology_researched = elven_healing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = naturalism_tech }
+				OR = {
+					has_technology_researched = efficient_logistics
+					has_technology_researched = elven_healing
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = divion_of_labour_tech }
+				has_technology_researched = elven_healing
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = flameclad_tech }
+			}
+			multiply = 2
+		}
+		else_if = {
+			limit = {
+				has_technology_researched = ELDer_hellcanon_tech
+			}
+			multiply = 0.5
+		}
+		else_if = {
+			limit = {
+				has_technology_researched = flamecaster_infantry_tech
+			}
+			multiply = 0.25
+		}
+	}
+	
+	start_value = 0
+	min_value = 0
+	max_value = 1000
+}
