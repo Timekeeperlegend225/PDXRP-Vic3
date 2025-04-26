@@ -32,6 +32,7 @@ pmg_automation_building_food_industry = {
 	production_methods = {
 		pm_manual_dough_processing
 		pm_automated_bakery
+		pm_memorite_automated_bakery
 	}
 }
 
@@ -61,6 +62,7 @@ pmg_automation_building_textile_mills = {
 		pm_mechanized_looms
 		pm_automatic_power_looms
 		pm_cattle_powered_looms
+		pm_automatic_memorite_power_looms
 	}
 }
 
@@ -90,6 +92,7 @@ pmg_automation_building_furniture_manufacturies = {
 		pm_rotary_valve_engine_building_furniture_manufacturies
 		pm_assembly_lines_building_furniture_manufacturies
 		pm_cattle_building_furniture_manufacturies
+		pm_assembly_memorite_automated_furniture_manufacturies
 	}
 }
 
@@ -112,6 +115,7 @@ pmg_automation_building_tooling_workshops = {
 		pm_assembly_lines_building_tooling_workshops
 		pm_flamecaster_tooling_workshops
 		pm_cattle_building_tooling_workshops
+		pm_automated_memorite_building_tooling_workshops
 	}
 }
 
@@ -121,6 +125,7 @@ pmg_base_building_glassworks = {
 		pm_forest_glass
 		pm_leaded_glass
 		pm_crystal_glass
+		pm_memorite_glass
 		pm_houseware_plastics
 	}
 }
@@ -140,6 +145,7 @@ pmg_glassblowing = {
 		pm_manual_glassblowing
 		pm_automatic_bottle_blowers
 		pm_flamecaster_blowing
+		pm_memorite_blower
 	}
 }
 
@@ -159,6 +165,7 @@ pmg_automation_building_paper_mills = {
 		pm_watertube_boiler_building_paper_mills
 		pm_rotary_valve_engine_building_paper_mills
 		pm_cattle_building_paper_mills
+		pm_memorite_automatic_building_paper_mills
 	}
 }
 
@@ -214,6 +221,7 @@ pmg_automation_building_steel_mills = {
 		pm_rotary_valve_engine_building_steel_mills
 		pm_flame_caster_melting_steel_mills
 		pm_cattle_building_steel_mills
+		pm_memorite_automatic_building_steel_mills
 	}
 }
 
@@ -243,6 +251,7 @@ pmg_automation_building_motor_industry = {
 		pm_assembly_lines_building_motor_industry
 		pm_flamecaster_melting_motor_industry
 		pm_cattle_building_motor_industry
+		pm_memorite_automatic_motor_industry
 	}
 }
 
@@ -276,6 +285,7 @@ pmg_aeroplanes = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_aeroplane_production
+		pm_flying_machine_production
 		pm_flying_cattle_production
 	}
 }
@@ -286,6 +296,7 @@ pmg_tanks = {
 		pm_no_tank_production
 		pm_tank_production
 		pm_flamecaster_tank_production
+		pm_levitating_tank_production
 	}
 }
 
@@ -293,6 +304,7 @@ pmg_telephones_category = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_telephones
+		pm_conectic_phone
 	}
 }
 
@@ -301,6 +313,7 @@ pmg_radios_category = {
 	production_methods = {
 		pm_no_radios
 		pm_radios
+		pm_conectic_telecom
 	}
 }
 
@@ -327,6 +340,7 @@ pmg_automation_building_arms_industry = {
 		pm_assembly_lines_building_arms_industry
 		pm_flamecaster_arms_industry
 		pm_cattle_building_arms_industries
+		pm_memorite_automatic_arms_industries
 	}
 }
 
