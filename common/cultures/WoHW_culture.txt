@@ -339,7 +339,7 @@ jungle_naga={
 nagavanshi={
 	color= hsv{ 0.38 0.23 0.82 }
 	religion = chakravadah
-	traits = { humanoid underworld_heritage}
+	traits = { humanoid nagavanshi underworld_heritage}
 	
 	
 	male_common_first_names={
@@ -460,7 +460,7 @@ nagavanshi={
 alarian ={
 	color = { 255 250 240 }
 	religion = yhawhamism 
-	traits = { humanoid underworld_heritage }
+	traits = { humanoid alarian underworld_heritage }
 	male_common_first_names={
 		Akaki
 		Alexander

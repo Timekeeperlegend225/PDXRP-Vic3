@@ -2,6 +2,12 @@
 	heritage = yes
 }
 
+alarian = {}
+
+nagavanshi = {}
+
+dragokins = {}
+
 draconic = {}
 
 humanoid = {}
