@@ -25,6 +25,7 @@
 	scripted_button = je_WhOW_tech_EMB_pro
 	scripted_button = je_WhOW_tech_EMB_mil
 	scripted_button = je_WhOW_tech_EMB_soc
+	scripted_button = je_WhOW_tech_EMB_gen
 
 	status_desc = {
 	}
@@ -204,6 +205,7 @@ je_WhOW_tech_PNR = {
 	scripted_button = je_WhOW_tech_PNR_pro
 	scripted_button = je_WhOW_tech_PNR_mil
 	scripted_button = je_WhOW_tech_PNR_soc
+	scripted_button = je_WhOW_tech_PNR_gen
 
 	status_desc = {
 	}
@@ -383,6 +385,7 @@ je_WhOW_tech_ALA = {
 	scripted_button = je_WhOW_tech_ALA_pro
 	scripted_button = je_WhOW_tech_ALA_mil
 	scripted_button = je_WhOW_tech_ALA_soc
+	scripted_button = je_WhOW_tech_ALA_gen
 
 	status_desc = {
 	}
@@ -562,6 +565,7 @@ je_WhOW_tech_ELD = {
 	scripted_button = je_WhOW_tech_ELD_pro
 	scripted_button = je_WhOW_tech_ELD_mil
 	scripted_button = je_WhOW_tech_ELD_soc
+	scripted_button = je_WhOW_tech_ELD_gen
 
 	status_desc = {
 	}
