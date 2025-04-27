@@ -334,6 +334,7 @@
  gm_actions.40.c:0 "Make Ruler"
  gm_actions.40.d:0 "Make Heir"
  gm_actions.40.e:0 "Make IG Leader"
+ gm_actions.40.f:0 "Pull the Character"
  
  gm_actions.400.t:0 "Change Character IG"
  gm_actions.400.a:0 "Cancel"
@@ -364,6 +365,10 @@
  gm_actions.407.t:0 "Country Specifics"
  gm_actions.407.a:0 "Cancel"
  gm_actions.407.b:0 "Return"
+ 
+ gm_actions.410.t:0 "Change trait"
+ gm_actions.410.a:0 "Cancel"
+ gm_actions.410.b:0 "Return"
 
  #Loyalists or Radicals
  gm_actions.70.t:0 "Add Loyalists or Radicals to a State"
