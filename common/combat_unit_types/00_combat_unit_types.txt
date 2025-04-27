@@ -1623,12 +1623,12 @@ combat_unit_type_seasnake = {
         unit_offense_add = 60
         unit_defense_add = 65
         unit_morale_loss_add = 4
-		unit_convoy_defense_mult = 0.5
-		unit_convoy_raiding_mult = 0.3
+		unit_convoy_defense_mult = 0.25
+		unit_convoy_raiding_mult = 0.25
     }
 
     formation_modifier = {
-        military_formation_movement_speed_mult = 0.3
+        military_formation_movement_speed_mult = 0.2
     }
 
 	unlocking_technologies = { naga_empire_starting_boost }
@@ -1658,7 +1658,7 @@ combat_unit_type_ember_steamship = {
     }
 
     formation_modifier = {
-        military_formation_movement_speed_mult = 0.2
+        military_formation_movement_speed_mult = 0.3
     }
 	
     combat_unit_image = {
@@ -1850,7 +1850,7 @@ combat_unit_type_cobraship = {
         unit_defense_add = 90
         unit_morale_loss_add = 5
 		unit_convoy_defense_mult = 0.1
-		unit_convoy_raiding_mult = -0.1
+		unit_convoy_raiding_mult = -0.25
     }
 	unlocking_technologies = { naga_empire_starting_boost }
 	unlocking_technologies = { dreadnought }
