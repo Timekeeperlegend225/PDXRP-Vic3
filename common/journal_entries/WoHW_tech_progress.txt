@@ -218,7 +218,7 @@ je_WhOW_tech_PNR = {
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_progress(je_WhOW_tech_PNR_pro_progress_bar)" >= je_WhOW_tech_PNR_pro_cost
+						"scripted_bar_progress(je_WhOW_tech_PNR_pro_progress_bar)" >= 1000
 					}
 				}
 				if = {
@@ -578,7 +578,7 @@ je_WhOW_tech_ELD = {
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_progress(je_WhOW_tech_ELD_pro_progress_bar)" >= je_WhOW_tech_ELD_pro_cost
+						"scripted_bar_progress(je_WhOW_tech_ELD_pro_progress_bar)" >= 1000
 					}
 				}
 				if = {
