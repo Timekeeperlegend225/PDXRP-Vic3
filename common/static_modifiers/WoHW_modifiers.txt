@@ -69,11 +69,11 @@ ALA_focus_soc = {
 }
 
 ELD_focus_prod = {
-	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
+	icon = gfx/interface/icons/invention_icons/eldar_studies.dds
 }
 ELD_focus_mil = {
-	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
+	icon = gfx/interface/icons/invention_icons/eldar_studies.dds
 }
 ELD_focus_soc = {
-	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
+	icon = gfx/interface/icons/invention_icons/eldar_studies.dds
 }
