@@ -4,7 +4,7 @@
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
 
 	unlocking_technologies = {
-		memorite_manipulation
+		energy_focalisation
 	}
 
 	building_modifiers = {
