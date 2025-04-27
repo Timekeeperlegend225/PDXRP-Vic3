@@ -9,7 +9,7 @@
 			pop_type = peasants
 			percent > 0.6
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 	
 	possible = {
@@ -56,7 +56,7 @@ je_urbanization_events_2 = {
 			is_incorporated = yes
 			has_building = building_urban_center
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 	
 	possible = {
@@ -100,7 +100,7 @@ je_urbanization_events_2 = {
 	}
 
 	invalid = {
-		has_modifier = subterranean_mod
+		has_technology_researched = subterranean
 	}
 	
 	on_complete = {

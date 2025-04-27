@@ -11,7 +11,7 @@
 		NOT = {
 			has_global_variable = afghan_borders_solidified
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	scripted_button = je_consolidate_afghanistan_durand_line

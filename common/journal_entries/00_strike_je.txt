@@ -14,7 +14,7 @@
 		ig:ig_industrialists = {
 			is_marginal = no
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

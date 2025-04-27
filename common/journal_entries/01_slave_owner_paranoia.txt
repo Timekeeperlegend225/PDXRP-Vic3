@@ -14,7 +14,7 @@
 			pop_type = slaves
 		}
 		NOT = { has_journal_entry = je_matter_of_slavery } # Disabled for Brazi
-		NOT = { has_modifier = subterranean_mod }l
+		NOT = { has_technology_researched = subterranean }l
 	}
 	
 	possible = {
@@ -71,7 +71,7 @@
 	timeout = 1825
 
 	invalid = {
-		has_modifier = subterranean_mod
+		has_technology_researched = subterranean
 	}
 	
 	on_yearly_pulse = {

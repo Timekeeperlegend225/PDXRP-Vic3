@@ -17,7 +17,7 @@ je_india_railway = {
 				region = sr:region_punjab
 			}
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

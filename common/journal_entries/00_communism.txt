@@ -9,7 +9,7 @@
 			has_technology_researched = socialism
 			has_technology_researched = anarchism
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	scripted_progress_bar = communism_1_progress_bar

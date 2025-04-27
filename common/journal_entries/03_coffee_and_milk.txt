@@ -27,7 +27,7 @@
 				owner = ROOT
 			}
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	immediate = {
@@ -138,7 +138,7 @@ je_coffee_with_milk = {
 			}
 			has_journal_entry = je_agricultural_development
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

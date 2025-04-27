@@ -12,7 +12,7 @@
 		}
 		has_distillery = yes
 		is_junior_in_customs_union = no
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

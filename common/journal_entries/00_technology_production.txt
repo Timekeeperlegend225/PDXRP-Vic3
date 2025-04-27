@@ -9,7 +9,7 @@
 		any_scope_state = {
 			has_potential_resource = bg_rubber
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -48,7 +48,7 @@ je_mechanized_farming = {
 		is_player = yes
 		NOT = { has_variable = mechanized_farming_je_done }
 		has_technology_researched = threshing_machine
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -106,7 +106,7 @@ je_atmospheric_engine = {
 		NOT = { has_variable = atmospheric_engine_je_done }
 		has_technology_researched = shaft_mining
 		NOT = { has_technology_researched = watertube_boiler }
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -170,7 +170,7 @@ je_plastics = {
 		is_player = yes
 		NOT = { has_variable = plastics_je_done }
 		has_technology_researched = reinforced_concrete
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -216,7 +216,7 @@ je_radio = {
 		is_player = yes
 		NOT = { has_variable = radio_je_done }
 		has_technology_researched = telephone
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -258,7 +258,7 @@ je_dynamite = {
 		is_player = yes
 		NOT = { has_variable = dynamite_je_done }
 		has_technology_researched = nitroglycerin
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -351,7 +351,7 @@ je_combustion_engines = {
 		is_player = yes
 		NOT = { has_variable = combustion_engines_je_done }
 		has_technology_researched = rotary_valve_engine
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -427,7 +427,7 @@ je_railroads = {
 				is_building_type = building_banana_plantation
 			}
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -533,7 +533,7 @@ je_telephone = {
 		is_player = yes
 		NOT = { has_variable = telephone_je_done }
 		has_technology_researched = shift_work
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -586,7 +586,7 @@ je_whaling = {
 			has_building = building_whaling_station
 		}
 		NOT = { has_technology_researched = pumpjacks }
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -637,7 +637,7 @@ je_pumpjacks = {
 		any_scope_state = {
 			has_potential_resource = bg_oil_extraction
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -676,7 +676,7 @@ je_electrical_generation = {
 		is_player = yes
 		NOT = { has_variable = electrical_generation_je_done }
 		has_technology_researched = mechanized_workshops
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -725,7 +725,7 @@ je_steam_engines = {
 				owner = ROOT
 			}
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

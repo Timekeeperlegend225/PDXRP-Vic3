@@ -6,7 +6,7 @@
 	complete = {
 		owns_entire_state_region = STATE_FLORIDA
 		NOT = { exists = c:SML }
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	on_complete = {

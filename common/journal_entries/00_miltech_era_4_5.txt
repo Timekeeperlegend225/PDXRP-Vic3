@@ -6,7 +6,7 @@
  		is_player = yes
  		has_technology_researched = defense_in_depth
  		army_size >= 25
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
  	}
 
  	possible = {
@@ -49,7 +49,7 @@ je_trench_warfare = {
 			has_technology_researched = general_staff
 			has_technology_researched = electric_telegraph
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

@@ -9,7 +9,7 @@
 		has_technology_researched = realism
 		NOT = { has_technology_researched = film }
 		NOT = { is_country_type = unrecognized }
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -58,7 +58,7 @@ je_film = {
 		NOT = { has_variable = film_je_done }
 		has_technology_researched = camera
 		NOT = { is_country_type = unrecognized }
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

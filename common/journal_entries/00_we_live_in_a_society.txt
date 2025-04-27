@@ -11,7 +11,7 @@
 			is_building_type = building_university
 		}
 		NOT = { has_technology_researched = philosophical_pragmatism }
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -63,7 +63,7 @@ je_realism = {
 		has_technology_researched = romanticism
 		NOT = { has_technology_researched = camera }
 		NOT = { is_country_type = unrecognized } # prestige is useless to them
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -105,7 +105,7 @@ je_academia = {
 		has_technology_researched = rationalism
 		has_technology_researched = urbanization
 		NOT = { has_technology_researched = empiricism }
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

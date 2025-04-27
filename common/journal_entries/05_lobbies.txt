@@ -339,7 +339,7 @@ je_pro_lobby_demand = {
 			NOT = {
 				exists = scope:third_party_country
 			}
-			has_modifier = subterranean_mod
+			has_technology_researched = subterranean
 		}
 	}
 

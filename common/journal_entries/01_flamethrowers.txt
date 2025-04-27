@@ -8,7 +8,7 @@
  		has_technology_researched = trench_works
  		has_technology_researched = automatic_machine_guns
  		army_size >= 25
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
  	}
 
  	possible = {

@@ -54,7 +54,7 @@
 		NOT = { has_variable = completed_fascism_1_var }
 		has_technology_researched = political_agitation
 		NOT = { is_country_type = decentralized }
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

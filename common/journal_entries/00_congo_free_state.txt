@@ -7,7 +7,7 @@
 		has_variable = scramble_for_africa_complete
 		has_law = law_type:law_monarchy #Check there is a Monarch
 		NOT = { has_global_variable = free_state_created }
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

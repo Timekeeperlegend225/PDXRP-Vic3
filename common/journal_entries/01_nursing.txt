@@ -8,7 +8,7 @@
  		has_technology_researched = triage
  		is_at_war = yes
  		army_size >= 25
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
  	}
 
  	possible = {

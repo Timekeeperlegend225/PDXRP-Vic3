@@ -8,7 +8,7 @@ je_liberalism_1 = {
 		NOT = { has_variable = liberalism_1_done }
 		has_technology_researched = democracy
 		has_technology_researched = international_trade
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -68,7 +68,7 @@ je_liberalism_1 = {
 	}
 
 	invalid = {
-		has_modifier = subterranean_mod
+		has_technology_researched = subterranean
 	}
 	
 	on_complete = {

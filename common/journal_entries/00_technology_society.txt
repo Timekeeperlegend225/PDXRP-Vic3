@@ -7,7 +7,7 @@
 		is_player = yes
 		NOT = { has_variable = elevators_je_done }
 		has_technology_researched = steel_frame_buildings
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -62,7 +62,7 @@ je_mutual_funds = {
  		is_player = yes
  		NOT = { has_variable = mutual_funds_je_done }
  		has_technology_researched = central_banking
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
  	}
 
  	possible = {

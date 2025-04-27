@@ -11,7 +11,7 @@
 			is_building_type = building_government_administration
 			NOT = { has_active_production_method = pm_vertical_filing_cabinets }
 		}
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -39,7 +39,7 @@
 	}
 
 	invalid = {
-		has_modifier = subterranean_mod
+		has_technology_researched = subterranean
 	}
 
 	on_complete = {

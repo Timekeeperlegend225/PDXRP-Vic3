@@ -8,7 +8,7 @@
 		NOT = { has_variable = dismissed_poverty_variable }
 		NOT = { has_variable = begging_woman_martyr_variable }
 		root.average_sol < 10
-		NOT = { has_modifier = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {

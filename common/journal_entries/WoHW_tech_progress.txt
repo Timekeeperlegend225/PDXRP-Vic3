@@ -4,7 +4,7 @@
 	group = je_group_historical_content
 
 	is_shown_when_inactive = {
-		NOT = { has_technology_researched = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -183,7 +183,7 @@ je_WhOW_tech_PNR = {
 	group = je_group_historical_content
 
 	is_shown_when_inactive = {
-		NOT = { has_technology_researched = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -362,7 +362,7 @@ je_WhOW_tech_ALA = {
 	group = je_group_historical_content
 
 	is_shown_when_inactive = {
-		NOT = { has_technology_researched = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
@@ -541,7 +541,7 @@ je_WhOW_tech_ELD = {
 	group = je_group_historical_content
 
 	is_shown_when_inactive = {
-		NOT = { has_technology_researched = subterranean_mod }
+		NOT = { has_technology_researched = subterranean }
 	}
 
 	possible = {
