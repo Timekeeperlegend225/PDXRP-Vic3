@@ -501,16 +501,70 @@ chakravadah_decision = {
 		state_religion_switch_effect = yes
 		ig:ig_devout = {
 			hidden_effect = { set_interest_group_name = ig_chakravadah }
-			remove_ideology = { 
-				ideology_buddhist_moralist
-				ideology_papal_moralist
-				ideology_confucian
-				ideology_shinto_moralist
-				ideology_hindu_moralist_british_india
-				ideology_sikh_moralist
-				ideology_heavenly_kingdom_theocratic
-				ideology_moralist
-			}				
+			if = {
+				limit = {
+					has_ideology = ideology_buddhist_moralist
+				}
+				remove_ideology = { 
+					ideology_buddhist_moralist
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_papal_moralist
+				}
+				remove_ideology = { 
+					ideology_papal_moralist
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_confucian
+				}
+				remove_ideology = { 
+					ideology_confucian
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_shinto_moralist
+				}
+				remove_ideology = { 
+					ideology_shinto_moralist
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_hindu_moralist_british_india
+				}
+				remove_ideology = { 
+					ideology_hindu_moralist_british_india
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_sikh_moralist
+				}
+				remove_ideology = { 
+					ideology_sikh_moralist
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_heavenly_kingdom_theocratic
+				}
+				remove_ideology = { 
+					ideology_heavenly_kingdom_theocratic
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_moralist
+				}
+				remove_ideology = { 
+					ideology_moralist
+				}
+			}		
 			add_ideology = ideology_hindu_moralist
 			set_ig_trait = ig_trait:ig_trait_haibutsu_kishaku
 			set_ig_trait = ig_trait:ig_trait_yeshivot
@@ -546,3 +600,4 @@ chakravadah_decision = {
 		base = 10
 	}
 }
+
