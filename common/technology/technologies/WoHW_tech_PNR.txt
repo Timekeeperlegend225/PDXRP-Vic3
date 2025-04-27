@@ -53,9 +53,9 @@ rural_society = {
 	can_research = no
 	
 	modifier = {
-		building_group_bg_agriculture_throughput_add = 0.5
-		building_group_bg_plantations_throughput_add = 0.5
-		building_group_bg_ranching_throughput_add = 0.5
+		building_group_bg_agriculture_throughput_add = 0.05
+		building_group_bg_plantations_throughput_add = 0.05
+		building_group_bg_ranching_throughput_add = 0.05
 	}
 	
 	ai_weight = {
