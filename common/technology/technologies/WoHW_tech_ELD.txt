@@ -45,7 +45,8 @@ forest_harmony = {
 	can_research = no
 	
 	modifier = {
-		building_logging_camp_throughput_add = 0.2
+		goods_output_wood_mult = 0.15
+		goods_output_hardwood_mult = 0.15
 	}
 	
 	ai_weight = {
