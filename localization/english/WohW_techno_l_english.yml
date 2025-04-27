@@ -122,3 +122,74 @@
  
  divion_of_labour_tech:0 "The Fairest Sex"
  divion_of_labour_tech_desc:0 " "
+ 
+ combat_unit_type_goldspear_infantry:0 "Goldspear Infantry"
+ combat_unit_type_goldspear_infantry_desc:0 " "
+ 
+ combat_unit_type_flamecaster_infantry:0 "Flamecaster Infantry"
+ combat_unit_type_flamecaster_infantry_desc:0 "Units equipped with human-ready Flamecasters prepared to inflict devastating damage."
+ 
+ combat_unit_type_noldor_host:0 "Noldor Host"
+ combat_unit_type_noldor_host_desc:0 " "
+ 
+ combat_unit_type_flamecaster_squadron:0 "Flamecaster Squadron"
+ combat_unit_type_flamecaster_squadron_desc:0 "Dracaryan and Dragokin troops equipped with blood-powered Flamecasters."
+ 
+ combat_unit_type_nagavanshi_warriors:0 "Nagavanshi Warriors"
+ combat_unit_type_nagavanshi_warriors_desc:0 " "
+ 
+ combat_unit_type_ember_hellcanon:0 "Hellcannon"
+ combat_unit_type_ember_hellcanon_desc:0 "These devastating cannons should flaming molten balls almost at melting temperatures."
+ 
+ combat_unit_type_fireadders:0 "Fireadders"
+ combat_unit_type_fireadders_desc:0 " "
+ 
+ combat_unit_type_ember_tank:0 "Ember Tank"
+ combat_unit_type_ember_tank_desc:0 "A battle tank with an extremely thick fireproof armor, mounted with a scorching cannon powered by Flamecasters."
+ 
+ combat_unit_type_ent:0 "Ents"
+ combat_unit_type_ent_desc:0 " "
+ 
+ combat_unit_type_beast_cav:0 "Beast Cavalry"
+ combat_unit_type_beast_cav_desc:0 " "
+ 
+ combat_unit_eldar_spellsinger:0 "Eldar Spellslinger"
+ combat_unit_eldar_spellsinger_desc:0 " "
+ 
+ combat_unit_type_scarbeast:0 "Scarbeast"
+ combat_unit_type_scarbeast_desc:0 " "
+ 
+ combat_unit_type_seasnake:0 "Sea Snake"
+ combat_unit_type_seasnake_desc:0 " "
+ 
+ combat_unit_type_ember_steamship:0 "Ember Steamship"
+ combat_unit_type_ember_steamship_desc:0 "An advanced, speedy support ship owned by the Council of Embers."
+ 
+ combat_unit_type_teleri_greyship:0 "Teleri Greyship"
+ combat_unit_type_teleri_greyship_desc:0 " "
+ 
+ combat_unit_type_flameclad:0 "Flameclad"
+ combat_unit_type_flameclad_desc:0 "A standard Ironclada retrofitted with technology from the Council of Embers."
+ 
+ combat_unit_type_snakeship:0 "Snakeship"
+ combat_unit_type_snakeship_desc:0 " "
+ 
+ combat_unit_type_cobraship:0 "Cobraship"
+ combat_unit_type_cobraship_desc:0 " "
+ 
+ combat_unit_type_ember_dreadship:0 "Dreadship"
+ combat_unit_type_ember_dreadship_desc:0 "A behemoth vessel representing the pinaccle of naval power of the Council of Embers."
+ 
+ combat_unit_spear_of_Orome:0 "Spear of Orome"
+ combat_unit_spear_of_Orome_desc:0 " "
+ 
+ combat_unit_type_snakesub:0 "Snakesub"
+ combat_unit_type_snakesub_desc:0 " "
+ 
+ combat_unit_eldar_seasinger:0 "Seasinger"
+ combat_unit_eldar_seasinger_desc:0 " "
+ 
+ combat_unit_type_snakecarrier:0 "Snake Carrier"
+ combat_unit_type_snakecarrier_desc:0 " "
+ 
+ 
