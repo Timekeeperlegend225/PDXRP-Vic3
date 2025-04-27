@@ -658,8 +658,8 @@ broaden_studies = {
 
 study_subtareans = {
 	is_shown = {
+		NOT = { has_technology_researched = subterranean }
 		OR = {
-			NOT = { has_technology_researched = subterranean }
 			NOT = { has_journal_entry = je_WhOW_tech_EMB }
 			NOT = { has_journal_entry = je_WhOW_tech_PNR }
 			NOT = { has_journal_entry = je_WhOW_tech_ALA }
