@@ -398,7 +398,7 @@ je_WhOW_tech_ALA = {
 			if = {
 				limit = {
 					scope:journal_entry = { 
-						"scripted_bar_progress(je_WhOW_tech_ALA_pro_progress_bar)" >= je_WhOW_tech_ALA_pro_cost
+						"scripted_bar_progress(je_WhOW_tech_ALA_pro_progress_bar)" >= 1000
 					}
 				}
 				if = {
