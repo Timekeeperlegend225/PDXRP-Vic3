@@ -4778,8 +4778,17 @@ gm_actions.40 = {
 		}
 	}
 	
+	option = { #Give a trait
+		name = gm_actions.410.t
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
 	option = { #Pull to GM
-		name = gm_actions.40.e
+		name = gm_actions.40.f
 		random_country = {
 			limit = {
 				has_modifier = game_master
@@ -5925,6 +5934,268 @@ gm_actions.407 = {
 		}
 	}
 }
+
+gm_actions.410 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.410.t
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+		scope:recipient = {
+			every_scope_character = {
+				limit = {
+					has_modifier = target_character_mod
+				}
+				save_scope_as = target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.410.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.410.b
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = acolyte
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = acolyte }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = acolyte
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = acolyte
+		trigger = {
+			scope:target_character = {
+				has_trait = acolyte
+			}
+		}
+		scope:target_character = {
+			remove_trait = acolyte
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = inquisitor
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = inquisitor }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = inquisitor
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = inquisitor
+		trigger = {
+			scope:target_character = {
+				has_trait = inquisitor
+			}
+		}
+		scope:target_character = {
+			remove_trait = inquisitor
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = enlightened
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = enlightened }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = enlightened
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = enlightened
+		trigger = {
+			scope:target_character = {
+				has_trait = enlightened
+			}
+		}
+		scope:target_character = {
+			remove_trait = enlightened
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = beatified
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = beatified }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = beatified
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = beatified
+		trigger = {
+			scope:target_character = {
+				has_trait = beatified
+			}
+		}
+		scope:target_character = {
+			remove_trait = beatified
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = saint
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = saint }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = saint
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = saint
+		trigger = {
+			scope:target_character = {
+				has_trait = saint
+			}
+		}
+		scope:target_character = {
+			remove_trait = saint
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ring_holder
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = ring_holder }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = ring_holder
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ring_holder
+		trigger = {
+			scope:target_character = {
+				has_trait = ring_holder
+			}
+		}
+		scope:target_character = {
+			remove_trait = ring_holder
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+}
+
 
 gm_actions.70 = {
 	type = country_event

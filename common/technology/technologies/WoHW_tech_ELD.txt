@@ -98,7 +98,7 @@ natural_culture = {
 	modifier = {
 		building_group_bg_agriculture_throughput_add = 0.20
 		building_group_bg_agriculture_standard_of_living_add = 0.5
-	
+	}
 	ai_weight = {
 		value = 0
 	}
@@ -146,7 +146,7 @@ alchemy = {
 	can_research = no
 	
 	modifier = {
-		
+	}
 	
 	ai_weight = {
 		value = 0
