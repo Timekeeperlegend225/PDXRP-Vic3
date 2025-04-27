@@ -601,3 +601,92 @@ chakravadah_decision = {
 	}
 }
 
+
+
+broaden_studies = {
+	is_shown = {
+		NOT = { has_technology_researched = subterranean }
+	}
+	
+	possible = {
+		NOT = { has_variable = WoHW_focus_var }
+		NOT = { has_modifier = studying_all_OPM }
+    }
+	
+	when_taken = {
+		add_modifier = studying_all_OPM
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_EMB
+			}
+			remove_modifier = focus_on_studying_EMB
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_PNR
+			}
+			remove_modifier = focus_on_studying_PNR
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ALA
+			}
+			remove_modifier = focus_on_studying_ALA
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_VAMP
+			}
+			remove_modifier = focus_on_studying_VAMP
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ELD
+			}
+			remove_modifier = focus_on_studying_ELD
+		}
+		set_variable = { 
+			name = WoHW_focus_var 
+			years = 1 
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+
+
+study_subtareans = {
+	is_shown = {
+		OR = {
+			NOT = { has_journal_entry = je_WhOW_tech_EMB }
+			NOT = { has_journal_entry = je_WhOW_tech_PNR }
+			NOT = { has_journal_entry = je_WhOW_tech_ALA }
+			NOT = { has_journal_entry = je_WhOW_tech_ELD }
+		}
+	}
+	possible = {
+		always = yes
+    }
+	
+	when_taken = {
+		add_journal_entry = {	
+			type = je_WhOW_tech_EMB
+		}
+		add_journal_entry = {	
+			type = je_WhOW_tech_PNR
+		}
+		add_journal_entry = {	
+			type = je_WhOW_tech_ALA
+		}
+		add_journal_entry = {	
+			type = je_WhOW_tech_ELD
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
