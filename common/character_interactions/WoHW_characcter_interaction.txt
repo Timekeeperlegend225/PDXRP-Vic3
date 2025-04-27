@@ -1,0 +1,59 @@
+﻿enlighten_interaction = {
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		owner ?= {
+			has_technology_researched = alarian_empire_starting_boost
+		}
+	}
+
+	show_requirements = yes
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		add_trait = enlightened
+	}
+}
+
+inquisitor_interaction = {
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		owner ?= {
+			has_technology_researched = alarian_empire_starting_boost
+		}
+	}
+
+	show_requirements = yes
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		add_trait = inquisitor
+	}
+}
+
+beatified_interaction = {
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		owner ?= {
+			has_technology_researched = alarian_empire_starting_boost
+		}
+	}
+
+	show_requirements = yes
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		add_trait = beatified
+	}
+}
