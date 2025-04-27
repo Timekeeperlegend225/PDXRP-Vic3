@@ -656,11 +656,10 @@ broaden_studies = {
 	}
 }
 
-
-
 study_subtareans = {
 	is_shown = {
 		OR = {
+			NOT = { has_technology_researched = subterranean }
 			NOT = { has_journal_entry = je_WhOW_tech_EMB }
 			NOT = { has_journal_entry = je_WhOW_tech_PNR }
 			NOT = { has_journal_entry = je_WhOW_tech_ALA }
@@ -683,6 +682,35 @@ study_subtareans = {
 		}
 		add_journal_entry = {	
 			type = je_WhOW_tech_ELD
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+superior_embargo_to_everyone = {
+	is_shown = {
+		has_technology_researched = subterranean
+	}
+	possible = {
+		always = yes
+    }
+	
+	when_taken = {
+		save_scope_as = origin 
+		every_country = {
+			limit = {
+				NOT = { has_technology_researched = subterranean }
+			}
+			save_scope_as = primitive_embargo_target
+			scope:origin = {
+				create_diplomatic_pact = {
+					country = scope:primitive_embargo_target
+					type = superior_embargo
+				}
+			}
 		}
 	}
 

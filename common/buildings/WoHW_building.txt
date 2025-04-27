@@ -71,7 +71,7 @@ building_hole_ALA = {
 
 building_hole_ELD = {
 	building_group = bg_construction
-	icon = "gfx/interface/icons/building_icons/hole_ala.dds"
+	icon = "gfx/interface/icons/building_icons/hole_eld.dds"
 	city_type = none
 	levels_per_mesh = 5
 	
