@@ -220,7 +220,7 @@ building_memorite_extraction_throughput_add={
 	}
 }
 
-state_building_port_max_level_add={
+state_building_airport_max_level_add={
 	decimals=0
 	color=good
 	game_data={

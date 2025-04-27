@@ -9,12 +9,35 @@
 	}
 }
 
-
 principle_group_military_industry = {
 	primary_for_identity = EMB_Empire
 	levels = {
 		principle_military_industry_1
 		principle_military_industry_2
 		principle_military_industry_3
+	}
+}
+
+principle_group_divine_economics = {
+	unlocking_identity = identity_religious
+	primary_for_identity = identity_religious
+	unlocking_identity = PNR_Empire
+	primary_for_identity = PNR_Empire
+
+	levels = {
+		principle_divine_economics_1
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+}
+
+principle_group_vassalization = {
+	primary_for_identity = identity_sovereign_empire
+	primary_for_identity = ELD_trade_league
+
+	levels = {
+		principle_vassalization_1
+		principle_vassalization_2
+		principle_vassalization_3
 	}
 }

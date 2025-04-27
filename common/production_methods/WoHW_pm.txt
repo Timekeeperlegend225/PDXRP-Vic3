@@ -3,8 +3,6 @@
 
 	building_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 5
-			country_bureaucracy_add = 40
 			# output goods
 			goods_output_grain_add = 50
 			goods_output_meat_add = 50
@@ -12,9 +10,8 @@
 			goods_output_coal_add = 20
 			goods_output_iron_add = 10
 			goods_output_ammunition_add = 20
-			goods_output_small_arms_add = 20
 			goods_output_steel_add = 20
-			goods_output_manowars_add = 20
+			goods_output_ironclads_add = 20
 			goods_output_fabric_add = 10
 			goods_output_clothes_add = 10
 			goods_output_luxury_clothes_add = 5
@@ -43,6 +40,13 @@
 			building_employment_laborers_add = 10000
 		}
 	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 5
+			country_bureaucracy_add = 40
+		}
+	}
 }
 
 pm_wohw_hole_naga = {
@@ -50,26 +54,22 @@ pm_wohw_hole_naga = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 5
-			country_bureaucracy_add = 40
-			# output goods
 			goods_output_grain_add = 50
 			goods_output_meat_add = 50
 			goods_output_groceries_add = 20
 			goods_output_coal_add = 20
-			goods_output_iron_add = 10
+			goods_output_iron_add = 40
 			goods_output_ammunition_add = 20
 			goods_output_small_arms_add = 20
 			goods_output_steel_add = 20
-			goods_output_manowars_add = 20
 			goods_output_fabric_add = 10
 			goods_output_clothes_add = 10
 			goods_output_luxury_clothes_add = 5
 			goods_output_furniture_add = 10
 			goods_output_papers_add = 10
 			goods_output_clippers_add = 10
-			goods_output_sulfur_add = 20
-			goods_output_lead_add = 10
+			goods_output_sulfur_add = 30
+			goods_output_lead_add = 30
 			goods_output_engines_add = 2
 			goods_output_glass_add = 5
 			goods_output_fertilizer_add = 5
@@ -77,6 +77,7 @@ pm_wohw_hole_naga = {
 			goods_output_explosives_add = 2
 			goods_output_luxury_furniture_add = 5
 			goods_explosives_fine_art_add = 2
+			goods_output_nagan_cattle_add = 30
 		}
 
 		level_scaled = {
@@ -89,6 +90,13 @@ pm_wohw_hole_naga = {
 			building_employment_laborers_add = 10000
 		}
 	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 5
+			country_bureaucracy_add = 40
+		}
+	}
 }
 
 pm_wohw_hole_ala = {
@@ -96,9 +104,59 @@ pm_wohw_hole_ala = {
 
 	building_modifiers = {
 		workforce_scaled = {
+			goods_output_grain_add = 50
+			goods_output_meat_add = 50
+			goods_output_groceries_add = 20
+			goods_output_coal_add = 20
+			goods_output_iron_add = 10
+			goods_output_small_arms_add = 20
+			goods_output_steel_add = 20
+			goods_output_fabric_add = 10
+			goods_output_clothes_add = 10
+			goods_output_luxury_clothes_add = 5
+			goods_output_furniture_add = 10
+			goods_output_papers_add = 10
+			goods_output_sulfur_add = 20
+			goods_output_lead_add = 10
+			goods_output_engines_add = 2
+			goods_output_glass_add = 5
+			goods_output_fertilizer_add = 5
+			goods_output_tools_add = 10
+			goods_output_luxury_furniture_add = 5
+			goods_output_fine_art_add = 2
+			goods_output_memorite_add = 30
+			goods_output_aeroplanes_add = 20
+			goods_output_electricity_add = 40
+			goods_output_tanks_add = 10
+			goods_output_artillery_add = 10
+			goods_output_wood_add = 25
+			
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 500
+			building_employment_officers_add = 500
+			building_employment_bureaucrats_add = 500
+			building_employment_shopkeepers_add = 500
+			building_employment_clerks_add = 1500
+			building_employment_clergymen_add = 500
+			building_employment_machinists_add = 5000
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
 			country_construction_add = 5
 			country_bureaucracy_add = 40
-			# output goods
+		}
+	}
+}
+
+pm_wohw_hole_eld = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_power_looms.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
 			goods_output_grain_add = 50
 			goods_output_meat_add = 50
 			goods_output_groceries_add = 20
@@ -120,10 +178,9 @@ pm_wohw_hole_ala = {
 			goods_output_glass_add = 5
 			goods_output_fertilizer_add = 5
 			goods_output_tools_add = 10
-			goods_output_explosives_add = 2
 			goods_output_luxury_furniture_add = 5
-			goods_explosives_fine_art_add = 2
-			goods_output_memorite_add = 20
+			goods_output_fine_art_add = 2
+			goods_output_lasse_add = 20
 		}
 
 		level_scaled = {
@@ -134,6 +191,13 @@ pm_wohw_hole_ala = {
 			building_employment_clerks_add = 1500
 			building_employment_clergymen_add = 500
 			building_employment_machinists_add = 5000
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 5
+			country_bureaucracy_add = 40
 		}
 	}
 }
