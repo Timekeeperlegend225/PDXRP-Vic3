@@ -227,3 +227,12 @@ state_building_airport_max_level_add={
 		ai_value=0
 	}
 }
+
+goods_output_wood_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
