@@ -48,7 +48,7 @@ nagan_studies = {
 
 rural_society = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/rural_society.dds"
+	texture = "gfx/interface/icons/invention_icons/religious_bureaucracy.dds"
 	category = production
 	can_research = no
 	
@@ -65,7 +65,7 @@ rural_society = {
 
 snakeship_tech = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/snakeship_tech.dds"
+	texture = "gfx/interface/icons/invention_icons/religious_bureaucracy.dds"
 	category = military
 	can_research = no
 	
@@ -117,7 +117,7 @@ nagan_cattle_tech = {
 
 beast_cavalry_tech = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/beast_cavalry_tech.dds"
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_tech.dds"
 	category = military
 	can_research = no
 	
@@ -134,7 +134,7 @@ beast_cavalry_tech = {
 
 forced_conversion = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/forced_conversion.dds"
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_tech.dds"
 	category = society
 	can_research = no
 	
@@ -175,7 +175,7 @@ nagan_cattle_fertilizer = {
 
 goldspear_infantry_tech = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/goldspear_infantry_tech.dds"
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_fertilizer.dds"
 	category = military
 	can_research = no
 	
@@ -191,7 +191,7 @@ goldspear_infantry_tech = {
 
 chakravadach_enlightmen = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/chakravadach_enlightmen.dds"
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_fertilizer.dds"
 	category = society
 	can_research = no
 	
@@ -221,7 +221,7 @@ nagan_cattle_breeding = {
 
 guerilla_warfare = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/guerilla_warfare.dds"
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_breeding.dds"
 	category = military
 	can_research = no
 	
@@ -240,7 +240,7 @@ guerilla_warfare = {
 
 baby_and_work = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/baby_and_work.dds"
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_breeding.dds"
 	category = society
 	can_research = no
 	

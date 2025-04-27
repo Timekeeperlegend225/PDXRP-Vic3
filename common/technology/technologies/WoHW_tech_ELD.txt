@@ -40,7 +40,7 @@ eldar_studies = {
 
 forest_harmony = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/forest_harmony.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = production
 	can_research = no
 	
@@ -56,7 +56,7 @@ forest_harmony = {
 
 elven_first_aid = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/elven_first_aid.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = military
 	can_research = no
 	
@@ -73,7 +73,7 @@ elven_first_aid = {
 
 elven_aura = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/elven_aura.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = society
 	can_research = no
 	
@@ -92,7 +92,7 @@ elven_aura = {
 
 natural_culture = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/natural_culture.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = production
 	can_research = no
 	
@@ -107,7 +107,7 @@ natural_culture = {
 
 precision_archery = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/precision_archery.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = military
 	can_research = no
 	
@@ -123,7 +123,7 @@ precision_archery = {
 
 plantiri_tech = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/plantiri_tech.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = society
 	can_research = no
 	
@@ -142,7 +142,7 @@ plantiri_tech = {
 
 alchemy = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/alchemy.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = production
 	can_research = no
 	
@@ -156,7 +156,7 @@ alchemy = {
 
 efficient_logistics = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/efficient_logistics.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = military
 	can_research = no
 		
@@ -172,7 +172,7 @@ efficient_logistics = {
 
 naturalism_tech = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/naturalism_tech.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = society
 	can_research = no
 	
@@ -193,7 +193,7 @@ naturalism_tech = {
 
 evlven_smithing = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/evlven_smithing.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = production
 	can_research = no
 	
@@ -204,7 +204,7 @@ evlven_smithing = {
 
 elven_healing = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/elven_healing.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = military
 	can_research = no
 	
@@ -220,7 +220,7 @@ elven_healing = {
 
 divion_of_labour_tech = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/divion_of_labour_tech.dds"
+	texture = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 	category = society
 	can_research = no
 	

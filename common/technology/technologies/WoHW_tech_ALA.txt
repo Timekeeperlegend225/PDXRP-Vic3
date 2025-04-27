@@ -57,7 +57,7 @@ basic_levitation = {
 
 purification = {
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/purification.dds"
+	texture = "gfx/interface/icons/invention_icons/memorite_manipulation.dds"
 	category = society
 	can_research = no
 	
@@ -77,7 +77,7 @@ purification = {
 
 memorite_treatment = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/memorite_treatment.dds"
+	texture = "gfx/interface/icons/invention_icons/energy_focalisation.dds"
 	category = production
 	can_research = no
 	
@@ -103,7 +103,7 @@ flying_machine = {
 
 miracle_healing = {
 	era = era_3
-	texture = "gfx/interface/icons/invention_icons/purification.dds"
+	texture = "gfx/interface/icons/invention_icons/memorite_manipulation.dds"
 	category = society
 	can_research = no
 	
@@ -121,7 +121,7 @@ miracle_healing = {
 
 memoritic_reaction = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/memoritic_reaction.dds"
+	texture = "gfx/interface/icons/invention_icons/energy_focalisation.dds"
 	category = production
 	can_research = no
 	
@@ -132,7 +132,7 @@ memoritic_reaction = {
 
 floating_warfare = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/floating_warfare.dds"
+	texture = "gfx/interface/icons/invention_icons/flying_machine.dds"
 	category = military
 	can_research = no
 	
@@ -148,7 +148,7 @@ floating_warfare = {
 
 holy_light = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/holy_light.dds"
+	texture = "gfx/interface/icons/invention_icons/memorite_manipulation.dds"
 	category = society
 	can_research = no
 	
@@ -161,7 +161,7 @@ holy_light = {
 
 connectic = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/connectic.dds"
+	texture = "gfx/interface/icons/invention_icons/energy_focalisation.dds"
 	category = production
 	can_research = no
 	
@@ -172,7 +172,7 @@ connectic = {
 
 heavy_floating_vessel = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/heavy_floating_vessel.dds"
+	texture = "gfx/interface/icons/invention_icons/flying_machine.dds"
 	category = military
 	can_research = no
 	
@@ -187,7 +187,7 @@ heavy_floating_vessel = {
 
 ascension = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/ascension.dds"
+	texture = "gfx/interface/icons/invention_icons/memorite_manipulation.dds"
 	category = society
 	can_research = no
 	
