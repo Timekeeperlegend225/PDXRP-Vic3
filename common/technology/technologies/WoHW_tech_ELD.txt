@@ -16,6 +16,9 @@ eldar_empire_starting_boost = {
 		state_infrastructure_mult = 0.30
 		state_mortality_mult = -0.25
 		character_health_add = 0.5
+		unit_recovery_rate_add = 0.05
+		battle_casualties_mult = -0.05
+		state_migration_pull_mult = 0.1
 	}
 	
 	ai_weight = {
@@ -61,9 +64,10 @@ elven_first_aid = {
 	can_research = no
 	
 	modifier = {
-		unit_recovery_rate_add = 0.1
-		battle_casualties_mult = -0.1
-		state_mortality_mult = -0.025
+		unit_recovery_rate_add = 0.05
+		battle_casualties_mult = -0.05
+		building_training_rate_mult = 0.1
+		
 	}
 	
 	ai_weight = {
@@ -78,7 +82,7 @@ elven_aura = {
 	can_research = no
 	
 	modifier = {
-		state_bureaucracy_population_base_cost_factor_mult = -0.05
+		state_bureaucracy_population_base_cost_factor_mult = -0.15
 		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.25
 	}
 	
@@ -111,7 +115,7 @@ precision_archery = {
 	can_research = no
 	
 	modifier = {
-		unit_kill_rate_add = 0.1
+		unit_kill_rate_add = 0.05
 		unit_devastation_mult = -0.2
 	}
 	
@@ -179,7 +183,7 @@ naturalism_tech = {
 		state_pollution_generation_add = -10
 		state_pollution_reduction_health_mult = -0.2
 		country_migration_restrictiveness_add = -5
-		state_migration_pull_mult = 0.3
+		state_migration_pull_mult = 0.1
 	}
 	
 	ai_weight = {
@@ -207,8 +211,9 @@ elven_healing = {
 	can_research = no
 	
 	modifier = {
-		unit_recovery_rate_add = 0.2
-		battle_casualties_mult = -0.1
+		unit_recovery_rate_add = 0.05
+		battle_casualties_mult = -0.05
+		state_mortality_mult = -0.025
 	}
 	
 	ai_weight = {

@@ -71,6 +71,7 @@ snakeship_tech = {
 	
 	modifier = {
 		unit_convoy_raiding_mult = 0.1
+		country_trade_route_cost_mult = -0.1
 	}
 	
 	ai_weight = {
@@ -85,9 +86,12 @@ religious_bureaucracy = {
 	can_research = no
 	
 	modifier = {	
-		state_bureaucracy_population_base_cost_factor_mult = -0.05
-		state_harvest_condition_drought_impact_mult= -0.1
-		state_harvest_condition_disease_outbreak_duration_mult= -0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.20
+		state_harvest_condition_drought_duration_mult= -0.2
+		state_harvest_condition_disease_outbreak_duration_mult= -0.2
+		state_harvest_condition_flood_duration_mult = -0.2
+		state_harvest_condition_wildfire_duration_mult = -0.2
+		interest_group_in_government_approval_add = 3
 	}
 	
 	ai_weight = {
@@ -104,7 +108,7 @@ nagan_cattle_tech = {
 	can_research = no
 	
 	modifier = {
-		state_pollution_reduction_health_mult = -0.15
+		state_pollution_reduction_health_mult = -0.25
 	}
 	
 	ai_weight = {
@@ -134,7 +138,7 @@ forced_conversion = {
 	can_research = no
 	
 	modifier = {
-		interest_group_ig_devout_pol_str_mult = 0.1
+		interest_group_ig_devout_pol_str_mult = 0.2
 		tax_heathen_add = 0.25
 	}
 	
