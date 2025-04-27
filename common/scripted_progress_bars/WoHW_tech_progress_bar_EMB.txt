@@ -120,101 +120,102 @@
 			}
 			add = 1
 		}
+		
 		if = {
 			limit = {
-				NOT = { has_technology_researched = energy_focalisation }
+				NOT = { has_technology_researched = volcanic_mining }
 				OR = {
-					has_technology_researched = basic_levitation
-					has_technology_researched = flying_machine
-					has_technology_researched = floating_warfare
-					has_technology_researched = heavy_floating_vessel
+					has_technology_researched = flameclad_tech
+					has_technology_researched = ember_hellcanon_tech
+					has_technology_researched = flamecaster_infantry_tech
+					has_technology_researched = emberian_conscription_tech
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = memorite_treatment }
+				NOT = { has_technology_researched = flamecaster_tech }
 				OR = {
-					has_technology_researched = flying_machine
-					has_technology_researched = floating_warfare
-					has_technology_researched = heavy_floating_vessel
+					has_technology_researched = ember_hellcanon_tech
+					has_technology_researched = flamecaster_infantry_tech
+					has_technology_researched = emberian_conscription_tech
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = memoritic_reaction }
+				NOT = { has_technology_researched = industrial_flamecaster }
 				OR = {
-					has_technology_researched = floating_warfare
-					has_technology_researched = heavy_floating_vessel
+					has_technology_researched = flamecaster_infantry_tech
+					has_technology_researched = emberian_conscription_tech
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = connectic }
-				has_technology_researched = heavy_floating_vessel
-			}
-			add = 0.25
-		}
-		if = {
-			limit = {
-				NOT = { has_technology_researched = energy_focalisation }
-				OR = {
-					has_technology_researched = purification
-					has_technology_researched = miracle_healing
-					has_technology_researched = holy_light
-					has_technology_researched = ascension
-				}
-			}
-			add = 0.25
-		}
-		else_if = {
-			limit = {
-				NOT = { has_technology_researched = memorite_treatment }
-				OR = {
-					has_technology_researched = miracle_healing
-					has_technology_researched = holy_light
-					has_technology_researched = ascension
-				}
-			}
-			add = 0.25
-		}
-		else_if = {
-			limit = {
-				NOT = { has_technology_researched = memoritic_reaction }
-				OR = {
-					has_technology_researched = holy_light
-					has_technology_researched = ascension
-				}
-			}
-			add = 0.25
-		}
-		else_if = {
-			limit = {
-				NOT = { has_technology_researched = connectic }
-				has_technology_researched = ascension
+				NOT = { has_technology_researched = flamecaster_production }
+				has_technology_researched = emberian_conscription_tech
 			}
 			add = 0.25
 		}
 		if = {
 			limit = {
-				NOT = { has_technology_researched = energy_focalisation }
+				NOT = { has_technology_researched = volcanic_mining }
+				OR = {
+					has_technology_researched = efficient_authority
+					has_technology_researched = dragon_baby
+					has_technology_researched = more_work
+					has_technology_researched = militarized_education_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = flamecaster_tech }
+				OR = {
+					has_technology_researched = dragon_baby
+					has_technology_researched = more_work
+					has_technology_researched = militarized_education_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = industrial_flamecaster }
+				OR = {
+					has_technology_researched = more_work
+					has_technology_researched = militarized_education_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = flamecaster_production }
+				has_technology_researched = militarized_education_tech
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = volcanic_mining }
 			}
 			multiply = 2
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = memorite_treatment
+				has_technology_researched = flamecaster_tech
 			}
 			multiply = 0.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = memoritic_reaction
+				has_technology_researched = industrial_flamecaster
 			}
 			multiply = 0.25
 		}
@@ -350,99 +351,99 @@ je_WhOW_tech_EMB_mil_progress_bar = {
 		}
 		if = {
 			limit = {
-				NOT = { has_technology_researched = basic_levitation }
+				NOT = { has_technology_researched = flameclad_tech }
 				OR = {
-					has_technology_researched = energy_focalisation
-					has_technology_researched = memorite_treatment
-					has_technology_researched = memoritic_reaction
-					has_technology_researched = connectic
+					has_technology_researched = volcanic_mining
+					has_technology_researched = flamecaster_tech
+					has_technology_researched = industrial_flamecaster
+					has_technology_researched = flamecaster_production
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = flying_machine }
+				NOT = { has_technology_researched = ember_hellcanon_tech }
 				OR = {
-					has_technology_researched = memorite_treatment
-					has_technology_researched = memoritic_reaction
-					has_technology_researched = connectic
+					has_technology_researched = volcanic_mining
+					has_technology_researched = flamecaster_tech
+					has_technology_researched = industrial_flamecaster
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = floating_warfare }
+				NOT = { has_technology_researched = flamecaster_infantry_tech }
 				OR = {
-					has_technology_researched = memoritic_reaction
-					has_technology_researched = connectic
+					has_technology_researched = flamecaster_tech
+					has_technology_researched = industrial_flamecaster
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = heavy_floating_vessel }
-				has_technology_researched = connectic
+				NOT = { has_technology_researched = emberian_conscription_tech }
+				has_technology_researched = industrial_flamecaster
 			}
 			add = 0.25
 		}
 		if = {
 			limit = {
-				NOT = { has_technology_researched = basic_levitation }
+				NOT = { has_technology_researched = flameclad_tech }
 				OR = {
-					has_technology_researched = purification
-					has_technology_researched = miracle_healing
-					has_technology_researched = holy_light
-					has_technology_researched = ascension
+					has_technology_researched = efficient_authority
+					has_technology_researched = dragon_baby
+					has_technology_researched = more_work
+					has_technology_researched = militarized_education_tech
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = flying_machine }
+				NOT = { has_technology_researched = ember_hellcanon_tech }
 				OR = {
-					has_technology_researched = miracle_healing
-					has_technology_researched = holy_light
-					has_technology_researched = ascension
+					has_technology_researched = dragon_baby
+					has_technology_researched = more_work
+					has_technology_researched = militarized_education_tech
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = floating_warfare }
+				NOT = { has_technology_researched = flamecaster_infantry_tech }
 				OR = {
-					has_technology_researched = holy_light
-					has_technology_researched = ascension
+					has_technology_researched = more_work
+					has_technology_researched = militarized_education_tech
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = heavy_floating_vessel }
-				has_technology_researched = ascension
+				NOT = { has_technology_researched = flameclad_tech }
+				has_technology_researched = militarized_education_tech
 			}
 			add = 0.25
 		}
 		if = {
 			limit = {
-				NOT = { has_technology_researched = basic_levitation }
+				NOT = { has_technology_researched = flameclad_tech }
 			}
 			multiply = 2
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = flying_machine
+				has_technology_researched = ember_hellcanon_tech
 			}
 			multiply = 0.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = floating_warfare
+				has_technology_researched = flamecaster_infantry_tech
 			}
 			multiply = 0.25
 		}
@@ -575,101 +576,101 @@ je_WhOW_tech_EMB_soc_progress_bar = {
 			}
 			add = 1
 		}
-		if = {
+	if = {
 			limit = {
-				NOT = { has_technology_researched = purification }
+				NOT = { has_technology_researched = efficient_authority }
 				OR = {
-					has_technology_researched = energy_focalisation
-					has_technology_researched = memorite_treatment
-					has_technology_researched = memoritic_reaction
-					has_technology_researched = connectic
+					has_technology_researched = volcanic_mining
+					has_technology_researched = flamecaster_tech
+					has_technology_researched = industrial_flamecaster
+					has_technology_researched = flamecaster_production
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = miracle_healing }
+				NOT = { has_technology_researched = dragon_baby }
 				OR = {
-					has_technology_researched = memorite_treatment
-					has_technology_researched = memoritic_reaction
-					has_technology_researched = connectic
+					has_technology_researched = volcanic_mining
+					has_technology_researched = flamecaster_tech
+					has_technology_researched = industrial_flamecaster
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = holy_light }
+				NOT = { has_technology_researched = more_work }
 				OR = {
-					has_technology_researched = memoritic_reaction
-					has_technology_researched = connectic
+					has_technology_researched = flamecaster_tech
+					has_technology_researched = industrial_flamecaster
 				}
 			}
 			add = 0.25
 		}
 		else_if = {
 			limit = {
-				NOT = { has_technology_researched = ascension }
-				has_technology_researched = connectic
-			}
-			add = 0.25
-		}
-		if = {
-			limit = {
-				NOT = { has_technology_researched = purification }
-				OR = {
-					has_technology_researched = basic_levitation
-					has_technology_researched = flying_machine
-					has_technology_researched = floating_warfare
-					has_technology_researched = heavy_floating_vessel
-				}
-			}
-			add = 0.25
-		}
-		else_if = {
-			limit = {
-				NOT = { has_technology_researched = miracle_healing }
-				OR = {
-					has_technology_researched = flying_machine
-					has_technology_researched = floating_warfare
-					has_technology_researched = heavy_floating_vessel
-				}
-			}
-			add = 0.25
-		}
-		else_if = {
-			limit = {
-				NOT = { has_technology_researched = holy_light }
-				OR = {
-					has_technology_researched = floating_warfare
-					has_technology_researched = heavy_floating_vessel
-				}
-			}
-			add = 0.25
-		}
-		else_if = {
-			limit = {
-				NOT = { has_technology_researched = ascension }
-				has_technology_researched = heavy_floating_vessel
+				NOT = { has_technology_researched = militarized_education_tech }
+				has_technology_researched = industrial_flamecaster
 			}
 			add = 0.25
 		}
 		if = {
 			limit = {
-				NOT = { has_technology_researched = purification }
+				NOT = { has_technology_researched = efficient_authority }
+				OR = {
+					has_technology_researched = flameclad_tech
+					has_technology_researched = ember_hellcanon_tech
+					has_technology_researched = flamecaster_infantry_tech
+					has_technology_researched = emberian_conscription_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = dragon_baby }
+				OR = {
+					has_technology_researched = ember_hellcanon_tech
+					has_technology_researched = flamecaster_infantry_tech
+					has_technology_researched = emberian_conscription_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = more_work }
+				OR = {
+					has_technology_researched = flamecaster_infantry_tech
+					has_technology_researched = emberian_conscription_tech
+				}
+			}
+			add = 0.25
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = militarized_education_tech }
+				has_technology_researched = emberian_conscription_tech
+			}
+			add = 0.25
+		}
+		if = {
+			limit = {
+				NOT = { has_technology_researched = flameclad_tech }
 			}
 			multiply = 2
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = miracle_healing
+				has_technology_researched = ember_hellcanon_tech
 			}
 			multiply = 0.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = holy_light
+				has_technology_researched = flamecaster_infantry_tech
 			}
 			multiply = 0.25
 		}
