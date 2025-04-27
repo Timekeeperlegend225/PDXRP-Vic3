@@ -67,3 +67,13 @@ ALA_focus_mil = {
 ALA_focus_soc = {
 	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
 }
+
+ELD_focus_prod = {
+	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
+}
+ELD_focus_mil = {
+	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
+}
+ELD_focus_soc = {
+	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
+}
