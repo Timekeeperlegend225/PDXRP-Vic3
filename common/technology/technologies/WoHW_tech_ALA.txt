@@ -9,6 +9,7 @@ alarian_empire_starting_boost = {
 	modifier = {
 	state_colony_growth_creation_factor = 5
 	state_colony_growth_speed_mult = 2
+	country_institution_health_system_max_investment_add = 2
 	}
 	
 	ai_weight = {
@@ -65,7 +66,7 @@ purification = {
 		state_pollution_reduction_health_mult = -0.10
 		state_harvest_condition_drought_impact_mult= -0.05
 		state_harvest_condition_disease_outbreak_duration_mult= -0.1
-		state_standard_of_living_add = 2
+		state_standard_of_living_add = 0.5
 	}
 	
 	ai_weight = {
@@ -108,8 +109,7 @@ miracle_healing = {
 	can_research = no
 	
 	modifier = {	
-		country_institution_health_system_max_investment_add = 2
-		state_mortality_mult = -0.10	
+		state_mortality_mult = -0.05	
 	}
 	
 	ai_weight = {
@@ -192,7 +192,6 @@ ascension = {
 	can_research = no
 	
 	modifier = {	
-		state_mortality_mult = -0.10	
 		state_education_access_add = 0.10
 		state_standard_of_living_add = 7
 		state_lower_strata_expected_sol_add = 5

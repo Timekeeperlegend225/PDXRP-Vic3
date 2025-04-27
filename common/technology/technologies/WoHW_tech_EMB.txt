@@ -17,6 +17,7 @@ ember_empire_starting_boost = {
 		state_birth_rate_mult = 0.05
 		building_training_rate_add = 500
 		building_throughput_add = 0.25
+		state_building_naval_base_max_level_add = 20
 	}
 	
 	ai_weight = {
@@ -46,8 +47,8 @@ volcanic_mining = {
 	can_research = no
 	
 	modifier = {
-		building_coal_mine_throughput_add = 0.25
-		building_sulfur_mine_throughput_add = 0.25
+		building_coal_mine_throughput_add = 0.10
+		building_sulfur_mine_throughput_add = 0.10
 	}
 	
 	ai_weight = {
@@ -63,6 +64,7 @@ flameclad_tech = {
 	
 	modifier = {
 		interest_group_ig_armed_forces_pol_str_mult = 0.10
+		unit_convoy_requirements_mult = -0.1
 	}
 	
 	ai_weight = {
@@ -78,7 +80,6 @@ efficient_authority = {
 	
 	modifier = {
 		country_authority_mult = 0.10
-		state_bureaucracy_population_base_cost_factor_mult = -0.10
 	}
 	
 	ai_weight = {
@@ -123,7 +124,7 @@ dragon_baby = {
 	
 	modifier = {
 		country_authority_mult = 0.10
-		state_birth_rate_mult = 0.05
+		state_birth_rate_mult = 0.025
 	}
 	
 	ai_weight = {
@@ -152,7 +153,7 @@ flamecaster_infantry_tech = {
 	
 	modifier = {
 		interest_group_ig_armed_forces_pol_str_mult = 0.10
-		country_military_goods_cost_mult = -0.25
+		country_military_goods_cost_mult = -0.10
 	}
 	
 	ai_weight = {
@@ -198,7 +199,9 @@ emberian_conscription_tech = {
 	
 	modifier = {
 		interest_group_ig_armed_forces_pol_str_mult = 0.20
-		state_building_naval_base_max_level_add = 20
+		country_military_wages_mult = -0.25
+		state_building_barracks_max_level_add = 25
+		state_building_conscription_center_max_level_add = 50
 	}
 	
 	ai_weight = {
@@ -213,7 +216,10 @@ militarized_education_tech = {
 	can_research = no
 	
 	modifier = {
-		country_authority_mult = 0.20
+		state_education_access_add = -0.10
+		unit_morale_loss_mult = 0.05
+		building_training_rate_mult = 0.5
+		state_conscription_rate_add = 0.03
 	}
 	
 	ai_weight = {

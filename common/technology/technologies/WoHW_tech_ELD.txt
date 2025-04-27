@@ -45,8 +45,8 @@ forest_harmony = {
 	can_research = no
 	
 	modifier = {
-		goods_output_wood_mult = 0.15
-		goods_output_hardwood_mult = 0.15
+		goods_output_wood_mult = 0.10
+		goods_output_hardwood_mult = 0.10
 	}
 	
 	ai_weight = {
@@ -78,9 +78,8 @@ elven_aura = {
 	can_research = no
 	
 	modifier = {
-		country_authority_mult = 0.15
-		state_bureaucracy_population_base_cost_factor_mult = -0.10
-		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.10
+		state_bureaucracy_population_base_cost_factor_mult = -0.5
+		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.5
 	}
 	
 	ai_weight = {
@@ -97,7 +96,7 @@ natural_culture = {
 	can_research = no
 	
 	modifier = {
-		building_group_bg_agriculture_throughput_add = 0.20
+		building_group_bg_agriculture_throughput_add = 0.10
 		building_group_bg_agriculture_standard_of_living_add = 0.5
 	}
 	ai_weight = {
@@ -161,7 +160,7 @@ efficient_logistics = {
 	can_research = no
 		
 	modifier = {
-		country_military_goods_cost_mult = -0.2
+		country_military_goods_cost_mult = -0.1
 		unit_supply_consumption_mult = -0.1
 	}
 	
@@ -177,7 +176,6 @@ naturalism_tech = {
 	can_research = no
 	
 	modifier = {
-		country_authority_mult = 0.10
 		state_pollution_generation_add = -10
 		state_pollution_reduction_health_mult = -0.2
 		country_migration_restrictiveness_add = -5
