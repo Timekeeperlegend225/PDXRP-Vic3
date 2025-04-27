@@ -605,6 +605,7 @@ chakravadah_decision = {
 
 broaden_studies = {
 	is_shown = {
+		has_journal_entry = je_WhOW_tech_EMB
 		NOT = { has_technology_researched = subterranean }
 	}
 	
@@ -682,6 +683,37 @@ study_subtareans = {
 		}
 		add_journal_entry = {	
 			type = je_WhOW_tech_ELD
+		}
+		add_modifier = studying_all_OPM
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_EMB
+			}
+			remove_modifier = focus_on_studying_EMB
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_PNR
+			}
+			remove_modifier = focus_on_studying_PNR
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ALA
+			}
+			remove_modifier = focus_on_studying_ALA
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_VAMP
+			}
+			remove_modifier = focus_on_studying_VAMP
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ELD
+			}
+			remove_modifier = focus_on_studying_ELD
 		}
 	}
 
