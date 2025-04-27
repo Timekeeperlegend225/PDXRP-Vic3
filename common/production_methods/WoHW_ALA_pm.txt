@@ -188,7 +188,7 @@ pm_memorite_glass = {
 }
 
 pm_basic_memorite = {
-	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	texture = "gfx/interface/icons/production_method_icons/connectic.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
@@ -214,7 +214,7 @@ pm_basic_memorite = {
 }
 
 pm_memoritic_extraction = {
-	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	texture = "gfx/interface/icons/production_method_icons/connectic.dds"
 
 	unlocking_technologies = {
 		memoritic_reaction
@@ -241,7 +241,7 @@ pm_memoritic_extraction = {
 }
 
 pm_connectic_extraction = {
-	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	texture = "gfx/interface/icons/production_method_icons/connectic.dds"
 
 	unlocking_technologies = {
 		connectic
@@ -378,7 +378,7 @@ industrial_airport = {
 }
 
 pm_memorite_plant = {
-	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
+	texture = "gfx/interface/icons/production_method_icons/connectic.dds"
 
 	unlocking_technologies = {
 		steam_turbine
@@ -466,7 +466,7 @@ pm_conectic_phone = {
 }
 
 pm_conectic_telecom = {
-	texture = "gfx/interface/icons/production_method_icons/telephones.dds"
+	texture = "gfx/interface/icons/production_method_icons/radios.dds"
 	
 	unlocking_technologies = {
 		connectic
