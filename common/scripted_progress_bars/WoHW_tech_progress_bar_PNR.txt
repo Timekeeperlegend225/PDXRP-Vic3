@@ -15,13 +15,13 @@
 			limit = {
 				has_modifier = studying_all_OPM
 			}
-			add = 0.5
+			add = 0.3
 		}
 		else_if = {
 			limit = {
 				has_modifier = focus_on_studying_PNR
 			}
-			add = 2
+			add = 1.5
 		}
 		else_if = {
 			limit = {
@@ -32,7 +32,7 @@
 					has_modifier = focus_on_studying_VAM
 				}
 			}
-			add = -0.25
+			add = -0.15
 		}
 		if = {
 			limit = {
@@ -243,13 +243,13 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 			limit = {
 				has_modifier = studying_all_OPM
 			}
-			add = 0.5
+			add = 0.3
 		}
 		else_if = {
 			limit = {
 				has_modifier = focus_on_studying_PNR
 			}
-			add = 2
+			add = 1.5
 		}
 		else_if = {
 			limit = {
@@ -260,7 +260,7 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					has_modifier = focus_on_studying_VAM
 				}
 			}
-			add = -0.25
+			add = -0.15
 		}
 		if = {
 			limit = {
@@ -470,13 +470,13 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 			limit = {
 				has_modifier = studying_all_OPM
 			}
-			add = 0.5
+			add = 0.3
 		}
 		else_if = {
 			limit = {
 				has_modifier = focus_on_studying_PNR
 			}
-			add = 2
+			add = 1.5
 		}
 		else_if = {
 			limit = {
@@ -487,7 +487,7 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					has_modifier = focus_on_studying_VAM
 				}
 			}
-			add = -0.25
+			add = -0.15
 		}
 		if = {
 			limit = {
