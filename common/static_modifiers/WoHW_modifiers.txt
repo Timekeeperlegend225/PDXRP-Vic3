@@ -13,10 +13,10 @@ PNR_studies = {
 	icon = gfx/interface/icons/invention_icons/nagan_studies.dds
 }
 ALA_studies = {
-	icon = gfx/interface/icons/timed_modifier_icons/memorite_manipulation.dds
+	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
 }
 ELD_studies = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	icon = gfx/interface/icons/invention_icons/eldar_studies.dds
 }
 VAM_studies = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
@@ -29,10 +29,10 @@ focus_on_studying_PNR = {
 	icon = gfx/interface/icons/invention_icons/nagan_studies.dds
 }
 focus_on_studying_ALA = {
-	icon = gfx/interface/icons/timed_modifier_icons/memorite_manipulation.dds
+	icon = gfx/interface/icons/invention_icons/memorite_manipulation.dds
 }
 focus_on_studying_ELD = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	icon = gfx/interface/icons/invention_icons/eldar_studies.dds
 }
 focus_on_studying_VAM = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
