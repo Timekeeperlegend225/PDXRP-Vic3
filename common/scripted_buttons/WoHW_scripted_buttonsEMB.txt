@@ -63,6 +63,7 @@ je_WhOW_tech_EMB_pro = {
 				}
 			}
 		}
+		NOT = { has_modifier = EMB_focus_prod }
 	}
 
 	effect = {
@@ -104,6 +105,7 @@ je_WhOW_tech_EMB_mil = {
 				}
 			}
 		}
+		NOT = { has_modifier = EMB_focus_mil }
 	}
 
 	effect = {
@@ -145,6 +147,7 @@ je_WhOW_tech_EMB_soc = {
 				}
 			}
 		}
+		NOT = { has_modifier = EMB_focus_soc }
 	}
 
 	effect = {

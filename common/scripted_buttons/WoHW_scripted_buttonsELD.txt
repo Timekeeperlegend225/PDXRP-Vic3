@@ -63,6 +63,7 @@ je_WhOW_tech_ELD_pro = {
 				}
 			}
 		}
+		NOT = { has_modifier = ELD_focus_prod }
 	}
 
 	effect = {
@@ -104,6 +105,7 @@ je_WhOW_tech_ELD_mil = {
 				}
 			}
 		}
+		NOT = { has_modifier = ELD_focus_mil }
 	}
 
 	effect = {
@@ -145,6 +147,7 @@ je_WhOW_tech_ELD_soc = {
 				}
 			}
 		}
+		NOT = { has_modifier = ELD_focus_soc }
 	}
 
 	effect = {
@@ -186,6 +189,7 @@ je_WhOW_tech_ELD_gen = {
 				}
 			}
 		}
+		NOT = { has_modifier = ELD_focus_pro }
 	}
 
 	effect = {
