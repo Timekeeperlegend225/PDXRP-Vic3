@@ -151,19 +151,11 @@ forced_conversion = {
 
 #Tier 4
 
-nagan_cattle_fertilizer = {
+nagan_cattle_breeding = {
 	era = era_4
-	texture = "gfx/interface/icons/invention_icons/nagan_cattle_fertilizer.dds"
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_breeding.dds"
 	category = production
 	can_research = no
-	
-	modifier = {
-      state_food_security_add = 0.1
-	  building_group_bg_agriculture_standard_of_living_add = 1
-	  building_group_bg_plantations_standard_of_living_add = 1
-	  building_group_bg_ranching_standard_of_living_add = 1
-	  goods_output_explosives_mult = 0.15
-    }
 	
 	ai_weight = {
 		value = 0
@@ -203,11 +195,19 @@ chakravadach_enlightmen = {
 
 #Tier 5
 
-nagan_cattle_breeding = {
+nagan_cattle_fertilizer = {
 	era = era_5
-	texture = "gfx/interface/icons/invention_icons/nagan_cattle_breeding.dds"
+	texture = "gfx/interface/icons/invention_icons/nagan_cattle_fertilizer.dds"
 	category = production
 	can_research = no
+	
+	modifier = {
+      state_food_security_add = 0.5
+	  building_group_bg_agriculture_standard_of_living_add = 1
+	  building_group_bg_plantations_standard_of_living_add = 1
+	  building_group_bg_ranching_standard_of_living_add = 1
+	  goods_output_explosives_mult = 0.15
+    }
 	
 	ai_weight = {
 		value = 0
