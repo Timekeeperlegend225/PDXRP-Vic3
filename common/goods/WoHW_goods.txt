@@ -42,7 +42,7 @@ lasse = {
 
 nagan_cattle = {
 	texture = "gfx/interface/icons/goods_icons/nagan_cattle.dds"
-	cost = 50
+	cost = 35
 	category = staple
 	
 	prestige_factor = 25
