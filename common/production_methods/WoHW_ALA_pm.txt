@@ -301,9 +301,6 @@ basic_airport = {
 			state_infrastructure_add = 5
 		}
 	}
-	
-	required_input_goods = memorite
-	required_input_goods = aeroplane
 }		
 
 advanced_airport = {
@@ -337,9 +334,6 @@ advanced_airport = {
 			state_infrastructure_add = 7.5
 		}
 	}
-	
-	required_input_goods = memorite
-	required_input_goods = aeroplane
 }
 
 industrial_airport = {
@@ -372,9 +366,6 @@ industrial_airport = {
 			state_infrastructure_add = 10
 		}
 	}
-	
-	required_input_goods = memorite
-	required_input_goods = aeroplane
 }
 
 pm_memorite_plant = {
