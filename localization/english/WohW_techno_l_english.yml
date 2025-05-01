@@ -9,8 +9,8 @@
  memorite_manipulation:0 "Memorite Studies"
  memorite_manipulation_desc:0 "We were just able to get access to memorite, it's the time to begin to study the specificity of this strange ore."
  
- energy_focalisation:0 "Energy Focalisation"
- energy_focalisation_desc:0 "By compacting memorite we can produce energy ray able to hurt our oponents. It's weaker that riffle but generally more pratical to use "
+ energy_focalisation:0 "Memorite Glass"
+ energy_focalisation_desc:0 "By processing memorite we can make a nice blueish glass, it can also serve to illuminate our cities"
  
  basic_levitation:0 "Basic Levitation"
  basic_levitation_desc:0 "By adding large quantity of memorit to ligh material, we can make floating platform helping in construction sector"
@@ -18,8 +18,8 @@
  purification:0 "Purification"
  purification_desc:0 "The teaching of the Alarians allow us to purify our minds, our bodies and our environement. Some rare individual showed Ã¢rticulary improved health and ability to think more clearly"
  
- memorite_treatment:0 "Memorite Treatment"
- memorite_treatment_desc:0 "We have learned to extract some Memorite by ourself using glass and prayers. By treating it with other ore we can also make glass out of it"
+ memorite_treatment:0 "Memorite Generator"
+ memorite_treatment_desc:0 "We have learned to activate Memorite by prayers this allow us to extract some in apropriate place and harness energy."
  
  flying_machine:0 "Flying Machine"
  flying_machine_desc:0 "Implementing memorite into base cars and projecting it's energy correctly we have learned to make new machines allowing us to fulfill the oldest dream of man"
@@ -27,23 +27,23 @@
  miracle_healing:0 "Miracle Healing"
  miracle_healing_desc:0 "Learning about the nature of the reality and faith allow us to heal sickness that were previously considered incurable"
  
- memoritic_reaction:0 "Memoritic Reaction"
- memoritic_reaction_desc:0 "Desc"
+ memoritic_reaction:0 "Memorite Circuit"
+ memoritic_reaction_desc:0 "By sculpting memorit in specific way, we can obtain more complex reaction when activating it. We can reproduce some of the Alarian device and get more of it from our sacred places"
  
- floating_warfare:0 "Alarian Order Superiority"
- floating_warfare_desc:0 "Desc"
+ floating_warfare:0 "Aerial Warfare"
+ floating_warfare_desc:0 "Adjusting flying machine and adding memorite activator to it to fire light energy blast allow us to create new mount of a new generation"
  
- holy_light:0 "Alarian Order Superiority"
- holy_light_desc:0 "Desc"
+ holy_light:0 "Holy War"
+ holy_light_desc:0 "Using simple floating machine controled by prayers as catalyst allow us to use our new light power in the battlefield fire at our ennemies from the distance."
  
- connectic:0 "Alarian Order Superiority"
- connectic_desc:0 "Desc"
+ connectic:0 "Automation"
+ connectic_desc:0 "Advanced memorite circuit on machinery allow us new automated technique to replace our workforce, we can also harness more memorite than ever"
  
- heavy_floating_vessel:0 "Alarian Order Superiority"
- heavy_floating_vessel_desc:0 "Desc"
+ heavy_floating_vessel:0 "Heavy floating Machine"
+ heavy_floating_vessel_desc:0 "Our advance on the manipulation of memorite allow us to make bigger floating machine opening new opportunity to us."
  
- ascension:0 "Alarian Order Superiority"
- ascension_desc:0 "Desc"
+ ascension:0 "Ascencion"
+ ascension_desc:0 "We have finally attained enlightment being closer to the divine than ever, this greatly improve the live of our people who are wiser than ever."
  
  dracaryan_studies:0 "Studies on the Council of Embers"
  dracaryan_studies_desc:0 "The Council of Embers has shocked the world following the scorching of Iberia. We must learn their ways if we are to survive."

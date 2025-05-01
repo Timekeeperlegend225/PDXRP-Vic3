@@ -13,7 +13,6 @@
  combat_unit_type_floating_battleship_desc: "A floating battleship carying auxillary support ship"
  combat_unit_floating_operation_base: "Floating Operation Base"
  combat_unit_floating_operation_base_desc: "A floating fortress used as an operation base for naval invasion"
- pm_no_maintenance:0 "Minimal Maintenance"
  
  pm_memorite_streetlights: "Memorite Streetlights"
  pm_iron_frame_buildings_memorite: "Assited Iron-Frame Building"
