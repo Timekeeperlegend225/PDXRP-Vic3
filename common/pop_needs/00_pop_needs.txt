@@ -301,7 +301,7 @@ popneed_luxury_food = {
 	entry = {
 		goods = nagan_cattle
 		
-		weight = 0.75
+		weight = 1
 		max_supply_share = 0.5
 		min_supply_share = 0.0
 	}

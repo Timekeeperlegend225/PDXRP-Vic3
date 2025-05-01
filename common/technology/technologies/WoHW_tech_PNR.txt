@@ -55,7 +55,7 @@ rural_society = {
 	modifier = {
 		building_group_bg_agriculture_throughput_add = 0.05
 		building_group_bg_plantations_throughput_add = 0.05
-		building_group_bg_ranching_throughput_add = 0.05
+		building_group_bg_ranching_throughput_add = 0.1
 	}
 	
 	ai_weight = {
@@ -87,11 +87,10 @@ religious_bureaucracy = {
 	
 	modifier = {	
 		state_bureaucracy_population_base_cost_factor_mult = -0.20
-		state_harvest_condition_drought_duration_mult= -0.2
-		state_harvest_condition_disease_outbreak_duration_mult= -0.2
-		state_harvest_condition_flood_duration_mult = -0.2
-		state_harvest_condition_wildfire_duration_mult = -0.2
-		interest_group_in_government_approval_add = 3
+		country_law_enactment_time_mult = 0.1
+		country_institution_size_change_speed_mult = 0.1
+		interest_group_in_government_approval_add = 2
+		country_legitimacy_ideological_incoherence_mult = -0.1
 	}
 	
 	ai_weight = {
@@ -124,6 +123,8 @@ beast_cavalry_tech = {
 	
 	modifier = {
 		unit_occupation_mult = 0.1
+		unit_kill_rate_add = 0.05
+		character_battle_condition_aggressive_maneuver_mult = 0.2
 	}
 	
 	ai_weight = {
@@ -138,8 +139,9 @@ forced_conversion = {
 	can_research = no
 	
 	modifier = {
-		interest_group_ig_devout_pol_str_mult = 0.2
-		tax_heathen_add = 0.25
+		state_loyalists_from_political_movements_mult = 0.2
+		country_leader_has_law_enactment_success_mult = 0.2
+		tax_heathen_add = 0.5
 	}
 	
 	set_variable = chakravadah
@@ -157,6 +159,13 @@ nagan_cattle_breeding = {
 	category = production
 	can_research = no
 	
+	modifier = {
+		state_harvest_condition_drought_duration_mult= -0.2
+		state_harvest_condition_disease_outbreak_duration_mult= -0.2
+		state_harvest_condition_flood_duration_mult = -0.2
+		state_harvest_condition_wildfire_duration_mult = -0.2
+	}
+	
 	ai_weight = {
 		value = 0
 	}
@@ -170,6 +179,7 @@ goldspear_infantry_tech = {
 	
 	modifier = {
 		unit_morale_damage_mult = 0.1
+		character_battle_condition_surprise_maneuver_mult = 0.2
 	}
 	
 	ai_weight = {
@@ -184,8 +194,10 @@ chakravadach_enlightmen = {
 	can_research = no
 	
 	modifier = {
-		state_conversion_mult = 0.2
-		state_education_access_add = 0.1
+		state_conversion_mult = 0.3
+		state_education_access_add = 0.15
+		country_acceptance_state_religion_add = 10
+		country_acceptance_religion_base_add = -20
 	}
 	
 	ai_weight = {
@@ -207,6 +219,7 @@ nagan_cattle_fertilizer = {
 	  building_group_bg_plantations_standard_of_living_add = 1
 	  building_group_bg_ranching_standard_of_living_add = 1
 	  goods_output_explosives_mult = 0.15
+	  state_pollution_generation_add = -50
     }
 	
 	ai_weight = {
@@ -224,6 +237,7 @@ guerilla_warfare = {
 		unit_kill_rate_add = 0.1
 		unit_supply_consumption_mult = -0.1
 		unit_recovery_rate_add = 0.1
+		character_battle_condition_camouflaged_mult = 0.3
 		state_building_naval_base_max_level_add = 20
 	}
 	

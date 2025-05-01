@@ -63,8 +63,7 @@ flameclad_tech = {
 	can_research = no
 	
 	modifier = {
-		interest_group_ig_armed_forces_pol_str_mult = 0.10
-		country_officers_pol_str_mult = 0.2
+		country_trade_route_cost_mult = -0.1
 		unit_convoy_requirements_mult = -0.1
 	}
 	
@@ -81,9 +80,11 @@ efficient_authority = {
 	
 	modifier = {
 		country_authority_mult = 0.10
-		country_trade_route_cost_mult = -0.1
+		country_legitimacy_govt_total_clout_add = 0.1
 		country_loyalists_from_legitimacy_mult = 0.05
 		state_loyalists_from_political_movements_mult = 0.10
+		state_upper_strata_standard_of_living_add = 1
+		tax_heathen_add = 0.25
 	}
 	
 	ai_weight = {
@@ -111,7 +112,8 @@ ember_hellcanon_tech = {
 	can_research = no
 	
 	modifier = {
-		interest_group_ig_armed_forces_pol_str_mult = 0.20
+		unit_occupation_mult = 0.1
+		unit_kill_rate_add = 0.05
 		unit_devastation_mult = 0.25
 	}
 	
@@ -129,6 +131,8 @@ dragon_baby = {
 	modifier = {
 		country_authority_mult = 0.10
 		state_birth_rate_mult = 0.025
+		unit_recovery_rate_add = 0.1
+		building_slaves_fertility_mult = 0.2
 	}
 	
 	ai_weight = {
@@ -144,6 +148,12 @@ industrial_flamecaster = {
 	category = production
 	can_research = no
 	
+		
+	modifier = {
+		goods_output_steel_mult = 0.1
+		goods_output_glass_mult = 0.1
+	}
+	
 	ai_weight = {
 		value = 0
 	}
@@ -156,8 +166,9 @@ flamecaster_infantry_tech = {
 	can_research = no
 	
 	modifier = {
-		interest_group_ig_armed_forces_pol_str_mult = 0.10
+		character_battle_condition_dug_in_mult = 0.3
 		country_military_goods_cost_mult = -0.10
+		unit_morale_damage_mult = 0.1
 	}
 	
 	ai_weight = {
@@ -175,6 +186,7 @@ more_work = {
 		country_authority_mult = 0.10
 		state_loyalists_from_political_movements_mult = 0.10
 		state_working_adult_ratio_add = 0.05
+		country_institution_size_change_speed_mult = 0.2
 	}
 	
 	ai_weight = {
@@ -202,7 +214,7 @@ emberian_conscription_tech = {
 	can_research = no
 	
 	modifier = {
-		interest_group_ig_armed_forces_pol_str_mult = 0.20
+		state_conscription_rate_add = 0.05
 		country_military_wages_mult = -0.25
 		state_building_barracks_max_level_add = 25
 		state_building_conscription_center_max_level_add = 50
@@ -221,9 +233,10 @@ militarized_education_tech = {
 	
 	modifier = {
 		state_education_access_add = -0.10
-		unit_morale_loss_mult = 0.1
+		unit_morale_loss_mult = -0.15
 		building_training_rate_mult = 0.5
-		state_conscription_rate_add = 0.03
+		character_command_limit_add = 40
+		unit_experience_gain_mult = 0.2
 	}
 	
 	ai_weight = {
