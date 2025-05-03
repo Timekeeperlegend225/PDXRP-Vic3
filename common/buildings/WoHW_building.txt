@@ -94,7 +94,7 @@ building_hole_ELD = {
 
 building_memorite_extraction = {
 	building_group = bg_light_industry
-	icon = "gfx/interface/icons/building_icons/hole_ala.dds"
+	icon = "gfx/interface/icons/building_icons/memorite_extraction.dds"
 	city_type = none
 	levels_per_mesh = 5
 	
@@ -113,7 +113,7 @@ building_memorite_extraction = {
 building_airport = {
 	building_group = bg_public_infrastructure
 	city_type = port
-	icon = "gfx/interface/icons/building_icons/building_port.dds"
+	icon = "gfx/interface/icons/building_icons/airport.dds"
 
 	has_max_level = yes
 	ignore_stateregion_max_level = yes
