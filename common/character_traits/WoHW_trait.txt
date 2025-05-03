@@ -3,7 +3,7 @@
 	texture = gfx/interface/icons/character_trait_icons/pious.dds
 
 	character_modifier = {
-		character_health_add = 0.2
+		character_health_add = 0.5
 		character_popularity_add = 5
 	}
 
@@ -57,7 +57,7 @@ inquisitor = {
 	texture = gfx/interface/icons/character_trait_icons/pious.dds
 
 	character_modifier = {
-		character_health_add = 0.5
+		character_health_add = 1
 	}
 
 	country_modifier = {
@@ -124,7 +124,7 @@ enlightened  = {
 	texture = gfx/interface/icons/character_trait_icons/pious.dds
 
 	character_modifier = {
-		character_health_add = 0.5
+		character_health_add = 1
 		character_popularity_add = 10
 	}
 
@@ -188,7 +188,7 @@ beatified = {
 	texture = gfx/interface/icons/character_trait_icons/pious.dds
 
 	character_modifier = {
-		character_health_add = 1
+		character_health_add = 2
 		character_popularity_add = 25
 	}
 
@@ -247,7 +247,7 @@ saint = {
 	texture = gfx/interface/icons/character_trait_icons/pious.dds
 
 	character_modifier = {
-		character_health_add = 1.5
+		character_health_add = 3
 		character_popularity_add = 50
 	}
 
@@ -306,7 +306,7 @@ ring_holder = {
 	texture = gfx/interface/icons/character_trait_icons/cruel.dds
 
 	character_modifier = {
-		character_health_add = 2
+		character_health_add = 4
 		character_popularity_add = 50
 	}
 
@@ -336,4 +336,119 @@ ring_holder = {
  	}
 
  	value = 4
+}
+
+improved_health = {
+    type = condition
+    texture = gfx/interface/icons/character_trait_icons/imposing.dds
+
+    character_modifier = {
+		character_health_add = 0.5
+    }
+
+    country_modifier = {
+    }
+
+    interest_group_modifier = {
+    }
+
+    agitator_modifier = {
+    }
+
+    command_modifier = {
+    }
+
+    possible = {
+        always = no
+    }
+
+    weight = {
+        value = 0
+    }
+
+    replace = {
+    }
+
+    value = 1
+}
+
+cyborg = {
+    type = skill
+    texture = gfx/interface/icons/character_trait_icons/engineer.dds
+
+    character_modifier = {
+        character_health_add = 0.3
+        character_popularity_add = -50
+    }
+
+    country_modifier = {
+        country_tech_spread_mult = 0.1
+    }
+
+    interest_group_modifier = {
+        interest_group_approval_add = 1
+    }
+
+    agitator_modifier = {
+        political_movement_radicalism_add = -0.1
+    }
+
+    command_modifier = {
+    }
+
+    possible = {
+        always = no
+    }
+
+    weight = {
+        value = 0
+    }
+
+    replace = {
+    }
+
+    value = 1
+}
+
+military_cyborg = {
+    type = skill
+    texture = gfx/interface/icons/character_trait_icons/engineer.dds
+
+    character_modifier = {
+        character_health_add = 0.3
+        character_popularity_add = -50
+    }
+
+    country_modifier = {
+        country_tech_spread_mult = 0.1
+    }
+
+    interest_group_modifier = {
+        interest_group_approval_add = 1
+    }
+
+    agitator_modifier = {
+        political_movement_radicalism_add = -0.1
+    }
+
+    command_modifier = {
+        unit_offense_mult = 0.05
+        unit_defense_mult = 0.05
+        unit_recovery_rate_add = 0.1
+        character_battle_condition_surprise_maneuver_mult = 0.5
+        character_battle_condition_careful_maneuver_mult = 1
+    }
+
+    possible = {
+        always = no
+    }
+
+    weight = {
+        value = 0
+    }
+
+    replace = {
+    }
+
+    value = 1
 }
