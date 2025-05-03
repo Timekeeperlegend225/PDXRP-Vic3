@@ -374,7 +374,7 @@ improved_health = {
 
 cyborg = {
     type = skill
-    texture = gfx/interface/icons/character_trait_icons/engineer.dds
+    texture = gfx/interface/icons/character_trait_icons/erudite.dds
 
     character_modifier = {
         character_health_add = 0.3
@@ -412,7 +412,7 @@ cyborg = {
 
 military_cyborg = {
     type = skill
-    texture = gfx/interface/icons/character_trait_icons/engineer.dds
+    texture = gfx/interface/icons/character_trait_icons/celebrity_commander.dds
 
     character_modifier = {
         character_health_add = 0.3
