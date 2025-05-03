@@ -236,3 +236,29 @@ goods_output_wood_mult={
 		ai_value=0
 	}
 }
+
+building_employment_laborers_mult = {
+	decimals = 1
+	color = bad
+	percent = yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_employment_machinists_mult = {
+	decimals = 1
+	color = bad
+	percent = yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_coffee_add = {
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
