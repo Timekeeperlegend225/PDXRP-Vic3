@@ -427,13 +427,13 @@ pm_unsanctioned_flamecaster_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 30
-			goods_input_sulfur_add = 20
-			goods_input_coal_add = 20
+			goods_input_steel_add = 20
+			goods_input_sulfur_add = 10
+			goods_input_coal_add = 10
 			goods_input_tools_add = 20
 
 			# output goods
-			goods_output_flamecaster_add = 10
+			goods_output_flamecaster_add = 50
 		}
 
 		level_scaled = {
@@ -444,8 +444,6 @@ pm_unsanctioned_flamecaster_production = {
 			building_employment_officers_add = 500
 		}
 	}
-	
-	required_input_goods = flamecaster
 }
 
 pm_sanctioned_flamecaster_production = {
@@ -462,13 +460,13 @@ pm_sanctioned_flamecaster_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 40
-			goods_input_sulfur_add = 30
-			goods_input_coal_add = 30
-			goods_input_tools_add = 30
+			goods_input_steel_add = 30
+			goods_input_sulfur_add = 15
+			goods_input_coal_add = 15
+			goods_input_tools_add = 20
 
 			# output goods
-			goods_output_flamecaster_add = 30
+			goods_output_flamecaster_add = 80
 		}
 
 		level_scaled = {
@@ -497,15 +495,15 @@ pm_unsanctioned_mixed_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 40
-			goods_input_hardwood_add = 10
-			goods_input_sulfur_add = 20
-			goods_input_coal_add = 20
-			goods_input_tools_add = 25
+			goods_input_steel_add = 20
+			goods_input_hardwood_add = 5
+			goods_input_sulfur_add = 5
+			goods_input_coal_add = 5
+			goods_input_tools_add = 20
 
 			# output goods
-			goods_output_flamecaster_add = 5
-			goods_output_small_arms_add = 35
+			goods_output_flamecaster_add = 25
+			goods_output_small_arms_add = 40
 		}
 
 		level_scaled = {

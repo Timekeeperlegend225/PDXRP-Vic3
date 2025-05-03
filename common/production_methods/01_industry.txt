@@ -348,6 +348,7 @@ pm_electric_sewing_machines = {
 	
 	unlocking_technologies = {
 		electrical_capacitors
+		alarian_empire_starting_boost
 	}
 	
 	building_modifiers = {
@@ -863,6 +864,7 @@ pm_bone_china = {
 
 	unlocking_production_methods = {
 		pm_crystal_glass
+		pm_memorite_glass
 		pm_houseware_plastics
 	}
 	
@@ -1739,6 +1741,7 @@ pm_electric_engines = {
 	
 	unlocking_technologies = {
 		electric_railway
+		connectic
 	}
 	
 	building_modifiers = {
@@ -2118,6 +2121,7 @@ pm_military_shipbuilding_steam_2 = {
 	
 	unlocking_technologies = {
 		arc_welding
+		alarian_empire_starting_boost
 	}
 	
 	building_modifiers = {
