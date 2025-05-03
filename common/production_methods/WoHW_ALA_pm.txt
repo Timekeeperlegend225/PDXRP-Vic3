@@ -459,7 +459,7 @@ pm_conectic_telecom = {
 	texture = "gfx/interface/icons/production_method_icons/radios.dds"
 	
 	unlocking_technologies = {
-		connectic
+		memoritic_reaction
 	}
 	
 	unlocking_production_methods = {
