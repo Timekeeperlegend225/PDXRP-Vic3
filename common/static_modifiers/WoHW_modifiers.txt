@@ -77,3 +77,13 @@ ELD_focus_mil = {
 ELD_focus_soc = {
 	icon = gfx/interface/icons/invention_icons/eldar_studies.dds
 }
+
+memorite_aera_mod = {
+	icon = gfx/interface/icons/goods_icons/memorite.dds
+	goods_output_memorite_mult = 0.1
+}
+
+test_mod = {
+	icon = gfx/interface/icons/goods_icons/memorite.dds
+	country_birth_rate_full_acceptance_mult = 0.1
+}
