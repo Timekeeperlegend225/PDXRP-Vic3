@@ -18,7 +18,7 @@ texticon = {
 	}
 }
 
-lasse = {
+texticon = {
 	icon = lasse
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/lasse.dds"
@@ -28,7 +28,7 @@ lasse = {
 	}
 }
 
-nagan_cattle = {
+texticon = {
 	icon = nagan_cattle
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/nagan_cattle.dds"
