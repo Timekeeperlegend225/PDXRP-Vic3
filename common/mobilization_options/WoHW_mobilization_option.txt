@@ -2,7 +2,7 @@
 	texture = "gfx/interface/icons/mobilization_options/field_hospitals.dds"
 
 	unlocking_technologies = {
-		miracle_healing
+		holy_light
 	}
 	possible = {
 		NOT = { scope:military_formation = { has_mobilization_option = mobilization_option:mobilization_option_first_aid } }
