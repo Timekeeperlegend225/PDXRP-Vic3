@@ -39,3 +39,9 @@
  pm_memorite_automatic_motor_industry: "Memorite Automated Motor Industry"
  pm_memorite_automatic_arms_industries: "Memorite Automated Arms Industry"
  pm_levitating_tank_production: "Levitating Tank Production"
+ 
+ 
+ building_memorite_extraction:0 "Memorite Extraction Operation"
+ building_memorite_extraction_lens_option:0 "Expand $building_memorite_extraction$"
+ building_airport:0 "Airport"
+ building_airport_lens_option:0 "Expand $building_airport$"
