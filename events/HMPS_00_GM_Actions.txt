@@ -6194,6 +6194,146 @@ gm_actions.410 = {
 			popup = yes
 		}
 	}
+	
+	option = { 
+		name = silmaril
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = silmaril }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = silmaril
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = silmaril
+		trigger = {
+			scope:target_character = {
+				has_trait = silmaril
+			}
+		}
+		scope:target_character = {
+			remove_trait = silmaril
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = cyborg
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = cyborg }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = cyborg
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = cyborg
+		trigger = {
+			scope:target_character = {
+				has_trait = cyborg
+			}
+		}
+		scope:target_character = {
+			remove_trait = cyborg
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = military_cyborg
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = military_cyborg }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = military_cyborg
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = military_cyborg
+		trigger = {
+			scope:target_character = {
+				has_trait = military_cyborg
+			}
+		}
+		scope:target_character = {
+			remove_trait = military_cyborg
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = improved_health
+		trigger = {
+			scope:target_character = {
+				NOT = { has_trait = improved_health }
+			}
+		}
+		default_option = yes
+		scope:target_character = {
+			add_trait = improved_health
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = improved_health
+		trigger = {
+			scope:target_character = {
+				has_trait = improved_health
+			}
+		}
+		scope:target_character = {
+			remove_trait = improved_health
+		}
+		trigger_event = {
+			id = gm_actions.410
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 
