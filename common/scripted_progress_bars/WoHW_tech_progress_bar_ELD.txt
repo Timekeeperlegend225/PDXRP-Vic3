@@ -735,24 +735,23 @@ je_WhOW_tech_ELD_soc_progress_bar = {
 		}
 		if = {
 			limit = {
-				NOT = { has_technology_researched = flameclad_tech }
+				NOT = { has_technology_researched = elven_aura }
 			}
 			multiply = 2
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = ELDer_hellcanon_tech
+				has_technology_researched = plantiri_tech
 			}
 			multiply = 0.5
 		}
 		else_if = {
 			limit = {
-				has_technology_researched = flamecaster_infantry_tech
+				has_technology_researched = naturalism_tech
 			}
 			multiply = 0.25
 		}
 	}
-	
 	start_value = 0
 	min_value = 0
 	max_value = 1000
