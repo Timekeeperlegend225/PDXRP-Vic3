@@ -750,3 +750,24 @@ superior_embargo_to_everyone = {
 		base = 0	
 	}
 }
+
+dracaryans_slave_importe = {
+	is_shown = {
+		has_technology_researched = efficient_authority
+	}
+	possible = {
+		NOT = { has_modifier = dracaryan_slave_import_mod }
+    }
+	
+	when_taken = {
+		add_modifier = {
+			name = dracaryan_slave_import_mod           
+			months = 25
+			is_decaying = yes
+   		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
