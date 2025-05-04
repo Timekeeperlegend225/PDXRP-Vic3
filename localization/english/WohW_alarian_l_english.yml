@@ -15,8 +15,8 @@
  combat_unit_floating_operation_base_desc: "A floating fortress used as an operation base for naval invasion"
  
  pm_memorite_streetlights: "Memorite Streetlights"
- pm_iron_frame_buildings_memorite: "Assited Iron-Frame Building"
- pm_steel_frame_buildings_memorite: "Assited Steel-Frame Building"
+ pm_iron_frame_buildings_memorite: "Assisted Iron-Frame Building"
+ pm_steel_frame_buildings_memorite: "Floating Crane Building"
  pm_arc_welded_buildings_memorite: "Floating Building"
  pm_memorite_glass: "Memorite Glass"
  pm_basic_memorite: "Improvised Memorite Extraction"
