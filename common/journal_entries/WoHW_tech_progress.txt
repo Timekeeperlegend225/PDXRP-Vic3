@@ -539,7 +539,7 @@ je_WhOW_tech_ALA = {
 }
 
 je_WhOW_tech_ELD = {
-	icon = "gfx/interface/icons/invention_icons/memorite_manipulation.dds"
+	icon = "gfx/interface/icons/invention_icons/eldar_studies.dds"
 
 	group = je_group_historical_content
 
