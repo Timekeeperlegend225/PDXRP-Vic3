@@ -1,0 +1,55 @@
+﻿mobilization_field_healer = {
+	texture = "gfx/interface/icons/mobilization_options/field_hospitals.dds"
+
+	unlocking_technologies = {
+		holy_light
+	}
+	possible = {
+		NOT = { scope:military_formation = { has_mobilization_option = mobilization_option:mobilization_option_first_aid } }
+		market ?= {
+			mg:memorite ?= {
+				market_goods_sell_orders > 0
+			}
+			mg:tools ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	on_activate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_organization_to_add_medic_support_tt
+			add_organization = {
+				value = organization
+				multiply = -0.25
+			}
+		}
+	}
+	
+	on_deactivate = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+			add_organization = {
+				value = organization
+				multiply = -0.25
+			}
+		}
+	}
+	upkeep_modifier = {
+		goods_input_memorite_add = 2
+		goods_input_tools_add = 1
+	}
+	unit_modifier = {
+		unit_recovery_rate_add = 0.70	
+	}
+	ai_weight = {
+		value = 1
+	}
+
+    group = medic_support
+}

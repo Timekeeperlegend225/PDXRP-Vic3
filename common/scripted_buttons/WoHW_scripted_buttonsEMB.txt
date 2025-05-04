@@ -1,0 +1,221 @@
+﻿je_WhOW_tech_EMB_focus = {
+	name = "je_WhOW_tech_EMB_focus"
+	desc = "je_WhOW_tech_EMB_focus_desc"
+	
+	visible = { always = yes }
+
+	possible = {
+		NOT = { has_variable = WoHW_focus_var }
+		NOT = { has_modifier = focus_on_studying_EMB }
+	}
+
+	effect = {
+		add_modifier = focus_on_studying_EMB
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_PNR
+			}
+			remove_modifier = focus_on_studying_PNR
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ALA
+			}
+			remove_modifier = focus_on_studying_ALA
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ELD
+			}
+			remove_modifier = focus_on_studying_ELD
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_VAMP
+			}
+			remove_modifier = focus_on_studying_VAMP
+		}
+		if = {
+			limit = {
+				has_modifier = studying_all_OPM
+			}
+			remove_modifier = studying_all_OPM
+		}
+		set_variable = { 
+			name = WoHW_focus_var 
+			years = 1 
+		}
+	}
+}
+
+je_WhOW_tech_EMB_pro = {
+	name = "je_WhOW_tech_EMB_pro"
+	desc = "je_WhOW_tech_EMB_pro_desc"
+	
+	visible = { always = yes }
+
+	possible = {
+		scope:journal_entry = {
+			not = {
+				custom_tooltip = {
+					text = positivist_cooldown_tt
+					has_variable = EMB_focus_var
+				}
+			}
+		}
+		NOT = { has_modifier = EMB_focus_prod }
+	}
+
+	effect = {
+		add_modifier = EMB_focus_prod
+		if = {
+			limit = {
+				has_modifier = EMB_focus_mil
+			}
+			remove_modifier = EMB_focus_mil
+		}
+		if = {
+			limit = {
+				has_modifier = EMB_focus_soc
+			}
+			remove_modifier = EMB_focus_soc
+		}
+		scope:journal_entry = {
+			custom_tooltip = cooldown_year_tt
+			set_variable = { 
+				name = EMB_focus_var 
+				years = 1 
+			}
+		}
+	}
+}
+
+je_WhOW_tech_EMB_mil = {
+	name = "je_WhOW_tech_EMB_mil"
+	desc = "je_WhOW_tech_EMB_mil_desc"
+	
+	visible = { always = yes }
+
+	possible = {
+		scope:journal_entry = {
+			not = {
+				custom_tooltip = {
+					text = positivist_cooldown_tt
+					has_variable = EMB_focus_var
+				}
+			}
+		}
+		NOT = { has_modifier = EMB_focus_mil }
+	}
+
+	effect = {
+		add_modifier = EMB_focus_mil
+		if = {
+			limit = {
+				has_modifier = EMB_focus_pro
+			}
+			remove_modifier = EMB_focus_pro
+		}
+		if = {
+			limit = {
+				has_modifier = EMB_focus_soc
+			}
+			remove_modifier = EMB_focus_soc
+		}
+		scope:journal_entry = {
+			custom_tooltip = cooldown_year_tt
+			set_variable = { 
+				name = EMB_focus_var 
+				years = 1 
+			}
+		}
+	}
+}
+
+je_WhOW_tech_EMB_soc = {
+	name = "je_WhOW_tech_EMB_soc"
+	desc = "je_WhOW_tech_EMB_soc_desc"
+	
+	visible = { always = yes }
+
+	possible = {
+		scope:journal_entry = {
+			not = {
+				custom_tooltip = {
+					text = positivist_cooldown_tt
+					has_variable = EMB_focus_var
+				}
+			}
+		}
+		NOT = { has_modifier = EMB_focus_soc }
+	}
+
+	effect = {
+		add_modifier = EMB_focus_soc
+		if = {
+			limit = {
+				has_modifier = EMB_focus_pro
+			}
+			remove_modifier = EMB_focus_pro
+		}
+		if = {
+			limit = {
+				has_modifier = EMB_focus_mil
+			}
+			remove_modifier = EMB_focus_mil
+		}
+		scope:journal_entry = {
+			custom_tooltip = cooldown_year_tt
+			set_variable = { 
+				name = EMB_focus_var 
+				years = 1 
+			}
+		}
+	}
+}
+
+je_WhOW_tech_EMB_gen = {
+	name = "je_WhOW_tech_EMB_gen"
+	desc = "je_WhOW_tech_EMB_gen_desc"
+	
+	visible = { always = yes }
+
+	possible = {
+		scope:journal_entry = {
+			not = {
+				custom_tooltip = {
+					text = positivist_cooldown_tt
+					has_variable = EMB_focus_var
+				}
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = EMB_focus_pro
+			}
+			remove_modifier = EMB_focus_pro
+		}
+		if = {
+			limit = {
+				has_modifier = EMB_focus_mil
+			}
+			remove_modifier = EMB_focus_mil
+		}
+		if = {
+			limit = {
+				has_modifier = EMB_focus_soc
+			}
+			remove_modifier = EMB_focus_soc
+		}
+		scope:journal_entry = {
+			custom_tooltip = cooldown_year_tt
+			set_variable = { 
+				name = EMB_focus_var 
+				years = 1 
+			}
+		}
+	}
+}

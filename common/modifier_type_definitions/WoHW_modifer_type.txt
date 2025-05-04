@@ -46,6 +46,22 @@ state_nagavanshi_standard_of_living_add = {
 	}
 }
 
+state_alarian_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_noldor_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
 goods_input_memorite_add = {
 	decimals=1
 	color=bad
@@ -53,6 +69,7 @@ goods_input_memorite_add = {
 		ai_value=0
 	}
 }
+
 goods_output_memorite_add = {
 	decimals=1
 	color=good
@@ -73,6 +90,174 @@ goods_output_memorite_mult={
 	decimals=1
 	color=good
 	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_enactment_time_law_right_to_work_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_flamecaster_add = {
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_flamecaster_add = {
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_flamecaster_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+goods_output_flamecaster_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_lasse_add = {
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_lasse_add = {
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_lasse_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+goods_output_lasse_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_nagan_cattle_add = {
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_nagan_cattle_add = {
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_nagan_cattle_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+goods_output_nagan_cattle_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+unit_combat_unit_type_light_artillery_offense_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+building_memorite_extraction_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_airport_max_level_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_wood_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_employment_laborers_mult = {
+	decimals = 1
+	color = bad
+	percent = yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_employment_machinists_mult = {
+	decimals = 1
+	color = bad
+	percent = yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_coffee_add = {
+	decimals=1
+	color=bad
 	game_data={
 		ai_value=0
 	}

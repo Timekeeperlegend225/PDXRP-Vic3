@@ -1,0 +1,31 @@
+﻿nizoism = {
+	texture = "gfx/interface/icons/religion_icons/dragonbone.dds"
+	traits = {
+		dragonic
+	}
+	color = { 41 11 9 }
+}
+
+chakravadah = {
+	texture = "gfx/interface/icons/religion_icons/chakravadah.dds"
+	traits = {
+		nagan eastern
+	}
+	color = { 0 128 128 }
+}
+
+yhawhamism = {
+	texture = "gfx/interface/icons/religion_icons/yhawhamism.dds"
+	traits = {
+		yhawhamism jewish creationism christian
+	}
+	color = { 255 250 240 }
+}
+
+song_of_creation = {
+	texture = "gfx/interface/icons/religion_icons/song_of_creation.dds"
+	traits = {
+		creationism
+	}
+	color = { 62 50 168 }
+}
