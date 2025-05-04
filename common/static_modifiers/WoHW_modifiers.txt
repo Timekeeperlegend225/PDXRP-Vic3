@@ -103,3 +103,14 @@ circasia_runes_mod = {
 	unit_army_offense_mult = 0.25
 	state_construction_mult = 0.10
 }
+
+alarian_comunity_mod = {
+	icon = gfx/interface/icons/goods_icons/memorite.dds
+	state_alarian_standard_of_living_add = 10
+}
+
+cyborg_academy_mod = {
+	icon = gfx/interface/icons/goods_icons/modifier_gear_positive.dds
+	country_production_tech_research_speed_mult = 0.10
+	country_society_tech_research_speed_mult = -0.10
+}

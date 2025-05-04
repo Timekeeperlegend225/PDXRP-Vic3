@@ -151,6 +151,19 @@ suez_canal_purchase = {
 					provinces = { xC01060 }
 				}
 			}
+			s:STATE_KENYA.region_state:ALA = {
+				every_scope_pop = {
+					limit = {
+						culture = cu:alarian
+						is_pop_type = clergymen
+						is_employed = no
+					}
+					move_partial_pop = {
+						state = s:STATE_SINAI.region_state:ALA
+						population_ratio = 0.01
+					} 
+				}
+			}
 			add_modifier = {
 				name = suez_purchase
 				months = 120

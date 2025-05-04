@@ -29,3 +29,11 @@ dragonic = {
 nagan = {
 	heritage = yes
 }
+
+yhawhamism = {
+	heritage = yes
+}
+
+creationism = {
+	heritage = yes
+}
