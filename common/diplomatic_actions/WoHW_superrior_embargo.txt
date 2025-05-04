@@ -3,6 +3,7 @@
 		general
 	}
 	requires_approval = no
+	texture = "gfx/interface/icons/lens_toolbar_icons/embargo.dds"
 
 	unlocking_technologies = {
 		international_trade
