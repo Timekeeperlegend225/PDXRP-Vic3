@@ -77,6 +77,7 @@ pm_steel_frame_buildings = {
 
 	unlocking_technologies = {
 		steel_frame_buildings
+		evlven_smithing
 	}
 
 	country_modifiers = {

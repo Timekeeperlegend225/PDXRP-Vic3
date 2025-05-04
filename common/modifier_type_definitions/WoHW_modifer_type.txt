@@ -95,15 +95,6 @@ goods_output_memorite_mult={
 	}
 }
 
-country_enactment_time_law_right_to_work_mult={
-	decimals=0
-	color=bad
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
 goods_input_flamecaster_add = {
 	decimals=1
 	color=bad
