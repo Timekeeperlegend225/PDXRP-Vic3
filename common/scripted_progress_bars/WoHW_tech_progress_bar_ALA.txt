@@ -29,7 +29,6 @@
 					has_modifier = focus_on_studying_EMB
 					has_modifier = focus_on_studying_PNR
 					has_modifier = focus_on_studying_ELD
-					has_modifier = focus_on_studying_VAM
 				}
 			}
 			add = -0.1
@@ -46,7 +45,6 @@
 					is_in_same_power_bloc = c:EMB
 					is_in_same_power_bloc = c:PNR
 					is_in_same_power_bloc = c:ELD
-					is_in_same_power_bloc = c:VAM
 				}
 			}
 			add = -0.2
@@ -63,7 +61,6 @@
 					is_subject_of = c:EMB
 					is_subject_of = c:PNR
 					is_subject_of = c:ELD
-					is_subject_of = c:VAM
 				}
 			}
 			add = -0.1
@@ -72,7 +69,7 @@
 			limit = {
 				has_diplomatic_pact = {
 					who = c:ALA
-					type = special_embargo
+					type = superior_embargo
 				}
 			}
 			add = -0.3
@@ -286,7 +283,6 @@ je_WhOW_tech_ALA_mil_progress_bar = {
 					has_modifier = focus_on_studying_EMB
 					has_modifier = focus_on_studying_PNR
 					has_modifier = focus_on_studying_ELD
-					has_modifier = focus_on_studying_VAM
 				}
 			}
 			add = -0.1
@@ -303,7 +299,6 @@ je_WhOW_tech_ALA_mil_progress_bar = {
 					is_in_same_power_bloc = c:PNR
 					is_in_same_power_bloc = c:EMB
 					is_in_same_power_bloc = c:ELD
-					is_in_same_power_bloc = c:VAM
 				}
 			}
 			add = -0.2
@@ -320,7 +315,6 @@ je_WhOW_tech_ALA_mil_progress_bar = {
 					is_subject_of = c:EMB
 					is_subject_of = c:PNR
 					is_subject_of = c:ELD
-					is_subject_of = c:VAM
 				}
 			}
 			add = -0.1
@@ -329,7 +323,7 @@ je_WhOW_tech_ALA_mil_progress_bar = {
 			limit = {
 				has_diplomatic_pact = {
 					who = c:ALA
-					type = special_embargo
+					type = superior_embargo
 				}
 			}
 			add = -0.3
@@ -542,7 +536,6 @@ je_WhOW_tech_ALA_soc_progress_bar = {
 					has_modifier = focus_on_studying_EMB
 					has_modifier = focus_on_studying_PNR
 					has_modifier = focus_on_studying_ELD
-					has_modifier = focus_on_studying_VAM
 				}
 			}
 			add = -0.1
@@ -559,7 +552,6 @@ je_WhOW_tech_ALA_soc_progress_bar = {
 					is_in_same_power_bloc = c:EMB
 					is_in_same_power_bloc = c:PNR
 					is_in_same_power_bloc = c:ELD
-					is_in_same_power_bloc = c:VAM
 				}
 			}
 			add = -0.2
@@ -576,7 +568,6 @@ je_WhOW_tech_ALA_soc_progress_bar = {
 					is_subject_of = c:EMB
 					is_subject_of = c:PNR
 					is_subject_of = c:ELD
-					is_subject_of = c:VAM
 				}
 			}
 			add = -0.1
@@ -585,7 +576,7 @@ je_WhOW_tech_ALA_soc_progress_bar = {
 			limit = {
 				has_diplomatic_pact = {
 					who = c:ALA
-					type = special_embargo
+					type = superior_embargo
 				}
 			}
 			add = -0.3
