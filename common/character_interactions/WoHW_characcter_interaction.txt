@@ -57,3 +57,52 @@ beatified_interaction = {
 		add_trait = beatified
 	}
 }
+
+heal_interaction = {
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		owner ?= {
+			has_technology_researched = miracle_healing
+		}
+	}
+
+	show_requirements = yes
+
+	possible = {
+		owner ?= {
+			NOT = { has_modifier = healing_cooldown_mod }
+		}
+	}
+
+	effect = {
+		add_trait = improved_health
+		remove_trait = alcoholic
+		remove_trait = opium_addiction
+		remove_trait = cocaine_addiction
+		remove_trait = cancer
+		remove_trait = scarred
+		remove_trait = senile
+		remove_trait = syphilis
+		remove_trait = shellshocked
+		remove_trait = wounded
+		remove_trait = psychological_affliction
+		remove_trait = kidney_stones
+		remove_trait = beetle_ear
+		remove_trait = sickly
+		if = {
+			limit = {
+				owner ?= {
+					NOT = { has_technology_researched = ascension }
+				}
+			}
+			owner ?= {
+				add_modifier = {
+					name = healing_cooldown_mod           
+					months = 60
+					is_decaying = yes
+				}
+			}
+		}
+	}
+}

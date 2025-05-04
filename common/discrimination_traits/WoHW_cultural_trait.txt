@@ -15,3 +15,5 @@ humanoid = {}
 naga = {}
 
 eldar = {}
+
+acolyte = {}

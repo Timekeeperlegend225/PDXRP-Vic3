@@ -219,7 +219,7 @@ dragokins ={
 jungle_naga={
 	color= hsv{ 0.39 0.45 0.74 }
 	religion = chakravadah
-	traits = { naga underworld_heritage}
+	traits = { draconic naga underworld_heritage}
 	
 	
 	male_common_first_names={
@@ -460,7 +460,7 @@ nagavanshi={
 alarian ={
 	color = { 255 250 240 }
 	religion = yhawhamism 
-	traits = { humanoid alarian underworld_heritage }
+	traits = { acolyte humanoid alarian underworld_heritage }
 	male_common_first_names={
 		Akaki
 		Alexander
