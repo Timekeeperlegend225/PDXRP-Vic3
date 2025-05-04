@@ -321,7 +321,7 @@ ring_holder = {
 	}
 
 	command_modifier = {
-		unit_army_offense_mult = 0.15
+		unit_morale_damage_mult = 0.2
 	}
 
  	possible = {
