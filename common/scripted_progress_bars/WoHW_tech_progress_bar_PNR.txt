@@ -159,7 +159,7 @@
 					has_technology_researched = guerilla_warfare
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -170,7 +170,7 @@
 					has_technology_researched = guerilla_warfare
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -180,14 +180,14 @@
 					has_technology_researched = guerilla_warfare
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
 				NOT = { has_technology_researched = nagan_cattle_breeding }
 				has_technology_researched = guerilla_warfare
 			}
-			add = 0.25
+			add = 0.1
 		}
 		if = {
 			limit = {
@@ -199,7 +199,7 @@
 					has_technology_researched = baby_and_work
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -210,7 +210,7 @@
 					has_technology_researched = baby_and_work
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -220,14 +220,14 @@
 					has_technology_researched = baby_and_work
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
 				NOT = { has_technology_researched = nagan_cattle_breeding }
 				has_technology_researched = baby_and_work
 			}
-			add = 0.25
+			add = 0.1
 		}
 		if = {
 			limit = {
@@ -416,7 +416,7 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					has_technology_researched = nagan_cattle_breeding
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -427,7 +427,7 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					has_technology_researched = nagan_cattle_breeding
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -437,14 +437,14 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					has_technology_researched = nagan_cattle_breeding
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
 				NOT = { has_technology_researched = guerilla_warfare }
 				has_technology_researched = nagan_cattle_breeding
 			}
-			add = 0.25
+			add = 0.1
 		}
 		if = {
 			limit = {
@@ -456,7 +456,7 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					has_technology_researched = baby_and_work
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -467,7 +467,7 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					has_technology_researched = baby_and_work
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -477,14 +477,14 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					has_technology_researched = baby_and_work
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
 				NOT = { has_technology_researched = guerilla_warfare }
 				has_technology_researched = baby_and_work
 			}
-			add = 0.25
+			add = 0.1
 		}
 		if = {
 			limit = {
@@ -672,7 +672,7 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					has_technology_researched = nagan_cattle_breeding
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -683,7 +683,7 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					has_technology_researched = nagan_cattle_breeding
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -693,14 +693,14 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					has_technology_researched = nagan_cattle_breeding
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
 				NOT = { has_technology_researched = nagan_cattle_breeding }
 				has_technology_researched = nagan_cattle_breeding
 			}
-			add = 0.25
+			add = 0.1
 		}
 		if = {
 			limit = {
@@ -712,7 +712,7 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					has_technology_researched = guerilla_warfare
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -723,7 +723,7 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					has_technology_researched = guerilla_warfare
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
@@ -733,14 +733,14 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					has_technology_researched = guerilla_warfare
 				}
 			}
-			add = 0.25
+			add = 0.1
 		}
 		else_if = {
 			limit = {
 				NOT = { has_technology_researched = baby_and_work }
 				has_technology_researched = guerilla_warfare
 			}
-			add = 0.25
+			add = 0.1
 		}
 		if = {
 			limit = {
