@@ -15,13 +15,13 @@
 			limit = {
 				has_modifier = studying_all_OPM
 			}
-			add = 0.3
+			add = 0.2
 		}
 		else_if = {
 			limit = {
 				has_modifier = focus_on_studying_PNR
 			}
-			add = 1.5
+			add = 1
 		}
 		else_if = {
 			limit = {
@@ -32,13 +32,24 @@
 					has_modifier = focus_on_studying_VAM
 				}
 			}
-			add = -0.15
+			add = -0.1
 		}
 		if = {
 			limit = {
 				is_in_same_power_bloc = c:PNR
 			}
-			add = 1
+			add = 0.8
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_in_same_power_bloc = c:EMB
+					is_in_same_power_bloc = c:ALA
+					is_in_same_power_bloc = c:ELD
+					is_in_same_power_bloc = c:VAM
+				}
+			}
+			add = -0.2
 		}
 		if = {
 			limit = {
@@ -61,10 +72,28 @@
 			limit = {
 				has_diplomatic_pact = {
 					who = c:PNR
+					type = special_embargo
+				}
+			}
+			add = -0.3
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:PNR
+					type = military_assistance
+				}
+			}
+			add = 0.3
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:PNR
 					type = trade_agreement
 				}
 			}
-			add = 0.25
+			add = 0.3
 		}
 		if = {
 			limit = {
@@ -73,7 +102,7 @@
 					type = foreign_investment_rights
 				}
 			}
-			add = 0.25
+			add = 0.6
 		}
 		if = {
 			limit = {
@@ -97,7 +126,7 @@
 			limit = {
 				C:PNR.relations:root >= 50
 			}
-			add = 0.25
+			add = 0.15
 		}
 		if = {
 			limit = {
@@ -112,7 +141,7 @@
 					has_modifier = PNR_focus_soc
 				}
 			}
-			add = -0.25
+			add = -0.4
 		}
 		if = {
 			limit = {
@@ -243,13 +272,13 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 			limit = {
 				has_modifier = studying_all_OPM
 			}
-			add = 0.3
+			add = 0.2
 		}
 		else_if = {
 			limit = {
 				has_modifier = focus_on_studying_PNR
 			}
-			add = 1.5
+			add = 1
 		}
 		else_if = {
 			limit = {
@@ -260,13 +289,24 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					has_modifier = focus_on_studying_VAM
 				}
 			}
-			add = -0.15
+			add = -0.1
 		}
 		if = {
 			limit = {
 				is_in_same_power_bloc = c:PNR
 			}
-			add = 1
+			add = 0.8
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_in_same_power_bloc = c:EMB
+					is_in_same_power_bloc = c:ALA
+					is_in_same_power_bloc = c:ELD
+					is_in_same_power_bloc = c:VAM
+				}
+			}
+			add = -0.2
 		}
 		if = {
 			limit = {
@@ -289,10 +329,28 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 			limit = {
 				has_diplomatic_pact = {
 					who = c:PNR
+					type = special_embargo
+				}
+			}
+			add = -0.3
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:PNR
+					type = military_assistance
+				}
+			}
+			add = 0.6
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:PNR
 					type = trade_agreement
 				}
 			}
-			add = 0.25
+			add = 0.3
 		}
 		if = {
 			limit = {
@@ -301,7 +359,7 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					type = foreign_investment_rights
 				}
 			}
-			add = 0.25
+			add = 0.3
 		}
 		if = {
 			limit = {
@@ -310,7 +368,7 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					type = alliance
 				}
 			}
-			add = 0.5
+			add = 1
 		}
 		else_if = {
 			limit = {
@@ -325,7 +383,7 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 			limit = {
 				C:PNR.relations:root >= 50
 			}
-			add = 0.25
+			add = 0.15
 		}
 		if = {
 			limit = {
@@ -340,7 +398,7 @@ je_WhOW_tech_PNR_mil_progress_bar = {
 					has_modifier = PNR_focus_soc
 				}
 			}
-			add = -0.25
+			add = -0.4
 		}
 		if = {
 			limit = {
@@ -470,13 +528,13 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 			limit = {
 				has_modifier = studying_all_OPM
 			}
-			add = 0.3
+			add = 0.2
 		}
 		else_if = {
 			limit = {
 				has_modifier = focus_on_studying_PNR
 			}
-			add = 1.5
+			add = 1
 		}
 		else_if = {
 			limit = {
@@ -487,13 +545,24 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					has_modifier = focus_on_studying_VAM
 				}
 			}
-			add = -0.15
+			add = -0.1
 		}
 		if = {
 			limit = {
 				is_in_same_power_bloc = c:PNR
 			}
-			add = 1
+			add = 0.8
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_in_same_power_bloc = c:EMB
+					is_in_same_power_bloc = c:ALA
+					is_in_same_power_bloc = c:ELD
+					is_in_same_power_bloc = c:VAM
+				}
+			}
+			add = -0.2
 		}
 		if = {
 			limit = {
@@ -516,10 +585,28 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 			limit = {
 				has_diplomatic_pact = {
 					who = c:PNR
+					type = special_embargo
+				}
+			}
+			add = -0.3
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:PNR
+					type = military_assistance
+				}
+			}
+			add = 0.3
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:PNR
 					type = trade_agreement
 				}
 			}
-			add = 0.25
+			add = 0.3
 		}
 		if = {
 			limit = {
@@ -528,7 +615,7 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					type = foreign_investment_rights
 				}
 			}
-			add = 0.25
+			add = 0.3
 		}
 		if = {
 			limit = {
@@ -552,7 +639,7 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 			limit = {
 				C:PNR.relations:root >= 50
 			}
-			add = 0.25
+			add = 0.3
 		}
 		if = {
 			limit = {
@@ -567,7 +654,7 @@ je_WhOW_tech_PNR_soc_progress_bar = {
 					has_modifier = PNR_focus_mil
 				}
 			}
-			add = -0.25
+			add = -0.4
 		}
 		if = {
 			limit = {
