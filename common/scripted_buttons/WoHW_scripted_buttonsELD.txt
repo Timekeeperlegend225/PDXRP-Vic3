@@ -90,9 +90,10 @@ je_WhOW_tech_ELD_pro = {
 	}
 }
 
+
 je_WhOW_tech_ELD_mil = {
 	name = "je_WhOW_tech_ELD_mil"
-	desc = "je_WhOW_tech_ELD_mil_desc"
+	desc = "je_WhOW_tech_ELD_pro_desc"
 	
 	visible = { always = yes }
 
@@ -112,9 +113,9 @@ je_WhOW_tech_ELD_mil = {
 		add_modifier = ELD_focus_mil
 		if = {
 			limit = {
-				has_modifier = ELD_focus_pro
+				has_modifier = ELD_focus_prod
 			}
-			remove_modifier = ELD_focus_pro
+			remove_modifier = ELD_focus_prod
 		}
 		if = {
 			limit = {
@@ -154,9 +155,9 @@ je_WhOW_tech_ELD_soc = {
 		add_modifier = ELD_focus_soc
 		if = {
 			limit = {
-				has_modifier = ELD_focus_pro
+				has_modifier = ELD_focus_prod
 			}
-			remove_modifier = ELD_focus_pro
+			remove_modifier = ELD_focus_prod
 		}
 		if = {
 			limit = {
@@ -189,15 +190,15 @@ je_WhOW_tech_ELD_gen = {
 				}
 			}
 		}
-		NOT = { has_modifier = ELD_focus_pro }
+		NOT = { has_modifier = ELD_focus_prod }
 	}
 
 	effect = {
 		if = {
 			limit = {
-				has_modifier = ELD_focus_pro
+				has_modifier = ELD_focus_prod
 			}
-			remove_modifier = ELD_focus_pro
+			remove_modifier = ELD_focus_prod
 		}
 		if = {
 			limit = {
