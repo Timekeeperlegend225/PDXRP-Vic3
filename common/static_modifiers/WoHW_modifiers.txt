@@ -87,3 +87,19 @@ test_mod = {
 	icon = gfx/interface/icons/goods_icons/memorite.dds
 	country_birth_rate_full_acceptance_mult = 0.1
 }
+
+dracaryan_slave_import_mod = {
+	icon = gfx/interface/icons/state_status_icons/slave_import_marker.dds
+	state_slave_import_mult = 1
+}
+
+healing_cooldown_mod = {
+	icon = gfx/interface/icons/goods_icons/memorite.dds
+	goods_input_memorite_add = 2
+}
+
+circasia_runes_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	unit_army_offense_mult = 0.25
+	state_construction_mult = 0.10
+}
