@@ -83,7 +83,6 @@ pm_lasse_sulfite_pulping = {
 	is_hidden_when_unavailable = yes	
 	unlocking_technologies = {
 		alchemy
-		mechanical_tools
 	}
 	
 	building_modifiers = {
@@ -114,7 +113,6 @@ pm_lasse_bleached_paper = {
 	is_hidden_when_unavailable = yes	
 	unlocking_technologies = {
 		alchemy
-		chemical_bleaching
 	}
 	
 	building_modifiers = {
@@ -176,7 +174,6 @@ pm_lasse_bessemer_process = {
 	is_hidden_when_unavailable = yes	
 	unlocking_technologies = {
 		evlven_smithing
-		bessemer_process
 	}
 	
 	building_modifiers = {
@@ -207,7 +204,6 @@ pm_lasse_open_hearth_process = {
 	is_hidden_when_unavailable = yes	
 	unlocking_technologies = {
 		evlven_smithing
-		open_hearth_process
 	}
 	
 	building_modifiers = {
@@ -238,7 +234,6 @@ pm_lasse_electric_arc_process = {
 	is_hidden_when_unavailable = yes	
 	unlocking_technologies = {
 		evlven_smithing
-		electric_arc_process
 	}
 	
 	building_modifiers = {
