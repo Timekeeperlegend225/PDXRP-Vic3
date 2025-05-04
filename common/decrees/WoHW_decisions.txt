@@ -1,0 +1,773 @@
+become_EMB = {
+	is_shown = {
+		has_modifier = game_master
+		NOT = {
+			exists = c:EMB
+		}
+	}
+	possible = {
+		NOT = {
+			exists = c:EMB
+		}
+    }
+	
+	when_taken = {
+		create_country = {
+			tag = EMB
+			origin = c:PRU
+			state = s:STATE_CANARY_ISLANDS.region_state:SPA
+		}
+		c:EMB ={
+			activate_law = law_type:law_monarchy
+			activate_law = law_type:law_oligarchy
+			activate_law = law_type:law_national_supremacy
+			activate_law = law_type:law_state_religion
+			activate_law = law_type:law_hereditary_bureaucrats
+			activate_law = law_type:law_mass_conscription
+			activate_law = law_type:law_national_guard
+			activate_law = law_type:law_interventionism
+			activate_law = law_type:law_isolationism
+			activate_law = law_type:law_per_capita_based_taxation
+			activate_law = law_type:law_tenant_farmers
+			activate_law = law_type:law_colonial_exploitation
+			activate_law = law_type:law_militarized_police
+			activate_law = law_type:law_religious_schools
+			activate_law = law_type:law_charitable_health_system
+			activate_law = law_type:law_censorship
+			activate_law = law_type:law_no_workers_rights
+			activate_law = law_type:law_child_labor_allowed
+			activate_law = law_type:law_no_womens_rights
+			activate_law = law_type:law_no_social_security
+			activate_law = law_type:law_closed_borders
+			activate_law = law_type:law_slave_trade
+		}
+		remove_modifier = game_master
+		play_as = c:EMB
+		c:EMB = {
+			add_modifier = game_master
+			add_technology_researched = ember_empire_starting_boost
+			create_character = {
+				first_name = "Tars"     
+				last_name = "Halden"
+				birth_date = 1799.08.17 
+				interest_group = ig:ig_armed_forces
+				ruler = yes
+				is_general = yes
+				ideology = ideology_jingoist_leader
+				traits = {
+					imperious
+					cruel
+					expert_offensive_planner
+					experienced_colonial_administrator
+					political_appointee
+				}
+			}
+		}
+		s:STATE_CANARY_ISLANDS.region_state:EMB = {
+		every_scope_pop = {
+				change_poptype = pop_type:slaves
+			}
+			create_pop = {
+				pop_type = aristocrats
+				culture = dracaryans
+				religion = nizoism
+				size = 4000000
+			}
+			create_pop = {
+				pop_type = soldiers
+				culture = dragokins
+				religion = nizoism
+				qualifications = 40
+				size = 12000000
+			}
+			state_region = {
+				add_homeland = cu:dracaryans
+				add_homeland = cu:dragokins
+				add_arable_land = 300
+			}
+		}
+		s:STATE_CANARY_ISLANDS.region_state:EMB = {
+			create_building = {
+				building = building_hole_emb
+				level = 20
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+become_PNR = {
+	is_shown = {
+		this = c:SIA
+		NOT = {
+			exists = c:PNR
+		}
+	}
+	possible = {
+		NOT = {
+			exists = c:PNR
+		}
+    }
+	
+	when_taken = {
+		create_country = {
+			tag = PNR
+			origin = c:GBR
+			state = s:STATE_PEGU.region_state:BUR
+		}
+		c:PNR ={
+			activate_law = law_type:law_monarchy
+			activate_law = law_type:law_oligarchy
+			activate_law = law_type:law_national_supremacy
+			activate_law = law_type:law_state_religion
+			activate_law = law_type:law_hereditary_bureaucrats
+			activate_law = law_type:law_professional_army
+			activate_law = law_type:law_national_guard
+			activate_law = law_type:law_interventionism
+			activate_law = law_type:law_isolationism
+			activate_law = law_type:law_per_capita_based_taxation
+			activate_law = law_type:law_tenant_farmers
+			activate_law = law_type:law_colonial_exploitation
+			activate_law = law_type:law_militarized_police
+			activate_law = law_type:law_religious_schools
+			activate_law = law_type:law_charitable_health_system
+			activate_law = law_type:law_censorship
+			activate_law = law_type:law_no_workers_rights
+			activate_law = law_type:law_child_labor_allowed
+			activate_law = law_type:law_no_womens_rights
+			activate_law = law_type:law_no_social_security
+			activate_law = law_type:law_closed_borders
+			activate_law = law_type:law_debt_slavery
+		}
+		play_as = c:PNR
+		s:STATE_PEGU.region_state:PNR = {
+			every_scope_pop = {
+				change_poptype = pop_type:slaves
+			}
+			create_pop = {
+				pop_type = aristocrats
+				culture = jungle_naga
+				religion = chakravadah
+				size = 1000000
+			}
+			create_pop = {
+				pop_type = clergymen
+				culture = jungle_naga
+				religion = chakravadah
+				size = 1000000
+			}
+			create_pop = {
+				pop_type = officers
+				culture = jungle_naga
+				religion = chakravadah
+				size = 500000
+			}
+			create_pop = {
+				pop_type = academics
+				culture = jungle_naga
+				religion = chakravadah
+				size = 1000000
+			}
+			create_pop = {
+				pop_type = bureaucrats
+				culture = jungle_naga
+				religion = chakravadah
+				size = 500000
+			}
+			create_pop = {
+				pop_type = soldiers
+				culture = nagavanshi
+				religion = chakravadah
+				qualifications = 40
+				size = 6000000
+			}
+			create_pop = {
+				pop_type = clerks
+				culture = nagavanshi
+				religion = chakravadah
+				qualifications = 40
+				size = 3000000
+			}
+			create_pop = {
+				pop_type = mechinists
+				culture = nagavanshi
+				religion = chakravadah
+				qualifications = 40
+				size = 3000000
+			}
+			state_region = {
+				add_homeland = cu:jungle_naga
+				add_homeland = cu:nagavanshi
+				add_arable_land = 300
+			}
+		}
+		s:STATE_PEGU.region_state:PNR = {
+			create_building = {
+				building = building_hole_naga
+				level = 20
+			}
+		}
+		c:PNR = {
+			add_technology_researched = naga_empire_starting_boost
+			create_character = {
+				first_name = "Shesha"     
+				last_name = "Maharaja"
+				birth_date = 1799.08.17 
+				interest_group = ig:ig_devout
+				ruler = yes
+				is_general = yes
+				ideology = ideology_jingoist_leader
+				traits = {
+					honorable
+					persistent
+					pious
+					expert_offensive_planner
+					experienced_political_operator
+					popular_commander
+					political_appointee
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+go_to_war_EMB = {
+	is_shown = {
+		exists = c:EMB
+		this = c:EMB
+		s:STATE_CANARY_ISLANDS.region_state:EMB = {
+			state_has_building_type_levels = {  
+				target = bt:building_barracks  
+				value < 100
+			}
+		}
+	}
+	possible = {
+    }
+	
+	when_taken = {
+		s:STATE_CANARY_ISLANDS.region_state:EMB = {
+			create_building = {
+				building = building_barracks
+				level = 200
+			} 
+			create_building = {
+				building = building_naval_base
+				level = 100
+			} 
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+go_to_war_naga = {
+	is_shown = {
+		exists = c:PNR
+		this = c:PNR
+		s:STATE_PEGU.region_state:PNR = {
+			state_has_building_type_levels = {  
+				target = bt:building_barracks  
+				value < 100
+			}
+		}
+	}
+	possible = {
+    }
+	
+	when_taken = {
+		s:STATE_PEGU.region_state:PNR = {
+			create_building = {
+				building = building_barracks
+				level = 200
+			} 
+			create_building = {
+				building = building_naval_base
+				level = 100
+			} 
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+become_ALA = {
+	is_shown = {
+		this = c:KON
+		NOT = {
+			exists = c:ALA
+		}
+	}
+	possible = {
+		NOT = {
+			exists = c:ALA
+		}
+    }
+	
+	when_taken = {
+		s:STATE_KENYA = {
+			set_owner_of_provinces = { 
+				country = c:BUG
+				provinces = { 5612 }
+			}
+		} 
+		create_country = {
+			tag = ALA
+			origin = c:GBR
+			state = s:STATE_KENYA.region_state:BUG
+		}
+		c:ALA ={
+			activate_law = law_type:law_presidential_republic
+			activate_law = law_type:law_anarchy
+			activate_law = law_type:law_racial_segregation
+			activate_law = law_type:law_freedom_of_conscience
+			activate_law = law_type:law_elected_bureaucrats
+			activate_law = law_type:law_national_militia
+			activate_law = law_type:law_no_home_affairs
+			activate_law = law_type:law_cooperative_ownership
+			activate_law = law_type:law_isolationism
+			activate_law = law_type:law_consumption_based_taxation
+			activate_law = law_type:law_homesteading
+			activate_law = law_type:law_colonial_resettlement
+			activate_law = law_type:law_no_police
+			activate_law = law_type:law_private_schools
+			activate_law = law_type:law_charitable_health_system
+			activate_law = law_type:law_private_health_insurance
+			activate_law = law_type:law_no_workers_rights
+			activate_law = law_type:law_restricted_child_labor
+			activate_law = law_type:law_womens_suffrage
+			activate_law = law_type:law_no_social_security
+			activate_law = law_type:law_closed_borders
+			activate_law = law_type:law_slavery_banned
+		}
+		play_as = c:ALA
+		s:STATE_KENYA.region_state:ALA = {
+			create_pop = {
+				pop_type = clergymen
+				culture = alarian
+				religion = yhawhamism
+				size = 1000000
+			}
+			create_pop = {
+				pop_type = academics
+				culture = alarian
+				religion = yhawhamism
+				size = 1000000
+			}
+			create_pop = {
+				pop_type = bureaucrats
+				culture = alarian
+				religion = yhawhamism
+				size = 500000
+			}
+			create_pop = {
+				pop_type = soldiers
+				culture = alarian
+				religion = yhawhamism
+				qualifications = 40
+				size = 2000000
+			}
+			create_pop = {
+				pop_type = clerks
+				culture = alarian
+				religion = yhawhamism
+				qualifications = 40
+				size = 3000000
+			}
+			create_pop = {
+				pop_type = mechinists
+				culture = alarian
+				religion = yhawhamism
+				qualifications = 40
+				size = 3000000
+			}
+			state_region = {
+				add_homeland = cu:alarian
+				add_arable_land = 50
+			}
+		}
+		s:STATE_KENYA.region_state:ALA = {
+			create_building = {
+				building = building_hole_ALA
+				level = 10
+			}
+		}
+		c:ALA = {
+			add_technology_researched = alarian_empire_starting_boost
+			create_character = {
+				interest_group = ig:ig_inteligentsia
+				ruler = yes
+				ideology = ideology_utilitarian_leader
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+become_ELD = {
+	is_shown = {
+		has_modifier = game_master
+		NOT = {
+			exists = c:ELD
+		}
+	}
+	possible = {
+		NOT = {
+			exists = c:ELD
+		}
+    }
+	
+	when_taken = {
+		create_country = {
+			tag = ELD
+			origin = c:GBR
+			state = s:STATE_AMAZONAS.region_state:BRZ
+			state = s:STATE_AMAZONAS.region_state:CLM
+			state = s:STATE_PARA.region_state:BRZ
+		}
+		c:ELD ={
+			activate_law = law_type:law_monarchy
+			activate_law = law_type:law_technocracy
+			activate_law = law_type:law_ethnostate
+			activate_law = law_type:law_state_religion
+			activate_law = law_type:law_appointed_bureaucrats
+			activate_law = law_type:law_professional_army
+			activate_law = law_type:law_national_guard
+			activate_law = law_type:law_interventionism
+			activate_law = law_type:law_isolationism
+			activate_law = law_type:law_land_based_taxation
+			activate_law = law_type:law_tenant_farmers
+			activate_law = law_type:law_no_colonial_affairs
+			activate_law = law_type:law_no_police
+			activate_law = law_type:law_private_schools
+			activate_law = law_type:law_private_health_insurance
+			activate_law = law_type:law_right_of_assembly
+			activate_law = law_type:law_no_workers_rights
+			activate_law = law_type:law_child_labor_allowed
+			activate_law = law_type:law_no_womens_rights
+			activate_law = law_type:law_no_social_security
+			activate_law = law_type:law_closed_borders
+			activate_law = law_type:law_slavery_banned
+		}
+		s:STATE_AMAZONAS.region_state:ELD = {
+			create_pop = {
+				pop_type = aristocrats
+				culture = tuvan
+				religion = song_of_creation
+				size = 4000
+			}
+			state_region = {
+				add_homeland = cu:tuvan
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+chakravadah_decision = {
+	is_shown = {
+		exists = c:PNR
+		NOT = { country_has_state_religion = rel:chakravadah }
+		has_variable = chakravadah
+	}
+
+	possible = {
+		ig:ig_devout = {
+			is_marginal = no
+		}
+		has_technology_researched = forced_conversion
+		has_variable = chakravadah
+	}
+
+	when_taken = {
+		set_state_religion = rel:chakravadah
+		state_religion_switch_effect = yes
+		ig:ig_devout = {
+			hidden_effect = { set_interest_group_name = ig_chakravadah }
+			if = {
+				limit = {
+					has_ideology = ideology_buddhist_moralist
+				}
+				remove_ideology = { 
+					ideology_buddhist_moralist
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_papal_moralist
+				}
+				remove_ideology = { 
+					ideology_papal_moralist
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_confucian
+				}
+				remove_ideology = { 
+					ideology_confucian
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_shinto_moralist
+				}
+				remove_ideology = { 
+					ideology_shinto_moralist
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_hindu_moralist_british_india
+				}
+				remove_ideology = { 
+					ideology_hindu_moralist_british_india
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_sikh_moralist
+				}
+				remove_ideology = { 
+					ideology_sikh_moralist
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_heavenly_kingdom_theocratic
+				}
+				remove_ideology = { 
+					ideology_heavenly_kingdom_theocratic
+				}
+			}
+			if = {
+				limit = {
+					has_ideology = ideology_moralist
+				}
+				remove_ideology = { 
+					ideology_moralist
+				}
+			}		
+			add_ideology = ideology_hindu_moralist
+			set_ig_trait = ig_trait:ig_trait_haibutsu_kishaku
+			set_ig_trait = ig_trait:ig_trait_yeshivot
+			set_ig_trait = ig_trait:ig_trait_the_best_revenge
+			leader ?= {
+				change_character_religion = rel:chakravadah
+			}
+		}
+		random_scope_state = {
+			limit = {
+				owner = ROOT
+				is_capital = yes
+			}
+			convert_population = {
+				target = rel:chakravadah
+				value = 0.4
+			}
+		}
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+				is_incorporated = yes
+				NOT = { is_capital = yes }
+			}
+			convert_population = {
+				target = rel:chakravadah
+				value = 0.2
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
+
+
+
+broaden_studies = {
+	is_shown = {
+		has_journal_entry = je_WhOW_tech_EMB
+		NOT = { has_technology_researched = subterranean }
+	}
+	
+	possible = {
+		NOT = { has_variable = WoHW_focus_var }
+		NOT = { has_modifier = studying_all_OPM }
+    }
+	
+	when_taken = {
+		add_modifier = studying_all_OPM
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_EMB
+			}
+			remove_modifier = focus_on_studying_EMB
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_PNR
+			}
+			remove_modifier = focus_on_studying_PNR
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ALA
+			}
+			remove_modifier = focus_on_studying_ALA
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_VAMP
+			}
+			remove_modifier = focus_on_studying_VAMP
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ELD
+			}
+			remove_modifier = focus_on_studying_ELD
+		}
+		set_variable = { 
+			name = WoHW_focus_var 
+			years = 1 
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+study_subtareans = {
+	is_shown = {
+		NOT = { has_technology_researched = subterranean }
+		OR = {
+			NOT = { has_journal_entry = je_WhOW_tech_EMB }
+			NOT = { has_journal_entry = je_WhOW_tech_PNR }
+			NOT = { has_journal_entry = je_WhOW_tech_ALA }
+			NOT = { has_journal_entry = je_WhOW_tech_ELD }
+		}
+	}
+	possible = {
+		always = yes
+    }
+	
+	when_taken = {
+		add_journal_entry = {	
+			type = je_WhOW_tech_EMB
+		}
+		add_journal_entry = {	
+			type = je_WhOW_tech_PNR
+		}
+		add_journal_entry = {	
+			type = je_WhOW_tech_ALA
+		}
+		add_journal_entry = {	
+			type = je_WhOW_tech_ELD
+		}
+		add_modifier = studying_all_OPM
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_EMB
+			}
+			remove_modifier = focus_on_studying_EMB
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_PNR
+			}
+			remove_modifier = focus_on_studying_PNR
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ALA
+			}
+			remove_modifier = focus_on_studying_ALA
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_VAMP
+			}
+			remove_modifier = focus_on_studying_VAMP
+		}
+		if = {
+			limit = {
+				has_modifier = focus_on_studying_ELD
+			}
+			remove_modifier = focus_on_studying_ELD
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+superior_embargo_to_everyone = {
+	is_shown = {
+		has_technology_researched = subterranean
+	}
+	possible = {
+		always = yes
+    }
+	
+	when_taken = {
+		save_scope_as = origin 
+		every_country = {
+			limit = {
+				NOT = { has_technology_researched = subterranean }
+			}
+			save_scope_as = primitive_embargo_target
+			scope:origin = {
+				create_diplomatic_pact = {
+					country = scope:primitive_embargo_target
+					type = superior_embargo
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
+
+dracaryans_slave_importe = {
+	is_shown = {
+		has_technology_researched = efficient_authority
+	}
+	possible = {
+		NOT = { has_modifier = dracaryan_slave_import_mod }
+    }
+	
+	when_taken = {
+		add_modifier = {
+			name = dracaryan_slave_import_mod           
+			months = 25
+			is_decaying = yes
+   		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
