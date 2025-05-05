@@ -3,7 +3,7 @@
 
 memorite = {
 	texture = "gfx/interface/icons/goods_icons/memorite.dds"
-	cost = 20
+	cost = 40
 	category = industrial
 	
 	prestige_factor = 25
