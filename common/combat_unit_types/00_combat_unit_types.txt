@@ -275,7 +275,7 @@ combat_unit_type_goldspear_infantry = {
         military_formation_mobilization_speed_mult = 0.05
 	}
 
-	unlocking_technologies = { goldspear_infantry_tech }
+	unlocking_technologies = { guerilla_warfare }
 
     combat_unit_image = {
 		# fallback
@@ -295,7 +295,6 @@ combat_unit_type_squad_infantry = {
     upkeep_modifier = {
         goods_input_small_arms_add = 3
         goods_input_ammunition_add = 3
-        goods_input_radios_add = 1
     }
     
     battle_modifier = {
@@ -346,15 +345,16 @@ combat_unit_type_flamecaster_infantry = {
     upkeep_modifier = {
         goods_input_ammunition_add = 2
         goods_input_flamecaster_add = 4
+        goods_input_radios_add = 1
     }
     
     battle_modifier = {
         unit_offense_add = 45
-        unit_defense_add = 60
+        unit_defense_add = 45
         unit_morale_loss_add = 8
     }
 
-	unlocking_technologies = { flamecaster_infantry_tech }
+	unlocking_technologies = { emberian_conscription_tech }
 
     combat_unit_image = {
 		# fallback
@@ -438,7 +438,7 @@ combat_unit_type_noldor_host = {
     
     battle_modifier = {
         unit_offense_add = 60
-        unit_defense_add = 30
+        unit_defense_add = 60
         unit_morale_loss_add = 4
         unit_kill_rate_add = 0.20
     }
@@ -463,17 +463,18 @@ combat_unit_type_advanced_support_group = {
     }
     
     battle_modifier = {
-        unit_offense_add = 40
+        unit_offense_add = 50
         unit_defense_add = 70
         unit_morale_loss_add = 4
-        unit_kill_rate_add = -0.20
+        unit_kill_rate_add = -0.15
         unit_morale_damage_mult = 0.20
     }
 
     formation_modifier = {
         military_formation_mobilization_speed_mult = 0.2
 		character_battle_condition_lost_mult = -0.5
-		unit_morale_loss_mult = -0.20
+		unit_morale_loss_mult = -0.10
+		unit_recovery_rate_add = 0.20
     }
 
     combat_unit_image = {
@@ -959,17 +960,16 @@ combat_unit_type_light_artillery = {
 	unlocking_technologies = { holy_light }
 
     upkeep_modifier = {
-		goods_input_glass_add = 1
-		goods_input_memorite_add = 2
+		goods_input_glass_add = 4
+		goods_input_memorite_add = 5
         goods_input_radios_add = 1
-        goods_input_aeroplanes_add = 1
+        goods_input_aeroplanes_add = 2
     }
     
     battle_modifier = {
-        unit_offense_add = 10
+        unit_offense_add = 50
         unit_defense_add = 30
         unit_morale_loss_add = 4
-        unit_kill_rate_add = -0.20
         unit_morale_damage_mult = 0.20
     }
 
@@ -1298,9 +1298,9 @@ combat_unit_mobile_assault_group = {
         unit_offense_add = 45
         unit_defense_add = 35
         unit_morale_loss_add = 4
-        unit_kill_rate_add = -0.20
+        unit_kill_rate_add = -0.15
         unit_morale_damage_mult = 0.20
-        unit_occupation_mult = 0.3
+        unit_occupation_mult = 0.30
     }
 
     formation_modifier = {
@@ -1478,7 +1478,7 @@ combat_unit_type_levitating_tanks = {
         unit_offense_add = 70
         unit_defense_add = 70
         unit_morale_loss_add = 4
-        unit_kill_rate_add = -0.20
+        unit_kill_rate_add = -0.15
         unit_morale_damage_mult = 0.20
     }
 
@@ -1711,7 +1711,7 @@ combat_unit_type_floating_destroyer = {
         unit_offense_add = 50
         unit_defense_add = 60
         unit_morale_loss_add = 6
-        unit_kill_rate_add = -0.20
+        unit_kill_rate_add = -0.15
         unit_morale_damage_mult = 0.20
 		unit_convoy_defense_mult = 0.5
     }
@@ -1991,7 +1991,7 @@ combat_unit_type_floating_battleship = {
         unit_offense_add = 90
         unit_defense_add = 90
         unit_morale_loss_add = 6
-        unit_kill_rate_add = -0.20
+        unit_kill_rate_add = -0.15
         unit_morale_damage_mult = 0.20
 		unit_convoy_raiding_mult = -0.5
     }
@@ -2177,7 +2177,7 @@ combat_unit_floating_operation_base = {
         unit_offense_add = 100
         unit_defense_add = 120
         unit_morale_loss_add = 0
-        unit_kill_rate_add = -0.20
+        unit_kill_rate_add = -0.15
         unit_morale_damage_mult = 0.20
 		unit_convoy_raiding_mult = -1
 		unit_convoy_defense_mult = -0.5
