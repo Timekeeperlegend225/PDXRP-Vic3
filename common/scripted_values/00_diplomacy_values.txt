@@ -1,4 +1,5 @@
-﻿leverage_threshold_to_invite = 200 	# Minimum leverage advantage from power bloc on country to be able to invite the country
+﻿leverage_threshold_to_invite = 150 	# Minimum leverage advantage from power bloc on country to be able to invite the country
+
 decrease_autonomy_liberty_desire_to_add = 10 	# When you decrease autonomy of one of your subject, other direct subjects increase their liberty desire by this
 
 annex_subject_base_liberty_desire_change = 25
@@ -50,21 +51,21 @@ liberty_desire_weekly_change = {
 		if = {
 			limit = { "root.second_country.relations(root.first_country)" < relations_threshold:hostile }
 			add = {
-				add = 0.5
+				add = 1
 				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_HOSTILE"
 			}
 		}
 		else_if = {
 			limit = { "root.second_country.relations(root.first_country)" < relations_threshold:cold }
 			add = {
-				add = 0.25
+				add = 0.50
 				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_COLD"
 			}
 		}
 		else_if = {
 			limit = { "root.second_country.relations(root.first_country)" < relations_threshold:poor }
 			add = {
-				add = 0.10
+				add = 0.25
 				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_POOR"
 			}
 		}
@@ -78,21 +79,21 @@ liberty_desire_weekly_change = {
 		else_if = {
 			limit = { "root.second_country.relations(root.first_country)" >= relations_threshold:friendly }
 			add = {
-				add = -0.1
+				add = -0.25
 				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_FRIENDLY"
 			}
 		}
 		else_if = {
 			limit = { "root.second_country.relations(root.first_country)" >= relations_threshold:amicable }
 			add = {
-				add = -0.05
+				add = -0.10
 				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_AMICABLE"
 			}
 		}
 		else_if = {
 			limit = { "root.second_country.relations(root.first_country)" >= relations_threshold:cordial }
 			add = {
-				add = -0.025
+				add = -0.05
 				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_CORDIAL"				
 			}
 		}
@@ -166,7 +167,7 @@ liberty_desire_weekly_change = {
 				divide = 150
 				min = 0.01
 				max = 0.05
-				multiply = -1
+				multiply = -2
 				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE"
 			}
 		}
@@ -185,7 +186,7 @@ liberty_desire_weekly_change = {
 		limit = {
 			OR = {
 				is_diplomatic_action_type = personal_union
-				is_diplomatic_action_type = dominion
+				is_diplomatic_action_type = puppet
 			}
 		}				
 		if = {
@@ -202,7 +203,7 @@ liberty_desire_weekly_change = {
 				divide = 200
 				min = 0.01
 				max = 0.05
-				multiply = -1
+				multiply = -2
 				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE"
 			}
 		}
@@ -238,7 +239,7 @@ liberty_desire_weekly_change = {
 				divide = 300
 				min = 0.01
 				max = 0.05
-				multiply = -1
+				multiply = -2
 				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE"
 			}
 		}
@@ -308,9 +309,9 @@ liberty_desire_weekly_change = {
 	if = {
 		limit = { "root.second_country.economic_dependence(root.first_country)" > 0 }
 		add = {
-			value = 1
+			value = 0
 			subtract = "root.second_country.economic_dependence(root.first_country)"
-			divide = 10
+			divide = 50
 			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_ECONOMIC_DEPENDENCE"
 		}		
 	}
@@ -318,7 +319,7 @@ liberty_desire_weekly_change = {
 		add = {
 			value = 1
 			subtract = "root.second_country.economic_dependence(root.first_country)"
-			divide = 3
+			divide = 50
 			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_ECONOMIC_DEPENDENCE"
 		}	
 	}
@@ -352,15 +353,16 @@ liberty_desire_weekly_change = {
 			root.first_country = { 
 				is_in_power_bloc = yes
 				power_bloc = {
-					has_principle = principle:principle_sacred_civics_2
+					OR = {
+						has_principle = principle:principle_sacred_civics_2
+						has_principle = principle:principle_sacred_civics_3
+					}
 				}
 				religion = root.second_country.religion
 			}
 		}
-		add = {
-			value = -0.1
-			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS"
-		}
+		desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS"
+		add = -0.1
 	}	
 	
 	add = {
