@@ -139,6 +139,7 @@ floating_warfare = {
 	modifier = {
 		country_ignores_landing_craft_penalty_bool = yes
 		state_building_airport_max_level_add = 2
+		unit_occupation_mult = 0.1
 	}
 	
 	ai_weight = {

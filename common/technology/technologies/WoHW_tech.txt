@@ -10,7 +10,6 @@ subterranean = {
 		country_bureaucracy_add = 1000
 		country_authority_mult = 0.5
 		country_convoys_capacity_add = 2000
-		country_minting_add = 70000
 		country_military_goods_cost_mult = -0.5
 		country_tech_spread_mult = -0.9
 		country_tech_research_speed_mult = -0.9
@@ -20,8 +19,8 @@ subterranean = {
 		country_standard_of_living_full_acceptance_add = 30
 		country_max_declared_interests_add = 30
 		country_gold_reserve_limit_mult = 10
-		country_influence_add = 500
-		country_influence_mult = 0.20
+		country_influence_add = 1000
+		country_influence_mult = 0.30
 		political_movement_radicalism_add = -0.30
 	}
 	
