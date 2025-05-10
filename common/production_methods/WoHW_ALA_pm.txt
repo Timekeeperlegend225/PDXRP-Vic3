@@ -252,7 +252,7 @@ pm_connectic_extraction = {
 			goods_input_tools_add = 4
 			goods_input_glass_add = 4
 			goods_input_electricity_add = 4
-			goods_input_telephones_add = 4
+			goods_input_telephones_add = 3
 			
 			goods_output_memorite_add = 12
 		}
@@ -407,7 +407,7 @@ pm_flying_machine_production = {
 			goods_input_memorite_add = 15
 
 			# output goods
-			goods_output_aeroplanes_add = 20
+			goods_output_aeroplanes_add = 30
 		}
 
 		level_scaled = {

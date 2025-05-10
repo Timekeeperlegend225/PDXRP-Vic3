@@ -31,20 +31,19 @@
 		}
 
 		level_scaled = {
-			building_employment_aristocrats_add = 500
-			building_employment_officers_add = 500
-			building_employment_bureaucrats_add = 500
-			building_employment_shopkeepers_add = 500
-			building_employment_clerks_add = 1000
-			building_employment_soldiers_add = 1000
+			building_employment_aristocrats_add = 400
+			building_employment_officers_add = 400
+			building_employment_bureaucrats_add = 400
+			building_employment_shopkeepers_add = 400
+			building_employment_clerks_add = 800
+			building_employment_soldiers_add = 3000
 			building_employment_laborers_add = 10000
 		}
 	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			country_construction_add = 5
-			country_bureaucracy_add = 40
+	
+	country_modifiers = {
+		unscaled = {
+			country_minting_add = 70000
 		}
 	}
 }
@@ -81,20 +80,19 @@ pm_wohw_hole_naga = {
 		}
 
 		level_scaled = {
-			building_employment_aristocrats_add = 500
-			building_employment_officers_add = 500
-			building_employment_bureaucrats_add = 500
-			building_employment_shopkeepers_add = 500
-			building_employment_clerks_add = 1000
-			building_employment_soldiers_add = 1000
+			building_employment_aristocrats_add = 400
+			building_employment_officers_add = 400
+			building_employment_bureaucrats_add = 400
+			building_employment_shopkeepers_add = 400
+			building_employment_clerks_add = 7500
+			building_employment_soldiers_add = 3000
 			building_employment_laborers_add = 10000
 		}
 	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			country_construction_add = 5
-			country_bureaucracy_add = 40
+	
+	country_modifiers = {
+		unscaled = {
+			country_minting_add = 70000
 		}
 	}
 }
@@ -127,20 +125,19 @@ pm_wohw_hole_ala = {
 		}
 
 		level_scaled = {
-			building_employment_academics_add = 500
-			building_employment_officers_add = 500
-			building_employment_bureaucrats_add = 500
-			building_employment_shopkeepers_add = 500
-			building_employment_clerks_add = 1500
-			building_employment_clergymen_add = 500
-			building_employment_machinists_add = 3000
+			building_employment_academics_add = 400
+			building_employment_officers_add = 400
+			building_employment_bureaucrats_add = 400
+			building_employment_shopkeepers_add = 400
+			building_employment_clerks_add = 1200
+			building_employment_clergymen_add = 400
+			building_employment_machinists_add = 2500
 		}
 	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			country_construction_add = 5
-			country_bureaucracy_add = 40
+	
+	country_modifiers = {
+		unscaled = {
+			country_minting_add = 70000
 		}
 	}
 }
@@ -177,20 +174,19 @@ pm_wohw_hole_eld = {
 		}
 
 		level_scaled = {
-			building_employment_academics_add = 500
-			building_employment_officers_add = 500
-			building_employment_bureaucrats_add = 500
-			building_employment_shopkeepers_add = 500
-			building_employment_clerks_add = 1500
-			building_employment_clergymen_add = 500
-			building_employment_machinists_add = 5000
+			building_employment_academics_add = 400
+			building_employment_officers_add = 400
+			building_employment_bureaucrats_add = 400
+			building_employment_shopkeepers_add = 400
+			building_employment_clerks_add = 1000
+			building_employment_clergymen_add = 400
+			building_employment_machinists_add = 1000
 		}
 	}
-
-	state_modifiers = {
-		workforce_scaled = {
-			country_construction_add = 5
-			country_bureaucracy_add = 40
+	
+	country_modifiers = {
+		unscaled = {
+			country_minting_add = 70000
 		}
 	}
 }
