@@ -1,7 +1,0 @@
-﻿##################################################
-#   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
-##################################################
-
-Grey_SEA_is_active = { # Soft Econ Adjustments
-	always = yes
-}
