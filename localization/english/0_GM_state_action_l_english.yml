@@ -5,10 +5,12 @@
  gm_state_actions.1.t:0 "GM State Actions"
  gm_state_actions.1.a:0 "Cancel"
  
- gm_state_actions.2.t:0 "Add/Remove claim"
+ gm_state_actions.2.t:0 "Claim and incorporation"
  gm_state_actions.2.a:0 "Cancel"
  gm_state_actions.2.b:0 "Add Claim"
  gm_state_actions.2.c:0 "Remove Claim"
+ gm_state_actions.2.d:0 "Incorporate"
+ gm_state_actions.2.e:0 "Unincorporate"
  
  gm_state_actions.3.t:0 "Add/Remove devastation"
  gm_state_actions.3.a:0 "Cancel"

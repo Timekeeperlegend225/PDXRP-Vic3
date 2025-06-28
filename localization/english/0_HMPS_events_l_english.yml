@@ -371,7 +371,7 @@
  gm_actions.410.b:0 "Return"
 
  #Loyalists or Radicals
- gm_actions.70.t:0 "Add Loyalists or Radicals to a State"
+ gm_actions.70.t:0 "Add Loyalists or Radicals"
  gm_actions.70.u:0 "Add Loyalists or Radicals to states selected with the "GM Scope" Decree."
  gm_actions.70.a:0 "Cancel"
  gm_actions.70.b:0 "Loyalize States!"

@@ -26,11 +26,86 @@ gm_state_actions.1 = {
 		}
 	}
 	
-	# Claim
 	option = {
-		name = gm_state_actions.2.t
+		name = gm_state_actions.2.b
+		trigger = {
+			scope:scope_GM_target = {
+				NOT = {
+					has_claim = scope:scope_target_state 
+				}
+			}
+		}
+		
+		scope:scope_target_state = {
+			state_region = {
+				add_claim = scope:scope_GM_target
+			}
+		}
 		trigger_event = {
-			id = gm_state_actions.2
+			id = gm_state_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_state_actions.2.c
+		trigger = {
+			scope:scope_GM_target = {
+				has_claim = scope:scope_target_state 
+			}
+		}
+		trigger = {
+			scope:recipient = {
+				NOT = {
+					has_truce_with = scope:scope_GM_target 
+				}
+			}
+		}
+		
+		scope:scope_target_state = {
+			state_region = {
+				remove_claim = scope:scope_GM_target
+			}
+		}
+		trigger_event = {
+			id = gm_state_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_state_actions.2.d
+		trigger = {
+			scope:scope_target_state  = {
+				is_incorporated = no
+			}
+		}
+		
+		scope:scope_target_state = {
+			set_state_type = incorporated
+		}
+		trigger_event = {
+			id = gm_state_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_state_actions.2.e
+		trigger = {
+			scope:scope_target_state  = {
+				is_incorporated = yes
+			}
+		}
+		
+		scope:scope_target_state = {
+			set_state_type = unincorporated
+		}
+		trigger_event = {
+			id = gm_state_actions.1
 			days = 0
 			popup = yes
 		}
@@ -46,8 +121,6 @@ gm_state_actions.1 = {
 		}
 	}
 }
-
-
 
 gm_state_actions.2 = {
 	type = country_event
@@ -121,6 +194,42 @@ gm_state_actions.2 = {
 			state_region = {
 				remove_claim = scope:scope_GM_target
 			}
+		}
+		trigger_event = {
+			id = gm_state_actions.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_state_actions.2.d
+		trigger = {
+			scope:scope_target_state  = {
+				is_incorporated = no
+			}
+		}
+		
+		scope:scope_target_state = {
+			set_state_type = incorporated
+		}
+		trigger_event = {
+			id = gm_state_actions.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_state_actions.2.e
+		trigger = {
+			scope:scope_target_state  = {
+				is_incorporated = yes
+			}
+		}
+		
+		scope:scope_target_state = {
+			set_state_type = unincorporated
 		}
 		trigger_event = {
 			id = gm_state_actions.2

@@ -40,6 +40,15 @@ gm_actions.1 = {
 		}
 	}
 	
+	option = {
+		name = value_selection.1.t
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
 
 	#Infamy
 	
@@ -96,17 +105,6 @@ gm_actions.1 = {
 		}
 	}
 	
-	#(Un)Incorporate a State
-	
-	option = {
-		name = gm_actions.17.t
-		trigger_event = {
-			id = gm_actions.17
-			days = 0
-			popup = yes
-		}
-	}
-	
 	
 	# Prestige
 	option = {
@@ -147,6 +145,16 @@ gm_actions.1 = {
 		}
 	}
 	
+	#HRP
+	option = {
+		name = gm_actions.50.t
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
 	#Laws
 	option = {
 		name = gm_actions.30.t
@@ -157,7 +165,7 @@ gm_actions.1 = {
 		}
 	}
 	
-	#Modifiers
+	#Character
 	option = {
 		name = gm_actions.40.t
 		trigger_event = {
@@ -194,7 +202,7 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
-	#Diploe
+	#Diplo
 	option = {
 		name = gm_actions.91.t
 		trigger_event = {
@@ -4585,79 +4593,6 @@ gm_actions.15 = {
 	
 }
 
-gm_actions.17 = {
-	type = country_event
-	placement = ROOT
-	title = gm_actions.17.t
-	desc = gm_actions.17.d
-	#flavor = gm_actions.17.f
-
-	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
-	}
- 
-
-	duration = 1
-
-	immediate = {
-		random_country = {
-			limit = {
-				has_variable = actionee
-			}
-			save_scope_as = recipient
-		}
-	}
-	
-	option = {
-		name = gm_actions.17.a
-		scope:recipient = {
-			if = {
-				limit = {
-					any_scope_state = {
-						has_decree = decree_host_scope
-						is_incorporated = no
-					}
-				}
-				every_scope_state = {
-					limit = {
-						has_decree = decree_host_scope
-						is_incorporated = no
-					}
-					set_state_type = incorporated
-				}
-			}
-			else_if = {
-				limit = {
-					any_scope_state = {
-						has_decree = decree_host_scope
-						is_incorporated = yes
-					}
-				}
-				every_scope_state = {
-					limit = {
-						has_decree = decree_host_scope
-						is_incorporated = yes
-					}
-					set_state_type = unincorporated
-				}
-			}
-		}
-		scope:recipient = {
-			remove_variable = actionee
-		}
-		remove_global_variable = GM_taking_action
-	}
-	
-	
-	option = {
-		name = gm_actions.14.c
-		scope:recipient = {
-			remove_variable = actionee
-		}
-		remove_global_variable = GM_taking_action
-	}
-}
-
 gm_actions.40 = {
 	type = country_event
 	placement = ROOT
@@ -5920,6 +5855,114 @@ gm_actions.407 = {
 		}
 		trigger_event = {
 			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.50 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.50.t
+	#desc = gm_actions.50.d
+	#flavor = gm_actions.50.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.b
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.c
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.d
+		set_global_variable = age_of_concert_gm
+		trigger = {
+			scope:relevant_movement = {	
+				NOT = {
+					has_global_variable = age_of_concert_gm
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.dn+
+		scope:recipient = {
+			je:je_HRP_concert_national = {
+				add_progress = { 
+					name = HRP_AoC_national_stability 
+					value = global_var:gm_variable
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.dn-
+		scope:recipient = {
+			je:je_HRP_concert_national = {
+				add_progress = { 
+					name = HRP_AoC_national_stability 
+					value = {
+						add = global_var:gm_variable
+						multiply = -1
+					}
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
 			days = 0
 			popup = yes
 		}
@@ -8482,7 +8525,7 @@ gm_actions.100 = {
 			days = 0
 			popup = yes
 		}
-	}
+	}	
 }
 
 gm_actions.101 = {

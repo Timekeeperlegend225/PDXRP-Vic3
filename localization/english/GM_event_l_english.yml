@@ -1,0 +1,28 @@
+﻿l_english:
+ value_selection.1.a:0 "Return"
+ value_selection.1.b:0 "Reset the value to 0"
+ value_selection.1.c:0 "+1"
+ value_selection.1.d:0 "+5"
+ value_selection.1.e:0 "+20"
+ value_selection.1.f:0 "+50"
+ value_selection.1.g:0 "-1"
+ value_selection.1.h:0 "-5"
+ value_selection.1.i:0 "-20"
+ value_selection.1.j:0 "-50"
+ value_selection.1.k:0 "x10"
+ value_selection.1.l:0 "Positive/Negative"
+ value_selection.1.t:0 "Change variable value"
+ value_selection.1.u:0 "Variable value is [GetGlobalVariable('gm_variable').GetValue|1]#!"
+ 
+ gm_actions.50.t:0 "Ages tools
+ gm_actions.50.a:0 "Cancel"
+ gm_actions.50.b:0 "Return"
+ gm_actions.50.c:0 "Value selector"
+ gm_actions.50.d:0 "Start the Age of Concert"
+ gm_actions.50.dn+:0 "Add [GetGlobalVariable('gm_variable').GetValue|1]#! national stability"
+ gm_actions.50.dn-:0 "Remove [GetGlobalVariable('gm_variable').GetValue|1]#! national stability"
+ 
+ 
+ HRP_AoC_national_stability_name:0 "National stability : [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoC_national_stability_desc: "Current national stability is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ je_HRP_concert_national_reason:0 ""Variable value is [ROOT.Var('tempnationalstab').GetValue|+=]" 

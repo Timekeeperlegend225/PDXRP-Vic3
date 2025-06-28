@@ -1,0 +1,369 @@
+﻿namespace = value_selection
+
+value_selection.1 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.1.t
+	desc = value_selection.1.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.1.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.1.b
+		set_global_variable = {
+			name = gm_variable
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.c
+		change_global_variable = {
+			name = gm_variable
+			add = 1
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.d
+		change_global_variable = {
+			name = gm_variable
+			add = 5
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.e
+		change_global_variable = {
+			name = gm_variable
+			add = 20
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.f
+		change_global_variable = {
+			name = gm_variable
+			add = 50
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.g
+		change_global_variable = {
+			name = gm_variable
+			subtract = 1
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.h
+		change_global_variable = {
+			name = gm_variable
+			subtract = 5
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.i
+		change_global_variable = {
+			name = gm_variable
+			subtract = 20
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.j
+		change_global_variable = {
+			name = gm_variable
+			subtract  = 50
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.k
+		change_global_variable = {
+			name = gm_variable
+			multiply = 10
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.l
+		change_global_variable = {
+			name = gm_variable
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+value_selection.50 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.1.t
+	desc = value_selection.1.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.1.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.1.b
+		set_global_variable = {
+			name = gm_variable
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.c
+		change_global_variable = {
+			name = gm_variable
+			add = 1
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.d
+		change_global_variable = {
+			name = gm_variable
+			add = 5
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.e
+		change_global_variable = {
+			name = gm_variable
+			add = 20
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.f
+		change_global_variable = {
+			name = gm_variable
+			add = 50
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.g
+		change_global_variable = {
+			name = gm_variable
+			subtract = 1
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.h
+		change_global_variable = {
+			name = gm_variable
+			subtract = 5
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.i
+		change_global_variable = {
+			name = gm_variable
+			subtract = 20
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.j
+		change_global_variable = {
+			name = gm_variable
+			subtract  = 50
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.k
+		change_global_variable = {
+			name = gm_variable
+			multiply = 10
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.l
+		change_global_variable = {
+			name = gm_variable
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.50
+			days = 0
+			popup = yes
+		}
+	}
+}
