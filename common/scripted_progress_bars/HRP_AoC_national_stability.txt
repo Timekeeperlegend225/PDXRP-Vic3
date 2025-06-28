@@ -1,0 +1,40 @@
+﻿HRP_AoC_national_stability = {
+	name = "HRP_AoC_national_stability_bar"
+	desc = "HRP_AoC_national_stability_desc"
+
+	default_green = yes
+
+	monthly_progress = {
+		add = {
+			desc = "from Radicals"
+			subtract = this.radical_population_fraction
+			multiply = 10
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_radical
+					}
+				}
+			}
+			add = {
+				desc = "from radical movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_radical
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		
+	}
+
+	start_value = 800
+	min_value = 0
+	max_value = 1000
+
+}

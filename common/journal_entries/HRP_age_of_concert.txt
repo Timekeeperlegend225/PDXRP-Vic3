@@ -1,0 +1,85 @@
+﻿je_HRP_concert_national = {
+	icon = "gfx/interface/icons/invention_icons/dracaryan_studies.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		always = yes
+	}
+
+	possible = {
+		has_global_variable = age_of_concert_gm
+	}
+
+	immediate = {
+	}
+
+	scripted_progress_bar = HRP_AoC_national_stability
+
+	complete = {
+	}
+
+	status_desc = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			HRP_AoC_national_stability_progress = yes 
+			set_variable = { 
+				name = tempnationalstab 
+				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_national_stability)" 
+			}
+			remove_modifier = HPR_concert_national_stability_positive
+			remove_modifier = HPR_concert_national_stability_negative
+			scope:journal_entry = { 
+				remove_modifier = HPR_concert_national_stability_positive
+				remove_modifier = HPR_concert_national_stability_negative
+			}
+			if = {
+				limit = {
+					"scope:journal_entry.scripted_bar_progress(HRP_AoC_national_stability)" >= 500
+				}
+				add_modifier = {
+					name = HPR_concert_national_stability_positive
+					multiplier = {
+						add = var:tempnationalstab
+						subtract  = 500
+						divide  = 500
+					}
+				}
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_national_stability_positive
+						multiplier = {
+							add = var:tempnationalstab
+							subtract  = 500
+							divide  = 500
+						}
+					}
+				}
+			}
+			else = {
+				add_modifier = {
+					name = HPR_concert_national_stability_negative
+					multiplier = {
+						add = var:tempnationalstab
+						subtract  = 500
+						divide  = -500
+					}
+				}
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_national_stability_negative
+						multiplier = {
+							add = var:tempnationalstab
+							subtract  = 500
+							divide  = -500
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+}
