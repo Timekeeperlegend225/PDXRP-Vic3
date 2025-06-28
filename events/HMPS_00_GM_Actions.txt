@@ -5918,7 +5918,7 @@ gm_actions.50 = {
 		name = gm_actions.50.d
 		set_global_variable = age_of_concert_gm
 		trigger = {
-			scope:relevant_movement = {	
+			scope:recipient = {	
 				NOT = {
 					has_global_variable = age_of_concert_gm
 				}
