@@ -22,7 +22,7 @@
 	status_desc = {
 	}
 
-	on_weekly_pulse = {
+	on_monthly_pulse = {
 		effect = {
 			HRP_AoC_national_stability_progress = yes 
 			set_variable = { 
