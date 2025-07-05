@@ -1,16 +1,13 @@
 ﻿HPR_concert_global = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_aristocrats_pol_str_mult = 0.20
-	country_infamy_generation_mult = 0.20
-	country_infamy_generation_against_unrecognized_mult = -0.20
-	country_infamy_decay_mult = -0.10
+	country_aristocrats_pol_str_mult = 0.50
 	state_capitalists_investment_pool_efficiency_mult = -0.20
 }
 
 HPR_concert_national_stability_positive = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	country_aristocrats_pol_str_mult = 0.20
-	state_aristocrats_investment_pool_contribution_add = 0.20
+	state_aristocrats_investment_pool_contribution_add = 0.5
 	state_aristocrats_investment_pool_efficiency_mult = 0.50
 	country_law_enactment_time_mult = 0.20
 	country_prestige_add = 20
@@ -20,11 +17,29 @@ HPR_concert_national_stability_positive = {
 }
 
 HPR_concert_national_stability_negative = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	state_aristocrats_investment_pool_contribution_add = -0.20
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	state_aristocrats_investment_pool_contribution_add = -0.5
 	state_aristocrats_investment_pool_efficiency_mult = -0.20
 	country_law_enactment_time_mult = -0.20
 	country_prestige_mult = -0.10
 	country_legitimacy_base_add = -10
 	state_construction_mult = -0.10
+}
+
+HPR_concert_global_stability_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_aristocrats_pol_str_mult = 0.30
+	state_aristocrats_investment_pool_contribution_add = 0.5
+	state_aristocrats_investment_pool_efficiency_mult = 0.50
+	country_infamy_generation_mult = 0.25
+	country_infamy_generation_against_unrecognized_mult = -0.20
+	country_infamy_decay_mult = -0.20
+	political_movement_radicalism_add = -20
+}
+
+HPR_concert_global_stability_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	state_aristocrats_investment_pool_contribution_add = -0.5
+	state_aristocrats_investment_pool_efficiency_mult = -0.20
+	political_movement_radicalism_add = 10
 }

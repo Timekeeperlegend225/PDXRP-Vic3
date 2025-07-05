@@ -1,5 +1,5 @@
 ﻿je_HRP_concert_national = {
-	icon = "gfx/interface/icons/invention_icons/dracaryan_studies.dds"
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
 
 	group = je_group_historical_content
 
@@ -29,8 +29,6 @@
 				name = tempnationalstab 
 				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_national_stability)" 
 			}
-			remove_modifier = HPR_concert_national_stability_positive
-			remove_modifier = HPR_concert_national_stability_negative
 			scope:journal_entry = { 
 				remove_modifier = HPR_concert_national_stability_positive
 				remove_modifier = HPR_concert_national_stability_negative
@@ -38,14 +36,6 @@
 			if = {
 				limit = {
 					"scope:journal_entry.scripted_bar_progress(HRP_AoC_national_stability)" >= 500
-				}
-				add_modifier = {
-					name = HPR_concert_national_stability_positive
-					multiplier = {
-						add = var:tempnationalstab
-						subtract  = 500
-						divide  = 500
-					}
 				}
 				scope:journal_entry = { 
 					add_modifier = {
@@ -59,14 +49,6 @@
 				}
 			}
 			else = {
-				add_modifier = {
-					name = HPR_concert_national_stability_negative
-					multiplier = {
-						add = var:tempnationalstab
-						subtract  = 500
-						divide  = -500
-					}
-				}
 				scope:journal_entry = { 
 					add_modifier = {
 						name = HPR_concert_national_stability_negative
@@ -78,6 +60,251 @@
 					}
 				}
 			}
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+}
+
+je_HRP_concert_global_gm = {
+	icon = "gfx/interface/icons/invention_icons/civilizing_mission.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_global_variable = age_of_concert_gm
+	}
+
+	immediate = {
+	}
+
+	scripted_progress_bar = HRP_AoC_global_stability
+
+	complete = {
+	}
+
+	status_desc = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			set_global_variable = { 
+				name = total_stability
+				value = 0
+			}
+			set_global_variable = { 
+				name = stability_weigh
+				value = 0
+			}  
+			every_country = {
+				if = {
+					limit = {
+						country_rank = rank_value:great_power
+					}
+					set_variable = { 
+						name = tempnationalstab2
+						value = var:tempnationalstab
+					}
+					change_variable = {
+						name = tempnationalstab2
+						multiply = 10
+					}
+					change_global_variable = {
+						name = total_stability
+						add = var:tempnationalstab2
+					}
+					change_global_variable = {
+						name = stability_weigh
+						add = 10
+					}
+				}
+				else_if = {
+					limit = {
+						country_rank = rank_value:major_power
+					}
+					set_variable = { 
+						name = tempnationalstab2
+						value = var:tempnationalstab
+					}
+					change_variable = {
+						name = tempnationalstab2
+						multiply = 5
+					}
+					change_global_variable = {
+						name = total_stability
+						add = var:tempnationalstab2
+					}
+					change_global_variable = {
+						name = stability_weigh
+						add = 5
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							country_rank = rank_value:minor_power
+							country_rank = rank_value:unrecognized_major_power
+						}
+					}
+					set_variable = { 
+						name = tempnationalstab2
+						value = var:tempnationalstab
+					}
+					change_variable = {
+						name = tempnationalstab2
+						multiply = 2
+					}
+					change_global_variable = {
+						name = total_stability
+						add = var:tempnationalstab2
+					}
+					change_global_variable = {
+						name = stability_weigh
+						add = 2
+					}
+				}
+				else = {
+					change_global_variable = {
+						name = total_stability
+						add = var:tempnationalstab
+					}
+					change_global_variable = {
+						name = stability_weigh
+						add = 1
+					}
+				}
+			}
+			change_global_variable = {
+				name = total_stability
+				divide = global_var:stability_weigh
+			}
+			change_global_variable = {
+				name = total_stability
+				subtract = 500
+			}
+			if = {
+				limit = {
+					total_stability > 0
+				}
+				change_global_variable = {
+					name = total_stability
+					divide = 1000
+				}
+			}
+			else = {
+				change_global_variable = {
+					name = total_stability
+					divide = 100
+				}
+			}
+			HRP_AoC_global_stability_progress = yes 
+			set_variable = { 
+				name = tempglobalstab 
+				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" 
+			}
+			scope:journal_entry = { 
+				remove_modifier = HPR_concert_global_stability_positive
+				remove_modifier = HPR_concert_global_stability_negative
+			}
+			if = {
+				limit = {
+					"scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" >= 500
+				}
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_global_stability_positive
+						multiplier = {
+							add = var:tempglobalstab
+							subtract  = 500
+							divide  = 500
+						}
+					}
+				}
+			}
+			else = {
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_global_stability_negative
+						multiplier = {
+							add = var:tempglobalstab
+							subtract  = 500
+							divide  = -500
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+}
+
+je_HRP_concert_global = {
+	icon = "gfx/interface/icons/invention_icons/civilizing_mission.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		NOT = { has_modifier = game_master }
+	}
+
+	possible = {
+		has_global_variable = age_of_concert_gm
+	}
+
+	immediate = {
+	}
+
+	scripted_progress_bar = HRP_AoC_global_stability
+
+	complete = {
+	}
+
+	status_desc = {
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			set_variable = { 
+				name = tempglobalstab 
+				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" 
+			}
+			scope:journal_entry = { 
+				remove_modifier = HPR_concert_global_stability_positive
+				remove_modifier = HPR_concert_global_stability_negative
+			}
+			if = {
+				limit = {
+					"scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" >= 500
+				}
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_global_stability_positive
+						multiplier = {
+							add = var:tempglobalstab
+							subtract  = 500
+							divide  = 500
+						}
+					}
+				}
+			}
+			else = {
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_global_stability_negative
+						multiplier = {
+							add = var:tempglobalstab
+							subtract  = 500
+							divide  = -500
+						}
+					}
+				}
+			}
+			HRP_AoC_global_stability_progress = yes 
 		}
 	}
 	
