@@ -14,6 +14,12 @@
 			subtract = this.radical_population_fraction
 			multiply = 10
 		}
+		add = {
+			desc = "from Global Stability"
+			add = var:tempglobalstab
+			divide  = 100
+			subtract = 10
+		}
 		if = {
 			limit = {
 				any_political_movement = {
@@ -622,6 +628,7 @@
 					subtract = this.political_movement_radicalism
 					multiply = this.political_movement_support
 					multiply = 10
+					divide  = 100
 				}
 			}
 		}
@@ -648,7 +655,18 @@ HRP_AoC_global_stability = {
 			desc = "from Average national stability"
 			value = global_var:total_stability
 		}
-		
+		subtract = {
+			desc = "from Egalitarianism"
+			value = global_var:tech_lowering_stability_egal
+		}
+		subtract = {
+			desc = "from Nationalism"
+			value = global_var:tech_lowering_stability_nat
+		}
+		subtract = {
+			desc = "from Labor Movement"
+			value = global_var:tech_lowering_stability_lab
+		}
 	}
 
 	start_value = 1000

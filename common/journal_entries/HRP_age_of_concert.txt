@@ -142,7 +142,19 @@ je_HRP_concert_global_gm = {
 			set_global_variable = { 
 				name = stability_weigh
 				value = 0
+			} 
+			set_global_variable = { 
+				name = tech_lowering_stability_egal
+				value = 0
 			}  
+			set_global_variable = { 
+				name = tech_lowering_stability_nat
+				value = 0
+			} 
+			set_global_variable = { 
+				name = tech_lowering_stability_lab
+				value = 0
+			}
 			every_country = {
 				if = {
 					limit = {
@@ -164,6 +176,33 @@ je_HRP_concert_global_gm = {
 						name = stability_weigh
 						add = 10
 					}
+					if = {
+						limit = {
+							has_technology_researched = egalitarianism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_egal
+							add = 0.1
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = nationalism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_nat
+							add = 0.1
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = labor_movement
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_lab
+							add = 0.1
+						}
+					}
 				}
 				else_if = {
 					limit = {
@@ -184,6 +223,33 @@ je_HRP_concert_global_gm = {
 					change_global_variable = {
 						name = stability_weigh
 						add = 5
+					}
+					if = {
+						limit = {
+							has_technology_researched = egalitarianism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_egal
+							add = 0.05
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = nationalism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_nat
+							add = 0.05
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = labor_movement
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_lab
+							add = 0.05
+						}
 					}
 				}
 				else_if = {
@@ -209,6 +275,33 @@ je_HRP_concert_global_gm = {
 						name = stability_weigh
 						add = 2
 					}
+					if = {
+						limit = {
+							has_technology_researched = egalitarianism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_egal
+							add = 0.02
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = nationalism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_nat
+							add = 0.02
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = labor_movement
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_lab
+							add = 0.02
+						}
+					}
 				}
 				else = {
 					change_global_variable = {
@@ -218,6 +311,33 @@ je_HRP_concert_global_gm = {
 					change_global_variable = {
 						name = stability_weigh
 						add = 1
+					}
+					if = {
+						limit = {
+							has_technology_researched = egalitarianism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_egal
+							add = 0.01
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = nationalism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_nat
+							add = 0.01
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = labor_movement
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_lab
+							add = 0.01
+						}
 					}
 				}
 			}
