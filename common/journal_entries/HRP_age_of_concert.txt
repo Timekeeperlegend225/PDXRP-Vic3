@@ -8,16 +8,37 @@
 	}
 
 	possible = {
-		has_global_variable = age_of_concert_gm
+		custom_tooltip = {
+			text = "Age of Concert started"
+			has_global_variable = age_of_concert_gm
+		}
 	}
 
 	immediate = {
+		scope:journal_entry = { 
+			add_modifier = {
+				name = HPR_concert_national_stability_positive
+				multiplier = {
+					add = 0.6
+					multiply = var:geographic_multiplier
+				}
+			}
+		}
 	}
 
 	scripted_progress_bar = HRP_AoC_national_stability
 
 	complete = {
 	}
+	
+    invalid = {
+		custom_tooltip = {
+			text = "Age of Concert is finished"
+			NOT = {
+				has_global_variable = age_of_concert_gm
+			}
+		}
+    }
 
 	status_desc = {
 	}
@@ -44,6 +65,7 @@
 							add = var:tempnationalstab
 							subtract  = 500
 							divide  = 500
+							multiply = var:geographic_multiplier
 						}
 					}
 				}
@@ -56,6 +78,7 @@
 							add = var:tempnationalstab
 							subtract  = 500
 							divide  = -500
+							multiply = var:geographic_multiplier
 						}
 					}
 				}
@@ -72,20 +95,40 @@ je_HRP_concert_global_gm = {
 	group = je_group_historical_content
 
 	is_shown_when_inactive = {
-		has_modifier = game_master
+		has_variable = concert_gm
 	}
 
 	possible = {
-		has_global_variable = age_of_concert_gm
+		custom_tooltip = {
+			text = "Age of Concert started"
+			has_global_variable = age_of_concert_gm
+		}
+	}
+
+	modifiers_while_active = {
+		HPR_concert_global
 	}
 
 	immediate = {
+		add_modifier = {
+			name = HPR_concert_global_stability_positive
+			multiplier = var:geographic_multiplier
+		}
 	}
 
 	scripted_progress_bar = HRP_AoC_global_stability
 
 	complete = {
 	}
+	
+    invalid = {
+		custom_tooltip = {
+			text = "Age of Concert is finished"
+			NOT = {
+				has_global_variable = age_of_concert_gm
+			}
+		}
+    }
 
 	status_desc = {
 	}
@@ -221,6 +264,7 @@ je_HRP_concert_global_gm = {
 							add = var:tempglobalstab
 							subtract  = 500
 							divide  = 500
+							multiply = var:geographic_multiplier
 						}
 					}
 				}
@@ -233,6 +277,7 @@ je_HRP_concert_global_gm = {
 							add = var:tempglobalstab
 							subtract  = 500
 							divide  = -500
+							multiply = var:geographic_multiplier
 						}
 					}
 				}
@@ -253,16 +298,46 @@ je_HRP_concert_global = {
 	}
 
 	possible = {
-		has_global_variable = age_of_concert_gm
+		custom_tooltip = {
+			text = "Age of Concert started"
+			has_global_variable = age_of_concert_gm
+		}
+		hidden_trigger = {
+			NOT = {
+				has_journal_entry = je_HRP_concert_global_gm
+			}
+		}
+	}
+
+	modifiers_while_active = {
+		HPR_concert_global
 	}
 
 	immediate = {
+		add_modifier = {
+			name = HPR_concert_global_stability_positive
+			multiplier = var:geographic_multiplier
+		}
 	}
 
 	scripted_progress_bar = HRP_AoC_global_stability
 
 	complete = {
 	}
+	
+    invalid = {
+		OR = {
+			custom_tooltip = {
+				text = "Age of Concert is finished"
+				NOT = {
+					has_global_variable = age_of_concert_gm
+				}
+			}
+			hidden_trigger = {
+				has_journal_entry = je_HRP_concert_global_gm
+			}
+		}
+    }
 
 	status_desc = {
 	}
@@ -288,6 +363,7 @@ je_HRP_concert_global = {
 							add = var:tempglobalstab
 							subtract  = 500
 							divide  = 500
+							multiply = var:geographic_multiplier
 						}
 					}
 				}
@@ -300,6 +376,7 @@ je_HRP_concert_global = {
 							add = var:tempglobalstab
 							subtract  = 500
 							divide  = -500
+							multiply = var:geographic_multiplier
 						}
 					}
 				}

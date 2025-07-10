@@ -3,3 +3,8 @@
 	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 50000000	# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
 	REINVESTMENT_SUBSISTENCE_FRACTION_REDUCTION = 0.5	# Reinvestment from pops in ownership buildings is multiplied by ( 1 - this * the share of levels owned that are subsistence building)
 }
+
+
+NPolitics = {
+	LAW_ENACTMENT_MOVEMENT_SUPPORT_STALL_EFFECT = 2.0 # Movement support has this impact on a law's chance to stall
+}

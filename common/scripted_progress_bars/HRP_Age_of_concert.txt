@@ -6,6 +6,10 @@
 
 	monthly_progress = {
 		add = {
+			desc = "base progress"
+			value = global_var:concert_national_correction
+		}
+		add = {
 			desc = "from Radicals"
 			subtract = this.radical_population_fraction
 			multiply = 10
@@ -25,12 +29,602 @@
 						is_political_movement_type = movement_radical
 					}
 					subtract = this.political_movement_radicalism
-					multiply = this.this.political_movement_support
+					multiply = this.political_movement_support
 					multiply = 10
 				}
 			}
 		}
-		
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_anti_slavery
+					}
+				}
+			}
+			add = {
+				desc = "from anti slavery movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_anti_slavery
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_pro_slavery
+					}
+				}
+			}
+			add = {
+				desc = "from pro slavery movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_pro_slavery
+					}
+					add = 0.5
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_royalist_absolutist
+					}
+				}
+			}
+			add = {
+				desc = "from absolutist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_royalist_absolutist
+					}
+					add = 0.7
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_royalist_constitutional
+					}
+				}
+			}
+			add = {
+				desc = "from royalist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_royalist_constitutional
+					}
+					add = 0.5
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_labor
+					}
+				}
+			}
+			add = {
+				desc = "from labor movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_labor
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_socialist
+					}
+				}
+			}
+			add = {
+				desc = "from socialist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_socialist
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_anarchist
+					}
+				}
+			}
+			add = {
+				desc = "from anarchist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_anarchist
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_communist
+					}
+				}
+			}
+			add = {
+				desc = "from communist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_communist
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_fascist
+					}
+				}
+			}
+			add = {
+				desc = "from fascist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_fascist
+					}
+					add = 0.25
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 15
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_corporatist
+					}
+				}
+			}
+			add = {
+				desc = "from corporatist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_corporatist
+					}
+					add = 0.5
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_liberal
+					}
+				}
+			}
+			add = {
+				desc = "from liberal movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_liberal
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_nihilist
+					}
+				}
+			}
+			add = {
+				desc = "from nihilist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_nihilist
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 9
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_positivist
+					}
+				}
+			}
+			add = {
+				desc = "from positivist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_positivist
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_land_reform
+					}
+				}
+			}
+			add = {
+				desc = "from peasant movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_land_reform
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 7
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_feminist
+					}
+				}
+			}
+			add = {
+				desc = "from feminist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_feminist
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 7
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_reactionary
+					}
+				}
+			}
+			add = {
+				desc = "from reactionary movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_reactionary
+					}
+					add = 0.7
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_modernizer
+					}
+				}
+			}
+			add = {
+				desc = "from reactionary movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_modernizer
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_religious_majority
+					}
+				}
+			}
+			add = {
+				desc = "from state religion movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_religious_majority
+					}
+					add = 0.5
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_religious_minority
+					}
+				}
+			}
+			add = {
+				desc = "from non officials religious movements activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_religious_minority
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_cultural_majority
+					}
+				}
+			}
+			add = {
+				desc = "from nationalist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_cultural_majority
+					}
+					add = 0.10
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_cultural_minority
+					}
+				}
+			}
+			add = {
+				desc = "from minorites nationalists movements activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_cultural_minority
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_minority_rights
+					}
+				}
+			}
+			add = {
+				desc = "from minorites right movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_minority_rights
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_india_pan_national
+					}
+				}
+			}
+			add = {
+				desc = "from indians unification movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_india_pan_national
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_utilitarian
+					}
+				}
+			}
+			add = {
+				desc = "from untilitarian movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_utilitarian
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_orleanist
+					}
+				}
+			}
+			add = {
+				desc = "from orleanist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_orleanist
+					}
+					add = 0.33
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 0.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_bonapartist
+					}
+				}
+			}
+			add = {
+				desc = "from bonapartist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_bonapartist
+					}
+					add = 0.33
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_legitimist
+					}
+				}
+			}
+			add = {
+				desc = "from legitimist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_legitimist
+					}
+					add = 0.33
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_hindu_nationalist
+					}
+				}
+			}
+			add = {
+				desc = "from hindu nationalist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_hindu_nationalist
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_muslim_nationalist
+					}
+				}
+			}
+			add = {
+				desc = "from muslim nationalist movement activism"
+				every_political_movement = {
+					limit = {
+						is_political_movement_type = movement_muslim_nationalist
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
 	}
 
 	start_value = 800
@@ -46,6 +640,10 @@ HRP_AoC_global_stability = {
 	default_green = yes
 
 	monthly_progress = {
+		add = {
+			desc = "base progress"
+			value = global_var:concert_global_correction
+		}
 		add = {
 			desc = "from Average national stability"
 			value = global_var:total_stability
