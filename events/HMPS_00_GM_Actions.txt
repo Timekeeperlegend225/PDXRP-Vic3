@@ -5865,7 +5865,7 @@ gm_actions.50 = {
 	type = country_event
 	placement = ROOT
 	title = gm_actions.50.t
-	#desc = gm_actions.50.d
+	desc = gm_actions.50.u
 	#flavor = gm_actions.50.f
 
 	event_image = {
@@ -5916,7 +5916,6 @@ gm_actions.50 = {
 	
 	option = {
 		name = gm_actions.50.d
-		set_global_variable = age_of_concert_gm
 		trigger = {
 			scope:recipient = {	
 				NOT = {
@@ -5924,8 +5923,102 @@ gm_actions.50 = {
 				}
 			}
 		}
+		set_global_variable = age_of_concert_gm
+		add_journal_entry = {
+			type = je_HRP_concert_global_gm
+		}
+		set_variable = concert_gm
+		set_global_variable = { 
+			name = concert_national_correction 
+			value = 0
+		}
+		set_global_variable = { 
+			name = concert_global_correction 
+			value = 0
+		}
+		every_country = {
+			if = {
+				limit = {
+					country_is_in_europe = yes
+				}
+				set_variable = { 
+					name = geographic_multiplier  
+					value = 1
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						country_is_in_north_america = yes
+						country_is_in_north_africa = yes
+					}
+				}
+				set_variable = { 
+					name = geographic_multiplier 
+					value = 0.5
+				}
+			}
+			else_if = {
+				limit = {
+					country_is_in_south_america = yes
+				}
+				set_variable = { 
+					name = geographic_multiplier  
+					value = 0.35
+				}
+			}
+			else = {
+				set_variable = { 
+					name = geographic_multiplier = yes  
+					value = 0.25
+				}
+			}
+			add_journal_entry = {
+				type = je_HRP_concert_national
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = concert_gm
+					}
+				}
+				add_journal_entry = {
+					type = je_HRP_concert_global
+				}
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.cnc
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_concert_gm
+			}
+		}
 		trigger_event = {
-			id = gm_actions.50
+			id = value_selection.501
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.cgc
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_concert_gm
+			}
+		}
+		trigger_event = {
+			id = value_selection.502
 			days = 0
 			popup = yes
 		}
@@ -5933,6 +6026,11 @@ gm_actions.50 = {
 	
 	option = {
 		name = gm_actions.50.dn+
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_concert_gm
+			}
+		}
 		scope:recipient = {
 			je:je_HRP_concert_national = {
 				add_progress = { 
@@ -5950,10 +6048,124 @@ gm_actions.50 = {
 	
 	option = {
 		name = gm_actions.50.dn-
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_concert_gm
+			}
+		}
 		scope:recipient = {
 			je:je_HRP_concert_national = {
 				add_progress = { 
 					name = HRP_AoC_national_stability 
+					value = {
+						add = global_var:gm_variable
+						multiply = -1
+					}
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.dna+
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_concert_gm
+			}
+		}
+		every_country = {
+			je:je_HRP_concert_national = {
+				add_progress = { 
+					name = HRP_AoC_national_stability 
+					value = global_var:gm_variable
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.dna-
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_concert_gm
+			}
+		}
+		every_country = {
+			je:je_HRP_concert_global_gm = {
+				add_progress = { 
+					name = HRP_AoC_national_stability 
+					value = {
+						add = global_var:gm_variable
+						multiply = -1
+					}
+				}
+			}
+			je:je_HRP_concert_global = {
+				add_progress = { 
+					name = HRP_AoC_national_stability 
+					value = {
+						add = global_var:gm_variable
+						multiply = -1
+					}
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.dga+
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_concert_gm
+			}
+		}
+		every_country = {
+			je:je_HRP_concert_global_gm = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = global_var:gm_variable
+				}
+			}
+			je:je_HRP_concert_global = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = global_var:gm_variable
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.dga-
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_concert_gm
+			}
+		}
+		every_country = {
+			je:je_HRP_concert_national = {
+				add_progress = { 
+					name = HPR_concert_global 
 					value = {
 						add = global_var:gm_variable
 						multiply = -1
