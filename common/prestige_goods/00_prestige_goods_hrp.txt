@@ -1,0 +1,11 @@
+﻿# prestige_goods types
+
+prestige_good_fine_chocolate = {
+	base_good = groceries
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/fine_chocolate_prestige.dds"
+}
+
+#############################################################################################################
+# GENERIC PRESTIGE GOODS
+#############################################################################################################
