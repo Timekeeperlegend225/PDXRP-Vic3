@@ -47,7 +47,6 @@ law_religious_schools = {
 	disallowing_laws = {
 		law_total_separation
 		law_state_atheism
-		law_religion_banned
 		law_serfdom
 	}
 
@@ -249,9 +248,7 @@ law_public_schools = {
 	}
 
 	disallowing_laws = {
-		law_religious_supremacy
 		law_state_religion
-		law_religious_citizenship
 		law_serfdom
 	}
 	
