@@ -426,7 +426,7 @@ law_laissez_faire = {
 	}
 	
 	modifier = {
-		country_loan_interest_rate_mult = -0.25
+		country_loan_interest_rate_mult = -0.15
 		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
 		state_capitalists_investment_pool_efficiency_mult = 0.25
 		country_private_construction_allocation_mult = 0.75
@@ -490,8 +490,7 @@ law_cooperative_ownership = {
 	unlocking_laws = {
 		law_council_republic	
 		law_corporate_state		
-		law_theocracy
-		law_worker_protections		
+		law_theocracy	
 	}
 	
 	on_activate = {		

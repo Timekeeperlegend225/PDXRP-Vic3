@@ -84,7 +84,7 @@ gm_education_mil_spread_d = {
 
 gm_prestige_a = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_prestige_add = 20
+	country_prestige_add = 1
 }
 
 gm_prestige_b = {

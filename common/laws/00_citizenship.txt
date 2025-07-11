@@ -79,6 +79,12 @@ law_ethnostate = {
 		country_disallow_government_work_open_prejudice_bool = no
 		country_disallow_government_work_second_rate_citizen_bool = no
 		country_disallow_government_work_full_acceptance_bool = no
+
+		country_standard_of_living_violent_hostility_add = -3
+		country_standard_of_living_cultural_erasure_add = -2
+		country_standard_of_living_open_prejudice_add = -1
+		country_standard_of_living_second_rate_citizen_add = 0
+		country_standard_of_living_full_acceptance_add = 2
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
@@ -164,6 +170,12 @@ law_national_supremacy = {
 		country_disallow_government_work_open_prejudice_bool = no
 		country_disallow_government_work_second_rate_citizen_bool = no
 		country_disallow_government_work_full_acceptance_bool = no
+
+		country_standard_of_living_violent_hostility_add = -2
+		country_standard_of_living_cultural_erasure_add = -1
+		country_standard_of_living_open_prejudice_add = 0
+		country_standard_of_living_second_rate_citizen_add = 0.5
+		country_standard_of_living_full_acceptance_add = 1
 	}
 
 	ai_enact_weight_modifier = { #Petitions
@@ -363,6 +375,7 @@ law_multicultural = {
 	modifier = {
 		state_birth_rate_mult = -0.05
 		country_authority_add = -50
+		state_bureaucracy_population_base_cost_factor_mult = 0.20
 	
 		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_primary_culture_add = 100

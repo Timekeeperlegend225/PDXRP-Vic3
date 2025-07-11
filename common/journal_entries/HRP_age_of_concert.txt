@@ -1,0 +1,518 @@
+﻿je_HRP_concert_national = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		always = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = "Age of Concert started"
+			has_global_variable = age_of_concert_gm
+		}
+	}
+
+	immediate = {
+		scope:journal_entry = { 
+			add_modifier = {
+				name = HPR_concert_national_stability_positive
+				multiplier = {
+					add = 0.6
+					multiply = var:geographic_multiplier
+				}
+			}
+		}
+	}
+
+	scripted_progress_bar = HRP_AoC_national_stability
+
+	complete = {
+	}
+	
+    invalid = {
+		custom_tooltip = {
+			text = "Age of Concert is finished"
+			NOT = {
+				has_global_variable = age_of_concert_gm
+			}
+		}
+    }
+
+	status_desc = {
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			HRP_AoC_national_stability_progress = yes 
+			set_variable = { 
+				name = tempnationalstab 
+				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_national_stability)" 
+			}
+			scope:journal_entry = { 
+				remove_modifier = HPR_concert_national_stability_positive
+				remove_modifier = HPR_concert_national_stability_negative
+			}
+			remove_modifier = HRP_stability_visual_modifier
+			add_modifier = {
+				name = HRP_stability_visual_modifier
+				multiplier = var:tempnationalstab
+			}
+			if = {
+				limit = {
+					"scope:journal_entry.scripted_bar_progress(HRP_AoC_national_stability)" >= 500
+				}
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_national_stability_positive
+						multiplier = {
+							add = var:tempnationalstab
+							subtract  = 500
+							divide  = 500
+							multiply = var:geographic_multiplier
+						}
+					}
+				}
+			}
+			else = {
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_national_stability_negative
+						multiplier = {
+							add = var:tempnationalstab
+							subtract  = 500
+							divide  = -500
+							multiply = var:geographic_multiplier
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+}
+
+je_HRP_concert_global_gm = {
+	icon = "gfx/interface/icons/invention_icons/civilizing_mission.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		has_variable = concert_gm
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = "Age of Concert started"
+			has_global_variable = age_of_concert_gm
+		}
+	}
+
+	modifiers_while_active = {
+		HPR_concert_global
+	}
+
+	immediate = {
+		scope:journal_entry = { 
+			add_modifier = {
+				name = HPR_concert_global_stability_positive
+				multiplier = var:geographic_multiplier
+			}
+		}
+	}
+
+	scripted_progress_bar = HRP_AoC_global_stability
+
+	complete = {
+	}
+	
+    invalid = {
+		custom_tooltip = {
+			text = "Age of Concert is finished"
+			NOT = {
+				has_global_variable = age_of_concert_gm
+			}
+		}
+    }
+
+	status_desc = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			set_global_variable = { 
+				name = total_stability
+				value = 0
+			}
+			set_global_variable = { 
+				name = stability_weigh
+				value = 0
+			} 
+			set_global_variable = { 
+				name = tech_lowering_stability_egal
+				value = 0
+			}  
+			set_global_variable = { 
+				name = tech_lowering_stability_nat
+				value = 0
+			} 
+			set_global_variable = { 
+				name = tech_lowering_stability_lab
+				value = 0
+			}
+			every_country = {
+				if = {
+					limit = {
+						country_rank = rank_value:great_power
+					}
+					set_variable = { 
+						name = tempnationalstab2
+						value = var:tempnationalstab
+					}
+					change_variable = {
+						name = tempnationalstab2
+						multiply = 10
+					}
+					change_global_variable = {
+						name = total_stability
+						add = var:tempnationalstab2
+					}
+					change_global_variable = {
+						name = stability_weigh
+						add = 10
+					}
+					if = {
+						limit = {
+							has_technology_researched = egalitarianism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_egal
+							add = 0.1
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = nationalism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_nat
+							add = 0.1
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = labor_movement
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_lab
+							add = 0.1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						country_rank = rank_value:major_power
+					}
+					set_variable = { 
+						name = tempnationalstab2
+						value = var:tempnationalstab
+					}
+					change_variable = {
+						name = tempnationalstab2
+						multiply = 5
+					}
+					change_global_variable = {
+						name = total_stability
+						add = var:tempnationalstab2
+					}
+					change_global_variable = {
+						name = stability_weigh
+						add = 5
+					}
+					if = {
+						limit = {
+							has_technology_researched = egalitarianism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_egal
+							add = 0.05
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = nationalism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_nat
+							add = 0.05
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = labor_movement
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_lab
+							add = 0.05
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							country_rank = rank_value:minor_power
+							country_rank = rank_value:unrecognized_major_power
+						}
+					}
+					set_variable = { 
+						name = tempnationalstab2
+						value = var:tempnationalstab
+					}
+					change_variable = {
+						name = tempnationalstab2
+						multiply = 2
+					}
+					change_global_variable = {
+						name = total_stability
+						add = var:tempnationalstab2
+					}
+					change_global_variable = {
+						name = stability_weigh
+						add = 2
+					}
+					if = {
+						limit = {
+							has_technology_researched = egalitarianism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_egal
+							add = 0.02
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = nationalism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_nat
+							add = 0.02
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = labor_movement
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_lab
+							add = 0.02
+						}
+					}
+				}
+				else = {
+					change_global_variable = {
+						name = total_stability
+						add = var:tempnationalstab
+					}
+					change_global_variable = {
+						name = stability_weigh
+						add = 1
+					}
+					if = {
+						limit = {
+							has_technology_researched = egalitarianism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_egal
+							add = 0.01
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = nationalism
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_nat
+							add = 0.01
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = labor_movement
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_lab
+							add = 0.01
+						}
+					}
+				}
+			}
+			change_global_variable = {
+				name = total_stability
+				divide = global_var:stability_weigh
+			}
+			change_global_variable = {
+				name = total_stability
+				subtract = 500
+			}
+			if = {
+				limit = {
+					total_stability > 0
+				}
+				change_global_variable = {
+					name = total_stability
+					divide = 1000
+				}
+			}
+			else = {
+				change_global_variable = {
+					name = total_stability
+					divide = 100
+				}
+			}
+			HRP_AoC_global_stability_progress = yes 
+			set_variable = { 
+				name = tempglobalstab 
+				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" 
+			}
+			scope:journal_entry = { 
+				remove_modifier = HPR_concert_global_stability_positive
+				remove_modifier = HPR_concert_global_stability_negative
+			}
+			if = {
+				limit = {
+					"scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" >= 500
+				}
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_global_stability_positive
+						multiplier = {
+							add = var:tempglobalstab
+							subtract  = 500
+							divide  = 500
+							multiply = var:geographic_multiplier
+						}
+					}
+				}
+			}
+			else = {
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_global_stability_negative
+						multiplier = {
+							add = var:tempglobalstab
+							subtract  = 500
+							divide  = -500
+							multiply = var:geographic_multiplier
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+}
+
+je_HRP_concert_global = {
+	icon = "gfx/interface/icons/invention_icons/civilizing_mission.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		NOT = { has_modifier = game_master }
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = "Age of Concert started"
+			has_global_variable = age_of_concert_gm
+		}
+		hidden_trigger = {
+			NOT = {
+				has_journal_entry = je_HRP_concert_global_gm
+			}
+		}
+	}
+
+	modifiers_while_active = {
+		HPR_concert_global
+	}
+
+	immediate = {
+		scope:journal_entry = { 
+			add_modifier = {
+				name = HPR_concert_global_stability_positive
+				multiplier = var:geographic_multiplier
+			}
+		}
+	}
+
+	scripted_progress_bar = HRP_AoC_global_stability
+
+	complete = {
+	}
+	
+    invalid = {
+		OR = {
+			custom_tooltip = {
+				text = "Age of Concert is finished"
+				NOT = {
+					has_global_variable = age_of_concert_gm
+				}
+			}
+			hidden_trigger = {
+				has_journal_entry = je_HRP_concert_global_gm
+			}
+		}
+    }
+
+	status_desc = {
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			set_variable = { 
+				name = tempglobalstab 
+				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" 
+			}
+			scope:journal_entry = { 
+				remove_modifier = HPR_concert_global_stability_positive
+				remove_modifier = HPR_concert_global_stability_negative
+			}
+			if = {
+				limit = {
+					"scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" >= 500
+				}
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_global_stability_positive
+						multiplier = {
+							add = var:tempglobalstab
+							subtract  = 500
+							divide  = 500
+							multiply = var:geographic_multiplier
+						}
+					}
+				}
+			}
+			else = {
+				scope:journal_entry = { 
+					add_modifier = {
+						name = HPR_concert_global_stability_negative
+						multiplier = {
+							add = var:tempglobalstab
+							subtract  = 500
+							divide  = -500
+							multiply = var:geographic_multiplier
+						}
+					}
+				}
+			}
+			HRP_AoC_global_stability_progress = yes 
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+}
