@@ -1,0 +1,7 @@
+﻿stability_modifier_visual={
+	decimals=1
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}

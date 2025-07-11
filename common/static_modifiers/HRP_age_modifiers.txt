@@ -33,6 +33,7 @@ HPR_concert_national_stability_negative = {
 	country_loan_interest_rate_mult = 0.20
 	country_authority_mult = -0.10
 	state_radicals_from_political_movements_mult = 0.20
+	state_migration_push_mult = 0.20
 }
 
 HPR_concert_global_stability_positive = {
@@ -49,4 +50,9 @@ HPR_concert_global_stability_negative = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	state_aristocrats_investment_pool_efficiency_mult = -0.10
 	political_movement_radicalism_add = 0.10
+}
+
+HRP_stability_visual_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	stability_modifier_visual = 1
 }

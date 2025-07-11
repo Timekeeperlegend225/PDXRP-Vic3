@@ -54,6 +54,11 @@
 				remove_modifier = HPR_concert_national_stability_positive
 				remove_modifier = HPR_concert_national_stability_negative
 			}
+			remove_modifier = HRP_stability_visual_modifier
+			add_modifier = {
+				name = HRP_stability_visual_modifier
+				multiplier = var:tempnationalstab
+			}
 			if = {
 				limit = {
 					"scope:journal_entry.scripted_bar_progress(HRP_AoC_national_stability)" >= 500
@@ -110,9 +115,11 @@ je_HRP_concert_global_gm = {
 	}
 
 	immediate = {
-		add_modifier = {
-			name = HPR_concert_global_stability_positive
-			multiplier = var:geographic_multiplier
+		scope:journal_entry = { 
+			add_modifier = {
+				name = HPR_concert_global_stability_positive
+				multiplier = var:geographic_multiplier
+			}
 		}
 	}
 
@@ -434,9 +441,11 @@ je_HRP_concert_global = {
 	}
 
 	immediate = {
-		add_modifier = {
-			name = HPR_concert_global_stability_positive
-			multiplier = var:geographic_multiplier
+		scope:journal_entry = { 
+			add_modifier = {
+				name = HPR_concert_global_stability_positive
+				multiplier = var:geographic_multiplier
+			}
 		}
 	}
 
