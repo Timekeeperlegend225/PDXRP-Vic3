@@ -6,6 +6,14 @@
 	REINVESTMENT_SUBSISTENCE_FRACTION_REDUCTION = 0.5	# Reinvestment from pops in ownership buildings is multiplied by ( 1 - this * the share of levels owned that are subsistence building)
 }
 
+NDiplomacy = {
+	DIPLOMATIC_PLAY_ESCALATION_DAILY = 1
+	DIPLOMATIC_PLAY_ESCALATION_PAUSE_FROM_ACTION = 10 # Number of days that escalation pauses when either side takes an action
+	DIPLOMATIC_PLAY_ESCALATION_PAUSE_MAX = 30 # Escalation pause can't be longer than this no matter how many actions are taken at once
+	DIPLOMATIC_PLAY_OPENING_PHASE_END = 41	# Before this, defender needs to set their wargoal and you can't join/sway
+	DIPLOMATIC_PLAY_CLOSING_PHASE_START = 140 # After this, it isn't possible to join/sway further countries
+	DIPLOMATIC_PLAY_ESCALATION_WAR_BREAKOUT = 150
+}
 
 NPolitics = {
 	LAW_ENACTMENT_MOVEMENT_SUPPORT_STALL_EFFECT = 2.0 # Movement support has this impact on a law's chance to stall
