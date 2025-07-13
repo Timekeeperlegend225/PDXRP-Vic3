@@ -1,0 +1,4 @@
+﻿HRP_heathen_tax_income= {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_minting_add = 1
+}
