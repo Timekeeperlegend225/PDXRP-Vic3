@@ -3,6 +3,10 @@
 company_ubs: "UBS Group AG"
 company_lindt: "Chocoladefabriken Lindt & Sprüngli AG"
 company_neuhaus: "Neuhaus Chocolatier"
+company_fn_herstal: "FN Herstal"
+company_doosan: "Doosan Group"
+company_por_larranaga: "Por Larrañaga"
 
 # Prestige goods:
 prestige_good_fine_chocolate: "Fine Chocolate"
+prestige_good_cuban_cigar: "Cuban Cigars"
