@@ -1,0 +1,19 @@
+﻿l_english:
+ je_HRP_concert_national:0 "National Stability"
+ je_HRP_concert_national_reason:0 "Variable value is [ROOT.Var('tempnationalstab').GetValue|+=]" 
+ HRP_AoC_national_stability_bar:0 "National stability"
+ HRP_AoC_national_stability_name:0 "National stability : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoC_national_stability_desc: "Current national stability is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ 
+ je_HRP_concert_global_gm:0 "Global stability"
+ je_HRP_concert_global_gm_reason:0 "You have to go on the GM tools" 
+ je_HRP_concert_global:0 "Global stability"
+ je_HRP_concert_global_reason:0 ""Total Stability [GetGlobalVariable('total_stability').GetValue|1] \n Stability weight [GetGlobalVariable('stability_weigh').GetValue|1]#!" 
+ HRP_AoC_global_stability_bar:0 "Global stability"
+ HRP_AoC_global_stability_name:0 "Global stability : [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoC_global_stability_desc: "Current global stability is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ 
+ HPR_concert_global:0 "Variable value is [ROOT.Var('tempnationalstab').GetValue|+=]"
+ 
+ HRP_stability_visual_modifier:0 "National Stability"
+ stability_modifier_visual:0 "Stability"
