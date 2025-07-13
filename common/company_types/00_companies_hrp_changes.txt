@@ -250,11 +250,8 @@ company_mitsubishi = {
 	}
 
 	possible = {
+		NOT = { has_law = law_type:law_traditionalism }
 		has_technology_researched = screw_frigate
-		custom_tooltip = {
-			text = is_meiji_japan
-			has_variable = meiji_restoration_complete
-		}
 		any_scope_state = {
 			state_region = s:STATE_CHUGOKU
 			is_incorporated = yes
@@ -275,10 +272,6 @@ company_mitsubishi = {
 
 	ai_will_do = {
 		has_technology_researched = screw_frigate
-		custom_tooltip = {
-			text = is_meiji_japan
-			has_variable = meiji_restoration_complete
-		}
 		any_scope_state = {
 			state_region = s:STATE_CHUGOKU
 			is_incorporated = yes
@@ -296,6 +289,293 @@ company_mitsubishi = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_CHUGOKU
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Mitsui
+company_mitsui = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mitsui.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_KANSAI }
+
+	building_types = {
+		building_textile_mills
+		building_silk_plantation
+		building_lead_mine
+	}
+
+	extension_building_types = {
+		building_shipyards
+		building_port
+		building_chemical_plants
+		building_iron_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_tomioka_silk
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_japan
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KANSAI
+			}
+		}
+	}
+
+	possible = {
+		NOT = { has_law = law_type:law_traditionalism }
+		has_technology_researched = cotton_gin
+		any_scope_state = {
+			state_region = s:STATE_KANSAI
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mills
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		interest_group_ig_industrialists_pol_str_mult = 0.2
+		building_iron_mine_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = cotton_gin
+		any_scope_state = {
+			state_region = s:STATE_KANSAI
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_textile_mills = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_KANSAI
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Ottoman Tobacco Company, later Tekel
+company_ottoman_tobacco_regie = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ottoman_tobacco_regie.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_tobacco_plantation
+	}
+
+	extension_building_types = {
+		building_opium_plantation
+	}
+
+	possible_prestige_goods = {
+		prestige_good_turkish_tobacco
+	}
+
+	potential = {
+		country_has_primary_culture = cu:turkish
+	}
+
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tobacco_plantation
+				level >= 5
+			}
+			count >= 4
+		}
+	}
+
+	prosperity_modifier = {
+		country_production_tech_spread_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			is_incorporated = yes
+			has_potential_resource = bg_tobacco_plantations
+			count >= 4
+		}
+	}
+
+	ai_construction_targets = {
+		building_tobacco_plantation = {
+			level = 5
+			state_trigger = {
+				has_potential_resource = bg_tobacco_plantations
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Allatini Mills
+company_allatini_mills = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/allatini_mills.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_MACEDONIA }
+
+	building_types = {
+		building_wheat_farm
+		building_rye_farm
+		building_rice_farm
+		building_maize_farm
+		building_millet_farm
+	}
+
+	extension_building_types = {
+		building_food_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_grain
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_grain_complete_tt
+			has_variable = prestige_good_generic_grain_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MACEDONIA
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MACEDONIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_wheat_farm
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_food_industry_throughput_add = 0.1
+		state_radicalism_increases_violent_hostility_mult = -0.05
+		state_radicalism_increases_cultural_erasure_mult = -0.05
+		state_radicalism_increases_open_prejudice_mult = -0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_MACEDONIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_wheat_farm = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_MACEDONIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Chemins de fer Orientaux
+company_orient_express = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chemins_de_fer_orientaux.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_EASTERN_THRACE }
+
+	building_types = {
+		building_railway
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_anatolia
+			has_interest_marker_in_region = region_balkans
+		}
+	}
+
+	attainable = {
+		owns_entire_state_region = STATE_EASTERN_THRACE
+	}
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_balkans
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 3
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			region = sr:region_balkans
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				region = sr:region_balkans
+				is_incorporated = yes
 			}
 		}
 	}
