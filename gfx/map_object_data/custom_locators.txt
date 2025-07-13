@@ -1,3 +1,0 @@
-For each merged state find the ids for all the states being merged, go to each locator pick the state for which you want to keep the locator and then delete the other two
-
-The locators determine the cities for the state
