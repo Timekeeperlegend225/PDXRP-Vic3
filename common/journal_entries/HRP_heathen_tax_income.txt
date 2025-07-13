@@ -1,0 +1,101 @@
+﻿je_HRP_heathen_tax = {
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		OR = {
+			has_modifier = cizye_tax
+			has_modifier = modifier_jizya_tax
+		}
+	}
+
+	possible = {
+		OR = {
+			has_modifier = cizye_tax
+			has_modifier = modifier_jizya_tax
+		}
+	}
+
+	immediate = {
+	}
+
+	complete = {
+	}
+	
+    invalid = {
+		NOT = {
+			OR = {
+				has_modifier = cizye_tax
+				has_modifier = modifier_jizya_tax
+			}
+		}
+    }
+
+	status_desc = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			HRP_AoC_national_stability_progress = yes 
+			set_global_variable = { 
+				name = temp_heathen_tax 
+				value = 0
+			}
+			set_variable = { 
+				name = temp_heathen_tax_multiplyer
+				value = 0
+			}
+			scope:journal_entry = { 
+				remove_modifier = HRP_heathen_tax_income
+			}
+			if = {
+				limit = {
+					has_modifier = cizye_tax
+				}
+				change_variable = {
+					name = temp_heathen_tax_multiplyer
+					add = 0.5
+				}
+			}
+			if = {
+				limit = {
+					has_modifier = modifier_jizya_tax
+				}
+				change_variable = {
+					name = temp_heathen_tax_multiplyer
+					add = 0.25
+				}
+			}
+			every_scope_pop =  {
+				limit = {
+					NOT = {
+						OR = {
+							has_pop_religion = sunni
+							has_pop_religion = shiite
+						}
+					}
+				}
+				change_global_variable = {
+					name = temp_heathen_tax
+					add = this.total_size
+				}
+			}
+			change_global_variable = {
+				name = temp_heathen_tax
+				multiply = 0.00485
+			}
+			change_global_variable = {
+				name = temp_heathen_tax
+				multiply = var:temp_heathen_tax_multiplyer
+			}
+			scope:journal_entry = {
+				add_modifier = {
+					name = HRP_heathen_tax_income
+					multiplier = global_var:temp_heathen_tax
+				}
+			}
+		}
+	}
+	should_be_pinned_by_default = yes
+}
