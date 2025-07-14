@@ -6,7 +6,13 @@ company_neuhaus: "Neuhaus Chocolatier"
 company_fn_herstal: "FN Herstal"
 company_doosan: "Doosan Group"
 company_por_larranaga: "Por Larrañaga"
+company_bam: "Koninklijke BAM Groep nv"
 
 # Prestige goods:
 prestige_good_fine_chocolate: "Fine Chocolate"
 prestige_good_cuban_cigar: "Cuban Cigars"
+prestige_good_guano: "Guano"
+prestige_good_cocaine: "Cocaine"
+prestige_good_tequila: "Tequila"
+prestige_good_manga: "Manga"
+prestige_good_generic_liquor: "Beer"
