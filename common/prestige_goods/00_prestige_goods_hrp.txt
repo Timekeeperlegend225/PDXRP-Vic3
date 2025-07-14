@@ -9,7 +9,7 @@ prestige_good_fine_chocolate = {
 prestige_good_cuban_cigar = {
 	base_good = tobacco
 	prestige_bonus = 0.1
-	texture = "gfx/interfae/icons/goods_icons/prestige_goods/cuban_cigar_prestige.dds"
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/cuban_cigar_prestige.dds"
 }
 
 #############################################################################################################
