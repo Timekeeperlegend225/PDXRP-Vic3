@@ -1,0 +1,242 @@
+﻿l_english:
+ ember_empire_starting_boost:0 "Council of Embers Superiority"
+ ember_empire_starting_boost_desc:0 "The Council of Embers possess unmatched fire magic that grant them a superior position over the surface people"
+ naga_empire_starting_boost:0 "Naga Raj Superiority"
+ naga_empire_starting_boost_desc:0 "The Naga possess water and fire magic that grant them a superior position over the surface people"
+ alarian_empire_starting_boost:0 "Alarian Order Superiority"
+ alarian_empire_starting_boost_desc:0 "The manipulation of memorite and light grant the Alarians a superior position over the surface people"
+ 
+ memorite_manipulation:0 "Memorite Studies"
+ memorite_manipulation_desc:0 "We were just able to get access to memorite, it's the time to begin to study the specificity of this strange ore."
+ 
+ energy_focalisation:0 "Memorite Glass"
+ energy_focalisation_desc:0 "By processing memorite we can make a nice blueish glass, it can also serve to illuminate our cities"
+ 
+ basic_levitation:0 "Basic Levitation"
+ basic_levitation_desc:0 "By adding large quantity of memorit to ligh material, we can make floating platform helping in construction sector"
+ 
+ purification:0 "Purification"
+ purification_desc:0 "The teaching of the Alarians allow us to purify our minds, our bodies and our environement. Some rare individual showed Ã¢rticulary improved health and ability to think more clearly"
+ 
+ memorite_treatment:0 "Memorite Generator"
+ memorite_treatment_desc:0 "We have learned to activate Memorite by prayers this allow us to extract some in apropriate place and harness energy."
+ 
+ flying_machine:0 "Flying Machine"
+ flying_machine_desc:0 "Implementing memorite into base cars and projecting it's energy correctly we have learned to make new machines allowing us to fulfill the oldest dream of man"
+ 
+ miracle_healing:0 "Miracle Healing"
+ miracle_healing_desc:0 "Learning about the nature of the reality and faith allow us to heal sickness that were previously considered incurable"
+ 
+ memoritic_reaction:0 "Memorite Circuit"
+ memoritic_reaction_desc:0 "By sculpting memorit in specific way, we can obtain more complex reaction when activating it. We can reproduce some of the Alarian device and get more of it from our sacred places"
+ 
+ floating_warfare:0 "Aerial Warfare"
+ floating_warfare_desc:0 "Adjusting flying machine and adding memorite activator to it to fire light energy blast allow us to create new mount of a new generation"
+ 
+ holy_light:0 "Holy War"
+ holy_light_desc:0 "Using simple floating machine controled by prayers as catalyst allow us to use our new light power in the battlefield fire at our ennemies from the distance."
+ 
+ connectic:0 "Automation"
+ connectic_desc:0 "Advanced memorite circuit on machinery allow us new automated technique to replace our workforce, we can also harness more memorite than ever"
+ 
+ heavy_floating_vessel:0 "Heavy floating Machine"
+ heavy_floating_vessel_desc:0 "Our advance on the manipulation of memorite allow us to make bigger floating machine opening new opportunity to us."
+ 
+ ascension:0 "Ascencion"
+ ascension_desc:0 "We have finally attained enlightment being closer to the divine than ever, this greatly improve the live of our people who are wiser than ever."
+ 
+ dracaryan_studies:0 "Studies on the Council of Embers"
+ dracaryan_studies_desc:0 "The Council of Embers has shocked the world following the scorching of Iberia. We must learn their ways if we are to survive."
+ 
+ volcanic_mining:0 "Volcanic Mining"
+ volcanic_mining_desc:0 "We have learned how to apply higher temperatures than usual to our mining processes."
+ 
+ flameclad_tech:0 "Flameclads"
+ flameclad_tech_desc:0 "By employing Flamecasters, we can produce superior, faster Ironclads armed with flaming cannons."
+ 
+ efficient_authority:0 "Draconic Authority"
+ efficient_authority_desc:0 "It is said that in the lands of the Council of Embers, all venerate the Ember King. We can emulate those teachings to expand government authority."
+ 
+ flamecaster_tech:0 "Mining Flamecasters"
+ flamecaster_tech_desc:0 "By applying Flamecasters in our mining process, we can achieve never before seen efficiency."
+ 
+ ember_hellcanon_tech:0 "Hellcannons"
+ ember_hellcanon_tech_desc:0 "These devastating cannons should flaming molten balls almost at melting temperatures."
+ 
+ dragon_baby:0 "Orderly Society"
+ dragon_baby_desc:0 "Under the Ember King, all beings know their place, and forme a secure and orderly society."
+ 
+ industrial_flamecaster:0 "Industrial Flamecasters"
+ industrial_flamecaster_desc:0 "By employing Flamecasters in our heavy industries, we can achieve never before seen efficiency."
+ 
+ flamecaster_infantry_tech:0 "Flamecaster Infantry"
+ flamecaster_infantry_tech_desc:0 "Now that we have mastered the Flamecaster technology, we are ready to field large numbers of Flamecaster troops. If we can supply them, that is."
+ 
+ more_work:0 "Right to Work"
+ more_work_desc:0 "It is the duty of every man and woman to work for their ruler."
+ 
+ flamecaster_production:0 "Our Own Flamecasters"
+ flamecaster_production_desc:0 "If we want to achieve independence from the Dracaryans, we must master fire on our own terms."
+ 
+ emberian_conscription_tech:0 "Emberian Conscription"
+ emberian_conscription_tech_desc:0 "The conscription model using by the Council of Embers is harsh. But effective."
+ 
+ militarized_education_tech:0 "Militarized Education"
+ militarized_education_tech_desc:0 "Those in the Council of Embers are trained for birth to serve the Ember King in combat. We can choose to emulate this model, focusing the education of the young on turning them into good soldiers who follow orders."
+ 
+ eldar_studies:0 "Eldar Studies"
+ eldar_studies_desc:0 " "
+ 
+ forest_harmony:0 "Masters of the Forest"
+ forest_harmony_desc:0 " "
+ 
+ elven_first_aid:0 "Herblore of the Firstborn"
+ elven_first_aid_desc:0 " "
+ 
+ elven_aura:0 "Wonders of Elvven-craft"
+ elven_aura_desc:0 " "
+ 
+ natural_culture:0 "Elven-touch"
+ natural_culture_desc:0 " "
+ 
+ precision_archery:0 "One Shot, One Kill"
+ precision_archery_desc:0 " "
+ 
+ plantiri_tech:0 "Sight beyond Sight"
+ plantiri_tech_desc:0 " "
+ 
+ alchemy:0 "Transmutation"
+ alchemy_desc:0 " "
+ 
+ efficient_logistics:0 "To the Sea, to the Sea!"
+ efficient_logistics_desc:0 " "
+ 
+ naturalism_tech:0 "Preservation"
+ naturalism_tech_desc:0 " "
+ 
+ evlven_smithing:0 "Gwaith-i-Mirdain"
+ evlven_smithing_desc:0 " "
+ 
+ elven_healing:0 "Music of the Ainur"
+ elven_healing_desc:0 " "
+ 
+ divion_of_labour_tech:0 "The Fairest Sex"
+ divion_of_labour_tech_desc:0 " "
+ 
+ combat_unit_type_goldspear_infantry:0 "Goldspear Infantry"
+ combat_unit_type_goldspear_infantry_desc:0 " "
+ 
+ combat_unit_type_flamecaster_infantry:0 "Flamecaster Infantry"
+ combat_unit_type_flamecaster_infantry_desc:0 "Units equipped with human-ready Flamecasters prepared to inflict devastating damage."
+ 
+ combat_unit_type_noldor_host:0 "Noldor Host"
+ combat_unit_type_noldor_host_desc:0 " "
+ 
+ combat_unit_type_flamecaster_squadron:0 "Flamecaster Squadron"
+ combat_unit_type_flamecaster_squadron_desc:0 "Dracaryan and Dragokin troops equipped with blood-powered Flamecasters."
+ 
+ combat_unit_type_nagavanshi_warriors:0 "Nagavanshi Warriors"
+ combat_unit_type_nagavanshi_warriors_desc:0 " "
+ 
+ combat_unit_type_ember_hellcanon:0 "Hellcannon"
+ combat_unit_type_ember_hellcanon_desc:0 "These devastating cannons should flaming molten balls almost at melting temperatures."
+ 
+ combat_unit_type_fireadders:0 "Fireadders"
+ combat_unit_type_fireadders_desc:0 " "
+ 
+ combat_unit_type_ember_tank:0 "Ember Tank"
+ combat_unit_type_ember_tank_desc:0 "A battle tank with an extremely thick fireproof armor, mounted with a scorching cannon powered by Flamecasters."
+ 
+ combat_unit_type_ent:0 "Ents"
+ combat_unit_type_ent_desc:0 " "
+ 
+ combat_unit_type_beast_cav:0 "Beast Cavalry"
+ combat_unit_type_beast_cav_desc:0 " "
+ 
+ combat_unit_eldar_spellsinger:0 "Eldar Spellslinger"
+ combat_unit_eldar_spellsinger_desc:0 " "
+ 
+ combat_unit_type_scarbeast:0 "Scarbeast"
+ combat_unit_type_scarbeast_desc:0 " "
+ 
+ combat_unit_type_seasnake:0 "Sea Snake"
+ combat_unit_type_seasnake_desc:0 " "
+ 
+ combat_unit_type_ember_steamship:0 "Ember Steamship"
+ combat_unit_type_ember_steamship_desc:0 "An advanced, speedy support ship owned by the Council of Embers."
+ 
+ combat_unit_type_teleri_greyship:0 "Teleri Greyship"
+ combat_unit_type_teleri_greyship_desc:0 " "
+ 
+ combat_unit_type_flameclad:0 "Flameclad"
+ combat_unit_type_flameclad_desc:0 "A standard Ironclada retrofitted with technology from the Council of Embers."
+ 
+ combat_unit_type_snakeship:0 "Snakeship"
+ combat_unit_type_snakeship_desc:0 " "
+ 
+ combat_unit_type_cobraship:0 "Cobraship"
+ combat_unit_type_cobraship_desc:0 " "
+ 
+ combat_unit_type_ember_dreadship:0 "Dreadship"
+ combat_unit_type_ember_dreadship_desc:0 "A behemoth vessel representing the pinaccle of naval power of the Council of Embers."
+ 
+ combat_unit_spear_of_Orome:0 "Spear of Orome"
+ combat_unit_spear_of_Orome_desc:0 " "
+ 
+ combat_unit_type_snakesub:0 "Snakesub"
+ combat_unit_type_snakesub_desc:0 " "
+ 
+ combat_unit_eldar_seasinger:0 "Seasinger"
+ combat_unit_eldar_seasinger_desc:0 " "
+ 
+ combat_unit_type_snakecarrier:0 "Snake Carrier"
+ combat_unit_type_snakecarrier_desc:0 " "
+ 
+ pm_world_tree: "World Tree"
+ pm_world_tree_sapling: "World Tree Sapling"
+ pm_lasse_pulp_pressing: "Lasse Pulp Pressing"
+ pm_lasse_sulfite_pulping: "Lasse Sulfite Pressing"
+ pm_lasse_bleached_paper: "Lasse Bleached Paper"
+ pm_lasse_blister_steel_process: "Lasse Blister Steel Process"
+ pm_lasse_bessemer_process: "Lasse Bessemer Process"
+ pm_lasse_open_hearth_process: "Lasse Open Hearth Process"
+ pm_lasse_electric_arc_process: "Lasse Electric Arc Process"
+ pm_lasse_agri: "Lasse Agriculture"
+ pm_lasse_rice: "Lasse Rice"
+ pm_lasse_plantations: "Lasse Plantations"
+ pm_flamecaster_building_coal_mine: "Mining Flamecasters"
+ pm_flamecaster_building_iron_mine: "Mining Flamecasters"
+ pm_flamecaster_building_lead_mine: "Mining Flamecasters"
+ pm_flamecaster_building_sulfur_mine: "Mining Flamecasters"
+ pm_flamecaster_building_gold_mine: "Mining Flamecasters"
+ pm_flamecaster_tooling_workshops: "Industrial Flamecasters"
+ pm_flamecaster_blowing: "Industrial Flamecasters"
+ pm_flame_caster_melting_steel_mills: "Industrial Flamecasters"
+ pm_flamecaster_melting_motor_industry: "Industrial Flamecasters"
+ pm_flamecaster_shipbuilding: "Industrial Flamecasters"
+ pm_military_flamecaster_shipbuilding: "Industrial Flamecasters"
+ pm_flamecaster_tank_production: "Industrial Flamecasters"
+ pm_flamecaster_canon: "Industrial Flamecasters"
+ pm_unsanctioned_flamecaster_production: "Unsanctioned Flamecaster Production"
+ pm_sanctioned_flamecaster_production: "Official Famecaster Production"
+ pm_unsanctioned_mixed_production: "Unsactioned Mixed Production"
+ pm_nagan_cattle_breeding: "Nagan Cattle Breeding"
+ pm_unapproved_nagan_cattle_breeding: "Unapproved Nagan Cattle Breeding"
+ pm_nagan_cattle_building_coal_mine: "Nagan Cattle"
+ pm_nagan_cattle_building_iron_mine: "Nagan Cattle"
+ pm_nagan_cattle_building_lead_mine: "Nagan Cattle"
+ pm_nagan_cattle_building_sulfur_mine: "Nagan Cattle"
+ pm_nagan_cattle_building_gold_mine: "Nagan Cattle"
+ pm_cattle_powered_looms: "Nagan Cattle"
+ pm_cattle_building_furniture_manufacturies: "Nagan Cattle"
+ pm_cattle_building_tooling_workshops: "Nagan Cattle"
+ pm_cattle_building_paper_mills: "Nagan Cattle"
+ pm_cattle_building_steel_mills: "Nagan Cattle"
+ pm_cattle_building_motor_industry: "Nagan Cattle"
+ pm_cattle_building_arms_industries: "Nagan Cattle"
+ pm_cattle_building_munitions_plants: "Nagan Cattle"
+ pm_cattle_building_synthetics_plant: "Nagan Cattle"
+ pm_cattle_agri: "Nagan Cattle"
+ pm_cattle_rice: "Nagan Cattle"
+ pm_cattle_plantations: "Nagan Cattle"
+ pm_flying_cattle_production: "Flying Cattle Production"

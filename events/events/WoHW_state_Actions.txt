@@ -1,0 +1,944 @@
+﻿namespace = EMB_state_actions
+
+EMB_state_actions.1 = {
+	type = country_event
+	placement = ROOT
+	title = EMB_state_actions.1.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = EMB_state_actions.1.a
+		default_option = yes
+		scope:EMB_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
+
+namespace = PNR_state_actions
+
+PNR_state_actions.1 = {
+	type = country_event
+	placement = ROOT
+	title = PNR_state_actions.1.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = PNR_state_actions.1.a
+		default_option = yes
+		scope:PNR_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
+
+namespace = ALA_state_actions
+
+ALA_state_actions.1 = {
+	type = country_event
+	placement = ROOT
+	title = ALA_state_actions.1.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = ALA_state_actions.1.a
+		default_option = yes
+		scope:ALA_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	# Memorite
+	option = {
+		name = ALA_state_actions.2.t
+		trigger_event = {
+			id = ALA_state_actions.2
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+ALA_state_actions.2 = {
+	type = country_event
+	placement = ROOT
+	title = ALA_state_actions.2.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = ALA_state_actions.2.a
+		default_option = yes
+		scope:ALA_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	#1-10
+	option = {
+		name = ALA_state_actions.21.t
+		trigger_event = {
+			id = ALA_state_actions.21
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#11-20
+	option = {
+		name = ALA_state_actions.22.t
+		trigger_event = {
+			id = ALA_state_actions.22
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#21-30
+	option = {
+		name = ALA_state_actions.23.t
+		trigger_event = {
+			id = ALA_state_actions.23
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#31-40
+	option = {
+		name = ALA_state_actions.24.t
+		trigger_event = {
+			id = ALA_state_actions.24
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#41-50
+	option = {
+		name = ALA_state_actions.25.t
+		trigger_event = {
+			id = ALA_state_actions.25
+			days = 0
+			popup = yes
+		}
+	}
+	
+	# Remove
+	option = {
+		name = ALA_state_actions.2.b
+		
+		scope:ALA_target_state = {
+			remove_modifier = memorite_aera_mod
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
+
+ALA_state_actions.21 = {
+	type = country_event
+	placement = ROOT
+	title = ALA_state_actions.21.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = ALA_state_actions.21.a
+		default_option = yes
+		scope:ALA_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = ALA_state_actions.21.b
+		trigger_event = {
+			id = ALA_state_actions.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = 10
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 20
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 2
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 30
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 3
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 40
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 4
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 50
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 5
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 60
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 6
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 70
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 7
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 80
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 8
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 90
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 9
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 100
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 10
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
+
+ALA_state_actions.22 = {
+	type = country_event
+	placement = ROOT
+	title = ALA_state_actions.22.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = ALA_state_actions.22.a
+		default_option = yes
+		scope:ALA_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = ALA_state_actions.22.b
+		trigger_event = {
+			id = ALA_state_actions.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = 110
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 11
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 120
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 12
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 130
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 13
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 140
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 14
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 150
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 15
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 160
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 16
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 170
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 17
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 180
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 18
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 190
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 19
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 20
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 20
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
+
+ALA_state_actions.23 = {
+	type = country_event
+	placement = ROOT
+	title = ALA_state_actions.23.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = ALA_state_actions.23.a
+		default_option = yes
+		scope:ALA_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = ALA_state_actions.23.b
+		trigger_event = {
+			id = ALA_state_actions.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = 210
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 21
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 220
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 22
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 230
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 23
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 240
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 24
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 250
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 25
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 260
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 26
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 270
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 27
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 280
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 28
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 290
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 29
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 300
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 30
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
+
+ALA_state_actions.24 = {
+	type = country_event
+	placement = ROOT
+	title = ALA_state_actions.24.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = ALA_state_actions.24.a
+		default_option = yes
+		scope:ALA_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = ALA_state_actions.24.b
+		trigger_event = {
+			id = ALA_state_actions.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = 310
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 31
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 320
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 32
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 330
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 33
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 340
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 34
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 350
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 35
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 360
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 36
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 370
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 37
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 380
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 38
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 390
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 39
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 400
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 40
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}
+
+ALA_state_actions.25 = {
+	type = country_event
+	placement = ROOT
+	title = ALA_state_actions.25.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	#GM options
+	
+	option = {
+		name = ALA_state_actions.25.a
+		default_option = yes
+		scope:ALA_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = ALA_state_actions.25.b
+		trigger_event = {
+			id = ALA_state_actions.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = 410
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 41
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 420
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 42
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 430
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 43
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 440
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 44
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 450
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 45
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 460
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 46
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 470
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 47
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 480
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 48
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 490
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 49
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	option = {
+		name = 500
+		
+		scope:ALA_target_state = {
+			add_modifier = {
+				name = memorite_aera_mod
+				multiplier = 50
+			}
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}

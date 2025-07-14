@@ -1,0 +1,1717 @@
+﻿namespace = gm_actions
+
+gm_actions.110 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.110.t
+	#desc = gm_actions.110.d
+	#flavor = gm_actions.110.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.110.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.111.t
+		trigger_event = {
+			id = gm_actions.111
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.112.t
+		trigger_event = {
+			id = gm_actions.112
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.113.t
+		trigger_event = {
+			id = gm_actions.113
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.114.t
+		trigger_event = {
+			id = gm_actions.114
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.111 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.111.t
+	#desc = gm_actions.111.d
+	#flavor = gm_actions.111.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.111.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.111.b
+		trigger_event = {
+			id = gm_actions.110
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1111.t
+		trigger_event = {
+			id = gm_actions.1111
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1112.t
+		trigger_event = {
+			id = gm_actions.1112
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1113.t
+		trigger_event = {
+			id = gm_actions.1113
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.112 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.112.t
+	#desc = gm_actions.112.d
+	#flavor = gm_actions.112.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.112.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.112.b
+		trigger_event = {
+			id = gm_actions.110
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1121.t
+		trigger_event = {
+			id = gm_actions.1121
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1122.t
+		trigger_event = {
+			id = gm_actions.1122
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1123.t
+		trigger_event = {
+			id = gm_actions.1123
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.113 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.113.t
+	#desc = gm_actions.113.d
+	#flavor = gm_actions.113.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.113.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.113.b
+		trigger_event = {
+			id = gm_actions.110
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1131.t
+		trigger_event = {
+			id = gm_actions.1131
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1132.t
+		trigger_event = {
+			id = gm_actions.1132
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1133.t
+		trigger_event = {
+			id = gm_actions.1133
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.114 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.114.t
+	#desc = gm_actions.114.d
+	#flavor = gm_actions.114.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.114.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.114.b
+		trigger_event = {
+			id = gm_actions.110
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1141.t
+		trigger_event = {
+			id = gm_actions.1141
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1142.t
+		trigger_event = {
+			id = gm_actions.1142
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1143.t
+		trigger_event = {
+			id = gm_actions.1143
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1111 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1111.t
+	#desc = gm_actions.1111.d
+	#flavor = gm_actions.1111.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1111.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1111.b
+		trigger_event = {
+			id = gm_actions.111
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1111.c
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_EMB_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1111
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1111.d
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_EMB_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1111
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1111.e
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_EMB_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1111
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1111.f
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_EMB_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1111
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1112 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1112.t
+	#desc = gm_actions.1112.d
+	#flavor = gm_actions.1112.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1112.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1112.b
+		trigger_event = {
+			id = gm_actions.111
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1112.c
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_EMB_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1112
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1112.d
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_EMB_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1112
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1112.e
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_EMB_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1112
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1112.f
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_EMB_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1112
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1113 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1113.t
+	#desc = gm_actions.1113.d
+	#flavor = gm_actions.1113.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1113.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1113.b
+		trigger_event = {
+			id = gm_actions.111
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1113.c
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_EMB_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1113
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1113.d
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_EMB_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1113
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1113.e
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_EMB_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1113
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1113.f
+		scope:recipient = {
+			je:je_WhOW_tech_EMB = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_EMB_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1113
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1121 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1121.t
+	#desc = gm_actions.1121.d
+	#flavor = gm_actions.1121.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1121.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1121.b
+		trigger_event = {
+			id = gm_actions.112
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1121.c
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_PNR_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1121
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1121.d
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_PNR_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1121
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1121.e
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_PNR_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1121
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1121.f
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_PNR_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1121
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1122 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1122.t
+	#desc = gm_actions.1122.d
+	#flavor = gm_actions.1122.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1122.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1122.b
+		trigger_event = {
+			id = gm_actions.112
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1122.c
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_PNR_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1122
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1122.d
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_PNR_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1122
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1122.e
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_PNR_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1122
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1122.f
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_PNR_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1122
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1123 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1123.t
+	#desc = gm_actions.1123.d
+	#flavor = gm_actions.1123.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1123.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1123.b
+		trigger_event = {
+			id = gm_actions.112
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1123.c
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_PNR_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1123
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1123.d
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_PNR_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1123
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1123.e
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_PNR_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1123
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1123.f
+		scope:recipient = {
+			je:je_WhOW_tech_PNR = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_PNR_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1123
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1131 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1131.t
+	#desc = gm_actions.1131.d
+	#flavor = gm_actions.1131.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1131.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1131.b
+		trigger_event = {
+			id = gm_actions.113
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1131.c
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_ALA_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1131
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1131.d
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_ALA_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1131
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1131.e
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_ALA_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1131
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1131.f
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_ALA_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1131
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1132 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1132.t
+	#desc = gm_actions.1132.d
+	#flavor = gm_actions.1132.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1132.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1132.b
+		trigger_event = {
+			id = gm_actions.113
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1132.c
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_ALA_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1132
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1132.d
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_ALA_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1132
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1132.e
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_ALA_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1132
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1132.f
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_ALA_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1132
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1133 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1133.t
+	#desc = gm_actions.1133.d
+	#flavor = gm_actions.1133.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1133.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1133.b
+		trigger_event = {
+			id = gm_actions.113
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1133.c
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_ALA_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1133
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1133.d
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_ALA_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1133
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1133.e
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_ALA_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1133
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1133.f
+		scope:recipient = {
+			je:je_WhOW_tech_ALA = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_ALA_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1133
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1141 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1141.t
+	#desc = gm_actions.1141.d
+	#flavor = gm_actions.1141.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1141.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1141.b
+		trigger_event = {
+			id = gm_actions.114
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1141.c
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_ELD_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1141
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1141.d
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_ELD_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1141
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1141.e
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_ELD_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1141
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1141.f
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_ELD_pro_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1141
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1142 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1142.t
+	#desc = gm_actions.1142.d
+	#flavor = gm_actions.1142.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1142.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1142.b
+		trigger_event = {
+			id = gm_actions.114
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1142.c
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_ELD_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1142
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1142.d
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_ELD_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1142
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1142.e
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_ELD_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1142
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1142.f
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_ELD_mil_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1142
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.1143 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1143.t
+	#desc = gm_actions.1143.d
+	#flavor = gm_actions.1143.f
+
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = gm_actions.1143.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = gm_actions.1143.b
+		trigger_event = {
+			id = gm_actions.114
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1143.c
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = 20
+					name = je_WhOW_tech_ELD_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1143
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1143.d
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = 50
+					name = je_WhOW_tech_ELD_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1143
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1143.e
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = -20
+					name = je_WhOW_tech_ELD_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1143
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1143.f
+		scope:recipient = {
+			je:je_WhOW_tech_ELD = {
+				add_progress = { 
+					value = -50
+					name = je_WhOW_tech_ELD_soc_progress_bar 
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1143
+			days = 0
+			popup = yes
+		}
+	}
+}
