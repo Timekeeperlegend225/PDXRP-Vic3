@@ -1,0 +1,239 @@
+﻿GM_national_correction01 = {
+	name = "Increase Correction by + 0.1"
+	desc = "Increase Correction by + 0.1"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		change_global_variable = {
+			name = concert_national_correction
+			add = 0.1
+		}
+	}
+}
+
+GM_national_correctionm01 = {
+	name = "Increase Correction by - 0.1"
+	desc = "Increase Correction by - 0.1"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		change_global_variable = {
+			name = concert_national_correction
+			subtract = 0.1
+		}
+	}
+}
+
+GM_national_correction00 = {
+	name = "Reset Correction"
+	desc = "Reset Correction"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		set_global_variable = {
+			name = concert_national_correction
+			value = 0
+		}
+	}
+}
+
+GM_global_correction01 = {
+	name = "Increase Correction by + 0.1"
+	desc = "Increase Correction by + 0.1"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		change_global_variable = {
+			name = concert_global_correction
+			add = 0.1
+		}
+	}
+}
+
+GM_global_correctionm01 = {
+	name = "Increase Correction by - 0.1"
+	desc = "Increase Correction by - 0.1"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		change_global_variable = {
+			name = concert_global_correction
+			subtract = 0.1
+		}
+	}
+}
+
+GM_global_correction00 = {
+	name = "Reset Correction"
+	desc = "Reset Correction"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		set_global_variable = {
+			name = concert_global_correction
+			value = 0
+		}
+	}
+}
+
+GM_global_add10 = {
+	name = "Add 10 Global Stability"
+	desc = "Add 10 Global Stability"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		every_country = {
+			je:je_HRP_concert_global_gm = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = 10
+				}
+			}
+			je:je_HRP_concert_global = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = 10
+				}
+			}
+		}
+	}
+}
+
+GM_global_subtract10 = {
+	name = "Remove 10 Global Stability"
+	desc = "Remove 10 Global Stability"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		every_country = {
+			je:je_HRP_concert_global_gm = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = -10
+				}
+			}
+			je:je_HRP_concert_global = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = -10
+				}
+			}
+		}
+	}
+}
+
+GM_global_add100 = {
+	name = "Add 100 Global Stability"
+	desc = "Add 100 Global Stability"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		every_country = {
+			je:je_HRP_concert_global_gm = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = 100
+				}
+			}
+			je:je_HRP_concert_global = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = 100
+				}
+			}
+		}
+	}
+}
+
+GM_global_subtract100 = {
+	name = "Remove 100 Global Stability"
+	desc = "Remove 100 Global Stability"
+	
+	visible = { 
+		has_modifier = game_master
+	}
+
+	possible = {
+		has_modifier = game_master
+	}
+
+	effect = {
+		every_country = {
+			je:je_HRP_concert_global_gm = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = -100
+				}
+			}
+			je:je_HRP_concert_global = {
+				add_progress = { 
+					name = HRP_AoC_global_stability 
+					value = -100
+				}
+			}
+		}
+	}
+}

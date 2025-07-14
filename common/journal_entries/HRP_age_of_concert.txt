@@ -39,6 +39,10 @@
 			}
 		}
     }
+	
+	scripted_button = GM_national_correction01
+	scripted_button = GM_national_correctionm01
+	scripted_button = GM_national_correction00
 
 	status_desc = {
 	}
@@ -127,6 +131,14 @@ je_HRP_concert_global_gm = {
 
 	complete = {
 	}
+	
+	scripted_button = GM_global_correction01
+	scripted_button = GM_global_correctionm01
+	scripted_button = GM_global_add10
+	scripted_button = GM_global_subtract10
+	scripted_button = GM_global_add100
+	scripted_button = GM_global_subtract100
+	scripted_button = GM_global_correction00
 	
     invalid = {
 		custom_tooltip = {
