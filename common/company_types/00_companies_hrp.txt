@@ -213,8 +213,8 @@ company_fn_herstal = {
 	}
 
 	prosperity_modifier = {
-		unit_offense_mult = 0.05
 		unit_defense_mult = 0.05
+		state_trade_advantage_mult = 0.1
 	}
 
 	ai_will_do = {
@@ -241,7 +241,7 @@ company_fn_herstal = {
 
 # Doosan Group
 company_doosan = {
-	icon = "gfx/interface/icons/company_icons/doosan.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/doosan.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 
 	flavored_company = yes
@@ -347,7 +347,7 @@ company_por_larranaga = {
 	}
 
 	prosperity_modifier = {
-		country_prestige_mult = 0.20
+		country_prestige_mult = 0.2
 	}
 
 	ai_will_do = {
