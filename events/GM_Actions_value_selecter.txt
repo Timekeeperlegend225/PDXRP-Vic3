@@ -184,6 +184,216 @@ value_selection.1 = {
 	}
 }
 
+value_selection.2 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.2.t
+	desc = value_selection.2.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.2.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.r
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.2.b
+		set_global_variable = {
+			name = gm_variable
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.c
+		change_global_variable = {
+			name = gm_variable
+			add = 1
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.d
+		change_global_variable = {
+			name = gm_variable
+			add = 1000
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.e
+		change_global_variable = {
+			name = gm_variable
+			add = 10000
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.f
+		change_global_variable = {
+			name = gm_variable
+			add = 1000000
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.g
+		change_global_variable = {
+			name = gm_variable
+			subtract = 1
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.h
+		change_global_variable = {
+			name = gm_variable
+			subtract = 1000
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.i
+		change_global_variable = {
+			name = gm_variable
+			subtract = 10000
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.j
+		change_global_variable = {
+			name = gm_variable
+			subtract  = 1000000
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.k
+		change_global_variable = {
+			name = gm_variable
+			multiply = 10
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.l
+		change_global_variable = {
+			name = gm_variable
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.2.m
+		scope:recipient = {
+			add_treasury = global_var:gm_variable
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
 value_selection.50 = {
 	type = country_event
 	placement = ROOT

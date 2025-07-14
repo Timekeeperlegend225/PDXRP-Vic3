@@ -13,7 +13,11 @@
  HRP_AoC_global_stability_name:0 "Global stability : [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
  HRP_AoC_global_stability_desc: "Current global stability is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
  
- HPR_concert_global:0 "Variable value is [ROOT.Var('tempnationalstab').GetValue|+=]"
+ HPR_concert_global:0 "Age of Concert"
+ HPR_concert_national_stability_positive:0 "The Old Order"
+ HPR_concert_national_stability_positive:0 "Brewing Troubles"
+ HPR_concert_global_stability_positive:0 "Concert of Europe"
+ HPR_concert_global_stability_positive:0 "Upcoming Crisis"
  
  HRP_stability_visual_modifier:0 "National Stability"
  stability_modifier_visual:0 "Stability"
