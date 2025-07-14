@@ -250,23 +250,10 @@ value_selection.2 = {
 	}
 	
 	option = {
-		name = value_selection.2.c
-		change_global_variable = {
-			name = gm_variable
-			add = 1
-		}
-		trigger_event = {
-			id = value_selection.2
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
 		name = value_selection.2.d
 		change_global_variable = {
 			name = gm_variable
-			add = 1000
+			add = 10000
 		}
 		trigger_event = {
 			id = value_selection.2
@@ -279,7 +266,7 @@ value_selection.2 = {
 		name = value_selection.2.e
 		change_global_variable = {
 			name = gm_variable
-			add = 10000
+			add = 100000
 		}
 		trigger_event = {
 			id = value_selection.2
@@ -302,23 +289,10 @@ value_selection.2 = {
 	}
 	
 	option = {
-		name = value_selection.2.g
-		change_global_variable = {
-			name = gm_variable
-			subtract = 1
-		}
-		trigger_event = {
-			id = value_selection.2
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
 		name = value_selection.2.h
 		change_global_variable = {
 			name = gm_variable
-			subtract = 1000
+			subtract = 10000
 		}
 		trigger_event = {
 			id = value_selection.2
@@ -331,7 +305,7 @@ value_selection.2 = {
 		name = value_selection.2.i
 		change_global_variable = {
 			name = gm_variable
-			subtract = 10000
+			subtract = 100000
 		}
 		trigger_event = {
 			id = value_selection.2
