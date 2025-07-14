@@ -12,6 +12,35 @@ prestige_good_cuban_cigar = {
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/cuban_cigar_prestige.dds"
 }
 
+prestige_good_guano = {
+	base_good = sulfur
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/guano_prestige.dds"
+}
+
+prestige_good_cocaine = {
+	base_good = opium
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/cocaine_prestige.dds"
+}
+
+prestige_good_tequila = {
+	base_good = liquor
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/tequila_prestige.dds"
+}
+
+prestige_good_manga = {
+	base_good = fine_art
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/manga_prestige.dds"
+}
+
 #############################################################################################################
 # GENERIC PRESTIGE GOODS
 #############################################################################################################
+prestige_good_generic_liquor = {
+	base_good = liquor
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_liquor_prestige.dds"
+}
