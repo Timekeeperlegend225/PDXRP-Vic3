@@ -1,0 +1,32 @@
+﻿l_english:
+ GM_state_action: "GM Action"
+ GM_state_action:0 "GM Action"
+ 
+ gm_state_actions.1.t:0 "GM State Actions"
+ gm_state_actions.1.a:0 "Cancel"
+ 
+ gm_state_actions.2.t:0 "Claim and incorporation"
+ gm_state_actions.2.a:0 "Cancel"
+ gm_state_actions.2.b:0 "Add Claim"
+ gm_state_actions.2.c:0 "Remove Claim"
+ gm_state_actions.2.d:0 "Incorporate"
+ gm_state_actions.2.e:0 "Unincorporate"
+ 
+ gm_state_actions.3.t:0 "Add/Remove devastation"
+ gm_state_actions.3.a:0 "Cancel"
+ 
+ gm_state_actions.30.t:0 "Add devastation"
+ gm_state_actions.30.a:0 "Cancel"
+ gm_state_actions.30.b:0 "Return"
+ gm_state_actions.30.c:0 "Add 5 devastation"
+ gm_state_actions.30.d:0 "Add 10 devastation"
+ gm_state_actions.30.e:0 "Add 25 devastation"
+ gm_state_actions.30.f:0 "Add 100 devastation"
+ 
+ gm_state_actions.31.t:0 "Remove devastation"
+ gm_state_actions.31.a:0 "Cancel"
+ gm_state_actions.31.b:0 "Return"
+ gm_state_actions.31.c:0 "Remove 5 devastation"
+ gm_state_actions.31.d:0 "Remove 10 devastation"
+ gm_state_actions.31.e:0 "Remove 25 devastation"
+ gm_state_actions.31.f:0 "Remove 100 devastation"

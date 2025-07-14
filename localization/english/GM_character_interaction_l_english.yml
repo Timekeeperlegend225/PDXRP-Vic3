@@ -1,0 +1,9 @@
+﻿l_english:
+ 
+ GM_grant_leadership:0 "Transfer as IG Leader"
+ GM_grant_rulership:0 "Transfer as Ruler"
+ GM_set_as_heir:0 "Transfer as Heir"
+ GM_send_back_as_agitator:0 "Transfer as Agitator"
+ set_as_character_target:0 "Set as character target"
+ 
+ target_character_mod:0 "Target Character"
