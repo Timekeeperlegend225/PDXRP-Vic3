@@ -1,0 +1,1268 @@
+# Creating the new states in global allows the the pops to be transferred with the provinces
+
+
+
+# Non-developmental Buildings for each state need to be deleted then recreated because the new ownership system causes alot of errors otherwise
+
+
+# For custom merged states add the Big state here and set it to owner of all provinces of the merged states
+
+
+
+
+
+
+
+
+GLOBAL = {
+
+
+	s:STATE_MASSACHUSETTS= {
+
+
+		 set_owner_of_provinces = {
+
+
+			country = c:USA 
+
+
+		 	provinces =  {"x3040C0" "x7DE678" "x9D3A73" "x1A77EA" "x939ACE" "xC5CE93"}
+
+
+		}
+
+
+		region_state:USA={
+
+
+
+
+
+
+
+
+			#Development Buildings
+
+
+
+
+
+			create_building={
+
+
+				building="building_port"
+
+
+				add_ownership={
+
+
+					country={
+
+
+						country="c:USA"
+
+
+						levels=4
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_basic_port" }
+
+
+				
+
+
+			}
+
+
+			
+
+
+			create_building={
+
+
+				building="building_government_administration"
+
+
+				add_ownership={
+
+
+					country={
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
+
+
+			}
+
+
+			
+
+
+			create_building={
+
+
+				building="building_construction_sector"
+
+
+				add_ownership={
+
+
+					country={
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_iron_frame_buildings" }
+
+
+			}
+
+
+
+
+
+			create_building={
+
+
+				building="building_university"
+
+
+				add_ownership={
+
+
+					country={
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" }
+
+
+			}
+
+
+			
+
+
+			#Urban
+
+
+
+
+
+			remove_building="building_textile_mills"
+
+
+			create_building={
+
+
+				building="building_textile_mills"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_textile_mills"
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+					building={
+
+
+						type="building_financial_district"
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms"  }
+
+
+				
+
+
+			}
+
+
+
+
+
+			remove_building="building_glassworks"
+
+
+			create_building={
+
+
+				building="building_glassworks"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_financial_district"
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_leaded_glass" "pm_ceramics" "pm_manual_glassblowing"  }
+
+
+			}
+
+
+
+
+
+			remove_building="building_shipyards"
+
+
+			create_building={
+
+
+				building="building_shipyards"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_financial_district"
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_basic_shipbuilding"  }
+
+
+			}
+
+
+
+
+
+			#R Agriculture
+
+
+			remove_building="building_fishing_wharf"
+
+
+			create_building={
+
+
+				building="building_fishing_wharf"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_fishing_wharf"
+
+
+						country="c:USA"
+
+
+						levels=4
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated"  }
+
+
+			}
+
+
+
+
+
+			remove_building="building_whaling_station"
+
+
+			create_building={
+
+
+				building="building_whaling_station"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_financial_district"
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={  "pm_unrefrigerated" "pm_wooden_whaling_ships" }
+
+
+			}
+
+
+
+
+
+			remove_building="building_wheat_farm"
+
+
+			create_building={
+
+
+				building="building_wheat_farm"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_wheat_farm"
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+					building={
+
+
+						type="building_manor_house"
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_soil_enriching_farming"  "pm_tools_disabled" "pm_citrus_orchards" }
+
+
+			}
+
+
+			
+
+
+			# Resource 
+
+
+			remove_building="building_logging_camp"
+
+
+			create_building={
+
+
+				building="building_logging_camp"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_financial_district"
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_saw_mills"  "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+
+
+			}
+
+
+
+
+
+			remove_building="building_iron_mine"
+
+
+            create_building={
+
+
+				building="building_iron_mine"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_financial_district"
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+						region="STATE_MASSACHUSETTS"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+
+
+            }
+
+
+		}
+
+
+	}
+
+
+
+
+
+	s:STATE_MARYLAND = {
+
+
+		set_owner_of_provinces = {
+
+
+			country = c:USA 
+
+
+			provinces =  {x44578C x700080 "x708000" "xEBA646"}
+
+
+		}
+
+
+
+
+
+		#Development Buildings
+
+
+		region_state:USA={
+
+
+			create_building={
+
+
+				building="building_government_administration"
+
+
+				add_ownership={
+
+
+					country={
+
+
+						country="c:USA"
+
+
+						levels=8
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
+
+
+			}
+
+
+			create_building={
+
+
+				building="building_white_house"
+
+
+				country = c:USA
+
+
+				level=1
+
+
+			}
+
+
+
+
+
+			create_building={
+
+
+				building="building_port"
+
+
+				add_ownership={
+
+
+					country={
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_basic_port" }
+
+
+			}
+
+
+
+
+
+			# Urban
+
+
+			remove_building="building_glassworks"
+
+
+			create_building={
+
+
+				building="building_glassworks"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_financial_district"
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+						region="STATE_MARYLAND"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_leaded_glass"  "pm_manual_glassblowing" "pm_ceramics" }
+
+
+			}
+
+
+			
+
+
+			#Agriculture
+
+
+			remove_building="building_fishing_wharf"
+
+
+			create_building={
+
+
+				building="building_fishing_wharf"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_fishing_wharf"
+
+
+						country=c:USA
+
+
+						levels=4
+
+
+						region="STATE_MARYLAND"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated"  }
+
+
+			}
+
+
+
+
+
+			remove_building="building_tobacco_plantation"
+
+
+			create_building={
+
+
+				building="building_tobacco_plantation"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_manor_house"
+
+
+						country="c:USA"
+
+
+						levels=4
+
+
+						region="STATE_MARYLAND"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+
+
+			}
+
+
+		}
+
+
+	}
+
+
+
+
+
+	s:STATE_MAINE = {
+
+
+		set_owner_of_provinces = {
+
+
+			country = c:USA 
+
+
+			provinces =  { "x1E33E8" "x262924" "x441473" "x54816B" "x5806F4" "x59DEDF" "x6AE419" "x6B3A42" "x6E757B" "x7182E8" "x8243C0" "x8F9450" "x990681" "xA5DE9D" "xB04040" "xBD7C03" 
+
+
+			"xC2B02B" "xC4CDFC" "xD64964" "xD68A28" "xEFC355" "xF080C0" "xF2502E" "xFB9715" "xFBEDD6" "xFCFF52" "x142566" "x30F1AF" "x34FFC4" "x38CCDA" "x3FA10D" "xB0C040" 
+
+
+			"x1DC591" "x2B5499" "x30C040" "x3E6BAD" "x92CF0F" "xB16D83" "xBB7965" "xD871BE" "xDB930D" "x1CA7B0"}
+
+
+		}
+
+
+		region_state:USA={
+
+
+
+
+
+			#Development Buildings
+
+
+			create_building={
+
+
+				building="building_government_administration"
+
+
+				add_ownership={
+
+
+					country={
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
+
+
+			}
+
+
+
+
+
+			create_building={
+
+
+				building="building_port"
+
+
+				add_ownership={
+
+
+					country={
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_basic_port" }
+
+
+			}
+
+
+			
+
+
+			#Urban
+
+
+			remove_building="building_furniture_manufacturies"
+
+
+			create_building={
+
+
+				building="building_furniture_manufacturies"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_furniture_manufacturies"
+
+
+						country="c:USA"
+
+
+						levels=1
+
+
+						region="STATE_MAINE"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_lathe" "pm_luxury_furniture" "pm_automation_disabled"  }
+
+
+			}
+
+
+
+
+
+			remove_building="building_shipyards"
+
+
+			create_building={
+
+
+				building="building_shipyards"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_financial_district"
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+						region="STATE_MAINE"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_basic_shipbuilding"  }
+
+
+			}
+
+
+
+
+
+			remove_building="building_food_industry"
+
+
+			create_building={
+
+
+				building="building_food_industry"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_food_industry"
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+						region="STATE_MAINE"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_pot_stills" "pm_disabled_canning" "pm_bakery" "pm_manual_dough_processing"  }
+
+
+			}
+
+
+			
+
+
+			#Resource
+
+
+			remove_building="building_logging_camp"
+
+
+			create_building={
+
+
+				building="building_logging_camp"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_financial_district"
+
+
+						country="c:USA"
+
+
+						levels=5
+
+
+						region="STATE_MAINE"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_saw_mills"  "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+
+
+			}
+
+
+
+
+
+			
+
+
+			# Agriculture
+
+
+			remove_building="building_fishing_wharf"
+
+
+			create_building={
+
+
+				building="building_fishing_wharf"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_fishing_wharf"
+
+
+						country="c:USA"
+
+
+						levels=3
+
+
+						region="STATE_MAINE"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated"  }
+
+
+			}
+
+
+			
+
+
+
+
+
+			remove_building="buiding_livestock_ranch"
+
+
+			create_building={
+
+
+				building="building_livestock_ranch"
+
+
+				add_ownership={
+
+
+					building={
+
+
+						type="building_livestock_ranch"
+
+
+						country="c:USA"
+
+
+						levels=2
+
+
+						region="STATE_MAINE"
+
+
+					}
+
+
+				}
+
+
+				reserves=1
+
+
+				activate_production_methods={  "pm_sheep_farms" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
+
+
+			}
+
+
+		}
+
+
+	}
+
+
+
+
+
+
+
+
+}
