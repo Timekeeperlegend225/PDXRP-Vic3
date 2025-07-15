@@ -1,0 +1,6 @@
+﻿l_english:
+
+ TAB: "   "
+ COLON:0 ":"
+ DASH_WITH_SPACING:0 " - "
+ EFFECTS_ON_ACCEPTANCE_law_ottoman_rule: "#tooltippable #tooltip:$BREAKDOWN_TAG$ Long standing citizens of the empire are not as discriminated as one might expect.#!#!"
