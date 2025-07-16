@@ -744,3 +744,145 @@ company_colombian_plantations = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# Sabeco
+company_sabeco = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/sabeco.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_MEKONG }
+
+	building_types = { #27
+		building_food_industry
+	}
+	
+	extension_building_types {
+		building_vineyard_plantation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indochina
+		country_has_primary_culture = cu:vietnamese
+		country_has_primary_culture = cu:thai
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_generic_liquor
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_liquor_complete_tt
+			has_variable = prestige_good_generic_liquor_var
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MEKONG
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		battle_defense_owned_province_mult = 0.1
+		unit_kill_rate_add = 0.05
+		character_battle_condition_camouflaged_mult = 2
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_MEKONG
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_MEKONG
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Heineken N.V.
+company_heineken = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/heineken.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_HOLLAND }
+
+	building_types = { 
+		building_food_industry
+		building_rye_farm
+	}
+	
+	extension_building_types {
+		building_sugar_plantation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_generic_liquor
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_liquor_complete_tt
+			has_variable = prestige_good_generic_liquor_var
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_HOLLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		interest_group_ig_industrialists_pop_attraction_mult = 0.1
+		building_coal_mine_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_HOLLAND
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_HOLLAND
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
