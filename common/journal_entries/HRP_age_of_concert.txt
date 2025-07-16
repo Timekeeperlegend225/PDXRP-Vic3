@@ -24,6 +24,7 @@
 				}
 			}
 		}
+		set_variable = nationalstabsetup 
 	}
 
 	scripted_progress_bar = HRP_AoC_national_stability
@@ -50,6 +51,64 @@
 	on_monthly_pulse = {
 		effect = {
 			HRP_AoC_national_stability_progress = yes 
+			if = {
+				limit = {
+					has_variable = nationalstabsetup
+				}
+				if = {
+					limit = {
+						this = c:FRA
+					}
+					scope:journal_entry = { 
+						add_progress = { 
+							name = HRP_AoC_national_stability 
+							value = -100
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							this = c:AUS
+							this = c:RUS
+							this = c:JAP
+						}
+					}
+					scope:journal_entry = { 
+						add_progress = { 
+							name = HRP_AoC_national_stability 
+							value = 200
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							this = c:MEX
+							this = c:TUR
+							this = c:SPA
+						}
+					}
+					scope:journal_entry = { 
+						add_progress = { 
+							name = HRP_AoC_national_stability 
+							value = -200
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						this = c:BRZ
+					}
+					scope:journal_entry = { 
+						add_progress = { 
+							name = HRP_AoC_national_stability 
+							value = -300
+						}
+					}
+				}
+				remove_variable = nationalstabsetup
+			}
 			set_variable = { 
 				name = tempnationalstab 
 				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_national_stability)" 
