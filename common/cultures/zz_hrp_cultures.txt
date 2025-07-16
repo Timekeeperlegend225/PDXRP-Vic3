@@ -12644,6 +12644,9 @@ quechua= {
 	color= hsv{ 0.10 0.22 0.69 }
 	religion = catholic
 	traits = { indigenous_american_heritage south_american_group }
+	obsessions = {
+		tobacco
+	}
 	male_common_first_names = {
 		Agustin
 		Alejandro
@@ -12832,6 +12835,9 @@ aimara= {
 	color= hsv{ 0.02 0.57 0.74 }
 	religion = catholic
 	traits = { indigenous_american_heritage south_american_group }
+	obsessions = {
+		tobacco
+	}
 	male_common_first_names = {
 		Agustin
 		Alejandro
@@ -15263,6 +15269,9 @@ north_andean= {
 	color= hsv{ 0.20 0.35 0.41 }
 	religion = catholic
 	traits = { hispanophone european_heritage }
+	obsessions = {
+		tobacco
+	}
 	male_common_first_names = {
 		Antonio
 		Camilo
@@ -15400,6 +15409,9 @@ south_andean= {
 	color= hsv{ 0.45 0.15 0.61 }
 	religion = catholic
 	traits = { hispanophone european_heritage }
+	obsessions = {
+		liquor
+	}
 	male_common_first_names = {
 		Adolfo Agustin Alejandro Andres Antonio Anibal
 		Bartolome Bernardo
@@ -15543,6 +15555,9 @@ bolivian = {
 	color= rgb{ 133 115 107 }
 	religion = catholic
 	traits = { hispanophone european_heritage }
+	obsessions = {
+		liquor
+	}
 
 	male_common_first_names = {
 		Aniceto Adolfo Arturo Antonio Alfredo Alejandro AbdO_n Antenor Armando
@@ -15613,6 +15628,9 @@ ecuadorian = {
 	color= rgb{ 109 156 133 }
 	religion = catholic
 	traits = { hispanophone european_heritage }
+	obsessions = {
+		tobacco
+	}
 
 	male_common_first_names = {
 		Alberto Antonio Agustin Angel Aurelio Abelardo Alfredo Atanasio
@@ -15682,6 +15700,9 @@ chilean = {
 	color= rgb{ 183 62 40 }
 	religion = catholic
 	traits = { hispanophone european_heritage }
+	obsessions = {
+		liquor
+	}
 
 	male_common_first_names = {
 		Antonio Agustin AnI_bal Arturo Abraham Alfredo Alonso Anacleto Angel AbdO_n ArI_stides Alejandro
@@ -15756,6 +15777,9 @@ venezuelan= {
 	color=rgb{ 67 48 175 }
 	religion = catholic
 	traits = { hispanophone european_heritage }
+	obsessions = {
+		tobacco
+	}
 
 	male_common_first_names = {
 		Andres Antonio Alejandro
@@ -15830,6 +15854,9 @@ argentine= {
 	color=rgb{ 179 208 221 }
 	religion = catholic
 	traits = { hispanophone european_heritage }
+	obsessions = {
+		wine
+	}
 
 	male_common_first_names = {
 		Andres Agustin Alejo ArI_stides Alejandro Alberto Anselmo Alvaro
@@ -16029,7 +16056,9 @@ colombian= {
 	color=rgb{ 47 78 185 }
 	religion = catholic
 	traits = { hispanophone european_heritage }
-
+	obsessions = {
+		tobacco
+	}
 	male_common_first_names = {
 		Antonio AnI_bal Aquileo Agustin Ambrosio
 		Bartolome Buenaventura Benjamin_2
@@ -16098,6 +16127,9 @@ platinean= {
 	color=rgb{ 88 99 133 }
 	religion = catholic
 	traits = { hispanophone european_heritage }
+	obsessions = {
+		wine
+	}
 	male_common_first_names = {
 		Agustin Antonio Atanasio
 		Baltasar Bartolome Bernardino Bernardo
