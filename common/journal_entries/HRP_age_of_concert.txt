@@ -174,13 +174,16 @@ je_HRP_concert_global_gm = {
 	}
 
 	modifiers_while_active = {
-		HPR_concert_global
 	}
 
 	immediate = {
 		scope:journal_entry = { 
 			add_modifier = {
 				name = HPR_concert_global_stability_positive
+				multiplier = var:geographic_multiplier
+			}
+			add_modifier = {
+				name = HPR_concert_global
 				multiplier = var:geographic_multiplier
 			}
 		}
@@ -244,7 +247,22 @@ je_HRP_concert_global_gm = {
 					}
 					change_variable = {
 						name = tempnationalstab2
-						multiply = 10
+						subtract = 500
+					}
+					if = {
+						limit = {
+							var:tempnationalstab2 < 0
+						}
+						change_variable = {
+							name = tempnationalstab2
+							multiply = 100
+						}
+					}
+					else = {
+						change_variable = {
+							name = tempnationalstab2
+							multiply = 10
+						}
 					}
 					change_global_variable = {
 						name = total_stability
@@ -292,7 +310,22 @@ je_HRP_concert_global_gm = {
 					}
 					change_variable = {
 						name = tempnationalstab2
-						multiply = 5
+						subtract = 500
+					}
+					if = {
+						limit = {
+							var:tempnationalstab2 < 0
+						}
+						change_variable = {
+							name = tempnationalstab2
+							multiply = 50
+						}
+					}
+					else = {
+						change_variable = {
+							name = tempnationalstab2
+							multiply = 5
+						}
 					}
 					change_global_variable = {
 						name = total_stability
@@ -343,7 +376,31 @@ je_HRP_concert_global_gm = {
 					}
 					change_variable = {
 						name = tempnationalstab2
-						multiply = 2
+						subtract = 500
+					}
+					if = {
+						limit = {
+							var:tempnationalstab2 < 0
+						}
+						change_variable = {
+							name = tempnationalstab2
+							multiply = 20
+						}
+					}
+					else = {
+						change_variable = {
+							name = tempnationalstab2
+							multiply = 2
+						}
+					}
+					if = {
+						limit = {
+							var:tempnationalstab2 < 0
+						}
+						change_variable = {
+							name = tempnationalstab2
+							multiply = 10
+						}
 					}
 					change_global_variable = {
 						name = total_stability
@@ -382,9 +439,26 @@ je_HRP_concert_global_gm = {
 					}
 				}
 				else = {
+					set_variable = { 
+						name = tempnationalstab2
+						value = var:tempnationalstab
+					}
+					change_variable = {
+						name = tempnationalstab2
+						subtract = 500
+					}
+					if = {
+						limit = {
+							var:tempnationalstab2 < 0
+						}
+						change_variable = {
+							name = tempnationalstab2
+							multiply = 1
+						}
+					}
 					change_global_variable = {
 						name = total_stability
-						add = var:tempnationalstab
+						add = var:tempnationalstab2
 					}
 					change_global_variable = {
 						name = stability_weigh
@@ -425,22 +499,7 @@ je_HRP_concert_global_gm = {
 			}
 			change_global_variable = {
 				name = total_stability
-				subtract = 500
-			}
-			if = {
-				limit = {
-					total_stability > 0
-				}
-				change_global_variable = {
-					name = total_stability
-					divide = 1000
-				}
-			}
-			else = {
-				change_global_variable = {
-					name = total_stability
-					divide = 100
-				}
+				divide = 1000
 			}
 			HRP_AoC_global_stability_progress = yes 
 			set_variable = { 
@@ -508,13 +567,16 @@ je_HRP_concert_global = {
 	}
 
 	modifiers_while_active = {
-		HPR_concert_global
 	}
 
 	immediate = {
 		scope:journal_entry = { 
 			add_modifier = {
 				name = HPR_concert_global_stability_positive
+				multiplier = var:geographic_multiplier
+			}
+			add_modifier = {
+				name = HPR_concert_global
 				multiplier = var:geographic_multiplier
 			}
 		}
