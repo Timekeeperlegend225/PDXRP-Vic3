@@ -182,7 +182,7 @@ centralization = {
 }
 
 corporate_charters = {
-	era = era_2
+	era = era_1
 	texture = "gfx/interface/icons/invention_icons/corporate_charters.dds"
 	category = society
 	
@@ -191,7 +191,7 @@ corporate_charters = {
 	}	
 	
 	unlocking_technologies = {
-		stock_exchange
+		international_trade
 	}
 	
 	ai_weight = {
