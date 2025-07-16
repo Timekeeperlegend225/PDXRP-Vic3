@@ -11,6 +11,8 @@ company_conservas_ramirez: "Ramirez & Cia (Filhos), SA"
 company_jose_cuervo: "Jose Cuervo"
 company_canadian_national_railway: "Compagnie des chemins de fer nationaux du Canada"
 company_colombian_plantations: "Colombian Plantations"
+company_sabeco: "SABECO"
+company_heineken: "Heineken N.V."
 
 # Prestige goods:
 prestige_good_fine_chocolate: "Fine Chocolate"
@@ -20,3 +22,19 @@ prestige_good_cocaine: "Cocaine"
 prestige_good_tequila: "Tequila"
 prestige_good_manga: "Manga"
 prestige_good_generic_liquor: "Beer"
+
+# top Beer producer:
+
+je_prestige_goods_liquor: "$prestige_good_generic_liquor$"
+je_prestige_goods_liquor_reason: "[SCOPE.sCompany('relevant_company').GetName] has established itself as an important actor within our economy. The company seeks to leverage its current prosperity to develop its own brand of @prestige_good_generic_liquor! #b $prestige_good_generic_liquor$#!. If successful, it will be able to expand its competitiveness within the global @liquor! #b $liquor$#! market."
+je_prestige_goods_liquor_goal: "Maintain the following for #v [GetPlayer.MakeScope.ScriptValue('prestige_good_journal_entry_months')] months#! (currently #v [ROOT.GetCountry.MakeScope.Var('prestige_liquor_timer_var').GetValue]#!): #indent_newline:3 "
+
+je_prestige_goods_liquor_complete_tt: "Has completed the #b $je_prestige_goods_liquor$#! [concept_journal_entry]"
+je_prestige_goods_liquor_reward_tt: "[SCOPE.sCompany('relevant_company').GetName] will be able to produce @prestige_good_generic_liquor! #b $prestige_good_generic_liquor$#!"
+
+not_prestige_good_generic_liquor_var_tt: "Has #b not#! already developed @prestige_good_generic_liquor! #b $prestige_good_generic_liquor$#!"
+
+notification_prestige_goods_liquor_unlocked_name: "[SCOPE.sCompany('relevant_company').GetName] develops @prestige_good_generic_liquor! #b $prestige_good_generic_liquor$#!"
+notification_prestige_goods_liquor_unlocked_desc: "[Concept('concept_building', '$concept_buildings$')] owned by [SCOPE.sCompany('relevant_company').GetName] may now begin producing @prestige_good_generic_liquor! #b $prestige_good_generic_liquor$#!"
+notification_prestige_goods_liquor_unlocked_tooltip: "#header $notification_prestige_goods_liquor_unlocked_name$#!\n$TOOLTIP_DELIMITER$\n$notification_prestige_goods_liquor_unlocked_desc$"
+  
