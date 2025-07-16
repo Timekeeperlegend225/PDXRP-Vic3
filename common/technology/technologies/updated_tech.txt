@@ -1,4 +1,22 @@
-﻿quinine = {
+﻿corporate_charters = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/corporate_charters.dds"
+	category = society
+	
+	modifier = {
+		country_max_companies_add = 1
+	}	
+	
+	unlocking_technologies = {
+		international_trade
+	}
+	
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+quinine = {
 	# Permits colonization of state regions with the Malaria trait
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/quinine.dds"
