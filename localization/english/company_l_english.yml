@@ -13,6 +13,14 @@ company_canadian_national_railway: "Compagnie des chemins de fer nationaux du Ca
 company_colombian_plantations: "Colombian Plantations"
 company_sabeco: "SABECO"
 company_heineken: "Heineken N.V."
+company_velarde: "La Familia Velarde"
+
+# Fallback names if dynamic naming fails
+company_basic_agriculture_3: "Super Agricultural Corporation"
+
+# Dynamic company names
+company_basic_agriculture_3_dynamic_name_tag_singular: "Grain"
+company_basic_agriculture_3_dynamic_name_tag_plural: "Agriculture"
 
 # Prestige goods:
 prestige_good_fine_chocolate: "Fine Chocolate"
