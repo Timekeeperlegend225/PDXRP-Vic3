@@ -21,6 +21,12 @@ law_millet_system = {
 		}
 	}
 
+	can_enact = {
+		any_primary_culture = {
+			has_discrimination_trait = turkic
+		}
+		}
+
 	on_enact = {
 		recalculate_pop_ig_support = yes
 		if = {
