@@ -5913,6 +5913,18 @@ gm_actions.50 = {
 			popup = yes
 		}
 	}
+
+	option = {  #springtime initiation
+		name = gm_actions.50.e
+		trigger = {
+			scope:recipient = {	
+				NOT = {
+					has_global_variable = age_of_springtime_gm
+				}
+			}
+		}
+		set_global_variable = age_of_springtime_gm
+	}
 	
 	option = {
 		name = gm_actions.50.d
