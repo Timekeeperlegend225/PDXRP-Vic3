@@ -886,3 +886,142 @@ company_heineken = {
 		value = 3 # Higher base value for flavored companies
 	}	
 }
+
+# La Familia Velarde
+company_velarde = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/velarde.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ASTURIAS }
+
+	building_types = { 
+		building_food_industry
+		building_livestock_ranch
+	}
+	
+	extension_building_types {
+		building_wheat_farm
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_iberia
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_generic_groceries
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_groceries_complete_tt
+			has_variable = prestige_good_generic_groceries_var
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ASTURIAS
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_ASTURIAS
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_ASTURIAS
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_basic_agriculture_3 = {
+	icon = "gfx/interface/icons/company_icons/company_basic_agriculture_1.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		building_wheat_farm
+		building_rye_farm
+		building_rice_farm
+		building_millet_farm
+		building_maize_farm
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_grain
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_grain_complete_tt
+			has_variable = prestige_good_generic_grain_var
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wheat_farm
+					is_building_type = building_rye_farm
+					is_building_type = building_rice_farm
+					is_building_type = building_millet_farm
+					is_building_type = building_maize_farm
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_livestock_ranch_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wheat_farm
+					is_building_type = building_rye_farm
+					is_building_type = building_rice_farm
+					is_building_type = building_millet_farm
+					is_building_type = building_maize_farm
+				}
+				level >= 3
+			}
+		}
+	}
+}
