@@ -14,6 +14,7 @@ company_colombian_plantations: "Colombian Plantations"
 company_sabeco: "SABECO"
 company_heineken: "Heineken N.V."
 company_velarde: "La Familia Velarde"
+company_sumitomo: "Sumitomo"
 
 # Fallback names if dynamic naming fails
 company_basic_agriculture_3: "Super Agricultural Corporation"
