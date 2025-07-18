@@ -1068,3 +1068,317 @@ company_basic_wine_and_fruit = {
 		}
 	}
 }
+
+# Russian-American Company Under the High Patronage of His Imperial Majesty
+company_russian_american_company = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_russian_american_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_logging_camp
+		building_fishing_wharf
+		building_port
+	}
+
+	extension_building_types = {
+		building_coal_mine
+		building_whaling_station
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_fish
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_fish_complete_tt
+			has_variable = prestige_good_generic_fish_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+		any_primary_culture = {
+			has_discrimination_trait = east_slavic
+		}
+	}
+
+	attainable = {
+	}
+
+	possible = {
+		OR = {
+			any_subject_or_below = {
+				any_scope_state = {
+					region = sr:region_pacific_coast
+					any_scope_building = {
+						OR = {
+							is_building_type = building_port
+							is_building_type = building_fishing_wharf
+							is_building_type = building_logging_camp
+						}
+						level >= 5
+					}
+				}
+			}
+
+			any_scope_state = {
+				region = sr:region_pacific_coast
+				any_scope_building = {
+					OR = {
+						is_building_type = building_port
+						is_building_type = building_fishing_wharf
+						is_building_type = building_logging_camp
+					}
+					level >= 5
+				}
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.1
+		state_conversion_mult = 0.05
+		building_textile_mills_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		OR = {
+			any_subject_or_below = {
+				any_scope_state = {
+					region = sr:region_pacific_coast
+				}
+			}
+
+			any_scope_state = {
+				region = sr:region_pacific_coast
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_port = {
+			level = 5
+			state_trigger = {
+				region = sr:region_pacific_coast
+				is_incorporated = yes
+			}
+		}
+		building_logging_camp = {
+			level = 5
+			state_trigger = {
+				region = sr:region_pacific_coast
+				is_incorporated = yes
+			}
+		}
+		building_fishing_wharf = {
+			level = 5
+			state_trigger = {
+				region = sr:region_pacific_coast
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Rheinische Metallwaaren- und Maschinenfabrik Aktiengesellschaft
+company_rheinmetall = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_rheinmetall.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_RUHR STATE_NORTH_RHINE }
+
+	building_types = {
+		building_artillery_foundries
+		building_munition_plants
+		building_explosives_factory
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_steel_mills
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_explosives
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_explosives_complete_tt
+			has_variable = prestige_good_generic_explosives_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_germany
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_RUHR
+					state_region = s:STATE_NORTH_RHINE
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = automatic_machine_guns
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_RUHR
+				state_region = s:STATE_NORTH_RHINE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_arms_industry
+					is_building_type = building_artillery_foundries
+					is_building_type = building_munition_plants
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		unit_combat_unit_type_siege_artillery_offense_mult = 0.1
+		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.1
+		unit_army_defense_mult = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = automatic_machine_guns
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_RUHR
+				state_region = s:STATE_NORTH_RHINE
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_munition_plants = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_RUHR
+					state_region = s:STATE_NORTH_RHINE
+				}
+				is_incorporated = yes
+			}
+		}
+		building_arms_industry = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_RUHR
+					state_region = s:STATE_NORTH_RHINE
+				}
+				is_incorporated = yes
+			}
+		}
+		building_artillery_foundries = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_RUHR
+					state_region = s:STATE_NORTH_RHINE
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Dollfus-Mieg et Compagnie and Maison Worth Merge
+company_dmc = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_dmc.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_BURGUNDY }
+
+	building_types = {
+		building_textile_mills
+		building_coal_mine
+	}
+
+	extension_building_types = {
+		building_dye_plantation
+		building_cotton_plantation
+		building_arts_academy
+	}
+
+	possible_prestige_goods = {
+		prestige_good_haute_couture
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BURGUNDY
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BURGUNDY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mills
+				level >= 5
+			}
+		}
+		has_technology_researched = cotton_gin
+	}
+
+	prosperity_modifier = {
+		state_assimilation_mult = 0.1
+		country_influence_mult = 0.05
+		country_leverage_generation_mult = 0.05
+		state_assimilation_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_BURGUNDY
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_textile_mills = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BURGUNDY
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
