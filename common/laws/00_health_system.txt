@@ -103,7 +103,7 @@ law_public_health_insurance = {
 	progressiveness = 100
 	
 	unlocking_technologies = {
-		socialism
+		pharmaceuticals
 	}
 	
 	modifier = {
