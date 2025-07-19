@@ -58,6 +58,7 @@
  gm_actions.50.b:0 "Return"
  gm_actions.50.c:0 "Value selector"
  gm_actions.50.d:0 "Start the Age of Concert"
+ gm_actions.50.e:0 "Start the Age of People"
  gm_actions.50.u:0 "Variable value is [GetGlobalVariable('gm_variable').GetValue|1]# \n National Correction is [GetGlobalVariable('concert_national_correction').GetValue|1]# \n Global Correction is [GetGlobalVariable('concert_global_correction').GetValue|1]# "
  gm_actions.50.cnc:0 "Adjust national correction"
  gm_actions.50.cgc:0 "Adjust global correction"
