@@ -211,6 +211,15 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
+	#Game Start Setup
+	option = {
+		name = gm_actions.93.t
+		trigger_event = {
+			id = gm_actions.93
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 gm_actions.20 = {
@@ -9045,3 +9054,48 @@ gm_actions.102 = {
 		}
 	}
 }
+gm_actions.93 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.93.a
+	desc = gm_actions.93.b
+	event_image = {
+		texture = "gfx/event_pictures/1character_4flags.dds"
+	}
+ 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.1
+	}
+	
+	option = {
+		name = gm_actions.93.c
+		default_option = yes
+		every_country = {
+			limit = {
+				OR = {
+					capital.region = sr:region_bengal
+					capital.region = sr:region_punjab
+					capital.region = sr:region_central_india
+					capital.region = sr:region_bombay
+					capital.region = sr:region_madras
+
+				}
+			}
+			activate_law = law_type:law_closed_borders
+			c:BIC = {
+				activate_law = law_type:law_migration_controls
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+		remove_variable = actionee
+		}
+	}
+}
+	
