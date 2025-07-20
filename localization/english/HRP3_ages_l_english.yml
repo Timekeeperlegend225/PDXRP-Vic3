@@ -15,7 +15,7 @@
  
  HPR_concert_global:0 "Age of Concert"
  HPR_concert_national_stability_positive:0 "The Old Order"
- HPR_concert_national_stability_positive:0 "Brewing Troubles"
+ HPR_concert_national_stability_negative:0 "Brewing Troubles"
  HPR_concert_global_stability_positive:0 "Concert of Europe"
  HPR_concert_global_stability_positive:0 "Upcoming Crisis"
  

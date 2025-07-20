@@ -68,9 +68,3 @@
  gm_actions.50.dna-:0 "Remove [GetGlobalVariable('gm_variable').GetValue|1]#! national stability stability to all countries"
  gm_actions.50.dga+:0 "Add [GetGlobalVariable('gm_variable').GetValue|1]#! global stability"
  gm_actions.50.dga-:0 "Remove [GetGlobalVariable('gm_variable').GetValue|1]#! global stability"
- 
- gm_actions.93.t:0 "Game Start Setup"
- gm_actions.93.a:0 "Game Start Setup"
- gm_actions.93.b:0 "Closing Indian Borders"
- gm_actions.93.c:0 "Close Indian borders"
- gm_actions.93.d:0 "Close"

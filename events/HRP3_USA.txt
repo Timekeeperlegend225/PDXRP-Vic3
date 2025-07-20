@@ -1,0 +1,46 @@
+namespace = hrp3_usa
+
+hrp3_usa.1 = { 
+	type = country_event
+	placement = ROOT
+
+	title = hrp3_usa.1.t
+	desc = hrp3_usa.1.d
+#	flavor = hrp3_usa.1.f
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = { #Trigered by volcanic_eruption_iceland.3 for Greece
+	}
+
+	immediate = {
+	}
+	
+	option = {
+		name = hrp3_usa.1.a
+		s:STATE_MAINE.region_state:USA = {
+			set_state_owner = c:ONT
+			set_state_type = incorporated
+			state_region = {
+				add_claim = c:USA
+			}
+		}
+		activate_law = law_type:law_oligarchy
+		default_option = yes
+		random_character = {
+			limit = {
+				has_variable = is_andrew_jackson
+			}
+			set_character_as_ruler = yes
+			set_character_immortal = yes
+		}
+	}
+}
