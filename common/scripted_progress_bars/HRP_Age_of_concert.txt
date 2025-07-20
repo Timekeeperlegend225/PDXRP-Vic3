@@ -594,6 +594,17 @@
 				multiply = 2
 			}
 		}
+		if = {
+			limit = {
+				var:tempnationalstab < 200
+			}
+			add = {
+				desc = "Limit to Chaos"
+				add = 180
+				subtract = var:tempnationalstab
+				divide = 10
+			}
+		}
 	}
 
 	start_value = 800
@@ -628,6 +639,10 @@ HRP_AoC_global_stability = {
 		subtract = {
 			desc = "from Labor Movement"
 			value = global_var:tech_lowering_stability_lab
+		}
+		subtract = {
+			desc = "from Dialectic"
+			value = global_var:tech_lowering_stability_dia
 		}
 	}
 
