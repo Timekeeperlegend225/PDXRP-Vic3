@@ -617,12 +617,12 @@
 		}
 	}
 	s:STATE_CENTRAL_HUNGARY={
-		region_state:HUN={
+		region_state:AUS={
 			create_building={
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:HUN"
+						country="c:AUS"
 						levels=5
 					}
 				}
@@ -633,7 +633,7 @@
 				building="building_construction_sector"
 				add_ownership={
 					country={
-						country="c:HUN"
+						country="c:AUS"
 						levels=1
 					}
 				}
@@ -645,7 +645,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:HUN"
+						country="c:AUS"
 						levels=2
 						region="STATE_CENTRAL_HUNGARY"
 					}
@@ -658,7 +658,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=3
 						region="STATE_CENTRAL_HUNGARY"
 					}
@@ -672,7 +672,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=5
 						region="STATE_CENTRAL_HUNGARY"
 					}
@@ -685,7 +685,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=3
 						region="STATE_CENTRAL_HUNGARY"
 					}
@@ -696,13 +696,13 @@
 		}
 	}
 	s:STATE_BEKES={
-		region_state:HUN={
+		region_state:AUS={
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=2
 						region="STATE_CENTRAL_HUNGARY"
 					}
@@ -715,7 +715,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=2
 						region="STATE_CENTRAL_HUNGARY"
 					}
@@ -726,14 +726,14 @@
 		}
 	}
 	s:STATE_TRANSDANUBIA={
-		region_state:HUN={
+		region_state:AUS={
 			create_building={
 				building="building_trade_center"
 				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:HUN"
+						country="c:AUS"
 						levels=3
 						region="STATE_TRANSDANUBIA"
 					}
@@ -745,7 +745,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=1
 						region="STATE_CENTRAL_HUNGARY"
 					}
@@ -758,7 +758,7 @@
 				add_ownership={
 					building={
 						type="building_food_industry"
-						country="c:HUN"
+						country="c:AUS"
 						levels=5
 						region="STATE_CENTRAL_HUNGARY"
 					}
@@ -771,7 +771,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=1
 						region="STATE_TRANSDANUBIA"
 					}
@@ -784,13 +784,13 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=1
 						region="STATE_TRANSDANUBIA"
 					}
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=2
 						region="STATE_TRANSDANUBIA"
 					}
@@ -801,13 +801,13 @@
 		}
 	}
 	s:STATE_DELVIDEK={
-		region_state:HUN={
+		region_state:AUS={
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=1
 						region="STATE_DELVIDEK"
 					}
@@ -820,7 +820,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=3
 						region="STATE_DELVIDEK"
 					}
@@ -831,13 +831,13 @@
 		}
 	}
 	s:STATE_BANAT={
-		region_state:HUN={
+		region_state:AUS={
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=3
 						region="STATE_BANAT"
 					}
@@ -850,7 +850,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=4
 						region="STATE_BANAT"
 					}
@@ -861,12 +861,12 @@
 		}
 	}
 	s:STATE_WEST_SLOVAKIA={
-		region_state:HUN={
+		region_state:AUS={
 			create_building={
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:HUN"
+						country="c:AUS"
 						levels=3
 					}
 				}
@@ -878,7 +878,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:HUN"
+						country="c:AUS"
 						levels=2
 						region="STATE_WEST_SLOVAKIA"
 					}
@@ -891,7 +891,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:HUN"
+						country="c:AUS"
 						levels=1
 						region="STATE_BANAT"
 					}
@@ -904,7 +904,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=2
 						region="STATE_CENTRAL_HUNGARY"
 					}
@@ -915,13 +915,13 @@
 		}
 	}
 	s:STATE_EAST_SLOVAKIA={
-		region_state:HUN={
+		region_state:AUS={
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:HUN"
+						country="c:AUS"
 						levels=1
 						region="STATE_TRANSDANUBIA"
 					}
@@ -934,7 +934,7 @@
 				add_ownership={
 					building={
 						type="building_logging_camp"
-						country="c:HUN"
+						country="c:AUS"
 						levels=3
 						region="STATE_EAST_SLOVAKIA"
 					}
