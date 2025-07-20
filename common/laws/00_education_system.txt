@@ -244,7 +244,7 @@ law_public_schools = {
 	progressiveness = 50
 	
 	unlocking_technologies = {
-		philosophical_pragmatism
+		empiricism
 	}
 
 	disallowing_laws = {
