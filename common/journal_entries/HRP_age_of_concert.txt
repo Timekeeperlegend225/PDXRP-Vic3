@@ -233,7 +233,7 @@ je_HRP_concert_global_gm = {
 				value = 0
 			} 
 			set_global_variable = { 
-				name = tech_lowering_stability_lab
+				name = tech_lowering_stability_dia
 				value = 0
 			}
 			every_country = {
@@ -299,6 +299,15 @@ je_HRP_concert_global_gm = {
 							add = 0.1
 						}
 					}
+					if = {
+						limit = {
+							has_technology_researched = dialectics
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_dia
+							add = 0.1
+						}
+					}
 				}
 				else_if = {
 					limit = {
@@ -359,6 +368,15 @@ je_HRP_concert_global_gm = {
 						}
 						change_global_variable = {
 							name = tech_lowering_stability_lab
+							add = 0.05
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = dialectics
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_dia
 							add = 0.05
 						}
 					}
@@ -437,6 +455,15 @@ je_HRP_concert_global_gm = {
 							add = 0.02
 						}
 					}
+					if = {
+						limit = {
+							has_technology_researched = dialectics
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_dia
+							add = 0.02
+						}
+					}
 				}
 				else = {
 					set_variable = { 
@@ -488,6 +515,15 @@ je_HRP_concert_global_gm = {
 						}
 						change_global_variable = {
 							name = tech_lowering_stability_lab
+							add = 0.01
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = dialectics
+						}
+						change_global_variable = {
+							name = tech_lowering_stability_dia
 							add = 0.01
 						}
 					}

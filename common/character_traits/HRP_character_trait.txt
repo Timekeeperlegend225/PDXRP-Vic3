@@ -1,0 +1,34 @@
+savior_of_USA = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/unused/showman.dds"
+
+	character_modifier = {
+		character_popularity_add = 50
+	}
+
+	command_modifier = {
+		unit_morale_recovery_mult = 0.1
+	}
+
+	country_modifier = {
+		country_legitimacy_headofstate_add = 20 
+		state_pop_support_movement_pro_slavery_add = 2
+	}
+
+	agitator_modifier = {
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.25
+	}
+
+	possible = {
+		always = no
+	}
+
+	weight = {
+		value = 0
+	}
+
+	value = 2
+}
