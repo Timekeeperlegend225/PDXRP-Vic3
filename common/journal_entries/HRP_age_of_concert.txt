@@ -233,6 +233,10 @@ je_HRP_concert_global_gm = {
 				value = 0
 			} 
 			set_global_variable = { 
+				name = tech_lowering_stability_lab
+				value = 0
+			}
+			set_global_variable = { 
 				name = tech_lowering_stability_dia
 				value = 0
 			}

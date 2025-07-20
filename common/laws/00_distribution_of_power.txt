@@ -456,8 +456,8 @@ law_landed_voting = {
 				has_global_variable = age_of_concert_gm
 			}
 			custom_tooltip = {
-				text = "Stability must be under 500"
-				var:tempnationalstab < 501
+				text = "Stability must be under 600"
+				var:tempnationalstab < 601
 			}
 		}
 	}
