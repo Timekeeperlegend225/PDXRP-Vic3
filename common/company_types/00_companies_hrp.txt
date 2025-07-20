@@ -1091,3 +1091,71 @@ company_sumitomo = {
 		value = 3 # Higher base value for flavored companies
 	}	
 }
+
+# Shueisha
+company_shueisha = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/shueisha.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_KANTO }
+
+	building_types = {
+		building_arts_academy
+	}
+
+	possible_prestige_goods = {
+		prestige_good_manga
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_japan
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KANTO
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = camera
+		any_scope_state = {
+			state_region = s:STATE_KANTO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_paper_mills_throughput_add = 0.1
+		building_arts_academy_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = camera
+		any_scope_state = {
+			state_region = s:STATE_KANTO
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_arts_academy = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_KANTO
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
