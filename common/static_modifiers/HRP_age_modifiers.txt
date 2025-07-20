@@ -7,7 +7,7 @@
 
 HPR_concert_national_stability_positive = {
 	icon = gfx/interface/icons/pops_icons/aristocrats.dds
-	country_aristocrats_pol_str_mult = 0.30
+	country_aristocrats_pol_str_mult = 0.40
 	state_aristocrats_investment_pool_contribution_add = 0.05
 	state_aristocrats_investment_pool_efficiency_mult = 0.35
 	country_law_enactment_time_mult = 0.40
@@ -17,6 +17,8 @@ HPR_concert_national_stability_positive = {
 	country_legitimacy_headofstate_add = 10
 	interest_group_ig_landowners_pop_attraction_mult = 0.20
 	country_influence_mult = 0.2
+	tax_per_capita_add = 0.10
+	country_authority_mult = 0.10
 }
 
 HPR_concert_national_stability_negative = {
