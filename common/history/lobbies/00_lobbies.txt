@@ -87,9 +87,23 @@
 			add_interest_group = ig:ig_armed_forces
 		}
 		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:USA
+			add_interest_group = ig:ig_intelligentsia
+		}
+		create_political_lobby = {
 			type = lobby_pro_country
 			target = c:FRA
 			add_interest_group = ig:ig_petty_bourgeoisie
+		}
+	}
+
+	c:ONT = {
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:USA
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_intelligentsia
 		}
 	}
 
@@ -382,9 +396,10 @@
 
 	c:USA = {
 		create_political_lobby = {
-			type = lobby_pro_country
+			type = lobby_anti_country
 			target = c:GBR
-			add_interest_group = ig:ig_industrialists
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_rural_folk
 		}
 	}
 

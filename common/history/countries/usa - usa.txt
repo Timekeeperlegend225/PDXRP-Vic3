@@ -8,8 +8,8 @@
 		set_market_capital = STATE_NEW_YORK		
 		
 		set_variable = monroe_doctrine
-		activate_law = law_type:law_landed_voting
 		activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_oligarchy
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_secret_police
 		activate_law = law_type:law_public_schools

@@ -67,3 +67,8 @@ in_default = {
 	unit_offense_mult = -0.9
 	unit_defense_mult = -0.5
 }
+
+weak_power_bloc = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	power_bloc_cohesion_mult = -0.5
+}

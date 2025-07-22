@@ -1,0 +1,73 @@
+﻿#	Example:
+#
+#	example_trigger = {
+#		x = 100
+#		y = 50
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_trigger = yes
+#	}
+#
+
+country_can_form_power_bloc = {
+	AND = {
+		trigger_if = {
+			limit = {
+				is_country_type = decentralized
+			}
+			NOT = { is_country_type = decentralized }
+		}
+		trigger_if = {
+			limit = {
+				is_revolutionary = yes
+			}
+			is_revolutionary = no
+		}
+		country_rank >= rank_value:minor_power
+		NOT = { has_law_or_variant = law_type:law_isolationism }
+	}
+}
+
+power_bloc_is_weak = {
+	always = no
+}
+
+in_earthquake_zone = {
+	OR = {
+		region = sr:region_indonesia
+		region = sr:region_indochina
+		region = sr:region_south_china
+		region = sr:region_north_china
+		region = sr:region_manchuria
+		region = sr:region_himalayas
+		region = sr:region_japan
+		region = sr:region_la_plata
+		region = sr:region_andes
+		region = sr:region_gran_colombia
+		region = sr:region_central_america
+		region = sr:region_mexico
+		region = sr:region_pacific_coast
+	}
+}
+
+in_volcanic_zone = {
+	OR = {
+		region = sr:region_indonesia
+		region = sr:region_japan
+		region = sr:region_la_plata
+		region = sr:region_andes
+		region = sr:region_gran_colombia
+		region = sr:region_central_america
+		region = sr:region_mexico
+		region = sr:region_pacific_coast
+		region = sr:region_zanj
+		state_region = s:STATE_SICILY
+		state_region = s:STATE_CAMPANIA
+		state_region = s:STATE_ICELAND
+		state_region = s:STATE_HAWAIIAN_ISLANDS
+	}
+}
