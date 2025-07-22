@@ -1,0 +1,6 @@
+﻿l_english:
+ TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION: "Available when your [concept_power_bloc_rank] is #v ##5#! or better"
+ TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION: "Available when your [concept_power_bloc_rank] is #v ##3#! or better and you have at least #v 5#! [Concept('concept_power_bloc_member', '$concept_power_bloc_members_short$')]"
+ 
+
+ Pleass_dont_coup:0 "Please don't coup"
