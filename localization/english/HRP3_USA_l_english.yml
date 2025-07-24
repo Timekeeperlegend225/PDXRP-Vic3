@@ -10,7 +10,7 @@
  hrp3_usa.1.d: "Go read Arre lore in World Event"
  hrp3_usa.1.a: "And click that before doing anything please"
  
- ONT:0 "Canada"
+ ONT:0 "Province of Canada"
  ONT_ADJ:0 "Canadian"
- dyn_c_upper_canada:0 "Canada"
+ dyn_c_upper_canada:0 "Province of Canada"
  dyn_c_upper_canada_adj:0 "Canadian"
