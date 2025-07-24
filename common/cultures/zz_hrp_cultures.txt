@@ -2,7 +2,7 @@
 bulgarian= {
 	color= hsv{ 0.40 0.26 0.58 }
 	religion = orthodox
-	traits = { jugoslav european_heritage }
+	traits = { jugoslav ottoman european_heritage }
 	obsessions = {
 		tobacco
 	}
