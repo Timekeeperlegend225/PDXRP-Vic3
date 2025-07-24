@@ -18,8 +18,17 @@ GLOBAL = {
 			name = pedropoints
 			value = 5
 		}
+		add_modifier = 
+		{
+			name = american_migration_mp_attraction
+		}
 	}
-
+	c:USA ?= {
+		add_modifier = 
+		{
+			name = american_migration_gp_attraction
+		}
+	}
 	c:HAI = {
 		add_treasury = {
 			value = gold_reserves_limit

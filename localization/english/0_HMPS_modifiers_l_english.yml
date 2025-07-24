@@ -142,3 +142,6 @@
  broken_rule_large_mod:0 "Broke an important rule"
  
  balance_modifier_mod:0 "Balance modifier"
+ 
+american_migration_mp_attraction:0 "New World Major Power"
+american_migration_gp_attraction:0 "New World Great Power"
