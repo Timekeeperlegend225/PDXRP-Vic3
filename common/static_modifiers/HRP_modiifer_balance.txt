@@ -74,7 +74,7 @@ weak_power_bloc = {
 }
 
 infamy_reputable = {
-		country_influence_add = 0.1
+		country_influence_mult = 0.1
 	}
 
 infamy_infamous = {
