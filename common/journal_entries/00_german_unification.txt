@@ -17,12 +17,6 @@
 			country_has_primary_culture = cu:north_german
 			country_has_primary_culture = cu:south_german
 		}
-		custom_tooltip = {
-			text = "Age of Concert is finished"
-			NOT = {
-				has_global_variable = age_of_concert_gm
-			}
-		}
 	}
 
 	complete = {
@@ -119,10 +113,8 @@ je_german_unification_idea = {
 			country_has_primary_culture = cu:south_german
 		}
 		custom_tooltip = {
-			text = "Age of Concert is finished"
-			NOT = {
-				has_global_variable = age_of_concert_gm
-			}
+			text = "Age of People Started"
+			has_global_variable = age_of_springtime_gm
 		}
 	}
 
@@ -353,12 +345,6 @@ je_south_german_unification = {
 				}
 			}
 		}
-		custom_tooltip = {
-			text = "Age of Concert is finished"
-			NOT = {
-				has_global_variable = age_of_concert_gm
-			}
-		}
 	}
 
 	on_monthly_pulse = {
@@ -404,12 +390,6 @@ je_german_unification = {
 		country_rank >= rank_value:major_power
 		has_technology_researched = pan-nationalism
 		is_subject = no
-		custom_tooltip = {
-			text = "Age of Concert is finished"
-			NOT = {
-				has_global_variable = age_of_concert_gm
-			}
-		}
 	}
 
 	complete = {
