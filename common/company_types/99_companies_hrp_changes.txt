@@ -837,7 +837,7 @@ company_basic_colonial_plantations_1 = {
 	building_types = {
 		building_opium_plantation
 		building_tea_plantation
-		building_port
+		building_trade_center
 	}
 
 	extension_building_types = {
@@ -906,7 +906,7 @@ company_basic_colonial_plantations_2 = {
 		building_coffee_plantation
 		building_sugar_plantation
 		building_tobacco_plantation
-		building_port
+		building_trade_center
 	}
 
 	extension_building_types = {
@@ -976,7 +976,7 @@ company_basic_silk_and_dye = {
 	building_types = {
 		building_silk_plantation
 		building_dye_plantation
-		building_port
+		building_trade_center
 	}
 
 	extension_building_types = {
@@ -1033,7 +1033,7 @@ company_basic_wine_and_fruit = {
 	building_types = {
 		building_vineyard_plantation
 		building_banana_plantation
-		building_port
+		building_trade_center
 	}
 
 	extension_building_types = {
@@ -1747,7 +1747,7 @@ company_mozambique_company = {
 		building_tea_plantation
 		building_rice_farm
 		building_millet_farm
-		building_port
+		building_trade_center
 	}
 
 	extension_building_types = {
@@ -1782,7 +1782,7 @@ company_mozambique_company = {
 				OR = {
 					is_building_type = building_cotton_plantation
 					is_building_type = building_tea_plantation
-					is_building_type = building_port
+					is_building_type = building_trade_center
 				}
 				level >= 5
 			}
