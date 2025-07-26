@@ -33,7 +33,7 @@ je_springtime_of_the_peoples = {
 			scope:journal_entry = { 
 				add_modifier = {
 					name = modifier_springtime_je
-					multiplier = 0.5
+					multiplier = 0.4
 					days = normal_modifier_time
 					is_decaying = yes
 				}
@@ -169,52 +169,23 @@ je_springtime_of_the_peoples = {
 	can_revolution_inherit = no
 }
 
-je_golbal_springtime_of_the_peoples = {
+je_springtime_of_the_peoples_global = {
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
     group = je_group_historical_content
 
     immediate = {
-		if = {
-			limit = {
-				var:tempnationalstab < 250
-			}
-			scope:journal_entry = { 
-				add_modifier = {
-					name = modifier_springtime_je
-					days = normal_modifier_time
-					is_decaying = yes
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				var:tempnationalstab < 500
-			}
-			scope:journal_entry = { 
-				add_modifier = {
-					name = modifier_springtime_je
-					multiplier = 0.8
-					days = normal_modifier_time
-					is_decaying = yes
-				}
-			}
-		}
-		else = {
-			scope:journal_entry = { 
-				add_modifier = {
-					name = modifier_springtime_je
-					multiplier = 0.5
-					days = normal_modifier_time
-					is_decaying = yes
-				}
+		
+
+		scope:journal_entry = {
+			add_modifier = {
+				name = modifier_springtime_of_the_peoples
 			}
 		}
 		set_variable = {
 			name = springtime_delay_var
 			months = 12
 		}
-		trigger_event = { id = 1848.4 days = 0 }
 	}
 
     modifiers_while_active = {
