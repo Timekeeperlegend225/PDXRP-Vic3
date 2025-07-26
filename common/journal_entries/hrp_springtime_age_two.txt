@@ -4,6 +4,41 @@ je_springtime_of_the_peoples = {
     group = je_group_historical_content
 
     immediate = {
+		if = {
+			limit = {
+				var:tempnationalstab < 250
+			}
+			scope:journal_entry = { 
+				add_modifier = {
+					name = modifier_springtime_je
+					days = normal_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:tempnationalstab < 500
+			}
+			scope:journal_entry = { 
+				add_modifier = {
+					name = modifier_springtime_je
+					multiplier = 0.8
+					days = normal_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
+		else = {
+			scope:journal_entry = { 
+				add_modifier = {
+					name = modifier_springtime_je
+					multiplier = 0.5
+					days = normal_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
 		trigger_event = { id = 1848.4 days = 3 }
 		set_variable = {
 			name = springtime_delay_var
@@ -12,9 +47,6 @@ je_springtime_of_the_peoples = {
 	}
 
     modifiers_while_active = {
-		modifier_springtime_je
-		days = normal_modifier_time
-		is_decaying = yes
 	}
 
     is_shown_when_inactive = {
