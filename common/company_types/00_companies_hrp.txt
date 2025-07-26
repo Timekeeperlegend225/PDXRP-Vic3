@@ -351,12 +351,12 @@ company_por_larranaga = {
 
 	possible = {
 		any_scope_state = {
+			state_region = s:STATE_CUBA
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tobacco_plantation
 				level >= 5
 			}
-			count >= 4
 		}
 	}
 
