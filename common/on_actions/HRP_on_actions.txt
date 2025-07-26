@@ -2,6 +2,56 @@ on_monthly_pulse= {
     on_actions = {
     	america_migration_check 
 	    power_bloc_leader_rank_check
+		add_journal_for_age_if_needed
+    }
+}
+
+on_monthly_pulse_country = {
+    effect = {
+		if = { 
+			limit = {
+				has_global_variable = age_of_concert_gm
+				OR = {
+					NOT = { has_journal_entry = je_HRP_concert_national }
+					NOT = { has_journal_entry = je_HRP_concert_global }
+				}
+			}
+			add_journal_entry = {
+				type = je_HRP_concert_national
+			}
+			add_journal_entry = {
+				type = je_HRP_concert_global
+			}
+		}
+		if = { 
+			limit = {
+				has_global_variable = age_of_springtime_gm
+				capital = {
+					OR = {
+						region = sr:region_england
+						region = sr:region_north_sea_coast
+						#region = sr:region_iberia #remove this when carlist flavor
+						region = sr:region_france
+						region = sr:region_occitania
+						region = sr:region_rhine
+						region = sr:region_italy
+						region = sr:region_balkans
+						region = sr:region_north_germany
+						region = sr:region_south_germany
+						region = sr:region_baltic
+						region = sr:region_danubia
+						region = sr:region_poland
+						region = sr:region_russia
+						#region = sr:region_dnieper
+						region = sr:region_iberia
+					}
+				}
+				NOT = { has_journal_entry = je_springtime_of_the_peoples }
+			}
+			add_journal_entry = {
+				type = je_springtime_of_the_peoples
+			}
+		}	
     }
 }
 
@@ -13,44 +63,36 @@ america_migration_check = {
                     country_is_in_north_america = yes
 					country_is_in_central_america = yes
                     country_is_in_south_america = yes
-                }    
-                country_rank = rank_value:great_power   
-                NOT = { has_modifier = american_migration_gp_attraction }
-            }
-            add_modifier = american_migration_gp_attraction
-            remove_modifier =  american_migration_mp_attraction
-        }
-        every_country = {
-            limit = {
-                OR = {
-                    country_is_in_north_america = yes
-					country_is_in_central_america = yes
-                    country_is_in_south_america = yes
-                }    
-                country_rank = rank_value:major_power     
-                NOT = { has_modifier = american_migration_mp_attraction }
-            }
-            add_modifier = american_migration_mp_attraction
-            remove_modifier =  american_migration_gp_attraction
-        }
-        every_country = {
-            limit = {
-                OR = {
-                    country_is_in_north_america = yes
-					country_is_in_central_america = yes
-                    country_is_in_south_america = yes
-                }    
-                OR = {
-                    country_rank = rank_value:minor_power
-                    country_rank = rank_value:insignificant_power
-                }   
-                OR = {
-                    has_modifier = american_migration_mp_attraction
-                    has_modifier =  american_migration_gp_attraction
                 }
             }
-            remove_modifier =  american_migration_mp_attraction
-            remove_modifier =  american_migration_gp_attraction
+			if = {
+				limit = {
+					country_rank = rank_value:great_power 
+					NOT = { has_modifier = american_migration_gp_attraction }
+				}
+				add_modifier = american_migration_gp_attraction
+				remove_modifier =  american_migration_mp_attraction
+			}
+			else_if = {
+				limit = {
+					country_rank = rank_value:major_power
+					NOT = { has_modifier = american_migration_mp_attraction } 
+				}
+				add_modifier = american_migration_mp_attraction
+				remove_modifier =  american_migration_gp_attraction
+			}
+			else_if = {
+				limit = {   
+					OR = {
+						country_rank = rank_value:minor_power
+						country_rank = rank_value:insignificant_power
+					}   
+					OR = {
+						has_modifier = american_migration_mp_attraction
+						has_modifier =  american_migration_gp_attraction
+					}
+				}
+			}
         }
     }
 }
@@ -87,4 +129,7 @@ power_bloc_leader_rank_check = {
             }
         }
     }
+}
+
+add_journal_for_age_if_needed = {
 }

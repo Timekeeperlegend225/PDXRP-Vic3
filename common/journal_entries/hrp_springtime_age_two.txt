@@ -39,7 +39,7 @@ je_springtime_of_the_peoples = {
 				}
 			}
 		}
-		trigger_event = { id = 1848.4 days = 3 }
+		trigger_event = { id = 1848.4 days = 0 }
 		set_variable = {
 			name = springtime_delay_var
 			months = 12
@@ -47,36 +47,6 @@ je_springtime_of_the_peoples = {
 	}
 
     modifiers_while_active = {
-	}
-
-    is_shown_when_inactive = {
-		has_global_variable = age_of_springtime_gm
-	}
-	possible = {
-		custom_tooltip = {
-			text = "Age of Springtime started"
-			has_global_variable = age_of_springtime_gm
-		}
-		capital = {
-			OR = {
-				region = sr:region_england
-				region = sr:region_north_sea_coast
-				#region = sr:region_iberia #remove this when carlist flavor
-				region = sr:region_france
-				region = sr:region_occitania
-				region = sr:region_rhine
-				region = sr:region_italy
-				region = sr:region_balkans
-				region = sr:region_north_germany
-				region = sr:region_south_germany
-				region = sr:region_baltic
-				region = sr:region_danubia
-				region = sr:region_poland
-				region = sr:region_russia
-				#region = sr:region_dnieper
-				region = sr:region_iberia
-			}
-		}
 	}
     
     complete = {
@@ -199,65 +169,58 @@ je_springtime_of_the_peoples = {
 	can_revolution_inherit = no
 }
 
-je_springtime_of_the_peoples_global = {
+je_golbal_springtime_of_the_peoples = {
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
     group = je_group_historical_content
 
     immediate = {
-		trigger_event = { id = 1848.13  }
+		if = {
+			limit = {
+				var:tempnationalstab < 250
+			}
+			scope:journal_entry = { 
+				add_modifier = {
+					name = modifier_springtime_je
+					days = normal_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:tempnationalstab < 500
+			}
+			scope:journal_entry = { 
+				add_modifier = {
+					name = modifier_springtime_je
+					multiplier = 0.8
+					days = normal_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
+		else = {
+			scope:journal_entry = { 
+				add_modifier = {
+					name = modifier_springtime_je
+					multiplier = 0.5
+					days = normal_modifier_time
+					is_decaying = yes
+				}
+			}
+		}
 		set_variable = {
 			name = springtime_delay_var
 			months = 12
 		}
-		set_variable = {
-			name = global_springtime_activated
-			months = 65
-		}
+		trigger_event = { id = 1848.4 days = 0 }
 	}
 
     modifiers_while_active = {
 		modifier_springtime_je
 		days = normal_modifier_time
 		is_decaying = yes
-	}
-
-    is_shown_when_inactive = {
-		has_global_variable = age_of_springtime_gm
-	}
-	possible = {
-		custom_tooltip = {
-			text = "Age of Springtime started"
-			has_global_variable = age_of_springtime_gm
-		}
-
-		custom_tooltip = {
-			text  = "Global Springtime Chosen"
-			has_variable = global_springtime
-		}
-
-		NOT = { 
-		capital = {
-			OR = {
-				region = sr:region_england
-				region = sr:region_north_sea_coast
-				#region = sr:region_iberia #remove this when carlist flavor
-				region = sr:region_france
-				region = sr:region_occitania
-				region = sr:region_rhine
-				region = sr:region_italy
-				region = sr:region_balkans
-				region = sr:region_north_germany
-				region = sr:region_south_germany
-				region = sr:region_baltic
-				region = sr:region_danubia
-				region = sr:region_poland
-				region = sr:region_russia
-				#region = sr:region_dnieper
-				region = sr:region_iberia
-			}
-		}
-		}
 	}
     
     complete = {

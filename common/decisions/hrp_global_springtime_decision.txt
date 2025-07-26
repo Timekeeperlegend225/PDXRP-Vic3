@@ -54,7 +54,7 @@ global_springtime_decision = {
 
 	when_taken = {
 		set_variable = global_springtime
-		add_journal_entry = { type = je_golbal_springtime_of_the_peoples }
+		add_journal_entry = { type = je_springtime_of_the_peoples_global }
 	}
 
 }
