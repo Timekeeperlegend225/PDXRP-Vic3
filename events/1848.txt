@@ -396,12 +396,6 @@
 		}
 	}
 
-cancellation_trigger = {
-		NOT = {
-			has_journal_entry = je_springtime_of_the_peoples
-		}
-	}
-
 	option = { # reactionary option
 		name = 1848.4.a
 		default_option = yes
@@ -410,42 +404,115 @@ cancellation_trigger = {
 				name = 1848_popular_radical
 			}
 		}
-		
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_radical
-						}
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_radical
 					}
 				}
-				create_political_movement = { type = movement_radical }
 			}
-		
-		je:je_springtime_of_the_peoples = {
+			create_political_movement = { type = movement_radical }
+		}
+		if = {
+			limit = {
+				var:tempnationalstab < 250
+			}
+			je:je_springtime_of_the_peoples = {
+				add_modifier = {
+					name = modifier_springtime_of_the_peoples
+					multiplier = 0.75
+				}
+			}
 			add_modifier = {
-				name = modifier_springtime_of_the_peoples
-				multiplier = 0.75
+				name = suppressing_radicals
+				years = 2
+			}
+			add_loyalists = {
+				strata = upper
+				value = 0.10
+			}
+			add_radicals = {
+				strata = middle
+				value = 0.15
+			}
+			add_radicals = {
+				strata = lower
+				value = 0.10
 			}
 		}
-		add_modifier = {
-			name = suppressing_radicals
-			days = short_modifier_time
+		else_if = {
+			limit = {
+				var:tempnationalstab < 500
+			}
+			je:je_springtime_of_the_peoples = {
+				add_modifier = {
+					name = modifier_springtime_of_the_peoples
+					multiplier = 0.6
+				}
+			}
+			add_modifier = {
+				name = suppressing_radicals
+				years = 4
+			}
+			add_loyalists = {
+				strata = upper
+				value = 0.10
+			}
+			add_radicals = {
+				strata = middle
+				value = 0.12
+			}
+			add_radicals = {
+				strata = lower
+				value = 0.08
+			}
 		}
-		add_loyalists = {
-			strata = upper
-			value = large_radicals
-		}
-		add_radicals = {
-			value = 0.15
-			strata = middle
-		}
-		add_radicals = {
-			value = large_radicals
-			strata = lower
+		else = {
+			je:je_springtime_of_the_peoples = {
+				add_modifier = {
+					name = modifier_springtime_of_the_peoples
+					multiplier = 0.3
+				}
+			}
+			add_modifier = {
+				name = suppressing_radicals
+				years = 8
+			}
+			add_loyalists = {
+				strata = upper
+				value = 0.10
+			}
+			add_radicals = {
+				strata = middle
+				value = 0.06
+			}
+			add_radicals = {
+				strata = lower
+				value = 0.04
+			}
 		}
 		ai_chance = {
-			base = 66
+			base = 100
+			modifier = {
+				trigger = {
+					var:tempnationalstab < 250
+				}
+				multiply = 0
+			}
+			modifier = {
+				trigger = {
+					var:tempnationalstab < 500
+					var:tempnationalstab > 249
+				}
+				multiply = 0.5
+			}
+			modifier = {
+				trigger = {
+					var:tempnationalstab > 499
+				}
+				multiply = 1
+			}
 		}
 	}
 	option = { # radical option
@@ -484,29 +551,76 @@ cancellation_trigger = {
 				}
 			}
 		}
-		
-			if = {
-				limit = {
-					NOT = {
-						any_political_movement = {
-							is_political_movement_type = movement_radical
-						}
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_radical
 					}
 				}
-				create_political_movement = { type = movement_radical }
 			}
+			create_political_movement = { type = movement_radical }
+		}
 		
-		
-		je:je_springtime_of_the_peoples = {
-			add_modifier = {
-				name = modifier_springtime_of_the_peoples
+		if = {
+			limit = {
+				var:tempnationalstab < 250
+			}
+			je:je_springtime_of_the_peoples = {
+				add_modifier = {
+					name = modifier_springtime_of_the_peoples
+				}
+			}
+			add_radicals = {
+				value = 0.08
 			}
 		}
-		add_radicals = {
-			value = 0.08
+		else_if = {
+			limit = {
+				var:tempnationalstab < 500
+			}
+			je:je_springtime_of_the_peoples = {
+				add_modifier = {
+					name = modifier_springtime_of_the_peoples
+					multiplier = 0.8
+				}
+			}
+			add_radicals = {
+				value = 0.064
+			}
+		}
+		else = {
+			je:je_springtime_of_the_peoples = {
+				add_modifier = {
+					name = modifier_springtime_of_the_peoples
+					multiplier = 0.4
+				}
+			}
+			add_radicals = {
+				value = 0.032
+			}
 		}
 		ai_chance = {
-			base = 33
+			base = 100
+			modifier = {
+				trigger = {
+					var:tempnationalstab < 250
+				}
+				multiply = 1
+			}
+			modifier = {
+				trigger = {
+					var:tempnationalstab < 500
+					var:tempnationalstab > 249
+				}
+				multiply = 0.5
+			}
+			modifier = {
+				trigger = {
+					var:tempnationalstab > 499
+				}
+				multiply = 0
+			}
 		}
 	}
 }
@@ -1175,12 +1289,6 @@ cancellation_trigger = {
 			leader = {
 				save_scope_as = radical_leader_scope
 			}
-		}
-	}
-
-cancellation_trigger = {
-		NOT = {
-			has_journal_entry = je_springtime_of_the_peoples
 		}
 	}
 
