@@ -3,26 +3,27 @@ global_springtime_decision = {
         has_global_variable = age_of_springtime_gm
 		NOT = {
 			capital = {
-			OR = {
-				region = sr:region_england
-				region = sr:region_north_sea_coast
-				#region = sr:region_iberia #remove this when carlist flavor
-				region = sr:region_france
-				region = sr:region_occitania
-				region = sr:region_rhine
-				region = sr:region_italy
-				region = sr:region_balkans
-				region = sr:region_north_germany
-				region = sr:region_south_germany
-				region = sr:region_baltic
-				region = sr:region_danubia
-				region = sr:region_poland
-				region = sr:region_russia
-				#region = sr:region_dnieper
-				region = sr:region_iberia
+				OR = {
+					region = sr:region_england
+					region = sr:region_north_sea_coast
+					#region = sr:region_iberia #remove this when carlist flavor
+					region = sr:region_france
+					region = sr:region_occitania
+					region = sr:region_rhine
+					region = sr:region_italy
+					region = sr:region_balkans
+					region = sr:region_north_germany
+					region = sr:region_south_germany
+					region = sr:region_baltic
+					region = sr:region_danubia
+					region = sr:region_poland
+					region = sr:region_russia
+					#region = sr:region_dnieper
+					region = sr:region_iberia
+				}
 			}
 		}
-		}
+		NOT = { has_variable = global_springtime }
 	}
 
 	possible = {
@@ -52,14 +53,8 @@ global_springtime_decision = {
 	}
 
 	when_taken = {
-		set_variable = {
-			name = global_springtime
-			value = 0
-		}
-		
-		add_journal_entry = {
-			je_springtime_of_the_peoples_global
-		}
+		set_variable = global_springtime
+		add_journal_entry = { type = je_golbal_springtime_of_the_peoples }
 	}
 
 }
