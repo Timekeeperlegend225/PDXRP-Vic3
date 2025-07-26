@@ -145,3 +145,7 @@
  
 american_migration_mp_attraction:0 "New World Major Power"
 american_migration_gp_attraction:0 "New World Great Power"
+
+power_bloc_led_by_minor:0 "Power Bloc is led by a Minor Power"
+
+power_bloc_led_by_major:0 "Power Bloc is led by a Major Power"
