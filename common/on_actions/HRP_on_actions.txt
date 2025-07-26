@@ -130,6 +130,3 @@ power_bloc_leader_rank_check = {
         }
     }
 }
-
-add_journal_for_age_if_needed = {
-}
