@@ -437,11 +437,11 @@ cancellation_trigger = {
 			value = large_radicals
 		}
 		add_radicals = {
-			value = very_large_radicals
+			value = 0.15
 			strata = middle
 		}
 		add_radicals = {
-			value = very_large_radicals
+			value = large_radicals
 			strata = lower
 		}
 		ai_chance = {
@@ -503,7 +503,7 @@ cancellation_trigger = {
 			}
 		}
 		add_radicals = {
-			value = 0.15
+			value = 0.08
 		}
 		ai_chance = {
 			base = 33
