@@ -2702,7 +2702,7 @@ IRC = {
 JAM = {
 	color = hsv360{ 88  87  33 }
 
-	country_type = recognized
+	country_type = colonial
 
 	tier = principality
 

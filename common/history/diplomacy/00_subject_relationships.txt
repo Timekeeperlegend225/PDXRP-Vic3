@@ -132,7 +132,7 @@
 		}
 		create_diplomatic_pact = {
 			country = c:JAM
-			type = puppet
+			type = colony
 		}
 		### OH CANADA ###
 		# Province of Upper Canada
