@@ -62,6 +62,7 @@ effect_starting_politics_liberal = yes
 		}
 		trigger_event = {
 			id = hrp3_usa.1
+			days = 1
 		}
 	}
 }
