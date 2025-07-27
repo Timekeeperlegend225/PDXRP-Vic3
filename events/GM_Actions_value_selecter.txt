@@ -184,11 +184,13 @@ value_selection.1 = {
 	}
 }
 
-value_selection.2 = {
+# Money
+
+value_selection.10 = {
 	type = country_event
 	placement = ROOT
-	title = value_selection.2.t
-	desc = value_selection.2.u
+	title = value_selection.10.t
+	desc = value_selection.10.u
 
 	event_image = {
 		texture = "gfx/event_pictures/void.dds"
@@ -212,7 +214,7 @@ value_selection.2 = {
 	#return to GM tool
 	
 	option = {
-		name = value_selection.2.a
+		name = value_selection.10.a
 		default_option = yes
 		trigger_event = {
 			id = gm_actions.1
@@ -222,7 +224,7 @@ value_selection.2 = {
 	}
 	
 	option = {
-		name = value_selection.2.r
+		name = value_selection.10.r
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		random_country = {
@@ -237,126 +239,545 @@ value_selection.2 = {
 	#Reset
 	
 	option = {
-		name = value_selection.2.b
+		name = value_selection.10.b
 		set_global_variable = {
-			name = gm_variable
+			name = gm_variable_money
 			value = 0
 		}
 		trigger_event = {
-			id = value_selection.2
+			id = value_selection.10
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = value_selection.2.d
+		name = value_selection.10.d
 		change_global_variable = {
-			name = gm_variable
+			name = gm_variable_money
 			add = 10000
 		}
 		trigger_event = {
-			id = value_selection.2
+			id = value_selection.10
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = value_selection.2.e
+		name = value_selection.10.e
 		change_global_variable = {
-			name = gm_variable
+			name = gm_variable_money
 			add = 100000
 		}
 		trigger_event = {
-			id = value_selection.2
+			id = value_selection.10
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = value_selection.2.f
+		name = value_selection.10.f
 		change_global_variable = {
-			name = gm_variable
+			name = gm_variable_money
 			add = 1000000
 		}
 		trigger_event = {
-			id = value_selection.2
+			id = value_selection.10
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = value_selection.2.h
+		name = value_selection.10.h
 		change_global_variable = {
-			name = gm_variable
+			name = gm_variable_money
 			subtract = 10000
 		}
 		trigger_event = {
-			id = value_selection.2
+			id = value_selection.10
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = value_selection.2.i
+		name = value_selection.10.i
 		change_global_variable = {
-			name = gm_variable
+			name = gm_variable_money
 			subtract = 100000
 		}
 		trigger_event = {
-			id = value_selection.2
+			id = value_selection.10
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = value_selection.2.j
+		name = value_selection.10.j
 		change_global_variable = {
-			name = gm_variable
+			name = gm_variable_money
 			subtract  = 1000000
 		}
 		trigger_event = {
-			id = value_selection.2
+			id = value_selection.10
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = value_selection.2.k
+		name = value_selection.10.k
 		change_global_variable = {
-			name = gm_variable
+			name = gm_variable_money
 			multiply = 10
 		}
 		trigger_event = {
-			id = value_selection.2
+			id = value_selection.10
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = value_selection.2.l
+		name = value_selection.10.l
 		change_global_variable = {
-			name = gm_variable
+			name = gm_variable_money
 			multiply = -1
 		}
 		trigger_event = {
-			id = value_selection.2
+			id = value_selection.10
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = value_selection.2.m
+		name = value_selection.10.m
 		scope:recipient = {
-			add_treasury = global_var:gm_variable
+			add_treasury = global_var:gm_variable_money
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
+#Infamy
+
+value_selection.11 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.11.t
+	desc = value_selection.11.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.11.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.r
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.11.b
+		set_global_variable = {
+			name = gm_variable_infamy
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.d
+		change_global_variable = {
+			name = gm_variable_infamy
+			add = 1
+		}
+		trigger_event = {
+			id = value_selection.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.e
+		change_global_variable = {
+			name = gm_variable_infamy
+			add = 5
+		}
+		trigger_event = {
+			id = value_selection.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.f
+		change_global_variable = {
+			name = gm_variable_infamy
+			add = 20
+		}
+		trigger_event = {
+			id = value_selection.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.h
+		change_global_variable = {
+			name = gm_variable_infamy
+			subtract = 1
+		}
+		trigger_event = {
+			id = value_selection.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.i
+		change_global_variable = {
+			name = gm_variable_infamy
+			subtract = 5
+		}
+		trigger_event = {
+			id = value_selection.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.j
+		change_global_variable = {
+			name = gm_variable_infamy
+			subtract  = 20
+		}
+		trigger_event = {
+			id = value_selection.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.k
+		change_global_variable = {
+			name = gm_variable_infamy
+			multiply = 10
+		}
+		trigger_event = {
+			id = value_selection.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.l
+		change_global_variable = {
+			name = gm_variable_infamy
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.11.m
+		scope:recipient = {
+			change_infamy = global_var:gm_variable_infamy
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
+#Prestige
+
+value_selection.12 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.12.t
+	desc = value_selection.12.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.12.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.r
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.12.b
+		set_global_variable = {
+			name = gm_variable_prestige
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.d
+		change_global_variable = {
+			name = gm_variable_prestige
+			add = 1
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.e
+		change_global_variable = {
+			name = gm_variable_prestige
+			add = 5
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.f
+		change_global_variable = {
+			name = gm_variable_prestige
+			add = 20
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.h
+		change_global_variable = {
+			name = gm_variable_prestige
+			subtract = 1
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.i
+		change_global_variable = {
+			name = gm_variable_prestige
+			subtract = 5
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.j
+		change_global_variable = {
+			name = gm_variable_prestige
+			subtract  = 20
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.k
+		change_global_variable = {
+			name = gm_variable_prestige
+			multiply = 10
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.l
+		change_global_variable = {
+			name = gm_variable_prestige
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.m
+		scope:recipient = {
+			remove_modifier = gm_prestige_add
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.n
+		scope:recipient = {
+			add_modifier = {
+				name = gm_prestige_add
+				multiplier = global_var:gm_variable_prestige
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = value_selection.12.o
+		scope:recipient = {
+			remove_modifier = gm_prestige_mult
+		}
+		trigger_event = {
+			id = value_selection.12
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.12.p
+		scope:recipient = {
+			add_modifier = {
+				name = gm_prestige_mult
+				multiplier = {
+					add = global_var:gm_variable_prestige
+					divide = 100
+				}
+			}
 		}
 		remove_global_variable = GM_taking_action
 		random_country = {

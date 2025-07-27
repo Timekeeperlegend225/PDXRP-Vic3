@@ -26,20 +26,11 @@ hrp3_usa.1 = {
 	
 	option = {
 		name = hrp3_usa.1.a
-		s:STATE_MAINE.region_state:USA = {
-			set_state_owner = c:ONT
-			set_state_type = incorporated
-			state_region = {
-				add_claim = c:USA
-			}
-		}
-		activate_law = law_type:law_oligarchy
 		default_option = yes
 		random_character = {
 			limit = {
 				has_variable = is_andrew_jackson
 			}
-			set_character_as_ruler = yes
 			set_character_immortal = yes
 		}
 	}

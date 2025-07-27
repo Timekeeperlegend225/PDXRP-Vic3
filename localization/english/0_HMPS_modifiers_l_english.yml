@@ -41,15 +41,8 @@
  gm_education_prod_spread_c:0 "GM Action: +50% Production Technology Spread"
  gm_education_prod_spread_d:0 "GM Action: +100% Production Technology Spread"
  
- gm_prestige_a:0 "GM Action: +20 Prestige"
- gm_prestige_b:0 "GM Action: +50 Prestige"
- gm_prestige_c:0 "GM Action: +100 Prestige"
- gm_prestige_d:0 "GM Action: +200 Prestige"
- 
- gm_prestige_neg_a:0 "GM Action: -20 Prestige"
- gm_prestige_neg_b:0 "GM Action: -50 Prestige"
- gm_prestige_neg_c:0 "GM Action: -100 Prestige"
- gm_prestige_neg_d:0 "GM Action: -200 Prestige"
+ gm_prestige_add:0 "Bonus Prestige"
+ gm_prestige_mult:0 "Bonus Prestige Multiplier"
  
  gm_education_gen_innov_a:0 "GM Action: +10% General Research Speed"
  gm_education_gen_innov_b:0 "GM Action: +25% General Research Speed"
