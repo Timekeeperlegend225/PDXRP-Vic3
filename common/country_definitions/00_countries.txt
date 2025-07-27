@@ -2706,7 +2706,7 @@ JAM = {
 
 	tier = principality
 
-	cultures = { afro_caribbean }
+	cultures = { british }
 	capital = STATE_JAMAICA
 }
 

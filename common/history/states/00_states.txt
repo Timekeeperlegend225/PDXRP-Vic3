@@ -3606,9 +3606,9 @@ STATES = {
 	}
 	s:STATE_JAMAICA = {
 		create_state = {
-			country = c:GBR
+			country = c:JAM
 			owned_provinces = { x535B49 x7070B8 x1E761E }
-			state_type = unincorporated
+			state_type = incorporated
 		}
 
 		add_homeland = cu:afro_caribbean

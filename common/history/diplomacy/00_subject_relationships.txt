@@ -130,7 +130,10 @@
 			country = c:SAF
 			type = colony
 		}
-
+		create_diplomatic_pact = {
+			country = c:JAM
+			type = puppet
+		}
 		### OH CANADA ###
 		# Province of Upper Canada
 		create_diplomatic_pact = {
