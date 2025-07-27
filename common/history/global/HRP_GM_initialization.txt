@@ -1,0 +1,20 @@
+﻿# This is executed last among all history
+GLOBAL = {
+	#GM tools variable
+	set_global_variable = {
+		name = gm_variable
+		value = 0
+	}
+	set_global_variable = {
+		name = gm_variable_money
+		value = 0
+	}
+	set_global_variable = {
+		name = gm_variable_infamy
+		value = 0
+	}
+	set_global_variable = {
+		name = gm_variable_prestige
+		value = 0
+	}
+}

@@ -27,10 +27,10 @@ global_springtime_decision = {
 	}
 
 	possible = {
-			custom_tooltip = {
-				text = "Age of People is ongoing"
-				has_global_variable = age_of_springtime_gm
-			}
+		custom_tooltip = {
+			text = "Age of People is ongoing"
+			has_global_variable = age_of_springtime_gm
+		}
         NOT = {
 			capital = {
 			OR = {
@@ -118,6 +118,44 @@ global_springtime_decision = {
 			name = HRP_springitme_modernization
 			years = 6
 			is_decaying = yes
+		}
+	}
+
+}
+
+nationalist_claim = {
+	is_shown = {
+        has_global_variable = age_of_springtime_gm
+		any_state_region = {
+			any_scope_state = {
+				is_homeland_of_country_cultures = ROOT
+				NOT = { owner = ROOT }
+				NOT = { has_claim_by = ROOT }
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+		any_state_region = {
+			any_scope_state = {
+				is_homeland_of_country_cultures = ROOT
+				NOT = { owner = ROOT }
+				NOT = { has_claim_by = ROOT }
+			}
+		}
+	}
+
+	when_taken = {
+		every_state_region = {
+			limit = {
+				any_scope_state = {
+					is_homeland_of_country_cultures = ROOT
+					NOT = { owner = ROOT }
+					NOT = { has_claim_by = ROOT }
+				}
+			}
+			add_claim = ROOT
 		}
 	}
 

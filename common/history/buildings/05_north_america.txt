@@ -2246,12 +2246,12 @@
 		}
 	}
 	s:STATE_MAINE={
-		region_state:USA={
+		region_state:ONT={
 			create_building={
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:USA"
+						country="c:ONT"
 						levels=1
 					}
 				}
@@ -2263,7 +2263,7 @@
 				add_ownership={
 					building={
 						type="building_furniture_manufacturies"
-						country="c:USA"
+						country="c:ONT"
 						levels=1
 						region="STATE_MAINE"
 					}
@@ -2276,7 +2276,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:USA"
+						country="c:ONT"
 						levels=3
 						region="STATE_MAINE"
 					}
@@ -2289,7 +2289,7 @@
 				add_ownership={
 					company={
 						type=company_william_cramp
-						country="c:USA"
+						country="c:ONT"
 						levels=1
 					}
 				}
@@ -2301,7 +2301,7 @@
 				add_ownership={
 					building={
 						type="building_fishing_wharf"
-						country="c:USA"
+						country="c:ONT"
 						levels=3
 						region="STATE_MAINE"
 					}
@@ -2313,7 +2313,7 @@
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:USA"
+						country="c:ONT"
 						levels=1
 					}
 				}
