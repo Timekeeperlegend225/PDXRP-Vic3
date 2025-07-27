@@ -11,10 +11,10 @@ american_migration_mp_attraction = {
 	state_migration_pull_mult = 0.15
 }
 power_bloc_led_by_major= {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     power_bloc_cohesion_mult = 0.15
 }
 power_bloc_led_by_minor= {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     power_bloc_cohesion_mult = 0.30
 }

@@ -82,46 +82,6 @@ gm_education_mil_spread_d = {
 	country_military_tech_spread_mult = 1.0
 }
 
-gm_prestige_a = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_prestige_add = 1
-}
-
-gm_prestige_b = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_prestige_add = 50
-}
-
-gm_prestige_c = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_prestige_add = 100
-}
-
-gm_prestige_d = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_prestige_add = 200
-}
-
-gm_prestige_neg_a = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-	country_prestige_add = -20
-}
-
-gm_prestige_neg_b = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-	country_prestige_add = -50
-}
-
-gm_prestige_neg_c = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-	country_prestige_add = -100
-}
-
-gm_prestige_neg_d = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-	country_prestige_add = -200
-}
-
 gm_education_gen_innov_a = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_tech_research_speed_mult = 0.10
@@ -593,4 +553,14 @@ broken_rule_large_mod = {
 	country_law_enactment_stall_mult = 0.20
 	building_throughput_add = -0.15
 	country_infamy_generation_mult = 0.25
+}
+
+gm_prestige_add = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_add = 1
+}
+
+gm_prestige_mult = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_mult = 1
 }

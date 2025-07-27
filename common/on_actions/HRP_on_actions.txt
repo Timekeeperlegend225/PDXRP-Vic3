@@ -11,13 +11,19 @@ on_monthly_pulse_country = {
 		if = { 
 			limit = {
 				has_global_variable = age_of_concert_gm
-				OR = {
-					NOT = { has_journal_entry = je_HRP_concert_national }
-					NOT = { has_journal_entry = je_HRP_concert_global }
-				}
+				NOT = { has_journal_entry = je_HRP_concert_national }
 			}
 			add_journal_entry = {
 				type = je_HRP_concert_national
+			}
+		}
+		if = { 
+			limit = {
+				has_global_variable = age_of_concert_gm
+				OR = {
+					NOT = { has_journal_entry = je_HRP_concert_global }
+					NOT = { has_journal_entry = je_HRP_concert_global_gm }
+				}
 			}
 			add_journal_entry = {
 				type = je_HRP_concert_global
