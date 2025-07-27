@@ -6,11 +6,10 @@ hrp3_usa.1 = {
 
 	title = hrp3_usa.1.t
 	desc = hrp3_usa.1.d
-#	flavor = hrp3_usa.1.f
+	flavor = hrp3_usa.1.f
 
-	event_image = {
-		video = "southamerica_aristocrats"
-	}
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:scope_jackson
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -22,12 +21,18 @@ hrp3_usa.1 = {
 	}
 
 	immediate = {
+		random_scope_character = {
+			limit = {
+				has_variable = is_andrew_jackson
+			}
+			save_scope_as = scope_jackson
+		}
 	}
 	
 	option = {
 		name = hrp3_usa.1.a
 		default_option = yes
-		random_character = {
+		random_scope_character = {
 			limit = {
 				has_variable = is_andrew_jackson
 			}

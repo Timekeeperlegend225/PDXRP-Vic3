@@ -6,9 +6,10 @@
  savior_of_USA: "Savior of the United States"
  savior_of_USA_desc: "Andrew Jackson is seen by some as the only reason the Union survived its darkest hour. By others, as the man who buried the old republic to save it."
  
- hrp3_usa.1.t: "Jackson Rules"
- hrp3_usa.1.d: "Go read Arre lore in World Event"
- hrp3_usa.1.a: "And click that before doing anything please"
+ hrp3_usa.1.t: "The Speaker of the Nation"
+ hrp3_usa.1.d: "The Savior of the United States, Andrew Jackson"
+ hrp3_usa.1.f: "Using the crisis on the frontier as casus belli, Andrew Jackson has managed to fully centralise power under himself and Congress. \n This fragile arrangement is however only held together by his firm guiding hand! Should he pass away without having a heir, the house of cards he built is threatened to scatter to the winds. And it doesn't seem like he is very willing to share... "
+ hrp3_usa.1.a: "I pledge allegiance to the Speaker and the Congress for which he stands, one Republic, indivisible, with unity and security for all."
  
  ONT:0 "Province of Canada"
  ONT_ADJ:0 "Canadian"
