@@ -17,6 +17,7 @@ NDiplomacy = {
 
 NPolitics = {
 	LAW_ENACTMENT_MOVEMENT_SUPPORT_STALL_EFFECT = 2.0 # Movement support has this impact on a law's chance to stall
+	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.0001 # If I put it at 0, it become +300%
 }
 
 
