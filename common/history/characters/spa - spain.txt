@@ -1,0 +1,34 @@
+﻿CHARACTERS = {
+	c:SPA ?= {
+		create_character = {
+			template = SPA_carlos_de_borbon
+		}
+		create_character = {
+			template = SPA_juan_carlos_de_borbon
+		}		
+
+		create_character = {
+			template = SPA_juan_medizabal
+		}
+
+		create_character = {
+			template = SPA_baldomero_espartero
+		}
+
+		create_character = {
+			template = SPA_ramon_maria_narvaez
+		}
+
+		create_character = {
+			template = SPA_victor_saez
+		}
+
+		create_character = {
+			template = SPA_nazario_equia
+		}
+		
+		create_character = {
+			template = SPA_jose_ramon_rodil
+		}
+	}
+}
