@@ -399,7 +399,7 @@ GLOBAL = {
 
 	c:UCA ?= {
 		add_radicals = {
-			value = 0.25
+			value = 0.30
 		}
 	}
 
