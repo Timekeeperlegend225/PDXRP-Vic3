@@ -8,7 +8,7 @@ unlock_power_bloc_principle_slot_3 = {
 		hidden_trigger = {
 			used_principle_slots >= 3
 		}
-		power_bloc_rank <= 5
+
 	}
 }
 
@@ -22,7 +22,6 @@ unlock_power_bloc_principle_slot_4 = {
 			used_principle_slots = 4
 		}
 		AND = {
-			power_bloc_rank <= 3
 			num_power_bloc_members >= 5
 		}
 	}
