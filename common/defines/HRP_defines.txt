@@ -13,6 +13,10 @@ NDiplomacy = {
 	DIPLOMATIC_PLAY_OPENING_PHASE_END = 41	# Before this, defender needs to set their wargoal and you can't join/sway
 	DIPLOMATIC_PLAY_CLOSING_PHASE_START = 140 # After this, it isn't possible to join/sway further countries
 	DIPLOMATIC_PLAY_ESCALATION_WAR_BREAKOUT = 150
+	
+	RIVALRY_BASE_SCALING = 0.5
+	RIVALRY_SCALING_PER_INTEREST = 0.25
+	RIVALRY_MAX_SCALING = 1
 }
 
 NPolitics = {
@@ -25,4 +29,6 @@ NPowerBlocs = {
 	JOIN_COOLDOWN_MONTHS = 0 #In case of misclick
 	LEAVE_COOLDOWN_MONTHS = 0 #In case of misclick
 	PRINCIPLE_SELECTION_COOLDOWN_DAYS = 0 #In case of misclick
+	
+	POWER_BLOC_INFLUENCE_COST = 200		# Cost in Influence to form / be the leader of a Power Bloc
 }

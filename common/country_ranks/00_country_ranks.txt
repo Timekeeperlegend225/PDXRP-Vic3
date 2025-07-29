@@ -35,9 +35,9 @@ great_power = {
 	}
 
 	modifier = {
-		country_influence_add = 1000
+		country_influence_add = 1600
 		country_diplomatic_play_maneuvers_add = 100
-		country_max_declared_interests_add = 6
+		country_max_declared_interests_add = 10
 		country_loan_interest_rate_mult = -0.25
 		country_agitator_slots_add = 2
 		country_support_independence_weekly_liberty_desire_add = 0.1
@@ -69,9 +69,9 @@ major_power = {
 	}
 
 	modifier = {
-		country_influence_add = 750
+		country_influence_add = 1200
 		country_diplomatic_play_maneuvers_add = 75
-		country_max_declared_interests_add = 3
+		country_max_declared_interests_add = 6
 		country_loan_interest_rate_mult = -0.15
 		country_agitator_slots_add = 2
 		country_support_independence_weekly_liberty_desire_add = 0.05
@@ -96,9 +96,9 @@ minor_power = {
 	}
 
 	modifier = {
-		country_influence_add = 600
+		country_influence_add = 1000
 		country_diplomatic_play_maneuvers_add = 60
-		country_max_declared_interests_add = 1
+		country_max_declared_interests_add = 3
 		country_agitator_slots_add = 1
 		country_support_independence_weekly_liberty_desire_add = 0.03
 		country_leverage_resistance_add = 300
@@ -120,8 +120,9 @@ insignificant_power = {
 	}
 
 	modifier = {
-		country_influence_add = 500
+		country_influence_add = 800
 		country_diplomatic_play_maneuvers_add = 50
+		country_max_declared_interests_add = 1
 		state_migration_pull_mult = -0.25
 		country_support_independence_weekly_liberty_desire_add = 0.01
 		country_agitator_slots_add = 1
@@ -151,9 +152,9 @@ unrecognized_major_power = {
 	}
 
 	modifier = {
-		country_influence_add = 750
+		country_influence_add = 1200
 		country_diplomatic_play_maneuvers_add = 75
-		country_max_declared_interests_add = 2
+		country_max_declared_interests_add = 5
 		country_tech_spread_mult = -0.15
 		country_loan_interest_rate_mult = 0.5
 		country_agitator_slots_add = 2
@@ -183,9 +184,9 @@ unrecognized_regional_power = {
 	}
 
 	modifier = {
-		country_influence_add = 600
+		country_influence_add = 1000
 		country_diplomatic_play_maneuvers_add = 60
-		country_max_declared_interests_add = 1
+		country_max_declared_interests_add = 3
 		country_tech_spread_mult = -0.15
 		country_loan_interest_rate_mult = 0.5
 		state_migration_pull_mult = -0.25
@@ -212,8 +213,9 @@ unrecognized_power = {
 	}
 
 	modifier = {
-		country_influence_add = 500
+		country_influence_add = 800
 		country_diplomatic_play_maneuvers_add = 50
+		country_max_declared_interests_add = 1
 		country_tech_spread_mult = -0.15
 		country_loan_interest_rate_mult = 0.5
 		country_agitator_slots_add = 1
