@@ -16,6 +16,8 @@ company_heineken: "Heineken N.V."
 company_velarde: "La Familia Velarde"
 company_sumitomo: "Sumitomo"
 company_shueisha: "Shueisha"
+company_carlsberg: "Carlsberg Group"
+company_correosecuador: "Correos del Ecuador"
 
 # Fallback names if dynamic naming fails
 company_basic_agriculture_3: "Super Agricultural Corporation"
