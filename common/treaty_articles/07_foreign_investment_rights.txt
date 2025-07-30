@@ -1,5 +1,6 @@
 ﻿foreign_investment_rights = {
 	kind = directed
+	cost = 25
 	
 
 	relations_progress_per_day = 0.5
