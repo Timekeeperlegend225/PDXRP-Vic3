@@ -36,6 +36,16 @@
 	possible = {
 		NOT = {
 			is_subject_of = scope:other_country
+			
+		}
+		NOT = {
+			scope:other_country = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_colony
+				is_subject_type = subject_type_personal_union
+			}
 		}
 		trigger_if = {
 			limit = {
@@ -56,6 +66,7 @@
 				}
 			}
 		}
+		
 		trigger_if = {
 			limit = {
 				exists = power_bloc
