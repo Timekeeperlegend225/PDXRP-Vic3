@@ -1682,6 +1682,10 @@ assyrian={
 	color={ 255 156 156 }
 	religion = oriental_orthodox
 	traits = { syriac_language middle_eastern_heritage }
+	obsessions = {
+		tobacco
+		coffee
+	}
 	male_common_first_names = {
 		Aho
 		Aram
@@ -2417,6 +2421,7 @@ mazanderani ={
 	traits = { iranian_turanian_culture_group middle_eastern_heritage }
 	obsessions = {
 		tobacco
+		coffee
 	}
 	male_common_first_names={
 		Abbas-Ali Abbas Ali Abdollah Amir Amirteymour Afshin
@@ -2478,6 +2483,10 @@ luri ={
 	color= rgb{ 89 85 201 }
 	religion = shiite
 	traits = { iranian_turanian_culture_group middle_eastern_heritage }
+	obsessions = {
+		tobacco
+		coffee
+	}
 	male_common_first_names={
 		Ahmed Ali Abol_Ghassem Ali_Gholi Abu_l-Fath Ali_Mardan Ali_Akbar Abdolmohammad
 		Esfandiar Esmaeil
@@ -8026,6 +8035,7 @@ azerbaijani= {
 	traits = { caucasus_group turkic middle_eastern_heritage }
 	obsessions = {
 		tobacco
+		coffee
 	}
 	male_common_first_names = {
 		Ahmad
@@ -8159,6 +8169,7 @@ maghrebi= {
 	traits = { arab_speaking middle_eastern_heritage }
 	obsessions = {
 		tobacco
+		coffee
 	}
 	religion = sunni
 	male_common_first_names = {
@@ -8478,6 +8489,7 @@ bedouin= {
 	religion = sunni
 	obsessions = {
 		coffee
+		tobacco
 	}
 	traits = { arab_speaking middle_eastern_heritage }
 	male_common_first_names = {
@@ -8575,6 +8587,7 @@ berber= { # Amazigh
 	traits = { arab_speaking middle_eastern_heritage }
 	obsessions = {
 		tobacco
+		coffee
 	}
 	male_common_first_names = {
 		Abd_al-Karim
@@ -8622,6 +8635,7 @@ persian= {
 	traits = { iranian_turanian_culture_group middle_eastern_heritage }
 	obsessions = {
 		tobacco
+		coffee
 	}
 	male_common_first_names = {
 		Abbas Abdolazim Abdolhossein Abdolsamad Abolghasem Ahmad Ali
