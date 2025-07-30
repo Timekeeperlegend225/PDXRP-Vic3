@@ -36,6 +36,12 @@ prestige_good_manga = {
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/manga_prestige.dds"
 }
 
+prestige_good_nokia_telephone = {
+	base_good = telephones
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
+}
+
 #############################################################################################################
 # GENERIC PRESTIGE GOODS
 #############################################################################################################
