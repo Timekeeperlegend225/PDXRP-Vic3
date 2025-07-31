@@ -36,6 +36,9 @@ SPA_juan_carlos_de_borbon = {
     ideology = ideology_traditionalist
     dna = dna_infante_juan_count_of_morizon  
     traits = {
+		brave
+		traditionalist_commander 
+		honorable 
     }
 }
 ### IG Leaders
