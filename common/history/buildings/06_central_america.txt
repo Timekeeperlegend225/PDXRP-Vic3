@@ -448,14 +448,14 @@
 		}
 	}
 	s:STATE_PUERTO_RICO={
-		region_state:SPA={
+		region_state:CUB={
 			create_building={
 				building="building_trade_center"
 				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:SPA"
+						country="c:CUB"
 						levels=1
 						region="STATE_PUERTO_RICO"
 					}
@@ -467,7 +467,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:SPA"
+						country="c:CUB"
 						levels=2
 						region="STATE_PUERTO_RICO"
 					}
@@ -480,7 +480,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:SPA"
+						country="c:CUB"
 						levels=1
 						region="STATE_PUERTO_RICO"
 					}
@@ -493,7 +493,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:SPA"
+						country="c:CUB"
 						levels=3
 						region="STATE_PUERTO_RICO"
 					}
@@ -506,7 +506,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:SPA"
+						country="c:CUB"
 						levels=3
 						region="STATE_PUERTO_RICO"
 					}
@@ -518,7 +518,7 @@
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:SPA"
+						country="c:CUB"
 						levels=1
 					}
 				}

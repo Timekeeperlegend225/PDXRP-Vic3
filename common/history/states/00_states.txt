@@ -3558,9 +3558,9 @@ STATES = {
 	}
 	s:STATE_PUERTO_RICO = {
 		create_state = {
-			country = c:SPA
+			country = c:CUB
 			owned_provinces = { xB07080 x2160B9 }
-			state_type = unincorporated
+			state_type = incorporated
 		}
 
 		add_homeland = cu:caribeno

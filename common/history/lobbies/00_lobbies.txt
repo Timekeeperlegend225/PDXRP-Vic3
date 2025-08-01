@@ -341,6 +341,11 @@
 			target = c:FRA
 			add_interest_group = ig:ig_intelligentsia
 		}
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:NET
+			add_interest_group = ig:ig_devout
+		}
 	}
 
 	c:SWE = {
@@ -350,6 +355,11 @@
 			target = c:PRU
 			add_interest_group = ig:ig_armed_forces
 			add_interest_group = ig:ig_landowners
+		}
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:RUS
+			add_interest_group = ig:ig_devout
 		}
 	}
 
