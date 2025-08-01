@@ -103,40 +103,28 @@
 	
 	ai = {
 		evaluation_chance = {
-			value = 0.25	
-		}		
-	
-		propose_score = {
-			value = 1000
+			value = 0.25
 		}
-	
+
+		propose_score = {
+			value = 100
+		}
+
 		will_propose = {
-			NOT = {
-				scope:actor = {
-					power_bloc = {
-						OR ={
-							has_identity = identity:identity_trade_league
-							has_principle = principle:principle_market_unification_2
-							has_principle = principle:principle_market_unification_3
-							
-						}
-					}
+			NOT = { is_adjacent_to_country = scope:target_country }
+			scope:target_country.capital = { is_isolated_from_market = yes }
+		}
+
+		will_break = {
+			OR = {
+				is_adjacent_to_country = scope:target_country
+				AND = {
+					supply_network_strength >= 0.75
+					has_port = yes
+					scope:target_country = { has_port = yes }
 				}
 			}
 		}
-		
-		will_break = {
-			scope:actor = {
-				power_bloc = {
-					OR ={
-						has_identity = identity:identity_trade_league
-						has_principle = principle:principle_market_unification_2
-						has_principle = principle:principle_market_unification_3
-						
-					}
-				}	
-			}
-		}		
 	}
 }
 
