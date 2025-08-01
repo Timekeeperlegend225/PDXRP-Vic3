@@ -1,0 +1,52 @@
+transfer_currency = {
+	groups= {
+		general
+	}
+	requires_approval = no
+
+	texture = "gfx/interface/icons/invention_icons/currency_standards.dds"
+	confirmation_sound = "event:/SFX/UI/MapInteraction/diplomatic_action_foreign_investment_agreement_request"
+
+	unlocking_technologies = {
+		central_banking
+	}
+	selectable = {
+		NOT = { is_country_type = decentralized }
+	}
+
+	potential = {
+		is_ai = no
+	}
+	
+	possible = {
+		in_default = no
+		NOT = {
+			has_modifier = declared_bankruptcy
+		}
+		custom_tooltip = {
+			text = currencytext
+			NOT = {
+				has_variable = currency_one
+			}
+		}
+		scope:target_country = {
+			OR = { 
+				is_subject_type = subject_type_protectorate
+				is_subject_type = subject_type_tributary
+				is_subject = no 
+				is_subject_of = root
+			}
+			is_at_war = no
+		}
+	}
+
+	accept_effect = {
+		trigger_event = {
+			id = transfer_currency.1
+			popup = yes
+		}
+		set_variable = {
+			name = currency_one
+		}
+	}
+}
