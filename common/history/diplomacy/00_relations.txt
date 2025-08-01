@@ -300,16 +300,16 @@
 	c:CON ?= {
 		set_relations = { country = c:TUR value = 30 }
 		set_relations = { country = c:AIT value = 30 }
-		set_relations = { country = c:MAS value = -20 }
+		set_relations = { country = c:MAS value = 0 }
 		set_relations = { country = c:FRA value = -50 }
 	}
 	c:MAS ?= {
-		set_relations = { country = c:AIT value = 10 }
-		set_relations = { country = c:CON value = -20 }
+		set_relations = { country = c:AIT value = 30 }
+		set_relations = { country = c:CON value = 0 }
 		set_relations = { country = c:FRA value = -50 }
 	}
 	c:AIT ?= {
-		set_relations = { country = c:MAS value = 10 }
+		set_relations = { country = c:MAS value = 30 }
 		set_relations = { country = c:CON value = 30 }
 		set_relations = { country = c:FRA value = -30 }
 	}
