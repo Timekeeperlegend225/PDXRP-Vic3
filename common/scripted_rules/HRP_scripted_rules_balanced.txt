@@ -4,10 +4,16 @@ unlock_power_bloc_principle_slot_3 = {
 	hidden_trigger = {
 		has_dlc_feature = power_bloc_features
 	}
-	hidden_trigger = {
-		used_principle_slots >= 3
+	
+		OR = {
+		hidden_trigger = {
+			used_principle_slots >= 3
+		}
+		AND = {
+			num_power_bloc_members >= 1
+		}
 	}
-
+}
 
 # If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION
 unlock_power_bloc_principle_slot_4 = {
@@ -18,6 +24,8 @@ unlock_power_bloc_principle_slot_4 = {
 		hidden_trigger = {
 			used_principle_slots = 4
 		}
-		num_power_bloc_members >= 5
+		AND = {
+			num_power_bloc_members >= 5
+		}
 	}
 }
