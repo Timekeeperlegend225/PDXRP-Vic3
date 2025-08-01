@@ -8,7 +8,7 @@
 		set_relations = { country = c:TUR value = -30 }
 		set_relations = { country = c:BAV value = 30 }
 		set_relations = { country = c:BAD value = 30 }
-		set_relations = { country = c:WUR value = 30 }
+		set_relations = { country = c:WUR value = 80 }
 		set_relations = { country = c:SAR value = 10 }
 		set_relations = { country = c:SIC value = 30 }
 		set_relations = { country = c:MOD value = 30 }
