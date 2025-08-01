@@ -21,7 +21,7 @@
 		
 		# Estatuto Real de 1834 was in effect; the Constitution of 1812 was not restored until August of 1836
 		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_autocracy
 		activate_law = law_type:law_state_religion
 		activate_law = law_type:law_national_supremacy
 		activate_law = law_type:law_mercantilism
@@ -29,7 +29,7 @@
 		activate_law = law_type:law_land_based_taxation	
 		activate_law = law_type:law_religious_schools
 		activate_law = law_type:law_charitable_health_system
-		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_censorship
 		#activate_law = law_type:law_colonial_exploitation # spain has nothing to colonize in 1836
 
 		set_institution_investment_level = {
@@ -37,12 +37,32 @@
 			level = 1
 		}
 
-		ig:ig_intelligentsia = {
+		ig:ig_landowners = {
 			add_ruling_interest_group = yes # Juan Mendizabal was Prime Minister
 		}
 
 		ig:ig_devout = {
 			add_ruling_interest_group = yes
+		}
+		
+		every_scope_state = {
+			limit = {
+				region = sr:region_iberia
+			}
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		
+		s:STATE_ARAGON.region_state:SPA = {
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		s:STATE_TOLEDO.region_state:SPA = {
+			state_region = {
+				add_devastation = 5
+			}
 		}
 	}
 }
