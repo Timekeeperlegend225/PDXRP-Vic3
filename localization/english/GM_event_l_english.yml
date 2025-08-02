@@ -62,6 +62,23 @@
  value_selection.12.t:0 "Prestige Modifier"
  value_selection.12.u:0 "Variable value is [GetGlobalVariable('gm_variable_prestige').GetValue|1]#!"
  
+ value_selection.13.a:0 "Return"
+ value_selection.13.b:0 "Reset the value to 0"
+ value_selection.13.d:0 "+1"
+ value_selection.13.e:0 "+5"
+ value_selection.13.f:0 "+20"
+ value_selection.13.h:0 "-1
+ value_selection.13.i:0 "-5"
+ value_selection.13.j:0 "-20"
+ value_selection.13.k:0 "Positive/Negative"
+ value_selection.13.l:0 "Remove existing modifier"
+ value_selection.13.m:0 "Law Enactment Chance"
+ value_selection.13.n:0 "Law Enactment Time"
+ value_selection.13.o:0 "Law Stall Chance"
+ value_selection.13.r:0 "Cancel"
+ value_selection.13.t:0 "Law Enactment Modifier"
+ value_selection.13.u:0 "Variable value is [GetGlobalVariable('gm_variable_law').GetValue|1]#!"
+ 
  value_selection.501.a:0 "Return"
  value_selection.501.b:0 "Reset the value to 0"
  value_selection.501.c:0 "+0.1"

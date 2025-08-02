@@ -142,3 +142,8 @@ american_migration_gp_attraction:0 "New World Great Power"
 power_bloc_led_by_minor:0 "Power Bloc is led by a Minor Power"
 
 power_bloc_led_by_major:0 "Power Bloc is led by a Major Power"
+
+
+gm_enactment_chance:0 "Law Enactment Chance"
+gm_enactment_time:0 "Law Enactment Time"
+gm_enactment_stall:0 "Law Stall Chance"

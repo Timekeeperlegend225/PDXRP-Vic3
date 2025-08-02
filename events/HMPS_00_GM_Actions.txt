@@ -69,7 +69,6 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
-	
 	#War_exhaustion/capitulation
 	
 	option = {
@@ -114,6 +113,17 @@ gm_actions.1 = {
 			popup = yes
 		}
 	}
+	
+	#Law enactment
+	option = {
+		name = value_selection.13.t
+		trigger_event = {
+			id = value_selection.13
+			days = 0
+			popup = yes
+		}
+	}
+	
 	
 	# Innovation
 	option = {
