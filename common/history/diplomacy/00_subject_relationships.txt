@@ -552,15 +552,15 @@
 	}
 
 	c:OZH = {
-		add_liberty_desire = 10
+		add_liberty_desire = 20
 	}
 
 	c:KZH = {
-		add_liberty_desire = 10
+		add_liberty_desire = 20
 	}
 
 	c:UZH = {
-		add_liberty_desire = 10
+		add_liberty_desire = -10
 	}
 
 	c:SEQ = {

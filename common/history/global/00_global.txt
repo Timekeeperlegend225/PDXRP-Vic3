@@ -18,6 +18,13 @@ GLOBAL = {
 			name = american_migration_mp_attraction
 		}
 	}
+		
+	s:STATE_GUANGDONG.region_state:CHI = {
+        add_radicals_in_state = {
+			value = 0.10
+		}
+	}
+	
 	c:USA ?= {
 		add_modifier = 
 		{

@@ -1,17 +1,34 @@
 ﻿HRP_heathen_tax_income= {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	icon = gfx/interface/icons/generic_icons/coin_icon_10.dds
 	country_minting_add = 1
 }
 
 Pleass_dont_coup= {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	icon = gfx/interface/icons/ig_icons/devout.dds
 	interest_group_approval_add = 1
 }
 
-missouri_compromise = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	interest_group_ig_landowners_pol_str_mult = 0.25
-	country_aristocrats_voting_power_add = 50
-	country_officers_voting_power_add = 50
-	country_farmers_voting_power_add = 10
+country_leverage_resistance_per_population_add = {
+	icon = gfx/interface/icons/lens_toolbar_icons/host_power_bloc_embassy_break.dds
+	country_leverage_resistance_add = 25
+}
+
+american_migration_gp_attraction = {
+	icon = gfx/interface/icons/state_status_icons/mass_migration_target.dds
+	state_migration_pull_mult = 0.25
+}
+
+american_migration_mp_attraction = {
+	icon = gfx/interface/icons/state_status_icons/mass_migration_target.dds
+	state_migration_pull_mult = 0.15
+}
+
+power_bloc_led_by_major= {
+    icon = gfx/interface/icons/lens_toolbar_icons/invite_to_power_bloc_obligation.dds
+    power_bloc_cohesion_mult = 0.15
+}
+
+power_bloc_led_by_minor= {
+    icon = gfx/interface/icons/lens_toolbar_icons/invite_to_power_bloc_obligation.dds
+    power_bloc_cohesion_mult = 0.30
 }

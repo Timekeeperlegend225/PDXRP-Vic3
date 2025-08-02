@@ -28,5 +28,10 @@
 			add_ruling_interest_group = yes
 		}
 		add_taxed_goods = g:grain
+
+		add_modifier = {
+			name = military_subventions_modifier
+			years = 10
+		}
 	}
 }
