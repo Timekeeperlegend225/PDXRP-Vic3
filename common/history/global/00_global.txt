@@ -13,9 +13,27 @@ GLOBAL = {
 			name = pedropoints
 			value = 5
 		}
-		add_modifier = 
-		{
-			name = american_migration_mp_attraction
+		add_modifier = american_migration_mp_attraction
+		add_modifier = {
+			name = missed_coup_modifier
+			years = 10
+			is_decaying = yes
+		}
+		add_radicals = {
+			value = 0.24
+			pop_type = aristocrats
+		}
+		add_radicals = {
+			value = 0.20
+			pop_type = officers
+		}
+		add_radicals = {
+			value = 0.05
+		}
+		s:STATE_RIO_DE_JANEIRO.region_state:BRZ = {
+			state_region = {
+				add_devastation = 5
+			}
 		}
 	}
 		
@@ -24,12 +42,18 @@ GLOBAL = {
 			value = 0.10
 		}
 	}
+		
+	s:STATE_KYUSHU.region_state:JAP = {
+		kill_population_percent_in_state = {
+			percent = 0.01
+		}
+		state_region = {
+			add_devastation = 5
+		}
+	}
 	
 	c:USA ?= {
-		add_modifier = 
-		{
-			name = american_migration_gp_attraction
-		}
+		add_modifier = american_migration_gp_attraction
 	}
 	c:HAI = {
 		add_treasury = {
@@ -486,9 +510,22 @@ GLOBAL = {
 	}
 
 	c:BOL ?= {
+		add_radicals = {
+			value = 0.24
+			pop_type = officers
+		}
+		add_radicals = {
+			value = 0.20
+			pop_type = clergymen
+		}
 		trigger_event = {
 			id = peru_bolivia_events.2
 			days = 45
+		}
+		add_modifier = {
+			name = unpopular_alliance_modifier
+			years = 10
+			is_decaying = yes
 		}
 	}
 

@@ -15,6 +15,7 @@
 			name = charter_of_commerce_modifier
 			years = 10
 		}
+		add_treasury = 2000
 		
 		add_modifier = {
 			name = rampant_corruption_modifier

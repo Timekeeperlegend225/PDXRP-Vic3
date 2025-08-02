@@ -62,6 +62,11 @@
 			name = modifier_haitian_independence_payments_4
 		}
 
+		add_modifier = {
+			name = exotic_loot_modifier
+			years = 10
+		}
+
 		set_variable = {
 			name = orleanist_restoration_var
 		}
@@ -95,5 +100,6 @@
 			set_company_establishment_date = 1746.1.1
 			set_company_state_region = s:STATE_ALSACE_LORRAINE
 		}
+		change_infamy = 5
 	}
 }

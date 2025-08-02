@@ -38,6 +38,7 @@ charter_of_commerce_modifier = {
 	state_trade_advantage_mult = 0.10
 	state_trade_capacity_mult = 0.25
 	interest_group_ig_industrialists_pop_attraction_mult = 0.05
+	country_gold_reserve_limit_mult = 5
 }
 
 rampant_corruption_modifier = {
@@ -45,4 +46,33 @@ rampant_corruption_modifier = {
 	country_bureaucracy_mult = -0.10
 	country_government_dividends_efficiency_add = -0.20
 	state_tax_capacity_mult = -0.25
+}
+
+exotic_loot_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_mult = 0.03
+}
+
+luxurious_glassware_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_mult = 0.03
+}
+
+abolitionist_literature_modifier = {
+    icon = gfx/interface/icons/goods_icons/literature.dds
+    political_movement_pop_attraction_mult = 0.15
+}
+
+unpopular_alliance_modifier = {
+    icon = gfx/interface/icons/political_lobby_icons/lobby_anti.dds
+    interest_group_ig_devout_approval_add = -8
+    interest_group_ig_armed_forces_approval_add = -8
+}
+
+missed_coup_modifier = {
+    icon = gfx/interface/icons/generic_icons/population_radical.dds
+	interest_group_ig_landowners_pol_str_mult = -0.08
+	interest_group_ig_landowners_approval_add = -4
+	interest_group_ig_industrialists_pol_str_mult = -0.17
+	interest_group_ig_industrialists_approval_add = -4
 }

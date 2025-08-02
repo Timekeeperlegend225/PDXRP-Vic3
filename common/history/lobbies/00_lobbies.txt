@@ -36,6 +36,12 @@
 		}
 		create_political_lobby = {
 			type = lobby_anti_country
+			target = c:BOL
+			add_interest_group = ig:ig_industrialists
+			add_interest_group = ig:ig_armed_forces
+		}
+		create_political_lobby = {
+			type = lobby_anti_country
 			target = c:GBR
 			add_interest_group = ig:ig_landowners
 		}
