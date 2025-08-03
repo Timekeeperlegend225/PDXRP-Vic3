@@ -157,7 +157,7 @@ grant_leadership_to_agitator = {
 		}
 	}
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	ai_chance = {
 		value = -50
@@ -218,7 +218,7 @@ grant_command_to_agitator = {
 		add_character_role = general
 	}
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	ai_chance = {
 		value = 0
@@ -304,7 +304,7 @@ marry_ruler_or_heir = {
 			trigger_event = { id = wedding.2 popup = yes } 
 		}
 	}
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	ai_chance = {
 		value = 25
@@ -549,7 +549,7 @@ exile_character = {
 				scope:relevant_ig = {
 					add_modifier = {
 						name = modifier_exiled_leader
-						months = normal_modifier_time
+						days = normal_modifier_time
 						is_decaying = yes
 					}
 				}
@@ -720,7 +720,7 @@ exile_character = {
 		}
 	}
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 	show_confirmation_box = yes
 
 	ai_chance = {
@@ -932,7 +932,7 @@ invite_exile = {
 		}
 	}
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 
 	ai_chance = {
 		value = -85
