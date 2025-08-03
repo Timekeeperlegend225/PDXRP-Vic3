@@ -222,14 +222,7 @@ krakatoa.3 = { #crop failure
 	flavor = krakatoa.3.f
 	
 	trigger = {
-		NOT = { has_global_variable = krakatoa_crop_failure_var }
-		is_player = yes
-		any_scope_building = {
-			OR = {
-				is_farm_building = yes
-				is_plantation_building = yes
-			}
-		}
+		always = no
 	}
 
 	immediate = {
