@@ -606,7 +606,7 @@ principle_external_trade_2 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		state_trade_capacity_mult = 0.25
-		state_trade_advantage_mult = 0.25
+		
 
 		# Also unlocks a PM that grants Trade Centers Influence, checked with trigger on PM
 	}
@@ -623,7 +623,7 @@ principle_external_trade_3 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		state_trade_capacity_mult = 0.25
-		state_trade_advantage_mult = 0.25
+		
 
 		# Also unlocks a PM that grants Trade Centers Influence, checked with trigger on PM (from level 2)
 
