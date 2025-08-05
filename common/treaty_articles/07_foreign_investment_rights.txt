@@ -40,7 +40,7 @@
 		}
 		scope:other_country = {
 			OR = {
-				has_subject_relation_with = root
+				
 				NOR = {
 					is_subject_type = subject_type_puppet
 					is_subject_type = subject_type_vassal
