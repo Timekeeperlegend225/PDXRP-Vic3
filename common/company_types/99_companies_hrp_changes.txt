@@ -859,8 +859,7 @@ company_basic_colonial_plantations_1 = {
 		any_scope_state = {
 			any_scope_building = {
 				OR = {
-					is_building_type = building_opium_plantation
-					is_building_type = building_tea_plantation
+					is_building_type = building_trade_center
 				}
 				level >= 5
 			}
@@ -875,8 +874,7 @@ company_basic_colonial_plantations_1 = {
 		any_scope_state = {
 			any_scope_building = {
 				OR = {
-					is_building_type = building_opium_plantation
-					is_building_type = building_tea_plantation
+					is_building_type = building_trade_center
 				}
 				level >= 3
 			}
@@ -928,9 +926,7 @@ company_basic_colonial_plantations_2 = {
 		any_scope_state = {
 			any_scope_building = {
 				OR = {
-					is_building_type = building_coffee_plantation
-					is_building_type = building_sugar_plantation
-					is_building_type = building_tobacco_plantation
+					is_building_type = building_trade_center
 				}
 				level >= 5
 			}
@@ -945,9 +941,7 @@ company_basic_colonial_plantations_2 = {
 		any_scope_state = {
 			any_scope_building = {
 				OR = {
-					is_building_type = building_coffee_plantation
-					is_building_type = building_sugar_plantation
-					is_building_type = building_tobacco_plantation
+					is_building_type = building_trade_center
 				}
 				level >= 3
 			}
@@ -987,8 +981,7 @@ company_basic_silk_and_dye = {
 		any_scope_state = {
 			any_scope_building = {
 				OR = {
-					is_building_type = building_silk_plantation
-					is_building_type = building_dye_plantation
+					is_building_type = building_trade_center
 				}
 				level >= 5
 			}
@@ -1003,8 +996,7 @@ company_basic_silk_and_dye = {
 		any_scope_state = {
 			any_scope_building = {
 				OR = {
-					is_building_type = building_silk_plantation
-					is_building_type = building_dye_plantation
+					is_building_type = building_trade_center
 				}
 				level >= 3
 			}
@@ -1044,8 +1036,7 @@ company_basic_wine_and_fruit = {
 		any_scope_state = {
 			any_scope_building = {
 				OR = {
-					is_building_type = building_vineyard_plantation
-					is_building_type = building_banana_plantation
+					is_building_type = building_trade_center
 				}
 				level >= 5
 			}
@@ -1060,8 +1051,7 @@ company_basic_wine_and_fruit = {
 		any_scope_state = {
 			any_scope_building = {
 				OR = {
-					is_building_type = building_vineyard_plantation
-					is_building_type = building_banana_plantation
+					is_building_type = building_trade_center
 				}
 				level >= 3
 			}
@@ -2043,11 +2033,22 @@ company_ansaldo = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_motor_industry
-					is_building_type = building_arms_industry
 					is_building_type = building_artillery_foundries
+					is_building_type = building_railway
+					is_building_type = building_military_shipyards
 				}
 				level >= 3
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_PIEDMONT
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_arms_industry
+				}
+				level >= 1
 			}
 		}
 		has_technology_researched = railways
