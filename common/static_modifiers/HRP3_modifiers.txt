@@ -171,3 +171,8 @@ they_are_the_violent_ones_modifier = {
     icon = gfx/interface/icons/political_parties/social_democrats.dds
     political_movement_pop_attraction_mult = 0.05
 }
+
+bolivian_modernizer_modifier = {
+	icon = gfx/interface/icons/ideology_icons/modernizer.dds
+    political_movement_pop_attraction_mult = 0.10
+}
