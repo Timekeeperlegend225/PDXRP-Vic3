@@ -7,3 +7,6 @@
  set_as_character_target:0 "Set as character target"
  
  target_character_mod:0 "Target Character"
+ 
+ 
+ PAUSED:0 "                                               Paused \n #b #R @warning! Please don't touch anything unless Bodi said you can @warning!#!"
