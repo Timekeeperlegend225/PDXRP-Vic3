@@ -76,3 +76,13 @@ missed_coup_modifier = {
 	interest_group_ig_industrialists_pol_str_mult = -0.17
 	interest_group_ig_industrialists_approval_add = -4
 }
+
+labor_modifier = {
+    icon = gfx/interface/icons/goods_icons/literature.dds
+    political_movement_pop_attraction_mult = 0.05
+}
+
+modernizer_modifier = {
+	icon = gfx/interface/icons/goods_icons/literature.dds
+    political_movement_pop_attraction_mult = 0.1
+}
