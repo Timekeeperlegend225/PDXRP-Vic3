@@ -1,24 +1,3 @@
-HMPS_Check_for_GM = {
-	effect = {
-		if = {
-			limit = {
-				has_global_variable = player_gm
-				any_country = {
-					has_modifier = game_master
-					is_player = no
-				}
-			}
-			random_country = {
-				limit = {
-					has_modifier = game_master
-				}
-				remove_modifier = game_master
-				remove_global_variable = player_gm
-			}
-		}
-	}
-}
-
 HMPS_undo_sp = {
 	effect = {
 		if = {

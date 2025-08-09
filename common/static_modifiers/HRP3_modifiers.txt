@@ -39,6 +39,7 @@ charter_of_commerce_modifier = {
 	state_trade_capacity_mult = 0.25
 	interest_group_ig_industrialists_pop_attraction_mult = 0.05
 	country_gold_reserve_limit_mult = 5
+	state_migration_pull_mult = 0.25
 }
 
 rampant_corruption_modifier = {
@@ -77,12 +78,96 @@ missed_coup_modifier = {
 	interest_group_ig_industrialists_approval_add = -4
 }
 
-labor_modifier = {
-    icon = gfx/interface/icons/goods_icons/literature.dds
-    political_movement_pop_attraction_mult = 0.05
+intelligentsia_strength= {
+    icon = gfx/interface/icons/lens_toolbar_icons/invite_to_power_bloc_obligation.dds
+   	interest_group_ig_intelligentsia_pol_str_mult = 0.2
+}
+great_diamond_heist= {
+    icon = gfx/interface/icons/generic_icons/coin_icon_10.dds
+   	country_loan_interest_rate_add = 0.05
+	country_prestige_mult = -0.1
+}
+uruguay_wood={
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	country_prestige_add = 20
+	state_capitalists_investment_pool_efficiency_mult = 0.05
+}
+sweden_investments={
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	state_capitalists_investment_pool_efficiency_mult = 0.05
+	state_aristocrats_investment_pool_efficiency_mult = 0.05
+}
+approval_five={
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	interest_group_approval_add = 5
+}
+activism_five={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_radicalism_add = 0.05
+}
+swedish_innovation={
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_weekly_innovation_add = 10
+	country_prestige_mult = 0.05
 }
 
-modernizer_modifier = {
-	icon = gfx/interface/icons/goods_icons/literature.dds
-    political_movement_pop_attraction_mult = 0.1
+jackson_successor_ig_modifier= {
+	icon = gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds
+    interest_group_pol_str_mult = 0.20
+}
+
+modifier_algeria_military_rule = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	interest_group_ig_industrialists_pol_str_mult = 1
+	interest_group_ig_armed_forces_pol_str_mult = 1
+	country_bureaucrats_pol_str_mult = 1
+	country_capitalists_pol_str_mult = 0.5
+	country_officers_pol_str_mult = 1
+	country_aristocrats_pol_str_mult = -0.50
+	country_legitimacy_base_add = -50
+	country_legitimacy_headofstate_add = 65
+	state_migration_pull_mult = 0.50
+}
+
+tortured_leader_modifier = {
+	icon = gfx/interface/icons/politics_icons/radicalized.dds
+    political_movement_pop_attraction_mult = -0.05
+	political_movement_radicalism_add = 0.05
+}
+
+art_de_la_table_rule = {
+	icon = gfx/interface/icons/goods_icons/prestige_goods/generic_groceries_prestige.dds
+	state_migration_pull_mult = 0.10
+}
+
+arrested_young_italy_modifier = {
+	icon = gfx/interface/icons/topbar/authority_icon.dds
+	country_authority_mult = 0.05
+}
+
+danish_divident_tax_modifier = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	tax_dividends_add = 0.10
+    interest_group_ig_industrialists_approval_add = -5
+}
+
+finish_naval_adventure_modifier = {
+    icon = gfx/interface/icons/generic_icons/coin_icon_10.dds
+	interest_group_ig_armed_forces_pop_attraction_mult = 0.05
+}
+
+golden_colt_modifier = {
+	icon = gfx/interface/icons/goods_icons/prestige_goods/colt_revolvers_prestige.dds
+	country_authority_mult = 0.01
+	country_prestige_mult = 0.01
+}
+
+rooting_ig_corruption_modifier= {
+	icon = gfx/interface/icons/map_mode_icons/radicals.dds
+    interest_group_pol_str_mult = -0.15
+}
+
+they_are_the_violent_ones_modifier = {
+    icon = gfx/interface/icons/political_parties/social_democrats.dds
+    political_movement_pop_attraction_mult = 0.05
 }

@@ -1,0 +1,11 @@
+﻿state_venice_harbors = {
+	icon = "gfx/interface/icons/building_icons/building_port.dds"
+
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
+		state_building_naval_base_max_level_add = 10
+	}
+}
