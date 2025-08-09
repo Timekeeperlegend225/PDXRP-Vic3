@@ -5579,6 +5579,29 @@ gm_actions.406 = {
 			popup = yes
 		}
 	}
+	option = { 
+		name =ideology_modernizer_leader
+		default_option = yes
+		scope:target_character = {
+			set_ideology = ideology:ideology_modernizer_leader
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	option = { 
+		name =ideology_utopian
+		default_option = yes
+		scope:target_character = {
+			set_ideology = ideology:ideology_utopian
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 gm_actions.407 = {
