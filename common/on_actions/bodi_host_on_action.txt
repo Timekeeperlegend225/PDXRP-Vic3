@@ -1,5 +1,0 @@
-on_monthly_pulse_country = {
-	on_actions = {
-		HMPS_Check_for_GM
-	}
-}
