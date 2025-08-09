@@ -228,7 +228,7 @@ gm_actions.23 = {
 	title = gm_actions.23.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -324,7 +324,7 @@ gm_actions.230 = {
 	title = gm_actions.230.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -487,7 +487,7 @@ gm_actions.231 = {
 	title = gm_actions.231.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -651,7 +651,7 @@ gm_actions.232 = {
 	title = gm_actions.232.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -815,7 +815,7 @@ gm_actions.233 = {
 	title = gm_actions.233.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -979,7 +979,7 @@ gm_actions.24 = {
 	title = gm_actions.24.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -1059,7 +1059,7 @@ gm_actions.240 = {
 	title = gm_actions.240.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -1223,7 +1223,7 @@ gm_actions.241 = {
 	title = gm_actions.241.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -1387,7 +1387,7 @@ gm_actions.242 = {
 	title = gm_actions.242.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -1551,7 +1551,7 @@ gm_actions.243 = {
 	title = gm_actions.243.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -1715,7 +1715,7 @@ gm_actions.30 = {
 	title = gm_actions.30.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -1768,7 +1768,7 @@ gm_actions.31 = {
 	title = gm_actions.31.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -1880,7 +1880,7 @@ gm_actions.310 = {
 	title = lawgroup_governance_principles
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -1987,7 +1987,7 @@ gm_actions.311 = {
 	title = lawgroup_distribution_of_power
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2130,7 +2130,7 @@ gm_actions.312 = {
 	title = lawgroup_citizenship
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2225,7 +2225,7 @@ gm_actions.313 = {
 	title = lawgroup_caste_hegemony
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2308,7 +2308,7 @@ gm_actions.314 = {
 	title = lawgroup_church_and_state
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2391,7 +2391,7 @@ gm_actions.315 = {
 	title = lawgroup_bureaucracy
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2462,7 +2462,7 @@ gm_actions.316 = {
 	title = lawgroup_army_model
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2545,7 +2545,7 @@ gm_actions.317 = {
 	title = lawgroup_internal_security
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2628,7 +2628,7 @@ gm_actions.32 = {
 	title = gm_actions.32.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2735,7 +2735,7 @@ gm_actions.320 = {
 	title = lawgroup_economic_system
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2866,7 +2866,7 @@ gm_actions.321 = {
 	title = lawgroup_trade_policy
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -2949,7 +2949,7 @@ gm_actions.322 = {
 	title = lawgroup_taxation
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3044,7 +3044,7 @@ gm_actions.323 = {
 	title = lawgroup_land_reform
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3139,7 +3139,7 @@ gm_actions.324 = {
 	title = lawgroup_colonization
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3223,7 +3223,7 @@ gm_actions.325 = {
 
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3306,7 +3306,7 @@ gm_actions.326 = {
 	title = lawgroup_education_system
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3389,7 +3389,7 @@ gm_actions.327 = {
 	title = lawgroup_health_system
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3472,7 +3472,7 @@ gm_actions.33 = {
 	title = gm_actions.33.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3570,7 +3570,7 @@ gm_actions.330 = {
 	title = lawgroup_free_speech
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3653,7 +3653,7 @@ gm_actions.331 = {
 	title = lawgroup_labor_rights
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3724,7 +3724,7 @@ gm_actions.332 = {
 	title = lawgroup_childrens_rights
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3795,7 +3795,7 @@ gm_actions.333 = {
 	title = lawgroup_rights_of_women
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3878,7 +3878,7 @@ gm_actions.334 = {
 	title = lawgroup_welfare
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -3961,7 +3961,7 @@ gm_actions.335 = {
 	title = lawgroup_migration
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -4032,7 +4032,7 @@ gm_actions.336 = {
 	title = lawgroup_slavery
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -4115,7 +4115,7 @@ gm_actions.34 = {
 	title = gm_actions.34.a
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -4197,7 +4197,7 @@ gm_actions.14 = {
 	flavor = gm_actions.14.f
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -4394,7 +4394,7 @@ gm_actions.15 = {
 	desc = gm_actions.15.d
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -4435,7 +4435,7 @@ gm_actions.40 = {
 	title = gm_actions.40.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -4550,7 +4550,7 @@ gm_actions.40 = {
 	}
 	
 	option = { #Pull to GM
-		name = gm_actions.40.e
+		name = gm_actions.40.f
 		random_country = {
 			limit = {
 				has_modifier = game_master
@@ -4577,7 +4577,7 @@ gm_actions.400 = {
 	title = gm_actions.400.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -4819,7 +4819,7 @@ gm_actions.401 = {
 	title = gm_actions.401.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -4915,7 +4915,7 @@ gm_actions.402 = {
 	title = gm_actions.402.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -5031,7 +5031,7 @@ gm_actions.403 = {
 	title = gm_actions.403.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -5174,7 +5174,7 @@ gm_actions.404 = {
 	title = gm_actions.404.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -5316,7 +5316,7 @@ gm_actions.405 = {
 	title = gm_actions.405.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -5458,7 +5458,7 @@ gm_actions.406 = {
 	title = gm_actions.406.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -5587,7 +5587,7 @@ gm_actions.407 = {
 	title = gm_actions.407.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -5705,7 +5705,7 @@ gm_actions.50 = {
 	#flavor = gm_actions.50.f
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -6075,7 +6075,7 @@ gm_actions.70 = {
 	desc = gm_actions.70.u
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -6189,7 +6189,7 @@ gm_actions.83 = {
 	#flavor = gm_actions.83.f
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -6261,7 +6261,7 @@ gm_actions.84 = {
 	#flavor = gm_actions.84.f
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -6539,7 +6539,7 @@ gm_actions.85 = {
 	#flavor = gm_actions.85.f
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -6730,7 +6730,7 @@ gm_actions.86 = {
 	#flavor = gm_actions.86.f
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -6979,7 +6979,7 @@ gm_actions.87 = {
 	#flavor = gm_actions.87.f
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -7226,7 +7226,7 @@ gm_actions.830 = {
 	title = gm_actions.830.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -7436,7 +7436,7 @@ gm_actions.831 = {
 	title = gm_actions.831.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -7636,7 +7636,7 @@ gm_actions.90 = {
 #	desc = gm_actions.90.u
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -7744,7 +7744,7 @@ gm_actions.91 = {
 	title = gm_actions.91.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -8020,7 +8020,7 @@ gm_actions.910 = {
 	title = gm_actions.910.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -8088,7 +8088,7 @@ gm_actions.92 = {
 	title = gm_actions.92.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -8544,7 +8544,7 @@ gm_actions.100 = {
 	#flavor = gm_actions.100.f
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -8624,6 +8624,186 @@ gm_actions.100 = {
 			days = 0
 			popup = yes
 		}
+	}
+	
+	option = {
+		name = gm_actions.100.c
+		c:USA = {
+			create_country = {
+				tag = FSA
+				origin = c:USA
+				state = s:STATE_NEW_YORK.region_state:USA
+			}
+			every_scope_state = {
+				limit = {
+					is_incorporated = yes
+					is_slave_state = no
+					NOT = { this = s:STATE_IOWA.region_state:USA }
+				}
+				set_state_owner = c:FSA
+				set_state_type = incorporated
+			}
+			s:STATE_ILLINOIS = {
+				set_owner_of_provinces = { 
+					country = c:USA
+					provinces = { 
+						30993 30994 30995 30996 31005 30999 30997 30998 31001 31009 31012 31019 31010 31002 31023 }
+				}
+			} 
+			s:STATE_INDIANA = {
+				set_owner_of_provinces = { 
+					country = c:USA
+					provinces = { 30808 30809 30810 30811 30812 }
+				}
+			} 
+			s:STATE_PENNSYLVANIA = {
+				set_owner_of_provinces = { 
+					country = c:USA
+					provinces = { 26910 26920 26911 26921 26912 26913 26914 26915 26916 26917 26922 26924 26925 26926 26923 }
+				}
+			}
+			s:STATE_ILLINOIS.region_state:USA = {
+				set_state_type = incorporated
+			}
+			s:STATE_INDIANA.region_state:USA = {
+				set_state_type = incorporated
+			}
+			s:STATE_PENNSYLVANIA.region_state:USA = {
+				set_state_type = incorporated
+			}
+			ig:ig_intelligentsia = {
+				leader = {
+					save_scope_as = alben_page
+					remove_as_interest_group_leader = yes
+					transfer_character = c:FSA
+				}
+			}
+			ig:ig_armed_forces = {
+				leader = {
+					set_character_as_ruler = yes
+				}
+			}
+		}
+		c:FSA = {
+			activate_law = law_type:law_universal_suffrage
+			activate_law = law_type:law_no_home_affairs
+			activate_law = law_type:law_elected_bureaucrats
+			activate_law = law_type:law_slavery_banned
+			create_diplomatic_play = {
+				name = annex_war
+				target_country = c:USA
+				type = dp_annex_war
+				add_war_goal = { 
+					holder = c:USA 
+					target_country = c:FSA 
+					type = annex_country 
+				}
+			}
+			scope:alben_page = {
+				transfer_character = c:FSA
+				set_as_interest_group_leader = yes
+				set_character_as_ruler = yes
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+			remove_modifier = declared_bankruptcy
+		}
+	}	
+	
+	option = {
+		name = gm_actions.100.d
+		
+		c:USA = {
+			create_country = {
+				tag = CSA
+				origin = c:USA
+				state = s:STATE_VIRGINIA.region_state:USA
+			}
+			every_scope_state = {
+				limit = {
+					OR = {
+						AND = {
+							is_incorporated = yes
+							is_slave_state = yes
+							NOT = { this = s:STATE_DELAWARE.region_state:USA }
+							NOT = { this = s:STATE_MARYLAND.region_state:USA }
+							NOT = { this = s:STATE_DISTRICT_OF_COLUMBIA.region_state:USA }
+						}
+						this = s:STATE_KANSAS.region_state:USA
+					}
+				}
+				set_state_owner = c:CSA
+				set_state_type = incorporated
+			}
+			s:STATE_ILLINOIS = {
+				set_owner_of_provinces = { 
+					country = c:CSA
+					provinces = { 
+						30993 30994 30995 30996 31005 30999 30997 30998 31001 31009 31012 31010 31002 }
+				}
+			} 
+			s:STATE_INDIANA = {
+				set_owner_of_provinces = { 
+					country = c:CSA
+					provinces = { 30808 30809 30810 30811 30812 }
+				}
+			} 
+			s:STATE_PENNSYLVANIA = {
+				set_owner_of_provinces = { 
+					country = c:CSA
+					provinces = { 26910 }
+				}
+			} 
+			s:STATE_ILLINOIS.region_state:CSA = {
+				set_state_type = incorporated
+			}
+			s:STATE_INDIANA.region_state:CSA = {
+				set_state_type = incorporated
+			}
+			s:STATE_PENNSYLVANIA.region_state:CSA = {
+				set_state_type = incorporated
+			}
+			ig:ig_armed_forces = {
+				leader = {
+					save_scope_as = thomas_jesup
+					remove_as_interest_group_leader = yes
+					transfer_character = c:CSA
+				}
+			}
+			ig:ig_intelligentsia = {
+				leader = {
+					set_character_as_ruler = yes
+				}
+			}
+		}
+		c:CSA = {
+			create_diplomatic_play = {
+				name = annex_war
+				target_country = c:USA
+				type = dp_annex_war
+				add_war_goal = { 
+					holder = c:USA 
+					target_country = c:CSA 
+					type = annex_country 
+				}
+			}
+			create_diplomatic_pact = {
+				country = c:SEQ
+				type = puppet
+			}
+			scope:thomas_jesup = {
+				transfer_character = c:CSA
+				set_as_interest_group_leader = yes
+				set_character_as_ruler = yes
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+			remove_modifier = declared_bankruptcy
+		}
 	}	
 }
 
@@ -8633,7 +8813,7 @@ gm_actions.101 = {
 	title = gm_actions.101.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 
@@ -8732,7 +8912,7 @@ gm_actions.102 = {
 	title = gm_actions.102.t
 
 	event_image = {
-		texture = "gfx/event_pictures/1character_4flags.dds"
+		texture = "gfx/event_pictures/void.dds"
 	}
  
 

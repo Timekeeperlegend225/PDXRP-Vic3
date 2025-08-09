@@ -10,6 +10,15 @@ gm_state_actions.1 = {
 	} 
 
 	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
 	
 	trigger = {
 		#triggered by diplo action
@@ -53,13 +62,6 @@ gm_state_actions.1 = {
 		trigger = {
 			scope:scope_GM_target = {
 				has_claim = scope:scope_target_state 
-			}
-		}
-		trigger = {
-			scope:recipient = {
-				NOT = {
-					has_truce_with = scope:scope_GM_target 
-				}
 			}
 		}
 		
