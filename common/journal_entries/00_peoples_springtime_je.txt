@@ -7,15 +7,8 @@
 		always = no
 	}
 
-	possible = {
-		custom_tooltip = {
-			text = peoples_springtime_underway_tt
-			has_global_variable = peoples_springtime_happening
-		}
-		radical_fraction = {
-			value >= 0.05
-		}
-	}
+	possible = 	no
+
 
 	immediate = {
 		if = {
