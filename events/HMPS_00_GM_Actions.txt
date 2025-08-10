@@ -5590,6 +5590,8 @@ gm_actions.406 = {
 			days = 0
 			popup = yes
 		}
+	}
+		
 	option = { 
 		name =ideology_utopian
 		default_option = yes
@@ -8694,17 +8696,19 @@ gm_actions.100 = {
 			s:STATE_PENNSYLVANIA.region_state:USA = {
 				set_state_type = incorporated
 			}
-			ig:ig_intelligentsia = {
-				leader = {
-					save_scope_as = alben_page
-					remove_as_interest_group_leader = yes
-					transfer_character = c:FSA
+			random_character = {
+				limit = {
+					has_variable = is_alben_page
 				}
+				save_scope_as = alben_page
+				remove_as_interest_group_leader = yes
+				transfer_character = c:FSA
 			}
-			ig:ig_armed_forces = {
-				leader = {
-					set_character_as_ruler = yes
+			random_character = {
+				limit = {
+					has_variable = is_thomas_jesup
 				}
+				set_character_as_ruler = yes
 			}
 		}
 		c:FSA = {
@@ -8788,17 +8792,19 @@ gm_actions.100 = {
 			s:STATE_PENNSYLVANIA.region_state:CSA = {
 				set_state_type = incorporated
 			}
-			ig:ig_armed_forces = {
-				leader = {
-					save_scope_as = thomas_jesup
-					remove_as_interest_group_leader = yes
-					transfer_character = c:CSA
+			random_character = {
+				limit = {
+					has_variable = is_thomas_jesup
 				}
+				save_scope_as = thomas_jesup
+				remove_as_interest_group_leader = yes
+				transfer_character = c:CSA
 			}
-			ig:ig_intelligentsia = {
-				leader = {
-					set_character_as_ruler = yes
+			random_character = {
+				limit = {
+					has_variable = is_alben_page
 				}
+				set_character_as_ruler = yes
 			}
 		}
 		c:CSA = {
