@@ -190,3 +190,32 @@ bolivian_modernizer_modifier = {
 	icon = gfx/interface/icons/ideology_icons/modernizer.dds
     political_movement_pop_attraction_mult = 0.10
 }
+
+center_of_culture_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_add = 25
+}
+
+cuban_university_modifier = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	state_migration_pull_mult = 0.10
+	building_group_bg_plantations_throughput_add = 0.1
+	interest_group_ig_intelligentsia_approval_add = 2
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.1
+}
+
+athens_university_modifier = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_tech_spread_add = 5
+}
+
+underground_deal_modifier = {
+	icon = gfx/interface/icons/lens_toolbar_icons/bankroll.dds
+	country_authority_add = -100
+	state_tax_waste_add = 0.10
+	state_tax_capacity_mult = -0.25
+	state_capitalists_investment_pool_efficiency_mult = 0.05
+	state_aristocrats_investment_pool_efficiency_mult = 0.05
+	state_shopkeepers_investment_pool_efficiency_mult = 0.05
+	state_trade_advantage_mult = 0.05
+}
