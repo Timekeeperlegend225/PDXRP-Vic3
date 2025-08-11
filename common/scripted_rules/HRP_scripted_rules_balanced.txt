@@ -1,17 +1,4 @@
-﻿# Root = Country
-can_form_power_bloc = {
-	country_rank >= rank_value:minor_power
-}
-
-# Root = Country
-can_lead_power_bloc = yes
-
-
-	
-
-
-country_rank >= rank_value:major_power
-# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION
+﻿# If you ever change these conditions, remember to update the loc-key: TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION
 unlock_power_bloc_principle_slot_3 = {
 	hidden_trigger = {
 		has_dlc_feature = power_bloc_features
@@ -41,3 +28,13 @@ unlock_power_bloc_principle_slot_4 = {
 		}
 	}
 }
+
+# Root = Country
+can_form_power_bloc = {
+	country_rank >= rank_value:minor_power
+}
+
+# Root = Country
+can_lead_power_bloc = { yes }
+
+
