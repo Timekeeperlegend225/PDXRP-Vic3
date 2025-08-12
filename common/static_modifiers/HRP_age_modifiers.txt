@@ -64,9 +64,9 @@ modifier_springtime_je = {
 	state_radicals_and_loyalists_from_sol_change_mult = 0.30
 	political_movement_radicalism_add = 0.15
     country_radicalism_increases_violent_hostility_mult = 0.20
+	country_radicalism_increases_cultural_erasure_mult = 0.2
     country_radicalism_increases_open_prejudice_mult = 0.2
-    country_radicalism_increases_cultural_erasure_mult = 0.2
-	country_radicalism_increases_second_rate_citizen_mult = 0.2
+    country_radicalism_increases_second_rate_citizen_mult = 0.2
 	country_revolution_progress_mult = 0.33	
 	country_law_enactment_time_mult = -0.10
     state_migration_push_mult = 0.1
@@ -75,13 +75,22 @@ modifier_springtime_je = {
     state_radicals_from_political_movements_mult = 1
 }
 
-HRP_springitme_modernization = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_society_tech_spread_mult = 0.15
-	country_production_tech_spread_mult = 0.05
-	country_military_tech_spread_mult = 0.05
+HRP_springitme_modernization_unreck = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_society_tech_spread_mult = 0.20
+	country_military_tech_spread_mult = 0.10
+	country_production_tech_spread_mult = 0.10
 	state_pop_support_movement_radical_mult = 0.25
 }
+
+HRP_springitme_modernization_reck = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_society_tech_spread_mult = 0.15
+	country_military_tech_spread_mult = 0.05
+	country_production_tech_spread_mult = 0.05
+	state_pop_support_movement_radical_mult = 0.25
+}
+
 modifier_1848_victory = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	country_legitimacy_base_add = 15

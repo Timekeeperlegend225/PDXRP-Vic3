@@ -175,12 +175,29 @@ je_springtime_of_the_peoples_global = {
     group = je_group_historical_content
 
     immediate = {
-		
-
-		scope:journal_entry = {
-			add_modifier = {
-				name = modifier_springtime_of_the_peoples
+		if = {
+			limit = {
+				is_country_type = unrecognized
+			}	
+			scope:journal_entry = {
+				add_modifier = {
+					name = modifier_springtime_of_the_peoples
+				}
+				add_modifier = {
+					name = HRP_springitme_modernization_unreck
+				}
 			}
+		}
+		else = {
+			scope:journal_entry = {
+				add_modifier = {
+					name = modifier_springtime_of_the_peoples
+				}
+				add_modifier = {
+					name = HRP_springitme_modernization_reck
+				}
+			}
+		
 		}
 		set_variable = {
 			name = springtime_delay_var
