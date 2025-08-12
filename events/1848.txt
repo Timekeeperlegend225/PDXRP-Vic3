@@ -416,7 +416,7 @@
 		}
 		if = {
 			limit = {
-				var:tempnationalstab < 250
+				var:tempnationalstab < 150
 			}
 			je:je_springtime_of_the_peoples = {
 				add_modifier = {
@@ -443,7 +443,7 @@
 		}
 		else_if = {
 			limit = {
-				var:tempnationalstab < 500
+				var:tempnationalstab < 350
 			}
 			je:je_springtime_of_the_peoples = {
 				add_modifier = {
@@ -496,14 +496,14 @@
 			base = 100
 			modifier = {
 				trigger = {
-					var:tempnationalstab < 250
+					var:tempnationalstab < 150
 				}
 				multiply = 0
 			}
 			modifier = {
 				trigger = {
-					var:tempnationalstab < 500
-					var:tempnationalstab > 249
+					var:tempnationalstab < 350
+					var:tempnationalstab > 149
 				}
 				multiply = 0.5
 			}
@@ -564,7 +564,7 @@
 		
 		if = {
 			limit = {
-				var:tempnationalstab < 250
+				var:tempnationalstab < 150
 			}
 			je:je_springtime_of_the_peoples = {
 				add_modifier = {
@@ -577,7 +577,7 @@
 		}
 		else_if = {
 			limit = {
-				var:tempnationalstab < 500
+				var:tempnationalstab < 350
 			}
 			je:je_springtime_of_the_peoples = {
 				add_modifier = {
@@ -604,14 +604,14 @@
 			base = 100
 			modifier = {
 				trigger = {
-					var:tempnationalstab < 250
+					var:tempnationalstab < 150
 				}
 				multiply = 1
 			}
 			modifier = {
 				trigger = {
-					var:tempnationalstab < 500
-					var:tempnationalstab > 249
+					var:tempnationalstab < 350
+					var:tempnationalstab > 149
 				}
 				multiply = 0.5
 			}
