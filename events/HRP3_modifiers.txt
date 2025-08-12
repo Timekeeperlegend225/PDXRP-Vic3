@@ -1,0 +1,221 @@
+﻿missouri_compromise = {
+	icon = gfx/interface/icons/ig_icons/landowners.dds
+	interest_group_ig_landowners_pol_str_mult = 0.25
+	country_aristocrats_voting_power_add = 50
+	country_officers_voting_power_add = 50
+	country_farmers_voting_power_add = 10
+}
+
+popular_poetry_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_add = 10
+}
+
+booming_press_industry_modifier = {
+	icon = gfx/interface/icons/goods_icons/paper.dds
+	building_paper_mills_throughput_add = 0.10
+}
+
+good_impression_at_the_bal_modifier = {
+	icon = gfx/interface/icons/topbar/influence_icon.dds
+	country_influence_mult = 0.10
+}
+
+slaver_assets_seized_modifier = {
+	icon = gfx/interface/icons/ig_icons/landowners.dds
+	interest_group_ig_landowners_pol_str_mult = -0.25
+}
+
+military_subventions_modifier = {
+	icon = gfx/interface/icons/generic_icons/battalions.dds
+	unit_army_offense_mult = 0.05
+	unit_army_defense_mult = 0.05
+	country_military_wages_mult = 0.20
+}
+
+charter_of_commerce_modifier = {
+	icon = gfx/interface/icons/law_icons/free_trade.dds
+	state_trade_advantage_mult = 0.10
+	state_trade_capacity_mult = 0.25
+	interest_group_ig_industrialists_pop_attraction_mult = 0.05
+	country_gold_reserve_limit_mult = 5
+	state_migration_pull_mult = 0.25
+}
+
+rampant_corruption_modifier = {
+	icon = gfx/interface/icons/lens_toolbar_icons/bankroll.dds
+	country_bureaucracy_mult = -0.10
+	country_government_dividends_efficiency_add = -0.20
+	state_tax_capacity_mult = -0.25
+}
+
+exotic_loot_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_mult = 0.03
+}
+
+luxurious_glassware_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_mult = 0.03
+}
+
+abolitionist_literature_modifier = {
+    icon = gfx/interface/icons/goods_icons/literature.dds
+    political_movement_pop_attraction_mult = 0.15
+}
+
+unpopular_alliance_modifier = {
+    icon = gfx/interface/icons/political_lobby_icons/lobby_anti.dds
+    interest_group_ig_devout_approval_add = -8
+    interest_group_ig_armed_forces_approval_add = -8
+}
+
+missed_coup_modifier = {
+    icon = gfx/interface/icons/generic_icons/population_radical.dds
+	interest_group_ig_landowners_pol_str_mult = -0.08
+	interest_group_ig_landowners_approval_add = -4
+	interest_group_ig_industrialists_pol_str_mult = -0.17
+	interest_group_ig_industrialists_approval_add = -4
+}
+
+intelligentsia_strength= {
+    icon = gfx/interface/icons/lens_toolbar_icons/invite_to_power_bloc_obligation.dds
+   	interest_group_ig_intelligentsia_pol_str_mult = 0.2
+}
+great_diamond_heist= {
+    icon = gfx/interface/icons/generic_icons/coin_icon_10.dds
+   	country_loan_interest_rate_add = 0.05
+	country_prestige_mult = -0.1
+}
+uruguay_wood={
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	country_prestige_add = 20
+	state_capitalists_investment_pool_efficiency_mult = 0.05
+}
+sweden_investments={
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	state_capitalists_investment_pool_efficiency_mult = 0.05
+	state_aristocrats_investment_pool_efficiency_mult = 0.05
+}
+movement_activism_20={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_radicalism_add = 0.20
+	political_movement_pop_attraction_mult = 1
+}
+movement_activism_40={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_radicalism_add = 0.40
+	political_movement_pop_attraction_mult = 2
+}
+disapproval_five={
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	interest_group_approval_add = -5
+}
+approval_five={
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	interest_group_approval_add = 5
+}
+activism_five={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_radicalism_add = 0.05
+}
+swedish_innovation={
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_weekly_innovation_add = 10
+	country_prestige_mult = 0.05
+}
+
+jackson_successor_ig_modifier= {
+	icon = gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds
+    interest_group_pol_str_mult = 0.20
+}
+
+modifier_algeria_military_rule = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	interest_group_ig_industrialists_pol_str_mult = 1
+	interest_group_ig_armed_forces_pol_str_mult = 1
+	country_bureaucrats_pol_str_mult = 1
+	country_capitalists_pol_str_mult = 0.5
+	country_officers_pol_str_mult = 1
+	country_aristocrats_pol_str_mult = -0.50
+	country_legitimacy_base_add = -50
+	country_legitimacy_headofstate_add = 65
+	state_migration_pull_mult = 0.50
+}
+
+tortured_leader_modifier = {
+	icon = gfx/interface/icons/politics_icons/radicalized.dds
+    political_movement_pop_attraction_mult = -0.05
+	political_movement_radicalism_add = 0.05
+}
+
+art_de_la_table_rule = {
+	icon = gfx/interface/icons/goods_icons/prestige_goods/generic_groceries_prestige.dds
+	state_migration_pull_mult = 0.10
+}
+
+arrested_young_italy_modifier = {
+	icon = gfx/interface/icons/topbar/authority_icon.dds
+	country_authority_mult = 0.05
+}
+
+danish_divident_tax_modifier = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	tax_dividends_add = 0.10
+    interest_group_ig_industrialists_approval_add = -5
+}
+
+finish_naval_adventure_modifier = {
+    icon = gfx/interface/icons/generic_icons/coin_icon_10.dds
+	interest_group_ig_armed_forces_pop_attraction_mult = 0.05
+}
+
+golden_colt_modifier = {
+	icon = gfx/interface/icons/goods_icons/prestige_goods/colt_revolvers_prestige.dds
+	country_authority_mult = 0.01
+	country_prestige_mult = 0.01
+}
+
+rooting_ig_corruption_modifier= {
+	icon = gfx/interface/icons/map_mode_icons/radicals.dds
+    interest_group_pol_str_mult = -0.15
+}
+
+they_are_the_violent_ones_modifier = {
+    icon = gfx/interface/icons/political_parties/social_democrats.dds
+    political_movement_pop_attraction_mult = 0.05
+}
+
+bolivian_modernizer_modifier = {
+	icon = gfx/interface/icons/ideology_icons/modernizer.dds
+    political_movement_pop_attraction_mult = 0.10
+}
+
+center_of_culture_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_add = 25
+}
+
+cuban_university_modifier = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	state_migration_pull_mult = 0.10
+	building_group_bg_plantations_throughput_add = 0.1
+	interest_group_ig_intelligentsia_approval_add = 2
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.1
+}
+
+athens_university_modifier = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_tech_spread_add = 5
+}
+
+underground_deal_modifier = {
+	icon = gfx/interface/icons/lens_toolbar_icons/bankroll.dds
+	country_authority_add = -100
+	state_tax_waste_add = 0.10
+	state_tax_capacity_mult = -0.25
+	state_capitalists_investment_pool_efficiency_mult = 0.05
+	state_aristocrats_investment_pool_efficiency_mult = 0.05
+	state_shopkeepers_investment_pool_efficiency_mult = 0.05
+	state_trade_advantage_mult = 0.05
+}
