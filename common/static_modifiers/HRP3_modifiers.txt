@@ -53,6 +53,14 @@ exotic_loot_modifier = {
 	icon = gfx/interface/icons/generic_icons/prestige.dds
 	country_prestige_mult = 0.03
 }
+cool_doctor_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_mult = 0.05
+}
+Turkish_doctors_are_cool_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_mult = -0.05
+}
 
 luxurious_glassware_modifier = {
 	icon = gfx/interface/icons/generic_icons/prestige.dds
@@ -97,6 +105,16 @@ sweden_investments={
 	state_capitalists_investment_pool_efficiency_mult = 0.05
 	state_aristocrats_investment_pool_efficiency_mult = 0.05
 }
+movement_activism_25={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_radicalism_add = 0.25
+	political_movement_pop_attraction_mult = 0.05
+}
+movement_activism_swedish_25={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_radicalism_add = 0.25
+	political_movement_pop_attraction_mult = 0.1
+}
 movement_activism_20={
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	political_movement_radicalism_add = 0.20
@@ -110,6 +128,10 @@ movement_activism_40={
 disapproval_five={
 	icon = gfx/interface/icons/ig_icons/devout.dds
 	interest_group_approval_add = -5
+}
+one_mortality_turmoil={
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	state_mortality_turmoil_mult = 0.01
 }
 approval_five={
 	icon = gfx/interface/icons/ig_icons/devout.dds
