@@ -20,6 +20,7 @@ global_springtime_decision = {
 					region = sr:region_russia
 					#region = sr:region_dnieper
 					region = sr:region_iberia
+					region = sr:region_anatolia
 				}
 			}
 		}
@@ -112,13 +113,12 @@ global_springtime_decision = {
 			create_political_movement = { type = movement_radical }
 		}
 		add_radicals = {
-			value = 0.08
+			value = 0.123
 		}
-		add_modifier = {
-			name = HRP_springitme_modernization
-			years = 6
-			is_decaying = yes
-		}
+		
+	}
+	ai_chance = {
+		value = 0
 	}
 
 }
