@@ -406,6 +406,33 @@
 		}
 		if = {
 			limit = {
+				any_interest_group = {
+					is_marginal = no
+					can_have_radical_leader = yes
+					is_in_government = no
+				}
+			}
+			random_interest_group = {
+				limit = {
+					is_marginal = no
+					can_have_radical_leader = yes
+					is_in_government = no
+					leader = {
+						NOT = { has_modifier = 1848_popular_radical }
+					}
+				}
+				leader = {
+					set_ideology = ideology:ideology_radical
+					add_modifier = {
+						name = 1848_popular_radical
+						days = normal_modifier_time
+						is_decaying = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
 				NOT = {
 					any_political_movement = {
 						is_political_movement_type = movement_radical
@@ -434,11 +461,11 @@
 			}
 			add_radicals = {
 				strata = middle
-				value = 0.15
+				value = 0.20
 			}
 			add_radicals = {
 				strata = lower
-				value = 0.10
+				value = 0.15
 			}
 		}
 		else_if = {
@@ -457,15 +484,15 @@
 			}
 			add_loyalists = {
 				strata = upper
-				value = 0.10
+				value = 0.07
 			}
 			add_radicals = {
 				strata = middle
-				value = 0.12
+				value = 0.15
 			}
 			add_radicals = {
 				strata = lower
-				value = 0.08
+				value = 0.10
 			}
 		}
 		else = {
@@ -481,15 +508,15 @@
 			}
 			add_loyalists = {
 				strata = upper
-				value = 0.10
+				value = 0.05
 			}
 			add_radicals = {
 				strata = middle
-				value = 0.06
+				value = 0.10
 			}
 			add_radicals = {
 				strata = lower
-				value = 0.04
+				value = 0.05
 			}
 		}
 		ai_chance = {
@@ -572,7 +599,7 @@
 				}
 			}
 			add_radicals = {
-				value = 0.08
+				value = 0.123
 			}
 		}
 		else_if = {
@@ -586,7 +613,7 @@
 				}
 			}
 			add_radicals = {
-				value = 0.064
+				value = 0.08
 			}
 		}
 		else = {
@@ -597,7 +624,7 @@
 				}
 			}
 			add_radicals = {
-				value = 0.032
+				value = 0.05
 			}
 		}
 		ai_chance = {
