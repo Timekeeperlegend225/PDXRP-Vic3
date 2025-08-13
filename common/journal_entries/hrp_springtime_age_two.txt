@@ -6,26 +6,26 @@ je_springtime_of_the_peoples = {
     immediate = {
 		if = {
 			limit = {
-				var:tempnationalstab < 250
+				var:tempnationalstab < 150
 			}
 			scope:journal_entry = { 
 				add_modifier = {
 					name = modifier_springtime_je
 					days = normal_modifier_time
-					is_decaying = yes
+					is_decaying = no
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				var:tempnationalstab < 500
+				var:tempnationalstab < 350
 			}
 			scope:journal_entry = { 
 				add_modifier = {
 					name = modifier_springtime_je
-					multiplier = 0.8
+					multiplier = 0.7
 					days = normal_modifier_time
-					is_decaying = yes
+					is_decaying = no
 				}
 			}
 		}
@@ -35,7 +35,7 @@ je_springtime_of_the_peoples = {
 					name = modifier_springtime_je
 					multiplier = 0.4
 					days = normal_modifier_time
-					is_decaying = yes
+					is_decaying = no
 				}
 			}
 		}
@@ -131,7 +131,7 @@ je_springtime_of_the_peoples = {
 		}
 	}
 	
-	timeout = 2190 
+	timeout = 1460 
 	
 	on_timeout = {
 		add_modifier = {
@@ -293,7 +293,7 @@ je_springtime_of_the_peoples_global = {
 		}
 	}
 	
-	timeout = 2190 
+	timeout =  
 	
 	on_timeout = {
 		add_modifier = {
