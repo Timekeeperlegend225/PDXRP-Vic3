@@ -5890,6 +5890,7 @@ gm_actions.50 = {
 							region = sr:region_russia
 							#region = sr:region_dnieper
 							region = sr:region_iberia
+							region = sr:region_anatolia
 						}
 					}
 				}
