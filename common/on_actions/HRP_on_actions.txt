@@ -27,35 +27,6 @@ on_monthly_pulse_country = {
 				type = je_HRP_concert_global
 			}
 		}
-		if = { 
-			limit = {
-				has_global_variable = age_of_springtime_gm
-				capital = {
-					OR = {
-						region = sr:region_england
-						region = sr:region_north_sea_coast
-						#region = sr:region_iberia #remove this when carlist flavor
-						region = sr:region_france
-						region = sr:region_occitania
-						region = sr:region_rhine
-						region = sr:region_italy
-						region = sr:region_balkans
-						region = sr:region_north_germany
-						region = sr:region_south_germany
-						region = sr:region_baltic
-						region = sr:region_danubia
-						region = sr:region_poland
-						region = sr:region_russia
-						#region = sr:region_dnieper
-						region = sr:region_iberia
-					}
-				}
-				NOT = { has_journal_entry = je_springtime_of_the_peoples }
-			}
-			add_journal_entry = {
-				type = je_springtime_of_the_peoples
-			}
-		}
 		trigger_event = { id = unable_to_enact.1 }
 
 		# British Monarchy
