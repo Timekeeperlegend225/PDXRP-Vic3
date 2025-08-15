@@ -25,37 +25,16 @@ global_springtime_decision = {
 			}
 		}
 		NOT = { has_variable = global_springtime }
+		game_date < 1852.1.1
 	}
 
 	possible = {
 		custom_tooltip = {
-			text = "Age of People is ongoing"
+			text = "The Age of People started less than 3 years ago (Before 1852)"
 			has_global_variable = age_of_springtime_gm
 		}
-        NOT = {
-			capital = {
-			OR = {
-				region = sr:region_england
-				region = sr:region_north_sea_coast
-				#region = sr:region_iberia #remove this when carlist flavor
-				region = sr:region_france
-				region = sr:region_occitania
-				region = sr:region_rhine
-				region = sr:region_italy
-				region = sr:region_balkans
-				region = sr:region_north_germany
-				region = sr:region_south_germany
-				region = sr:region_baltic
-				region = sr:region_danubia
-				region = sr:region_poland
-				region = sr:region_russia
-				#region = sr:region_dnieper
-				region = sr:region_iberia
-			}
-		}
-		}
+		NOT = { has_law = law_type:law_isolationism }
 	}
-
 	when_taken = {
 		set_variable = global_springtime
 		add_journal_entry = { type = je_springtime_of_the_peoples_global }
@@ -157,6 +136,9 @@ nationalist_claim = {
 			}
 			add_claim = ROOT
 		}
+	}
+	ai_chance = {
+		value = 0
 	}
 
 }
