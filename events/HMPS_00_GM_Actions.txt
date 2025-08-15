@@ -7726,6 +7726,7 @@ gm_actions.90 = {
 			limit = {
 				is_player = yes
 			}
+			remove_modifier = started_player
 			add_modifier = started_player
 		}
 		remove_global_variable = GM_taking_action

@@ -2,15 +2,14 @@
  GM_state_action: "GM Action"
  GM_state_action:0 "GM Action"
  
- gm_state_actions.1.t:0 "GM State Actions"
+ gm_state_actions.1.t:0 "State Action"
+ gm_state_actions.1.u:0 "Selected state is [SCOPE.sState('scope_target_state').GetName]"
  gm_state_actions.1.a:0 "Cancel"
- 
- gm_state_actions.2.t:0 "Claim and incorporation"
- gm_state_actions.2.a:0 "Cancel"
- gm_state_actions.2.b:0 "Add Claim"
- gm_state_actions.2.c:0 "Remove Claim"
- gm_state_actions.2.d:0 "Incorporate"
- gm_state_actions.2.e:0 "Unincorporate"
+ gm_state_actions.1.b:0 "Add a [SCOPE.sCountry('scope_GM_target').GetAdjective] Claim on [SCOPE.sState('scope_target_state').GetName]"
+ gm_state_actions.1.c:0 "Remove [SCOPE.sCountry('scope_GM_target').GetAdjective] Claim on [SCOPE.sState('scope_target_state').GetName]"
+ gm_state_actions.1.d:0 "Incorporate [SCOPE.sState('scope_target_state').GetName]"
+ gm_state_actions.1.e:0 "Unincorporate [SCOPE.sState('scope_target_state').GetName]"
+ gm_state_actions.1.f:0 "Annex [SCOPE.sState('scope_target_state').GetName] to [SCOPE.sCountry('scope_GM_target').GetName]"
  
  gm_state_actions.3.t:0 "Add/Remove devastation"
  gm_state_actions.3.a:0 "Cancel"
