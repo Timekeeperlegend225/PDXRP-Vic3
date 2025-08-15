@@ -90,13 +90,6 @@ ideology_jacksonian_democrat = {
 		law_hereditary_bureaucrats = disapprove
 	}
 
-	lawgroup_slavery = {
-		law_slavery_banned = strongly_disapprove
-		law_debt_slavery = disapprove
-		law_slave_trade = approve
-		law_legacy_slavery = strongly_approve
-	}
-
 	lawgroup_citizenship = {
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = neutral
@@ -114,19 +107,8 @@ ideology_jacksonian_democrat = {
 	}
 
 	country_trigger = {
-		OR = {
-			AND = {
-				exists = c:USA
-				c:USA ?= this
-				any_scope_character = {
-					has_variable = is_andrew_jackson
-				}
-			}
-			AND = {
-				exists = c:CSA
-				c:CSA ?= this
-			}
-		}
+		exists = c:USA
+		c:USA ?= this
 	}
 
 	interest_group_leader_weight = {
@@ -139,7 +121,6 @@ ideology_jacksonian_democrat = {
 					has_variable = chose_anarchism
 					has_variable = chose_communism
 					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
 					has_variable = chose_fascism
 				}
 			}
@@ -159,6 +140,7 @@ ideology_jacksonian_democrat = {
 				OR = {
 					is_interest_group_type = ig_rural_folk
 					is_interest_group_type = ig_landowners
+					is_interest_group_type = armed_forces
 				}
 			}
 			add = 300
@@ -176,7 +158,6 @@ ideology_jacksonian_democrat = {
 						has_variable = chose_anarchism
 						has_variable = chose_communism
 						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
 						has_variable = chose_fascism
 					}
 				}

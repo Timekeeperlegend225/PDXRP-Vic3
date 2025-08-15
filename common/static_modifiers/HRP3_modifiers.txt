@@ -1,9 +1,10 @@
-﻿missouri_compromise = {
-	icon = gfx/interface/icons/ig_icons/landowners.dds
-	interest_group_ig_landowners_pol_str_mult = 0.25
+﻿citizenship_by_service = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	interest_group_ig_armed_forces_pop_attraction_mult = 0.25
 	country_aristocrats_voting_power_add = 50
 	country_officers_voting_power_add = 50
 	country_farmers_voting_power_add = 10
+	country_soldiers_voting_power_add = 20
 }
 
 popular_poetry_modifier = {
@@ -272,7 +273,24 @@ incan_bridge_destroyed = {
 	state_infrastructure_mult = -0.1
 }
 alaskan_migration_attraction = {
-	gfx/interface/icons/state_status_icons/mass_migration_target.dds
+	icon = gfx/interface/icons/state_status_icons/mass_migration_target.dds
 	state_migration_pull_add = 20
 	state_migration_pull_mult = 0.25
+}
+
+buying_slave_modifier = {
+	icon = gfx/interface/icons/generic_icons/coin_icon_10.dds
+		state_aristocrats_investment_pool_contribution_add = -0.05
+		state_aristocrats_investment_pool_efficiency_mult = 0.25
+}
+
+jacsonian_side_modifier = {
+	icon = gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds
+	interest_group_ig_armed_forces_pol_str_mult = 0.50
+		state_pop_support_movement_radical_add = -10
+		state_pop_support_movement_radical_mult = -1
+		state_pop_support_movement_anti_slavery_mult = -1
+		state_pop_support_movement_reactionary_add = 10
+		state_pop_support_movement_reactionary_mult = 1
+		state_radicals_from_political_movements_mult = -0.5
 }
