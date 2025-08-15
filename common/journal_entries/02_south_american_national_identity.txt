@@ -20,7 +20,6 @@
 		hidden_trigger = {
 			NOR = {
 				c:GCO ?= this
-				c:PBC ?= this
 				c:FND ?= this
 				c:PLT ?= this
 			}
@@ -29,7 +28,6 @@
 	}
 
 	possible = {
-		has_technology_researched = nationalism
 		hidden_trigger = {
 			NOT = { has_variable = completed_culture_genesis }
 		}
@@ -91,7 +89,10 @@
 		}
 		if = {
 			limit = {
-				c:BOL ?= this
+				OR = {
+					c:BOL ?= this
+					c:PBC ?= this
+				}
 			}
 			cu:south_andean = {
 				save_scope_as = old_national_culture
@@ -223,7 +224,10 @@
 			}
 			if = {
 				limit = {
+				OR = {
 					c:BOL ?= this
+					c:PBC ?= this
+				}
 				}
 				add_primary_culture = cu:bolivian
 				remove_primary_culture = cu:south_andean
@@ -282,7 +286,6 @@
 			OR = {
 				c:GCO ?= this
 				c:FND ?= this
-				c:PBC ?= this
 				c:PLT ?= this
 			}
 		}
@@ -368,7 +371,10 @@ je_south_american_national_identity = {
 		}
 		if = {
 			limit = {
-				c:BOL ?= this
+				OR = {
+					c:BOL ?= this
+					c:PBC ?= this
+				}
 			}
 			cu:south_andean = {
 				save_scope_as = old_national_culture
@@ -468,6 +474,7 @@ je_south_american_national_identity = {
 						c:NPU ?= this
 						c:SPU ?= this
 						c:BOL ?= this
+						c:PBC ?= this
 						c:CHL ?= this
 					}
 				}

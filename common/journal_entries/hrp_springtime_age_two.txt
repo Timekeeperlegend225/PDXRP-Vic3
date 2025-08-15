@@ -293,7 +293,7 @@ je_springtime_of_the_peoples_global = {
 		}
 	}
 	
-	timeout =  
+	timeout = 1095
 	
 	on_timeout = {
 		add_modifier = {
