@@ -186,9 +186,9 @@ gm_actions.1 = {
 	
 	#Radicals or loyalist
 	option = {
-		name = gm_actions.70.t
+		name = value_selection.14.t
 		trigger_event = {
-			id = gm_actions.70
+			id = value_selection.14
 			days = 0
 			popup = yes
 		}

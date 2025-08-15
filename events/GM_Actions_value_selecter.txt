@@ -1013,6 +1013,265 @@ value_selection.13 = {
 	}
 }
 
+#Radicals/loyalists
+
+value_selection.14 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.14.t
+	desc = value_selection.14.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.14.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.r
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.14.b
+		set_global_variable = {
+			name = gm_variable_radicals
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.d
+		change_global_variable = {
+			name = gm_variable_radicals
+			add = 0.01
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.e
+		change_global_variable = {
+			name = gm_variable_radicals
+			add = 0.05
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.f
+		change_global_variable = {
+			name = gm_variable_radicals
+			add = 0.20
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.h
+		change_global_variable = {
+			name = gm_variable_radicals
+			subtract = 0.01
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.i
+		change_global_variable = {
+			name = gm_variable_radicals
+			subtract = 0.05
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.j
+		change_global_variable = {
+			name = gm_variable_radicals
+			subtract  = 0.20
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.k
+		change_global_variable = {
+			name = gm_variable_radicals
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.l
+		trigger = {
+			scope:recipient = {
+				any_scope_state = {
+					has_decree = decree_host_scope	
+				}
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = {
+					any_scope_state = {
+						has_decree = decree_host_scope
+						
+					}
+				}
+				every_scope_state = {
+					limit = {
+						has_decree = decree_host_scope
+					}
+					add_loyalists_in_state = {
+						value = global_var:gm_variable_radicals
+					}
+				}
+			}
+		
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.m
+		trigger = {
+			scope:recipient = {
+				any_scope_state = {
+					has_decree = decree_host_scope	
+				}
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = {
+					any_scope_state = {
+						has_decree = decree_host_scope
+						
+					}
+				}
+				every_scope_state = {
+					limit = {
+						has_decree = decree_host_scope
+					}
+					add_radicals_in_state = {
+						value = global_var:gm_variable_radicals
+					}
+				}
+			}
+		
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.n
+		scope:recipient = {
+			add_loyalists = {
+				value = global_var:gm_variable_radicals
+			}
+		}
+		trigger_event = {
+			id = value_selection.14
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.14.o
+		scope:recipient = {
+			add_radicals = {
+				value = global_var:gm_variable_radicals
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+}
+
 value_selection.50 = {
 	type = country_event
 	placement = ROOT
