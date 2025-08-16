@@ -1,0 +1,45 @@
+﻿gov_parliamentary_democracy = {
+	transfer_of_power = parliamentary_elective
+	new_leader_on_reform_government = yes
+
+	male_ruler = "RULER_TITLE_CHANCELLOR"
+	female_ruler = "RULER_TITLE_CHANCELLOR"
+
+	possible = {
+		NOT = { has_modifier = eternal_president_modifier }
+		has_law = law_type:law_parliamentary_republic
+		country_has_voting_franchise = yes
+		NOR = {
+			has_law = law_type:law_single_party_state
+			c:USA = ROOT
+		}
+	}
+
+	on_government_type_change = {
+		change_to_parliamentary_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_parliamentary_elective = yes
+	}
+}
+
+hrp3_jackson_oligrachy = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "Speaker of the Nation"
+	female_ruler = "Speaker of the Nation"
+
+	possible = {
+		has_law = law_type:law_parliamentary_republic
+#		country_has_voting_franchise = no
+		exists = c:USA
+		c:USA = ROOT
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
