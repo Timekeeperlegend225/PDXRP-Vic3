@@ -6,6 +6,24 @@
 	country_farmers_voting_power_add = 10
 	country_soldiers_voting_power_add = 20
 }
+militarized_police = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	interest_group_ig_landowners_approval_add = -3
+	interest_group_ig_industrialists_approval_add = -3
+	interest_group_ig_armed_forces_approval_add = 3
+	interest_group_ig_trade_unions_approval_add = -3
+	interest_group_ig_rural_folk_approval_add = -3
+	interest_group_ig_devout_approval_add = -3
+	interest_group_ig_petty_bourgeoisie_approval_add = -3
+	interest_group_ig_intelligentsia_approval_add = -3
+	country_bureaucracy_mult = -0.05
+}
+
+danes_not_germans= {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = -10
+	
+}
 
 popular_poetry_modifier = {
 	icon = gfx/interface/icons/generic_icons/prestige.dds
@@ -90,6 +108,10 @@ missed_coup_modifier = {
 intelligentsia_strength= {
     icon = gfx/interface/icons/lens_toolbar_icons/invite_to_power_bloc_obligation.dds
    	interest_group_ig_intelligentsia_pol_str_mult = 0.2
+}
+industrialist_strength= {
+    icon = gfx/interface/icons/lens_toolbar_icons/invite_to_power_bloc_obligation.dds
+   	interest_group_ig_intelligentsia_pol_str_mult = 0.3
 }
 great_diamond_heist= {
     icon = gfx/interface/icons/generic_icons/coin_icon_10.dds
