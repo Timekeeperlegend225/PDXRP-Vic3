@@ -580,3 +580,7 @@ gm_enactment_stall = {
 	icon = gfx/interface/icons/generic_icons/prestige.dds
 	country_law_enactment_stall_mult = 0.01
 }
+
+eternal_president_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
