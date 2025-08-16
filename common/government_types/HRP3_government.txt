@@ -6,6 +6,7 @@
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 
 	possible = {
+		NOT = { has_modifier = eternal_president_modifier }
 		has_law = law_type:law_parliamentary_republic
 		country_has_voting_franchise = yes
 		NOR = {
