@@ -63,3 +63,7 @@
   CHI_missionaries.4.f: "#bold God Welcomes All to His House of Healing! #!\n\nNew hospital in [SCOPE.sState('missionary_hospitals_state').GetNameNoFormatting] for those most in need. Jesus welcomes all.\n\n#italic And he called to him his twelve disciples and gave them authority over unclean spirits, to cast them out, and to heal every disease and every affliction. (Matthew 10:1) #!"
   CHI_missionaries.4.a: "They are welcome to operate in the region."
   CHI_missionaries.4.b: "Halt this unauthorized construction."
+  
+  
+ JAC:0 "Jacobin France"
+ JAC_ADJ:0 "Jacobin"
