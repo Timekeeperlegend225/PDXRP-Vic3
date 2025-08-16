@@ -479,7 +479,7 @@
  gm_actions.100.t:0 "Modifiers Menu"
  gm_actions.100.a:0 "Cancel"
  gm_actions.100.b:0 "Remove Bankrucy"
- gm_actions.100.c:0 "USA civil war FSA"
+ gm_actions.100.c:0 "USA reconstruction"
  gm_actions.100.d:0 "USA civil war CSA"
  gm_actions.100.e:0 "Black Tuesday Recovery"
  gm_actions.100.f:0 "Socialist Unrest"

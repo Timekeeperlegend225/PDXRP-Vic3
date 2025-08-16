@@ -214,6 +214,10 @@ culture_south_america.1 = {
 				add_homeland = cu:bolivian
 				remove_homeland = cu:south_andean
 			}
+			s:STATE_LIMA = {
+				add_homeland = cu:bolivian
+				remove_homeland = cu:south_andean
+			}
 		}
 		if = {
 			limit = {
@@ -718,6 +722,15 @@ culture_south_america.4 = { # Startup for the new phase 1
 		add_loyalists = {
 			value = large_radicals
 			culture = scope:old_national_culture
+		}
+		if = {
+			limit = { 
+				ROOT = c:PBC
+			}
+			custom_tooltip = {
+				text = "We'll get a small bonus for progress from ou succefull speech"
+				set_variable = { name = national_identity_progress_var_add value = 1 }
+			}
 		}
 	}
 
