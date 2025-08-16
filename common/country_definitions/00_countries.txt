@@ -55,6 +55,17 @@ FRA = {
 	capital = STATE_ILE_DE_FRANCE
 }
 
+JAC = {
+	color = { 150  120  255 }
+
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { french }
+	capital = STATE_ILE_DE_FRANCE
+}
+
 PRU = {
 	color = { 0 49 83 }
 

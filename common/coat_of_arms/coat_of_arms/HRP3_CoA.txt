@@ -1,0 +1,10 @@
+JAC = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color2 = "white"
+		color1 = "red"
+	}
+}
