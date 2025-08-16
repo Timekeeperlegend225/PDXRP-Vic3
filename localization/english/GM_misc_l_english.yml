@@ -1,0 +1,4 @@
+﻿l_english:
+ hrp_eternal_president_gov:0 "Eternal President "
+ hrp_eternal_president_gov_desc:0 "This is a [concept_government_type] where the Country is ruled by an eternal president independent of elected power. \n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ eternal_president_modifier: "Eternal President"

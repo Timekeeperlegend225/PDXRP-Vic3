@@ -8548,7 +8548,34 @@ gm_actions.100 = {
 				months = 120
 				is_decaying = yes
 			}
-		}	
+		}
+	}
+	
+	option = {
+		name = gm_actions.100.d
+		trigger = {
+			scope:recipient = {
+				NOT = { has_modifier = eternal_president_modifier}
+			}
+		}
+		scope:recipient = {
+			add_modifier = {
+				name = eternal_president_modifier
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.100.e
+		trigger = {
+			scope:recipient = {
+				has_modifier = eternal_president_modifier
+			}
+		}
+		scope:recipient = {
+			remove_modifier = eternal_president_modifier
+		}
+	}
 }
 
 gm_actions.101 = {
