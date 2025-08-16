@@ -284,13 +284,56 @@ buying_slave_modifier = {
 		state_aristocrats_investment_pool_efficiency_mult = 0.25
 }
 
+west_indies_modifier = {
+	icon = gfx/interface/icons/pops_icons/capitalists.dds
+	state_capitalists_investment_pool_efficiency_mult = 0.15
+}
+
+vasily_grisin_influence_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+	political_movement_radicalism_add = 0.10
+}
+
+smolesk_protest_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_radicalism_add = 0.20
+}
+
+prussian_springtime_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.05
+	political_movement_radicalism_add = 0.25
+}
+
 jacsonian_side_modifier = {
 	icon = gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds
 	interest_group_ig_armed_forces_pol_str_mult = 0.50
-		state_pop_support_movement_radical_add = -10
-		state_pop_support_movement_radical_mult = -1
-		state_pop_support_movement_anti_slavery_mult = -1
-		state_pop_support_movement_reactionary_add = 10
-		state_pop_support_movement_reactionary_mult = 1
-		state_radicals_from_political_movements_mult = -0.5
+	state_pop_support_movement_radical_add = -10
+	state_pop_support_movement_radical_mult = -1
+	political_movement_radicalism_add = -0.20
+	state_pop_support_movement_reactionary_add = 10
+	state_pop_support_movement_reactionary_mult = 1
+	state_radicals_from_political_movements_mult = -0.5
+}
+
+USA_reconstruction_modifier = {
+	icon = gfx/interface/icons/principles_icons/construction.dds
+	state_construction_mult = 0.20
+	state_birth_rate_mult = 0.05
+	state_aristocrats_investment_pool_efficiency_mult = 0.10
+	state_capitalists_investment_pool_efficiency_mult = 0.10
+	state_clergymen_investment_pool_efficiency_mult = 0.10
+	state_farmers_investment_pool_efficiency_mult = 0.10
+	state_shopkeepers_investment_pool_efficiency_mult = 0.10
+}
+
+forced_serfdom_end_modifier = {
+	icon = gfx/interface/icons/ig_icons/landowners.dds
+	interest_group_ig_landowners_approval_add = -2
+}
+
+welcoming_refugee_modifier = {
+	icon = gfx/interface/icons/state_status_icons/mass_migration_target.dds
+	state_migration_pull_mult = 0.10
 }
