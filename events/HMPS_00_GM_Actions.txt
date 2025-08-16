@@ -8542,6 +8542,10 @@ gm_actions.100 = {
 	
 	option = {
 		name = gm_actions.100.c
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
 		c:USA = {
 			add_modifier = {
 				name = USA_reconstruction_modifier           
@@ -8558,6 +8562,10 @@ gm_actions.100 = {
 				NOT = { has_modifier = eternal_president_modifier}
 			}
 		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
 		scope:recipient = {
 			add_modifier = {
 				name = eternal_president_modifier
@@ -8571,6 +8579,10 @@ gm_actions.100 = {
 			scope:recipient = {
 				has_modifier = eternal_president_modifier
 			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
 		}
 		scope:recipient = {
 			remove_modifier = eternal_president_modifier
