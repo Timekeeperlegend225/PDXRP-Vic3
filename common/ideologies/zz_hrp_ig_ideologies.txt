@@ -15,6 +15,7 @@
 		law_private_schools = disapprove
 	}
 }
+
 ideology_populist = {
 	icon = "gfx/interface/icons/ideology_icons/populist.dds"
 	lawgroup_citizenship = {
@@ -226,6 +227,13 @@ ideology_bonapartist = {
 		law_technocracy = strongly_disapprove
 	}
 
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_approve
+		law_freedom_of_conscience = approve
+		law_total_separation = disapprove
+		law_state_atheism = strongly_disapprove
+	}
+
 	lawgroup_army_model = {
 		law_mass_conscription = approve
 		law_professional_army = strongly_approve
@@ -352,10 +360,38 @@ ideology_bonapartist = {
 	}
 }
 
-ideology_luddite = {
+ideology_edenist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_utopian.dds"
 
 	character_ideology = yes
+
+	lawgroup_governance_principles = {
+		law_monarchy = disapprove
+		law_presidential_republic = neutral
+		law_parliamentary_republic = approve
+		law_corporate_state = neutral
+		law_theocracy = approve
+		law_council_republic = neutral
+	}
+	
+	lawgroup_distribution_of_power = {
+		law_universal_suffrage = strongly_approve
+		law_anarchy = approve
+		law_census_voting = approve
+		law_single_party_state = neutral
+		law_wealth_voting = disapprove
+		law_landed_voting = disapprove
+		law_technocracy = disapprove
+		law_oligarchy = strongly_disapprove
+		law_autocracy = strongly_disapprove
+	}
+
+	lawgroup_army_model = {
+		law_national_militia = strongly_approve
+		law_mass_conscription = disapprove
+		law_peasant_levies = strongly_disapprove
+		law_professional_army = disapprove
+	}
 
 	lawgroup_economic_system = {
 		law_industry_banned = strongly_approve
@@ -363,29 +399,38 @@ ideology_luddite = {
 		law_cooperative_ownership = neutral
 		law_traditionalism = neutral
 		law_laissez_faire = strongly_disapprove
-		law_interventionism = strongly_disapprove
+		law_interventionism = disapprove
 		law_command_economy = strongly_disapprove
 		law_extraction_economy = disapprove
 	}
 
-	lawgroup_trade_policy = {
-		law_free_trade = strongly_disapprove
-		law_mercantilism = neutral
-		law_protectionism = approve
-		law_isolationism = strongly_approve
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = disapprove
+		law_homesteading = approve
+		law_collectivized_agriculture = strongly_approve
+		law_commercialized_agriculture = disapprove
+	}
+
+	lawgroup_slavery = {
+		law_slavery_banned = strongly_approve
+		law_legacy_slavery = disapprove
+		law_debt_slavery = strongly_disapprove
+		law_slave_trade = strongly_disapprove
 	}
 
 	country_trigger = {
 		has_technology_researched = romanticism
-		OR = {
-			has_law = law_type:law_command_economy
-			has_law = law_type:law_laissez_faire
-			has_law = law_type:law_interventionism
-		}
 	}
 
 	interest_group_leader_trigger = {
-		ideology_luddite_valid_trigger = yes
+		OR = {
+			is_interest_group_type = ig_devout
+			is_interest_group_type = ig_rural_folk
+			is_interest_group_type = ig_petty_bourgeoisie
+			is_interest_group_type = ig_intelligentsia
+			is_interest_group_type = ig_trade_unions
+		}
 	}
 
 	non_interest_group_leader_trigger = {
@@ -393,17 +438,28 @@ ideology_luddite = {
 		NAND = {
 			has_role = agitator
 			owner = {
-				has_law_or_variant = law_type:law_isolationism
+				has_law = law_type:law_parliamentary_republic
+				has_law = law_type:law_theocracy
+				has_law = law_type:law_universal_suffrage
+				has_law = law_type:law_national_militia
+				has_law = law_type:law_collectivized_agriculture
+				has_law = law_type:law_slavery_banned
 				has_law = law_type:law_industry_banned
 			}
 		}
 		interest_group = {
-			ideology_luddite_valid_trigger = yes
+			OR = {
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+			}
 		}
 	}
 
 	interest_group_leader_weight = {
-		value = 10 # this is not very likely
+		value = 50
 		# More likely to support with large industries
 		if = {
 			limit = {
@@ -444,6 +500,21 @@ ideology_luddite = {
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_devout
+				}
+			}
+			add = 150
+		}
+		if = {
+			limit = {
+				culture = c:polish
+			}
+			add = 100
 		}
 	}
 

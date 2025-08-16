@@ -463,6 +463,7 @@ movement_cultural_minority = {
 	}
 
 	disband_trigger = {
+		NOT = {	has_global_variable = age_of_concert_gm }
 		scope:political_movement ?= {
 			OR = {
 				culture = {
