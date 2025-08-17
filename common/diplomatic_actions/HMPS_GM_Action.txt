@@ -9,6 +9,7 @@
 	
 	potential = {
 		has_modifier = game_master
+		is_ai = no
 	}
 	
     possible = {

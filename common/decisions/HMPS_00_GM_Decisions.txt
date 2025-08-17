@@ -10,13 +10,16 @@
 			name = game_master
 		}
 	}
+	ai_chance = {
+		value = 0
+	}
 }
 
 GM_Self_Action = {
 	is_shown = {
 		has_modifier = game_master
 		NOT = { has_global_variable = GM_taking_action }
-		NOT = { has_global_variable = single_player }
+		is_ai = no
 	}
 	
 	when_taken = {
@@ -40,4 +43,7 @@ GM_Self_Action = {
 			post_notification = gm_self_action
 		}
     }
+	ai_chance = {
+		value = 0
+	}
 }
