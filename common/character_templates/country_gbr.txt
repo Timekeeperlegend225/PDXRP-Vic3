@@ -2400,3 +2400,21 @@ GBR_john_holt = { # John Holt, John Holt and Company
         chance = 100
     }
 }
+
+
+GBR_Edward_Smith = {
+	first_name = Edward
+	last_name = Smith
+	historical = yes
+	culture = cu:british
+	birth_date = 1809.1.1
+	dna = dna_john_brown_of_sheffield
+	interest_group = ig_armed_forces
+	ig_leader = yes
+	ideology = ideology_moderate
+	traits = {
+		brave
+		ambitious
+		demagogue
+		basic_diplomat
+}
