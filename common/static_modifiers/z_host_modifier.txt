@@ -410,7 +410,7 @@ gm_army_debuff = {
 
 started_player = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_construction_add = 5
+	country_construction_add = 10
 }
 
 GM_target = {
@@ -563,7 +563,22 @@ gm_prestige_add = {
 
 gm_prestige_mult = {
 	icon = gfx/interface/icons/generic_icons/prestige.dds
-	country_prestige_mult = 1
+	country_prestige_mult = 0.01
+}
+
+gm_admin_add = {
+	icon = gfx/interface/icons/topbar/bureaucracy_icon.dds
+	country_bureaucracy_add = 1
+}
+
+gm_admin_mult = {
+	icon = gfx/interface/icons/topbar/bureaucracy_icon.dds
+	country_bureaucracy_mult = 0.01
+}
+
+gm_legitimacy = {
+	icon = gfx/interface/icons/generic_icons/legitimacy.dds
+	country_legitimacy_base_add = 1
 }
 
 gm_enactment_chance = {

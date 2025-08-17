@@ -416,12 +416,18 @@ edenism_boost_modifier = {
 }
 
 parisian_revolution_modifier = {
-	icon = gfx/interface/icons/ideology_icons/ideology_leader/ideology_radical.dds
+	icon = gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_radical.dds
     unit_supply_consumption_mult = -1
 	interest_group_ig_landowners_pol_str_mult = -2
 	interest_group_ig_landowners_pop_attraction_mult = -2
 	interest_group_ig_rural_folk_pol_str_mult = -0.5
 	interest_group_ig_rural_folk_pop_attraction_mult = -0.5
+	building_training_rate_mult = 10
+	country_military_goods_cost_mult = -1
+	country_minting_add = 100000
+	unit_army_defense_mult = 0.2
+	unit_morale_damage_mult = -0.5
+	battle_casualties_mult = -0.5
 }
 
 freed_space_modifier = {
@@ -451,4 +457,5 @@ son_of_liberty_modifier = {
 	icon = gfx/interface/icons/generic_icons/battalions.dds
 	building_arms_industry_throughput_add = -0.02
 	building_training_rate_mult = 0.05
+
 }
