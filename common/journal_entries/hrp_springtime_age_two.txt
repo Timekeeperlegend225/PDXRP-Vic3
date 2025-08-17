@@ -110,25 +110,14 @@ je_springtime_of_the_peoples = {
 		trigger_event = { id = peoples_springtime.7 }
 		add_modifier = {
 			name = modifier_1848_loss
-			years = 20	
+			years = 10	
 			is_decaying = yes
 		}
 		#add_modifier = {
 		#	name = post_revolutionary_fervor
-		#	years = 20
+		#	years = 10
 		#	is_decaying = yes
 		#}
-		if = {
-			limit = {
-	       		is_in_power_bloc = yes
-	        	is_power_bloc_leader = yes				
-			}
-			custom_tooltip = {
-				text = sick_man_of_europe_lose_power_bloc
-				set_country_type = unrecognized   #THIS WILL PROBABLY NOT WORK IN THE FUTURE
-				set_country_type = recognized
-			}
-		}
 	}
 	
 	timeout = 1460 
