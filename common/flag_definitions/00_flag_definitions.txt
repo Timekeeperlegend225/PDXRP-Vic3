@@ -8358,6 +8358,18 @@ SAR = { # Sardignia-Piedmont
 			coa_def_british_ensign_trigger = yes
 		}
 	}
+
+	### Different monarchist Italies ###
+
+	# Sardinia-Piedmont Italy
+	flag_definition = {
+		coa = ITA
+		subject_canton = SAR_canton
+		priority = 15
+		trigger = {
+			always = yes
+		}
+	}
 }
 
 SAS = { # South Australia
