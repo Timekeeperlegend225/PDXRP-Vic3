@@ -28,6 +28,7 @@
  
  
  bolivian: "Confederal"
+ colombian: "Grand Colombian"
  
  
   completed_pan_national_project_tt: "We have successfully completed any of the #bold Gran Colombia#!, or #bold Bolivar's Ambition#! [Concept('concept_journal_entry', '$concept_journal_entries$')]"

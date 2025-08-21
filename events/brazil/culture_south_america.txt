@@ -139,7 +139,7 @@ culture_south_america.1 = {
 		}
 		if = {
 			limit = {
-				c:CLM ?= this
+				c:GCO ?= this
 			}
 			cu:north_andean = {
 				save_scope_as = old_south_american_culture
@@ -276,7 +276,7 @@ culture_south_america.1 = {
 		}
 		if = {
 			limit = {
-				c:CLM ?= this
+				c:GCO ?= this
 			}
 			add_primary_culture = cu:colombian
 			remove_primary_culture = cu:north_andean
@@ -492,7 +492,7 @@ culture_south_america.2 = {
 						}
 						if = {
 							limit = {
-								c:CLM ?= root
+								c:GCO ?= root
 							}
 							remove_homeland = cu:north_andean
 							add_homeland = cu:colombian
@@ -605,7 +605,7 @@ culture_south_america.2 = {
 						}
 						if = {
 							limit = {
-								c:CLM ?= root
+								c:GCO ?= root
 							}
 							remove_homeland = cu:north_andean
 							add_homeland = cu:colombian
