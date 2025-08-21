@@ -218,14 +218,8 @@ jackson_successor_ig_modifier= {
 
 modifier_algeria_military_rule = {
 	icon = gfx/interface/icons/ig_icons/armed_forces.dds
-	interest_group_ig_industrialists_pol_str_mult = 1
 	interest_group_ig_armed_forces_pol_str_mult = 1
-	country_bureaucrats_pol_str_mult = 1
-	country_capitalists_pol_str_mult = 0.5
 	country_officers_pol_str_mult = 1
-	country_aristocrats_pol_str_mult = -0.50
-	country_legitimacy_base_add = -50
-	country_legitimacy_headofstate_add = 65
 	state_migration_pull_mult = 0.50
 }
 
@@ -451,6 +445,13 @@ brittish_gun_modifier = {
 missing_gun_modifier = {
 	icon = gfx/interface/icons/generic_icons/battalions.dds
 	country_military_goods_cost_mult = 0.10
+}
+
+son_of_liberty_modifier = {
+	icon = gfx/interface/icons/generic_icons/battalions.dds
+	building_arms_industry_throughput_add = -0.02
+	building_training_rate_mult = 0.05
+
 }
 
 son_of_liberty_modifier = {

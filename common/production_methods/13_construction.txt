@@ -119,7 +119,7 @@ pm_arc_welded_buildings = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 10
+			country_construction_add = 12
 		}
 	}
 

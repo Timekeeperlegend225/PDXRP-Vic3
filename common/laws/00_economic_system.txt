@@ -350,60 +350,20 @@ law_extraction_economy = {
 	}
 
 	on_activate = {
-		custom_tooltip = industry_banned_tt
-		custom_tooltip = {
-			text = industry_banned_destroy_tt
-			every_scope_state = {
-				if = {
-					limit = {
-						has_building = building_chemical_plants
-					}
-					remove_building = building_chemical_plants
-				}
-				if = {
-					limit = {
-						has_building = building_synthetics_plants
-					}
-					remove_building = building_synthetics_plants
-				}
-				if = {
-					limit = {
-						has_building = building_steel_mills
-					}
-					remove_building = building_steel_mills
-				}
-				if = {
-					limit = {
-						has_building = building_motor_industry
-					}
-					remove_building = building_motor_industry
-				}
-				if = {
-					limit = {
-						has_building = building_war_machine_industry
-					}
-					remove_building = building_war_machine_industry
-				}
-				if = {
-					limit = {
-						has_building = building_electrics_industry
-					}
-					remove_building = building_electrics_industry
-				}
-				if = {
-					limit = {
-						has_building = building_munition_plants
-					}
-					remove_building = building_munition_plants
-				}
-			}
-		}
 	}
 
 	modifier = {
 		building_group_bg_agriculture_throughput_add = 0.1
 		building_group_bg_plantations_throughput_add = 0.1
 		building_group_bg_extraction_throughput_add = 0.1
+		building_chemical_plants_throughput_add = -0.5
+		building_explosives_factory_throughput_add = -0.5
+		building_synthetics_plants_throughput_add = -0.5
+		building_steel_mills_throughput_add = -0.5
+		building_motor_industry_throughput_add = -0.5
+		building_automotive_industry_throughput_add = -0.5
+		building_electrics_industry_throughput_add = -0.5
+		building_munition_plants_throughput_add = -0.5
 		state_shopkeepers_investment_pool_efficiency_mult = -0.5
 		state_capitalists_investment_pool_efficiency_mult = -0.25
 		state_farmers_investment_pool_efficiency_mult = -0.75	
