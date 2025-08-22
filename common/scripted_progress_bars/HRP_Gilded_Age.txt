@@ -1,0 +1,135 @@
+﻿HRP_GA_infinite_growth = {
+	name = "HRP_GA_infinite_growth_bar"
+	desc = "HRP_GA_infinite_growth_desc"
+
+	default = yes
+
+	monthly_progress = {
+		add = {
+			desc = "Base Progress"
+			value = global_var:concert_global_correction
+		}
+		add = {
+			desc = "from Egalitarianism"
+			value = global_var:tech_lowering_stability_egal
+		}
+		add = {
+			desc = "from Nationalism"
+			value = global_var:tech_lowering_stability_nat
+		}
+		add = {
+			desc = "from Labor Movement"
+			value = 10000
+		}
+		add = {
+			desc = "from Dialectic"
+			value = global_var:tech_lowering_stability_dia
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 1000000
+
+}
+
+HRP_GA_national_speculation = {
+	name = "HRP_GA_national_speculation_bar"
+	desc = "HRP_GA_national_speculation_desc"
+
+	default_green = yes
+
+	monthly_progress = {
+		add = {
+			desc = "Base"
+			value = 3
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_interventionism
+			}
+			add = {
+				desc = "From Interventionism"
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_agrarianism
+			}
+			add = {
+				desc = "From Agrarianism"
+				value = 0.5
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_industry_banned
+			}
+			add = {
+				desc = "From Industry Banned"
+				value = -0.5
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_laissez_faire
+			}
+			add = {
+				desc = "From Laissez Faire"
+				value = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_command_economy
+			}
+			add = {
+				desc = "From Command Economy"
+				value = -1
+			}
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_mercantilism
+			}
+			add = {
+				desc = "From Mercantilism"
+				value = 0.5
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_free_trade
+			}
+			add = {
+				desc = "From Free Trade"
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_isolationism
+			}
+			add = {
+				desc = "From Isolationism"
+				value = -1
+			}
+		}
+		add = {
+			desc = "From Reliance on Trade"
+			add = market.market_trade_reliance
+			multiply  = 2
+		}
+		subtract = {
+			desc = "Decay"
+			add = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
+			divide  = 10
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+
+}
