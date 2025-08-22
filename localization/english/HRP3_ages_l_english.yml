@@ -1,6 +1,6 @@
 ﻿l_english:
  je_HRP_concert_national:0 "National Stability"
- je_HRP_concert_national_reason:0 "Variable value is [ROOT.Var('tempnationalstab').GetValue|+=]" 
+ je_HRP_concert_national_reason:0 "Over on the National Stability bar to know what affect it" 
  HRP_AoC_national_stability_bar:0 "National stability"
  HRP_AoC_national_stability_name:0 "National stability : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
  HRP_AoC_national_stability_desc: "Current national stability is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
@@ -24,3 +24,16 @@
  
  nationalist_claim:0 "Claim our Nationals Homelands"
  nationalist_claim_desc:0 "Now that we have our national idendity, we mus reunite our peoples"
+ 
+ ## Gilded Age
+ 
+ je_HRP_gilded_age:0 "Infinite Growth"
+ je_HRP_gilded_age_reason:0 "The speculation value increase based on the Global Sotck Exchange growth and the Integration in the Global Stock Exchange" 
+ HRP_GA_infinite_growth_bar:0 "Infinite Growth"
+ HRP_GA_infinite_growth_name:0 "Infinite Growth : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_GA_infinite_growth_desc: "Current Global stock Exchange value is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_GA_national_speculation_bar:0 "Infinite Growth"
+ HRP_GA_national_speculation_name:0 "Infinite Growth : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_GA_national_speculation_desc: "Current Integration in the Global stock Exchange is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] %"
+ 
+ HRP_speculation:0 "Speculation"

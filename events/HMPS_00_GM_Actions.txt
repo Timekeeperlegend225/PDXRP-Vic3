@@ -5931,6 +5931,42 @@ gm_actions.50 = {
 			remove_variable = actionee
 		}
 	}
+
+	option = {  #Gilgded age
+		name = gm_actions.50.d
+		trigger = {
+			scope:recipient = {	
+				NOT = {
+					has_global_variable = gilded_age_gm
+				}
+			}
+		}
+		add_journal_entry = {
+			type = je_HRP_gilded_age_gm
+		}
+		set_global_variable = gilded_age_gm
+		remove_global_variable = age_of_concert_gm
+		remove_global_variable = age_of_springtime_gm
+		every_country = {
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = game_master
+					}
+				}
+				add_journal_entry = {
+					type = je_HRP_gilded_age
+				}
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
 	
 	option = {
 		name = gm_actions.50.cnc
