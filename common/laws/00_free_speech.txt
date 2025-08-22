@@ -73,6 +73,9 @@ law_right_of_assembly = {
 		country_bolster_attraction_factor = 0.3
 		country_suppression_attraction_factor = -0.3
 		country_acceptance_culture_base_add = 5
+		country_acceptance_shared_cultural_trait_add = 5
+		country_acceptance_shared_heritage_and_cultural_trait_add = 5
+		country_acceptance_shared_heritage_trait_add = 5
 	}
 
 	ai_enact_weight_modifier = { #Petitions
@@ -103,6 +106,9 @@ law_protected_speech = {
 		country_tech_spread_mult = 0.25
 		country_leverage_resistance_mult = -0.25
 		country_acceptance_culture_base_add = 10
+		country_acceptance_shared_cultural_trait_add = 10
+		country_acceptance_shared_heritage_and_cultural_trait_add = 10
+		country_acceptance_shared_heritage_trait_add = 10
 	}
 	
 	on_activate = {
