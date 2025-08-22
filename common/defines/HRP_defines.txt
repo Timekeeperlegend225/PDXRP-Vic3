@@ -29,7 +29,7 @@ NPowerBlocs = {
 	JOIN_COOLDOWN_MONTHS = 0 #In case of misclick
 	LEAVE_COOLDOWN_MONTHS = 0 #In case of misclick
 	PRINCIPLE_SELECTION_COOLDOWN_DAYS = 0 #In case of misclick
-	INITIAL_PRINCIPLE_LEVELS = 3
+	INITIAL_PRINCIPLE_LEVELS = 4
 	
 	POWER_BLOC_INFLUENCE_COST = 200		# Cost in Influence to form / be the leader of a Power Bloc
 }
