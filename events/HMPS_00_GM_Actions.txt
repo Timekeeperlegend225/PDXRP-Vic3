@@ -5959,6 +5959,14 @@ gm_actions.50 = {
 				}
 			}
 		}
+		set_global_variable = {
+			name = GA_GM_adjustment_flat
+			value = 0
+		}
+		set_global_variable = {
+			name = GA_GM_adjustment_multiplier
+			value = 0
+		}
 		remove_global_variable = GM_taking_action
 		random_country = {
 			limit = {
