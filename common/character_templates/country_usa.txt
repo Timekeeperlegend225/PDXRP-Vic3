@@ -1074,3 +1074,20 @@ usa_robert_e_lee_wilson = {
 		chance = 100
     }
 }
+
+uru_francisco_gonzalez = {
+	first_name = Francisco
+	last_name = Gonzalez
+	historical = yes
+	culture = cu:platinean
+	birth_date = 1797.7.14
+	is_general = yes
+	ig_leader = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_radical
+	traits = {
+		popular_commander
+		experienced_defensive_strategist
+		meticulous
+	}
+}
