@@ -111,6 +111,9 @@ law_guaranteed_liberties = {
 	modifier = {
 		country_institution_home_affairs_max_investment_add = 2
 		country_acceptance_culture_base_add = 10
+		country_acceptance_shared_cultural_trait_add = 10
+		country_acceptance_shared_heritage_and_cultural_trait_add = 10
+		country_acceptance_shared_heritage_trait_add = 10
 	}
 	
 	institution = institution_home_affairs
