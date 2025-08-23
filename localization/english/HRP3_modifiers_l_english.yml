@@ -81,3 +81,7 @@
  
  building_statue_of_liberty:0 "Statue of Justice"
  pm_default_building_statue_of_liberty:0 "Statue of Justice"
+ 
+ 
+ decree_promote_national_values_SA:0 "Promote National Values"
+ decree_promote_national_values_SA_desc:0 "Increase cultural assimilation and religious conversion rates"
