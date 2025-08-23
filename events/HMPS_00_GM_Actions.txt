@@ -6151,6 +6151,48 @@ gm_actions.50 = {
 			popup = yes
 		}
 	}
+	
+	option = {
+		name = value_selection.503.t
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = gilded_age_gm
+			}
+		}
+		trigger_event = {
+			id = value_selection.503
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.504.t
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = gilded_age_gm
+			}
+		}
+		trigger_event = {
+			id = value_selection.504
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.505.t
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = gilded_age_gm
+			}
+		}
+		trigger_event = {
+			id = value_selection.505
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 gm_actions.83 = {

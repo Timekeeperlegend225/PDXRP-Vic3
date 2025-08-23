@@ -2177,3 +2177,451 @@ value_selection.502 = {
 		}
 	}
 }
+
+value_selection.503 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.503.t
+	desc = value_selection.503.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.503.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.503.b
+		set_global_variable = {
+			name = GA_GM_adjustment_flat
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.503
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.503.c
+		change_global_variable = {
+			name = GA_GM_adjustment_flat
+			add = 100
+		}
+		trigger_event = {
+			id = value_selection.503
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.503.d
+		change_global_variable = {
+			name = GA_GM_adjustment_flat
+			add = 500
+		}
+		trigger_event = {
+			id = value_selection.503
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.503.e
+		change_global_variable = {
+			name = GA_GM_adjustment_flat
+			add = 2000
+		}
+		trigger_event = {
+			id = value_selection.503
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.503.g
+		change_global_variable = {
+			name = GA_GM_adjustment_flat
+			subtract = 100
+		}
+		trigger_event = {
+			id = value_selection.503
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.503.h
+		change_global_variable = {
+			name = GA_GM_adjustment_flat
+			subtract = 500
+		}
+		trigger_event = {
+			id = value_selection.503
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.503.i
+		change_global_variable = {
+			name = GA_GM_adjustment_flat
+			subtract = 2000
+		}
+		trigger_event = {
+			id = value_selection.503
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.503.l
+		change_global_variable = {
+			name = GA_GM_adjustment_flat
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.503
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+value_selection.504 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.504.t
+	desc = value_selection.504.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.504.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.504.b
+		set_global_variable = {
+			name = GA_GM_adjustment_multiplier
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.504
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.504.c
+		change_global_variable = {
+			name = GA_GM_adjustment_multiplier
+			add = 0.01
+		}
+		trigger_event = {
+			id = value_selection.504
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.504.d
+		change_global_variable = {
+			name = GA_GM_adjustment_multiplier
+			add = 0.05
+		}
+		trigger_event = {
+			id = value_selection.504
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.504.e
+		change_global_variable = {
+			name = GA_GM_adjustment_multiplier
+			add = 0.20
+		}
+		trigger_event = {
+			id = value_selection.504
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.504.g
+		change_global_variable = {
+			name = GA_GM_adjustment_multiplier
+			subtract = 0.01
+		}
+		trigger_event = {
+			id = value_selection.504
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.504.h
+		change_global_variable = {
+			name = GA_GM_adjustment_multiplier
+			subtract = 0.05
+		}
+		trigger_event = {
+			id = value_selection.504
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.504.i
+		change_global_variable = {
+			name = GA_GM_adjustment_multiplier
+			subtract = 0.20
+		}
+		trigger_event = {
+			id = value_selection.504
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.504.l
+		change_global_variable = {
+			name = GA_GM_adjustment_multiplier
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.504
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+value_selection.505 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.505.t
+	desc = value_selection.505.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.505.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.505.b
+		scope:recipient = {	
+			set_variable = {
+				name = GA_rp_national
+				value = 0
+			}
+		}
+		trigger_event = {
+			id = value_selection.505
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.505.c
+		scope:recipient = {	
+			change_variable = {
+				name = GA_rp_national
+				add = 0.01
+			}
+		}
+		trigger_event = {
+			id = value_selection.505
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.505.d
+		scope:recipient = {	
+			change_variable = {
+				name = GA_rp_national
+				add = 0.05
+			}
+		}
+		trigger_event = {
+			id = value_selection.505
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.505.e
+		scope:recipient = {	
+			change_variable = {
+				name = GA_rp_national
+				add = 0.2
+			}
+		}
+		trigger_event = {
+			id = value_selection.505
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.505.g
+		scope:recipient = {	
+			change_variable = {
+				name = GA_rp_national
+				subtract = 0.01
+			}
+		}
+		trigger_event = {
+			id = value_selection.505
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.505.h
+		scope:recipient = {	
+			change_variable = {
+				name = GA_rp_national
+				subtract = 0.05
+			}
+		}
+		trigger_event = {
+			id = value_selection.505
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.505.i
+		scope:recipient = {	
+			change_variable = {
+				name = GA_rp_national
+				subtract = 0.20
+			}
+		}
+		trigger_event = {
+			id = value_selection.505
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.505.l
+		scope:recipient = {	
+			change_variable = {
+				name = GA_rp_national
+				multiply = -1
+			}
+		}
+		trigger_event = {
+			id = value_selection.505
+			days = 0
+			popup = yes
+		}
+	}
+}

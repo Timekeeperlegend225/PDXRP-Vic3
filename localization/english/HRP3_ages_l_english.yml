@@ -29,10 +29,14 @@
  
  je_HRP_gilded_age:0 "Infinite Growth"
  je_HRP_gilded_age_reason:0 "The speculation value increase based on the Global Sotck Exchange growth and the Integration in the Global Stock Exchange" 
- HRP_GA_infinite_growth_bar:0 "Infinite Growth"
+ 
+ 
+ je_HRP_gilded_age_gm:0 "Infinite Growth"
+ je_HRP_gilded_age_gm_reason:0 "The speculation value increase based on the Global Sotck Exchange growth and the Integration in the Global Stock Exchange \n Previous Global GDP [GetGlobalVariable('GA_previous_global_gpd').GetValue|1] \n Current Global GDP [GetGlobalVariable('GA_current_global_gpd').GetValue|1] \n GPD difference [GetGlobalVariable('GA_global_gpd_difference').GetValue|1]" 
+ HRP_GA_infinite_growth_bar:0 "Global Stock Exchange"
  HRP_GA_infinite_growth_name:0 "Infinite Growth : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
  HRP_GA_infinite_growth_desc: "Current Global stock Exchange value is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
- HRP_GA_national_speculation_bar:0 "Infinite Growth"
+ HRP_GA_national_speculation_bar:0 "Integration into the Global Stock Exchange"
  HRP_GA_national_speculation_name:0 "Infinite Growth : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
  HRP_GA_national_speculation_desc: "Current Integration in the Global stock Exchange is [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] %"
  
