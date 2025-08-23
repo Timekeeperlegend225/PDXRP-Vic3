@@ -12657,7 +12657,7 @@ tarascan= {
 quechua= {
 	color= hsv{ 0.10 0.22 0.69 }
 	religion = catholic
-	traits = { indigenous_american_heritage south_american_group }
+	traits = { indigenous_american_heritage south_american_group Confederal }
 	obsessions = {
 		tobacco
 	}
@@ -12848,7 +12848,7 @@ guarani= {
 aimara= {
 	color= hsv{ 0.02 0.57 0.74 }
 	religion = catholic
-	traits = { indigenous_american_heritage south_american_group }
+	traits = { indigenous_american_heritage south_american_group Confederal }
 	obsessions = {
 		tobacco
 	}
@@ -15568,7 +15568,7 @@ peruvian = {
 bolivian = {
 	color= rgb{ 133 115 107 }
 	religion = catholic
-	traits = { hispanophone european_heritage }
+	traits = { hispanophone european_heritage Confederal }
 	obsessions = {
 		liquor
 	}
@@ -16069,7 +16069,7 @@ paraguayan= {
 colombian= {
 	color=rgb{ 47 78 185 }
 	religion = catholic
-	traits = { hispanophone european_heritage }
+	traits = { hispanophone european_heritage  }
 	obsessions = {
 		tobacco
 	}

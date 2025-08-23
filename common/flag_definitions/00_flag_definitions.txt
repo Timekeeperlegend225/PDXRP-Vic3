@@ -2078,6 +2078,18 @@ CHI = { # China
 		}
 	}
 	flag_definition = {
+		coa = great_jin
+		coa_with_overlord_canton = CHI_han_empire
+		priority = 255
+		trigger = {
+			scope:actor ?= {
+				country_has_primary_culture = cu:manchu
+				country_has_primary_culture = cu:han
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	flag_definition = {
 		coa = CHI
 		subject_canton = CHI
 		coa_with_overlord_canton = CHI_subject
@@ -10890,6 +10902,7 @@ BEI = { # Beiyang Government
 		trigger = {
 			scope:actor = {
 				country_has_primary_culture = cu:manchu
+				NOT = { country_has_primary_culture = cu:han }
 			}
 			coa_def_monarchy_flag_trigger = yes
 		}
