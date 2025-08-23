@@ -1,0 +1,180 @@
+﻿GA_buy_action = {
+	name = "Buy action"
+	desc = "Buy an action as the sate on the global stock exchange"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = "Not enough money"
+			var:GM_action_cost < var:temp_money_available
+		}
+		custom_tooltip = {
+			text = "You can only but an action every 6 months"
+			NOT = { has_variable = buy_action_cooldown }
+		}
+	}
+
+	effect = {
+		add_treasury = var:GM_action_cost_neg
+		custom_tooltip = {
+			text = "You get an action"
+			change_variable = {
+				name = Gilded_actions
+				add = 1
+			}
+		}
+		set_variable = { 
+			name = buy_action_cooldown 
+			months = 6
+		}
+		je:je_HRP_gilded_age_gm = {
+			add_progress = { 
+				name = HRP_GA_infinite_growth 
+				value = global_var:gm_variable
+			}
+		}
+		set_global_variable = { 
+			name = sell_action_global_temp 
+			value = var:GM_action_cost_neg
+		}
+		change_global_variable = { 
+			name = sell_action_global_temp 
+			divide = -500000
+		}
+		custom_tooltip = {
+			text = "This will decrease the global stock exchange value a bit"
+			every_country = {
+				je:je_HRP_gilded_age_gm = {
+					add_progress = { 
+						name = HRP_GA_infinite_growth 
+						value = global_var:sell_action_global_temp
+					}
+				}
+				je:je_HRP_gilded_age = {
+					add_progress = { 
+						name = HRP_GA_infinite_growth 
+						value = global_var:sell_action_global_temp
+					}
+				}
+			}
+		}
+	}
+}
+
+GA_sell_action = {
+	name = "Sell action"
+	desc = "Sell one of your actions as the sate on the global stock exchange"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = "No action to sell"
+			var:Gilded_actions > 0
+		}
+		custom_tooltip = {
+			text = "You can only sell an action every 6 months"
+			NOT = { has_variable = sell_action_cooldown }
+		}
+	}
+
+	effect = {
+		add_treasury = var:GM_action_cost
+		custom_tooltip = {
+			text = "You sell an action"
+			change_variable = {
+				name = Gilded_actions
+				subtract = 1
+			}
+		}
+		set_variable = { 
+			name = sell_action_cooldown 
+			months = 6
+		}
+		set_global_variable = { 
+			name = sell_action_global_temp 
+			value = var:GM_action_cost_neg
+		}
+		change_global_variable = { 
+			name = sell_action_global_temp 
+			divide = 500000
+		}
+		custom_tooltip = {
+			text = "This will decrease the global stock exchange value a bit"
+			every_country = {
+				je:je_HRP_gilded_age_gm = {
+					add_progress = { 
+						name = HRP_GA_infinite_growth 
+						value = global_var:sell_action_global_temp
+					}
+				}
+				je:je_HRP_gilded_age = {
+					add_progress = { 
+						name = HRP_GA_infinite_growth 
+						value = global_var:sell_action_global_temp
+					}
+				}
+			}
+		}
+	}
+}
+
+GA_encourage_speculation = {
+	name = "Encourage Speculation"
+	desc = "Encourage your captialists to take part in the Global Stock Exchange"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			has_modifier = HRP_encouraged_speculation
+		}
+		custom_tooltip = {
+			text = "Don't change your mind so soon"
+			NOT = { has_variable = GA_speculation_cooldown }
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = "The modifier increase your integration in the global stock exchange"
+		}
+		add_modifier = HRP_encouraged_speculation
+		set_variable = { 
+			name = GA_speculation_cooldown
+			months = 6
+		}
+	}
+}
+
+GA_stop_encouraging_speculation = {
+	name = "Stope Encouraging Speculation"
+	desc = "Stop Encouraging your captialists to take part in the Global Stock Exchange"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		has_modifier = HRP_encouraged_speculation
+		custom_tooltip = {
+			text = "Don't change your mind so soon"
+			NOT = { has_variable = GA_speculation_cooldown }
+		}
+	}
+
+	effect = {
+		remove_modifier = HRP_encouraged_speculation
+		set_variable = { 
+			name = GA_speculation_cooldown 
+			months = 6
+		}
+	}
+}

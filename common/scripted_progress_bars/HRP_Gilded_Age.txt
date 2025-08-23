@@ -178,7 +178,23 @@ HRP_GA_national_speculation = {
 			}
 		}
 		add = {
-			desc = "from RP"
+			desc = "From Actions"
+			add = var:Gilded_actions
+			divide  = 5
+		}
+		if = {
+			limit = {
+				has_modifier = HRP_encouraged_speculation 
+			}
+			add = {
+				desc = "From Encouraged Speculation"
+				add = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
+				divide  = 100
+				add = 1
+			}
+		}
+		add = {
+			desc = "From RP"
 			add = var:GA_rp_national
 			multiply  = 10
 		}

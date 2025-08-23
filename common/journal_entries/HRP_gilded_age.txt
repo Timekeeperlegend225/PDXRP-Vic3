@@ -6,6 +6,18 @@
 	immediate = {
 		set_variable = current_growth_setup
 		set_variable = GA_rp_national 
+		set_variable = {
+			name = GM_action_cost
+			value = gdp
+		}
+		change_variable = {
+			name = GA_previous_global_gpd
+			divide = -10
+		}
+		set_variable = {
+			name = Gilded_actions
+			value = 0
+		}
 	}
 
 	scripted_progress_bar = HRP_GA_infinite_growth
@@ -13,7 +25,7 @@
 
 	invalid = {
 		custom_tooltip = {
-			text = "Never, why would growth ever be completed or stop ?"
+			text = "Never, why would growth ever be stop ?"
 			NOT = {
 				has_global_variable = gilded_age_gm
 			}
@@ -29,6 +41,46 @@
 
 	on_monthly_pulse = {
 		effect = {
+			set_variable = {
+				name = GM_action_cost
+				value = gdp
+			}
+			change_variable = {
+				name = GM_action_cost
+				divide = 10
+			}
+			set_variable = {
+				name = temp_growth
+				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
+			}
+			change_variable = {
+				name = temp_growth
+				divide = 1000000
+			}
+			change_variable = {
+				name = temp_growth
+				add = 1
+			}
+			change_variable = {
+				name = GM_action_cost
+				multiply = var:temp_growth
+			}
+			set_variable = {
+				name = GM_action_cost_neg
+				value = var:GM_action_cost
+			}
+			change_variable = {
+				name = GM_action_cost_neg
+				multiply = -1
+			}
+			set_variable = {
+				name = temp_money_available
+				value = credit
+			}
+			change_variable = {
+				name = temp_money_available
+				subtract = principal
+			}
 			if = {
 				limit = {
 					has_variable = current_growth_setup
@@ -36,7 +88,7 @@
 				scope:journal_entry = { 
 					add_progress = { 
 						name = HRP_GA_infinite_growth 
-						value = global_var:current_growth
+						value = global_var:GA_current_growth
 					}
 				}
 				remove_variable = current_growth_setup
@@ -86,7 +138,19 @@ je_HRP_gilded_age_gm = {
 		set_global_variable = { 
 			name = GA_GM_adjustment_multiplier
 			value = 0
-		} 
+		}
+		set_variable = {
+			name = GM_action_cost
+			value = gdp
+		}
+		change_variable = {
+			name = GM_action_cost
+			divide = -10
+		}
+		set_variable = {
+			name = Gilded_actions
+			value = 0
+		}
 	}
 
 	scripted_progress_bar = HRP_GA_infinite_growth
@@ -111,6 +175,42 @@ je_HRP_gilded_age_gm = {
 
 	on_monthly_pulse = {
 		effect = { 
+			set_variable = {
+				name = GM_action_cost
+				value = gdp
+			}
+			change_variable = {
+				name = GM_action_cost
+				divide = -10
+			}
+			set_variable = {
+				name = temp_growth
+				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
+			}
+			set_global_variable = { 
+				name = GA_current_growth
+				value = var:temp_growth
+			}
+			change_variable = {
+				name = temp_growth
+				divide = 1000000
+			}
+			change_variable = {
+				name = temp_growth
+				add = 1
+			}
+			change_variable = {
+				name = GM_action_cost
+				multiply = var:temp_growth
+			}
+			set_variable = {
+				name = temp_money_available
+				value = principal
+			}
+			change_variable = {
+				name = temp_money_available
+				subtract = credit
+			}
 			set_global_variable = { 
 				name = GA_previous_global_gpd
 				value = global_var:GA_current_global_gpd
@@ -329,22 +429,6 @@ je_HRP_gilded_age_gm = {
 						}
 					}
 				}
-			}
-			change_global_variable = {
-				name = total_stability
-				divide = global_var:stability_weigh
-			}
-			change_global_variable = {
-				name = total_stability
-				divide = 1000
-			}
-			set_variable = { 
-				name = tempglobalstab 
-				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" 
-			}
-			set_global_variable = { 
-				name = current_growth_setup
-				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
 			}
 			HRP_GA_infinite_growth_progress = yes 
 			HRP_GA_national_speculation_progress = yes 
