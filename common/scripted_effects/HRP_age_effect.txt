@@ -1,0 +1,1064 @@
+﻿GA_global_trade_calculation = {
+	g:ammunition = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 5
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:small_arms = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 6
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:artillery = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 7
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:tanks = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 8
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:aeroplanes = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 8
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:manowars = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 7
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:ironclads = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 8
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:grain = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 2
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:fish = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 2
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:fabric = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 2
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:wood = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 2
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:groceries = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:clothes = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:furniture = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:paper = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	## Industrial
+	g:clippers = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 6
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:steamers = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 7
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:silk = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 4
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:dye = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 4
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:sulfur = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 5
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:coal = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:iron = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 4
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:lead = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 4
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:hardwood = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 4
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:rubber = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 4
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:oil = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 4
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:oil = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 6
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:steel = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 5
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:glass = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:fertilizer = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:tools = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 4
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:explosives = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 5
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	## Luxuries
+	g:porcelain = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 7
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:meat = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:fruit = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:liquor = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:wine = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 5
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:tea = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 5
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:coffee = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 5
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:sugar = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 3
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:tobacco = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 4
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:opium = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 5
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:automobiles = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 10
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:telephones = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 7
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:radios = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 8
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:luxury_clothes = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 6
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:luxury_furniture = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 6
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+	g:fine_art = {
+		set_global_variable = { 
+			name = good_trade_temp
+			value = 0
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_exports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			add = this.world_market_imports
+		}
+		change_global_variable = {
+			name = good_trade_temp
+			multiply = 2
+		}
+		change_global_variable = {
+			name = GA_global_trade
+			add = global_var:good_trade_temp
+		}
+	}
+}

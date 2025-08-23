@@ -4,25 +4,21 @@
 	group = je_group_historical_content
 
 	immediate = {
-		set_variable = national_speculation 
-		set_variable = current_growth_setup 
+		set_variable = current_growth_setup
+		set_variable = GA_rp_national 
 	}
 
 	scripted_progress_bar = HRP_GA_infinite_growth
 	scripted_progress_bar = HRP_GA_national_speculation
 
-	complete = {
+	invalid = {
 		custom_tooltip = {
-			text = "Why would growth ever be completed or stop ?"
+			text = "Never, why would growth ever be completed or stop ?"
 			NOT = {
 				has_global_variable = gilded_age_gm
 			}
 		}
 	}
-	
-    invalid = {
-    }
-
 	status_desc = {
 	}
 	
@@ -73,6 +69,24 @@ je_HRP_gilded_age_gm = {
 	}
 
 	immediate = {
+		set_global_variable = { 
+			name = GA_previous_global_gpd
+			value = 0
+		}
+		every_country = {
+			change_global_variable = {
+				name = GA_previous_global_gpd
+				add = gdp
+			}
+		}
+		set_global_variable = { 
+			name = GA_GM_adjustment_flat
+			value = 0
+		}
+		set_global_variable = { 
+			name = GA_GM_adjustment_multiplier
+			value = 0
+		} 
 	}
 
 	scripted_progress_bar = HRP_GA_infinite_growth
@@ -82,22 +96,13 @@ je_HRP_gilded_age_gm = {
 	scripted_button = GA_sell_action
 	scripted_button = GA_encourage_speculation
 	scripted_button = GA_stop_encouraging_speculation
-	
-    invalid = {
-		custom_tooltip = {
-			text = "Age of Concert is finished"
-			NOT = {
-				has_global_variable = age_of_concert_gm
-			}
-		}
-    }
 
 	status_desc = {
 	}
 
-	complete = {
+	invalid = {
 		custom_tooltip = {
-			text = "Why would growth ever be completed or stop ?"
+			text = "Never, why would growth ever stop ?"
 			NOT = {
 				has_global_variable = gilded_age_gm
 			}
@@ -105,25 +110,58 @@ je_HRP_gilded_age_gm = {
 	}
 
 	on_monthly_pulse = {
-		effect = {
+		effect = { 
 			set_global_variable = { 
-				name = stability_weigh
-				value = 0
+				name = GA_previous_global_gpd
+				value = global_var:GA_current_global_gpd
 			} 
 			set_global_variable = { 
-				name = tech_lowering_stability_egal
-				value = 0
-			}  
-			set_global_variable = { 
-				name = tech_lowering_stability_nat
-				value = 0
-			} 
-			set_global_variable = { 
-				name = tech_lowering_stability_lab
+				name = GA_current_global_gpd
 				value = 0
 			}
 			set_global_variable = { 
-				name = tech_lowering_stability_dia
+				name = GA_companies_prosperity
+				value = 0
+			} 
+			every_country = {
+				change_global_variable = {
+					name = GA_current_global_gpd
+					add = gdp
+				}
+				every_company = {
+					change_global_variable = {
+						name = GA_companies_prosperity
+						add = this.company_prosperity
+					} 
+				}
+			}
+			set_global_variable = { 
+				name = GA_global_gpd_difference
+				value = global_var:GA_current_global_gpd
+			} 
+			change_global_variable = {
+				name = GA_global_gpd_difference
+				subtract = global_var:GA_previous_global_gpd
+			} 
+			set_global_variable = { 
+				name = GA_global_trade
+				value = 0
+			} 
+			GA_global_trade_calculation
+			set_global_variable = { 
+				name = GA_tech_joint
+				value = 0
+			}
+			set_global_variable = { 
+				name = GA_tech_mutual
+				value = 0
+			}
+			set_global_variable = { 
+				name = GA_tech_invest
+				value = 0
+			}
+			set_global_variable = { 
+				name = GA_tech_inter
 				value = 0
 			}
 			every_country = {
@@ -131,71 +169,40 @@ je_HRP_gilded_age_gm = {
 					limit = {
 						country_rank = rank_value:great_power
 					}
-					set_variable = { 
-						name = tempnationalstab2
-						value = var:tempnationalstab
-					}
-					change_variable = {
-						name = tempnationalstab2
-						subtract = 500
-					}
 					if = {
 						limit = {
-							var:tempnationalstab2 < 0
-						}
-						change_variable = {
-							name = tempnationalstab2
-							multiply = 100
-						}
-					}
-					else = {
-						change_variable = {
-							name = tempnationalstab2
-							multiply = 10
-						}
-					}
-					change_global_variable = {
-						name = total_stability
-						add = var:tempnationalstab2
-					}
-					change_global_variable = {
-						name = stability_weigh
-						add = 10
-					}
-					if = {
-						limit = {
-							has_technology_researched = egalitarianism
+							has_technology_researched = joint_stock_companies
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_egal
-							add = 0.1
+							name = GA_tech_joint
+							add = 1
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = nationalism
+							has_technology_researched = mutual_funds
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_nat
-							add = 0.1
+							name = GA_tech_mutual
+							add = 2
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = labor_movement
+							has_technology_researched = investment_banks
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_lab
-							add = 0.1
+							name = GA_tech_invest
+							add = 5
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = dialectics
+							has_technology_researched = international_exchange_standards
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_dia
-							add = 0.1
+							name = GA_tech_inter
+							add = 10
 						}
 					}
 				}
@@ -203,71 +210,40 @@ je_HRP_gilded_age_gm = {
 					limit = {
 						country_rank = rank_value:major_power
 					}
-					set_variable = { 
-						name = tempnationalstab2
-						value = var:tempnationalstab
-					}
-					change_variable = {
-						name = tempnationalstab2
-						subtract = 500
-					}
 					if = {
 						limit = {
-							var:tempnationalstab2 < 0
-						}
-						change_variable = {
-							name = tempnationalstab2
-							multiply = 50
-						}
-					}
-					else = {
-						change_variable = {
-							name = tempnationalstab2
-							multiply = 5
-						}
-					}
-					change_global_variable = {
-						name = total_stability
-						add = var:tempnationalstab2
-					}
-					change_global_variable = {
-						name = stability_weigh
-						add = 5
-					}
-					if = {
-						limit = {
-							has_technology_researched = egalitarianism
+							has_technology_researched = joint_stock_companies
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_egal
-							add = 0.05
+							name = GA_tech_joint
+							add = 0.5
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = nationalism
+							has_technology_researched = mutual_funds
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_nat
-							add = 0.05
+							name = GA_tech_mutual
+							add = 1
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = labor_movement
+							has_technology_researched = investment_banks
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_lab
-							add = 0.05
+							name = GA_tech_invest
+							add = 2.5
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = dialectics
+							has_technology_researched = international_exchange_standards
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_dia
-							add = 0.05
+							name = GA_tech_inter
+							add = 5
 						}
 					}
 				}
@@ -278,143 +254,78 @@ je_HRP_gilded_age_gm = {
 							country_rank = rank_value:unrecognized_major_power
 						}
 					}
-					set_variable = { 
-						name = tempnationalstab2
-						value = var:tempnationalstab
-					}
-					change_variable = {
-						name = tempnationalstab2
-						subtract = 500
-					}
 					if = {
 						limit = {
-							var:tempnationalstab2 < 0
-						}
-						change_variable = {
-							name = tempnationalstab2
-							multiply = 20
-						}
-					}
-					else = {
-						change_variable = {
-							name = tempnationalstab2
-							multiply = 2
-						}
-					}
-					if = {
-						limit = {
-							var:tempnationalstab2 < 0
-						}
-						change_variable = {
-							name = tempnationalstab2
-							multiply = 10
-						}
-					}
-					change_global_variable = {
-						name = total_stability
-						add = var:tempnationalstab2
-					}
-					change_global_variable = {
-						name = stability_weigh
-						add = 2
-					}
-					if = {
-						limit = {
-							has_technology_researched = egalitarianism
+							has_technology_researched = joint_stock_companies
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_egal
-							add = 0.02
+							name = GA_tech_joint
+							add = 0.2
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = nationalism
+							has_technology_researched = mutual_funds
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_nat
-							add = 0.02
+							name = GA_tech_mutual
+							add = 0.5
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = labor_movement
+							has_technology_researched = investment_banks
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_lab
-							add = 0.02
+							name = GA_tech_invest
+							add = 1
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = dialectics
+							has_technology_researched = international_exchange_standards
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_dia
-							add = 0.02
+							name = GA_tech_inter
+							add = 2
 						}
 					}
 				}
 				else = {
-					set_variable = { 
-						name = tempnationalstab2
-						value = var:tempnationalstab
-					}
-					change_variable = {
-						name = tempnationalstab2
-						subtract = 500
-					}
 					if = {
 						limit = {
-							var:tempnationalstab2 < 0
-						}
-						change_variable = {
-							name = tempnationalstab2
-							multiply = 1
-						}
-					}
-					change_global_variable = {
-						name = total_stability
-						add = var:tempnationalstab2
-					}
-					change_global_variable = {
-						name = stability_weigh
-						add = 1
-					}
-					if = {
-						limit = {
-							has_technology_researched = egalitarianism
+							has_technology_researched = joint_stock_companies
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_egal
-							add = 0.01
+							name = GA_tech_joint
+							add = 0.1
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = nationalism
+							has_technology_researched = mutual_funds
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_nat
-							add = 0.01
+							name = GA_tech_mutual
+							add = 0.2
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = labor_movement
+							has_technology_researched = investment_banks
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_lab
-							add = 0.01
+							name = GA_tech_invest
+							add = 0.5
 						}
 					}
 					if = {
 						limit = {
-							has_technology_researched = dialectics
+							has_technology_researched = international_exchange_standards
 						}
 						change_global_variable = {
-							name = tech_lowering_stability_dia
-							add = 0.01
+							name = GA_tech_inter
+							add = 1
 						}
 					}
 				}
@@ -427,45 +338,24 @@ je_HRP_gilded_age_gm = {
 				name = total_stability
 				divide = 1000
 			}
-			HRP_AoC_global_stability_progress = yes 
 			set_variable = { 
 				name = tempglobalstab 
 				value = "scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" 
-			}
-			scope:journal_entry = { 
-				remove_modifier = HPR_concert_global_stability_positive
-				remove_modifier = HPR_concert_global_stability_negative
 			}
 			set_global_variable = { 
 				name = current_growth_setup
 				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
 			}
-			if = {
-				limit = {
-					"scope:journal_entry.scripted_bar_progress(HRP_AoC_global_stability)" >= 500
-				}
-				scope:journal_entry = { 
-					add_modifier = {
-						name = HPR_concert_global_stability_positive
-						multiplier = {
-							add = var:tempglobalstab
-							subtract  = 500
-							divide  = 500
-							multiply = var:geographic_multiplier
-						}
-					}
-				}
-			}
-			else = {
-				scope:journal_entry = { 
-					add_modifier = {
-						name = HPR_concert_global_stability_negative
-						multiplier = {
-							add = var:tempglobalstab
-							subtract  = 500
-							divide  = -500
-							multiply = var:geographic_multiplier
-						}
+			HRP_GA_infinite_growth_progress = yes 
+			HRP_GA_national_speculation_progress = yes 
+			scope:journal_entry = { 
+				remove_modifier = HRP_speculation
+				add_modifier = {
+					name = HRP_speculation
+					multiplier = {
+						add = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
+						multiply  = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
+						divide  = 100000000
 					}
 				}
 			}

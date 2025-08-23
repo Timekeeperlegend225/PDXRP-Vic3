@@ -7,23 +7,43 @@
 	monthly_progress = {
 		add = {
 			desc = "Base Progress"
-			value = global_var:concert_global_correction
+			value = global_var:GA_GM_adjustment_flat
 		}
 		add = {
-			desc = "from Egalitarianism"
-			value = global_var:tech_lowering_stability_egal
+			desc = "from Global GPD Growth"
+			add = global_var:GA_global_gpd_difference
+			divide = 25000
 		}
 		add = {
-			desc = "from Nationalism"
-			value = global_var:tech_lowering_stability_nat
+			desc = "from Global Trade"
+			add = global_var:GA_global_trade
+			divide = 2500
 		}
 		add = {
-			desc = "from Labor Movement"
-			value = 10000
+			desc = "from Companies Prosperty"
+			value = global_var:GA_companies_prosperity
+			divide = 100
 		}
 		add = {
-			desc = "from Dialectic"
-			value = global_var:tech_lowering_stability_dia
+			desc = "from Joint-Stock Compagnies"
+			value = global_var:GA_tech_joint
+		}
+		add = {
+			desc = "from Mutual Funds"
+			value = global_var:GA_tech_mutual
+		}
+		add = {
+			desc = "from Investment Bank"
+			value = global_var:GA_tech_invest
+		}
+		add = {
+			desc = "from International Exchange Standart"
+			value = global_var:GA_tech_inter
+		}
+		multiply = {
+			desc = "From Correction"
+			add = 1
+			add = global_var:GA_GM_adjustment_multiplier
 		}
 	}
 
@@ -121,8 +141,49 @@ HRP_GA_national_speculation = {
 			add = market.market_trade_reliance
 			multiply  = 2
 		}
+		if = {
+			limit = {
+				has_technology_researched = joint_stock_companies
+			}
+			add = {
+				desc = "From Joiny-Stock Compagnies"
+				value = 0.1
+			}
+		}
+		if = {
+			limit = {
+				has_technology_researched = mutual_funds
+			}
+			add = {
+				desc = "From Mutual Funds"
+				value = 0.2
+			}
+		}
+		if = {
+			limit = {
+				has_technology_researched = investment_banks
+			}
+			add = {
+				desc = "From Investment Bank"
+				value = 0.5
+			}
+		}
+		if = {
+			limit = {
+				has_technology_researched = international_exchange_standards
+			}
+			add = {
+				desc = "From International Exchange Standart"
+				value = 1
+			}
+		}
+		add = {
+			desc = "from RP"
+			add = var:GA_rp_national
+			multiply  = 10
+		}
 		subtract = {
-			desc = "Decay"
+			desc = "Balance"
 			add = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
 			divide  = 10
 		}
