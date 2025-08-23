@@ -98,3 +98,32 @@ ideology_bonapartist_valid_trigger = {
 		}
 	}
 }
+
+
+ideology_neo_bonapartist_valid_trigger = {
+	OR = {
+		AND = {
+			owner = {
+				c:FRA = this
+			}
+			OR = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+			}
+		}
+		AND = {
+			owner = {
+				c:ALD = this
+			}
+			OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_devout
+			}
+		}
+	}
+}

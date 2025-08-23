@@ -194,8 +194,6 @@ ideology_jacksonian_democrat = {
 	}
 }
 
-
-
 ideology_bonapartist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_bonapartist.dds"
 
@@ -207,8 +205,8 @@ ideology_bonapartist = {
 	character_ideology = yes
 
 	lawgroup_governance_principles = {
-		law_monarchy = strongly_approve
-		law_presidential_republic = neutral
+		law_monarchy = approve
+		law_presidential_republic = strongly_approve
 		law_parliamentary_republic = disapprove
 		law_corporate_state = neutral
 		law_theocracy = disapprove
@@ -218,27 +216,27 @@ ideology_bonapartist = {
 	lawgroup_distribution_of_power = {
 		law_autocracy = strongly_approve
 		law_oligarchy = approve
-		law_landed_voting = neutral
+		law_landed_voting = approve
 		law_wealth_voting = neutral
 		law_single_party_state = neutral
 		law_census_voting = disapprove
-		law_universal_suffrage = disapprove
+		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
-		law_technocracy = strongly_disapprove
-	}
-
-	lawgroup_church_and_state = {
-		law_state_religion = strongly_approve
-		law_freedom_of_conscience = approve
-		law_total_separation = disapprove
-		law_state_atheism = strongly_disapprove
+		law_technocracy = neutral
 	}
 
 	lawgroup_army_model = {
 		law_mass_conscription = approve
 		law_professional_army = strongly_approve
-		law_national_militia = disapprove
-		law_peasant_levies = disapprove
+		law_national_militia = strongly_disapprove
+		law_peasant_levies = strongly_disapprove
+	}
+
+	lawgroup_free_speech = {
+		law_protected_speech = strongly_disapprove
+		law_right_of_assembly = neutral
+		law_censorship = approve
+		law_outlawed_dissent = strongly_approve
 	}
 
 	lawgroup_economic_system = {
@@ -260,10 +258,6 @@ ideology_bonapartist = {
 			c:ALD = this
 		}
 		NOR = {
-			any_interest_group = {
-				has_ideology = ideology:ideology_republican_paternalistic
-			}
-			has_variable = monarchy_stamped_out_var
 			AND = {
 				OR = {
 					has_variable = legitimist_restoration_var
@@ -294,16 +288,6 @@ ideology_bonapartist = {
 			}
 			add = -75
 		}
-		# less likely if IG is happy in a republic
-		if = {
-			limit = {
-				owner = {
-					NOT = { has_law = law_type:law_monarchy }
-				}
-				ig_approval > 0
-			}
-			add = -100
-		}
 
 		# more likely for PB and AF
 		if = {
@@ -315,6 +299,153 @@ ideology_bonapartist = {
 				}
 			}
 			add = 50
+		}
+		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
+		if = {
+			limit = {
+				has_variable = anti_dreyfusard_victory
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.1
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+	}
+}
+
+ideology_neo_bonapartist = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_bonapartist.dds"
+
+	# J'AIME L'OIGNON FRIT À L'HUILE,
+	# J'AIME L'OIGNON QUAND IL EST BON.
+	# J'AIME L'OIGNON FRIT À L'HUILE,
+	# J'AIME L'OIGNON, J'AIME L'OIGNON
+
+	character_ideology = yes
+
+	lawgroup_governance_principles = {
+		law_monarchy = disapprove
+		law_presidential_republic = strongly_approve
+		law_parliamentary_republic = approve
+		law_corporate_state = neutral
+		law_theocracy = strongly_disapprove
+		law_council_republic = disapprove
+	}
+
+	lawgroup_distribution_of_power = {
+		law_autocracy = neutral
+		law_oligarchy = approve
+		law_landed_voting = disapprove
+		law_wealth_voting = neutral
+		law_single_party_state = neutral
+		law_census_voting = approve
+		law_universal_suffrage = strongly_approve
+		law_anarchy = disapprove
+		law_technocracy = disapprove
+	}
+
+	lawgroup_army_model = {
+		law_mass_conscription = approve
+		law_professional_army = strongly_approve
+		law_national_militia = disapprove
+		law_peasant_levies = strongly_disapprove
+	}
+
+	lawgroup_internal_security = {
+		law_guaranteed_liberties = neutral
+		law_no_home_affairs = neutral
+		law_national_guard = strongly_approve
+		law_secret_police = disapprove
+	}
+
+	lawgroup_economic_system = {
+		law_laissez_faire = neutral
+		law_interventionism = strongly_approve
+		law_agrarianism = disapprove
+		law_traditionalism = disapprove
+		law_cooperative_ownership = strongly_disapprove
+		law_command_economy = strongly_disapprove
+		law_industry_banned = strongly_disapprove
+		law_extraction_economy = strongly_disapprove
+	}
+
+	country_trigger = {
+		exists = c:FRA
+		OR = {
+			c:FRA = this
+			civil_war_origin_country ?= c:FRA
+			c:ALD = this
+		}
+		NOR = {
+			AND = {
+				OR = {
+					has_variable = legitimist_restoration_var
+					has_variable = bonapartist_restoration_var
+				}
+				has_variable = one_true_french_dynasty
+			}
+		}
+	}
+
+	interest_group_leader_trigger = {
+		ideology_neo_bonapartist_valid_trigger = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		NOT = { has_role = agitator }
+		ideology_neo_bonapartist_valid_trigger = yes
+	}
+
+	interest_group_leader_weight = {
+		value = 15000
+		# less likely in a theocracy
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_theocracy
+				}
+			}
+			add = -75
+		}
+
+		# more likely for PB and AF
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_intelligentsia
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			add = 100
 		}
 		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
 		if = {
@@ -431,6 +562,11 @@ ideology_edenist = {
 			is_interest_group_type = ig_intelligentsia
 			is_interest_group_type = ig_trade_unions
 		}
+		leader = {
+			religion = {
+				has_discrimination_trait = christian 
+			}
+		}
 	}
 
 	non_interest_group_leader_trigger = {
@@ -455,6 +591,9 @@ ideology_edenist = {
 				is_interest_group_type = ig_intelligentsia
 				is_interest_group_type = ig_trade_unions
 			}
+		}
+		religion = {
+			has_discrimination_trait = christian 
 		}
 	}
 
