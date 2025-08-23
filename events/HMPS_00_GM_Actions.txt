@@ -6201,6 +6201,56 @@ gm_actions.50 = {
 			popup = yes
 		}
 	}
+	
+	option = {
+		name = gm_actions.50.fg
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = gilded_age_gm
+			}
+		}
+		je:je_HRP_gilded_age_gm = {
+			add_progress = { 
+				name = HRP_GA_infinite_growth 
+				value = global_var:gm_variable
+			}
+		}
+		every_country = {
+			je:je_HRP_gilded_age = {
+				add_progress = { 
+					name = HRP_GA_infinite_growth 
+					value = global_var:gm_variable
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.fn
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = gilded_age_gm
+			}
+		}
+		every_country = {
+			scope:recipient = {	
+				change_variable = {
+					name = GA_rp_national
+					add = global_var:gm_variable
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 gm_actions.83 = {
