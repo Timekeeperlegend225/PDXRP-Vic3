@@ -140,3 +140,241 @@ decree_greener_grass_campaign = {
 		}
 	}
 }
+
+
+decree_promote_national_values = {
+	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	country_trigger = {
+		NOT = { country_is_in_south_america = yes }
+	}
+	state_trigger = {
+		OR = {
+			has_assimilating_pops = yes
+			has_converting_pops = yes
+		}
+	}
+	modifier = {
+		state_assimilation_mult = 1
+		state_conversion_mult = 1
+	}
+	cost = 100
+
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_strategy = ai_strategy_nationalist_agenda
+				}
+			}
+			add = 200
+		}
+		if = {
+			limit = {
+				state_population < 100000
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				state_population < 300000
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_progressive_agenda
+						has_strategy = ai_strategy_egalitarian_agenda
+					}
+				}
+			}
+			multiply = 1.5
+		}
+	}
+}
+
+decree_promote_national_values = {
+	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	country_trigger = {
+		NOT = { country_is_in_south_america = yes }
+	}
+	state_trigger = {
+		OR = {
+			has_assimilating_pops = yes
+			has_converting_pops = yes
+		}
+	}
+	modifier = {
+		state_assimilation_mult = 1
+		state_conversion_mult = 1
+	}
+	cost = 100
+
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_strategy = ai_strategy_nationalist_agenda
+				}
+			}
+			add = 200
+		}
+		if = {
+			limit = {
+				state_population < 100000
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				state_population < 300000
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_progressive_agenda
+						has_strategy = ai_strategy_egalitarian_agenda
+					}
+				}
+			}
+			multiply = 1.5
+		}
+	}
+}
+
+decree_promote_national_values_SA = {
+	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	country_trigger = {
+		country_is_in_south_america = yes
+	}
+	state_trigger = {
+		OR = {
+			has_assimilating_pops = yes
+			has_converting_pops = yes
+		}
+	}
+	modifier = {
+		state_assimilation_mult = 5
+		state_conversion_mult = 1
+	}
+	cost = 100
+
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_strategy = ai_strategy_nationalist_agenda
+				}
+			}
+			add = 200
+		}
+		if = {
+			limit = {
+				state_population < 100000
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				state_population < 300000
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_progressive_agenda
+						has_strategy = ai_strategy_egalitarian_agenda
+					}
+				}
+			}
+			multiply = 1.5
+		}
+	}
+}
