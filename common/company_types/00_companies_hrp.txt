@@ -694,14 +694,7 @@ company_colombian_plantations = {
 	}
 
 	possible_prestige_goods = {
-		prestige_good_generic_opium
-	}
-
-	prestige_goods_trigger = {
-		custom_tooltip = {
-			text = je_prestige_goods_opium_complete_tt
-			has_variable = prestige_good_generic_opium_var
-		}
+		prestige_good_cocaine
 	}
 
 	potential = {
