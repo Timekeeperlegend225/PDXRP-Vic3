@@ -59,5 +59,3 @@ pm_fig_orchards = {
 		}
 	}
 }
-
-
