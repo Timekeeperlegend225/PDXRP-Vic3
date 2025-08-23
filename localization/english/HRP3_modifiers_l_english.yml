@@ -68,3 +68,16 @@
   
  JAC:0 "Jacobin France"
  JAC_ADJ:0 "Jacobin"
+ 
+ ideology_edenist:0 "Edenist"
+ ideology_edenist_desc:0 "Edenism is an ideology that combines aspects of German utopianism, christian piety, and reactionary anti-industrialism to try and rebuild the biblical Garden of Eden on Earth."
+ 
+ ideology_bonapartist:0 "Old Bonapartist"
+ ideology_neo_bonapartist:0 "Neo Bonapartist"
+ 
+ ideology_victorian_idealist:0 "Victorian Idealist"
+ ideology_victorian_idealist_desc:0 "Victoria believes in a hierarchy in which the government takes care of their subjects as long as they understand their place in society.
+ 
+ 
+ building_statue_of_liberty:0 "Statue of Justice"
+ pm_default_building_statue_of_liberty:0 "Statue of Justice"

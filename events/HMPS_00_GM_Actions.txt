@@ -5707,7 +5707,6 @@ gm_actions.407 = {
 	
 	option = { 
 		name =ideology_bonapartist
-		default_option = yes
 		scope:target_character = {
 			set_ideology = ideology:ideology_bonapartist
 		}
@@ -5719,7 +5718,19 @@ gm_actions.407 = {
 	}
 	
 	option = { 
-		name =ideology_despotic_utopian
+		name =ideology_neo_bonapartist
+		scope:target_character = {
+			set_ideology = ideology:ideology_neo_bonapartist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_despotic_utopian
 		default_option = yes
 		scope:target_character = {
 			set_ideology = ideology:ideology_despotic_utopian
@@ -5732,10 +5743,34 @@ gm_actions.407 = {
 	}
 	
 	option = { 
-		name =ideology_jacksonian_democrat
+		name = ideology_jacksonian_democrat
 		default_option = yes
 		scope:target_character = {
 			set_ideology = ideology:ideology_jacksonian_democrat
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_edenist
+		scope:target_character = {
+			set_ideology = ideology:ideology_edenist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_victorian_idealist
+		scope:target_character = {
+			set_ideology = ideology:ideology_victorian_idealist
 		}
 		trigger_event = {
 			id = gm_actions.40
