@@ -19,7 +19,6 @@
 	}
 
 	possible = {
-		NOT = { is_country_type = unrecognized }
 		scope:other_country = {
 			OR = {
 				has_subject_relation_with = root
