@@ -480,12 +480,107 @@ son_of_liberty_modifier = {
 	icon = gfx/interface/icons/generic_icons/battalions.dds
 	building_arms_industry_throughput_add = -0.02
 	building_training_rate_mult = 0.05
-
 }
 
-son_of_liberty_modifier = {
-	icon = gfx/interface/icons/generic_icons/battalions.dds
-	building_arms_industry_throughput_add = -0.02
-	building_training_rate_mult = 0.05
+SA_strong_federalism_modifier = {
+	icon = gfx/interface/icons/ideology_icons/modernizer.dds
+	state_bureaucracy_population_base_cost_factor_mult = 0.15
+	state_decree_cost_mult = -0.15
+}
 
+SA_intermediary_federalism_modifier = {
+	icon = gfx/interface/icons/ideology_icons/modernizer.dds
+	state_bureaucracy_population_base_cost_factor_mult = 0.10
+	state_decree_cost_mult = -0.10
+}
+
+SA_loose_federalism_modifier = {
+	icon = gfx/interface/icons/ideology_icons/modernizer.dds
+	state_bureaucracy_population_base_cost_factor_mult = 0.05
+	state_decree_cost_mult = -0.05
+}
+
+SA_ambiguous_constituion_modifier = {
+	icon = gfx/interface/icons/ideology_icons/modernizer.dds
+	country_law_enactment_time_mult = -0.10
+}
+
+SA_loose_unitary_modifier = {
+	icon = gfx/interface/icons/ideology_icons/modernizer.dds
+	state_bureaucracy_population_base_cost_factor_mult = -0.05
+	state_decree_cost_mult = 0.05
+}
+
+SA_intermediary_unitary_modifier = {
+	icon = gfx/interface/icons/ideology_icons/modernizer.dds
+	state_bureaucracy_population_base_cost_factor_mult = -0.10
+	state_decree_cost_mult = 0.10
+}
+
+SA_strong_unitary_modifier = {
+	icon = gfx/interface/icons/ideology_icons/modernizer.dds
+	state_bureaucracy_population_base_cost_factor_mult = -0.15
+	state_decree_cost_mult = 0.15
+}
+
+ethipian_industrialists_modifier = {
+	icon = gfx/interface/icons/ig_icons/industrialists.dds
+	interest_group_ig_industrialists_pol_str_mult = 0.30
+}
+
+humiliation_of_the_liberal_conservative_modifier = {
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	interest_group_ig_devout_pop_attraction_mult = -0.20
+}
+
+resigned_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	character_popularity_add = -20
+}
+
+ethiopian_failure_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_mult = -0.15
+}
+
+resistance_to_napoleon_modifier = {
+	icon = gfx/interface/icons/ideology_icons/liberal.dds
+	interest_group_ig_trade_unions_approval_add = -3
+	interest_group_ig_rural_folk_approval_add = -3
+}
+
+slaver_momentum_modifier = {
+	icon = gfx/interface/icons/ideology_icons/slaver.dds
+    political_movement_pop_attraction_mult = 0.30
+}
+
+young_italy_resistance_modifier = {
+	icon = gfx/interface/icons/generic_icons/battalions.dds
+	unit_army_offense_mult = -0.05
+	unit_army_defense_mult = -0.05
+	unit_morale_recovery_mult = -0.1
+}
+
+anti_french_resistance_modifier = {
+	icon = gfx/interface/icons/ig_icons/rural_folk.dds
+	interest_group_ig_rural_folk_pol_str_mult = 0.05
+	interest_group_ig_rural_folk_pop_attraction_mult = 0.05
+}
+
+spanish_healthcare_modifier = {
+     icon = gfx/interface/icons/ig_icons/devout.dds
+     country_institution_health_system_max_investment_add = 1
+     country_institution_cost_institution_health_system_mult = 0.1
+}
+
+paraguay_resistance_modifier = {
+	icon = gfx/interface/icons/generic_icons/battalions.dds
+	battle_defense_owned_province_mult = 0.5
+	unit_recovery_rate_add = 0.4
+	building_training_rate_mult = 1
+}
+
+religious_tourism_modifier = {
+    icon = gfx/interface/icons/ig_icons/devout.dds
+	state_migration_pull_mult = 0.05
 }

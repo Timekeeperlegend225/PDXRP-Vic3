@@ -188,6 +188,10 @@
 		}
 	}
 
+	invalid = {
+		always = yes
+	}
+
 	on_complete = {
 		clear_national_identity_vars = yes
 		trigger_event = {
