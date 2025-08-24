@@ -133,17 +133,6 @@
 				assamese avadhi baluchi bengali bihari gujarati kannada malayalam marathi oriya panjabi pathan rajput sindi tamil telegu hindustani bundeli pahari gondi bageli chhattisgarhi deccani
 			}
 		}
-		rule = {
-			trigger = {
-				c:ALD ?= this
-				any_primary_culture = {
-					cu:french = this
-				}
-			}
-			cultures = {
-				berber maghrebi
-			}
-		}
 	}
 	on_character_ig_membership = {}
 
@@ -320,19 +309,6 @@
 			multiply = {
 				desc = "POP_INDIA_COLONIAL_RULE"
 				value = 0.1
-			}
-		}
-
-		if = {
-			limit = {
-				c:ALD ?= owner
-				culture = {
-					has_discrimination_trait = european_heritage
-				}
-			}
-			multiply = {
-				desc = "French Settler"
-				value = 0.2
 			}
 		}
 

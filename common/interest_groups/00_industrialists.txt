@@ -291,6 +291,26 @@
 			}
 		}
 
+		if = {
+			limit = {
+				owner = {
+					c:ALD ?= this
+				}
+				is_pop_type = aristocrats
+			}
+			if = {
+				limit = {
+					culture = {
+						has_discrimination_trait = european_heritage
+					}
+				}
+				add = {
+					desc = "European Settler"
+					value = 30
+				}
+			}
+		}
+
 		multiply = {
 			desc = "LEADER_POPULARITY"
 			scope:interest_group = {

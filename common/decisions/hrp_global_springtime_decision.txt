@@ -120,6 +120,7 @@ nationalist_claim = {
 			any_scope_state = {
 				is_homeland_of_country_cultures = ROOT
 				NOT = { owner = ROOT }
+				NOT = { owner = { has_subject_relation_with = ROOT } 
 				NOT = { has_claim_by = ROOT }
 			}
 		}
@@ -131,6 +132,7 @@ nationalist_claim = {
 				any_scope_state = {
 					is_homeland_of_country_cultures = ROOT
 					NOT = { owner = ROOT }
+					NOT = { owner = { has_subject_relation_with = ROOT } 
 					NOT = { has_claim_by = ROOT }
 				}
 			}
