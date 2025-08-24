@@ -18,7 +18,24 @@ militarized_police = {
 	interest_group_ig_intelligentsia_approval_add = -3
 	country_bureaucracy_mult = -0.05
 }
+grumpy_mecixo = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	country_opposition_ig_approval_add = -3
+}
 
+american_authority_stuff = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	country_authority_mult = 0.2
+}
+
+omani_infrastructure_investment = {
+	icon = gfx/interface/icons/goods_icons/coffee.dds
+	state_infrastructure_mult = 0.10
+}
+new_colliseum = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_add = 50
+}
 danes_not_germans= {
 	icon = gfx/interface/icons/ig_icons/armed_forces.dds
 	interest_group_ig_petty_bourgeoisie_approval_add = -10
@@ -169,6 +186,10 @@ movement_activism_25={
 	political_movement_radicalism_add = 0.25
 	political_movement_pop_attraction_mult = 0.05
 }
+positivist_activism_30={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_radicalism_add = 0.30
+}
 movement_activism_swedish_25={
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	political_movement_radicalism_add = 0.25
@@ -287,6 +308,14 @@ cuban_university_modifier = {
 athens_university_modifier = {
 	icon = gfx/interface/icons/generic_icons/innovation.dds
 	country_tech_spread_add = 5
+}
+finnish_society = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_society_tech_spread_mult = 0.1
+}
+montenegro_is_very_cool = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_legitimacy_base_add = 20
 }
 
 underground_deal_modifier = {
