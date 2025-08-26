@@ -20,10 +20,6 @@
 			divide = 2500
 		}
 		add = {
-			desc = "from Private Speculation"
-			value = global_var:private_speculation
-		}
-		add = {
 			desc = "from Companies Prosperty"
 			value = global_var:GA_companies_prosperity
 			divide = 100
