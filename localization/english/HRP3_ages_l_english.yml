@@ -28,11 +28,11 @@
  ## Gilded Age
  
  je_HRP_gilded_age:0 "Infinite Growth"
- je_HRP_gilded_age_reason:0 "The speculation value increase based on the Global Sotck Exchange growth and the Integration in the Global Stock Exchange \n You have #white #b [ROOT.Var('Gilded_actions').GetValue]#!#! actions" 
+ je_HRP_gilded_age_reason:0 "The speculation value increase based on the Global Sotck Exchange growth and the Integration in the Global Stock Exchange \n You have #white #b [ROOT.Var('private_speculation_temp').GetValue]#!#! Stocks" 
  
  
  je_HRP_gilded_age_gm:0 "Infinite Growth (GM)"
- je_HRP_gilded_age_gm_reason:0 "The speculation value increase based on the Global Sotck Exchange growth and the Integration in the Global Stock Exchange \n You have #white #b [ROOT.Var('Gilded_actions').GetValue]#!#! actions" 
+ je_HRP_gilded_age_gm_reason:0 "The speculation value increase based on the Global Sotck Exchange growth and the Integration in the Global Stock Exchange \n You have #white #b [ROOT.Var('private_speculation_temp').GetValue]#!#! Stocks" 
  
  HRP_GA_infinite_growth_bar:0 "Global Stock Exchange"
  HRP_GA_infinite_growth_name:0 "Infinite Growth : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"

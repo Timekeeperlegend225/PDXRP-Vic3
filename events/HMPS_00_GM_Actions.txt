@@ -5968,7 +5968,7 @@ gm_actions.50 = {
 	}
 
 	option = {  #Gilgded age
-		name = gm_actions.50.d
+		name = gm_actions.50.f
 		trigger = {
 			scope:recipient = {	
 				NOT = {
