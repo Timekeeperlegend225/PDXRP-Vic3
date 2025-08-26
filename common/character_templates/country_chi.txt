@@ -323,7 +323,6 @@ CHI_yixin_gioro = {
 	historical = yes
 	culture = cu:manchu
 	birth_date = 1833.1.13
-	birthdate_
 	female = no
 	interest_group = ig_landowners
 	ideology = ideology_moderate
@@ -339,4 +338,25 @@ CHI_yixin_gioro = {
 		latest_usage_date = 1898.5.29
 		chance = 100
 	}
+}
+
+CHI_matthias_fischer = {
+	first_name = Matthias
+	last_name = Fischer
+	historical = yes
+	culture = cu:south_german
+	birth_date = 1821.1.1
+	interest_group = ig_armed_forces
+	ig_leader = yes
+	ideology = ideology_authoritarian
+	interest_group_leader_usage = {
+		country_trigger = {
+		exists = c:CHI
+		this = c:CHI
+		c:CHI = { has_law = law_type:law_monarchy }
+		}
+		traits = {
+		meticulous
+		basic_political_operator
+    	}
 }
