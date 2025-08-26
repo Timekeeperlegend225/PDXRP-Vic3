@@ -43,27 +43,36 @@
 		effect = {
 			set_variable = {
 				name = GM_action_cost
-				value = gdp
-			}
-			change_variable = {
-				name = GM_action_cost
-				divide = 10
+				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
 			}
 			set_variable = {
 				name = temp_growth
-				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
+				value = 0
 			}
 			change_variable = {
 				name = temp_growth
-				divide = 1000000
+				add = gdp
 			}
 			change_variable = {
 				name = temp_growth
-				add = 1
+				divide = 10
 			}
-			change_variable = {
-				name = GM_action_cost
-				multiply = var:temp_growth
+			if = {
+				limit = {
+					var:GM_action_cost > var:temp_growth
+				}
+				change_variable = {
+					name = GM_action_cost
+					divide = 100000
+				}
+				change_variable = {
+					name = GM_action_cost
+					add = 1
+				}
+				change_variable = {
+					name = GM_action_cost
+					multiply = var:temp_growth
+				}
 			}
 			set_variable = {
 				name = GM_action_cost_neg
@@ -173,43 +182,71 @@ je_HRP_gilded_age_gm = {
 		}
 	}
 
-	on_monthly_pulse = {
-		effect = { 
+	on_weekly_pulse = {
+		effect = {  
+			scope:journal_entry = { 
+				remove_modifier = HRP_speculation
+				add_modifier = {
+					name = HRP_speculation
+					multiplier = {
+						add = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
+						multiply  = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
+						divide  = 100000000
+					}
+				}
+			}
 			set_variable = {
 				name = GM_action_cost
-				value = gdp
-			}
-			change_variable = {
-				name = GM_action_cost
-				divide = -10
-			}
-			set_variable = {
-				name = temp_growth
 				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
 			}
-			set_global_variable = { 
-				name = GA_current_growth
-				value = var:temp_growth
+			set_variable = {
+				name = temp_growth
+				value = 0
 			}
 			change_variable = {
 				name = temp_growth
-				divide = 1000000
+				add = gdp
 			}
 			change_variable = {
 				name = temp_growth
-				add = 1
+				divide = 5
 			}
 			change_variable = {
-				name = GM_action_cost
-				multiply = var:temp_growth
+				name = temp_growth
+				divide = 10
+			}
+			if = {
+				limit = {
+					var:GM_action_cost > var:temp_growth
+				}
+				change_variable = {
+					name = GM_action_cost
+					divide = 100000
+				}
+				change_variable = {
+					name = GM_action_cost
+					add = 1
+				}
+				change_variable = {
+					name = GM_action_cost
+					multiply = var:temp_growth
+				}
+			}
+			set_variable = {
+				name = GM_action_cost_neg
+				value = var:GM_action_cost
+			}
+			change_variable = {
+				name = GM_action_cost_neg
+				multiply = -1
 			}
 			set_variable = {
 				name = temp_money_available
-				value = principal
+				value = credit
 			}
 			change_variable = {
 				name = temp_money_available
-				subtract = credit
+				subtract = principal
 			}
 			set_global_variable = { 
 				name = GA_previous_global_gpd
@@ -431,18 +468,7 @@ je_HRP_gilded_age_gm = {
 				}
 			}
 			HRP_GA_infinite_growth_progress = yes 
-			HRP_GA_national_speculation_progress = yes 
-			scope:journal_entry = { 
-				remove_modifier = HRP_speculation
-				add_modifier = {
-					name = HRP_speculation
-					multiplier = {
-						add = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
-						multiply  = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
-						divide  = 100000000
-					}
-				}
-			}
+			HRP_GA_national_speculation_progress = yes
 		}
 	}
 	
