@@ -1,6 +1,6 @@
 ﻿GA_buy_action = {
-	name = "Buy action"
-	desc = "Buy an action as the sate on the global stock exchange"
+	name = "Buy stock"
+	desc = "Buy a stock as the sate on the global stock exchange"
 	
 	visible = { 
 		always = yes
@@ -12,7 +12,7 @@
 			var:GM_action_cost < var:temp_money_available
 		}
 		custom_tooltip = {
-			text = "You can only but an action every 6 months"
+			text = "You can only buy an action every months"
 			NOT = { has_variable = buy_action_cooldown }
 		}
 	}
@@ -28,7 +28,7 @@
 		}
 		set_variable = { 
 			name = buy_action_cooldown 
-			months = 6
+			months = 1
 		}
 		je:je_HRP_gilded_age_gm = {
 			add_progress = { 
@@ -65,8 +65,8 @@
 }
 
 GA_sell_action = {
-	name = "Sell action"
-	desc = "Sell one of your actions as the sate on the global stock exchange"
+	name = "Sell stock"
+	desc = "Sell one of your stocks as the sate on the global stock exchange"
 	
 	visible = { 
 		always = yes
@@ -78,7 +78,7 @@ GA_sell_action = {
 			var:Gilded_actions > 0
 		}
 		custom_tooltip = {
-			text = "You can only sell an action every 6 months"
+			text = "You can only sell an action every months"
 			NOT = { has_variable = sell_action_cooldown }
 		}
 	}
@@ -94,7 +94,7 @@ GA_sell_action = {
 		}
 		set_variable = { 
 			name = sell_action_cooldown 
-			months = 6
+			months = 1
 		}
 		set_global_variable = { 
 			name = sell_action_global_temp 
@@ -155,7 +155,7 @@ GA_encourage_speculation = {
 }
 
 GA_stop_encouraging_speculation = {
-	name = "Stope Encouraging Speculation"
+	name = "Stop Encouraging Speculation"
 	desc = "Stop Encouraging your captialists to take part in the Global Stock Exchange"
 	
 	visible = { 

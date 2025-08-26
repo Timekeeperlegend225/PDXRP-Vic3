@@ -20,6 +20,10 @@
 			divide = 2500
 		}
 		add = {
+			desc = "from Private Speculation"
+			value = global_var:private_speculation
+		}
+		add = {
 			desc = "from Companies Prosperty"
 			value = global_var:GA_companies_prosperity
 			divide = 100
@@ -62,7 +66,7 @@ HRP_GA_national_speculation = {
 	monthly_progress = {
 		add = {
 			desc = "Base"
-			value = 3
+			value = 2
 		}
 		if = {
 			limit = {
@@ -141,6 +145,15 @@ HRP_GA_national_speculation = {
 			add = market.market_trade_reliance
 			multiply  = 2
 		}
+		add = {
+			desc = "From Foreigh Ownership"
+			add = gdp_ownership_by_other
+		}
+		add = {
+			desc = "From Owning foreing building"
+			add = gdp_ownership_of_other
+			max = 2
+		}
 		if = {
 			limit = {
 				has_technology_researched = joint_stock_companies
@@ -178,9 +191,13 @@ HRP_GA_national_speculation = {
 			}
 		}
 		add = {
-			desc = "From Actions"
-			add = var:Gilded_actions
-			divide  = 5
+			desc = "From Stock"
+			add = var:GM_action_cost
+			divide = GDP
+			multiply = 100
+			min = 0.05
+			multiply = var:Gilded_actions
+			max = 1
 		}
 		if = {
 			limit = {
