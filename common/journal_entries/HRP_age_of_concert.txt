@@ -192,7 +192,7 @@ je_HRP_concert_global_gm = {
 	status_desc = {
 	}
 
-	on_weekly_pulse = {
+	on_monthly_pulse = {
 		effect = {
 			set_global_variable = { 
 				name = total_stability

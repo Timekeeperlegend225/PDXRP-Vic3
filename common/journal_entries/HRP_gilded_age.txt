@@ -182,7 +182,7 @@ je_HRP_gilded_age_gm = {
 		}
 	}
 
-	on_weekly_pulse = {
+	on_monthly_pulse = {
 		effect = {  
 			scope:journal_entry = { 
 				remove_modifier = HRP_speculation
