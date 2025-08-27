@@ -45,6 +45,10 @@
 				name = GM_action_cost
 				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
 			}
+			clamp_variable = {
+				name = GM_action_cost
+				min = 100000
+			}
 			set_variable = {
 				name = temp_growth
 				value = 0
@@ -172,6 +176,8 @@ je_HRP_gilded_age_gm = {
 
 	status_desc = {
 	}
+	
+	should_be_pinned_by_default = yes
 
 	invalid = {
 		custom_tooltip = {
@@ -198,6 +204,10 @@ je_HRP_gilded_age_gm = {
 			set_variable = {
 				name = GM_action_cost
 				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
+			}
+			clamp_variable = {
+				name = GM_action_cost
+				min = 100000
 			}
 			set_variable = {
 				name = temp_growth
@@ -471,6 +481,4 @@ je_HRP_gilded_age_gm = {
 			HRP_GA_national_speculation_progress = yes
 		}
 	}
-	
-	should_be_pinned_by_default = yes
 }
