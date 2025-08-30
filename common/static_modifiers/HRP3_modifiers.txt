@@ -686,3 +686,19 @@ bolivian_rail_modifier = {
 	icon = gfx/interface/icons/invention_icons/railways.dds
 	building_railway_throughput_add = -0.03
 }
+
+transvaal_mass_migration_modifier = {
+	icon = gfx/interface/icons/topbar/bureaucracy_icon.dds
+	country_mass_migration_attraction_mult = 1
+}
+
+korea_farmer_clout_modifier = {
+	icon = gfx/interface/icons/ig_icons/rural_folk.dds
+	interest_group_ig_rural_folk_pol_str_mult = 0.2 
+}
+
+japan_radicals_modifier = {
+	icon = gfx/interface/icons/ig_icons/radical.dds
+	political_movement_pop_attraction_mult = 0.20
+	political_movement_radicalism_add = 0.20
+}
