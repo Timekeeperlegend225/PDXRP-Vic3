@@ -11,13 +11,18 @@
 		}
 		add = {
 			desc = "from Global GPD Growth"
-			add = global_var:GA_global_gpd_difference
-			divide = 25000
+			add = global_var:GA_current_global_gpd
+			divide = 20000
 		}
 		add = {
 			desc = "from Global Trade"
 			add = global_var:GA_global_trade
 			divide = 2500
+		}
+		add = {
+			desc = "from Private Speculation"
+			add = global_var:GA_global_private
+			divide = 25000
 		}
 		add = {
 			desc = "from Companies Prosperty"
@@ -201,6 +206,17 @@ HRP_GA_national_speculation = {
 			}
 			add = {
 				desc = "From Encouraged Speculation"
+				add = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
+				divide  = 100
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = HRP_discouraged_speculation 
+			}
+			subtract = {
+				desc = "From Discouraged Speculation"
 				add = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
 				divide  = 100
 				add = 1

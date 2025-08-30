@@ -134,7 +134,10 @@ GA_encourage_speculation = {
 
 	possible = {
 		NOT = {
-			has_modifier = HRP_encouraged_speculation
+			OR = {
+				has_modifier = HRP_encouraged_speculation
+				has_modifier = HRP_discouraged_speculation
+			}
 		}
 		custom_tooltip = {
 			text = "Don't change your mind so soon"
@@ -172,6 +175,64 @@ GA_stop_encouraging_speculation = {
 
 	effect = {
 		remove_modifier = HRP_encouraged_speculation
+		set_variable = { 
+			name = GA_speculation_cooldown 
+			months = 6
+		}
+	}
+}
+
+GA_discourage_speculation = {
+	name = "Discourage Speculation"
+	desc = "Discourage your captialists to take part in the Global Stock Exchange"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			OR = {
+				has_modifier = HRP_encouraged_speculation
+				has_modifier = HRP_discouraged_speculation
+			}
+		}
+		custom_tooltip = {
+			text = "Don't change your mind so soon"
+			NOT = { has_variable = GA_speculation_cooldown }
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = "The modifier decrease your integration in the global stock exchange"
+		}
+		add_modifier = HRP_discouraged_speculation
+		set_variable = { 
+			name = GA_speculation_cooldown
+			months = 6
+		}
+	}
+}
+
+GA_stop_discouraging_speculation = {
+	name = "Stop Discouraging Speculation"
+	desc = "Stop Discouraging your captialists to take part in the Global Stock Exchange"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		has_modifier = HRP_discouraged_speculation
+		custom_tooltip = {
+			text = "Don't change your mind so soon"
+			NOT = { has_variable = GA_speculation_cooldown }
+		}
+	}
+
+	effect = {
+		remove_modifier = HRP_discouraged_speculation
 		set_variable = { 
 			name = GA_speculation_cooldown 
 			months = 6

@@ -443,6 +443,8 @@ america_migration_check = {
 						has_modifier =  american_migration_gp_attraction
 					}
 				}
+				remove_modifier =  american_migration_gp_attraction
+				remove_modifier =  american_migration_mp_attraction
 			}
         }
     }
