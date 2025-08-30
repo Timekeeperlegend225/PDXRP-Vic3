@@ -28,7 +28,7 @@
  
  
  bolivian: "Confederal"
- colombian: "Gran Colombian"
+ colombian: "Grand Colombian"
  
  
   completed_pan_national_project_tt: "We have successfully completed any of the #bold Gran Colombia#!, or #bold Bolivar's Ambition#! [Concept('concept_journal_entry', '$concept_journal_entries$')]"
@@ -85,3 +85,8 @@
  
  decree_promote_national_values_SA:0 "Promote National Values"
  decree_promote_national_values_SA_desc:0 "Increase cultural assimilation and religious conversion rates"
+ 
+ tuvan:0 "Franco-Japanese"
+ sara:0 "Outremer"
+ 
+ PAP:0 "Papal State"
