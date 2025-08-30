@@ -3601,8 +3601,8 @@ TPG = {
 	country_type = unrecognized
 	tier = empire
 	cultures = { han hakka }
-	religion = protestant
-	capital = STATE_NANJING
+	religion = oriental_catholic
+	capital = STATE_GUANGDONG
 }
 
 GNI = {

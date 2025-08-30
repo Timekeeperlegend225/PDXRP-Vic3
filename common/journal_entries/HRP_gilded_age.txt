@@ -6,13 +6,117 @@
 	immediate = {
 		set_variable = current_growth_setup
 		set_variable = GA_rp_national 
+		if ={
+			limit ={
+				this = c:GBR
+			}
+			set_variable = {
+				name = GA_rp_national
+				value = 0.4
+			}
+		} 
+		else_if ={
+			limit ={
+				OR = {
+					this = c:BIC
+					this = c:KRA
+				}
+			}
+			set_variable = {
+				name = GA_rp_national
+				value = 0.3
+			}
+		} 
+		else_if ={
+			limit ={
+				this = c:AUS
+			}
+			set_variable = {
+				name = GA_rp_national
+				value = 0.2
+			}
+		}
+		else_if ={
+			limit ={
+				OR = {
+					this = c:CAN
+					this = c:AST
+					this = c:PER
+					this = c:SAF
+					this = c:TRN
+				}
+			}
+			set_variable = {
+				name = GA_rp_national
+				value = 0.15
+			}
+		}
+		else_if ={
+			limit ={
+				OR = {
+					this = c:NET
+					this = c:FRA
+					this = c:SIA
+				}
+			}
+			set_variable = {
+				name = GA_rp_national
+				value = 0.10
+			}
+		}
+		else_if ={
+			limit ={
+				OR = {
+					this = c:PRU
+					this = c:ITA
+					this = c:SWE
+					this = c:NOR
+					this = c:SPA
+					this = c:GCO
+					this = c:RUS
+					this = c:POR
+					this = c:TUR
+					this = c:BEL
+					this = c:ALD
+					this = c:ECU
+					this = c:SWI
+					this = c:USA
+					this = c:JAP
+					this = c:BRA
+				}
+			}
+			set_variable = {
+				name = GA_rp_national
+				value = 0.05
+			}
+		}
+		else_if ={
+			limit ={
+				this = c:PBC
+			}
+			set_variable = {
+				name = GA_rp_national
+				value = 0.03
+			}
+		}
+		else_if ={
+			limit ={
+				this = c:CHL
+			}
+			set_variable = {
+				name = GA_rp_national
+				value = 0.02
+			}
+		}
+		else ={
+			set_variable = {
+				name = GA_rp_national
+				value = 0
+			}
+		}
 		set_variable = {
 			name = GM_action_cost
 			value = gdp
-		}
-		change_variable = {
-			name = GA_previous_global_gpd
-			divide = -10
 		}
 		set_variable = {
 			name = Gilded_actions
@@ -38,6 +142,8 @@
 	scripted_button = GA_sell_action
 	scripted_button = GA_encourage_speculation
 	scripted_button = GA_stop_encouraging_speculation
+	scripted_button = GA_discourage_speculation
+	scripted_button = GA_stop_discouraging_speculation
 
 	on_monthly_pulse = {
 		effect = {
@@ -48,6 +154,7 @@
 			clamp_variable = {
 				name = GM_action_cost
 				min = 100000
+				max = 10000000
 			}
 			set_variable = {
 				name = temp_growth
@@ -134,13 +241,9 @@ je_HRP_gilded_age_gm = {
 	}
 
 	immediate = {
-		set_global_variable = { 
-			name = GA_previous_global_gpd
-			value = 0
-		}
 		every_country = {
-			change_global_variable = {
-				name = GA_previous_global_gpd
+			set_variable = {
+				name = GA_prev_national_GDP
 				add = gdp
 			}
 		}
@@ -173,6 +276,8 @@ je_HRP_gilded_age_gm = {
 	scripted_button = GA_sell_action
 	scripted_button = GA_encourage_speculation
 	scripted_button = GA_stop_encouraging_speculation
+	scripted_button = GA_discourage_speculation
+	scripted_button = GA_stop_discouraging_speculation
 
 	status_desc = {
 	}
@@ -208,6 +313,7 @@ je_HRP_gilded_age_gm = {
 			clamp_variable = {
 				name = GM_action_cost
 				min = 100000
+				max = 10000000
 			}
 			set_variable = {
 				name = temp_growth
@@ -259,10 +365,6 @@ je_HRP_gilded_age_gm = {
 				subtract = principal
 			}
 			set_global_variable = { 
-				name = GA_previous_global_gpd
-				value = global_var:GA_current_global_gpd
-			} 
-			set_global_variable = { 
 				name = GA_current_global_gpd
 				value = 0
 			}
@@ -270,31 +372,84 @@ je_HRP_gilded_age_gm = {
 				name = GA_companies_prosperity
 				value = 0
 			} 
-			every_country = {
+			set_global_variable = { 
+				name = GA_global_private
+				value = 0
+			}
+			every_country = { 
+				set_variable = {
+					name = GA_national_GDP
+					value = gdp
+				} 
+				set_variable = {
+					name = GA_national_GDP_dif
+					value = var:GA_national_GDP
+				}  
+				change_variable = {
+					name = GA_national_GDP_dif
+					subtract = var:GA_prev_national_GDP
+				} 
+				set_variable = {
+					name = GA_integration_private
+					value = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
+				} 
+				change_variable = {
+					name = GA_integration_private
+					divide = 100
+				}
+				change_variable = {
+					name = GA_integration_private
+					add = 1
+				} 
+				change_variable = {
+					name = GA_national_GDP_dif
+					multiply = var:GA_integration_private
+				}
 				change_global_variable = {
 					name = GA_current_global_gpd
-					add = gdp
+					add = var:GA_national_GDP_dif
 				}
+				set_variable = {
+					name = GA_prev_national_GDP
+					value = var:GA_national_GDP
+				} 
 				every_company = {
 					change_global_variable = {
 						name = GA_companies_prosperity
 						add = this.company_prosperity
 					} 
 				}
+				set_variable = {
+					name = GA_private
+					value = investment_pool_gross_income
+				} 
+				if = {
+					limit = {
+						has_modifier = HRP_encouraged_speculation
+					}
+					change_variable = {
+						name = GA_private
+						multiply = 2
+					} 
+				}
+				else_if = {
+					limit = {
+						has_modifier = Discouraged
+					}
+					change_variable = {
+						name = GA_private
+						divide = 2
+					} 
+				}
+				change_global_variable = {
+					name = GA_global_private
+					add = var:GA_private
+				}
 			}
-			set_global_variable = { 
-				name = GA_global_gpd_difference
-				value = global_var:GA_current_global_gpd
-			} 
-			change_global_variable = {
-				name = GA_global_gpd_difference
-				subtract = global_var:GA_previous_global_gpd
-			} 
 			set_global_variable = { 
 				name = GA_global_trade
 				value = 0
 			} 
-			GA_global_trade_calculation
 			set_global_variable = { 
 				name = GA_tech_joint
 				value = 0
@@ -479,6 +634,7 @@ je_HRP_gilded_age_gm = {
 			}
 			HRP_GA_infinite_growth_progress = yes 
 			HRP_GA_national_speculation_progress = yes
+			GA_global_trade_calculation
 		}
 	}
 }

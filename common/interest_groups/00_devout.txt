@@ -449,6 +449,14 @@
 		}
 		else_if = {
 			limit = {
+				owner = {
+					c:MOR ?= this
+				}
+			}
+			change_character_religion = rel:sunni
+		}
+		else_if = {
+			limit = {
 				NOT = {
 					owner = {
 						has_law = law_type:law_state_atheism
@@ -470,6 +478,11 @@
 				exists = c:BIC
 				owner ?= c:BIC
 				has_pop_religion = hindu
+			}
+			AND = {
+				exists = c:MOR
+				owner ?= c:MOR
+				has_pop_religion = sunni
 			}
 		}
 		NOT = {

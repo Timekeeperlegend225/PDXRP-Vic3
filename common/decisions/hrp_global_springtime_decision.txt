@@ -104,7 +104,9 @@ global_springtime_decision = {
 
 nationalist_claim = {
 	is_shown = {
-        has_global_variable = age_of_springtime_gm
+		NOT = {
+			has_global_variable = age_of_concert_gm
+		}
 		any_state_region = {
 			any_scope_state = {
 				is_homeland_of_country_cultures = ROOT
@@ -117,12 +119,12 @@ nationalist_claim = {
 	possible = {
 		has_technology_researched = nationalism
 		any_state_region = {
+			is_homeland_of_country_cultures = ROOT
 			any_scope_state = {
-				is_homeland_of_country_cultures = ROOT
 				NOT = { owner = ROOT }
-				NOT = { owner = { has_subject_relation_with = ROOT } 
-				NOT = { has_claim_by = ROOT }
+				NOT = { owner = { has_subject_relation_with = ROOT } }
 			}
+			NOT = { has_claim_by = ROOT }
 		}
 	}
 
@@ -132,9 +134,9 @@ nationalist_claim = {
 				any_scope_state = {
 					is_homeland_of_country_cultures = ROOT
 					NOT = { owner = ROOT }
-					NOT = { owner = { has_subject_relation_with = ROOT } 
-					NOT = { has_claim_by = ROOT }
+					NOT = { owner = { has_subject_relation_with = ROOT } } 
 				}
+				NOT = { has_claim_by = ROOT }
 			}
 			add_claim = ROOT
 		}
