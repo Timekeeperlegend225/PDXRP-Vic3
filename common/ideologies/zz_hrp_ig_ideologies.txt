@@ -112,6 +112,15 @@ ideology_jacksonian_democrat = {
 		c:USA ?= this
 	}
 
+	interest_group_leader_trigger = {
+		always = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		NOT = { has_role = agitator }
+		always = yes
+	}
+
 	interest_group_leader_weight = {
 		value = 300
 		if = {
