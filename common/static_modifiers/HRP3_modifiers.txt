@@ -720,3 +720,47 @@ tamed_modifier = {
 	building_group_bg_plantations_throughput_add = 0.15
 	building_group_bg_extraction_throughput_add = 0.15
 }
+
+movement_attraction_10={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds 
+	political_movement_pop_attraction_mult = 0.1
+}
+movement_radicalism_10_attraction_25={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds 
+	political_movement_pop_attraction_mult = 0.25
+	political_movement_radicalism_add = 0.1
+}
+
+ottoman_angry_landowners_modifier={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds 
+	interest_group_ig_landowners_approval_add = -5
+	interest_group_ig_landowners_pol_str_mult = -0.15
+}
+movement_attraction_15={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds 
+	political_movement_pop_attraction_mult = 0.15
+}
+pbc_migration_modifier = {
+	icon = gfx/interface/icons/ig_icons/rural_folk.dds
+	state_migration_pull_mult = 0.5
+}
+pbc_cash_for_migration_modifier = {
+	icon = gfx/interface/icons/ig_icons/rural_folk.dds
+	country_tax_income_add = -5000
+}
+prestige_20_modifier = 
+{
+	icon = gfx/interface/icons/generic_icons/prestige
+	country_prestige_add = 20
+}
+
+pope_angry_5_modifier = 
+{
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	interest_group_ig_devout_approval_add  = -5
+}
+pope_angry_8_modifier = 
+{
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	interest_group_ig_devout_approval_add = -8
+}
