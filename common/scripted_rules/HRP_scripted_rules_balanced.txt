@@ -29,6 +29,10 @@ unlock_power_bloc_principle_slot_4 = {
 	}
 }
 
+unlock_power_bloc_formation_principle_slot_3 = {
+	has_dlc_feature = power_bloc_features
+}
+
 # Root = Country
 can_form_power_bloc = {
 	country_rank >= rank_value:minor_power
