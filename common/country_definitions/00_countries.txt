@@ -5026,3 +5026,14 @@ IDS = {
 	cultures = { panjabi sindi }
 	capital = STATE_PUNJAB
 }
+
+EZO = {
+	country_type = colonial
+
+	religion = oriental_catholic
+
+	tier = principality
+
+	cultures = { japanese ainu }
+	capital = STATE_HOKKAIDO
+}
