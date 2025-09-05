@@ -11,6 +11,16 @@ GER = {
 	capital = STATE_BRANDENBURG
 }
 
+ETH = {
+	color = { 73  05  07 }
+
+	country_type = unrecognized
+
+	tier = empire
+
+	cultures = { amhara oromo tigray }
+	capital = STATE_GONDER
+}
 GBR = {
 	color = hsv{ 0.99  0.7  0.9 }
 

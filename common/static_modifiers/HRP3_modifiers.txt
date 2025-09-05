@@ -1,7 +1,6 @@
 ﻿citizenship_by_service = {
 	icon = gfx/interface/icons/ig_icons/armed_forces.dds
 	interest_group_ig_armed_forces_pop_attraction_mult = 0.25
-	country_aristocrats_voting_power_add = 50
 	country_officers_voting_power_add = 50
 	country_farmers_voting_power_add = 10
 	country_soldiers_voting_power_add = 20
