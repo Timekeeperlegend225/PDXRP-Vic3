@@ -112,10 +112,6 @@ je_german_unification_idea = {
 			country_has_primary_culture = cu:north_german
 			country_has_primary_culture = cu:south_german
 		}
-		custom_tooltip = {
-			text = "Age of People Started"
-			has_global_variable = age_of_springtime_gm
-		}
 	}
 
 	complete = {

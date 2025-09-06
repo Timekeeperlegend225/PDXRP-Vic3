@@ -301,6 +301,18 @@
 			}
 		}
 
+		if = {
+			limit = {
+				exists = c:ALD
+				owner ?= c:ALD
+				culture = cu:sara
+			}
+			add = {
+				desc = "Outremer"
+				value = 150
+			}
+		}
+
 		add = {
 			desc = "POP_MILITARY_BUREAUCRACY"
 			if = {

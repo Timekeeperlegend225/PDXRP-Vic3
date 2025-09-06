@@ -3924,14 +3924,14 @@ SAV = {
 }
 
 RHE = {
-	color = { 5 85 5 }
+	color = { 5 85 10 }
 
 	country_type = recognized
 
 	tier = principality
 
 	cultures = { north_german }
-	capital = STATE_NORTH_RHINE
+	capital = STATE_RUHR
 	is_named_from_capital = yes
 }
 

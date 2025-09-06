@@ -753,15 +753,6 @@ ideology_ultra_capitalist = {
 
 	character_ideology = yes
 
-	lawgroup_governance_principles = {
-		law_monarchy = neutral
-		law_presidential_republic = approve
-		law_parliamentary_republic = approve
-		law_corporate_state = neutral
-		law_theocracy = disapprove
-		law_council_republic = strongly_disapprove
-	}
-
 	lawgroup_distribution_of_power = {
 		law_autocracy = disapprove
 		law_oligarchy = strongly_approve
@@ -792,20 +783,33 @@ ideology_ultra_capitalist = {
 		law_isolationism = strongly_disapprove
 	}
 
-	lawgroup_taxation = {
-		law_land_based_taxation = neutral
-		law_consumption_based_taxation = neutral
-		law_per_capita_based_taxation = neutral
-		law_proportional_taxation = disapprove
-		law_graduated_taxation = strongly_disapprove
-	}
-
 	lawgroup_land_reform = {
 		law_serfdom = disapprove
 		law_tenant_farmers = neutral
 		law_homesteading = disapprove
 		law_collectivized_agriculture = strongly_disapprove
 		law_commercialized_agriculture = strongly_approve
+	}
+
+	lawgroup_education_system = {
+		law_public_schools = strongly_disapprove
+		law_religious_schools = neutral
+		law_private_schools = strongly_approve
+		law_no_schools = approve
+	}
+
+	lawgroup_health_system = {
+		law_charitable_health_system = neutral
+		law_public_health_insurance = strongly_disapprove
+		law_no_health_system = approve
+		law_private_health_insurance = strongly_approve
+	}
+
+	lawgroup_health_system = {
+		law_charitable_health_system = neutral
+		law_public_health_insurance = strongly_disapprove
+		law_no_health_system = neutral
+		law_private_health_insurance = strongly_approve
 	}
 
 	lawgroup_labor_rights = {
@@ -898,7 +902,7 @@ ideology_eugenist = {
 		law_oligarchy = approve
 		law_landed_voting = disapprove
 		law_wealth_voting = neutral
-		law_single_party_state = neutral
+		law_single_party_state = approve
 		law_census_voting = neutral
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
@@ -944,44 +948,90 @@ ideology_eugenist = {
 		law_compulsory_primary_school = approve
 	}
 
+	country_trigger = {
+		has_technology_researched = empiricism
+		has_global_variable = positivism_invented
+	}
+
 	interest_group_leader_trigger = {
-		ideology_bonapartist_valid_trigger = yes
+		ideology_positivist_valid_trigger = yes
 	}
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
-		ideology_bonapartist_valid_trigger = yes
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_technocracy
+				has_law = law_type:law_state_atheism
+				has_law = law_type:law_ethnostate
+				has_law = law_type:law_command_economy
+				has_law = law_type:law_public_schools
+				has_law = law_type:law_compulsory_primary_school
+			}
+		}
+		interest_group = {
+			ideology_positivist_valid_trigger = yes
+		}
 	}
 
 	interest_group_leader_weight = {
-		value = 200
-		# less likely in a theocracy
+		value = 25
+		# More likely among angry IG's
+		if = {
+			limit = {
+				ig_approval <= unhappy
+			}
+			add = 50
+		}
+		# More likely in constitutional monarchies
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_theocracy
+					has_law = law_type:law_monarchy
+					OR = {
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+						has_law = law_type:law_landed_voting
+					}
 				}
 			}
-			add = -75
+			add = 100
 		}
-
-		# more likely for PB and AF
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = ig_armed_forces
-					is_interest_group_type = ig_devout
+				owner = {
+					has_variable = positivist_leaders_less_je_var
 				}
 			}
 			add = 50
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
 		if = {
 			limit = {
-				has_variable = anti_dreyfusard_victory
+				owner = {
+					has_variable = positivist_leaders_je_var
+				}
 			}
-			add = 50
+			add = 100
+		}
+		if = {
+			limit = {
+				has_variable = positivist_leaders_increase_var
+			}
+			add = 75
+		}
+		if = {
+			limit = {
+				has_variable = positivist_leaders_large_increase_var
+			}
+			add = 150
+		}
+		if = {
+			limit = {
+				has_variable = positivist_leaders_reward_var
+			}
+			add = 250
 		}
 		if = {
 			limit = {
@@ -991,10 +1041,29 @@ ideology_eugenist = {
 					has_variable = chose_anarchism
 					has_variable = chose_communism
 					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
 					has_variable = chose_fascism
 				}
 			}
 			multiply = 0.1
+		}
+		if = {
+			limit = {
+				exists = c:ALD
+				owner = { c:ALD = THIS }
+			}
+			if = {
+				limit = {
+					is_interest_group_type = ig_petty_bourgeoisie
+				}
+				add = 200
+			}
+			else_if
+				limit = {
+					is_interest_group_type = ig_intelligentsia
+				}
+				multiply = 0.1
+			}
 		}
 	}
 
@@ -1009,6 +1078,7 @@ ideology_eugenist = {
 						has_variable = chose_anarchism
 						has_variable = chose_communism
 						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
 						has_variable = chose_fascism
 					}
 				}
