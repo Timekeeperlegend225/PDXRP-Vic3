@@ -736,31 +736,120 @@ ottoman_angry_landowners_modifier={
 	interest_group_ig_landowners_approval_add = -5
 	interest_group_ig_landowners_pol_str_mult = -0.15
 }
+
 movement_attraction_15={
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds 
 	political_movement_pop_attraction_mult = 0.15
 }
+
 pbc_migration_modifier = {
 	icon = gfx/interface/icons/ig_icons/rural_folk.dds
 	state_migration_pull_mult = 0.5
 }
+
 pbc_cash_for_migration_modifier = {
 	icon = gfx/interface/icons/ig_icons/rural_folk.dds
 	country_tax_income_add = -5000
 }
-prestige_20_modifier = 
-{
+
+prestige_20_modifier = {
 	icon = gfx/interface/icons/generic_icons/prestige
 	country_prestige_add = 20
 }
 
-pope_angry_5_modifier = 
-{
+pope_angry_5_modifier = {
 	icon = gfx/interface/icons/ig_icons/devout.dds
 	interest_group_ig_devout_approval_add  = -5
 }
-pope_angry_8_modifier = 
-{
+
+pope_angry_8_modifier = {
 	icon = gfx/interface/icons/ig_icons/devout.dds
 	interest_group_ig_devout_approval_add = -8
+}
+
+aus_ationalist_turmoil_modifier = {
+	icon = gfx/interface/icons/invention_icons/nationalism.dds
+	state_pop_support_movement_cultural_minority_add = 10
+	state_pop_support_movement_cultural_minority_mult = 0.25
+	political_movement_radicalism_add = 0.25
+}
+
+unprotected_hawai_modifier = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	country_prestige_add = -50
+}
+
+carlist_sympathies_modifier = {
+	icon = gfx/interface/icons/ig_icons/landowners.dds
+	interest_group_ig_landowners_approval_add = -15
+	interest_group_ig_landowners_pol_str_mult = 2
+	state_pop_support_movement_royalist_absolutist_mult = 0.25
+}
+
+carlist_outrage_modifier = {
+	icon = gfx/interface/icons/ig_icons/landowners.dds
+	political_movement_radicalism_add = 0.9
+}
+
+dominion_of_eden_modifier = {
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	state_pop_support_movement_religious_majority_add = 10
+	state_pop_support_movement_religious_majority_mult = 1
+	interest_group_ig_devout_pol_str_mult = 2
+	interest_group_ig_landowners_pol_str_mult = -0.3
+	interest_group_ig_rural_folk_pol_str_mult = 1
+}
+
+chile_home_affair_modifier = {
+	icon = gfx/interface/icons/institution_icons/home_affairs.dds
+	country_institution_home_affairs_max_investment_add = 1
+	country_institution_cost_institution_home_affairs_mult = 0.1
+}
+
+liberian_colonies_modifier = {
+	icon = gfx/interface/icons/institution_icons/colonization.dds
+	state_colony_growth_speed_mult  = 0.5
+}
+
+not_assimilating_outremer_modifier = {
+	icon = gfx/interface/icons/generic_icons/assimilation.dds
+    state_assimilation_mult = -0.9
+}
+
+eugenist_defector_modifier = {
+	icon = gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_malthusian.dds
+    interest_group_ig_industrialists_pol_str_mult = -0.1
+	interest_group_ig_industrialists_pop_attraction_mult = -0.2
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.1
+	interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.20
+}
+
+agitating_eugenist_modifier = {
+	icon = gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_malthusian.dds
+	political_movement_radicalism_add = 0.20
+}
+
+capitalist_banned_to_india_modifier = {
+	icon = gfx/interface/icons/ig_icons/industrialists.dds
+	interest_group_ig_industrialists_approval_add = -10
+	country_authority_add = -300
+}
+
+victorian_monarchy_modifier = {
+	icon = gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_humanitarian_royalist.dds
+	country_capitalists_pol_str_mult = -0.65
+	state_capitalists_investment_pool_efficiency_mult = -0.2
+	country_academics_pol_str_mult = 0.33
+}
+
+suffrage_compromise_modifier = {
+	icon = gfx/interface/icons/law_icons/census_voting.dds
+	country_voting_power_wealth_threshold_add = 15
+	country_voting_power_from_literacy_add = 30
+}
+
+exiled_capitalists_modifier = {
+	icon = gfx/interface/icons/pops_icons/capitalists.dds
+	country_liberty_desire_add = 0.20
+	state_capitalists_investment_pool_efficiency_mult = 0.1
 }

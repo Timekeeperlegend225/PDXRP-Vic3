@@ -4567,6 +4567,7 @@ movement_positivist = {
 	ideology = ideology_positivist_movement
 	character_ideologies = {
 		ideology_positivist
+		ideology_eugenist
 	}
 
 	creation_trigger = {
@@ -4606,6 +4607,7 @@ movement_positivist = {
 			}
 			OR = {
 				has_ideology = ideology:ideology_positivist
+				has_ideology = ideology:ideology_eugenist
 				has_ideology = ideology:ideology_nihilist
 				has_ideology = ideology:ideology_republican_leader
 				is_interest_group_type = ig_armed_forces
@@ -4614,6 +4616,7 @@ movement_positivist = {
 		trigger_else = {
 			OR = {
 				has_ideology = ideology:ideology_positivist
+				has_ideology = ideology:ideology_eugenist
 				has_ideology = ideology:ideology_nihilist
 				has_ideology = ideology:ideology_republican_leader
 				interest_group ?= {
@@ -4631,7 +4634,7 @@ movement_positivist = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_positivist
-					has_ideology = ideology:ideology_positivist
+				has_ideology = ideology:ideology_eugenist
 				}
 			}
 			multiply = {
@@ -4843,6 +4846,61 @@ movement_positivist = {
 					value = 3
 					desc = "LOWER_NO_ICON"
 				}
+			}
+		}
+		if = {
+			limit = {
+				exists = c:ALD
+				owner ?= c:ALD
+			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 10
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = officers
+				}
+				if = {
+					limit = {
+						owner ?= {
+							OR = {
+								has_law = law_type:law_professional_army
+								has_law = law_type:law_mass_conscription
+							}
+						}
+					}
+					add = {
+						value = -25
+						desc = "Army indiference"
+					}
+				}
+				else = {
+					add = {
+						value = -15
+						desc = "Army indiference"
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = -10
+					desc = "Army indiference"
+				}
+			}
+			add = {
+				value = pop_acceptance
+				multiply = 0.5
+				add = -25
+				desc = "ACCEPTANCE"
 			}
 		}
 

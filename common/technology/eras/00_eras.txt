@@ -5,7 +5,7 @@ era_1 = { #Pre-1836
 }
 
 era_2 = { #1836-1861
-	technology_cost = 6000 # for progress bonuses, use an approximate third: 3500
+	technology_cost = 5000 # for progress bonuses, use an approximate third: 3500
 }
 
 era_3 = { #1862-1886

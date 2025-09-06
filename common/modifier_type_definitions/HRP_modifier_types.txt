@@ -14,3 +14,12 @@ state_mortality_wealth_mult={
 		ai_value=0
 	}
 }
+
+country_institution_cost_institution_home_affairs_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
