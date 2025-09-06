@@ -23,9 +23,9 @@
 		ig:ig_devout = {
 			remove_ideology = ideology_buddhist_moralist
 			add_ideology = ideology_moralist
-				set_ig_trait = ig_trait:ig_trait_pious_fiction
-				set_ig_trait = ig_trait:ig_trait_divine_right
-			set_ig_trait = ig_trait:ig_trait_heavenly_mission 
+			set_ig_trait = ig_trait:ig_trait_haibutsu_kishaku
+			set_ig_trait = ig_trait:ig_trait_secular_shrine_theory
+			set_ig_trait = ig_trait:ig_trait_heavenly_sovereign
 			leader ?= {
 				change_character_religion = rel:oriental_catholic
 			}
