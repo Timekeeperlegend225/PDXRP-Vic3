@@ -107,6 +107,9 @@ japan_radicals_modifier:0 "Radical Activism"
  ideology_bonapartist:0 "Old Bonapartist"
  ideology_neo_bonapartist:0 "Neo Bonapartist"
  
+ ideology_eugenist:0 "Eugenist"
+ ideology_eugenist_desc:0 "This character believe in an society were everyone is classified by its potential to improve the future of humankind"
+ 
  ideology_victorian_idealist:0 "Victorian Idealist"
  ideology_victorian_idealist_desc:0 "Victoria believes in a hierarchy in which the government takes care of their subjects as long as they understand their place in society.
  
@@ -125,3 +128,17 @@ ig_trait_heavenly_mission:0 "Heavenly Mission"
 ig_trait_heavenly_mission_desc:0 "Has there ever been a word so true and a mission as important as ours? Verily, we are the Light of the World and it is on us to enlighten those who are blind."
 
 yeeehaw_modifier:0 "Go West, Young Man"
+
+
+ PAT:0 "Patagonia"
+ PAT_ADJ:0 "Patagonian"
+ 
+ POL:0 "Dominion of Eden"
+ POL_ADJ:0 "Edenist"
+ 
+ LIB:0 "United States of West Africa"
+ LIB_ADJ:0 "African"
+ 
+ 
+ country_institution_cost_institution_home_affairs_mult: "@bur![Nbsp][concept_bureaucracy] Cost of [GetInstitutionType('institution_home_affairs').GetName]"
+ country_institution_cost_institution_home_affairs_mult_desc: "An increase or reduction to the @bur![Nbsp][concept_bureaucracy] cost of bringing [GetInstitutionType('institution_home_affairs').GetName] to the citizens"

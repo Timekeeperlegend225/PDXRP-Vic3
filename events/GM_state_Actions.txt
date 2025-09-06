@@ -142,6 +142,47 @@ gm_state_actions.1 = {
 			popup = yes
 		}
 	}
+	
+	option = {
+		name = "Add Wild west"
+		trigger = {
+			scope:scope_target_state = {
+				NOT = {
+					has_modifier = yeeehaw_modifier
+				}
+			}
+		}
+		scope:scope_target_state = {
+			add_modifier = yeeehaw_modifier
+		}
+		trigger_event = {
+			id = gm_state_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = "Remove Wild west"
+		trigger = {
+			scope:scope_target_state = {
+				has_modifier = yeeehaw_modifier
+			}
+		}
+		scope:scope_target_state = {
+			remove_modifier = yeeehaw_modifier
+			add_modifier = {
+				name = tamed_modifier           
+				months = 120
+				is_decaying = yes
+			}
+		}
+		trigger_event = {
+			id = gm_state_actions.1
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 gm_state_actions.2 = {

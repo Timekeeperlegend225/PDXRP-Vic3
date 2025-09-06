@@ -4643,7 +4643,7 @@ gm_actions.400 = {
 				save_scope_as = relevant_ig
 			}
 		}
-		scope:target_character = {
+		scope:target_character = { 
 			set_interest_group = scope:relevant_ig
 		}
 		trigger_event = {
@@ -4669,7 +4669,7 @@ gm_actions.400 = {
 				save_scope_as = relevant_ig
 			}
 		}
-		scope:target_character = {
+		scope:target_character = { 
 			set_interest_group = scope:relevant_ig
 		}
 		trigger_event = {
@@ -4695,7 +4695,7 @@ gm_actions.400 = {
 				save_scope_as = relevant_ig
 			}
 		}
-		scope:target_character = {
+		scope:target_character = { 
 			set_interest_group = scope:relevant_ig
 		}
 		trigger_event = {
@@ -4721,7 +4721,7 @@ gm_actions.400 = {
 				save_scope_as = relevant_ig
 			}
 		}
-		scope:target_character = {
+		scope:target_character = { 
 			set_interest_group = scope:relevant_ig
 		}
 		trigger_event = {
@@ -4747,7 +4747,7 @@ gm_actions.400 = {
 				save_scope_as = relevant_ig
 			}
 		}
-		scope:target_character = {
+		scope:target_character = { 
 			set_interest_group = scope:relevant_ig
 		}
 		trigger_event = {
@@ -4773,7 +4773,7 @@ gm_actions.400 = {
 				save_scope_as = relevant_ig
 			}
 		}
-		scope:target_character = {
+		scope:target_character = { 
 			set_interest_group = scope:relevant_ig
 		}
 		trigger_event = {
@@ -4799,7 +4799,7 @@ gm_actions.400 = {
 				save_scope_as = relevant_ig
 			}
 		}
-		scope:target_character = {
+		scope:target_character = { 
 			set_interest_group = scope:relevant_ig
 		}
 		trigger_event = {
@@ -4825,7 +4825,7 @@ gm_actions.400 = {
 				save_scope_as = relevant_ig
 			}
 		}
-		scope:target_character = {
+		scope:target_character = { 
 			set_interest_group = scope:relevant_ig
 		}
 		trigger_event = {
@@ -5537,6 +5537,19 @@ gm_actions.406 = {
 			popup = yes
 		}
 	}
+		
+	option = { 
+		name =ideology_utopian
+		default_option = yes
+		scope:target_character = {
+			set_ideology = ideology:ideology_utopian
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
 	
 	option = { 
 		name =ideology_communist
@@ -5614,12 +5627,12 @@ gm_actions.406 = {
 			popup = yes
 		}
 	}
-		
+	
 	option = { 
-		name =ideology_utopian
+		name =ideology_eugenist
 		default_option = yes
 		scope:target_character = {
-			set_ideology = ideology:ideology_utopian
+			set_ideology = ideology:ideology_eugenist
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -8780,6 +8793,100 @@ gm_actions.100 = {
 		}
 		scope:recipient = {
 			remove_modifier = eternal_president_modifier
+		}
+	}
+	
+	option = {
+		name = "France Victory on Prussia"
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		create_country = {
+			tag = RHE
+			origin = c:FRA
+			state = s:STATE_RUHR.region_state:PRU
+		}
+		s:STATE_WESTPHALIA.region_state:PRU = {
+			set_state_owner = c:RHE
+			set_state_type = incorporated
+		}
+		s:STATE_HANNOVER.region_state:HAN = {
+			set_state_owner = c:RHE
+			set_state_type = incorporated
+		}
+		c:RHE = {
+			annex_with_incorporation = c:HES
+			annex_with_incorporation = c:NAS
+			annex_with_incorporation = c:FRM
+			annex_with_incorporation = c:OLD
+			annex_with_incorporation = c:HEK
+			annex_with_incorporation = c:WLD
+			annex_with_incorporation = c:SCM
+			annex_with_incorporation = c:LIP
+		}
+		c:FRA ={
+			power_bloc = {
+				add_leverage = { target = c:RHE value = 1000 }
+			}
+			change_relations = {     
+				country = c:RHE 
+				value = 100 
+			}
+		}
+		every_country = {
+			limit = {
+				is_subject_of = c:PRU
+			}
+			make_independent = yes
+		}
+	}
+	
+	option = {
+		name = "France Victory on Austria"
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		every_country = {
+			limit = {
+				is_subject_of = c:AUS
+			}
+			make_independent = yes
+		}
+		c:AUS = {
+			add_modifier = {
+				name = aus_ationalist_turmoil_modifier           
+				months = 120
+				is_decaying = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "Germans Victory"
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					this = c:UBD
+				}
+				country_has_primary_culture = cu:north_german
+			}
+			c:AUS = {
+				annex_with_incorporation = prev
+			}
+		}
+		every_country = {
+			limit = {
+				country_has_primary_culture = cu:south_german
+			}
+			c:AUS = {
+				annex_with_incorporation = prev
+			}
 		}
 	}
 }
