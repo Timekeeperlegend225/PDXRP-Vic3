@@ -954,7 +954,7 @@ ideology_eugenist = {
 	}
 
 	interest_group_leader_trigger = {
-		ideology_positivist_valid_trigger = yes
+		ideology_eugenist_valid_trigger = yes
 	}
 
 	non_interest_group_leader_trigger = {
@@ -971,7 +971,7 @@ ideology_eugenist = {
 			}
 		}
 		interest_group = {
-			ideology_positivist_valid_trigger = yes
+			ideology_eugenist_valid_trigger = yes
 		}
 	}
 
