@@ -5,6 +5,7 @@
  GM_set_as_heir:0 "Transfer as Heir"
  GM_send_back_as_agitator:0 "Transfer as Agitator"
  set_as_character_target:0 "Set as character target"
+ GM_send_character:0 "Move character to target"
  
  target_character_mod:0 "Target Character"
  
