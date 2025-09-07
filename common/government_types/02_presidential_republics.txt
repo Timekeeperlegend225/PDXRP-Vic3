@@ -354,8 +354,8 @@ gov_french_4th_republic_presidential_dictator = {
 gov_technate_presidential = {
 	transfer_of_power = dictatorial
 
-	male_ruler = "RULER_TITLE_CHIEF_EXECUTIVE"
-	female_ruler = "RULER_TITLE_CHIEF_EXECUTIVE"
+	male_ruler = "RULER_TITLE_SUPREME_PROTECTOR"
+	female_ruler = "RULER_TITLE_SUPREME_PROTECTOR"
 
 	possible = {
 		NOT = { has_modifier = eternal_president_modifier }

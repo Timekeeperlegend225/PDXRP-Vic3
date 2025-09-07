@@ -56,13 +56,42 @@ bolivian_rail_modifier:0 "Bolivian Rail"
 transvaal_mass_migration_modifier:0 "Migration Campaign"
 korea_farmer_clout_modifier:0 "Korea Farmer Clout"
 japan_radicals_modifier:0 "Radical Activism"
+tamed_modifier:0 "Tamed"
+movement_attraction_10:0 "Movement Attraction"
+movement_radicalism_10_attraction_25:0 "Radicalism and Attraction Surge"
+ottoman_angry_landowners_modifier:0 "Angry Ottoman Landowners"
+movement_attraction_15:0 "Movement Attraction"
+pbc_migration_modifier:0 "Migration Incentives"
+pbc_cash_for_migration_modifier:0 "Cash for Migration"
+prestige_20_modifier:0 "Prestige"
+pope_angry_5_modifier:0 "Papal Displeasure"
+pope_angry_8_modifier:0 "Papal Anger"
+aus_ationalist_turmoil_modifier:0 "Austrian Nationalist Turmoil"
+unprotected_hawai_modifier:0 "Unprotected Hawaii"
+carlist_sympathies_modifier:0 "Carlist Sympathies"
+carlist_outrage_modifier:0 "Carlist Outrage"
+dominion_of_eden_modifier:0 "Dominion of Eden"
+chile_home_affair_modifier:0 "Chilean Home Affairs"
+liberian_colonies_modifier:0 "Liberian Colonies"
+not_assimilating_outremer_modifier:0 "Resistance in Outremer"
+eugenist_defector_modifier:0 "Eugenist Defector"
+agitating_eugenist_modifier:0 "Agitating Eugenist"
+capitalist_banned_to_india_modifier:0 "Capitalists Banished to India"
+victorian_monarchy_modifier:0 "Victorian Monarchy"
+suffrage_compromise_modifier:0 "Suffrage Compromise"
+exiled_capitalists_modifier:0 "Exiled Capitalists"
+brazilian_migration_attraction_modifier:0 "Brazilian Migration Drive"
+french_failure_modifier:0 "French Fiasco"
+ethiopia_science_modifer:0 "Ethiopian Scientific Progress"
+prestige_50_modifier:0 "Prestige"
 
 
  
  bolivian: "Confederal"
  colombian: "Gran Colombian"
  
- 
+  RULER_TITLE_SUPREME_PROTECTOR: "Supreme Protector"
+  gov_technate_presidential: "Technocratic Dictatorship"
   completed_pan_national_project_tt: "We have successfully completed any of the #bold Gran Colombia#!, or #bold Bolivar's Ambition#! [Concept('concept_journal_entry', '$concept_journal_entries$')]"
   
   
@@ -142,3 +171,5 @@ yeeehaw_modifier:0 "Go West, Young Man"
  
  country_institution_cost_institution_home_affairs_mult: "@bur![Nbsp][concept_bureaucracy] Cost of [GetInstitutionType('institution_home_affairs').GetName]"
  country_institution_cost_institution_home_affairs_mult_desc: "An increase or reduction to the @bur![Nbsp][concept_bureaucracy] cost of bringing [GetInstitutionType('institution_home_affairs').GetName] to the citizens"
+ 
+ 
