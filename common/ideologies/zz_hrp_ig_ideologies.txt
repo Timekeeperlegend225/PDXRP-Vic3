@@ -288,6 +288,13 @@ ideology_bonapartist = {
 
 	interest_group_leader_weight = {
 		value = 200
+		if = {
+			limit = {
+				exists = c:ALD
+				owner = { c:ALD = THIS }
+			}
+			add = -100
+		}
 		# less likely in a theocracy
 		if = {
 			limit = {
@@ -984,21 +991,6 @@ ideology_eugenist = {
 			}
 			add = 50
 		}
-		# More likely in constitutional monarchies
-		if = {
-			limit = {
-				owner = {
-					has_law = law_type:law_monarchy
-					OR = {
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_universal_suffrage
-						has_law = law_type:law_landed_voting
-					}
-				}
-			}
-			add = 100
-		}
 		if = {
 			limit = {
 				owner = {
@@ -1051,19 +1043,9 @@ ideology_eugenist = {
 			limit = {
 				exists = c:ALD
 				owner = { c:ALD = THIS }
+				is_interest_group_type = ig_intelligentsia
 			}
-			if = {
-				limit = {
-					is_interest_group_type = ig_petty_bourgeoisie
-				}
-				add = 200
-			}
-			else_if
-				limit = {
-					is_interest_group_type = ig_intelligentsia
-				}
-				multiply = 0.1
-			}
+			multiply = 0.1
 		}
 	}
 
