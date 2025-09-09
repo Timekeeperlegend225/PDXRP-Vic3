@@ -873,3 +873,7 @@ prestige_50_modifier = {
 	icon = gfx/interface/icons/generic_icons/prestige
 	country_prestige_add = 50
 }
+happy_military_modifier = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	interest_group_approval_add = 10
+}
