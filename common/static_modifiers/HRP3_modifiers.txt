@@ -877,3 +877,29 @@ happy_military_modifier = {
 	icon = gfx/interface/icons/ig_icons/armed_forces.dds
 	interest_group_approval_add = 10
 }
+
+great_exhibition_modifier = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_tech_spread_mult = 0.1
+}
+movement_activism__25_attraction_10_modifier={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_radicalism_add = 0.20
+	political_movement_pop_attraction_mult = 0.1
+}
+attraction_10_movement={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_pop_attraction_mult = 0.1
+}
+attraction_20_movement={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_pop_attraction_mult = 0.2
+}
+attraction_30_movement={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_pop_attraction_mult = 0.3
+}
+petit_bourg_france_attraction_modifier={
+	icon = gfx/interface/icons/ig_icons/petty_bourgeoisie.dds
+	interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.2
+}
