@@ -4848,61 +4848,6 @@ movement_positivist = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				exists = c:ALD
-				owner ?= c:ALD
-			}
-			if = {
-				limit = {
-					is_pop_type = shopkeepers
-				}
-				add = {
-					value = 10
-					desc = "POP_SHOPKEEPERS"
-				}
-			}
-			else_if = {
-				limit = {
-					is_pop_type = officers
-				}
-				if = {
-					limit = {
-						owner ?= {
-							OR = {
-								has_law = law_type:law_professional_army
-								has_law = law_type:law_mass_conscription
-							}
-						}
-					}
-					add = {
-						value = -25
-						desc = "Army indiference"
-					}
-				}
-				else = {
-					add = {
-						value = -15
-						desc = "Army indiference"
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					is_pop_type = soldiers
-				}
-				add = {
-					value = -10
-					desc = "Army indiference"
-				}
-			}
-			add = {
-				value = pop_acceptance
-				multiply = 0.5
-				add = -25
-				desc = "ACCEPTANCE"
-			}
-		}
 
 		if = {
 			limit = {

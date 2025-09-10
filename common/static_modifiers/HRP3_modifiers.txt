@@ -903,3 +903,8 @@ petit_bourg_france_attraction_modifier={
 	icon = gfx/interface/icons/ig_icons/petty_bourgeoisie.dds
 	interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.2
 }
+
+and_now_we_are_totalitarian_modifier= {
+	icon = gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds
+	political_movement_pop_attraction_mult = 1
+}

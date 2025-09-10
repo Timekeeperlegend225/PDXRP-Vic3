@@ -81,7 +81,7 @@ ideology_jacksonian_democrat = {
 		law_anarchy = strongly_disapprove
 		law_oligarchy = approve
 		law_autocracy = strongly_approve
-		law_single_party_state = strongly_approve
+		law_single_party_state = approve
 		law_technocracy = neutral
 	}
 
@@ -98,6 +98,17 @@ ideology_jacksonian_democrat = {
 		law_cultural_exclusion = disapprove
 		law_multicultural = strongly_disapprove
 	}
+
+    lawgroup_economic_system = {
+        law_laissez_faire = strongly_disapprove
+        law_interventionism = approve
+        law_agrarianism = neutral
+        law_traditionalism = strongly_disapprove
+        law_cooperative_ownership = disapprove
+        law_command_economy = neutral
+        law_industry_banned = strongly_disapprove
+        law_extraction_economy = strongly_disapprove
+    }
 
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
@@ -177,6 +188,161 @@ ideology_jacksonian_democrat = {
 						has_variable = chose_communism
 						has_variable = chose_ethno_nationalism
 						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_intelligentsia
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			add = -80
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			add = 50
+		}
+	}
+}
+
+ideology_jacksonian_totalitarian = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds"
+
+	character_ideology = yes
+
+    lawgroup_governance_principles = {
+        law_monarchy = strongly_disapprove
+        law_theocracy = strongly_disapprove
+        law_council_republic = strongly_disapprove
+        law_parliamentary_republic = approve
+        law_corporate_state = disapprove
+        law_presidential_republic = neutral
+    }
+
+    lawgroup_distribution_of_power = {
+        law_universal_suffrage = strongly_disapprove
+        law_census_voting = strongly_disapprove
+        law_wealth_voting = disapprove
+        law_landed_voting = disapprove
+        law_anarchy = strongly_disapprove
+        law_oligarchy = approve
+        law_autocracy = approve
+        law_single_party_state = strongly_approve
+        law_technocracy = neutral
+    }
+
+    lawgroup_army_model = {
+        law_national_militia = strongly_disapprove
+        law_mass_conscription = strongly_approve
+        law_peasant_levies = strongly_disapprove
+        law_professional_army = approve
+    }
+
+    lawgroup_internal_security = {
+        law_guaranteed_liberties = strongly_disapprove
+        law_no_home_affairs = strongly_disapprove
+        law_national_guard = approve
+        law_secret_police = strongly_approve
+    }
+
+    lawgroup_economic_system = {
+        law_laissez_faire = strongly_disapprove
+        law_interventionism = approve
+        law_agrarianism = disapprove
+        law_traditionalism = strongly_disapprove
+        law_cooperative_ownership = strongly_disapprove
+        law_command_economy = strongly_approve
+        law_industry_banned = strongly_disapprove
+        law_extraction_economy = strongly_disapprove
+    }
+
+    lawgroup_land_reform = {
+        law_serfdom = strongly_disapprove
+        law_tenant_farmers = neutral
+        law_homesteading = approve
+        law_collectivized_agriculture = neutral
+        law_commercialized_agriculture = strongly_disapprove
+    }
+
+    lawgroup_free_speech = {
+        law_right_of_assembly = disapprove
+        law_censorship = approve
+        law_protected_speech = strongly_disapprove
+        law_outlawed_dissent = strongly_approve
+    }
+
+	country_trigger = {
+		exists = c:USA
+		c:USA ?= this
+	}
+
+	interest_group_leader_trigger = {
+		always = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		NOT = { has_role = agitator }
+		always = yes
+	}
+
+	interest_group_leader_weight = {
+		value = 300
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_conservatism
+				}
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_intelligentsia
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_landowners
+				}
+			}
+			add = -250
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = armed_forces
+				}
+			}
+			add = 300
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
 					}
 				}
 			}
@@ -1066,150 +1232,6 @@ ideology_eugenist = {
 				}
 			}
 			multiply = 0.1
-		}
-	}
-}
-
-ideology_jacksonian_democrat = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/fascist.dds"
-
-	character_ideology = yes
-
-	lawgroup_governance_principles = {
-		law_monarchy = strongly_disapprove
-		law_theocracy = strongly_disapprove
-		law_council_republic = strongly_disapprove
-		law_parliamentary_republic = approve
-		law_corporate_state = disapprove
-		law_presidential_republic = neutral
-	}
-
-	lawgroup_distribution_of_power = {
-		law_universal_suffrage = strongly_disapprove
-		law_census_voting = strongly_disapprove
-		law_wealth_voting = disapprove
-		law_landed_voting = disapprove
-		law_anarchy = strongly_disapprove
-		law_oligarchy = approve
-		law_autocracy = strongly_approve
-		law_single_party_state = strongly_approve
-		law_technocracy = neutral
-	}
-
-	lawgroup_bureaucracy = {
-		law_elected_bureaucrats = neutral
-		law_appointed_bureaucrats = approve
-		law_hereditary_bureaucrats = disapprove
-	}
-
-	lawgroup_citizenship = {
-		law_ethnostate = strongly_disapprove
-		law_national_supremacy = neutral
-		law_racial_segregation = approve
-		law_cultural_exclusion = disapprove
-		law_multicultural = strongly_disapprove
-	}
-
-	lawgroup_land_reform = {
-		law_serfdom = strongly_disapprove
-		law_tenant_farmers = neutral
-		law_homesteading = approve
-		law_collectivized_agriculture = strongly_disapprove
-		law_commercialized_agriculture = disapprove
-	}
-
-	country_trigger = {
-		exists = c:USA
-		c:USA ?= this
-	}
-
-	interest_group_leader_trigger = {
-		always = yes
-	}
-
-	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
-		always = yes
-	}
-
-	interest_group_leader_weight = {
-		value = 300
-		if = {
-			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_fascism
-				}
-			}
-			multiply = 0.1
-		}
-		if = {
-			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
-				}
-			}
-			add = -250
-		}
-		else_if = {
-			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_landowners
-					is_interest_group_type = armed_forces
-				}
-			}
-			add = 300
-		}
-		if = {
-			limit = {
-				owner = {
-					has_modifier = jacsonian_side_modifier
-				}
-			}
-			multiply = 1.5
-		}
-	}
-
-	non_interest_group_leader_weight = {
-		value = 100
-		if = {
-			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_fascism
-					}
-				}
-			}
-			multiply = 0.1
-		}
-		if = {
-			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
-				}
-			}
-			add = -80
-		}
-		else_if = {
-			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_trade_unions
-				}
-			}
-			add = 50
 		}
 	}
 }
