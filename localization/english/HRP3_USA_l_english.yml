@@ -15,3 +15,7 @@
  ONT_ADJ:0 "Canadian"
  dyn_c_upper_canada:0 "Province of Canada"
  dyn_c_upper_canada_adj:0 "Canadian"
+ 
+ 
+ ideology_jacksonian_totalitarian: "Jacksonian Totalitarian"
+ ideology_jacksonian_totalitarian_desc: "This character views the role of the subjects of the nation as pieces for the national interest. Loyalty to the state and complete dedication is demanded. Foreign policy is defined by opportunistic and aggressive expansion."
