@@ -73,7 +73,7 @@ carlist_outrage_modifier:0 "Carlist Outrage"
 dominion_of_eden_modifier:0 "Dominion of Eden"
 chile_home_affair_modifier:0 "Chilean Home Affairs"
 liberian_colonies_modifier:0 "Liberian Colonies"
-not_assimilating_outremer_modifier:0 "Resistance in Outremer"
+not_assimilating_outremer_modifier:0 "Outremer already speak French"
 eugenist_defector_modifier:0 "Eugenist Defector"
 agitating_eugenist_modifier:0 "Agitating Eugenist"
 capitalist_banned_to_india_modifier:0 "Capitalists Banished to India"
@@ -162,9 +162,6 @@ yeeehaw_modifier:0 "Go West, Young Man"
  PAT:0 "Patagonia"
  PAT_ADJ:0 "Patagonian"
  
- POL:0 "Dominion of Eden"
- POL_ADJ:0 "Edenist"
- 
  LIB:0 "United States of West Africa"
  LIB_ADJ:0 "African"
  
@@ -172,4 +169,12 @@ yeeehaw_modifier:0 "Go West, Young Man"
  country_institution_cost_institution_home_affairs_mult: "@bur![Nbsp][concept_bureaucracy] Cost of [GetInstitutionType('institution_home_affairs').GetName]"
  country_institution_cost_institution_home_affairs_mult_desc: "An increase or reduction to the @bur![Nbsp][concept_bureaucracy] cost of bringing [GetInstitutionType('institution_home_affairs').GetName] to the citizens"
  
+ gov_kaiser:0 "Bundesreich"
+ gov_kaiser_desc:2 "A centralised confederation of German states, where the power is heavily relegated to democratic institutions, with the [Concept('concept_ruler','$RULER_TITLE_KAISER$')] or [Concept('concept_ruler','$RULER_TITLE_KAISERINE$')] of Austria serving as a ceremonial Head of State..\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ 
+ 
+ RULER_TITLE_KAISER:0 "Kaiser"
+ RULER_TITLE_KAISERINE:0 "Kaiserin"
+ 
+ RULER_TITLE_VICEROY: "Director"
  
