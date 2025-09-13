@@ -5769,6 +5769,19 @@ gm_actions.407 = {
 	}
 	
 	option = { 
+		name = ideology_jacksonian_totalitarian
+		default_option = yes
+		scope:target_character = {
+			set_ideology = ideology:ideology_jacksonian_totalitarian
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
 		name = ideology_edenist
 		scope:target_character = {
 			set_ideology = ideology:ideology_edenist
@@ -6297,6 +6310,22 @@ gm_actions.50 = {
 			id = gm_actions.50
 			days = 0
 			popup = yes
+		}
+	}
+	
+	option = {
+		name = "Crash"
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = gilded_age_gm
+		every_country = {
+			trigger_event = {
+				id = crash.1
+				days = 0
+				popup = yes
+			}
 		}
 	}
 }
@@ -8797,96 +8826,47 @@ gm_actions.100 = {
 	}
 	
 	option = {
-		name = "France Victory on Prussia"
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-		create_country = {
-			tag = RHE
-			origin = c:FRA
-			state = s:STATE_RUHR.region_state:PRU
-		}
-		s:STATE_WESTPHALIA.region_state:PRU = {
-			set_state_owner = c:RHE
-			set_state_type = incorporated
-		}
-		s:STATE_HANNOVER.region_state:HAN = {
-			set_state_owner = c:RHE
-			set_state_type = incorporated
-		}
-		c:RHE = {
-			annex_with_incorporation = c:HES
-			annex_with_incorporation = c:NAS
-			annex_with_incorporation = c:FRM
-			annex_with_incorporation = c:OLD
-			annex_with_incorporation = c:HEK
-			annex_with_incorporation = c:WLD
-			annex_with_incorporation = c:SCM
-			annex_with_incorporation = c:LIP
-		}
-		c:FRA ={
-			power_bloc = {
-				add_leverage = { target = c:RHE value = 1000 }
-			}
-			change_relations = {     
-				country = c:RHE 
-				value = 100 
-			}
-		}
-		every_country = {
+		name = "Indian Famine"
+		every_state_region = {
 			limit = {
-				is_subject_of = c:PRU
-			}
-			make_independent = yes
-		}
-	}
-	
-	option = {
-		name = "France Victory on Austria"
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-		every_country = {
-			limit = {
-				is_subject_of = c:AUS
-			}
-			make_independent = yes
-		}
-		c:AUS = {
-			add_modifier = {
-				name = aus_ationalist_turmoil_modifier           
-				months = 120
-				is_decaying = yes
-			}
-		}
-	}
-	
-	option = {
-		name = "Germans Victory"
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-		every_country = {
-			limit = {
-				NOT = {
-					this = c:UBD
+				OR = {
+					region = sr:region_punjab
+					region = sr:region_central_india
 				}
-				country_has_primary_culture = cu:north_german
 			}
-			c:AUS = {
-				annex_with_incorporation = prev
-			}
+			start_harvest_condition  = indian_drought
 		}
-		every_country = {
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = "South India Plantation Failure"
+		every_state_region = {
 			limit = {
-				country_has_primary_culture = cu:south_german
+				region = sr:region_madras
 			}
-			c:AUS = {
-				annex_with_incorporation = prev
+			start_harvest_condition  = indian_disease_outbreak
+		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = "Bengal Plantation Failure"
+		every_state_region = {
+			limit = {
+				region = sr:region_bengal
 			}
+			start_harvest_condition  = indian_disease_outbreak
+		}
+		remove_global_variable = GM_taking_action
+		scope:recipient = {
+			remove_variable = actionee
 		}
 	}
 }
