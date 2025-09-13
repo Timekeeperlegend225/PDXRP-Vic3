@@ -583,6 +583,7 @@ movement_bonapartist = {
 	ideology = ideology_bonapartist_movement
 	character_ideologies = {
 		ideology_bonapartist
+		ideology_neo_bonapartist
 	}
 
 	creation_trigger = {

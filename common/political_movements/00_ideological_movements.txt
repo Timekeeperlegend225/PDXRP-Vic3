@@ -3584,6 +3584,7 @@ movement_liberal = {
 		ideology_republican_leader
 		ideology_radical
 		ideology_humanitarian
+		ideology_neo_bonapartist
 	}
 
 	creation_trigger = {

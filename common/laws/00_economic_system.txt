@@ -83,7 +83,7 @@ law_interventionism = {
 	}
 	
 	modifier = {
-		country_disable_nationalization_without_compensation_bool = no
+		country_disable_nationalization_without_compensation_bool = yes
 		country_private_construction_allocation_mult = 0.5
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.5
