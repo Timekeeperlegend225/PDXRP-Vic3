@@ -20,3 +20,39 @@ great_jin = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
 	}
 }
+
+freelandia = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "red"
+
+	textured_emblem = {		
+		texture = "freelandia.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+hrp_germany = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "red"
+
+	textured_emblem = {		
+		texture = "germany.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+mamluk = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "red"
+
+	textured_emblem = {		
+		texture = "mamluk.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}

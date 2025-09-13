@@ -151,6 +151,14 @@
 				name = GM_action_cost
 				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
 			}
+			set_variable = {
+				name = national_integration_var
+				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
+			}
+			change_variable = {
+				name = national_integration_var
+				divide = 100
+			}
 			clamp_variable = {
 				name = GM_action_cost
 				min = 100000
@@ -309,6 +317,14 @@ je_HRP_gilded_age_gm = {
 			set_variable = {
 				name = GM_action_cost
 				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_infinite_growth)" 
+			}
+			set_variable = {
+				name = national_integration_var
+				value = "scope:journal_entry.scripted_bar_progress(HRP_GA_national_speculation)" 
+			}
+			change_variable = {
+				name = national_integration_var
+				divide = 100
 			}
 			clamp_variable = {
 				name = GM_action_cost

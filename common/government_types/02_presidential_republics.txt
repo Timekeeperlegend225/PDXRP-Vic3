@@ -682,14 +682,6 @@ gov_crown_colony_india = {
 
 	possible = {
 		NOT = { has_modifier = eternal_president_modifier }
-		has_law = law_type:law_presidential_republic
-		exists = c:GBR
-		is_subject_of = c:GBR
-		c:GBR = {
-			has_law = law_type:law_monarchy
-		}
-		is_subject_type = subject_type_colony
-		is_country_type = colonial
 		c:BIC ?= this
 	}
 
@@ -823,6 +815,7 @@ gov_presidential_oligarchy = {
 		country_has_voting_franchise = no
 		NOT = {
 			coa_fascist_trigger = yes
+			this = c:BIC
 		}
 	}
 

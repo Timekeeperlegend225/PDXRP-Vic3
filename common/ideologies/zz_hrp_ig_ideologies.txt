@@ -397,7 +397,7 @@ ideology_bonapartist = {
 		law_census_voting = disapprove
 		law_universal_suffrage = disapprove
 		law_anarchy = strongly_disapprove
-		law_technocracy = neutral
+		law_technocracy = strongly_approve
 	}
 
 	lawgroup_army_model = {
