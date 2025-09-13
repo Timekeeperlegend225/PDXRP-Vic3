@@ -435,13 +435,13 @@ movement_orleanist = {
 			}
 		}
 		add = {
-			value = 3
+			value = 1
 			desc = "POP_BASE_SUPPORT"
 		}
 
 		add = {
 			desc = "URBAN_STATE"
-			value = 10
+			value = 5
 			multiply = state.state_urbanization_rate
 		}
 
@@ -454,7 +454,7 @@ movement_orleanist = {
 					is_pop_type = capitalists
 				}
 				add = {
-					value = 12
+					value = 10
 					desc = "POP_CAPITALISTS"
 				}
 			}
@@ -463,7 +463,7 @@ movement_orleanist = {
 					is_pop_type = aristocrats
 				}
 				add = {
-					value = 18
+					value = 15
 					desc = "POP_ARISTOCRATS"
 				}
 			}
@@ -477,7 +477,7 @@ movement_orleanist = {
 					is_pop_type = shopkeepers
 				}
 				add = {
-					value = 12
+					value = 5
 					desc = "POP_SHOPKEEPERS"
 				}
 			}
@@ -486,13 +486,13 @@ movement_orleanist = {
 					is_pop_type = bureaucrats
 				}
 				add = {
-					value = 12
+					value = 5
 					desc = "POP_BUREAUCRATS"
 				}
 			}
 			else = {
 				add = {
-					value = 9
+					value = 4
 					desc = "MIDDLE_NO_ICON"
 				}
 			}
@@ -506,7 +506,7 @@ movement_orleanist = {
 					is_pop_type = clerks
 				}
 				add = {
-					value = 6
+					value = 3
 					desc = "POP_CLERKS"
 				}
 			}
@@ -521,7 +521,7 @@ movement_orleanist = {
 			}
 			else = {
 				add = {
-					value = 3
+					value = 1
 					desc = "LOWER_NO_ICON"
 				}
 			}
@@ -1007,7 +1007,7 @@ movement_legitimist = {
 		}
 
 		add = {
-			value = 5
+			value = 1
 			desc = "POP_BASE_SUPPORT"
 		}
 

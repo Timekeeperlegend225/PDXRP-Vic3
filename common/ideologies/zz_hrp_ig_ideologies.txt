@@ -608,7 +608,7 @@ ideology_neo_bonapartist = {
 	}
 
 	interest_group_leader_weight = {
-		value = 15000
+		value = 50
 		# less likely in a theocracy
 		if = {
 			limit = {
@@ -623,8 +623,8 @@ ideology_neo_bonapartist = {
 		if = {
 			limit = {
 				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_armed_forces
 				}
 			}
 			add = 100
