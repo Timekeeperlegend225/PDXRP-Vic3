@@ -812,8 +812,8 @@ liberian_colonies_modifier = {
 }
 
 not_assimilating_outremer_modifier = {
-	icon = gfx/interface/icons/generic_icons/assimilation.dds
-    state_assimilation_mult = -0.9
+	icon = gfx/interface/icons/generic_icons/secession_culture_possible.dds
+    state_assimilation_mult = -1.4
 }
 
 eugenist_defector_modifier = {
@@ -907,4 +907,54 @@ petit_bourg_france_attraction_modifier={
 and_now_we_are_totalitarian_modifier= {
 	icon = gfx/interface/icons/ideology_icons/ideology_leader/jackson_democrat.dds
 	political_movement_pop_attraction_mult = 1
+}
+
+usa_capitalist_resistance_modifier = {
+	icon = gfx/interface/icons/ig_icons/industrialists.dds
+	interest_group_ig_industrialists_approval_add = -5
+}
+
+russia_forced_nationalization_modifier = {
+	icon = gfx/interface/icons/war_goals/force_nationalization.dds
+	state_capitalists_investment_pool_efficiency_mult = -0.05
+	country_bureaucracy_mult = -0.05
+}
+
+defender_of_zion_modifier = {
+	icon = gfx/interface/icons/religion_icons/protestant.dds
+	state_conscription_rate_add = 0.5
+	unit_army_offense_mult = 0.30
+	unit_army_defense_mult = 0.30
+	building_training_rate_add = 1000
+}
+
+anti_muslim_politic_modifier = {
+	icon = gfx/interface/icons/acceptance_icons/acceptance_tier2.dds
+	state_sunni_standard_of_living_add = -5
+}
+
+unfying_outremer_modifier = {
+    icon = gfx/interface/icons/ig_icons/intelligentsia.dds
+	interest_group_ig_intelligentsia_pol_str_mult = 0.10
+}
+
+economic_centralization_modifier = {
+    icon = gfx/interface/icons/invention_icons/central_planning.dds
+	country_company_construction_efficiency_bonus_add = 0.15
+	country_government_dividends_efficiency_add = 0.25
+}
+
+food_storage_modifier = {
+	icon = gfx/interface/icons/goods_icons/grain.dds
+	state_food_security_add = 0.05
+}
+
+scandinavian_corporatism_modifier ={
+	icon = gfx/interface/icons/ig_icons/devout.dds
+	interest_group_ig_devout_pop_attraction_mult = 0.05
+}
+
+cowboy_weapons_modifier ={
+	icon = gfx/interface/icons/goods_icons/small_arms.dds
+	country_military_goods_cost_mult = -0.10
 }

@@ -122,6 +122,13 @@ law_womens_suffrage = {
 	unlocking_technologies = {
 		feminism
 	}
+	
+	can_enact = {
+		OR = {
+			NOT = { has_law = law:law_autocracy }
+			this = c:USA
+		}
+	}
 
 	unlocking_laws = {
 		law_census_voting
@@ -130,6 +137,7 @@ law_womens_suffrage = {
 		law_universal_suffrage
 		law_single_party_state
 		law_anarchy
+		law_autocracy
 	}
 
 	on_enact = {
