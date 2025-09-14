@@ -50,8 +50,8 @@
  indian_drought_desc: "Serie of droughts and bad harvest conditions are currently India, announcing the worst"
  
  
- indian_disease_outbreak_outbreak: "Disease Outbreak"
- indian_disease_outbreak_outbreak_desc: "A desperate proliferation of rot and disease across our plantation, worrying the company about the upcoming harvest."
+ indian_disease_outbreak: "Plantation Failure"
+ indian_disease_outbreak_desc: "A desperate proliferation of rot and disease across our plantation, worrying the company about the upcoming harvest."
  
  HRP_crash:0 "The Great Crash"
  HRP_building_crash:0 "Economic failure"

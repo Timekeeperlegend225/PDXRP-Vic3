@@ -4,9 +4,9 @@ crash.1 = { #For Bodi
     type = country_event
 	placement = root
 	
-    title = "Crash"
-    description = "Nooooo !!!!"
-	flavor = "Something Happen"
+    title = "The Great Crash"
+    desc = "After the recent events surrounding the Dominion of India and the East India Company, the London Stock Exchange has been sent into a spiral. Several smaller companies have defaulted on their debts due to the reduced cash flow from India, and, today, London's Barings Private Bank has made the shocking announcement that it no longer has enough cash to back up its deposits. With the bank's connection to other institutions across Great Britain and Europe - especially Poland - there are sure to be ripple effects..."
+#	flavor = "Something Happen"
 	
     event_image = { 
 		video = unspecific_politicians_arguing
@@ -71,7 +71,7 @@ crash.1 = { #For Bodi
 	duration = 3
 	
     option = {
-		name = "All is lost"
+		name = "How will we get back from that ?"
 		show_as_tooltip = {
 		add_investment_pool = var:IP_value
 			add_modifier = {
