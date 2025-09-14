@@ -45,10 +45,6 @@
 			desc = "from International Exchange Standart"
 			value = global_var:GA_tech_inter
 		}
-		add = {
-			desc = "from International Exchange Standart"
-			value = global_var:GA_tech_inter
-		}
 		multiply = {
 			desc = "From Correction"
 			add = 1
