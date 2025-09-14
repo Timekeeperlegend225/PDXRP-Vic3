@@ -154,6 +154,7 @@ HRP_crash = {
 	country_loan_interest_rate_mult = 0.25
 	building_throughput_add = -0.30
 	building_government_administration_throughput_add = 0.25
+	country_convoys_capacity_mult = 0.50
 	country_bureaucracy_mult = 0.50
 	state_trade_capacity_mult = -0.8
 	state_trade_advantage_mult = -0.3
