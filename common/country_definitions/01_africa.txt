@@ -1,5 +1,5 @@
 ﻿ALD = {
-	color = { 220  202  96 }
+	color = { 220 235 255 }
 
 	country_type = unrecognized
 
@@ -68,7 +68,7 @@ MAS = {
 }
 
 LIB = {
-	color = { 193  138  83 }
+	color = { 00  42  110 }
 
 	country_type = unrecognized
 

@@ -5794,7 +5794,7 @@ LIB = { # Liberia
 		priority = 1
 	}
 	flag_definition = {
-		coa = LIB_dictatorship
+		coa = uswa
 		subject_canton = LIB_dictatorship
 		allow_overlord_canton = yes
 		priority = 20
