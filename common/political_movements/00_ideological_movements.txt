@@ -4946,6 +4946,7 @@ movement_land_reform = {
 	character_ideologies = {
 		ideology_land_reformer
 		ideology_luddite
+		ideology_edenist
 	}
 
 	creation_trigger = {
@@ -5063,6 +5064,59 @@ movement_land_reform = {
 			value = 0.5
 			subtract = state.state_urbanization_rate
 			multiply = 10
+		}
+
+		if = {
+			limit = {
+				OR = {
+					owner ?= c:GAL 
+					owner ?= c:POL
+				}				
+			}
+			if = {
+				limit = {
+					is_pop_type = farmers
+				}
+				add = {
+					value = 25
+					desc = "POP_FARMERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = 50
+					desc = "POP_PEASANTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = clergymen
+				}
+				add = {
+					value = 25
+					desc = "POP_CLERGYMEN"
+				}
+			}
+			if = {
+				limit = {
+					strata = lower
+					OR = {
+						pop_employment_building_group = bg_agriculture
+						pop_employment_building_group = bg_ranching
+						pop_employment_building_group = bg_plantations
+						pop_employment_building_group = bg_logging
+						pop_employment_building_group = bg_fishing
+						pop_employment_building_group = bg_manor_houses
+					}
+				}
+				add = {
+					value = 20
+					desc = "RURAL_POP"
+				}
+			}
 		}
 
 		if = {

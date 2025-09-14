@@ -958,3 +958,30 @@ cowboy_weapons_modifier ={
 	icon = gfx/interface/icons/goods_icons/small_arms.dds
 	country_military_goods_cost_mult = -0.10
 }
+
+first_telephone_modifier ={
+	icon = gfx/interface/icons/goods_icons/telephones.dds
+	country_prestige_add = 20
+}
+
+support_kinglaying_modifier ={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	character_popularity_add = -25
+}
+anti_royal_rethoric_modifier= {
+	icon = gfx/interface/icons/ideology_icons/royalist.dds
+	political_movement_pop_attraction_mult = 0.10
+}
+
+childish_modifier ={
+	icon = gfx/interface/icons/character_trait_icons/trait_child.dds
+	character_popularity_add = -40
+}
+
+edenist_support_modifier ={
+	icon = gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_utopian.dds
+	interest_group_ig_rural_folk_pol_str_mult = 7
+	interest_group_ig_rural_folk_pop_attraction_mult = 0.5
+	interest_group_ig_devout_pol_str_mult = 3
+	interest_group_ig_devout_pop_attraction_mult = 0.5
+}

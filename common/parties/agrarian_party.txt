@@ -290,6 +290,21 @@ agrarian_party = {
 				desc = "From Edenism"
 			}
 		}
+		if = { 
+			limit = {
+				OR = {
+					owner ?= c:GAL 
+					owner ?= c:POL
+				}
+				leader = {
+						has_ideology = ideology:ideology_edenist
+				}
+			}
+			add = {
+				value = 25
+				desc = "From Polish Edenism"
+			}
+		}
 		if = { # anti-immigration alliance
 			limit = {
 				OR = {
