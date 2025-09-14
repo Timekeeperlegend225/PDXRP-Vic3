@@ -45,10 +45,23 @@
 			desc = "from International Exchange Standart"
 			value = global_var:GA_tech_inter
 		}
+		add = {
+			desc = "from International Exchange Standart"
+			value = global_var:GA_tech_inter
+		}
 		multiply = {
 			desc = "From Correction"
 			add = 1
 			add = global_var:GA_GM_adjustment_multiplier
+		}
+		if = {
+			limit = {
+				has_global_variable = GM_panick
+			}
+			add = {
+				desc = "from panick"
+				value = global_var:GM_panick
+			}				
 		}
 	}
 
