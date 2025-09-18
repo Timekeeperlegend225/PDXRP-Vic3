@@ -1,4 +1,4 @@
-je_HRP_concert_national = {
+je_HRP_recovery_and_extremism = {
 	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
 
 	group = je_group_historical_content
@@ -16,7 +16,9 @@ je_HRP_concert_national = {
 		set_variable = nationalstabsetup 
 	}
 
-	scripted_progress_bar = HRP_AoC_national_stability
+	scripted_progress_bar = HRP_AoE_recovery
+	scripted_progress_bar = HRP_AoE_Left_E
+	scripted_progress_bar = HRP_AoE_Right_E
 
 	complete = {
 	}
@@ -39,7 +41,9 @@ je_HRP_concert_national = {
 
 	on_monthly_pulse = {
 		effect = {
-			HRP_AoC_national_stability_progress = yes 
+			HRP_AoE_recovery_progress = yes 
+			HRP_AoE_Left_E_progress = yes
+			HRP_AoE_Right_E_progress = yes
 			if = {
 				limit = {
 					has_variable = nationalstabsetup
