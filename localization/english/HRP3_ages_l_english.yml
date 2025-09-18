@@ -55,3 +55,18 @@
  
  HRP_crash:0 "The Great Crash"
  HRP_building_crash:0 "Economic failure"
+ 
+ 
+ je_HRP_recovery_and_extremism:0 "Economic Recovery"
+ je_HRP_recovery_and_extremism_reason:0 "The global market crashed ! What will happen to us ? \n We should try to recover our economy as fast of possible, but the extrem are watch, ready to seize every opportunity \n If an extrem support reach 100%, we'll get a coup" 
+ 
+ 
+ HRP_AoE_recovery_bar:0 "National recovery"
+ HRP_AoE_recovery_name:0 "National recovery : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoE_recovery_desc: "Our national recovery is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0] %"
+ HRP_AoE_Left_E_bar:0 "Extreme left support"
+ HRP_AoE_Left_E_name:0 "Extreme left support : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoE_Left_E_desc: "Extreme left support is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoE_Right_E_bar:0 "Extreme right support"
+ HRP_AoE_Right_E_name:0 "Extreme right support : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoE_Right_E_desc: "Extreme right support is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"

@@ -6036,6 +6036,55 @@ gm_actions.50 = {
 			remove_variable = actionee
 		}
 	}
+
+	option = { 
+		name = "Start the age of Extremes"
+		trigger = {
+			scope:recipient = {	
+				NOT = {
+					has_global_variable = age_of_extreme_gm
+				}
+			}
+		}
+		set_global_variable = age_of_extreme_gm
+		remove_global_variable = age_of_concert_gm
+		remove_global_variable = age_of_springtime_gm
+		remove_global_variable = gilded_age_gm
+		every_country = {
+			if = {
+				add_journal_entry = {
+					type = je_HRP_recovery_and_extremism
+				}
+			}
+		}
+		set_global_variable = {
+			name = recovery_flat_correction
+			value = 0.84
+		}
+		set_global_variable = {
+			name = extreme_flat_correction
+			value = 0
+		}
+		set_global_variable = {
+			name = GM_recovery_add
+			value = 0
+		}
+		set_global_variable = {
+			name = GM_extremism_add
+			value = 0
+		}
+		set_global_variable = {
+			name = GM_crash_countwodn
+			value = 10
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
 	
 	option = {
 		name = gm_actions.50.cnc
