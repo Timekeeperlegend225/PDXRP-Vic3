@@ -1285,14 +1285,6 @@ ideology_national_unionist = {
 		law_isolationism = approve
 	}
 
-    lawgroup_land_reform = {
-        law_serfdom = disapprove
-        law_tenant_farmers = neutral
-        law_homesteading = strongly_approve
-        law_collectivized_agriculture = neutral
-        law_commercialized_agriculture = strongly_disapprove
-    }
-
     lawgroup_free_speech = {
         law_right_of_assembly = disapprove
         law_censorship = approve
@@ -1446,13 +1438,6 @@ ideology_prozelyte_corporatist = {
 		law_private_health_insurance = disapprove
 	}
 
-    lawgroup_free_speech = {
-        law_right_of_assembly = disapprove
-        law_censorship = approve
-        law_protected_speech = strongly_disapprove
-        law_outlawed_dissent = strongly_approve
-    }
-
 	country_trigger = {
 		has_global_variable = age_of_extreme_gm
 	}
@@ -1586,14 +1571,6 @@ ideology_national_syndicalist = {
         law_extraction_economy = strongly_disapprove
     }
 
-	lawgroup_land_reform = {
-		law_serfdom = strongly_disapprove
-		law_tenant_farmers = strongly_disapprove
-		law_homesteading = approve
-		law_collectivized_agriculture = disapprove
-		law_commercialized_agriculture = disapprove
-	}
-
 	lawgroup_labor_rights = {
 		law_worker_protections = strongly_approve
 		law_regulatory_bodies = neutral
@@ -1693,22 +1670,10 @@ ideology_anti_western = {
 
 	character_ideology = yes
 	
-	lawgroup_distribution_of_power = {
-		law_universal_suffrage = strongly_disapprove
-		law_anarchy = strongly_disapprove
-		law_census_voting = disapprove
-		law_single_party_state = neutral
-		law_wealth_voting = strongly_disapprove
-		law_landed_voting = strongly_approve
-		law_technocracy = strongly_disapprove
-		law_oligarchy = approve
-		law_autocracy = approve
-	}
-	
 	lawgroup_citizenship = {
-		law_ethnostate = neutral
+		law_ethnostate = approve
 		law_national_supremacy = strongly_approve
-		law_racial_segregation = approve
+		law_racial_segregation = neutral
 		law_cultural_exclusion = disapprove
 		law_multicultural = strongly_disapprove
 	}
@@ -1890,13 +1855,6 @@ ideology_maximism = {
 		law_homesteading = neutral
 		law_collectivized_agriculture = strongly_approve
 		law_commercialized_agriculture = disapprove
-	}
-
-	lawgroup_education_system = {
-		law_public_schools = strongly_approve
-		law_religious_schools = strongly_disapprove
-		law_private_schools = neutral
-		law_no_schools = strongly_disapprove
 	}
 
 	country_trigger = {

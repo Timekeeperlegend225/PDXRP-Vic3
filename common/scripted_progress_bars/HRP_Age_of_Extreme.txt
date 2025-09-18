@@ -1,0 +1,150 @@
+﻿HRP_AoE_recovery = {
+	name = "HRP_AoE_recovery_bar"
+	desc = "HRP_AoE_recovery_desc"
+
+	double_sided_bad = yes
+
+	monthly_progress = {
+		add = {
+			desc = "Base Progress"
+			value = global_var:recovery_flat_correction
+		}
+		if = {
+			limit = {
+				has_variable = recoverysetup
+			} 
+			add = { 
+				desc = "Initial recovery"
+				name = HRP_AoE_recovery 
+				add = var:starting_recovery
+				add = global_var:GM_crash_countwodn
+			}
+		}
+	}
+	start_value = 0
+	min_value = 0
+	max_value = 100
+}
+
+HRP_AoE_Left_E = {
+	name = "HRP_AoE_Left_E_bar"
+	desc = "HRP_AoE_Left_E_desc"
+
+	default_bad = yes
+
+	monthly_progress = {
+		add = {
+			desc = "Base Progress"
+			value = global_var:extreme_flat_correction
+		}
+		add = {
+			desc = "from Radicals"
+			value = this.radical_population_fraction
+		}
+		subtract = {
+			desc = "from Loyalists"
+			value = this.loyalist_fraction
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_socialist
+				}
+			}
+			add = {
+				desc = "from Socialist Movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_socialist
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_communist
+				}
+			}
+			add = {
+				desc = "from Communist Movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_communist
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_anarchist
+				}
+			}
+			add = {
+				desc = "from Anarchist Movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_anarchist
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+				}
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+
+}
+
+HRP_AoE_Right_E = {
+	name = "HRP_AoE_Right_E_bar"
+	desc = "HRP_AoE_Right_E_desc"
+
+	default = yes
+
+	monthly_progress = {
+		add = {
+			desc = "Base Progress"
+			value = global_var:extreme_flat_correction
+		}
+		add = {
+			desc = "from Radicals"
+			value = this.radical_population_fraction
+		}
+		subtract = {
+			desc = "from Loyalists"
+			value = this.loyalist_fraction
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_radical
+				}
+			}
+			add = {
+				desc = "from Radical Movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_radical
+					}
+					subtract = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 10
+				}
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+
+}

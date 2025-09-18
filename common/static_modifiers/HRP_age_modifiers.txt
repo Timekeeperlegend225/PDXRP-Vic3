@@ -176,3 +176,32 @@ HRP_building_crash = {
 	icon = "gfx/interface/icons/alert_icons/bankruptcy.dds"
 	building_throughput_add = -0.70
 }
+
+HRP_left_extreme_modifier_movement = {
+	icon = gfx/interface/icons/ideology_icons/socialist.dds
+	political_movement_radicalism_add = 0.005
+	political_movement_radicalism_from_enactment_disapproval_mult = 0.005
+}
+
+HRP_right_extreme_modifier_movement = {
+	icon = gfx/interface/icons/ideology_icons/unused/fascist.dds
+	political_movement_pop_attraction_mult = 0.01
+	political_movement_radicalism_add = 0.005
+	political_movement_radicalism_from_enactment_disapproval_mult = 0.005
+}
+
+HRP_left_extreme_modifier = {
+	icon = gfx/interface/icons/ideology_icons/socialist.dds
+	state_pop_support_movement_socialist_add = 0.02
+	state_pop_support_movement_socialist_mult = 0.01
+	state_pop_support_movement_communist_add = 0.02
+	state_pop_support_movement_communist_mult = 0.01
+	state_pop_support_movement_anarchist_add = 0.02
+	state_pop_support_movement_anarchist_mult = 0.01
+	country_law_enactment_time_mult = 0.0025
+}
+
+HRP_right_extreme_modifier = {
+	icon = gfx/interface/icons/ideology_icons/unused/fascist.dds
+	country_law_enactment_time_mult = 0.0025
+}
