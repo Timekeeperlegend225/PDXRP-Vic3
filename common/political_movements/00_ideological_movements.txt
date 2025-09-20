@@ -2645,10 +2645,9 @@ movement_anarchist = {
 movement_communist = {
 	category = movement_category_ideological
 
-	ideology = ideology_communist_movement
+	ideology = ideology_maximism
 	character_ideologies = {
-		ideology_communist
-		ideology_vanguardist
+		ideology_maximism
 	}
 
 	creation_trigger = {
@@ -2663,26 +2662,28 @@ movement_communist = {
 
 	character_support_trigger = {
 		OR = {
-			has_ideology = ideology:ideology_vanguardist
-			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_maximism
+			has_ideology = ideology:ideology_làngist
 			has_ideology = ideology:ideology_utopian
-			AND = {
-				is_interest_group_type = ig_trade_unions
-				has_ideology = ideology:ideology_humanitarian
-			}
+			is_interest_group_type = ig_trade_unions
 		}
 	}
 	character_support_weight = {
-		value = 200
+		value = 100
 		if = {
 			limit = {
-				OR = {
-					has_ideology = ideology:ideology_communist
-					has_ideology = ideology:ideology_vanguardist
-				}
+					has_ideology = ideology:ideology_maximism
 			}
 			multiply = {
 				value = 5
+			}
+		}
+		if = {
+			limit = {
+					has_ideology = ideology:ideology_làngist
+			}
+			multiply = {
+				value = 2
 			}
 		}
 	}
@@ -2942,17 +2943,15 @@ movement_fascist = {
 	category = movement_category_ideological
 
 	# Fascists care about a lot of law groups, so the impact of each should be lesser
-	active_law_radicalism_multiplier = 0.5
 
-	ideology = ideology_fascist_movement
+	ideology = ideology_national_unionist
 	character_ideologies = {
-		ideology_fascist
-		ideology_integralist
-		ideology_corporatist_leader
+		ideology_national_unionist
+		ideology_jacksonian_totalitarian
 	}
 
 	creation_trigger = {
-		has_technology_researched = political_agitation
+		has_global_variable = age_of_extreme_gm
 	}
 	creation_weight = {
 		value = 100
@@ -2963,8 +2962,8 @@ movement_fascist = {
 
 	character_support_trigger = {
 		OR = {
-			has_ideology = ideology:ideology_fascist
-			has_ideology = ideology:ideology_integralist
+			has_ideology = ideology:ideology_national_unionist
+			has_ideology = ideology:ideology_jacksonian_totalitarian
 			has_ideology = ideology:ideology_corporatist_leader
 			has_ideology = ideology:ideology_ethno_nationalist
 		}

@@ -5569,7 +5569,7 @@ KOR = { # Korea
 		priority = 1
 	}
 	flag_definition = {
-		coa = KOR
+		coa = korea_total
 		priority = 2
 		trigger = {
 			OR = {
