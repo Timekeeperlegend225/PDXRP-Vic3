@@ -49,6 +49,7 @@ AoE_discourage_free_market = {
 				has_modifier = HRP_discourage_free_market_modifier
 			}
 		}
+		authority >= 100
 	}
 
 	effect = {
@@ -89,6 +90,7 @@ AoE_pause_interest = {
 			text = "The support for extremes is at least 100"
 			var:both_extreme_var >= 100
 		}
+		authority >= 200
 	}
 
 	effect = {
@@ -131,6 +133,7 @@ AoE_inflate_currency = {
 			text = "The support for extremes is at least 100"
 			var:both_extreme_var >= 100
 		}
+		authority >= 200
 	}
 
 	effect = {
@@ -220,6 +223,7 @@ AoE_national_companies = {
 			text = "2 years cooldown"
 			NOT = { has_variable = national_companies_var }
 		}
+		authority >= 100
 	}
 
 	effect = {
@@ -239,6 +243,487 @@ AoE_national_companies = {
 		set_variable = { 
 			name = national_companies_var
 			year = 2
+		}
+	}
+}
+
+AoE_emergenci_nationalization = {
+	name = "Emergency Nationalization"
+	desc = "The state should take control of a part of the economy"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			has_law = law_type:law_laissez_faire
+		}
+		custom_tooltip = {
+			text = "The support for extremes is at least 250"
+			var:both_extreme_var >= 250
+		}
+		custom_tooltip = {
+			text = "2 years cooldown"
+			NOT = { has_variable = emergenci_nationalization_var }
+		}
+		authority >= 100
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_emergencie_nationalization_modifier 
+			years = 1
+		}
+		custom_tooltip = {
+			text = "This will increase the support for both extremes by 50"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Left_E 
+					value = 50
+				}
+				add_progress = { 
+					name = HRP_AoE_Right_E 
+					value = 50
+				}
+			}
+		}
+		set_variable = { 
+			name = emergenci_nationalization_var
+			year = 2
+		}
+	}
+}
+
+AoE_scapgoat_elite = {
+	name = "Scapegoat elites"
+	desc = "Blames the elites for the crash"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			has_modifier = HRP_scapegoat_modifier
+		}
+		custom_tooltip = {
+			text = "The support for the extreme left is at least 250"
+			var:left_extreme_var >= 250
+		}
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_scapegoat_modifier 
+			years = 2
+		}
+		add_loyalists = {
+			strata = lower
+			value = 0.05
+		}
+		custom_tooltip = {
+			text = "This will increase the support for extreme left by 100"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Left_E 
+					value = 100
+				}
+			}
+		}
+		add_radicals = {
+			strata = upper
+			value = 0.10
+		}
+		change_infamy = 5
+	}
+}
+
+AoE_scapgoat_minorities = {
+	name = "Scapegoat minorities"
+	desc = "Blames the minorities for the crash"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			has_modifier = HRP_scapegoat_modifier
+		}
+		custom_tooltip = {
+			text = "The support for the extreme right is at least 250"
+			var:right_extreme_var >= 250
+		}
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_scapegoat_modifier 
+			years = 2
+		}
+		every_primary_culture = {
+			save_scope_as = culture_scope
+			root = {
+				add_loyalists = {
+					culture = scope:culture_scope
+					value = 0.05
+				}
+			}
+		}
+		add_modifier = { 
+			name = HRP_blamed_minorities_modifier 
+			years = 2
+		}
+		custom_tooltip = {
+			text = "This will increase the support for extreme right by 100"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Right_E
+					value = 100
+				}
+			}
+		}
+		change_infamy = 5
+	}
+}
+
+AoE_scapgoat_other_country = {
+	name = "Scapegoat foreign nations"
+	desc = "Blames another nation for the crash"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			has_modifier = HRP_scapegoat_modifier
+		}
+		custom_tooltip = {
+			text = "The support for extremes is at least 250"
+			var:both_extreme_var >= 250
+		}
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_scapegoat_modifier 
+			years = 2
+		}
+		add_loyalists = {
+			culture = scope:culture_scope
+			value = 0.02
+		}
+		add_modifier = { 
+			name = HRP_blamed_other_nation_modifier 
+			years = 2
+		}
+		custom_tooltip = {
+			text = "This will increase the support for both extremes by 50"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Left_E 
+					value = 50
+				}
+				add_progress = { 
+					name = HRP_AoE_Right_E 
+					value = 50
+				}
+			}
+		}
+		change_infamy = 10
+	}
+}
+
+AoE_seize_capitalist_wealth = {
+	name = "Seize Capitalist Wealth"
+	desc = AoE_seize_capitalist_wealth_desc
+	
+	visible = { 
+		NOT = { has_variable = wealth_seized_var }
+	}
+
+	possible = {
+		NOT = {
+			OR = {
+				has_law = law_type:law_laissez_faire
+				has_law = law_type:law_free_trade
+			}
+		}
+		custom_tooltip = {
+			text = "The support for the extreme left is at least 400"
+			var:left_extreme_var >= 400
+		}
+		authority >= 200
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_seized_capitalist_wealth_authority_modifier 
+			years = 1
+		}
+		add_treasury = var:lowered_gdp
+		add_investment_pool = var:lowered_gdp_to_tage
+		add_modifier = { 
+			name = HRP_seized_capitalist_wealth_reaction_modifier 
+			years = 5
+			decaying = yes
+		}
+		custom_tooltip = {
+			text = "This will increase the support for extreme left by 50"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Left_E 
+					value = 50
+				}
+			}
+		}
+		set_variable = { 
+			name = wealth_seized_var
+		}
+	}
+}
+
+AoE_deploy_army = {
+	name = "Deploy the Army"
+	desc = AoE_deploy_army_desc
+	
+	visible = { 
+		NOT = { has_variable = army_deployed_var }
+	}
+
+	possible = {
+		OR = {
+			has_law = law_type:law_professional_army
+			has_law = law_type:law_national_militia
+			has_law = law_type:law_mass_conscription
+			has_law = law_type:law_national_guard
+		}
+		custom_tooltip = {
+			text = "The support for the extreme right is at least 400"
+			var:right_extreme_var >= 400
+		}
+		authority >= 200
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_deploy_army_modifier 
+			years = 1
+		}
+		add_modifier = { 
+			name = HRP_deploy_army_reaction_modifier 
+			years = 5
+			decaying = yes
+		}
+		custom_tooltip = {
+			text = "This will increase the support for extreme right by 50"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Right_E
+					value = 50
+				}
+			}
+		}
+		set_variable = { 
+			name = army_deployed_var
+		}
+	}
+}
+
+AoE_autarky = {
+	name = "Autarky Economics"
+	desc = "Let's isolated our economy for a while"
+	
+	visible = { 
+		NOT = { has_variable = autarked_var }
+	}
+
+	possible = {
+		NOT = {
+			has_law = law_type:law_free_trade
+		}
+		custom_tooltip = {
+			text = "The support for extremes is at least 500"
+			var:both_extreme_var >= 500
+		}
+		authority >= 200
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_autarky_modifier 
+			years = 2
+		}
+		custom_tooltip = {
+			text = "The modifier will also increase our monthly recover by 0.2 while active"
+		}
+		custom_tooltip = {
+			text = "This will increase the support for both extremes by 50"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Left_E 
+					value = 50
+				}
+				add_progress = { 
+					name = HRP_AoE_Right_E 
+					value = 50
+				}
+			}
+		}
+		set_variable = { 
+			name = autarked_var
+		}
+	}
+}
+
+AoE_suppress_socialists = {
+	name = "Suppress Left wing Extreme"
+	desc = "We must suppress the socialists"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			OR = {
+				has_law = law_type:law_protected_speech
+				has_modifier = HRP_supress_left_extreme_modifier
+			}
+		}
+		custom_tooltip = {
+			text = "The support for the extreme left is at least 100"
+			var:left_extreme_var >= 100
+		}
+		authority >= 100
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_law = law_type:law_right_of_assembly
+			}
+			add_modifier = { 
+				name = HRP_supress_left_extreme_modifier 
+				multiplier = 0.5
+				years = 2
+			}
+			custom_tooltip = {
+				text = "This will decrease the support for extreme left by -50"
+				je:je_HRP_recovery_and_extremism = {
+					add_progress = { 
+						name = HRP_AoE_Left_E 
+						value = -50
+					}
+				}
+			}
+			custom_tooltip = {
+				text = "The modifier will also decrease the support for extreme left by 0.1 while active"
+			}
+			add_radicals = {
+				value = 0.01
+			}
+		}
+		else = {
+			add_modifier = { 
+				name = HRP_supress_left_extreme_modifier 
+				years = 2
+			}
+			custom_tooltip = {
+				text = "This will decrease the support for extreme left by -100"
+				je:je_HRP_recovery_and_extremism = {
+					add_progress = { 
+						name = HRP_AoE_Left_E 
+						value = -100
+					}
+				}
+			}
+			custom_tooltip = {
+				text = "The modifier will also decrease the support for extreme left by 0.2 while active"
+			}
+			add_radicals = {
+				value = 0.02
+			}
+		}
+		set_variable = { 
+			name = autarked_var
+		}
+	}
+}
+
+AoE_suppress_nationalist = {
+	name = "Suppress Right wing Extreme"
+	desc = "We must suppress the nationalists"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			OR = {
+				has_law = law_type:law_protected_speech
+				has_modifier = HRP_supress_right_extreme_modifier
+			}
+		}
+		custom_tooltip = {
+			text = "The support for the extreme right is at least 100"
+			var:right_extreme_var >= 100
+		}
+		authority >= 100
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_law = law_type:law_right_of_assembly
+			}
+			add_modifier = { 
+				name = HRP_supress_right_extreme_modifier 
+				multiplier = 0.5
+				years = 2
+			}
+			custom_tooltip = {
+				text = "This will decrease the support for extreme right by -50"
+				je:je_HRP_recovery_and_extremism = {
+					add_progress = { 
+						name = HRP_AoE_Right_E 
+						value = -50
+					}
+				}
+			}
+			custom_tooltip = {
+				text = "The modifier will also decrease the support for extreme right by 0.1 while active"
+			}
+			add_radicals = {
+				value = 0.01
+			}
+		}
+		else = {
+			add_modifier = { 
+				name = HRP_supress_right_extreme_modifier 
+				years = 2
+			}
+			custom_tooltip = {
+				text = "This will decrease the support for extreme right by -100"
+				je:je_HRP_recovery_and_extremism = {
+					add_progress = { 
+						name = HRP_AoE_Right_E 
+						value = -100
+					}
+				}
+			}
+			custom_tooltip = {
+				text = "The modifier will also decrease the support for extreme right by 0.2 while active"
+			}
+			add_radicals = {
+				value = 0.02
+			}
+		}
+		set_variable = { 
+			name = autarked_var
 		}
 	}
 }

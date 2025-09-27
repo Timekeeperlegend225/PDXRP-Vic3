@@ -126,6 +126,33 @@
 				add = global_var:GM_crash_countwodn
 			}
 		}
+		if = {
+			limit = {
+				has_modifier = HRP_autarky_modifier
+			} 
+			add = { 
+				desc = "Autarky"
+				value = 0.2
+			}
+		}
+		if = {
+			limit = {
+				tax_level = low
+			} 
+			add = { 
+				desc = "Low Taxes"
+				value = 0.1
+			}
+		}
+		else_if = {
+			limit = {
+				tax_level < low
+			} 
+			add = { 
+				desc = "Verry Low Taxes"
+				value = 0.2
+			}
+		}
 	}
 	start_value = 0
 	min_value = 0
@@ -146,30 +173,12 @@ HRP_AoE_Left_E = {
 		add = {
 			desc = "from Radicals"
 			value = this.radical_population_fraction
-			multiply = 5
+			multiply = 10
 		}
 		subtract = {
 			desc = "from Loyalists"
 			value = this.loyalist_fraction
-			multiply = 5
-		}
-		if = {
-			limit = {
-				any_political_Movement = {
-					is_political_movement_type = movement_socialist
-				}
-			}
-			add = {
-				desc = "from Socialist Movement Activism"
-				every_political_Movement = {
-					limit = {
-						is_political_movement_type = movement_socialist
-					}
-					add = this.political_movement_radicalism
-					multiply = this.political_movement_support
-					multiply = 5
-				}
-			}
+			multiply = 10
 		}
 		if = {
 			limit = {
@@ -178,14 +187,32 @@ HRP_AoE_Left_E = {
 				}
 			}
 			add = {
-				desc = "from Communist Movement Activism"
+				desc = "from Maximist Movement Activism"
 				every_political_Movement = {
 					limit = {
 						is_political_movement_type = movement_communist
 					}
 					add = this.political_movement_radicalism
 					multiply = this.political_movement_support
-					multiply = 5
+					multiply = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_làngist
+				}
+			}
+			add = {
+				desc = "from Làngist Movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_làngist
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 20
 				}
 			}
 		}
@@ -203,9 +230,68 @@ HRP_AoE_Left_E = {
 					}
 					add = this.political_movement_radicalism
 					multiply = this.political_movement_support
-					multiply = 5
+					multiply = 20
 				}
 			}
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_communalist
+				}
+			}
+			add = {
+				desc = "from Communalist Movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_communalist
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 20
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_edenist
+				}
+			}
+			add = {
+				desc = "from Anarchist Edenist Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_edenist
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 20
+				}
+			}
+		}
+		add = {
+			desc = "from Left wing interest groups"
+			every_interest_group = {
+				limit = {
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_maximism
+							has_ideology = ideology:ideology_làngist
+							has_ideology = ideology:ideology_anarchist
+							has_ideology = ideology:ideology_communalism
+							has_ideology = ideology:ideology_edenist
+						}
+					}
+				}
+				add = ig_clout
+			}
+			multiply = 10
+		}
+		subtract = {
+			desc = "from recovery"
+			add = var:recovery_var
+			divide = 500
 		}
 	}
 
@@ -229,30 +315,126 @@ HRP_AoE_Right_E = {
 		add = {
 			desc = "from Radicals"
 			value = this.radical_population_fraction
-			multiply = 5
+			multiply = 10
 		}
 		subtract = {
 			desc = "from Loyalists"
 			value = this.loyalist_fraction
-			multiply = 5
+			multiply = 10
 		}
 		if = {
 			limit = {
 				any_political_Movement = {
-					is_political_movement_type = movement_radical
+					is_political_movement_type = movement_fascist
 				}
 			}
 			add = {
-				desc = "from Radical Movement Activism"
+				desc = "from National Unionist movement Activism"
 				every_political_Movement = {
 					limit = {
-						is_political_movement_type = movement_radical
+						is_political_movement_type = movement_fascist
 					}
-					subtract = this.political_movement_radicalism
+					add = this.political_movement_radicalism
 					multiply = this.political_movement_support
-					multiply = 10
+					multiply = 20
 				}
 			}
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_eugenist
+				}
+			}
+			add = {
+				desc = "from Radical Eugenist movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_eugenist
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 20
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_prozelyte_corportatist
+				}
+			}
+			add = {
+				desc = "from Prozelite Corporatist movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_prozelyte_corportatist
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 20
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_national_syndicalist
+				}
+			}
+			add = {
+				desc = "from National Syndicalist movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_national_syndicalist
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 20
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_political_Movement = {
+					is_political_movement_type = movement_anti_western
+				}
+			}
+			add = {
+				desc = "from Anti-Western movement Activism"
+				every_political_Movement = {
+					limit = {
+						is_political_movement_type = movement_anti_western
+					}
+					add = this.political_movement_radicalism
+					multiply = this.political_movement_support
+					multiply = 20
+				}
+			}
+		}
+		add = {
+			desc = "from Right wing interest groups"
+			every_interest_group = {
+				limit = {
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_national_unionist
+							has_ideology = ideology:ideology_eugenist
+							has_ideology = ideology:ideology_prozelyte_corporatist
+							has_ideology = ideology:ideology_national_syndicalist
+							has_ideology = ideology:ideology_anti_western
+							has_ideology = ideology:ideology_jacksonian_totalitarian
+						}
+					}
+				}
+				add = ig_clout
+			}
+			multiply = 10
+		}
+		subtract = {
+			desc = "from recovery"
+			add = var:recovery_var
+			divide = 500
 		}
 	}
 
