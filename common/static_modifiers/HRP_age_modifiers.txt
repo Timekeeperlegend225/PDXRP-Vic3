@@ -172,6 +172,7 @@ HRP_crash = {
 	country_institution_size_change_speed_mult = 10
 	state_food_security_add = 0.50
 	country_capitalists_pol_str_mult = -0.8
+	political_movement_radicalism_add = 0.25
 }
 
 HRP_building_crash = {
@@ -331,13 +332,13 @@ HRP_autarky_modifier = {
 HRP_national_unionist_modifier = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_patriotic.dds"
 	state_pop_support_movement_fascist_add = 10
-	state_pop_support_movement_fascist_mult = 1
+	state_pop_support_movement_fascist_mult = 2
 }
 
 HRP_eugenist_modifier = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_malthusian.dds"
 	state_pop_support_movement_eugenist_add = 10
-	state_pop_support_movement_eugenist_mult = 1
+	state_pop_support_movement_eugenist_mult = 2
 }
 
 HRP_prozelyte_corportatist_modifier = {
@@ -349,31 +350,31 @@ HRP_prozelyte_corportatist_modifier = {
 HRP_national_syndicalist_modifier = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_populist.dds"
 	state_pop_support_movement_national_syndicalist_add = 10
-	state_pop_support_movement_national_syndicalist_mult = 1
+	state_pop_support_movement_national_syndicalist_mult = 2
 }
 
 HRP_anti_western_modifier = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_nationalism.dds"
 	state_pop_support_movement_anti_western_add = 10
-	state_pop_support_movement_anti_western_mult = 1
+	state_pop_support_movement_anti_western_mult = 2
 }
 
 HRP_maximist_modifier = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/unused/ideology_leader_socialist.dds"
 	state_pop_support_movement_communist_add = 10
-	state_pop_support_movement_communist_mult = 1
+	state_pop_support_movement_communist_mult = 2
 }
 
 HRP_làngist_modifier = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_womens_liberation.dds"
 	state_pop_support_movement_làngist_add = 10
-	state_pop_support_movement_làngist_mult = 1
+	state_pop_support_movement_làngist_mult = 2
 }
 
 HRP_anarchistt_modifier = {
 	icon = gfx/interface/icons/ideology_icons/unused/fascist.dds
 	state_pop_support_movement_anarchist_add = 10
-	state_pop_support_movement_anarchist_mult = 1
+	state_pop_support_movement_anarchist_mult = 2
 }
 
 HRP_communalist_modifier = {
@@ -385,7 +386,7 @@ HRP_communalist_modifier = {
 HRP_edenist_modifier = {
 	icon = gfx/interface/icons/ideology_icons/unused/fascist.dds
 	state_pop_support_movement_edenist_add = 10
-	state_pop_support_movement_edenist_mult = 1
+	state_pop_support_movement_edenist_mult = 2
 }
 
 HRP_supress_left_extreme_modifier = {
