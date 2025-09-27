@@ -66,10 +66,10 @@
  HRP_AoE_recovery_desc: "Our national recovery is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|2]/1000"
  HRP_AoE_Left_E_bar:0 "Extreme left support"
  HRP_AoE_Left_E_name:0 "Extreme left support : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
- HRP_AoE_Left_E_desc: "Extreme left support is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|2]/100"
+ HRP_AoE_Left_E_desc: "Extreme left support is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|2]/1000"
  HRP_AoE_Right_E_bar:0 "Extreme right support"
  HRP_AoE_Right_E_name:0 "Extreme right support : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
- HRP_AoE_Right_E_desc: "Extreme right support is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|2]/100"
+ HRP_AoE_Right_E_desc: "Extreme right support is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|2]/1000"
  
  
  state_pop_support_movement_communalist_add: "$movement_communalist$ $concept_pop$ Attraction"
@@ -109,3 +109,5 @@
  
  AoE_pause_interest_desc: "Pause interest payment for 1 year \n#b Can only be done once"
  AoE_inflate_currency_desc: "We will print more money for 1 year \n#b Can only be done once"
+ AoE_seize_capitalist_wealth_desc: "Seize the wealth of the capitalists who cause the crash \n#b Can only be done once"
+ AoE_deploy_army_desc: "Deploy the army to help recovery \n#b Can only be done once"

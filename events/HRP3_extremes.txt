@@ -1,32 +1,25 @@
 namespace = hrp3_extremes
 
 hrp3_extremes.1 = { 
-	type = country_event
-	placement = ROOT
+    type = country_event
+	placement = root
+	
+    title = "The Extreme Right"
+    desc = "After the recent events surrounding the Dominion of India and the East India Company, the London Stock Exchange has been sent into a spiral. Several smaller companies have defaulted on their debts due to the reduced cash flow from India, and, today, London's Barings Private Bank has made the shocking announcement that it no longer has enough cash to back up its deposits. With the bank's connection to other institutions across Great Britain and Europe - especially Poland - there are sure to be ripple effects..."
+#	flavor = "Something Happen"
+	
+    event_image = { 
+		video = europenorthamerica_springtime_of_nations
+	}
 
-	title = hrp3_extremes.1.t
-	desc = hrp3_extremes.1.d
-	flavor = hrp3_extremes.1.f
+	icon = "gfx/interface/icons/politics_icons/radicalized.dds"
 
-	gui_window = event_window_1char_tabloid
-	left_icon = scope:scope_jackson
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
+	duration = 10
 
 	trigger = { #Trigered by volcanic_eruption_iceland.3 for Greece
 	}
 
 	immediate = {
-		random_scope_character = {
-			limit = {
-				has_variable = is_andrew_jackson
-			}
-			save_scope_as = scope_jackson
-		}
 	}
 	
 	option = {
@@ -42,5 +35,278 @@ hrp3_extremes.1 = {
 			}
 			create_political_movement = { type = movement_fascist }
 		}
+		add_modifier = {
+			name = HRP_national_unionist_modifier           
+			years = 10
+			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
+ 		}
+	}
+	
+	option = {
+		name = "The state should tage full control to lay the fondation of a brave new world"
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_eugenist
+					}
+				}
+			}
+			create_political_movement = { type = movement_eugenist }
+		}
+		add_modifier = {
+			name = HRP_eugenist_modifier           
+			years = 10
+			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
+ 		}
+	}
+	
+	option = {
+		name = "We should turn away from greed and enforce pious value"
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_prozelyte_corportatist
+					}
+				}
+			}
+			create_political_movement = { type = movement_prozelyte_corportatist }
+		}
+		add_modifier = {
+			name = HRP_prozelyte_corportatist_modifier           
+			years = 10
+			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
+ 		}
+	}
+	
+	option = {
+		name = "It's time to take care of our workers to protect them from the forein menaces"
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_national_syndicalist
+					}
+				}
+			}
+			create_political_movement = { type = movement_national_syndicalist }
+		}
+		add_modifier = {
+			name = HRP_national_syndicalist_modifier           
+			years = 10
+			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
+ 		}
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				OR = {
+					country_is_in_europe = yes
+					country_is_in_americas = yes
+				}
+			}
+		}
+		name = "It's the fault of these Western pratice, we should fight back against them"
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_anti_western
+					}
+				}
+			}
+			create_political_movement = { type = movement_anti_western }
+		}
+		add_modifier = {
+			name = HRP_anti_western_modifier           
+			years = 10
+			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
+ 		}
+	}
+}
+hrp3_extremes.2 = { 
+    type = country_event
+	placement = root
+	
+    title = "The Extreme Left"
+    desc = "After the recent events surrounding the Dominion of India and the East India Company, the London Stock Exchange has been sent into a spiral. Several smaller companies have defaulted on their debts due to the reduced cash flow from India, and, today, London's Barings Private Bank has made the shocking announcement that it no longer has enough cash to back up its deposits. With the bank's connection to other institutions across Great Britain and Europe - especially Poland - there are sure to be ripple effects..."
+#	flavor = "Something Happen"
+	
+    event_image = { 
+		video = europenorthamerica_springtime_of_nations
+	}
+
+	icon = "gfx/interface/icons/politics_icons/radicalized.dds"
+
+	duration = 10
+
+	trigger = { #Trigered by volcanic_eruption_iceland.3 for Greece
+	}
+
+	immediate = {
+	}
+	
+	option = {
+		name = "We must rise for a dictature of the proletariat"
+		default_option = yes
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_communist
+					}
+				}
+			}
+			create_political_movement = { type = movement_communist }
+		}
+		add_modifier = {
+			name = HRP_maximist_modifier           
+			years = 10
+			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
+ 		}
+	}
+	
+	option = {
+		name = "It's time to fight for a truly egalitarian world"
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_làngist
+					}
+				}
+			}
+			create_political_movement = { type = movement_làngist }
+		}
+		add_modifier = {
+			name = HRP_làngist_modifier           
+			years = 10
+			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
+ 		}
+	}
+	
+	option = {
+		name = "We shall ger ride of any masters !"
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_anarchist
+					}
+				}
+			}
+			create_political_movement = { type = movement_anarchist }
+		}
+		add_modifier = {
+			name = HRP_anarchistt_modifier           
+			years = 10
+			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
+ 		}
+	}
+	
+	option = {
+		name = "Let's turn away from godless greed and turn toward Godly charity"
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_communalist
+					}
+				}
+			}
+			create_political_movement = { type = movement_communalist }
+		}
+		add_modifier = {
+			name = HRP_communalist_modifier           
+			years = 10
+			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
+ 		}
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				country_is_in_north_america = yes
+				capital ?= {
+					OR = {
+						region = sr:region_north_germany
+						region = sr:region_south_germany
+						region = sr:region_england
+						region = sr:region_poland
+						region = sr:region_danubia
+						region = sr:region_balkans
+						region = sr:region_baltic 
+						region = sr:region_russia
+						region = sr:region_dnieper
+						region = sr:region_belarus
+						region = sr:region_finland
+						region = sr:region_baltic_states
+					}
+				}
+			}
+		}
+		name = "We should get ride of these evil industry and recreate eden on earth"
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_edenist
+					}
+				}
+			}
+			create_political_movement = { type = movement_edenist }
+		}
+		add_modifier = {
+			name = HRP_edenist_modifier           
+			years = 10
+			is_decaying = yes
+ 		}
 	}
 }
