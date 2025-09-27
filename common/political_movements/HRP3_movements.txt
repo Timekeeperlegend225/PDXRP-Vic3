@@ -295,31 +295,6 @@ movement_communalist = {
 	}	
 	
 	additional_radicalism_factors = {
-		owner = {
-			if = {
-				limit = { has_institution = institution_workplace_safety }
-				
-				add = {
-					value = 3
-					subtract = "institution_investment_level(institution_workplace_safety)"
-					multiply = 0.05
-					desc = "INSTITUTION_FUNDING_LEVEL_workplace_safety"
-				}
-			}
-			else = {
-				add = {
-					value = 0.1
-					desc = "NO_INSTITUTION_workplace_safety"
-				}		
-			}
-			if = {
-				limit = { has_law = law_type:law_state_atheism }
-				add = {
-					value = 0.5	
-					desc = "STATE_ATHEISM"
-				}
-			}
-		}
 	}
 }
 
@@ -612,49 +587,6 @@ movement_làngist = {
 	}
 
 	additional_radicalism_factors = {
-		owner = {
-			if = {
-				limit = { has_institution = institution_social_security }
-
-				add = {
-					value = 3
-					subtract = "institution_investment_level(institution_social_security)"
-					multiply = 0.05
-					desc = "INSTITUTION_FUNDING_LEVEL_social_security"
-				}
-			}
-			else = {
-				add = {
-					value = 0.1
-					desc = "NO_INSTITUTION_social_security"
-				}
-			}
-
-			if = {
-				limit = { has_institution = institution_workplace_safety }
-
-				add = {
-					value = 3
-					subtract = "institution_investment_level(institution_workplace_safety)"
-					multiply = 0.05
-					desc = "INSTITUTION_FUNDING_LEVEL_workplace_safety"
-				}
-			}
-			else = {
-				add = {
-					value = 0.1
-					desc = "NO_INSTITUTION_workplace_safety"
-				}
-			}
-
-			add = {
-				desc = "IS_BELOW_15_SOL"
-				value = 15
-				subtract = average_sol
-				multiply = 0.03
-				min = 0
-			}
-		}
 	}
 }
 
@@ -1284,24 +1216,6 @@ movement_prozelyte_corportatist = {
 	}
 
 	additional_radicalism_factors = {
-		owner = {
-			if = {
-				limit = { has_institution = institution_schools }
-
-				add = {
-					value = 3
-					subtract = "institution_investment_level(institution_schools)"
-					multiply = 0.05
-					desc = "INSTITUTION_FUNDING_LEVEL_schools"
-				}
-			}
-			else = {
-				add = {
-					value = 0.1
-					desc = "NO_INSTITUTION_schools"
-				}
-			}
-		}
 	}
 }
 
@@ -1538,24 +1452,6 @@ movement_national_syndicalist = {
 	}
 
 	additional_radicalism_factors = {
-		owner = {
-			if = {
-				limit = { has_institution = institution_schools }
-
-				add = {
-					value = 3
-					subtract = "institution_investment_level(institution_schools)"
-					multiply = 0.05
-					desc = "INSTITUTION_FUNDING_LEVEL_schools"
-				}
-			}
-			else = {
-				add = {
-					value = 0.1
-					desc = "NO_INSTITUTION_schools"
-				}
-			}
-		}
 	}
 }
 
@@ -1795,24 +1691,6 @@ movement_anti_western = {
 	}
 
 	additional_radicalism_factors = {
-		owner = {
-			if = {
-				limit = { has_institution = institution_schools }
-
-				add = {
-					value = 3
-					subtract = "institution_investment_level(institution_schools)"
-					multiply = 0.05
-					desc = "INSTITUTION_FUNDING_LEVEL_schools"
-				}
-			}
-			else = {
-				add = {
-					value = 0.1
-					desc = "NO_INSTITUTION_schools"
-				}
-			}
-		}
 	}
 }
 

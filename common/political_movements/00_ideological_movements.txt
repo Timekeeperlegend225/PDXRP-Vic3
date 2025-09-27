@@ -2655,15 +2655,6 @@ movement_anarchist = {
 	}
 
 	additional_radicalism_factors = {
-		owner = {
-			add = {
-				desc = "IS_BELOW_15_SOL"
-				value = 15
-				subtract = average_sol
-				multiply = 0.025
-				min = 0
-			}
-		}
 	}
 }
 
@@ -2943,24 +2934,6 @@ movement_communist = {
 	}
 
 	additional_radicalism_factors = {
-		owner = {
-			if = {
-				limit = { has_institution = institution_workplace_safety }
-
-				add = {
-					value = 3
-					subtract = "institution_investment_level(institution_workplace_safety)"
-					multiply = 0.05
-					desc = "INSTITUTION_FUNDING_LEVEL_workplace_safety"
-				}
-			}
-			else = {
-				add = {
-					value = 0.1
-					desc = "NO_INSTITUTION_workplace_safety"
-				}
-			}
-		}
 	}
 }
 
@@ -3299,21 +3272,6 @@ movement_fascist = {
 	}
 
 	additional_radicalism_factors = {
-		owner = {
-			if = {
-				limit = {
-					owner.number_of_claims > 0
-				}
-
-				add = {
-					value = 5 # Add a base value for having claims at all
-					add = owner.number_of_claims
-					multiply = 0.025
-					max = 0.3
-					desc = "NUMBER_OF_CLAIMS"
-				}
-			}
-		}
 	}
 }
 

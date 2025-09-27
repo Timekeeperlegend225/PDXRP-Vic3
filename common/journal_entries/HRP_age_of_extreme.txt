@@ -366,6 +366,36 @@ je_HRP_recovery_and_extremism = {
 				}
 				set_variable = left_agitator_var
 			}
+			if = {
+				limit = {
+					var:recovery_var >= 250
+					NOT = { has_variable = 25loyal_var }
+				}
+				add_loyalists = {
+					value = 0.05
+				}
+				set_variable = 25loyal_var
+			}
+			if = {
+				limit = {
+					var:recovery_var >= 500
+					NOT = { has_variable = 50loyal_var }
+				}
+				add_loyalists = {
+					value = 0.05
+				}
+				set_variable = 50loyal_var
+			}
+			if = {
+				limit = {
+					var:recovery_var >= 750
+					NOT = { has_variable = 75loyal_var }
+				}
+				add_loyalists = {
+					value = 0.05
+				}
+				set_variable = 75loyal_var
+			}
 		}
 	}
 
@@ -377,7 +407,7 @@ je_HRP_recovery_and_extremism = {
 			}
 		}
 		add_loyalists = {
-			value = 0.20
+			value = 0.05
 		}
 	}
 	

@@ -1082,7 +1082,7 @@ ideology_eugenist = {
 
 	lawgroup_economic_system = {
 		law_laissez_faire = strongly_disapprove
-		law_interventionism = approve
+		law_interventionism = neutral
 		law_agrarianism = disapprove
 		law_traditionalism = strongly_disapprove
 		law_cooperative_ownership = neutral
