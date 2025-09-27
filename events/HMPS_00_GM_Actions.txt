@@ -6059,7 +6059,7 @@ gm_actions.50 = {
 		}
 		set_global_variable = {
 			name = recovery_flat_correction
-			value = 0.84
+			value = 8.4
 		}
 		set_global_variable = {
 			name = extreme_flat_correction
@@ -6075,7 +6075,7 @@ gm_actions.50 = {
 		}
 		set_global_variable = {
 			name = GM_crash_countwodn
-			value = 10
+			value = 100
 		}
 		remove_global_variable = GM_taking_action
 		random_country = {

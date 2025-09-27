@@ -1,0 +1,46 @@
+namespace = hrp3_extremes
+
+hrp3_extremes.1 = { 
+	type = country_event
+	placement = ROOT
+
+	title = hrp3_extremes.1.t
+	desc = hrp3_extremes.1.d
+	flavor = hrp3_extremes.1.f
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:scope_jackson
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = { #Trigered by volcanic_eruption_iceland.3 for Greece
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_variable = is_andrew_jackson
+			}
+			save_scope_as = scope_jackson
+		}
+	}
+	
+	option = {
+		name = "The state and millitary should take full control of the economy"
+		default_option = yes
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_fascist
+					}
+				}
+			}
+			create_political_movement = { type = movement_fascist }
+		}
+	}
+}
