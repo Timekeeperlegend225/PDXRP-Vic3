@@ -6063,7 +6063,7 @@ gm_actions.50 = {
 		}
 		set_global_variable = {
 			name = extreme_flat_correction
-			value = 0
+			value = 1
 		}
 		set_global_variable = {
 			name = GM_recovery_add

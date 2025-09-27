@@ -45,10 +45,21 @@ hrp3_extremes.1 = {
 				divide  = 1000
 			}
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_fascist
+			}
+			add_modifier = {
+				name = HRP_right_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 	
 	option = {
-		name = "The state should tage full control to lay the fondation of a brave new world"
+		name = "The state should take full control to lay the fondation of a brave new world"
 		if = {
 			limit = {
 				NOT = {
@@ -69,6 +80,17 @@ hrp3_extremes.1 = {
 				divide  = 1000
 			}
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_eugenist
+			}
+			add_modifier = {
+				name = HRP_right_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 	
 	option = {
@@ -93,6 +115,17 @@ hrp3_extremes.1 = {
 				divide  = 1000
 			}
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_prozelyte_corportatist
+			}
+			add_modifier = {
+				name = HRP_right_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 	
 	option = {
@@ -117,6 +150,17 @@ hrp3_extremes.1 = {
 				divide  = 1000
 			}
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_national_syndicalist
+			}
+			add_modifier = {
+				name = HRP_right_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 	
 	option = {
@@ -149,6 +193,17 @@ hrp3_extremes.1 = {
 				divide  = 1000
 			}
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_western
+			}
+			add_modifier = {
+				name = HRP_right_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 }
 hrp3_extremes.2 = { 
@@ -196,6 +251,17 @@ hrp3_extremes.2 = {
 				divide  = 1000
 			}
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_communist
+			}
+			add_modifier = {
+				name = HRP_left_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 	
 	option = {
@@ -220,6 +286,17 @@ hrp3_extremes.2 = {
 				divide  = 1000
 			}
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_làngist
+			}
+			add_modifier = {
+				name = HRP_left_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 	
 	option = {
@@ -244,6 +321,17 @@ hrp3_extremes.2 = {
 				divide  = 1000
 			}
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anarchist
+			}
+			add_modifier = {
+				name = HRP_left_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 	
 	option = {
@@ -268,6 +356,17 @@ hrp3_extremes.2 = {
 				divide  = 1000
 			}
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_communalist
+			}
+			add_modifier = {
+				name = HRP_left_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 	
 	option = {
@@ -308,5 +407,16 @@ hrp3_extremes.2 = {
 			years = 10
 			is_decaying = yes
  		}
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_edenist
+			}
+			add_modifier = {
+				name = HRP_left_extreme_modifier_movement 
+				years = 10
+				multiplier = 0.80
+				is_decaying = yes
+			}
+		}
 	}
 }
