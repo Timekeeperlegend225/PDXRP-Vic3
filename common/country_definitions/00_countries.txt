@@ -35,7 +35,7 @@ SCA = {
 }
 
 RUS = {
-	color = { 47 91 18 }
+	color = { 67 111 38 }
 
 	country_type = recognized
 
@@ -227,7 +227,7 @@ ITA = {
 }
 
 KUK = {
-	color = { 124 40 30 }
+	color = { 144 60 50 }
 
 	country_type = recognized
 
@@ -5027,4 +5027,15 @@ EZO = {
 
 	cultures = { japanese ainu }
 	capital = STATE_HOKKAIDO
+}
+
+TSA = {
+	color = { 30 60 0 }
+
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { russian }
+	capital = STATE_INGRIA
 }

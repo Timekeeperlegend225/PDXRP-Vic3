@@ -696,6 +696,17 @@ AST = { # Australia
 	}
 }
 
+KUK = {
+	flag_definition = {
+		coa = KUK
+		subject_canton = KUK
+		priority = 25000
+		trigger = {
+			scope:actor ?= { country_has_primary_culture = cu:hungarian }
+		}
+	}
+}
+
 AUS = { # Austria
 	flag_definition = {
 		coa = AUS
@@ -742,7 +753,7 @@ AUS = { # Austria
 	flag_definition = {
 		coa = KUK
 		subject_canton = KUK
-		priority = 100
+		priority = 25000
 		trigger = {
 			scope:actor ?= { country_has_primary_culture = cu:hungarian }
 		}
@@ -8183,6 +8194,14 @@ ROM = { # Romania
 		trigger = {
 			coa_def_fascist_flag_trigger = yes
 		}
+	}
+}
+
+TSA = {
+	flag_definition = {
+		coa = RUS_absolute_monarchy
+		subject_canton = RUS
+		priority = 20
 	}
 }
 

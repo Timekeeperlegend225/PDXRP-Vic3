@@ -113,3 +113,16 @@ ITA = {
 		}
 	}
 }
+
+KUK = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.8
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = pan-nationalism
+		has_law = law_type:law_cultural_exclusion
+	}
+}
