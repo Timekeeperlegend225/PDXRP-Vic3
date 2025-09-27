@@ -942,8 +942,26 @@ ideology_national_unionist = {
 	}
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
-		always = yes
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_single_party_state
+				has_law = law_type:law_mass_conscription
+				has_law = law_type:law_secret_police
+				has_law = law_type:law_command_economy
+				has_law = law_type:law_protectionism
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		interest_group = {
+			OR = {
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_industrialists
+			}
+		}
 	}
 
 	interest_group_leader_weight = {
@@ -1105,7 +1123,12 @@ ideology_eugenist = {
 			}
 		}
 		interest_group = {
-			ideology_eugenist_valid_trigger = yes
+			OR = {
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_industrialists
+			}
 		}
 	}
 
@@ -1269,8 +1292,28 @@ ideology_prozelyte_corporatist = {
 	}
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
-		always = yes
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_theocracy
+				has_law = law_type:law_corporate_state
+				has_law = law_type:law_single_party_state
+				has_law = law_type:law_state_religion
+				has_law = law_type:law_interventionism
+				has_law = law_type:law_religious_schools
+				has_law = law_type:law_charitable_health_system
+				has_law = law_type:law_public_health_insurance
+			}
+		}
+		interest_group = {
+			OR = {
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_industrialists
+			}
+		}
 	}
 
 	interest_group_leader_weight = {
@@ -1412,8 +1455,24 @@ ideology_national_syndicalist = {
 	}
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
-		always = yes
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_corporate_state
+				has_law = law_type:law_single_party_state
+				has_law = law_type:law_ethnostate
+				has_law = law_type:law_cooperative_ownership
+				has_law = law_type:law_worker_protections
+			}
+		}
+		interest_group = {
+			OR = {
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_devout
+			}
+		}
 	}
 
 	interest_group_leader_weight = {
@@ -1550,8 +1609,25 @@ ideology_anti_western = {
 	}
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
-		always = yes
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_national_supremacy
+				has_law = law_type:law_mass_conscription
+				has_law = law_type:law_agrarianism
+				has_law = law_type:law_protectionism
+				has_law = law_type:law_outlawed_dissent
+			}
+		}
+		interest_group = {
+			OR = {
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_armed_forces
+			}
+		}
 	}
 
 	interest_group_leader_weight = {
@@ -1703,8 +1779,40 @@ ideology_maximism = {
 	}
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
-		always = yes
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_single_party_state
+				has_law = law_type:law_technocracy
+				has_law = law_type:law_state_atheism
+				has_law = law_type:law_mass_conscription
+				has_law = law_type:law_command_economy
+				has_law = law_type:law_collectivized_agriculture
+			}
+		}
+		interest_group = {
+			OR = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_industrialists
+			}
+		}
+		NAND = {
+			owner = {
+				OR = {
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_theocracy
+				}
+			}
+			OR = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
 	}
 
 	interest_group_leader_weight = {
@@ -1855,8 +1963,38 @@ ideology_làngist = {
 	}
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
-		always = yes
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_universal_suffrage
+				has_law = law_type:law_anarchy
+				has_law = law_type:law_cultural_exclusion
+				has_law = law_type:law_womens_suffrage
+				has_law = law_type:law_protected_speech
+			}
+		}
+		interest_group = {
+			OR = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+		}
+		NAND = {
+			owner = {
+				OR = {
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_theocracy
+				}
+			}
+			OR = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
 	}
 
 	interest_group_leader_weight = {
@@ -2023,7 +2161,10 @@ ideology_anarchist = {
 		# Monarchs cannot be republicans
 		NAND = {
 			owner = {
-				has_law = law_type:law_monarchy
+				OR = {
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_theocracy
+				}
 			}
 			OR = {
 				is_ruler = yes
@@ -2214,6 +2355,15 @@ ideology_communalism = {
 				has_law = law_type:law_collectivized_agriculture
 				has_law = law_type:law_public_health_insurance
 				has_law = law_type:strongly_approve
+			}
+		}
+		interest_group = {
+			OR = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_devout
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_petty_bourgeoisie
 			}
 		}
 		# Monarchs cannot be republicans
@@ -2487,13 +2637,24 @@ ideology_edenist = {
 			OR = {
 				is_interest_group_type = ig_devout
 				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_petty_bourgeoisie
-				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_trade_unions
 			}
 		}
 		religion = {
 			has_discrimination_trait = christian 
+		}
+		NAND = {
+			owner = {
+				OR = {
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_theocracy
+				}
+			}
+			OR = {
+				is_ruler = yes
+				is_heir = yes
+			}
 		}
 	}
 
