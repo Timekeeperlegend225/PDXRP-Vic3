@@ -52,7 +52,11 @@ hrp3_extremes.1 = {
 			add_modifier = {
 				name = HRP_right_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
@@ -87,7 +91,11 @@ hrp3_extremes.1 = {
 			add_modifier = {
 				name = HRP_right_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
@@ -122,7 +130,11 @@ hrp3_extremes.1 = {
 			add_modifier = {
 				name = HRP_right_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
@@ -157,7 +169,11 @@ hrp3_extremes.1 = {
 			add_modifier = {
 				name = HRP_right_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
@@ -200,7 +216,11 @@ hrp3_extremes.1 = {
 			add_modifier = {
 				name = HRP_right_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
@@ -258,7 +278,11 @@ hrp3_extremes.2 = {
 			add_modifier = {
 				name = HRP_left_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
@@ -293,7 +317,11 @@ hrp3_extremes.2 = {
 			add_modifier = {
 				name = HRP_left_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
@@ -328,7 +356,11 @@ hrp3_extremes.2 = {
 			add_modifier = {
 				name = HRP_left_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
@@ -363,7 +395,11 @@ hrp3_extremes.2 = {
 			add_modifier = {
 				name = HRP_left_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
@@ -403,9 +439,14 @@ hrp3_extremes.2 = {
 			create_political_movement = { type = movement_edenist }
 		}
 		add_modifier = {
-			name = HRP_edenist_modifier           
+			name = HRP_edenist_modifier
 			years = 10
 			is_decaying = yes
+			multiplier = {
+				add = 1000
+				subtract = var:starting_recovery
+				divide  = 1000
+			}
  		}
 		every_political_movement = {
 			limit = {
@@ -414,7 +455,11 @@ hrp3_extremes.2 = {
 			add_modifier = {
 				name = HRP_left_extreme_modifier_movement 
 				years = 10
-				multiplier = 0.80
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
 				is_decaying = yes
 			}
 		}
