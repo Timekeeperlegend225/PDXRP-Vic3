@@ -9,6 +9,112 @@
 			desc = "Base Progress"
 			value = global_var:recovery_flat_correction
 		}
+		add = {
+			desc = "From state ownership"
+			add = var:state_ownership_loc_var
+			multiply = 4
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_interventionism
+			}
+			add = {
+				desc = "From Interventionism"
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_agrarianism
+			}
+			add = {
+				desc = "From Agrarianism"
+				value = 0.1
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_industry_banned
+			}
+			add = {
+				desc = "From Industry Banned"
+				value = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_cooperative_ownership
+			}
+			add = {
+				desc = "From Cooperative Ownership"
+				value = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_command_economy
+			}
+			add = {
+				desc = "From Command Economy"
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_mercantilism
+			}
+			add = {
+				desc = "From Mercantilism"
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_protectionism
+			}
+			add = {
+				desc = "From Protectionism"
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_isolationism
+			}
+			add = {
+				desc = "From Isolationism"
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_poor_laws
+			}
+			add = {
+				desc = "From Poor Law"
+				add = "institution_investment_level(institution_social_security)"
+				multiply = 0.2
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_wage_subsidies
+			}
+			add = {
+				desc = "From Wage Subsidies"
+				add = "institution_investment_level(institution_social_security)"
+				multiply = 0.3
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_old_age_pension
+			}
+			add = {
+				add = "institution_investment_level(institution_social_security)"
+				multiply = 0.4
+			}
+		}
 		if = {
 			limit = {
 				has_variable = recoverysetup
@@ -23,7 +129,7 @@
 	}
 	start_value = 0
 	min_value = 0
-	max_value = 100
+	max_value = 1000
 }
 
 HRP_AoE_Left_E = {
@@ -40,10 +146,12 @@ HRP_AoE_Left_E = {
 		add = {
 			desc = "from Radicals"
 			value = this.radical_population_fraction
+			multiply = 5
 		}
 		subtract = {
 			desc = "from Loyalists"
 			value = this.loyalist_fraction
+			multiply = 5
 		}
 		if = {
 			limit = {
@@ -59,6 +167,7 @@ HRP_AoE_Left_E = {
 					}
 					add = this.political_movement_radicalism
 					multiply = this.political_movement_support
+					multiply = 5
 				}
 			}
 		}
@@ -76,6 +185,7 @@ HRP_AoE_Left_E = {
 					}
 					add = this.political_movement_radicalism
 					multiply = this.political_movement_support
+					multiply = 5
 				}
 			}
 		}
@@ -93,6 +203,7 @@ HRP_AoE_Left_E = {
 					}
 					add = this.political_movement_radicalism
 					multiply = this.political_movement_support
+					multiply = 5
 				}
 			}
 		}
@@ -100,7 +211,7 @@ HRP_AoE_Left_E = {
 
 	start_value = 0
 	min_value = 0
-	max_value = 100
+	max_value = 1000
 
 }
 
@@ -118,10 +229,12 @@ HRP_AoE_Right_E = {
 		add = {
 			desc = "from Radicals"
 			value = this.radical_population_fraction
+			multiply = 5
 		}
 		subtract = {
 			desc = "from Loyalists"
 			value = this.loyalist_fraction
+			multiply = 5
 		}
 		if = {
 			limit = {
@@ -145,6 +258,6 @@ HRP_AoE_Right_E = {
 
 	start_value = 0
 	min_value = 0
-	max_value = 100
+	max_value = 1000
 
 }

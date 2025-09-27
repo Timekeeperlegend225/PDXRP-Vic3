@@ -1,5 +1,5 @@
 je_HRP_recovery_and_extremism = {
-	icon = "gfx/interface/icons/invention_icons/macroeconomics.dds"
+	icon = "gfx/interface/icons/generic_icons/company_prosperity.dds"
 
 	group = je_group_historical_content
 
@@ -18,7 +18,7 @@ je_HRP_recovery_and_extremism = {
 		}
 		change_variable = {
 			name = starting_recovery
-			multiply = 100
+			multiply = 1000
 		}
 		set_variable = recoverysetup 
 		remove_modifier = HRP_crash
@@ -27,9 +27,9 @@ je_HRP_recovery_and_extremism = {
 			add_modifier = {
 				name = HRP_crash
 				multiplier = {
-					add = 90
+					add = 900
 					subtract = var:starting_recovery
-					divide  = 100
+					divide  = 1000
 				}
 			}
 		}
@@ -37,9 +37,9 @@ je_HRP_recovery_and_extremism = {
 
 	complete = {
 		custom_tooltip = {
-			text = "Our recovery is at 100%"
+			text = "Our recovery is complete"
 			scope:journal_entry = {
-				"scripted_bar_progress(HRP_AoE_recovery)" >= 100
+				"scripted_bar_progress(HRP_AoE_recovery)" >= 1000
 			}
 		}
 	}
@@ -53,9 +53,12 @@ je_HRP_recovery_and_extremism = {
 		}
     }
 	
-	scripted_button = AoE_1
-	scripted_button = GM_national_correctionm01
-	scripted_button = GM_national_correction00
+	scripted_button = AoE_stock_action
+	scripted_button = AoE_pause_interest
+	scripted_button = AoE_inflate_currency
+	scripted_button = AoE_discourage_free_market
+	scripted_button = AoE_socialized_cooperation
+	scripted_button = AoE_national_companies
 
 	status_desc = {
 	}
@@ -83,6 +86,14 @@ je_HRP_recovery_and_extremism = {
 				name = right_extreme_var 
 				value = "scope:journal_entry.scripted_bar_progress(HRP_AoE_Right_E)" 
 			}
+			set_variable = { 
+				name = both_extreme_var
+				value = var:left_extreme_var
+			}
+			change_variable = { 
+				name = both_extreme_var
+				add = var:right_extreme_var
+			}
 			scope:journal_entry = { 
 				remove_modifier = HRP_crash
 				remove_modifier = HRP_left_extreme_modifier
@@ -90,36 +101,74 @@ je_HRP_recovery_and_extremism = {
 				add_modifier = {
 					name = HRP_crash
 					multiplier = {
-						add = 100
+						add = 1000
 						subtract = var:recovery_var
-						divide  = 100
+						divide  = 1000
 					}
 				}
 				add_modifier = {
 					name = HRP_left_extreme_modifier
-					multiplier = var:left_extreme_var
+					multiplier = {
+						add = var:left_extreme_var
+						divide  = 1000
+					}
 				}
 				add_modifier = {
 					name = HRP_right_extreme_modifier
-					multiplier = var:right_extreme_var
+					multiplier = {
+						add = var:right_extreme_var
+						divide  = 1000
+					}
 				}
+			}
+			set_global_variable = {
+				name = state_ownership_war
+				value = 0
+			}
+			set_global_variable = {
+				name = building_numbers_var
+				value = 0
 			}
 			every_scope_building = {
 				set_global_variable = {
 					name = building_crash_var
 					value = private_ownership_fraction
 				}
+				set_global_variable = {
+					name = state_ownership_build
+					value = 1
+				}
+				change_global_variable = {
+					name = state_ownership_build
+					subtract = private_ownership_fraction
+				}
+				change_global_variable = {
+					name = state_ownership_war
+					add = global_var:state_ownership_build
+				}
+				change_global_variable = {
+					name = building_numbers_var
+					add = 1
+				}
 				remove_modifier = HRP_building_crash
 				add_modifier = {
 					name = HRP_building_crash
 					multiplier = {
-						add = 100
+						add = 1000
 						subtract = var:recovery_var
-						divide  = 100
+						divide  = 1000
 						multiply = global_var:building_crash_var
 					}
 					months = 2
 				}	
+			}
+			change_global_variable = {
+				name = state_ownership_war
+				divide = global_var:building_numbers_var
+			}
+			set_variable = {
+				name = state_ownership_loc_var
+				value = global_var:state_ownership_war
 			}
 			every_political_movement = {
 				limit = {
@@ -163,6 +212,9 @@ je_HRP_recovery_and_extremism = {
 			every_scope_building = {
 				remove_modifier = HRP_building_crash	
 			}
+		}
+		add_loyalists = {
+			value = 0.20
 		}
 	}
 	

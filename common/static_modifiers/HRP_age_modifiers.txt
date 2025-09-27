@@ -180,29 +180,79 @@ HRP_building_crash = {
 
 HRP_left_extreme_modifier_movement = {
 	icon = gfx/interface/icons/ideology_icons/socialist.dds
-	political_movement_radicalism_add = 0.005
-	political_movement_radicalism_from_enactment_disapproval_mult = 0.005
+	political_movement_radicalism_add = 0.5
+	political_movement_radicalism_from_enactment_disapproval_mult = 0.5
 }
 
 HRP_right_extreme_modifier_movement = {
 	icon = gfx/interface/icons/ideology_icons/unused/fascist.dds
-	political_movement_pop_attraction_mult = 0.01
-	political_movement_radicalism_add = 0.005
-	political_movement_radicalism_from_enactment_disapproval_mult = 0.005
+	political_movement_radicalism_add = 0.5
+	political_movement_radicalism_from_enactment_disapproval_mult = 0.5
 }
 
 HRP_left_extreme_modifier = {
 	icon = gfx/interface/icons/ideology_icons/socialist.dds
-	state_pop_support_movement_socialist_add = 0.02
-	state_pop_support_movement_socialist_mult = 0.01
-	state_pop_support_movement_communist_add = 0.02
-	state_pop_support_movement_communist_mult = 0.01
-	state_pop_support_movement_anarchist_add = 0.02
-	state_pop_support_movement_anarchist_mult = 0.01
-	country_law_enactment_time_mult = 0.0025
+	state_pop_support_movement_communist_add = 10
+	state_pop_support_movement_communist_mult = 2
+	state_pop_support_movement_làngist_add = 10
+	state_pop_support_movement_làngist_mult = 2
+	state_pop_support_movement_anarchist_add = 10
+	state_pop_support_movement_anarchist_mult = 2
+	state_pop_support_movement_communalist_add = 10
+	state_pop_support_movement_communalist_mult = 2
+	country_law_enactment_time_mult = -0.25
 }
 
 HRP_right_extreme_modifier = {
 	icon = gfx/interface/icons/ideology_icons/unused/fascist.dds
-	country_law_enactment_time_mult = 0.0025
+	state_pop_support_movement_fascist_add = 10
+	state_pop_support_movement_fascist_mult = 2
+	state_pop_support_movement_eugenist_add = 10
+	state_pop_support_movement_eugenist_mult = 2
+	state_pop_support_movement_prozelyte_corportatist_add = 10
+	state_pop_support_movement_prozelyte_corportatist_mult = 2
+	state_pop_support_movement_national_syndicalist_add = 10
+	state_pop_support_movement_national_syndicalist_mult = 2
+	state_pop_support_movement_anti_western_add = 10
+	state_pop_support_movement_anti_western_mult = 2
+	country_law_enactment_time_mult = -0.25
+}
+
+HRP_stock_nationalization_modifier = {
+	icon = "gfx/interface/icons/invention_icons/stock_exchanges.dds"
+	building_nationalization_cost_mult = -0.01
+}
+
+HRP_discourage_free_market_modifier = {
+	icon = "gfx/interface/icons/war_goals/force_nationalization.dds"
+	country_authority_add = -100
+}
+
+HRP_discourage_free_marketbuilding_modifier = {
+	icon = "gfx/interface/icons/war_goals/force_nationalization.dds"
+	building_throughput_add = 0.10
+}
+
+HRP_paused_interest_modifier = {
+	icon = "gfx/interface/icons/war_goals/force_nationalization.dds"
+	country_authority_add = -100
+	country_loan_interest_rate_mult = -2
+	interest_group_ig_industrialists_approval_add = -4
+}
+
+HRP_paused_printing_money_modifier = {
+	icon = "gfx/interface/icons/war_goals/force_nationalization.dds"
+	country_authority_add = -200
+	country_minting_mult = 0.25
+}
+
+HRP_socialized_cooperation_modifier = {
+	icon = "gfx/interface/icons/war_goals/force_nationalization.dds"
+	state_food_security_add = 0.3
+	state_lower_strata_standard_of_living_add = 1
+}
+
+HRP_national_companies_modifier = {
+	icon = "gfx/interface/icons/war_goals/force_nationalization.dds"
+	country_company_throughput_bonus_add = 0.2
 }

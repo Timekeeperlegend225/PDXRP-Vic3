@@ -1,0 +1,244 @@
+﻿AoE_stock_action = {
+	name = "Take government ownership with stocks"
+	desc = "Trade your leftover stock for nationalization"
+	
+	visible = { 
+		var:Gilded_actions > 0
+	}
+
+	possible = {
+		var:Gilded_actions > 0
+	}
+
+	effect = {
+		set_variable = { 
+			name = Gilded_actions_reward
+			value = var:Gilded_actions
+		}
+		change_variable = { 
+			name = Gilded_actions_reward
+			multiply = 10000
+		}
+		add_treasury = var:Gilded_actions_reward
+		add_modifier = { 
+			name = HRP_stock_nationalization_modifier 
+			multiplier = var:Gilded_actions
+			years = 10
+			decaying = yes
+		}
+		set_variable = { 
+			name = Gilded_actions 
+			value = 0
+		}
+	}
+}
+
+AoE_discourage_free_market = {
+	name = "Discourage the free market"
+	desc = "Promote nationaly owned building"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			OR = {
+				has_law = law_type:law_laissez_faire
+				has_law = law_type:law_free_trade
+				has_modifier = HRP_discourage_free_market_modifier
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_discourage_free_market_modifier 
+			years = 1
+		}
+		custom_tooltip = {
+			text = "Every building will get between 20% (fully self or state owned) and -10% (fully privately owned) thougput for 1 years depending of it's ownership"
+			every_scope_building = {
+				add_modifier = {
+					name = HRP_discourage_free_marketbuilding_modifier
+					multiplier = {
+						add = private_ownership_fraction
+						multiply = -3
+						add = 2
+					}
+					months = 12
+				}	
+			}
+		}
+	}
+}
+
+AoE_pause_interest = {
+	name = "Pause interest payments"
+	desc = AoE_pause_interest_desc
+	
+	visible = { 
+		NOT = { has_variable = interest_paused_var }
+	}
+
+	possible = {
+		NOT = {
+			has_law = law_type:law_laissez_faire
+		}
+		custom_tooltip = {
+			text = "The support for extremes is at least 100"
+			var:both_extreme_var >= 100
+		}
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_paused_interest_modifier 
+			years = 1
+		}
+		custom_tooltip = {
+			text = "This will increase the support for both extrems by 50"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Left_E 
+					value = 50
+				}
+				add_progress = { 
+					name = HRP_AoE_Right_E 
+					value = 50
+				}
+			}
+		}
+		set_variable = { 
+			name = interest_paused_var
+		}
+	}
+}
+
+AoE_inflate_currency = {
+	name = "Inflate currency"
+	desc = AoE_inflate_currency_desc
+	
+	visible = { 
+		NOT = { has_variable = money_infated_var }
+	}
+
+	possible = {
+		NOT = {
+			has_law = law_type:law_laissez_faire
+		}
+		custom_tooltip = {
+			text = "The support for extremes is at least 100"
+			var:both_extreme_var >= 100
+		}
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_paused_printing_money_modifier 
+			years = 1
+		}
+		custom_tooltip = {
+			text = "This will increase the support for both extremes by 50"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Left_E 
+					value = 50
+				}
+				add_progress = { 
+					name = HRP_AoE_Right_E 
+					value = 50
+				}
+			}
+		}
+		set_variable = { 
+			name = money_infated_var
+		}
+	}
+}
+
+AoE_socialized_cooperation = {
+	name = "Socialized Cooperation"
+	desc = "We'll aid the poor"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			has_law = law_type:law_no_social_security
+		}
+		custom_tooltip = {
+			text = "The support for the extreme left is at least 100"
+			var:left_extreme_var >= 100
+		}
+		custom_tooltip = {
+			text = "2 years cooldown"
+			NOT = { has_variable = socialized_cooperation_var }
+		}
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_socialized_cooperation_modifier 
+			years = 1
+		}
+		custom_tooltip = {
+			text = "This will increase the support for extreme left by 50"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Left_E 
+					value = 50
+				}
+			}
+		}
+		set_variable = { 
+			name = socialized_cooperation_var
+			year = 2
+		}
+	}
+}
+
+AoE_national_companies = {
+	name = "Support National Companies"
+	desc = "We'll promote our national companies"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		NOT = {
+			has_law = law_type:law_cooperative_ownership
+		}
+		custom_tooltip = {
+			text = "The support for the extreme right is at least 100"
+			var:right_extreme_var >= 100
+		}
+		custom_tooltip = {
+			text = "2 years cooldown"
+			NOT = { has_variable = national_companies_var }
+		}
+	}
+
+	effect = {
+		add_modifier = { 
+			name = HRP_national_companies_modifier 
+			years = 1
+		}
+		custom_tooltip = {
+			text = "This will increase the support for extreme right by 50"
+			je:je_HRP_recovery_and_extremism = {
+				add_progress = { 
+					name = HRP_AoE_Right_E 
+					value = 50
+				}
+			}
+		}
+		set_variable = { 
+			name = national_companies_var
+			year = 2
+		}
+	}
+}
