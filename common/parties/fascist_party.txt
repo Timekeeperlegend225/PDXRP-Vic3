@@ -268,7 +268,7 @@
 		default = "/gfx/interface/icons/political_parties/fascists.dds"
 	}
 	unlocking_technologies = {
-		political_agitation
+#		political_agitation
 	}
 	available_for_interest_group = {
 		owner = {
@@ -276,11 +276,12 @@
 			any_interest_group = {
 				leader = {
 					OR = { # PB shouldn't instantly become fascist without fascism being relevant
-						has_ideology = ideology:ideology_fascist
-						has_ideology = ideology:ideology_integralist
-						has_ideology = ideology:ideology_corporatist_leader
-						has_ideology = ideology:ideology_ethno_nationalist
 						has_ideology = ideology:ideology_jacksonian_totalitarian
+						has_ideology = ideology:ideology_national_unionist
+						has_ideology = ideology:ideology_eugenist
+						has_ideology = ideology:ideology_prozelyte_corporatist
+						has_ideology = ideology:ideology_national_syndicalist
+						has_ideology = ideology:ideology_anti_western
 					}
 				}
 			}

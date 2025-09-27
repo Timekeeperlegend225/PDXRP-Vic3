@@ -295,20 +295,7 @@ ideology_jacksonian_totalitarian = {
 	}
 
 	interest_group_leader_weight = {
-		value = 300
-		if = {
-			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
-				}
-			}
-			multiply = 0.1
-		}
+		value = 300 
 		if = {
 			limit = {
 				OR = {
@@ -965,76 +952,98 @@ ideology_national_unionist = {
 	}
 
 	interest_group_leader_weight = {
-		value = 300
+		value = 50
 		if = {
 			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
-				}
+				ig_approval <= unhappy
 			}
-			multiply = 0.1
+			add = 50
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_landowners
+				owner = {
+					var:right_extreme_var >= 250
 				}
 			}
-			add = -250
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = armed_forces
+				owner = {
+					var:right_extreme_var >= 500
 				}
 			}
-			add = 300
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_national_unionist_modifier
+					var:right_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_national_unionist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 
 	non_interest_group_leader_weight = {
-		value = 100
+		value = 100 
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
-					}
+				owner = {
+					var:right_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:right_extreme_var >= 500
 				}
 			}
-			add = -80
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_national_unionist_modifier
+					var:right_extreme_var >= 100
 				}
 			}
 			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_national_unionist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }
@@ -1133,8 +1142,7 @@ ideology_eugenist = {
 	}
 
 	interest_group_leader_weight = {
-		value = 25
-		# More likely among angry IG's
+		value = 50
 		if = {
 			limit = {
 				ig_approval <= unhappy
@@ -1144,7 +1152,32 @@ ideology_eugenist = {
 		if = {
 			limit = {
 				owner = {
-					has_variable = positivist_leaders_less_je_var
+					var:right_extreme_var >= 250
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:right_extreme_var >= 500
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_eugenist_modifier
+					var:right_extreme_var >= 100
 				}
 			}
 			add = 50
@@ -1152,50 +1185,10 @@ ideology_eugenist = {
 		if = {
 			limit = {
 				owner = {
-					has_variable = positivist_leaders_je_var
+					has_modifier = HRP_eugenist_modifier
 				}
 			}
-			add = 100
-		}
-		if = {
-			limit = {
-				has_variable = positivist_leaders_increase_var
-			}
-			add = 75
-		}
-		if = {
-			limit = {
-				has_variable = positivist_leaders_large_increase_var
-			}
-			add = 150
-		}
-		if = {
-			limit = {
-				has_variable = positivist_leaders_reward_var
-			}
-			add = 250
-		}
-		if = {
-			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
-					has_variable = chose_fascism
-				}
-			}
-			multiply = 0.1
-		}
-		if = {
-			limit = {
-				exists = c:ALD
-				owner = { c:ALD = THIS }
-				is_interest_group_type = ig_intelligentsia
-			}
-			multiply = 0.1
+			multiply = 1.2
 		}
 	}
 
@@ -1203,19 +1196,44 @@ ideology_eugenist = {
 		value = 100
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
-						has_variable = chose_fascism
-					}
+				owner = {
+					var:right_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:right_extreme_var >= 500
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_eugenist_modifier
+					var:right_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_eugenist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }
@@ -1317,76 +1335,98 @@ ideology_prozelyte_corporatist = {
 	}
 
 	interest_group_leader_weight = {
-		value = 300
+		value = 50
 		if = {
 			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
-				}
+				ig_approval <= unhappy
 			}
-			multiply = 0.1
+			add = 50
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_landowners
+				owner = {
+					var:right_extreme_var >= 250
 				}
 			}
-			add = -250
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = armed_forces
+				owner = {
+					var:right_extreme_var >= 500
 				}
 			}
-			add = 300
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_prozelyte_corportatist_modifier
+					var:right_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_prozelyte_corportatist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 
 	non_interest_group_leader_weight = {
-		value = 100
+		value = 100 
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
-					}
+				owner = {
+					var:right_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:right_extreme_var >= 500
 				}
 			}
-			add = -80
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_prozelyte_corportatist_modifier
+					var:right_extreme_var >= 100
 				}
 			}
 			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_prozelyte_corportatist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }
@@ -1476,76 +1516,98 @@ ideology_national_syndicalist = {
 	}
 
 	interest_group_leader_weight = {
-		value = 300
+		value = 50
 		if = {
 			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
-				}
+				ig_approval <= unhappy
 			}
-			multiply = 0.1
+			add = 50
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_landowners
+				owner = {
+					var:right_extreme_var >= 250
 				}
 			}
-			add = -250
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = armed_forces
+				owner = {
+					var:right_extreme_var >= 500
 				}
 			}
-			add = 300
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_national_syndicalist_modifier
+					var:right_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_national_syndicalist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 
 	non_interest_group_leader_weight = {
-		value = 100
+		value = 100 
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
-					}
+				owner = {
+					var:right_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:right_extreme_var >= 500
 				}
 			}
-			add = -80
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_national_syndicalist_modifier
+					var:right_extreme_var >= 100
 				}
 			}
 			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_national_syndicalist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }
@@ -1631,76 +1693,99 @@ ideology_anti_western = {
 	}
 
 	interest_group_leader_weight = {
-		value = 300
+		value = 50
 		if = {
 			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
-				}
+				ig_approval <= unhappy
 			}
-			multiply = 0.1
+			add = 50
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_landowners
+				owner = {
+					var:right_extreme_var >= 250
 				}
 			}
-			add = -250
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = armed_forces
+				owner = {
+					var:right_extreme_var >= 500
 				}
 			}
-			add = 300
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_anti_western_modifier
+					var:right_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_anti_western_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 
 	non_interest_group_leader_weight = {
 		value = 100
+		value = 100 
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
-					}
+				owner = {
+					var:right_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:right_extreme_var >= 500
 				}
 			}
-			add = -80
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:right_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_anti_western_modifier
+					var:right_extreme_var >= 100
 				}
 			}
 			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_anti_western_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }
@@ -1816,76 +1901,98 @@ ideology_maximism = {
 	}
 
 	interest_group_leader_weight = {
-		value = 300
+		value = 50
 		if = {
 			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
-				}
+				ig_approval <= unhappy
 			}
-			multiply = 0.1
+			add = 50
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_landowners
+				owner = {
+					var:left_extreme_var >= 250
 				}
 			}
-			add = -250
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = armed_forces
+				owner = {
+					var:left_extreme_var >= 500
 				}
 			}
-			add = 300
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_maximist_modifier
+					var:left_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_maximist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 
 	non_interest_group_leader_weight = {
-		value = 100
+		value = 100 
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
-					}
+				owner = {
+					var:left_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:left_extreme_var >= 500
 				}
 			}
-			add = -80
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_maximist_modifier
+					var:left_extreme_var >= 100
 				}
 			}
 			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_maximist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }
@@ -1998,76 +2105,98 @@ ideology_làngist = {
 	}
 
 	interest_group_leader_weight = {
-		value = 300
+		value = 50
 		if = {
 			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
-				}
+				ig_approval <= unhappy
 			}
-			multiply = 0.1
+			add = 50
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_landowners
+				owner = {
+					var:left_extreme_var >= 250
 				}
 			}
-			add = -250
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = armed_forces
+				owner = {
+					var:left_extreme_var >= 500
 				}
 			}
-			add = 300
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_làngist_modifier
+					var:left_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_làngist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 
 	non_interest_group_leader_weight = {
-		value = 100
+		value = 100 
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
-					}
+				owner = {
+					var:left_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
 		}
 		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:left_extreme_var >= 500
 				}
 			}
-			add = -80
+			add = 100
 		}
-		else_if = {
+		if = {
 			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_trade_unions
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_làngist_modifier
+					var:left_extreme_var >= 100
 				}
 			}
 			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_làngist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }
@@ -2177,88 +2306,98 @@ ideology_anarchist = {
 	}
 
 	interest_group_leader_weight = {
-		value = 100
-		# More likely for angry IG's outside of council republic
+		value = 50
+		if = {
+			limit = {
+				ig_approval <= unhappy
+			}
+			add = 50
+		}
 		if = {
 			limit = {
 				owner = {
-					NOT = { has_law = law_type:law_council_republic }
+					var:left_extreme_var >= 250
 				}
-				ig_approval <= -5
 			}
 			add = 100
 		}
-		# More likely when SoL is low outside of council republic
 		if = {
 			limit = {
 				owner = {
-					NOT = { has_law = law_type:law_council_republic }
-					average_sol <= 10
+					var:left_extreme_var >= 500
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_anarchistt_modifier
+					var:left_extreme_var >= 100
 				}
 			}
 			add = 50
 		}
-		# More likely if in "government" under anarchy
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_anarchy
-				}
-				is_in_government = yes
-			}
-			add = 75
-		}
-		if = {
-			limit = {
-				owner = { has_variable = communism_1_done }
-			}
-			multiply = 3
-		}
-		if = {
-			limit = {
-				owner = { has_variable = election_anarchist_support }
-			}
-			multiply = 2
-		}
-		# National Liberation Alliance
-		if = {
-			limit = {
-				owner = {
-					has_variable = national_liberation_alliance_variable
-					has_journal_entry = je_new_republic
+					has_modifier = HRP_anarchistt_modifier
 				}
 			}
-			multiply = 1.10
-		}
-		if = {
-			limit = {
-				OR = {
-					has_variable = chose_vanguardism
-					has_variable = chose_communism
-					has_variable = chose_conservatism
-					has_variable = chose_fascism
-					has_variable = chose_ethno_nationalism
-				}
-			}
-			multiply = 0.1
+			multiply = 1.2
 		}
 	}
 
 	non_interest_group_leader_weight = {
-		value = 100
+		value = 100 
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-						has_variable = chose_vanguardism
-						has_variable = chose_communism
-						has_variable = chose_conservatism
-						has_variable = chose_fascism
-						has_variable = chose_ethno_nationalism
-					}
+				owner = {
+					var:left_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 500
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_anarchistt_modifier
+					var:left_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_anarchistt_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }
@@ -2379,22 +2518,42 @@ ideology_communalism = {
 	}
 	
 	interest_group_leader_weight = {
-		# More likely for angry IG's outside of council republic
+		value = 50
+		if = {
+			limit = {
+				ig_approval <= unhappy
+			}
+			add = 50
+		}
 		if = {
 			limit = {
 				owner = {
-					NOT = { has_law = law_type:law_council_republic }
+					var:left_extreme_var >= 250
 				}
-				ig_approval <= -5
 			}
 			add = 100
 		}
-		# More likely when SoL is low outside of council republic
 		if = {
 			limit = {
 				owner = {
-					NOT = { has_law = law_type:law_council_republic }
-					average_sol <= 10
+					var:left_extreme_var >= 500
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_communalist_modifier
+					var:left_extreme_var >= 100
 				}
 			}
 			add = 50
@@ -2402,135 +2561,55 @@ ideology_communalism = {
 		if = {
 			limit = {
 				owner = {
-					NOT = { has_law = law_type:law_council_republic }
-				}
-				NOT = { is_interest_group_type = ig_armed_forces }
-				ig_approval <= -5
-			}
-			add = 100
-		}
-		
-		if = {
-			limit = {
-				owner = {
-					NOR = {
-						has_law = law_type:law_council_republic
-						has_law = law_type:law_theocracy
-					}
-				}
-				is_interest_group_type = ig_devout
-				ig_approval <= 0
-			}
-			add = 30
-		}
-		
-		value = {
-			value = 100
-			if = {
-				limit = {
-					owner = { has_variable = communism_1_done }
-				}
-				multiply = 3
-			}
-			if = {
-				limit = {
-					owner = { has_variable = election_communist_support }
-				}
-				multiply = 2
-			}
-		}
-		# National Liberation Alliance
-		if = {
-			limit = {
-				owner = {
-					has_variable = national_liberation_alliance_variable
-					has_journal_entry = je_new_republic
+					has_modifier = HRP_communalist_modifier
 				}
 			}
-			multiply = 1.25
-		}
-		if = {
-			limit = {
-				OR = {
-					has_variable = chose_communism
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_conservatism
-					has_variable = chose_fascism
-					has_variable = chose_ethno_nationalism
-				}
-			}
-			multiply = 0.1
-		}
-		
-		if = {
-			limit = {
-				OR = {
-					is_interest_group_type = ig_industrialists
-					is_interest_group_type = ig_landowners
-				}
-			}
-			multiply = 0.01
-		}
-		if = {
-			limit = {
-				owner = {
-					NOT = {
-						any_political_movement = {
-							OR = {
-								is_political_movement_type = movement_communalist
-							}
-							political_movement_support > 0.10
-						}
-					}
-				}
-			}
-			multiply = 0.5
-		}
-		if = {
-			limit = {
-				owner = {
-					any_political_movement = {
-						OR = {
-							is_political_movement_type = movement_communalist
-						}
-						political_movement_support > 0.10
-					}
-				}
-			}
-			multiply = 1.5
-		}
-		if = {
-			limit = {
-				owner = {
-					any_political_movement = {
-						OR = {
-							is_political_movement_type = movement_communalist
-						}
-						political_movement_support > 0.20
-					}
-				}
-			}
-			multiply = 1.5
+			multiply = 1.2
 		}
 	}
 	
 	non_interest_group_leader_weight = {
-		value = 100
+		value = 100 
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-					has_variable = chose_communism
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_conservatism
-					has_variable = chose_fascism
-					has_variable = chose_ethno_nationalism
-					}
+				owner = {
+					var:left_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 500
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_communalist_modifier
+					var:left_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_communalist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }
@@ -2660,81 +2739,97 @@ ideology_edenist = {
 
 	interest_group_leader_weight = {
 		value = 50
-		# More likely to support with large industries
 		if = {
 			limit = {
-				owner = {
-					any_scope_building = {
-						is_building_group = bg_heavy_industry
-						level >= 5
-					}
-				}
-			}
-			add = 50
-		}
-		# More likely with high unemployment and large industries
-		if = {
-			limit = {
-				owner = {
-					any_scope_state = {
-						any_scope_building = {
-							is_building_group = bg_heavy_industry
-							level >= 5
-						}
-						state_unemployment_rate > 0.1
-					}
-				}
+				ig_approval <= unhappy
 			}
 			add = 50
 		}
 		if = {
 			limit = {
-				OR = {
-					has_variable = communist_ig_var
-					has_variable = chose_vanguardism
-					has_variable = chose_anarchism
-					has_variable = chose_communism
-					has_variable = chose_ethno_nationalism
-					has_variable = chose_conservatism
-					has_variable = chose_fascism
+				owner = {
+					var:left_extreme_var >= 250
 				}
-			}
-			multiply = 0.1
-		}
-		if = {
-			limit = {
-				OR = {
-					is_interest_group_type = ig_rural_folk
-					is_interest_group_type = ig_devout
-				}
-			}
-			add = 150
-		}
-		if = {
-			limit = {
-				culture = c:polish
 			}
 			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 500
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_edenist_modifier
+					var:left_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_edenist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 
 	non_interest_group_leader_weight = {
-		value = 100
+		value = 100 
 		if = {
 			limit = {
-				interest_group = {
-					OR = {
-						has_variable = communist_ig_var
-						has_variable = chose_vanguardism
-						has_variable = chose_anarchism
-						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
-						has_variable = chose_conservatism
-						has_variable = chose_fascism
-					}
+				owner = {
+					var:left_extreme_var >= 250
 				}
 			}
-			multiply = 0.1
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 500
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					var:left_extreme_var >= 750
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_edenist_modifier
+					var:left_extreme_var >= 100
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = HRP_edenist_modifier
+				}
+			}
+			multiply = 1.2
 		}
 	}
 }

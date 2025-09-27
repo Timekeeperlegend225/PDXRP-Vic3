@@ -5287,6 +5287,13 @@ ideology_despotic_utopian = {
 					}
 				}
 			}
+			AND = { 
+				exists = c:CHL
+				OR = {
+					c:CHL = this
+					civil_war_origin_country ?= c:CHL
+				}
+			}
 		}
 	}
 

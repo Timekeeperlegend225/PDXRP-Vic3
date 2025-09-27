@@ -1943,10 +1943,11 @@ movement_socialist = {
 
 	ideology = ideology_socialist_movement
 	character_ideologies = {
-		ideology_communist
+		ideology_maximism
 		ideology_anarchist
 		ideology_social_democrat
-		ideology_vanguardist
+		ideology_làngist
+		ideology_communalism
 	}
 
 	creation_trigger = {
@@ -1960,22 +1961,16 @@ movement_socialist = {
 	}
 
 	disband_trigger = {
-		any_interest_group = {
-			OR = {
-				has_variable = chose_anarchism
-				has_variable = chose_communism
-				has_variable = chose_vanguardism
-			}
-		}
 	}
 	on_disbanded = {}
 
 	character_support_trigger = {
 		OR = {
-			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_maximism
 			has_ideology = ideology:ideology_anarchist
 			has_ideology = ideology:ideology_social_democrat
-			has_ideology = ideology:ideology_vanguardist
+			has_ideology = ideology:ideology_làngist
+			has_ideology = ideology:ideology_communalism
 			has_ideology = ideology:ideology_utopian
 			AND = {
 				is_interest_group_type = ig_trade_unions
@@ -1988,8 +1983,7 @@ movement_socialist = {
 		if = { # Very vulnerable to fragmentation once the more focused movements emerge
 			limit = {
 				OR = {
-					has_ideology = ideology:ideology_vanguardist
-					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_maximism
 				}
 				NOT = {
 					owner ?= {
@@ -2010,6 +2004,36 @@ movement_socialist = {
 					owner ?= {
 						any_political_movement = {
 							is_political_movement_type = movement_anarchist
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_làngist
+				NOT = {
+					owner ?= {
+						any_political_movement = {
+							is_political_movement_type = movement_làngist
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_communalism
+				NOT = {
+					owner ?= {
+						any_political_movement = {
+							is_political_movement_type = movement_communalist
 						}
 					}
 				}
@@ -2217,10 +2241,11 @@ movement_socialist = {
 						count >= 2
 
 						OR = {
-							is_political_movement_type = movement_labor
 							is_political_movement_type = movement_communist
+							is_political_movement_type = movement_làngist
+							is_political_movement_type = movement_communalist
 							is_political_movement_type = movement_anarchist
-	}
+							}
 						political_movement_support >= 0.10
 					}
 				}
@@ -2948,6 +2973,7 @@ movement_fascist = {
 	character_ideologies = {
 		ideology_national_unionist
 		ideology_jacksonian_totalitarian
+		ideology_despotic_utopian
 	}
 
 	creation_trigger = {
@@ -2972,10 +2998,7 @@ movement_fascist = {
 		value = 200
 		if = {
 			limit = {
-				OR = {
-					has_ideology = ideology:ideology_fascist
-					has_ideology = ideology:ideology_integralist
-				}
+				has_ideology = ideology:ideology_national_unionist
 			}
 			multiply = {
 				value = 5
@@ -3154,7 +3177,7 @@ movement_fascist = {
 								is_political_movement_type = movement_socialist
 								is_political_movement_type = movement_anarchist
 								is_political_movement_type = movement_communist
-		}
+							}
 							political_movement_support >= 0.15
 						}
 					}
@@ -3191,24 +3214,6 @@ movement_fascist = {
 				add = {
 					value = 3
 					desc = "LOWER_NO_ICON"
-				}
-			}
-		}
-
-		owner = {
-			if = {
-				limit = {
-					number_of_claims > 0
-				}
-
-				add = {
-					value = 5 # Add a base value for having claims at all
-					add = {
-						value = number_of_claims
-						multiply = 5
-					}
-					max = 25
-					desc = "NUMBER_OF_CLAIMS"
 				}
 			}
 		}
@@ -3258,6 +3263,12 @@ movement_fascist = {
 			value = 0.012
 			multiply = pop_acceptance
 			desc = "ACCEPTANCE"
+		}
+
+		multiply = { # Multiplied by 2x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			add = 1
 		}
 	}
 
@@ -4237,7 +4248,7 @@ movement_radical = {
 			add = 0.10
 		}
 
-		multiply = { # Multiplied by 2x max
+		multiply = { # Multiplied by 1.2x max
 			desc = "POP_RADICALS"
 			value = pop_radical_fraction
 			add = 1
