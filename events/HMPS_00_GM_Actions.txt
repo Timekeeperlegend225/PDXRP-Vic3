@@ -9947,6 +9947,47 @@ gm_actions.100 = {
 		}
 		remove_global_variable = GM_taking_action
 	}
+	
+	option = {
+		name = "Egyptia deal"
+		s:STATE_LOWER_EGYPT = {
+			set_owner_of_provinces = { 
+				country = c:EGY
+				provinces = { 7 6 8 1 2 9 12 }
+			}
+		}
+		s:STATE_MIDDLE_EGYPT = {
+			set_owner_of_provinces = { 
+				country = c:EGY
+				provinces = { 57 53 46 58 }
+			}
+		}
+		s:STATE_UPPER_EGYPT = {
+			set_owner_of_provinces = { 
+				country = c:EGY
+				provinces = { 28 31 37 35 }
+			}
+		} 
+		s:STATE_DONGOLA = {
+			set_owner_of_provinces = { 
+				country = c:GBR
+				provinces = { 350 348 349 347 346 322 316 295 327 337 343 344 302 325 336 292 290 286 247 260 265 230 237 245 236 246 263 278 335 324 307 285 277 250 270 249 }
+			}
+		}  
+		s:STATE_BLUE_NILE = {
+			set_owner_of_provinces = { 
+				country = c:GBR
+				provinces = { 599 597 594 584 591 577 574 558 568 598 556 546 543 551 596 589 541 537 532 528 531 529 536 548 567 563 555 593 580 595 573 566 561 542 557 544 547 539 530 }
+			}
+		}  
+		s:STATE_EQUATORIA = {
+			set_owner_of_provinces = { 
+				country = c:GBR
+				provinces = { 674 663 684 644 632 622 666 652 648 638 640 641 615 616 623 625 630 606 613 605 604 601 608 629 639 610 603 662 653 }
+			}
+		} 
+		remove_global_variable = GM_taking_action
+	}
 }
 
 gm_actions.101 = {
