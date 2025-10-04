@@ -245,11 +245,16 @@ free_trade_party = {
 					}
 					has_ideology = ideology:ideology_laissez_faire
 				}
-#				NOT = {
-#					owner = {
-#						has_law = law_type:law_universal_suffrage
-#					}
-#				}
+				OR = {
+					NOT = {
+						owner = {
+							has_law = law_type:law_universal_suffrage
+						}
+					}
+					owner = {
+						this = c:ALD
+					}
+				}
 			}
 			add = {
 				value = 10

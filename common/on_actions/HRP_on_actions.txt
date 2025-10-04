@@ -40,11 +40,22 @@ on_monthly_pulse_country = {
 		if = { 
 			limit = {
 				has_global_variable = age_of_extreme_gm
-				global_var:GM_crash_countwodn < 950
+				game_date < 1889.1.1
 				NOT = { has_journal_entry = je_HRP_recovery_and_extremism }
+				NOT = { has_variable = recovery_completed_var }
 			}
 			add_journal_entry = {
 				type = je_HRP_recovery_and_extremism
+			}
+		}
+		if = { 
+			limit = {
+				has_global_variable = age_of_extreme_gm
+				NOT = { has_journal_entry = je_HRP_world_tension }
+				NOT = { has_journal_entry = je_HRP_world_tension_GM }
+			}
+			add_journal_entry = {
+				type = je_HRP_world_tension
 			}
 		}
 		trigger_event = { id = unable_to_enact.1 }

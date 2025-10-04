@@ -1067,3 +1067,99 @@ please_dont_starave_modifier = {
     icon = gfx/interface/icons/generic_icons/population_radical.dds
 	state_food_security_add = 0.20
 }
+
+russian_food_help_modifier = {
+	icon = gfx/interface/icons/goods_icons/fruit.dds
+	state_food_security_add = 0.30
+}
+
+bad_publicity_modifier ={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	character_popularity_add = -20
+}
+
+multi_ethnic_ethnostate_modiifer = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_legitimacy_base_add = -15
+}
+
+phantom_monopoly_modifier = {
+	icon = gfx/interface/icons/topbar/authority_icon.dds
+	country_authority_add = 375
+}
+
+trade_union_journal_modifier = {
+	icon = gfx/interface/icons/ig_icons/trade_unions.dds
+	interest_group_ig_trade_unions_pop_attraction_mult = 0.05
+}
+
+SA_defense_modifier = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	unit_army_defense_mult = 0.40
+	building_training_rate_mult = 0.10
+	country_military_goods_cost_mult = -0.05
+}
+
+grande_colombia_military_catch_up_modifier = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	country_military_tech_spread_mult = 0.3
+}
+
+SA_defense_modifier30 = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	unit_army_defense_mult = 0.30
+	building_training_rate_mult = 0.10
+	country_military_goods_cost_mult = -0.05
+}
+
+weakened_police_modifier = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	country_institution_cost_institution_police_mult = -0.10
+}
+
+làngist_radical_modifier = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	political_movement_radicalism_add = 0.05
+}
+
+anti_landowner_discourse_modifier = {
+	icon = gfx/interface/icons/ig_icons/landowners.dds
+	interest_group_ig_landowners_pol_str_mult = -0.5
+}
+
+seized_arms_discourse_modifier = {
+	icon = gfx/interface/icons/goods_icons/small_arms.dds
+	building_arms_industry_throughput_add = -0.75
+	interest_group_ig_industrialists_approval_add = -10
+	interest_group_ig_petty_bourgeoisie_approval_add = -5
+}
+
+never_happy_modifier = {
+	icon = gfx/interface/icons/ig_icons/landowners.dds
+	interest_group_ig_landowners_approval_add = -10
+}
+
+propaganda_cost_modifier = {
+	icon = gfx/interface/icons/topbar/bureaucracy_icon.dds
+	country_bureaucracy_mult = -0.15
+}
+
+south_africa_migration_attraction_modifier  = {
+	icon = gfx/interface/icons/state_status_icons/mass_migration_target.dds
+	state_migration_pull_mult = 0.10
+}
+
+military_research_modifier  = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+	country_military_tech_research_speed_mult = 0.30
+}
+
+USA_propaganda_modifier = {
+	icon = gfx/interface/icons/topbar/authority_icon.dds
+	country_authority_mult = 0.10
+}
+
+làngism_attraction_modifier={
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	political_movement_pop_attraction_mult = 0.40
+}

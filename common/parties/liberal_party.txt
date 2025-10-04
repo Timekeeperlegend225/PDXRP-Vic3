@@ -363,7 +363,7 @@ liberal_party = {
 							has_ideology = ideology:ideology_reformer
 						}
 					}
-					add = 15
+					add = 10
 				}
 				if = {
 					limit = {
@@ -384,6 +384,20 @@ liberal_party = {
 					}
 					add = 3
 				}
+			}
+		}
+		if = { # liberals love liberalism
+			limit = {
+				leader = {
+					has_ideology = ideology:ideology_sovereignist_leader
+				}
+				owner = {
+					this = c:ALD
+				}
+			}
+			add = {
+				desc = "from Outremer Party"
+				add = 15
 			}
 		}
 		if = { # liberals love liberalism
