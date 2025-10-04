@@ -117,6 +117,15 @@
 		}
 		if = {
 			limit = {
+				has_modifier = declared_bankruptcy
+			} 
+			add = { 
+				desc = "From Bankruptcy"
+				value = 0.2
+			}
+		}
+		if = {
+			limit = {
 				has_modifier = HRP_autarky_modifier
 			} 
 			add = { 
@@ -158,7 +167,6 @@
 				desc = "Initial recovery"
 				name = HRP_AoE_recovery 
 				add = var:starting_recovery
-				add = global_var:GM_crash_countwodn
 			}
 		}
 	}
@@ -176,7 +184,7 @@ HRP_AoE_Left_E = {
 	monthly_progress = {
 		add = {
 			desc = "Base Progress"
-			value = global_var:extreme_flat_correction
+			value = global_var:extreme_left_flat_correction
 		}
 		add = {
 			desc = "from Radicals"
@@ -301,6 +309,24 @@ HRP_AoE_Left_E = {
 			}
 			multiply = 10
 		}
+		if = {
+			limit = {
+				has_modifier = declared_bankruptcy
+			} 
+			add = { 
+				desc = "From Bankruptcy"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = HRP_supress_left_extreme_modifier
+			} 
+			subtract = { 
+				desc = "From Supression"
+				value = 0.5
+			}
+		}
 		subtract = {
 			desc = "from recovery"
 			add = var:recovery_var
@@ -324,7 +350,7 @@ HRP_AoE_Right_E = {
 	monthly_progress = {
 		add = {
 			desc = "Base Progress"
-			value = global_var:extreme_flat_correction
+			value = global_var:extreme_right_flat_correction
 		}
 		add = {
 			desc = "from Radicals"
@@ -450,11 +476,87 @@ HRP_AoE_Right_E = {
 			}
 			multiply = 10
 		}
+		if = {
+			limit = {
+				has_modifier = declared_bankruptcy
+			} 
+			add = { 
+				desc = "From Bankruptcy"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = HRP_supress_right_extreme_modifier
+			} 
+			subtract = { 
+				desc = "From Supression"
+				value = 0.5
+			}
+		}
 		subtract = {
 			desc = "from recovery"
 			add = var:recovery_var
 			divide = 500
 			subtract = 2
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 1000
+
+}
+
+HRP_AoE_world_tension = {
+	name = "HRP_AoE_world_tension_bar"
+	desc = "HRP_AoE_world_tension_desc"
+
+	default_bad = yes
+
+	monthly_progress = {
+		add = {
+			desc = "Base Progress"
+			value = global_var:tension_GM_adjustment_flat
+		}
+		if = {
+			limit = {
+				has_variable = tension_setup_var
+			} 
+			add = { 
+				desc = "Catching up tension"
+				add = global_var:tension_setup_value
+			}
+		}
+		add = {
+			desc = "from Extremists Laws"
+			add = global_var:extremist_law_var
+			divide = 100
+		}
+		add = {
+			desc = "from Global Armies"
+			add = global_var:global_power_projection_arm_var
+			divide = 200000
+		}
+		add = {
+			desc = "from Global Navies"
+			add = global_var:global_power_projection_nav_var
+			divide = 200000
+		}
+		add = {
+			desc = "from Global Infamy"
+			add = global_var:global_infam_var
+			divide = 200
+		}
+		if = {
+			limit = {
+				NOT = { tension_GM_adjustment_multiplier = 0 }
+			}
+			multiply = {
+				desc = "From Correction"
+				add = 1
+				add = global_var:tension_GM_adjustment_multiplier
+			}
 		}
 	}
 

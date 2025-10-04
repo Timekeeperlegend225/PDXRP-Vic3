@@ -695,7 +695,7 @@ AoE_suppress_nationalist = {
 				}
 			}
 			custom_tooltip = {
-				text = "The modifier will also decrease the support for extreme right by 0.1 while active"
+				text = "The modifier will also decrease the support for extreme right by 0.5 while active"
 			}
 			add_radicals = {
 				value = 0.01
@@ -716,7 +716,7 @@ AoE_suppress_nationalist = {
 				}
 			}
 			custom_tooltip = {
-				text = "The modifier will also decrease the support for extreme right by 0.2 while active"
+				text = "The modifier will also decrease the support for extreme right by 0.5 while active"
 			}
 			add_radicals = {
 				value = 0.02

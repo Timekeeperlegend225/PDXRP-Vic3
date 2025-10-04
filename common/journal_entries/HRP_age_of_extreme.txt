@@ -25,14 +25,46 @@ je_HRP_recovery_and_extremism = {
 				multiply = 1000
 			}
 		}
+		else_if = {
+			limit = {
+				game_date < 1885.1.1
+			}
+			set_variable = {
+				name = starting_recovery
+				value = 300
+			}
+		}
+		else_if = {
+			limit = {
+				game_date < 1886.1.1
+			}
+			set_variable = {
+				name = starting_recovery
+				value = 450
+			}
+		}
+		else_if = {
+			limit = {
+				game_date < 1887.1.1
+			}
+			set_variable = {
+				name = starting_recovery
+				value = 600
+			}
+		}
+		else_if = {
+			limit = {
+				game_date < 1888.1.1
+			}
+			set_variable = {
+				name = starting_recovery
+				value = 750
+			}
+		}
 		else = {
 			set_variable = {
 				name = starting_recovery
-				value = global_var:GM_crash_countwodn
-			}
-			change_variable = {
-				name = starting_recovery
-				multiply = 2
+				value = 900
 			}
 		}
 		set_variable = recoverysetup 
@@ -221,6 +253,7 @@ je_HRP_recovery_and_extremism = {
 						add = var:left_extreme_var
 						divide = 1000
 					}
+					months = 2
 				}
 			}
 			every_political_movement = {
@@ -240,6 +273,7 @@ je_HRP_recovery_and_extremism = {
 						add = var:right_extreme_var
 						divide = 1000
 					}
+					months = 2
 				}
 			}
 			set_variable = { 
@@ -408,6 +442,644 @@ je_HRP_recovery_and_extremism = {
 		}
 		add_loyalists = {
 			value = 0.05
+		}
+		set_variable = recovery_completed_var
+	}
+	
+	should_be_pinned_by_default = yes
+}
+
+je_HRP_world_tension = {
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	group = je_group_historical_content
+
+	scripted_progress_bar = HRP_AoE_world_tension
+
+	immediate = {
+		set_variable = tension_setup_var
+	}
+	
+    invalid = {
+		custom_tooltip = {
+			text = "Age of Extreme is finished"
+			NOT = {
+				has_global_variable = age_of_extreme_gm
+			}
+		}
+    }
+	
+	scripted_button = AoE_suppress_socialists
+	scripted_button = AoE_suppress_nationalist
+
+	status_desc = {
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			remove_variable = tension_setup_var
+			HRP_AoE_world_tension = yes 
+			HRP_AoE_Left_E_progress = yes
+			HRP_AoE_Right_E_progress = yes
+			set_variable = { 
+				name = tension_var 
+				value = "scope:journal_entry.scripted_bar_progress(HRP_AoE_world_tension)" 
+			}
+			scope:journal_entry = { 
+				remove_modifier = HRP_world_tension_modifier
+				add_modifier = {
+					name = HRP_world_tension_modifier
+					multiplier = {
+						add = var:tension_var
+						divide  = 1000
+					}
+				}
+			}
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+}
+
+
+je_HRP_world_tension_GM = {
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	group = je_group_historical_content
+
+	scripted_progress_bar = HRP_AoE_world_tension
+
+	immediate = {
+	}
+	
+    invalid = {
+		custom_tooltip = {
+			text = "Age of Extreme is finished"
+			NOT = {
+				has_global_variable = age_of_extreme_gm
+			}
+		}
+    }
+	
+	scripted_button = AoE_suppress_socialists
+	scripted_button = AoE_suppress_nationalist
+
+	status_desc = {
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			HRP_AoE_world_tension = yes 
+			HRP_AoE_Left_E_progress = yes
+			HRP_AoE_Right_E_progress = yes
+			set_variable = { 
+				name = tension_var 
+				value = "scope:journal_entry.scripted_bar_progress(HRP_AoE_world_tension)" 
+			}
+			set_global_variable = {
+				name = tension_setup_value
+				value = "scope:journal_entry.scripted_bar_progress(HRP_AoE_world_tension)" 
+			}
+			set_global_variable = {
+				name = extremist_law_var
+				value = 0
+			}
+			set_global_variable = {
+				name = global_power_projection_arm_var
+				value = 0
+			}
+			set_global_variable = {
+				name = global_power_projection_nav_var
+				value = 0
+			}
+			set_global_variable = {
+				name = global_infam_var
+				value = 0
+			}
+			every_country = {
+				change_global_variable = {
+					name = global_power_projection_arm_var
+					add = army_power_projection
+				}
+				change_global_variable = {
+					name = global_power_projection_nav_var
+					add = naval_power_projection
+				}
+				change_global_variable = {
+					name = global_infam_var
+					add = infamy
+				}
+				if = {
+					limit = {
+						country_rank = rank_value:great_power
+					}
+					set_varialble = {
+						name = local_infamy_var
+						value = infamy
+					}
+					change_varialble = {
+						name = local_infamy_var
+						multiply = 1
+					}
+					change_global_variable = {
+						name = global_infam_var
+						add = var:local_infamy_var
+					}
+					set_varialble = {
+						name = local_infamy_var
+						value = infamy
+					}
+					change_varialble = {
+						name = local_infamy_var
+						multiply = 10
+					}
+					change_global_variable = {
+						name = global_infam_var
+						add = var:local_infamy_var
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_council_republic
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 10
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_corporate_state
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_single_party_state
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 10
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_technocracy
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_ethnostate
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 10
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_mass_conscription
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 10
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_secret_police
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_command_economy
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 10
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_cooperative_ownership
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 10
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_collectivized_agriculture
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_militarized_police
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_outlawed_dissent
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 10
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						country_rank = rank_value:major_power
+					}
+					set_varialble = {
+						name = local_infamy_var
+						value = infamy
+					}
+					change_varialble = {
+						name = local_infamy_var
+						multiply = 5
+					}
+					change_global_variable = {
+						name = global_infam_var
+						add = var:local_infamy_var
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_council_republic
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_corporate_state
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2.5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_single_party_state
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_technocracy
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2.5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_ethnostate
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_mass_conscription
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_secret_police
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2.5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_command_economy
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_cooperative_ownership
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_collectivized_agriculture
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2.5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_militarized_police
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2.5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_outlawed_dissent
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 5
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							country_rank = rank_value:minor_power
+							country_rank = rank_value:unrecognized_major_power
+						}
+					}
+					set_varialble = {
+						name = local_infamy_var
+						value = infamy
+					}
+					change_varialble = {
+						name = local_infamy_var
+						multiply = 2
+					}
+					change_global_variable = {
+						name = global_infam_var
+						add = var:local_infamy_var
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_council_republic
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_corporate_state
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_single_party_state
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_technocracy
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_ethnostate
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_mass_conscription
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_secret_police
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_command_economy
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_cooperative_ownership
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_collectivized_agriculture
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_militarized_police
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 2
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_outlawed_dissent
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_law = law_type:law_council_republic
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_corporate_state
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 0.5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_single_party_state
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_technocracy
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 0.5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_ethnostate
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_mass_conscription
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 0.5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_secret_police
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_command_economy
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 0.5
+						}
+					}
+					else_if = {
+						limit = {
+							has_law = law_type:law_cooperative_ownership
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_collectivized_agriculture
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 0.5
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_militarized_police
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 1
+						}
+					}
+					if = {
+						limit = {
+							has_law = law_type:law_outlawed_dissent
+						}
+						change_global_variable = {
+							name = extremist_law_var
+							add = 0.5
+						}
+					}
+				}
+			}
+			scope:journal_entry = { 
+				remove_modifier = HRP_world_tension_modifier
+				add_modifier = {
+					name = HRP_world_tension_modifier
+					multiplier = {
+						add = var:tension_var
+						divide  = 1000
+					}
+				}
+			}
 		}
 	}
 	
