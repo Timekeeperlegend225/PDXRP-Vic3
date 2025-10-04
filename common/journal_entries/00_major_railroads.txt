@@ -106,25 +106,65 @@ je_trans_continental_railway = {
 	}
 
 	complete = {
-		any_scope_state = {
-			state_region = s:STATE_NEBRASKA
-			has_building = building_railway
+		OR = {
+			any_scope_state = {
+				state_region = s:STATE_NEBRASKA
+				has_building = building_railway
+			}
+			any_subject_or_below = {
+				any_scope_state = {
+					state_region = s:STATE_NEBRASKA
+					has_building = building_railway
+				}
+			}
 		}
-		any_scope_state = {
-			state_region = s:STATE_WYOMING
-			has_building = building_railway
+		OR = {
+			any_scope_state = {
+				state_region = s:STATE_WYOMING
+				has_building = building_railway
+			}
+			any_subject_or_below = {
+				any_scope_state = {
+					state_region = s:STATE_WYOMING
+					has_building = building_railway
+				}
+			}
 		}
-		any_scope_state = {
-			state_region = s:STATE_UTAH
-			has_building = building_railway
+		OR = {
+			any_scope_state = {
+				state_region = s:STATE_UTAH
+				has_building = building_railway
+			}
+			any_subject_or_below = {
+				any_scope_state = {
+					state_region = s:STATE_UTAH
+					has_building = building_railway
+				}
+			}
 		}
-		any_scope_state = {
-			state_region = s:STATE_NEVADA
-			has_building = building_railway
+		OR = {
+			any_scope_state = {
+				state_region = s:STATE_NEVADA
+				has_building = building_railway
+			}
+			any_subject_or_below = {
+				any_scope_state = {
+					state_region = s:STATE_NEVADA
+					has_building = building_railway
+				}
+			}
 		}
-		any_scope_state = {
-			state_region = s:STATE_CALIFORNIA
-			has_building = building_railway
+		OR = {
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+				has_building = building_railway
+			}
+			any_subject_or_below = {
+				any_scope_state = {
+					state_region = s:STATE_CALIFORNIA
+					has_building = building_railway
+				}
+			}
 		}
 	}
 
