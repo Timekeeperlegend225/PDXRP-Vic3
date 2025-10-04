@@ -259,10 +259,10 @@ ACE = { # Aceh
 
 AFG = { # Afghanistan
 	flag_definition = {
-		coa = AFG
+		coa = kabulistan
 		subject_canton = AFG
 		allow_overlord_canton = yes
-		priority = 1
+		priority = 256
 	}
 	flag_definition = {
 		coa = AFG_durrani
@@ -2059,6 +2059,15 @@ CHE = { # Cherokee
 		coa_with_overlord_canton = CHE_subject
 		subject_canton = CHE
 		priority = 1
+	}
+}
+
+FRS = {
+	flag_definition = {
+		coa = republic_of_china
+		subject_canton = republic_of_china
+		allow_overlord_canton = yes
+		priority = 255
 	}
 }
 
@@ -9362,9 +9371,9 @@ TRI = { # Tripoli
 
 TRN = { # Transvaal
 	flag_definition = {
-		coa = TRN
-		subject_canton = TRN
-		priority = 1
+		coa = transvaal
+		subject_canton = transvaal
+		priority = 255
 	}
 	flag_definition = {
 		coa = TRN_subject_GBR

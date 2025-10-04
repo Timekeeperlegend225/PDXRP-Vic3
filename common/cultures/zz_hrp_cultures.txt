@@ -21626,7 +21626,7 @@ sorb= {
 tuvan= {
 	color= rgb{ 140 185 206 }
 	religion = gelugpa
-	traits = { east_asian_heritage francophone }
+	traits = { east_asian_heritage francophone yamato }
 	male_common_first_names = {
 		Achille Adolphe Adrien Aimable Alphonse Amedee Antoine Armand Auguste Augustin Alcide Andre Alexandre Athanase Abel Ambroise Aristide AlbE_ric Archambaud Alexis
 		Bertrand Bernardin Bernard Barthelemy
@@ -22045,7 +22045,7 @@ yemenite= {
 szekely = {
 	color = { 90 160 255 }
 	religion = catholic
-	traits = { hungarian_culture_group european_heritage }
+	traits = { hungarian_culture_group european_heritage romanian_culture_group }
 	male_common_first_names = {
 		Alajos
 		Albert

@@ -309,7 +309,7 @@
 			}
 			add = {
 				desc = "Outremer"
-				value = 150
+				value = 20
 			}
 		}
 
