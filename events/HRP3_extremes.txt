@@ -5,7 +5,7 @@ hrp3_extremes.1 = {
 	placement = root
 	
     title = "The Extreme Right"
-    desc = "After the recent events surrounding the Dominion of India and the East India Company, the London Stock Exchange has been sent into a spiral. Several smaller companies have defaulted on their debts due to the reduced cash flow from India, and, today, London's Barings Private Bank has made the shocking announcement that it no longer has enough cash to back up its deposits. With the bank's connection to other institutions across Great Britain and Europe - especially Poland - there are sure to be ripple effects..."
+    desc = "The Great Crash has devastated the world economy. Even now, a year later, its effects are still profound as tens of millions of people are found jobless, unable to make ends meet. The people are angry. Across the world, they blame capitalism and the unrestricted free market for the disaster that started when the East India Company got into financial issues following the harvest crisis of 1880-1882. The people seek something different. Something new.   Extreme voices ring out in the towns and cities, from shopkeepers and clerks, soldiers and officers. They claim only a strong state, unified in ethos and spirit, can avoid the issues that led to the failings of the free market. That the blame lies on the foreigner, on the minorities, on those who exploited the honest men. These voices are..."
 #	flavor = "Something Happen"
 	
     event_image = { 
@@ -60,6 +60,9 @@ hrp3_extremes.1 = {
 				is_decaying = yes
 			}
 		}
+		ai_chance = {
+			base = 150
+		}
 	}
 	
 	option = {
@@ -98,6 +101,9 @@ hrp3_extremes.1 = {
 				}
 				is_decaying = yes
 			}
+		}
+		ai_chance = {
+			base = 50
 		}
 	}
 	
@@ -138,6 +144,9 @@ hrp3_extremes.1 = {
 				is_decaying = yes
 			}
 		}
+		ai_chance = {
+			base = 50
+		}
 	}
 	
 	option = {
@@ -176,6 +185,9 @@ hrp3_extremes.1 = {
 				}
 				is_decaying = yes
 			}
+		}
+		ai_chance = {
+			base = 50
 		}
 	}
 	
@@ -224,6 +236,9 @@ hrp3_extremes.1 = {
 				is_decaying = yes
 			}
 		}
+		ai_chance = {
+			base = 50
+		}
 	}
 }
 hrp3_extremes.2 = { 
@@ -231,7 +246,7 @@ hrp3_extremes.2 = {
 	placement = root
 	
     title = "The Extreme Left"
-    desc = "After the recent events surrounding the Dominion of India and the East India Company, the London Stock Exchange has been sent into a spiral. Several smaller companies have defaulted on their debts due to the reduced cash flow from India, and, today, London's Barings Private Bank has made the shocking announcement that it no longer has enough cash to back up its deposits. With the bank's connection to other institutions across Great Britain and Europe - especially Poland - there are sure to be ripple effects..."
+    desc = "The Great Crash has devastated the world economy. Even now, a year later, its effects are still profound as tens of millions of people are found jobless, unable to make ends meet. The people are angry. Across the world, they blame capitalism and the unrestricted free market for the disaster that started when the East India Company got into financial issues following the harvest crisis of 1880-1882. The people seek something different. Something new.   For left extreme event: Extreme voices ring out in the factories and fields, from farmers to laborers to academics and peasants. They claim only a state that serves the people, and not the markets, can avoid the issues that led to the failings of the free market. That the blame lies on the bourgeoisie, on the elites, on those who exploited the honest worker. These voices are..."
 #	flavor = "Something Happen"
 	
     event_image = { 
@@ -286,6 +301,9 @@ hrp3_extremes.2 = {
 				is_decaying = yes
 			}
 		}
+		ai_chance = {
+			base = 150
+		}
 	}
 	
 	option = {
@@ -324,6 +342,9 @@ hrp3_extremes.2 = {
 				}
 				is_decaying = yes
 			}
+		}
+		ai_chance = {
+			base = 50
 		}
 	}
 	
@@ -364,6 +385,9 @@ hrp3_extremes.2 = {
 				is_decaying = yes
 			}
 		}
+		ai_chance = {
+			base = 50
+		}
 	}
 	
 	option = {
@@ -402,6 +426,9 @@ hrp3_extremes.2 = {
 				}
 				is_decaying = yes
 			}
+		}
+		ai_chance = {
+			base = 50
 		}
 	}
 	
@@ -462,6 +489,9 @@ hrp3_extremes.2 = {
 				}
 				is_decaying = yes
 			}
+		}
+		ai_chance = {
+			base = 50
 		}
 	}
 }

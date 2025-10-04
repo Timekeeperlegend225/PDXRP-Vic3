@@ -4996,10 +4996,10 @@ gm_actions.402 = {
 	}
 	
 	option = {
-		name =ideology_fascist
+		name =ideology_national_unionist
 		default_option = yes
 		scope:target_character = {
-			set_ideology = ideology:ideology_fascist
+			set_ideology = ideology:ideology_national_unionist
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -5035,10 +5035,49 @@ gm_actions.402 = {
 	}
 	
 	option = { 
-		name =ideology_integralist
+		name =ideology_eugenist
 		default_option = yes
 		scope:target_character = {
-			set_ideology = ideology:ideology_integralist
+			set_ideology = ideology:ideology_eugenist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name =ideology_prozelyte_corporatist
+		default_option = yes
+		scope:target_character = {
+			set_ideology = ideology:ideology_prozelyte_corporatist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name =ideology_national_syndicalist
+		default_option = yes
+		scope:target_character = {
+			set_ideology = ideology:ideology_national_syndicalist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name =ideology_anti_western
+		default_option = yes
+		scope:target_character = {
+			set_ideology = ideology:ideology_anti_western
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -5552,10 +5591,10 @@ gm_actions.406 = {
 	}
 	
 	option = { 
-		name =ideology_communist
+		name =ideology_maximism
 		default_option = yes
 		scope:target_character = {
-			set_ideology = ideology:ideology_communist
+			set_ideology = ideology:ideology_maximism
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -5565,10 +5604,10 @@ gm_actions.406 = {
 	}
 	
 	option = { 
-		name =ideology_vanguardist
+		name =ideology_làngist
 		default_option = yes
 		scope:target_character = {
-			set_ideology = ideology:ideology_vanguardist
+			set_ideology = ideology:ideology_làngist
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -5582,6 +5621,19 @@ gm_actions.406 = {
 		default_option = yes
 		scope:target_character = {
 			set_ideology = ideology:ideology_anarchist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name =ideology_communalism
+		default_option = yes
+		scope:target_character = {
+			set_ideology = ideology:ideology_communalism
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -6062,23 +6114,56 @@ gm_actions.50 = {
 			value = 8.4
 		}
 		set_global_variable = {
-			name = extreme_flat_correction
+			name = extreme_left_flat_correction
 			value = 1
 		}
 		set_global_variable = {
-			name = GM_recovery_add
-			value = 0
-		}
-		set_global_variable = {
-			name = GM_extremism_add
-			value = 0
-		}
-		set_global_variable = {
-			name = GM_crash_countwodn
-			value = 100
+			name = extreme_right_flat_correction
+			value = 1
 		}
 		set_global_variable = {
 			name = gm_extreme_var
+			value = 0
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+
+	option = {  
+		name = "Start world tension"
+		trigger = {
+			scope:recipient = {	
+				NOT = {
+					has_global_variable = gilded_age_gm
+				}
+			}
+		}
+		add_journal_entry = {
+			type = je_HRP_world_tension_GM
+		}
+		every_country = {
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = game_master
+					}
+				}
+				add_journal_entry = {
+					type = je_HRP_world_tension
+				}
+			}
+		}
+		set_global_variable = {
+			name = tension_GM_adjustment_flat
+			value = 0
+		}
+		set_global_variable = {
+			name = tension_GM_adjustment_multiplier
 			value = 0
 		}
 		remove_global_variable = GM_taking_action
@@ -6420,7 +6505,739 @@ gm_actions.50 = {
 			popup = yes
 		}
 	}
+	
+	option = {
+		name = "Change picked Ideology"
+		trigger_event = {
+			id = gm_actions.51
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.507.t
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_extreme_gm
+			}
+		}
+		trigger_event = {
+			id = value_selection.507
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.508.t
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_extreme_gm
+			}
+		}
+		trigger_event = {
+			id = value_selection.508
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.50.g
+		trigger = {
+			scope:recipient = {	
+				has_global_variable = age_of_extreme_gm
+			}
+		}
+		every_country = {
+			je:je_HRP_world_tension_GM = {
+				add_progress = { 
+					name = HRP_AoE_world_tension 
+					value = global_var:gm_variable
+				}
+			}
+			je:je_HRP_world_tension = {
+				add_progress = { 
+					name = HRP_AoE_world_tension 
+					value = global_var:gm_variable
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
 }
+
+
+gm_actions.51 = {
+	type = country_event
+	placement = ROOT
+	title = "Change picked Ideology"
+	#desc = gm_actions.51.d
+	#flavor = gm_actions.51.f
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	
+	option = {
+		name = "Cancel"
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			remove_variable = actionee
+		}
+	}
+	
+	option = {
+		name = "Return"
+		trigger_event = {
+			id = gm_actions.50
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_fascist
+		scope:recipient = {
+			remove_modifier = HRP_national_unionist_modifier
+			remove_modifier = HRP_eugenist_modifier
+			remove_modifier = HRP_prozelyte_corportatist_modifier
+			remove_modifier = HRP_national_syndicalist_modifier
+			remove_modifier = HRP_anti_western_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_fascist
+						is_political_movement_type = movement_eugenist
+						is_political_movement_type = movement_prozelyte_corportatist
+						is_political_movement_type = movement_national_syndicalist
+						is_political_movement_type = movement_anti_western
+					}
+				}
+				remove_modifier = HRP_right_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_fascist
+						}
+					}
+				}
+				create_political_movement = { type = movement_fascist }
+			}
+			add_modifier = {
+				name = HRP_national_unionist_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_fascist
+				}
+				add_modifier = {
+					name = HRP_right_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_eugenist
+		scope:recipient = {
+			remove_modifier = HRP_national_unionist_modifier
+			remove_modifier = HRP_eugenist_modifier
+			remove_modifier = HRP_prozelyte_corportatist_modifier
+			remove_modifier = HRP_national_syndicalist_modifier
+			remove_modifier = HRP_anti_western_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_fascist
+						is_political_movement_type = movement_eugenist
+						is_political_movement_type = movement_prozelyte_corportatist
+						is_political_movement_type = movement_national_syndicalist
+						is_political_movement_type = movement_anti_western
+					}
+				}
+				remove_modifier = HRP_right_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_eugenist
+						}
+					}
+				}
+				create_political_movement = { type = movement_eugenist }
+			}
+			add_modifier = {
+				name = HRP_eugenist_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_eugenist
+				}
+				add_modifier = {
+					name = HRP_right_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_prozelyte_corportatist
+		scope:recipient = {
+			remove_modifier = HRP_national_unionist_modifier
+			remove_modifier = HRP_eugenist_modifier
+			remove_modifier = HRP_prozelyte_corportatist_modifier
+			remove_modifier = HRP_national_syndicalist_modifier
+			remove_modifier = HRP_anti_western_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_fascist
+						is_political_movement_type = movement_eugenist
+						is_political_movement_type = movement_prozelyte_corportatist
+						is_political_movement_type = movement_national_syndicalist
+						is_political_movement_type = movement_anti_western
+					}
+				}
+				remove_modifier = HRP_right_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_prozelyte_corportatist
+						}
+					}
+				}
+				create_political_movement = { type = movement_prozelyte_corportatist }
+			}
+			add_modifier = {
+				name = HRP_prozelyte_corportatist_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_prozelyte_corportatist
+				}
+				add_modifier = {
+					name = HRP_right_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_national_syndicalist
+		scope:recipient = {
+			remove_modifier = HRP_national_unionist_modifier
+			remove_modifier = HRP_eugenist_modifier
+			remove_modifier = HRP_prozelyte_corportatist_modifier
+			remove_modifier = HRP_national_syndicalist_modifier
+			remove_modifier = HRP_anti_western_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_fascist
+						is_political_movement_type = movement_eugenist
+						is_political_movement_type = movement_prozelyte_corportatist
+						is_political_movement_type = movement_national_syndicalist
+						is_political_movement_type = movement_anti_western
+					}
+				}
+				remove_modifier = HRP_right_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_national_syndicalist
+						}
+					}
+				}
+				create_political_movement = { type = movement_national_syndicalist }
+			}
+			add_modifier = {
+				name = HRP_national_syndicalist_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_national_syndicalist
+				}
+				add_modifier = {
+					name = HRP_right_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_anti_western
+		scope:recipient = {
+			remove_modifier = HRP_national_unionist_modifier
+			remove_modifier = HRP_eugenist_modifier
+			remove_modifier = HRP_prozelyte_corportatist_modifier
+			remove_modifier = HRP_national_syndicalist_modifier
+			remove_modifier = HRP_anti_western_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_fascist
+						is_political_movement_type = movement_eugenist
+						is_political_movement_type = movement_prozelyte_corportatist
+						is_political_movement_type = movement_national_syndicalist
+						is_political_movement_type = movement_anti_western
+					}
+				}
+				remove_modifier = HRP_right_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_anti_western
+						}
+					}
+				}
+				create_political_movement = { type = movement_anti_western }
+			}
+			add_modifier = {
+				name = HRP_anti_western_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_anti_western
+				}
+				add_modifier = {
+					name = HRP_right_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_communist
+		scope:recipient = {
+			remove_modifier = HRP_maximist_modifier
+			remove_modifier = HRP_làngist_modifier
+			remove_modifier = HRP_anarchistt_modifier
+			remove_modifier = HRP_communalist_modifier
+			remove_modifier = HRP_edenist_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_communist
+						is_political_movement_type = movement_làngist
+						is_political_movement_type = movement_anarchist
+						is_political_movement_type = movement_communalist
+						is_political_movement_type = movement_edenist
+					}
+				}
+				remove_modifier = HRP_left_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_communist
+						}
+					}
+				}
+				create_political_movement = { type = movement_communist }
+			}
+			add_modifier = {
+				name = HRP_maximist_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_communist
+				}
+				add_modifier = {
+					name = HRP_left_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_làngist
+		scope:recipient = {
+			remove_modifier = HRP_maximist_modifier
+			remove_modifier = HRP_làngist_modifier
+			remove_modifier = HRP_anarchistt_modifier
+			remove_modifier = HRP_communalist_modifier
+			remove_modifier = HRP_edenist_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_communist
+						is_political_movement_type = movement_làngist
+						is_political_movement_type = movement_anarchist
+						is_political_movement_type = movement_communalist
+						is_political_movement_type = movement_edenist
+					}
+				}
+				remove_modifier = HRP_left_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_làngist
+						}
+					}
+				}
+				create_political_movement = { type = movement_làngist }
+			}
+			add_modifier = {
+				name = HRP_làngist_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_làngist
+				}
+				add_modifier = {
+					name = HRP_left_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_anarchist
+		scope:recipient = {
+			remove_modifier = HRP_maximist_modifier
+			remove_modifier = HRP_làngist_modifier
+			remove_modifier = HRP_anarchistt_modifier
+			remove_modifier = HRP_communalist_modifier
+			remove_modifier = HRP_edenist_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_communist
+						is_political_movement_type = movement_làngist
+						is_political_movement_type = movement_anarchist
+						is_political_movement_type = movement_communalist
+						is_political_movement_type = movement_edenist
+					}
+				}
+				remove_modifier = HRP_left_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_anarchist
+						}
+					}
+				}
+				create_political_movement = { type = movement_anarchist }
+			}
+			add_modifier = {
+				name = HRP_anarchistt_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_anarchist
+				}
+				add_modifier = {
+					name = HRP_left_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = HRP_communalist_modifier
+		scope:recipient = {
+			remove_modifier = HRP_maximist_modifier
+			remove_modifier = HRP_làngist_modifier
+			remove_modifier = HRP_anarchistt_modifier
+			remove_modifier = HRP_communalist_modifier
+			remove_modifier = HRP_edenist_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_communist
+						is_political_movement_type = movement_làngist
+						is_political_movement_type = movement_anarchist
+						is_political_movement_type = movement_communalist
+						is_political_movement_type = movement_edenist
+					}
+				}
+				remove_modifier = HRP_left_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = HRP_communalist_modifier
+						}
+					}
+				}
+				create_political_movement = { type = HRP_communalist_modifier }
+			}
+			add_modifier = {
+				name = HRP_communalist_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = HRP_communalist_modifier
+				}
+				add_modifier = {
+					name = HRP_left_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+	
+	option = {
+		name = movement_edenist
+		scope:recipient = {
+			remove_modifier = HRP_maximist_modifier
+			remove_modifier = HRP_làngist_modifier
+			remove_modifier = HRP_anarchistt_modifier
+			remove_modifier = HRP_communalist_modifier
+			remove_modifier = HRP_edenist_modifier
+			every_political_movement = {
+				limit = {
+					OR = {
+						is_political_movement_type = movement_communist
+						is_political_movement_type = movement_làngist
+						is_political_movement_type = movement_anarchist
+						is_political_movement_type = movement_communalist
+						is_political_movement_type = movement_edenist
+					}
+				}
+				remove_modifier = HRP_left_extreme_modifier_movement
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_edenist
+						}
+					}
+				}
+				create_political_movement = { type = movement_edenist }
+			}
+			add_modifier = {
+				name = HRP_communalist_modifier           
+				years = 10
+				is_decaying = yes
+				multiplier = {
+					add = 1000
+					subtract = var:starting_recovery
+					divide  = 1000
+				}
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_edenist
+				}
+				add_modifier = {
+					name = HRP_left_extreme_modifier_movement 
+					years = 10
+					multiplier = {
+						add = 1000
+						subtract = var:starting_recovery
+						divide  = 1000
+					}
+					is_decaying = yes
+				}
+			}
+		}
+		scope:recipient = {
+			remove_variable = actionee
+		}
+		remove_global_variable = GM_taking_action
+	}
+}
+
 
 gm_actions.83 = {
 	type = country_event
@@ -6643,6 +7460,122 @@ gm_actions.84 = {
 			every_political_movement = {
 				limit = {
 					is_political_movement_type = movement_fascist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_eugenist
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_eugenist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_eugenist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_eugenist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_prozelyte_corportatist
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_prozelyte_corportatist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_prozelyte_corportatist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_prozelyte_corportatist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_national_syndicalist
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_national_syndicalist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_national_syndicalist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_national_syndicalist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_anti_western
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_anti_western
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_anti_western }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_anti_western
 				}
 				save_scope_as = relevant_movement
 			}
@@ -7112,6 +8045,93 @@ gm_actions.86 = {
 			every_political_movement = {
 				limit = {
 					is_political_movement_type = movement_communist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_làngist
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_làngist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_làngist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_làngist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_communalist
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_communalist
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_communalist }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_communalist
+				}
+				save_scope_as = relevant_movement
+			}
+		}
+		trigger_event = {
+			id = gm_actions.830
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = movement_edenist_name
+		scope:recipient = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = {
+							any_political_movement = {
+								is_political_movement_type = movement_edenist_name
+							}
+						}
+					}
+				}
+				create_political_movement = { type = movement_edenist_name }
+			}
+			every_political_movement = {
+				limit = {
+					is_political_movement_type = movement_edenist_name
 				}
 				save_scope_as = relevant_movement
 			}
@@ -8918,48 +9938,14 @@ gm_actions.100 = {
 	}
 	
 	option = {
-		name = "Indian Famine"
-		every_state_region = {
-			limit = {
-				OR = {
-					region = sr:region_punjab
-					region = sr:region_central_india
-				}
-			}
-			start_harvest_condition  = indian_drought
-		}
-		remove_global_variable = GM_taking_action
+		name = "Remove recently conquered"
 		scope:recipient = {
+			every_scope_state = {
+				remove_modifier = recently_conquered_state
+			}
 			remove_variable = actionee
 		}
-	}
-	
-	option = {
-		name = "South India Plantation Failure"
-		every_state_region = {
-			limit = {
-				region = sr:region_madras
-			}
-			start_harvest_condition  = indian_disease_outbreak
-		}
 		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
-	}
-	
-	option = {
-		name = "Bengal Plantation Failure"
-		every_state_region = {
-			limit = {
-				region = sr:region_bengal
-			}
-			start_harvest_condition  = indian_disease_outbreak
-		}
-		remove_global_variable = GM_taking_action
-		scope:recipient = {
-			remove_variable = actionee
-		}
 	}
 }
 
