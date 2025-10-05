@@ -3,7 +3,6 @@ unlock_power_bloc_principle_slot_3 = {
 	hidden_trigger = {
 		has_dlc_feature = power_bloc_features
 	}
-	
 		OR = {
 		hidden_trigger = {
 			used_principle_slots >= 3
@@ -24,12 +23,16 @@ unlock_power_bloc_principle_slot_4 = {
 			used_principle_slots = 4
 		}
 		AND = {
-			num_power_bloc_members >= 5
+			num_power_bloc_members >= 1
 		}
 	}
 }
 
 unlock_power_bloc_formation_principle_slot_3 = {
+	has_dlc_feature = power_bloc_features
+}
+
+unlock_power_bloc_formation_principle_slot_4 = {
 	has_dlc_feature = power_bloc_features
 }
 
