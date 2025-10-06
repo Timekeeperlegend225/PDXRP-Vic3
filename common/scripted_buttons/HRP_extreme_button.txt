@@ -727,3 +727,40 @@ AoE_suppress_nationalist = {
 		}
 	}
 }
+
+AoE_war_support = {
+	name = "Never Surrender"
+	desc = "We will not surrender unless our capital fall"
+	
+	visible = { 
+		always = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = "Our capital isn't occupied"
+			capital.controller = ROOT
+		}
+		any_scope_war = {
+			has_war_support = { 
+				target = root
+				value < 0
+			}
+		}
+	}
+
+	effect = {
+		random_scope_war = {
+			add_war_war_support = {
+				target = root
+				value = 100
+			} 
+		}
+		add_radicals = {
+			value = 0.02
+		}
+		set_variable = { 
+			name = autarked_var
+		}
+	}
+}

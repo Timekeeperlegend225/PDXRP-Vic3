@@ -450,7 +450,7 @@ je_HRP_recovery_and_extremism = {
 }
 
 je_HRP_world_tension = {
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/outliner/war_button_icon.dds"
 
 	group = je_group_historical_content
 
@@ -463,14 +463,18 @@ je_HRP_world_tension = {
     invalid = {
 		custom_tooltip = {
 			text = "Age of Extreme is finished"
+			OR = {
 			NOT = {
 				has_global_variable = age_of_extreme_gm
+			}
+			has_journal_entry = je_HRP_world_tension_GM
 			}
 		}
     }
 	
 	scripted_button = AoE_suppress_socialists
 	scripted_button = AoE_suppress_nationalist
+	scripted_button = AoE_war_support
 
 	status_desc = {
 	}
@@ -487,10 +491,19 @@ je_HRP_world_tension = {
 			}
 			scope:journal_entry = { 
 				remove_modifier = HRP_world_tension_modifier
+				remove_modifier = anti_war_protest_modifier
 				add_modifier = {
 					name = HRP_world_tension_modifier
 					multiplier = {
 						add = var:tension_var
+						divide  = 1000
+					}
+				}
+				add_modifier = {
+					name = anti_war_protest_modifier
+					multiplier = {
+						add = 1000
+						subtract = var:tension_var
 						divide  = 1000
 					}
 				}
@@ -503,7 +516,7 @@ je_HRP_world_tension = {
 
 
 je_HRP_world_tension_GM = {
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/outliner/war_button_icon.dds"
 
 	group = je_group_historical_content
 
@@ -523,6 +536,7 @@ je_HRP_world_tension_GM = {
 	
 	scripted_button = AoE_suppress_socialists
 	scripted_button = AoE_suppress_nationalist
+	scripted_button = AoE_war_support
 
 	status_desc = {
 	}
@@ -1072,10 +1086,19 @@ je_HRP_world_tension_GM = {
 			}
 			scope:journal_entry = { 
 				remove_modifier = HRP_world_tension_modifier
+				remove_modifier = anti_war_protest_modifier
 				add_modifier = {
 					name = HRP_world_tension_modifier
 					multiplier = {
 						add = var:tension_var
+						divide  = 1000
+					}
+				}
+				add_modifier = {
+					name = anti_war_protest_modifier
+					multiplier = {
+						add = 1000
+						subtract = var:tension_var
 						divide  = 1000
 					}
 				}
