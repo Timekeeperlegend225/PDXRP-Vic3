@@ -186,15 +186,15 @@
  HRP_supress_right_extreme_modifier:0 "Supressing the Extremes right"
  
  
- HRP_AoE_world_tension_bar:0 "Global Tension"
- HRP_AoE_world_tension_name:0 "Global Tension : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
- HRP_AoE_world_tension_desc: "Global Tension is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000"
+ HRP_AoE_world_tension_bar:0 "War Fervor"
+ HRP_AoE_world_tension_name:0 "War Fervor : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ HRP_AoE_world_tension_desc: "War Fervor is at [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/1000"
  
  HRP_world_tension_modifier:0 "Global Tension"
+ anti_war_protest_modifier:0 "Anti War Protest"
  
+ je_HRP_world_tension:0 "The Great War"
+ je_HRP_world_tension_reason:0 "The Great War is upon us, but will our people support a conflict of such a large scale ?" 
  
- je_HRP_world_tension:0 "Global Tension"
- je_HRP_world_tension_reason:0 "As the extremes are rising in power, and new waring method are developing, the risk of a war of aunpreceded scale is rising." 
- 
- je_HRP_world_tension_GM:0 "Global Tension (GM)"
- je_HRP_world_tension_GM_reason:0 "As the extremes are rising in power, and new waring method are developing, the risk of a war of aunpreceded scale is rising." 
+ je_HRP_world_tension_GM:0 "The Great War (GM)"
+ je_HRP_world_tension_GM_reason:0 "The Great War is upon us, but will our people support a conflict of such a large scale ?" 
