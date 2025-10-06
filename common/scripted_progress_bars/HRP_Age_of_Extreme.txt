@@ -528,26 +528,26 @@ HRP_AoE_world_tension = {
 				add = global_var:tension_setup_value
 			}
 		}
-		add = {
-			desc = "from Extremists Laws"
-			add = global_var:extremist_law_var
-			divide = 100
-		}
-		add = {
-			desc = "from Global Armies"
-			add = global_var:global_power_projection_arm_var
-			divide = 200000
-		}
-		add = {
-			desc = "from Global Navies"
-			add = global_var:global_power_projection_nav_var
-			divide = 200000
-		}
-		add = {
-			desc = "from Global Infamy"
-			add = global_var:global_infam_var
-			divide = 200
-		}
+#		add = {
+#			desc = "from Extremists Laws"
+#			add = global_var:extremist_law_var
+#			divide = 100
+#		}
+#		add = {
+#			desc = "from Global Armies"
+#			add = global_var:global_power_projection_arm_var
+#			divide = 200000
+#		}
+#		add = {
+#			desc = "from Global Navies"
+#			add = global_var:global_power_projection_nav_var
+#			divide = 200000
+#		}
+#		add = {
+#			desc = "from Global Infamy"
+#			add = global_var:global_infam_var
+#			divide = 200
+#		}
 		if = {
 			limit = {
 				NOT = { tension_GM_adjustment_multiplier = 0 }
