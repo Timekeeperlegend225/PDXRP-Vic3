@@ -423,7 +423,7 @@ HRP_supress_right_extreme_modifier = {
 
 HRP_world_tension_modifier = {
 	icon = gfx/interface/icons/alert_icons/land_invasion.dds
-	country_military_tech_spread_mult = 2
+	country_military_tech_spread_mult = 1
 	country_tech_spread_add = 10
 	country_society_tech_spread_mult = 0.5
 	country_production_tech_spread_mult = 0.2
