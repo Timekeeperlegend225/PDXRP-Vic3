@@ -2451,13 +2451,13 @@
 		}
 	}
 	s:STATE_ULSTER={
-		region_state:GBR={
+		region_state:IRE={
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:GBR"
+						country="c:IRE"
 						levels=2
 						region="STATE_ULSTER"
 					}
@@ -2470,7 +2470,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:GBR"
+						country="c:IRE"
 						levels=3
 						region="STATE_ULSTER"
 					}
@@ -2483,7 +2483,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:GBR"
+						country="c:IRE"
 						levels=2
 						region="STATE_ULSTER"
 					}
@@ -2495,7 +2495,7 @@
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:GBR"
+						country="c:IRE"
 						levels=1
 					}
 				}
@@ -2505,25 +2505,25 @@
 		}
 	}
 	s:STATE_MUNSTER={
-		region_state:GBR={
+		region_state:IRE={
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:GBR"
-						levels=3
+						country="c:IRE"
+						levels=7
 						region="STATE_MUNSTER"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_soil_enriching_farming"  "pm_tools" "pm_potatoes" }
+				activate_production_methods={ "pm_soil_enriching_farming"  "pm_tools" "pm_sugar_beets" }
 			}
 			create_building={
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:GBR"
+						country="c:IRE"
 						levels=1
 					}
 				}
@@ -2533,12 +2533,34 @@
 		}
 	}
 	s:STATE_LEINSTER={
-		region_state:GBR={
+		region_state:IRE={
+			create_building={
+				building="building_construction_sector"
+				add_ownership={
+					country={
+						country="c:IRE"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_iron_frame_buildings" }
+			}
+			create_building={
+				building="building_government_administration"
+				add_ownership={
+					country={
+						country="c:IRE"
+						levels=10
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_professional_bureaucrats" "pm_religious_bureaucrats" "pm_vertical_filing_cabinets" }
+			}
 			create_building={
 				building="building_university"
 				add_ownership={
 					country={
-						country="c:GBR"
+						country="c:IRE"
 						levels=1
 					}
 				}
@@ -2551,9 +2573,13 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:GBR"
-						levels=1
-						region="STATE_HOME_COUNTIES"
+						country="c:IRE"
+						levels=2
+						region="STATE_LEINSTER"
+					}
+					country={
+						country="c:IRE"
+						levels=2
 					}
 				}
 				reserves=1
@@ -2563,7 +2589,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:GBR"
+						country="c:IRE"
 						levels=1
 						region="STATE_LEINSTER"
 					}
@@ -2576,7 +2602,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:GBR"
+						country="c:IRE"
 						levels=4
 						region="STATE_LEINSTER"
 					}
@@ -2589,41 +2615,168 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:GBR"
+						country="c:IRE"
 						levels=5
 						region="STATE_LEINSTER"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_soil_enriching_farming"  "pm_tools" "pm_potatoes" }
+				activate_production_methods={ "pm_soil_enriching_farming"  "pm_tools" "pm_apple_orchards" }
 			}
 			create_building={
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:GBR"
+						country="c:IRE"
 						levels=2
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
+			create_building={
+				building="building_glassworks"
+				add_ownership={
+					building={
+						type="building_glassworks"
+						country="c:IRE"
+						levels=1
+						region="STATE_LEINSTER"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_ceramics" "pm_leaded_glass" "pm_manual_glassblowing"  }
+			}
+			create_building={
+				building="building_furniture_manufacturies"
+				add_ownership={
+					building={
+						type="building_furniture_manufacturies"
+						country="c:IRE"
+						levels=1
+						region="STATE_LEINSTER"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_lathe"  "pm_automation_disabled" "pm_luxury_furniture" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+				add_ownership={
+					building={
+						type="building_tooling_workshops"
+						country="c:IRE"
+						levels=3
+						region="STATE_LEINSTER"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:IRE"
+						levels=2
+						region="STATE_LEINSTER"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_paper_mills"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:IRE"
+						levels=1
+						region="STATE_LEINSTER"
+					}
+					building={
+						type="building_paper_mills"
+						country="c:IRE"
+						levels=1
+						region="STATE_LEINSTER"
+					}
+					country={
+						country="c:IRE"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_chemical_plants"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:IRE"
+						levels=1
+						region="STATE_LEINSTER"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_artificial_fertilizers"  }
+			}
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:IRE"
+						levels=1
+						region="STATE_LEINSTER"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_dye_workshops" "pm_craftsman_sewing" "pm_traditional_looms"  }
+			}
+			create_building={
+				building="building_shipyards"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:IRE"
+						levels=1
+						region="STATE_LEINSTER"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding"  }
+			}
 		}
 	}
 	s:STATE_CONNAUGHT={
-		region_state:GBR={
+		region_state:IRE={
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:GBR"
+						country="c:IRE"
 						levels=2
 						region="STATE_CONNAUGHT"
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_soil_enriching_farming"  "pm_tools" "pm_potatoes" }
+			}
+			create_building={
+				building="building_sulfur_mine"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:IRE"
+						levels=1
+						region="STATE_LEINSTER"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
 			}
 		}
 	}

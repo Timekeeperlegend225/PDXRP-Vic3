@@ -303,7 +303,7 @@
 		}
 	}
 	s:STATE_ULSTER = {
-		region_state:GBR = {
+		region_state:IRE = {
 			### Aristocrats
 			create_pop = {
 				culture = scottish  # Presbyterians and Methodists
@@ -378,7 +378,7 @@
 		}
 	}
 	s:STATE_MUNSTER = {
-		region_state:GBR = {
+		region_state:IRE = {
 			### Officers
 			create_pop = {
 				culture = british # Anglicans
@@ -423,7 +423,7 @@
 		}
 	}
 	s:STATE_LEINSTER = {
-		region_state:GBR = {
+		region_state:IRE = {
 			### Officers
 			create_pop = {
 				culture = british # Anglicans
@@ -478,7 +478,7 @@
 		}
 	}
 	s:STATE_CONNAUGHT = {
-		region_state:GBR = {
+		region_state:IRE = {
 
 			### Officers
 			create_pop = {
