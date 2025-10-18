@@ -1655,3 +1655,9 @@
 
  dyn_c_illyria: "Illyria"
  dyn_c_illyria_adj: "Illyrian"
+
+ IDI: "Irish Dominion of India"
+ IDI_ADJ: "South Indian"
+
+ CDI: "Company of India"
+ CDI_ADJ: "Indian"
