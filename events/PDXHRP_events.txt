@@ -1,0 +1,91 @@
+namespace = crash
+
+crash.1 = { #For Bodi
+    type = country_event
+	placement = root
+	
+    title = "The Great Crash"
+    desc = "After the recent events surrounding the Dominion of India and the East India Company, the London Stock Exchange has been sent into a spiral. Several smaller companies have defaulted on their debts due to the reduced cash flow from India, and, today, London's Barings Private Bank has made the shocking announcement that it no longer has enough cash to back up its deposits. With the bank's connection to other institutions across Great Britain and Europe - especially Poland - there are sure to be ripple effects..."
+#	flavor = "Something Happen"
+	
+    event_image = { 
+		video = unspecific_politicians_arguing
+	}
+
+	icon = "gfx/interface/icons/alert_icons/bankruptcy.dds"
+
+	on_opened_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	immediate = {
+		set_global_variable = {
+			name = national_integration_var_b
+			value = var:national_integration_var
+		}
+		set_variable = {
+			name = IP_value
+			value = investment_pool
+		}
+		set_variable = {
+			name = crash_radicals_var
+			value = var:national_integration_var
+		}
+		change_variable = {
+			name = crash_radicals_var
+			multiply = 0.10
+		}
+		change_variable = {
+			name = IP_value
+			multiply = -1
+		}
+		change_variable = {
+			name = IP_value
+			multiply = var:national_integration_var
+		}
+		add_investment_pool = var:IP_value
+		add_modifier = {
+			name = HRP_crash           
+			months = 120
+			multiplier = var:national_integration_var
+			is_decaying = yes
+		}
+		add_radicals = {
+			value = var:crash_radicals_var
+		}
+		every_scope_building = {
+			set_global_variable = {
+				name = building_crash_var
+				value = private_ownership_fraction
+			}
+			add_modifier = {
+				name = HRP_building_crash           
+				months = 120
+				multiplier = {
+					add = global_var:building_crash_var
+					multiply = global_var:national_integration_var_b
+				}
+				is_decaying = yes
+			}	
+		}
+	}
+	
+	duration = 3
+	
+    option = {
+		name = "How will we get back from that ?"
+		show_as_tooltip = {
+		add_investment_pool = var:IP_value
+			add_modifier = {
+				name = HRP_crash           
+				months = 120
+				multiplier = var:national_integration_var
+				is_decaying = yes
+			}
+			add_radicals = {
+				value = var:crash_radicals_var
+			}
+		}
+		custom_tooltip ={
+			text = "Buildings will also get up to -70% throuput bonus depending of your integration and their private ownership ratio"
+		}
+	}
+}
