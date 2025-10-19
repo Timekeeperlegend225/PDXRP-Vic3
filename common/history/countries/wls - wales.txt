@@ -1,16 +1,16 @@
 ﻿COUNTRIES = {
-	c:IRE ?= {
+	c:WLS ?= {
 		effect_starting_technology_tier_1_tech = yes
 		
 		add_technology_researched = labor_movement # A relevant labour movement already existed prior to 1836
 		add_technology_researched = joint_stock_companies
 
 		# Laws 
-		activate_law = law_type:law_parliamentary_republic
-		activate_law = law_type:law_wealth_voting
-		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_universal_suffrage
+		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_national_guard
-		activate_law = law_type:law_no_womens_rights
+		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_right_of_assembly
@@ -19,13 +19,13 @@
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_religious_schools
 		activate_law = law_type:law_per_capita_based_taxation
-		activate_law = law_type:law_colonial_resettlement
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_charitable_health_system
 		activate_law = law_type:law_dedicated_police
 		activate_law = law_type:law_professional_army
-		activate_law = law_type:law_tenant_farmers # enclosure acts
+		activate_law = law_type:law_homesteading
 		activate_law = law_type:law_migration_controls
-		activate_law = law_type:law_anti_strike_laws 
+		activate_law = law_type:law_right_to_associate
+		activate_law = law_type:law_worker_protections
 	}
 }

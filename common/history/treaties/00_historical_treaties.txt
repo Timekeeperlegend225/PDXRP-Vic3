@@ -774,11 +774,29 @@
 
 		is_draft = no
 		entered_into_force_on = 1835.10.26
-		binding_period = { years = 20 } # 14 years to cover the Revolutions of 1848
+		binding_period = { years = 20 }
 
 		articles_to_create = {
 			{ # Defensive Pact
 				article = defensive_pact
+			}
+			{ 
+				article = goods_transfer
+				source_country = c:SCO
+				target_country = c:IRE
+				inputs = {
+					{ goods = g:coal }
+					{ quantity = 100 }
+				}
+			}
+			{
+				article = goods_transfer
+				source_country = c:IRE
+				target_country = c:SCO
+				inputs = {
+					{ goods = g:sulfur }
+					{ quantity = 40 }
+				}
 			}
 		}
 	}
@@ -790,11 +808,44 @@
 
 		is_draft = no
 		entered_into_force_on = 1835.10.26
-		binding_period = { years = 20 } # 14 years to cover the Revolutions of 1848
+		binding_period = { years = 20 }
 
 		articles_to_create = {
 			{ # Defensive Pact
 				article = defensive_pact
+			}
+		}
+	}
+	
+	create_treaty = {
+		name = "Celtic Alliance"
+		first_country = c:SCO
+		second_country = c:WLS
+
+		is_draft = no
+		entered_into_force_on = 1835.10.26
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{ # Defensive Pact
+				article = defensive_pact
+			}
+		}
+	}
+
+	create_treaty = {
+		first_country = c:FRA
+		second_country = c:SCO
+
+		is_draft = no
+		entered_into_force_on = 1835.10.26
+		binding_period = { years = 15 }
+
+		articles_to_create = {
+			{ # French Guarantee of Belgian Independence
+				article = guarantee_independence
+				source_country = c:FRA
+				target_country = c:SCO
 			}
 		}
 	}

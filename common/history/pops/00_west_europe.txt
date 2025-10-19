@@ -183,12 +183,27 @@
 		region_state:GBR = {
 			create_pop = {
 				culture = british
-				size = 1986404
+				size = 1336404
 			}
 			create_pop = {
 				culture = british
 				religion = catholic
-				size = 85700
+				size = 80700
+			}
+		}
+		region_state:SCO = {
+			create_pop = {
+				culture = british
+				size = 300000
+			}
+			create_pop = {
+				culture = scottish
+				size = 350000
+			}
+			create_pop = {
+				culture = british
+				religion = catholic
+				size = 50000
 			}
 			create_pop = {
 				culture = irish
@@ -212,7 +227,22 @@
 		region_state:GBR = {
 			create_pop = {
 				culture = british
-				size = 2026592
+				size = 1726592
+			}
+			create_pop = {
+				culture = british
+				religion = catholic
+				size = 40000
+			}
+		}
+		region_state:SCO = {
+			create_pop = {
+				culture = british
+				size = 100000
+			}
+			create_pop = {
+				culture = scottish
+				size = 200000
 			}
 			create_pop = {
 				culture = irish
@@ -221,7 +251,7 @@
 			create_pop = {
 				culture = british
 				religion = catholic
-				size = 48000
+				size = 80000
 			}
 		}
 	}

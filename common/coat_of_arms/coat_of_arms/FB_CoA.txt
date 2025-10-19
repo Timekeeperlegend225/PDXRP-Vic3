@@ -1,0 +1,39 @@
+IDI_colony = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "IDI_colony.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+IDI_dominion = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "IDI_dominion.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+IDI_free = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "IDI_free.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+CDI = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "CDI.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}

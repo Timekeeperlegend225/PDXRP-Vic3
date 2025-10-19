@@ -1577,42 +1577,28 @@ POPS = {
 		}
 	}
 	s:STATE_CIRCARS = {
-		region_state:BIC = {
+		region_state:IDI = {
 			create_pop = {
 				culture = telegu
-				size = 2295020
+				size = 1295020
 			}
 			create_pop = {
 				culture = tamil
 				size = 270201
 			}
 			create_pop = {
-				culture = oriya
-				size = 105020
-			}
-			create_pop = {
 				culture = gondi
-				size = 30301
+				size = 10301
 				religion = animist
 			}
 			create_pop = {
 				culture = telegu
 				religion = sunni
-				size = 204004
-			}
-			create_pop = {
-				culture = tamil
-				religion = sunni
-				size = 24020
+				size = 100000
 			}
 			create_pop = {
 				culture = chhattisgarhi
-				size = 130040
-			}
-			create_pop = {
-				culture = deccani
-				religion = sunni
-				size = 12002
+				size = 60040
 			}
 			create_pop = {
 				culture = tamil
@@ -1620,7 +1606,7 @@ POPS = {
 				religion = protestant
 			}
 			create_pop = {
-				culture = british
+				culture = irish
 				size = 520
 				pop_type = bureaucrats
 			}
@@ -1633,15 +1619,15 @@ POPS = {
 		region_state:JEY = {
 			create_pop = {
 				culture = oriya
-				size = 148750
+				size = 253770
 			}
 			create_pop = {
 				culture = telegu
-				size = 42500
+				size = 1042500
 			}
 			create_pop = {
 				culture = chhattisgarhi
-				size = 21250
+				size = 91250
 			}
 			create_pop = {
 				culture = oriya
@@ -1650,8 +1636,25 @@ POPS = {
 			}
 			create_pop = {
 				culture = gondi
-				size = 25010
+				size = 45010
 				religion = animist
+			}
+		}
+		region_state:HYD = {
+			create_pop = {
+				culture = deccani
+				religion = sunni
+				size = 12002
+			}
+			create_pop = {
+				culture = telegu
+				religion = sunni
+				size = 104004
+			}
+			create_pop = {
+				culture = tamil
+				religion = sunni
+				size = 24020
 			}
 		}
 	}
@@ -1690,8 +1693,6 @@ POPS = {
 				culture = tamil
 				size = 40023
 			}
-		}
-		region_state:BIC = {
 			create_pop = {
 				culture = kannada # tulu
 				size = 184548
@@ -1751,7 +1752,7 @@ POPS = {
 				size = 10240
 			}
 		}
-		region_state:BIC = {
+		region_state:MYS = {
 			create_pop = {
 				culture = malayalam
 				size = 671221
@@ -2157,20 +2158,40 @@ POPS = {
 		}
 	}
 	s:STATE_KURNOOL = {
-		region_state:BIC = {
+		region_state:MYS = {
 			create_pop = {
 				culture = telegu
-				size = 960075
+				size = 560075
 			}
 			create_pop = {
 				culture = telegu
 				religion = sunni
-				size = 20360
+				size = 23360
 			}
 			create_pop = {
 				culture = deccani
 				religion = sunni
-				size = 70160
+				size = 40160
+			}
+			create_pop = {
+				culture = kannada
+				size = 281200
+			}
+		}
+		region_state:IDI = {
+			create_pop = {
+				culture = telegu
+				size = 400000
+			}
+			create_pop = {
+				culture = telegu
+				religion = sunni
+				size = 7000
+			}
+			create_pop = {
+				culture = deccani
+				religion = sunni
+				size = 30000
 			}
 			create_pop = {
 				culture = telegu
@@ -2179,7 +2200,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = kannada
-				size = 301200
+				size = 21200
 			}
 		}
 		region_state:KNO = {

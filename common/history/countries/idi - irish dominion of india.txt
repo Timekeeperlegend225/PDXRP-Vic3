@@ -1,0 +1,43 @@
+﻿COUNTRIES = {
+	c:IDI ?= {
+		effect_starting_technology_tier_2_tech = yes
+
+		add_technology_researched = mechanical_tools
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = railways
+		add_technology_researched = corporate_charters
+
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_total_separation
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_cultural_exclusion # English & Anglo-Indian supremacy; no Indians served in the upper echelons of government
+		activate_law = law_type:law_extraction_economy
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_debt_slavery
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_hindu_caste_not_enforced
+		activate_law = law_type:law_combination_acts
+
+
+		add_journal_entry = {
+			type = je_consolidate_colonial_rule
+		}
+
+		every_scope_state = {
+			limit = {
+				OR = {
+					region = sr:region_bombay
+					region = sr:region_madras
+					state_region = s:STATE_ASSAM
+				}
+			}
+			add_modifier = {
+				name = modifier_ryotwari_system
+			}
+		}
+	}
+}

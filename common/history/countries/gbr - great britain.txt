@@ -67,20 +67,6 @@
 			institution = institution_police
 			level = 1
 		}
-
-		# Was historically around, but we've scrapped it so we can have the slots free for the big boys
-		# add_company = company_type:company_gwr
-		# company:company_gwr = {
-		# 	set_company_establishment_date = 1833.1.21
-		# 	set_company_state_region = s:STATE_HOME_COUNTIES
-		# }
-
-		add_company = company_type:company_hbc
-		company:company_hbc = {
-			set_company_establishment_date = 1670.5.2
-			set_company_state_region = s:STATE_HOME_COUNTIES
-			add_owned_country = c:HBC #links the country to this company
-		}
 		add_company = company_type:company_east_india_company
 		company:company_east_india_company = {
 			set_company_establishment_date = 1600.12.31

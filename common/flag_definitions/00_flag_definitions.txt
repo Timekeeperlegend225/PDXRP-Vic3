@@ -10090,7 +10090,7 @@ WLL = { # Wallonia
 
 WLS = { # Wales
 	flag_definition = {
-		coa = WLS_republic
+		coa = WLS
 		priority = 10
 		trigger = {
 			coa_def_republic_flag_trigger = yes
@@ -11431,6 +11431,51 @@ MSN = { # Massina
 	flag_definition = {
 		coa = MSN
 		subject_canton = MSN
+		priority = 1
+	}
+}
+
+
+IDI = { 
+	flag_definition = {
+		coa = IDI_free
+		subject_canton = IDI_free
+		priority = 1
+	}
+	flag_definition = {
+		coa = IDI_dominion
+		subject_canton = IDI_dominion
+		allow_overlord_canton = yes
+		priority = 25
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_protectorate
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = IDI_colony
+		allow_overlord_canton = yes
+		priority = 50
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					is_subject_type = subject_type_chartered_company
+					is_subject_type = subject_type_colony
+					is_subject_type = subject_type_puppet
+				}
+			}
+		}
+	}
+}
+
+CDI = { 
+	flag_definition = {
+		coa = CDI
+		subject_canton = CDI
 		priority = 1
 	}
 }

@@ -533,6 +533,27 @@
 			add_interest_group = ig:ig_devout
 		}
 	}
+
+	c:SCO = {
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:GBR
+			add_interest_group = ig:ig_armed_forces
+		}
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:FRA
+			add_interest_group = ig:ig_intelligentsia
+		}
+	}
+
+	c:WLS = {
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:GBR
+			add_interest_group = ig:ig_trade_unions
+		}
+	}
 }
 
 

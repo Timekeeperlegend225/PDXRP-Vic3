@@ -123,10 +123,6 @@
 			type = protectorate
 		}
 		create_diplomatic_pact = {
-			country = c:ION
-			type = protectorate
-		}
-		create_diplomatic_pact = {
 			country = c:BIC
 			type = chartered_company
 		}
@@ -137,41 +133,6 @@
 		create_diplomatic_pact = {
 			country = c:ORG
 			type = colony
-		}
-		create_diplomatic_pact = {
-			country = c:HAN
-			type = personal_union
-		}
-		create_diplomatic_pact = {
-			country = c:SAF
-			type = colony
-		}
-
-		### OH CANADA ###
-		# Province of Upper Canada
-		create_diplomatic_pact = {
-			country = c:ONT
-			type = colony
-		}
-		# Province of Lower Canada
-		create_diplomatic_pact = {
-			country = c:QUE
-			type = colony
-		}
-		# New Brunswick
-		create_diplomatic_pact = {
-			country = c:NBS
-			type = colony
-		}
-		# Nova Scotia
-		create_diplomatic_pact = {
-			country = c:NVS
-			type = colony
-		}
-		# Hudson Bay Company has a weird autonomous charter
-		create_diplomatic_pact = {
-			country = c:HBC
-			type = chartered_company
 		}
 
 		### AUSTRALIA ###
@@ -298,7 +259,7 @@
 		}
 		# Colony of Ceylon
 		create_diplomatic_pact = {
-			country = c:BCE
+			country = c:CEY
 			type = puppet
 		}
 	}
@@ -436,6 +397,13 @@
 	c:IRE ?= {
 		create_diplomatic_pact = {
 			country = c:IDI
+			type = colony
+		}
+	}
+	c:SCO ?= {
+		# Nova Scotia
+		create_diplomatic_pact = {
+			country = c:NVS
 			type = colony
 		}
 	}

@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:IRE ?= {
+	c:SCO ?= {
 		effect_starting_technology_tier_1_tech = yes
 		
 		add_technology_researched = labor_movement # A relevant labour movement already existed prior to 1836
@@ -7,10 +7,10 @@
 
 		# Laws 
 		activate_law = law_type:law_parliamentary_republic
-		activate_law = law_type:law_wealth_voting
-		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_national_guard
-		activate_law = law_type:law_no_womens_rights
 		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_right_of_assembly
@@ -26,6 +26,6 @@
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_tenant_farmers # enclosure acts
 		activate_law = law_type:law_migration_controls
-		activate_law = law_type:law_anti_strike_laws 
+		activate_law = law_type:law_anti_strike_laws
 	}
 }
