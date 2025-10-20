@@ -10090,7 +10090,7 @@ WLL = { # Wallonia
 
 WLS = { # Wales
 	flag_definition = {
-		coa = WLS
+		coa = WLS_FB
 		priority = 10
 		trigger = {
 			coa_def_republic_flag_trigger = yes

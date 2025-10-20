@@ -3139,7 +3139,7 @@ PUE = { # Pueblo
 NNV = { # Nunavut
 	color = { 205 214 216 }
 
-	country_type = unrecognized
+	country_type = decentralized
 
 	tier = principality
 

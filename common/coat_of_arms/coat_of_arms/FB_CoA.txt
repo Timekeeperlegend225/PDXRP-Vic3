@@ -37,3 +37,23 @@ CDI = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
 	}
 }
+
+EIC_FB = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "EIC.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+WLS_FB = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "WLS.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}

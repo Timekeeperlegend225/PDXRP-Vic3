@@ -130,20 +130,11 @@
 			country = c:SIL
 			type = puppet
 		}
-		create_diplomatic_pact = {
-			country = c:ORG
-			type = colony
-		}
 
 		### AUSTRALIA ###
 		# Colony of New South Wales
 		create_diplomatic_pact = {
 			country = c:NSW
-			type = colony
-		}
-		# Colony of Western Australia
-		create_diplomatic_pact = {
-			country = c:WAS
 			type = colony
 		}
 		# Colony of South Australia, established in February 1836
@@ -155,16 +146,6 @@
 		create_diplomatic_pact = {
 			country = c:TAS
 			type = colony
-		}
-		# United Tribes of New Zealand
-		create_diplomatic_pact = {
-			country = c:UNT
-			type = protectorate
-		}
-		# Kaurna
-		create_diplomatic_pact = {
-			country = c:KAU
-			type = protectorate
 		}
 		# Mosquito Kingdom
 		create_diplomatic_pact = {
@@ -319,20 +300,12 @@
 		add_liberty_desire = -30
 	}
 
-	c:WAS = {
-		add_liberty_desire = -30
-	}
-
 	c:SAS = {
 		add_liberty_desire = -30
 	}
 
 	c:TAS = {
 		add_liberty_desire = -30
-	}
-
-	c:UNT = {
-		add_liberty_desire = 10
 	}
 
 	c:FIN = {
@@ -405,6 +378,88 @@
 		create_diplomatic_pact = {
 			country = c:NVS
 			type = colony
+		}
+	}
+	c:BRZ ?= {
+		create_diplomatic_pact = {
+			country = c:CDI
+			type = chartered_company
+		}
+	}
+	c:GWA ?= {
+		create_diplomatic_pact = {
+			country = c:ALW
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:JAI
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:BIK
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:JOD
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:JAS
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:GAR
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:KOT
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:MEW
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:IND
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:BOH
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:BHO
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:JHN
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:BUN
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:BAG
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:IDA
+			type = vassal
+		}
+	}
+	c:PAN ?= {
+		create_diplomatic_pact = {
+			country = c:PTA
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:BHW
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:SIN
+			type = vassal
 		}
 	}
 }
