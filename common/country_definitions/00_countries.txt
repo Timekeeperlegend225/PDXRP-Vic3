@@ -2201,7 +2201,7 @@ PNM = {
 }
 
 QUE = {
-	color = { 194  140  86 }
+	color = { 125  165  255 }
 
 	country_type = colonial
 
