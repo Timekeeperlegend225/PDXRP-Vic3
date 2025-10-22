@@ -3634,40 +3634,28 @@
 		}
 	}
 
-	c:POR ?= {
+	c:BRZ ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_iberia
 			name = Exercito_Portugues
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_BEIRA
-				count = 3
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_ALENTEJO
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_ESTREMADURA
-				count = 2
+				count = 15
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_BEIRA
-				count = 2
+				count = 5
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_ESTREMADURA
-				count = 1
+				count = 10
 			}
 		}
 
@@ -3677,27 +3665,27 @@
 			name = Divisao_Auxiliar_a_Espanha # Portuguese Expeditionary Force sent to guard the border regions against the Carlists.
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_ESTREMADURA
-				count = 7
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_ESTREMADURA
-				count = 1
-			}
-
-			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_ALENTEJO
-				count = 1
+				count = 2
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_BEIRA
-				count = 1
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_ESTREMADURA
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_ESTREMADURA
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_ALENTEJO
+				count = 3
 			}
 		}
 
@@ -3709,37 +3697,55 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
 				state_region = s:STATE_ESTREMADURA
-				count = 2
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_ESTREMADURA
-				count = 1
+				count = 20
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
 				state_region = s:STATE_BEIRA
-				count = 1
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_BEIRA
-				count = 1
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_ALENTEJO
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_ALENTEJO
-				count = 1
+				count = 10
 			}
-
+			
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_AZORES
-				count = 1
+				count = 5
+			}
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_CAPE_VERDE
+				count = 5
+			}
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_MADEIRA
+				count = 5
 			}
 		}
 	}
