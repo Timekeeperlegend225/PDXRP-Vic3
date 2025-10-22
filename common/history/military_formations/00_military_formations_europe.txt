@@ -3641,7 +3641,7 @@
 			name = Exercito_Portugues
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_skirmish_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_BEIRA
 				count = 15
 			}
@@ -3653,7 +3653,7 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_skirmish_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_ESTREMADURA
 				count = 10
 			}
@@ -3677,13 +3677,13 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_skirmish_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_ESTREMADURA
 				count = 2
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_skirmish_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_ALENTEJO
 				count = 3
 			}
