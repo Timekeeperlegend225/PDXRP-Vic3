@@ -240,7 +240,7 @@
 		}
 		# Colony of Ceylon
 		create_diplomatic_pact = {
-			country = c:CEY
+			country = c:BCE
 			type = puppet
 		}
 	}
