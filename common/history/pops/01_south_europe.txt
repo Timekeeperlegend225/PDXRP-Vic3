@@ -354,7 +354,7 @@
 		}
 	}
 	s:STATE_BEIRA = {
-		region_state:POR = {
+		region_state:BRZ = {
 			create_pop = {
 				culture = portuguese
 				size = 1620800
@@ -362,7 +362,7 @@
 		}
 	}
 	s:STATE_ESTREMADURA = {
-		region_state:POR = {
+		region_state:BRZ = {
 			create_pop = {
 				culture = portuguese
 				size = 860796
@@ -370,7 +370,7 @@
 		}
 	}
 	s:STATE_ALENTEJO = {
-		region_state:POR = {
+		region_state:BRZ = {
 			create_pop = {
 				culture = portuguese
 				size = 372508
@@ -378,7 +378,7 @@
 		}
 	}
 	s:STATE_CAPE_VERDE = {
-		region_state:POR = {
+		region_state:BRZ = {
 			create_pop = {
 				culture = portuguese
 				size = 103532
@@ -391,7 +391,7 @@
 	}
 
 	s:STATE_MADEIRA = {
-		region_state:POR = {
+		region_state:BRZ = {
 			create_pop = {
 				culture = portuguese
 				size = 103532
@@ -413,7 +413,7 @@
 	}
 
 	s:STATE_AZORES = {
-		region_state:POR = {
+		region_state:BRZ = {
 			create_pop = {
 				culture = portuguese
 				size = 103532
