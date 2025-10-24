@@ -365,7 +365,7 @@
 		region_state:BRZ = {
 			create_pop = {
 				culture = portuguese
-				size = 860796
+				size = 1360796
 			}
 		}
 	}
@@ -373,7 +373,7 @@
 		region_state:BRZ = {
 			create_pop = {
 				culture = portuguese
-				size = 372508
+				size = 872508
 			}
 		}
 	}
