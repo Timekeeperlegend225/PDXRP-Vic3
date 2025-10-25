@@ -28,7 +28,7 @@ IDI_free = {
 	}
 }
 
-CDI = {
+CDI_FB = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 

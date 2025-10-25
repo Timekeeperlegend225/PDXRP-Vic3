@@ -1611,6 +1611,17 @@ BRZ = { # Brazil
 		priority = 1
 	}
 	flag_definition = {
+		coa = POR_absolute_monarchy
+		subject_canton = POR_absolute_monarchy
+		priority = 100000
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				owns_entire_state_region = STATE_ESTREMADURA
+			}
+		}
+	}
+	flag_definition = {
 		coa = BRZ_republic
 		subject_canton = BRZ_republic
 		priority = 10
@@ -3661,6 +3672,21 @@ GBR = { # Great Britain / United Kingdom
 		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
 		trigger = {
 			coa_def_controls_part_of_ireland = yes
+		}
+	}
+	flag_definition = {
+		coa = ENG
+		subject_canton = ENG
+		priority = 10000
+		allow_overlord_canton = yes
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		trigger = {
+			c:GBR = {
+				NOR = {
+					owns_entire_state_region = STATE_HIGHLANDS
+					owns_entire_state_region = STATE_LOWLANDS
+				}
+			}
 		}
 	}
 	flag_definition = {
@@ -11435,6 +11461,14 @@ MSN = { # Massina
 	}
 }
 
+CDI = { 
+	flag_definition = {
+		coa = CDI_FB
+		priority = 100000
+	}
+}
+
+
 
 IDI = { 
 	flag_definition = {
@@ -11469,13 +11503,5 @@ IDI = {
 				}
 			}
 		}
-	}
-}
-
-CDI = { 
-	flag_definition = {
-		coa = CDI
-		subject_canton = CDI
-		priority = 1
 	}
 }

@@ -1,0 +1,101 @@
+﻿# Companhia de Moçambique
+company_of_india_company = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/mozambique_companhia_de_mocambique.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	category = bureaucrat_owned
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_MOCAMBIQUE STATE_ZAMBEZIA STATE_LOURENCO_MARQUES }
+
+	building_types = {
+		building_tobacco_plantation
+		building_silk_plantation
+		building_opium_plantation
+	}
+
+	extension_building_types = {
+		building_tea_plantation
+		building_sugar_plantation
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_opium
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_grain_complete_tt
+			has_variable = prestige_good_generic_grain_var
+		}
+	}
+
+	potential = {
+		country_has_primary_culture = cu:portuguese
+	}
+
+	possible = {
+		has_technology_researched = corporate_charter
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_MOCAMBIQUE
+				state_region = s:STATE_ZAMBEZIA
+				state_region = s:STATE_LOURENCO_MARQUES
+			}
+			any_scope_building = {
+				OR = {
+					is_building_type = building_cotton_plantation
+					is_building_type = building_tea_plantation
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.1
+		state_colony_growth_creation_factor = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = mutual_funds
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_MOCAMBIQUE
+				state_region = s:STATE_ZAMBEZIA
+				state_region = s:STATE_LOURENCO_MARQUES
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_cotton_plantation = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_MOCAMBIQUE
+					state_region = s:STATE_ZAMBEZIA
+					state_region = s:STATE_LOURENCO_MARQUES
+				}
+				is_incorporated = yes
+			}
+		}
+		building_tea_plantation = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_MOCAMBIQUE
+					state_region = s:STATE_ZAMBEZIA
+					state_region = s:STATE_LOURENCO_MARQUES
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
