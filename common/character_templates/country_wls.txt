@@ -1,0 +1,36 @@
+﻿# Wales - WLS
+
+WLS_Dic_Penderyn = {
+    first_name = Dic
+    last_name = Penderyn
+    historical = yes
+    culture = cu:welsh
+    birth_date = 1807.1.1
+	ruler = yes
+    interest_group = ig_trade_unions
+    female = no
+    ideology = ideology_radical
+    traits = {
+        charismatic
+        brave
+        persistent
+    }
+}
+
+WLS_John_Frost = {
+    first_name = John
+    last_name = Frost
+    historical = yes
+    culture = cu:welsh
+    birth_date = 1784.5.25
+    dna = dna_john_frost
+	ig_leader = yes
+    interest_group = ig_trade_unions
+    female = no
+    ideology = ideology_radical
+    traits = {
+        reckless
+        direct
+        master_bureaucrat
+    }
+}

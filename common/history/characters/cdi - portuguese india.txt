@@ -1,0 +1,13 @@
+CHARACTERS = {
+	c:CDI ?= {
+		create_character = {
+			template = cdi_jjoaquim_template
+		}
+		create_character = {
+			template = cdi_jmaria_template
+		}
+		create_character = {
+			template = cdi_bernardo_template
+		}
+	}	
+}

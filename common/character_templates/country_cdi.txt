@@ -1,0 +1,50 @@
+﻿# Companhia das Indias - CDI
+
+cdi_jjoaquim_template = {
+    first_name = JosE__Joaquim
+    last_name = de_Lima
+    historical = yes
+    culture = cu:portuguese
+	religion = rel:catholic
+    birth_date = 1797.11.8
+    ruler = yes
+    interest_group = ig_armed_forces
+    ideology = ideology_jingoist_leader
+    traits = {
+        experienced_naval_commander
+		imperious
+		imposing
+    }
+}
+
+cdi_jmaria_template = {
+    first_name = JosE__MarI_a
+    last_name = Torres
+    historical = yes
+    culture = cu:portuguese
+	religion = rel:catholic
+    birth_date = 1800.10.14
+    ig_leader = yes
+    interest_group = ig_devout
+    ideology = ideology_moderate
+    traits = {
+        pious
+    }
+}
+
+cdi_bernardo_template = {
+    first_name = Bernardo
+    last_name = Peres_Silva
+    historical = yes
+    culture = cu:portuguese
+	religion = rel:catholic
+    birth_date = 1775.10.15
+    ig_leader = yes
+    interest_group = ig_intelligentsia
+    ideology = ideology_reformer
+    traits = {
+        persistent
+		innovative
+    }
+}
+

@@ -1,0 +1,13 @@
+CHARACTERS = {
+	c:IDI ?= {
+		create_character = {
+			template = idi_carew_template
+		}
+		create_character = {
+			template = idi_pottinger_template
+		}
+		create_character = {
+			template = idi_gough_template
+		}
+	}	
+}

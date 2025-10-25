@@ -1,0 +1,56 @@
+﻿# Scotland - SCO
+
+SCO_george_thomas_graham = {
+    first_name = Thomas
+    last_name = Graham
+    historical = yes
+    culture = cu:scottish
+    female = no
+	ruler = yes
+	ig_leader = yes
+    religion = rel:protestant
+    ideology = ideology_jingoist_leader
+    interest_group = ig_landowners
+    birth_date = 1748.10.19
+    traits = {
+        direct
+        imperious
+        expert_offensive_planner
+    }
+}
+
+
+SCO_george_hamilton-gordon = {
+    first_name = George
+    last_name = Hamilton-Gordon
+    historical = yes
+    culture = cu:scottish
+    female = no
+    religion = rel:protestant
+    ig_leader = yes
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+    birth_date = 1784.1.28
+    traits = {
+        innovative
+        experienced_diplomat
+        reserved
+    }
+}
+
+SCO_archibald_campbell_tait = {
+    first_name = Archibald
+    last_name = Tait
+    historical = yes
+    culture = cu:scottish
+    female = no
+    religion = rel:protestant
+    ig_leader = yes
+    ideology = ideology_liberal_leader
+    interest_group = ig_devout
+    birth_date = 1811.12.21
+    traits = {
+        pious
+        master_bureaucrat
+    }
+}

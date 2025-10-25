@@ -1,0 +1,13 @@
+CHARACTERS = {
+	c:SCO ?= {
+		create_character = {
+			template = SCO_george_thomas_graham
+		}
+		create_character = {
+			template = SCO_george_hamilton-gordon
+		}
+		create_character = {
+			template = SCO_archibald_campbell_tait
+		}
+	}	
+}

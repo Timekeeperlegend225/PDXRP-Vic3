@@ -1,0 +1,13 @@
+CHARACTERS = {
+	c:IRE ?= {
+		create_character = {
+			template = irl_o_connel_template
+		}
+		create_character = {
+			template = irl_o_connor_template
+		}
+		create_character = {
+			template = irl_william_smith_o_brien
+		}
+	}	
+}

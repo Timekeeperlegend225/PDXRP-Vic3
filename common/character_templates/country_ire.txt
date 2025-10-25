@@ -1,0 +1,53 @@
+﻿# Ireland - IRL
+
+irl_o_connel_template = {
+    first_name = Daniel
+    last_name = O_Connel
+    historical = yes
+    culture = cu:irish
+	religion = rel:catholic
+    birth_date = 1775.8.6
+    ig_leader = yes
+	ruler = yes
+    interest_group = ig_intelligentsia
+    ideology = ideology_reformer
+    traits = {
+        charismatic
+		persistent
+		honorable
+    }
+}
+
+irl_o_connor_template = {
+    first_name = Feargus
+    last_name = O_Connor
+    historical = yes
+    culture = cu:irish
+	religion = rel:catholic
+    birth_date = 1796.1.1
+    ig_leader = yes
+    dna = dna_feargus_o_connor
+    interest_group = ig_trade_unions
+    ideology = ideology_radical
+    traits = {
+        charismatic
+    }
+}
+
+irl_william_smith_o_brien = {
+	first_name = William
+	last_name = Smith_O_Brien
+	historical = yes
+	culture = cu:irish
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_radical
+    ig_leader = yes
+	birth_date = 1803.10.17
+	traits = {
+		inspirational_orator
+		direct
+		persistent
+	}
+}

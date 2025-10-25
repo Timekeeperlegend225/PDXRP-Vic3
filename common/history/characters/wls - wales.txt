@@ -1,0 +1,10 @@
+CHARACTERS = {
+	c:WLS ?= {
+		create_character = {
+			template = WLS_Dic_Penderyn
+		}
+		create_character = {
+			template = WLS_John_Frost
+		}
+	}	
+}
