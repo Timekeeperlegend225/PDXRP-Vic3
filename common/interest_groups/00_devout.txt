@@ -488,17 +488,31 @@
 	priority_cultures = { #Country scope
 		rule = {
 			trigger = {
-				or = {
-					c:BIC ?= this
-					c:IDI ?= this
-					c:CDI ?= this
+				c:BIC ?= this
+				any_primary_culture = {
+					cu:british = this
 				}
-				or = {
-					any_primary_culture = {
-						cu:british = this
-						cu:irish = this
-						cu:portuguese = this
-					}
+			}
+			cultures = {
+				assamese avadhi baluchi bengali bihari gujarati kannada malayalam marathi oriya panjabi pathan rajput sindi tamil telegu hindustani bundeli pahari gondi bageli chhattisgarhi deccani
+			}
+		}
+		rule = {
+			trigger = {
+				c:IDI ?= this
+				any_primary_culture = {
+					cu:irish = this
+				}
+			}
+			cultures = {
+				assamese avadhi baluchi bengali bihari gujarati kannada malayalam marathi oriya panjabi pathan rajput sindi tamil telegu hindustani bundeli pahari gondi bageli chhattisgarhi deccani
+			}
+		}
+		rule = {
+			trigger = {
+				c:CDI ?= this
+				any_primary_culture = {
+					cu:portuguese = this
 				}
 			}
 			cultures = {

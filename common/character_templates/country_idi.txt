@@ -1,18 +1,22 @@
 ﻿# Irish India - IDI
 
 idi_carew_template = {
-    first_name = Patrick_Joseph
-    last_name = Carew
+    first_name = Hugh
+    last_name = Wheeler
+	is_general = yes
     historical = yes
     culture = cu:irish
 	religion = rel:catholic
-    birth_date = 1800.1.1
+    birth_date = 1789.6.30
     ig_leader = yes
-    interest_group = ig_devout
-    ideology = ideology_moderate
+    interest_group = ig_armed_forces
+    ideology = ideology_utilitarian_leader
+	commander_rank = commander_rank_4
     traits = {
         meticulous
-		pious
+		direct
+		popular_commander
+		experienced_offensive_planner
     }
 }
 idi_pottinger_template = {
@@ -23,7 +27,7 @@ idi_pottinger_template = {
 	religion = rel:catholic
     birth_date = 1789.10.3
     ig_leader = yes
-    interest_group = ig_landowners
+    interest_group = ig_industrialists
     ideology = ideology_reformer
     traits = {
         honorable
@@ -31,17 +35,19 @@ idi_pottinger_template = {
     }
 }
 
-idi_gough_template = {
-    first_name = Hugh
-    last_name = Gough
+BIC_robert_o_callaghan = {
+    first_name = Robert
+    last_name = O_Callaghan
     historical = yes
     culture = cu:irish
 	religion = rel:catholic
-    birth_date = 1779.3.2
+    birth_date = 1777.10.26
     ruler = yes
+	is_general = yes
     interest_group = ig_armed_forces
     ideology = ideology_jingoist_leader
     traits = {
+		experienced_political_operator
         experienced_offensive_planner
 		ambitious
 		brave

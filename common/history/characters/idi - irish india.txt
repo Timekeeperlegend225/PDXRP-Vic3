@@ -7,7 +7,7 @@ CHARACTERS = {
 			template = idi_pottinger_template
 		}
 		create_character = {
-			template = idi_gough_template
+			template = BIC_robert_o_callaghan
 		}
 	}	
 }
