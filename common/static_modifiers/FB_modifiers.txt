@@ -1,0 +1,17 @@
+﻿FB_wales_politics_modifiers= {
+	icon = gfx/interface/icons/ig_icons/trade_unions.dds
+	interest_group_ig_trade_unions_pop_attraction_mult = 5
+	interest_group_ig_intelligentsia_pop_attraction_mult = 3
+}
+
+modifier_india_irish_rule = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	interest_group_ig_industrialists_pol_str_mult = 1
+	interest_group_ig_armed_forces_pol_str_mult = 3.5
+	country_bureaucrats_pol_str_mult = 1
+	country_capitalists_pol_str_mult = 0.5
+	country_officers_pol_str_mult = 2
+	country_aristocrats_pol_str_mult = -0.80
+	country_legitimacy_base_add = -30
+	country_legitimacy_headofstate_add = 65
+}

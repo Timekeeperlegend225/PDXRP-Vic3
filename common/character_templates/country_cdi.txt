@@ -7,13 +7,24 @@ cdi_jjoaquim_template = {
     culture = cu:portuguese
 	religion = rel:catholic
     birth_date = 1797.11.8
-    ruler = yes
+#    ruler = yes
     interest_group = ig_armed_forces
     ideology = ideology_jingoist_leader
     traits = {
         experienced_naval_commander
 		imperious
 		imposing
+    }
+    executive_usage = {
+        country_trigger = { # Must be the country that owns the company
+            c:BRZ ?= this
+        }
+        company_trigger = {
+            is_company_type = company_type:company_of_india_company
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1849.1.1
+        chance = 100
     }
 }
 

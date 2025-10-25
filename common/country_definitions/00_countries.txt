@@ -4957,12 +4957,12 @@ ALK = { # Alaska - Russian-American Company at start
 BCE = { # British Ceylon
 	color = { 0 51 102 }
 
-	country_type = colonial
+	country_type = unrecognized
 
 	tier = principality
 
 	capital = STATE_CEYLON
-	cultures = { british }
+	cultures = { sinhala }
 }
 
 MLD = { # Maldives

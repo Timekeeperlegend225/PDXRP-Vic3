@@ -590,7 +590,7 @@
 				exists = c:IDI
 				owner ?= c:IDI
 				has_pop_religion = hindu
-			)
+			}
 			AND = {
 				exists = c:CDI
 				owner ?= c:CDI
