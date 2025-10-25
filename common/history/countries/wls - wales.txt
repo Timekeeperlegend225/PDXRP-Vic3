@@ -27,5 +27,12 @@
 		activate_law = law_type:law_migration_controls
 		activate_law = law_type:law_right_to_associate
 		activate_law = law_type:law_worker_protections
+		
+		
+		add_modifier = {
+			name = FB_wales_politics_modifiers
+			years = 50
+			is_decaying = yes
+		}
 	}
 }

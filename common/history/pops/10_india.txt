@@ -7,11 +7,6 @@ POPS = {
 				size = 9969689
 			}
 			create_pop = {
-				culture = british
-				pop_type = bureaucrats
-				size = 192
-			}
-			create_pop = {
 				culture = bihari
 				religion = sunni
 				size = 1442941
@@ -80,13 +75,57 @@ POPS = {
 			}
 			create_pop = {
 				culture = british
-				size = 800
+				size = 1600
 				pop_type = capitalists
 			}
 			create_pop = {
 				culture = scottish
 				size = 1712
 				pop_type = officers
+			}
+			create_pop = {
+				culture = british 
+				size = 1420
+				pop_type = bureaucrats
+			}
+			create_pop = {
+				culture = scottish
+				size = 140
+				pop_type = bureaucrats
+			}
+			create_pop = {
+				culture = british
+				pop_type = officers
+				size = 200
+			}
+			create_pop = {
+				culture = british
+				pop_type = aristocrats
+				size = 96
+			}
+			create_pop = {
+				culture = british
+				pop_type = aristocrats
+				size = 213
+			}
+			create_pop = {
+				culture = british
+				size = 19992
+			}
+			create_pop = {
+				culture = british
+				pop_type = capitalists
+				size = 500
+			}
+			create_pop = {
+				culture = british
+				pop_type = bureaucrats
+				size = 1211
+			}
+			create_pop = {
+				culture = british
+				pop_type = officers
+				size = 1012
 			}
 		}
 		region_state:COO = {
@@ -152,6 +191,36 @@ POPS = {
 				culture = scottish
 				size = 301
 				pop_type = bureaucrats
+			}
+			create_pop = {
+				culture = british
+				pop_type = capitalists
+				size = 200
+			}
+			create_pop = {
+				culture = british
+				pop_type = bureaucrats
+				size = 9012
+			}
+			create_pop = {
+				culture = scottish
+				pop_type = bureaucrats
+				size = 1812
+			}
+			create_pop = {
+				culture = british
+				pop_type = officers
+				size = 801
+			}
+			create_pop = {
+				culture = scottish
+				pop_type = officers
+				size = 200
+			}
+			create_pop = {
+				culture = british
+				pop_type = bureaucrats
+				size = 192
 			}
 		}
 		region_state:KKI = {
@@ -255,16 +324,6 @@ POPS = {
 				culture = bengali
 				religion = hindu
 				size = 70120
-			}
-			create_pop = {
-				culture = british # including Irish
-				size = 420
-				pop_type = bureaucrats
-			}
-			create_pop = {
-				culture = scottish
-				size = 140
-				pop_type = bureaucrats
 			}
 		}
 	}
@@ -551,21 +610,6 @@ POPS = {
 				culture = persian
 				religion = animist # parsis
 				size = 5120
-			}
-			create_pop = {
-				culture = british
-				pop_type = capitalists
-				size = 800
-			}
-			create_pop = {
-				culture = british
-				pop_type = bureaucrats
-				size = 1000
-			}
-			create_pop = {
-				culture = british
-				pop_type = officers
-				size = 200
 			}
 			create_pop = {
 				culture = scottish
@@ -964,11 +1008,7 @@ POPS = {
 				culture = marathi
 				size = 196470
 			}
-			create_pop = {
-				culture = british
-				pop_type = aristocrats
-				size = 96
-			}
+			
 			create_pop = {
 				culture = gondi
 				size = 38235
@@ -1200,11 +1240,6 @@ POPS = {
 				religion = sunni
 				size = 4844
 			}
-			create_pop = {
-				culture = british
-				pop_type = aristocrats
-				size = 213
-			}
 		}
 		region_state:ALW = {
 			create_pop = {
@@ -1316,10 +1351,6 @@ POPS = {
 			create_pop = {
 				culture = malay
 				size = 16400
-			}
-			create_pop = {
-				culture = british
-				size = 7992
 			}
 			create_pop = {
 				culture = sinhala
@@ -1795,10 +1826,6 @@ POPS = {
 				size = 3890
 			}
 			create_pop = {
-				culture = british
-				size = 12000
-			}
-			create_pop = {
 				culture = scottish
 				size = 6123
 				pop_type = bureaucrats
@@ -1939,24 +1966,9 @@ POPS = {
 				size = 22000
 			}
 			create_pop = {
-				culture = british
-				pop_type = capitalists
-				size = 500
-			}
-			create_pop = {
 				culture = portuguese
 				pop_type = capitalists
 				size = 300
-			}
-			create_pop = {
-				culture = british
-				pop_type = bureaucrats
-				size = 1211
-			}
-			create_pop = {
-				culture = british
-				pop_type = officers
-				size = 1012
 			}
 			create_pop = {
 				culture = portuguese
@@ -2265,31 +2277,6 @@ POPS = {
 				culture = panjabi
 				religion = sikh
 				size = 1612
-			}
-			create_pop = {
-				culture = british
-				pop_type = capitalists
-				size = 200
-			}
-			create_pop = {
-				culture = british
-				pop_type = bureaucrats
-				size = 9012
-			}
-			create_pop = {
-				culture = scottish
-				pop_type = bureaucrats
-				size = 1812
-			}
-			create_pop = {
-				culture = british
-				pop_type = officers
-				size = 801
-			}
-			create_pop = {
-				culture = scottish
-				pop_type = officers
-				size = 200
 			}
 			create_pop = {
 				culture = armenian

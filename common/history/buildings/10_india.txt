@@ -97,13 +97,13 @@
 					building={
 						type="building_financial_district"
 						country="c:BIC"
-						levels=3
+						levels=5
 						region="STATE_WEST_BENGAL"
 					}
 					building={
 						type="building_financial_district"
 						country="c:GBR"
-						levels=9
+						levels=4
 						region="STATE_HOME_COUNTIES"
 					}
 				}
@@ -150,15 +150,15 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_logging_camp"
+						type = "building_financial_district"
 						country = "c:BIC"
-						levels = 4
+						levels = 6
 						region = "STATE_WEST_BENGAL"
 					}
 					building = {
 						type = "building_financial_district"
 						country = "c:GBR"
-						levels = 6
+						levels = 4
 						region = "STATE_HOME_COUNTIES"
 					}
 				}
@@ -235,9 +235,11 @@
 			create_building = {
 				building = "building_arms_industry"
 				add_ownership = {
-					country= {
+					building = {
+						type = "building_financial_district"
 						country = "c:BIC"
 						levels = 2
+						region = "STATE_WEST_BENGAL"
 					}
 				}
 				reserves = 1
@@ -247,7 +249,7 @@
 				building = "building_glassworks"
 				add_ownership = {
 					building = {
-						type = "building_manor_house"
+						type = "building_financial_district"
 						country = "c:GBR"
 						levels = 3
 						region = "STATE_HOME_COUNTIES"
@@ -305,7 +307,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_textile_mills"
+						type = "building_financial_district"
 						country = "c:BIC"
 						levels = 4
 						region = "STATE_WEST_BENGAL"
@@ -318,14 +320,10 @@
 				building = "building_paper_mills"
 				add_ownership = {
 					building = {
-						type = "building_paper_mills"
+						type = "building_financial_district"
 						country = "c:BIC"
-						levels = 2
+						levels = 4
 						region = "STATE_WEST_BENGAL"
-					}
-					country= {
-						country = "c:BIC"
-						levels = 2
 					}
 				}
 				reserves = 1
@@ -335,7 +333,7 @@
 				building="building_fishing_wharf"
 				add_ownership={
 					building={
-						type="building_fishing_wharf"
+						type="building_financial_district"
 						country="c:BIC"
 						levels=2
 						region="STATE_WEST_BENGAL"
@@ -347,9 +345,11 @@
 			create_building = {
 				building = "building_port"
 				add_ownership = {
-					country= {
-						country = "c:BIC"
-						levels = 5
+					building={
+						type="building_financial_district"
+						country="c:BIC"
+						levels=5
+						region="STATE_WEST_BENGAL"
 					}
 				}
 				reserves = 1
@@ -371,13 +371,28 @@
 			create_building={
 				building="building_railway"
 				add_ownership={
-					country={
-						country="c:GBR"
-						levels=1
+					building = {
+						type = "building_financial_district"
+						country = "c:BIC"
+						levels = 2
+						region = "STATE_WEST_BENGAL"
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages"  }
+			}
+			create_building={
+				building="building_food_industry"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:BIC"
+						levels=3
+						region="STATE_WEST_BENGAL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_disabled_distillery" "pm_disabled_canning" "pm_sweeteners" "pm_manual_dough_processing"  }
 			}
 		}
 	}
@@ -398,7 +413,7 @@
 				building = "building_textile_mills"
 				add_ownership = {
 					building = {
-						type = "building_textile_mills"
+						type = "building_financial_district"
 						country = "c:BIC"
 						levels = 4
 						region = "STATE_EAST_BENGAL"
@@ -424,15 +439,15 @@
 				building = "building_logging_camp"
 				add_ownership = {
 					building = {
-						type = "building_logging_camp"
+						type = "building_financial_district"
 						country = "c:BIC"
-						levels = 2
+						levels = 8
 						region = "STATE_EAST_BENGAL"
 					}
 					building = {
 						type = "building_financial_district"
 						country = "c:GBR"
-						levels = 4
+						levels = 2
 						region = "STATE_HOME_COUNTIES"
 					}
 				}
@@ -462,7 +477,7 @@
 				building = "building_fishing_wharf"
 				add_ownership = {
 					building = {
-						type = "building_fishing_wharf"
+						type = "building_financial_district"
 						country = "c:BIC"
 						levels = 2
 						region = "STATE_EAST_BENGAL"
@@ -474,9 +489,11 @@
 			create_building = {
 				building = "building_port"
 				add_ownership = {
-					country= {
+					building = {
+						type = "building_financial_district"
 						country = "c:BIC"
 						levels = 1
+						region = "STATE_EAST_BENGAL"
 					}
 				}
 				reserves = 1
@@ -494,6 +511,19 @@
 				}
 				reserves=1
 				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_food_industry"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:BIC"
+						levels=3
+						region="STATE_EAST_BENGAL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_disabled_distillery" "pm_disabled_canning" "pm_sweeteners" "pm_manual_dough_processing"  }
 			}
 		}
 	}

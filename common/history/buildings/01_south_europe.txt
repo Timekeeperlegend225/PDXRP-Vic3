@@ -389,13 +389,13 @@
 		}
 	}
 	s:STATE_MALTA={
-		region_state:GBR={
+		region_state:MLT={
 			create_building={
 				building="building_fishing_wharf"
 				add_ownership={
 					building={
 						type="building_fishing_wharf"
-						country="c:GBR"
+						country="c:MLT"
 						levels=1
 						region="STATE_MALTA"
 					}
@@ -407,7 +407,7 @@
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:GBR"
+						country="c:MLT"
 						levels=1
 					}
 				}

@@ -1569,9 +1569,15 @@
 				building="building_trade_center"
 				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
 				add_ownership={
+					building={
+						type="building_trade_center"
+						country="c:WLS"
+						levels=3
+						region="STATE_WALES"
+					}
 					country={
 						country="c:WLS"
-						levels=6
+						levels=5
 					}
 				}
 				reserves=1
@@ -1669,7 +1675,7 @@
 					building={
 						type="building_textile_mills"
 						country="c:WLS"
-						levels=1
+						levels=2
 						region="STATE_WALES"
 					}
 				}
@@ -1723,6 +1729,17 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
+				building="building_military_shipyards"
+				add_ownership={
+					country={
+						country="c:WLS"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_military_shipbuilding_wooden_2"  }
 			}
 		}
 	}

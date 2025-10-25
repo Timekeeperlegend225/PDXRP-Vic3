@@ -496,6 +496,19 @@
 	}
 	s:STATE_WASHINGTON={
 		region_state:ORG={
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					building={
+						type="building_wheat_farm"
+						country="c:ORG"
+						levels=1
+						region="STATE_WASHINGTON"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
+			}
 		}
 	}
 	s:STATE_OREGON={
@@ -512,6 +525,19 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					building={
+						type="building_wheat_farm"
+						country="c:ORG"
+						levels=1
+						region="STATE_OREGON"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
 			}
 		}
 	}
@@ -3045,6 +3071,30 @@
 				reserves=1
 				activate_production_methods={ "pm_no_organization" }
 			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					building={
+						type="building_wheat_farm"
+						country="c:ORG"
+						levels=1
+						region="STATE_BRITISH_COLUMBIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
+			}
+			create_building={
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_limited" }
+				add_ownership={
+					country={
+						country="c:ORG"
+						levels=2
+					}				
+				}
+				reserves=1
+			}	
 		}
 		region_state:ATB={
 		}

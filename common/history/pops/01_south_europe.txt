@@ -38,14 +38,10 @@
 		}
 	}
 	s:STATE_MALTA = {
-		region_state:GBR = {
+		region_state:MLT = {
 			create_pop = {
 				culture = maltese
 				size = 117192
-			}
-			create_pop = {
-				culture = british
-				size = 2792
 			}
 		}
 	}
