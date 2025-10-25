@@ -1,5 +1,8 @@
 ﻿COUNTRIES = {
-	c:IDI ?= {
+	c:BIC ?= {
+		ig:ig_industrialists = {
+			add_ruling_interest_group = yes
+		}
 		effect_starting_technology_tier_2_tech = yes
 
 		add_technology_researched = mechanical_tools
@@ -22,9 +25,35 @@
 		activate_law = law_type:law_hindu_caste_not_enforced
 		activate_law = law_type:law_combination_acts
 
+		
+		ig:ig_armed_forces ?= {
+			add_ruling_interest_group = yes
+		}
+
+		set_tax_level = high # EIC revenue was essentially based on tax farming
+
+		add_taxed_goods = g:opium
+		add_taxed_goods = g:tobacco
+
+		set_export_tariff_level = { 
+			goods = g:opium
+			level = low_subventions
+		}
+		set_export_tariff_level = { 
+			goods = g:clothes
+			level = high_tariffs
+		}
+
+		set_variable = {
+			name = east_indies_revolt_var
+			value = 0
+		}
 
 		add_journal_entry = {
 			type = je_consolidate_colonial_rule
 		}
+
+		add_modifier = modifier_india_company_rule
+
 	}
 }
