@@ -972,6 +972,11 @@ POPS = {
 				culture = afro_brazilian
 				size = 9997
 			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
+			}
 		}
 	}
 	s:STATE_SANTA_CATARINA = { # 1836 estimate. 61753 total.
@@ -988,6 +993,11 @@ POPS = {
 			create_pop = {
 				culture = afro_brazilian
 				size = 13159
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
 			}
 		}
 	}
@@ -1010,6 +1020,11 @@ POPS = {
 				culture = tupinamba
 				size = 8000
 			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
+			}
 		}
 	}
 	s:STATE_MINAS_GERAIS = {
@@ -1026,6 +1041,11 @@ POPS = {
 			create_pop = {
 				culture = afro_brazilian
 				size = 181300
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
 			}
 		}
 	}
@@ -1048,6 +1068,11 @@ POPS = {
 				culture = afro_brazilian
 				size = 112263
 			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
+			}
 		}
 	}
 	s:STATE_BAHIA = {
@@ -1064,6 +1089,11 @@ POPS = {
 			create_pop = {
 				culture = afro_brazilian
 				size = 248737
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
 			}
 		}
 	}
@@ -1086,6 +1116,11 @@ POPS = {
 				culture = afro_brazilian
 				size = 42860
 			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
+			}
 		}
 	}
 	s:STATE_CEARA = { # Ceara, 1835 estimate. Total population of 211451
@@ -1106,6 +1141,11 @@ POPS = {
 			create_pop = {
 				culture = afro_brazilian
 				size = 114270
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
 			}
 		}
 	}
@@ -1149,6 +1189,11 @@ POPS = {
 				culture = afro_brazilian
 				size = 324105
 			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
+			}
 		}
 	}
 	s:STATE_PARAIBA = { # Paraiba, 1835 estimate. Total population of 135764.
@@ -1169,6 +1214,11 @@ POPS = {
 			create_pop = {
 				culture = afro_brazilian
 				size = 61245
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_brazilian
+				size = 100000 
 			}
 		}
 	}

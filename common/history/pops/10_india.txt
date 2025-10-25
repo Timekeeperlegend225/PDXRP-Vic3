@@ -39,7 +39,7 @@ POPS = {
 			create_pop = {
 				culture = bengali
 				religion = hindu
-				size = 12621021
+				size = 12521021
 			}
 			create_pop = {
 				culture = bengali
@@ -93,7 +93,7 @@ POPS = {
 			create_pop = {
 				culture = bengali
 				religion = hindu
-				size = 143012
+				size = 243012
 			}
 			create_pop = {
 				culture = bengali
@@ -117,11 +117,11 @@ POPS = {
 			create_pop = {
 				culture = bengali
 				religion = hindu
-				size = 5692400
+				size = 5592400
 			}
 			create_pop = {
 				culture = bengali
-				size = 14617600
+				size = 14417600
 			}
 			create_pop = {
 				culture = pashtun
@@ -152,6 +152,17 @@ POPS = {
 				culture = scottish
 				size = 301
 				pop_type = bureaucrats
+			}
+		}
+		region_state:KKI = {
+			create_pop = {
+				culture = bengali
+				religion = hindu
+				size = 100000
+			}
+			create_pop = {
+				culture = bengali
+				size = 200000
 			}
 		}
 	}

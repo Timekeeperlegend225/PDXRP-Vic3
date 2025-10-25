@@ -126,10 +126,6 @@
 			country = c:BIC
 			type = chartered_company
 		}
-		create_diplomatic_pact = {
-			country = c:SIL
-			type = puppet
-		}
 
 		### AUSTRALIA ###
 		# Colony of New South Wales
@@ -377,6 +373,10 @@
 		# Nova Scotia
 		create_diplomatic_pact = {
 			country = c:NVS
+			type = colony
+		}
+		create_diplomatic_pact = {
+			country = c:SIL
 			type = colony
 		}
 	}

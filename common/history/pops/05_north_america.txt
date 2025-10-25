@@ -1085,6 +1085,35 @@
 				religion = protestant
 				size = 600
 			}
+
+			### Officers
+			create_pop = {
+				culture = british # Anglicans
+				size = 700
+			}
+			create_pop = {
+				culture = british # Anglicans
+				size = 21763
+			}
+			### Officers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = officers
+				size = 1400
+			}
+
+			### Soldiers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = soldiers
+				size = 8000
+			}
+
+			### Soldiers
+			create_pop = {
+				culture = british # Anglicans
+				size = 6000
+			}
 			create_pop = {
 				culture = metis
 				size = 3996
@@ -1092,6 +1121,32 @@
 			create_pop = {
 				culture = siouan
 				size = 4000
+			}
+			create_pop = {
+				culture = british # Anglicans
+				size = 130489
+			}
+			create_pop = {
+				culture = british  # Presbyterians and Methodists
+				size = 10049
+			}
+			create_pop = {
+				culture = british # Anglicans
+				size = 62456
+			}
+			create_pop = {
+				culture = british  # Presbyterians and Methodists
+				size = 4007
+			}
+			create_pop = {
+				culture = british # Anglicans
+				size = 4500
+			}
+
+			### Soldiers
+			create_pop = {
+				culture = british # Anglicans
+				size = 26000
 			}
 		}
 	}
@@ -1147,6 +1202,11 @@
 			create_pop = {
 				culture = inuit
 				size = 4000
+			}
+			create_pop = {
+				culture = british
+				religion = catholic
+				size = 12400
 			}
 		}
 	}

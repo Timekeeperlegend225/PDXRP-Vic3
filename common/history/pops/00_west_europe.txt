@@ -174,8 +174,9 @@
 				size = 100000
 			}
 			create_pop = {
-				culture = irish
-				size = 28400
+				culture = british
+				religion = jewish
+				size = 237
 			}
 		}
 	}
@@ -183,7 +184,7 @@
 		region_state:GBR = {
 			create_pop = {
 				culture = british
-				size = 1336404
+				size = 1236404
 			}
 			create_pop = {
 				culture = british
@@ -194,20 +195,16 @@
 		region_state:SCO = {
 			create_pop = {
 				culture = british
-				size = 300000
+				size = 350000
 			}
 			create_pop = {
 				culture = scottish
-				size = 350000
+				size = 400000
 			}
 			create_pop = {
 				culture = british
 				religion = catholic
 				size = 50000
-			}
-			create_pop = {
-				culture = irish
-				size = 80700
 			}
 		}
 	}
@@ -227,7 +224,7 @@
 		region_state:GBR = {
 			create_pop = {
 				culture = british
-				size = 1726592
+				size = 1526592
 			}
 			create_pop = {
 				culture = british
@@ -238,15 +235,11 @@
 		region_state:SCO = {
 			create_pop = {
 				culture = british
-				size = 100000
-			}
-			create_pop = {
-				culture = scottish
 				size = 200000
 			}
 			create_pop = {
-				culture = irish
-				size = 16000
+				culture = scottish
+				size = 300000
 			}
 			create_pop = {
 				culture = british
@@ -279,10 +272,6 @@
 				religion = catholic
 				size = 24400
 			}
-			create_pop = {
-				culture = irish
-				size = 12000
-			}
 		}
 	}
 	s:STATE_EAST_ANGLIA = {
@@ -303,15 +292,6 @@
 			create_pop = {
 				culture = british
 				size = 1969600
-			}
-			create_pop = {
-				culture = british
-				religion = catholic
-				size = 12400
-			}
-			create_pop = {
-				culture = irish
-				size = 4400
 			}
 		}
 	}
@@ -409,19 +389,6 @@
 	}
 	s:STATE_MUNSTER = {
 		region_state:IRE = {
-			### Officers
-			create_pop = {
-				culture = british # Anglicans
-				pop_type = officers
-				size = 1400
-			}
-
-			### Soldiers
-			create_pop = {
-				culture = british # Anglicans
-				pop_type = soldiers
-				size = 8000
-			}
 			create_pop = {
 				culture = irish  # Catholics
 				pop_type = soldiers
@@ -433,17 +400,9 @@
 				size = 2206388
 			}
 			create_pop = {
-				culture = british # Anglicans
-				size = 62456
-			}
-			create_pop = {
 				culture = irish # Anglicans
 				religion = protestant
 				size = 47904
-			}
-			create_pop = {
-				culture = british  # Presbyterians and Methodists
-				size = 10049
 			}
 			create_pop = {
 				culture = irish  # Presbyterians and Methodists
@@ -455,18 +414,7 @@
 	s:STATE_LEINSTER = {
 		region_state:IRE = {
 			### Officers
-			create_pop = {
-				culture = british # Anglicans
-				pop_type = officers
-				size = 4500
-			}
-
-			### Soldiers
-			create_pop = {
-				culture = british # Anglicans
-				pop_type = soldiers
-				size = 26000
-			}
+			
 			create_pop = {
 				culture = irish  # Catholics
 				pop_type = soldiers
@@ -477,10 +425,6 @@
 			create_pop = {
 				culture = irish # Catholics
 				size = 1647581
-			}
-			create_pop = {
-				culture = british # Anglicans
-				size = 130489
 			}
 			create_pop = {
 				culture = irish # Anglicans
@@ -501,28 +445,29 @@
 				size = 8007
 			}
 			create_pop = {
-				culture = british
-				religion = jewish
-				size = 237
+				culture = irish
+				size = 4400
+			}
+			create_pop = {
+				culture = irish
+				size = 28400
+			}
+			create_pop = {
+				culture = irish
+				size = 80700
+			}
+			create_pop = {
+				culture = irish
+				size = 16000
+			}
+			create_pop = {
+				culture = irish
+				size = 12000
 			}
 		}
 	}
 	s:STATE_CONNAUGHT = {
 		region_state:IRE = {
-
-			### Officers
-			create_pop = {
-				culture = british # Anglicans
-				pop_type = officers
-				size = 700
-			}
-
-			### Soldiers
-			create_pop = {
-				culture = british # Anglicans
-				pop_type = soldiers
-				size = 6000
-			}
 			create_pop = {
 				culture = irish  # Catholics
 				pop_type = soldiers
@@ -535,17 +480,9 @@
 				size = 1312428
 			}
 			create_pop = {
-				culture = british # Anglicans
-				size = 21763
-			}
-			create_pop = {
 				culture = irish # Anglicans
 				religion = protestant
 				size = 33413
-			}
-			create_pop = {
-				culture = british  # Presbyterians and Methodists
-				size = 4007
 			}
 			create_pop = {
 				culture = irish  # Presbyterians and Methodists
