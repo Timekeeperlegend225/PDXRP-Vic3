@@ -2297,7 +2297,7 @@ PON = { # Pontianak
 	}
 }
 
-POR = {
+BRZ = {
 	dynamic_country_name = {
 		name = dyn_c_united_kingdom
 		adjective = dyn_c_united_kingdom_adj
@@ -2311,7 +2311,7 @@ POR = {
 				owns_entire_state_region = STATE_RIO_DE_JANEIRO
 				owns_entire_state_region = STATE_SAO_PAULO
 			}
-			NOT = { exists = c:BRZ }
+			NOT = { exists = c:POR }
 		}
 	}
 }
