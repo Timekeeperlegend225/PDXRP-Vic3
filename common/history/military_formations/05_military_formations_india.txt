@@ -110,73 +110,6 @@
 	c:BIC ?= {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_bombay
-			name = Bombay_Army
-
-			# Infantry
-			combat_unit = { # European Regiments
-				type = unit_type:combat_unit_type_skirmish_infantry
-				state_region = s:STATE_BOMBAY
-				count = 3
-			}
-			combat_unit = { # Bombay Native Infantry
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_BOMBAY
-				count = 10
-			}
-			combat_unit = { # Bombay Native Infantry
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_GUJARAT
-				count = 9
-			}
-			combat_unit = { # Bombay Native Infantry
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_BOMBAY
-				count = 5
-			}
-			combat_unit = { # Bombay Native Infantry
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_BOMBAY
-				count = 5
-			}
-			# Cavalry
-			combat_unit = { # Bombay Light Cavalry
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_BOMBAY
-				count = 2
-			}
-			combat_unit = { # Bombay Light Cavalry
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_GUJARAT
-				count = 1
-			}
-			# Artillery
-			combat_unit = { # European Artillery
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_BOMBAY
-				count = 2
-			}
-			combat_unit = { # Bombay Native Artillery
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_BOMBAY
-				count = 2
-			}
-			save_scope_as = bombay_army
-		}
-
-		create_character = {
-			template = BIC_john_keane
-			save_scope_as = keane_gen
-		}
-
-		scope:keane_gen = {
-			transfer_to_formation = scope:bombay_army
-		}
-
-		
-
-		create_military_formation = {
-			type = army
 			hq_region = sr:region_bengal
 			name = Bengal_Army
 
@@ -1492,6 +1425,85 @@
 
 		scope:maitland_gen = {
 			transfer_to_formation = scope:madras_army
+		}
+	}
+
+	c:CDI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_bombay
+			name = Bombay_Army
+
+			# Infantry
+			combat_unit = { # European Regiments
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_BOMBAY
+				count = 3
+			}
+			combat_unit = { # Bombay Native Infantry
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BOMBAY
+				count = 11
+			}
+			combat_unit = { # Bombay Native Infantry
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GUJARAT
+				count = 9
+			}
+			combat_unit = { # Bombay Native Infantry
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BOMBAY
+				count = 5
+			}
+			combat_unit = { # Bombay Native Infantry
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BOMBAY
+				count = 5
+			}
+			# Cavalry
+			combat_unit = { # Bombay Light Cavalry
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_BOMBAY
+				count = 2
+			}
+			combat_unit = { # Bombay Light Cavalry
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_GUJARAT
+				count = 1
+			}
+			# Artillery
+			combat_unit = { # European Artillery
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_BOMBAY
+				count = 2
+			}
+			combat_unit = { # Bombay Native Artillery
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_BOMBAY
+				count = 2
+			}
+			save_scope_as = bombay_army
+		}
+
+		create_character = {
+			template = BIC_john_keane
+			save_scope_as = keane_gen
+		}
+
+		scope:keane_gen = {
+			transfer_to_formation = scope:bombay_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_bombay
+			name = Indian_Navy
+
+			combat_unit = { # Nothing the size of a frigate
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_BOMBAY
+				count = 1
+			}
 		}
 	}
 }

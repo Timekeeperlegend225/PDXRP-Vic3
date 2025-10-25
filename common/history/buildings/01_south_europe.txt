@@ -2881,7 +2881,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_professional_bureaucrats" "pm_religious_bureaucrats" "pm_horizontal_drawer_cabinets" }
+				activate_production_methods={ "pm_professional_bureaucrats" "pm_religious_bureaucrats" "pm_vertical_filing_cabinets" }
 			}
 			create_building={
 				building="building_textile_mills"
@@ -2897,6 +2897,12 @@
 						country="c:BRZ"
 						levels=2
 						region="STATE_BEIRA"
+					}
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=2
+						region="STATE_ESTREMADURA"
 					}
 				}
 				reserves=1
@@ -2918,6 +2924,12 @@
 				add_ownership={
 					building={
 						type="building_furniture_manufacturies"
+						country="c:BRZ"
+						levels=2
+						region="STATE_BEIRA"
+					}
+					building={
+						type="building_financial_district"
 						country="c:BRZ"
 						levels=2
 						region="STATE_BEIRA"
@@ -2945,12 +2957,12 @@
 					building={
 						type="building_manor_house"
 						country="c:BRZ"
-						levels=3
+						levels=12
 						region="STATE_BEIRA"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled"  }
+				activate_production_methods={ "pm_soil_enriching_farming" "pm_citrus_orchards" "pm_tools_disabled"  }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -2958,7 +2970,7 @@
 					building={
 						type="building_manor_house"
 						country="c:BRZ"
-						levels=2
+						levels=5
 						region="STATE_BEIRA"
 					}
 				}
@@ -2976,7 +2988,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_sheep_farms"  "pm_standard_fences" "pm_unrefrigerated" "pm_slaughterhouses"  }
+				activate_production_methods={ "pm_sheep_farms" "pm_standard_fences" "pm_unrefrigerated" "pm_slaughterhouses"  }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -3018,7 +3030,7 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
@@ -3037,6 +3049,57 @@
 				}
 				reserves=1
 			}
+			create_building={
+				building="building_food_industry"
+				add_ownership={
+					building={
+						type="building_food_industry"
+						country="c:BRZ"
+						levels=1
+						region="STATE_BEIRA"
+					}
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=1
+						region="STATE_ESTREMADURA"
+					}
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=1
+						region="STATE_BEIRA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_pot_stills" "pm_disabled_canning" "pm_sweeteners" "pm_manual_dough_processing"  }
+			}
+			create_building={
+				building="building_glassworks"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=1
+						region="STATE_BEIRA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_leaded_glass"  "pm_manual_glassblowing" "pm_ceramics" }
+			}
+			create_building={
+				building="building_paper_mills"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=1
+						region="STATE_ESTREMADURA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled"  }
+			}
 		}
 	}
 	s:STATE_ESTREMADURA={
@@ -3046,11 +3109,11 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=4
+						levels=5
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
+				activate_production_methods={ "pm_vertical_filing_cabinets" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
 			}
 			create_building={
 				building="building_trade_center"
@@ -3076,7 +3139,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_lathe" "pm_no_luxuries" "pm_automation_disabled"  }
+				activate_production_methods={ "pm_lathe" "pm_luxury_furniture" "pm_automation_disabled"  }
 			}
 			create_building={
 				building="building_tooling_workshops"
@@ -3084,7 +3147,7 @@
 					building={
 						type="building_tooling_workshops"
 						country="c:BRZ"
-						levels=2
+						levels=3
 						region="STATE_ESTREMADURA"
 					}
 				}
@@ -3096,7 +3159,7 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
@@ -3113,7 +3176,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_dye_workshops" "pm_traditional_looms" "pm_no_luxury_clothes"  }
+				activate_production_methods={ "pm_dye_workshops" "pm_traditional_looms" "pm_craftsman_sewing"  }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -3145,7 +3208,7 @@
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=3
 						region="STATE_ESTREMADURA"
 					}
 				}
@@ -3171,12 +3234,12 @@
 					building={
 						type="building_manor_house"
 						country="c:BRZ"
-						levels=2
+						levels=5
 						region="STATE_ESTREMADURA"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled"  }
+				activate_production_methods={ "pm_soil_enriching_farming" "pm_citrus_orchards" "pm_tools_disabled"  }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -3224,9 +3287,15 @@
 						levels=2
 						region="STATE_ESTREMADURA"
 					}
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=7
+						region="STATE_ESTREMADURA"
+					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_pot_stills" "pm_disabled_canning" "pm_sweeteners" "pm_manual_dough_processing"  }
+				activate_production_methods={ "pm_disabled_distillery" "pm_disabled_canning" "pm_sweeteners" "pm_manual_dough_processing"  }
 			}
 			create_building={
 				building="building_arts_academy"
@@ -3257,11 +3326,72 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=1
+						levels=3
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages"  }
+			}
+			create_building={
+				building="building_artillery_foundries"
+				add_ownership={
+					country={
+						country="c:BRZ"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_cannons" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_munition_plants"
+				add_ownership={
+					country={
+						country="c:BRZ"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_percussion_caps" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_motor_industry"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=1
+						region="STATE_ESTREMADURA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled"  }
+			}
+			create_building={
+				building="building_explosives_factory"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=1
+						region="STATE_ESTREMADURA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_leblanc_process"  }
+			}
+			create_building={
+				building="building_paper_mills"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=2
+						region="STATE_ESTREMADURA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled"  }
 			}
 		}
 	}
@@ -3313,6 +3443,12 @@
 						levels=5
 						region="STATE_ALENTEJO"
 					}
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=2
+						region="STATE_ESTREMADURA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
@@ -3326,6 +3462,18 @@
 						levels=2
 						region="STATE_ALENTEJO"
 					}
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=3
+						region="STATE_ALENTEJO"
+					}
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=7
+						region="STATE_ESTREMADURA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
@@ -3338,6 +3486,12 @@
 						country="c:BRZ"
 						levels=1
 						region="STATE_ALENTEJO"
+					}
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=1
+						region="STATE_ESTREMADURA"
 					}
 				}
 				reserves=1
@@ -3378,6 +3532,12 @@
 						levels=1
 						region="STATE_ALENTEJO"
 					}
+					building={
+						type="building_financial_district"
+						country="c:BRZ"
+						levels=1
+						region="STATE_ESTREMADURA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
@@ -3387,11 +3547,35 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=1
+						levels=2
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages"  }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:BRZ"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+				add_ownership={
+					building={
+						type="building_tooling_workshops"
+						country="c:BRZ"
+						levels=1
+						region="STATE_ESTREMADURA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_steel" "pm_automation_disabled"  }
 			}
 		}
 	}

@@ -849,6 +849,28 @@
 			}
 		}
 	}
+
+	create_treaty = {
+		first_country = c:FRA
+		second_country = c:MYS
+
+		is_draft = no
+		entered_into_force_on = 1831.8.8 # Date of French intervention during the Ten Days' Campaign
+		binding_period = { years = 15 } # 10 years Treaty of London
+
+		articles_to_create = {
+			{ # French Guarantee of Belgian Independence
+				article = guarantee_independence
+				source_country = c:FRA
+				target_country = c:MYS
+			}
+			{ # Austrian-Sicilian Trade Agreement
+				article = trade_privilege
+				source_country = c:MYS
+				target_country = c:FRA
+			}
+		}
+	}
 	
 	#######################################################
 	# 			Anti-Cheese Treaties of 1836			  #
