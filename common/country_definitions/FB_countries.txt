@@ -18,6 +18,6 @@ CDI = {
 	tier = principality
 	social_hierarchy = british_indian_caste_system
 
-	cultures = { brazilian portuguese }
+	cultures = { portuguese brazilian }
 	capital = STATE_BOMBAY
 }
