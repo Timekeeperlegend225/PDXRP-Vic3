@@ -4181,4 +4181,34 @@
 			production_method = pm_general_training
 		}
 	}
+	
+	c:MLT ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_italy
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MALTA
+				count = 7
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_MALTA
+				count = 3
+			}
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_italy
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_MALTA
+				count = 10
+			}
+		}
+	}
 }

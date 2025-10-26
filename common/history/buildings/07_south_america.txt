@@ -3191,7 +3191,7 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=1
+						levels=3
 					}
 				}
 				reserves=1
@@ -3204,7 +3204,7 @@
 					building={
 						type="building_trade_center"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -3286,7 +3286,7 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=1
+						levels=5
 					}
 				}
 				reserves=1

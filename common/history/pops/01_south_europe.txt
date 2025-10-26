@@ -41,7 +41,15 @@
 		region_state:MLT = {
 			create_pop = {
 				culture = maltese
-				size = 117192
+				size = 200000
+			}
+			create_pop = {
+				culture = south_italian
+				size = 25000
+			}
+			create_pop = {
+				culture = french
+				size = 25000
 			}
 		}
 	}

@@ -391,12 +391,42 @@
 	s:STATE_MALTA={
 		region_state:MLT={
 			create_building={
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_trade_center"
+						country="c:SIC"
+						levels=1
+						region="STATE_MALTA"
+					}	
+					country={
+						country="c:MLT"
+						levels=3
+					}				
+				}
+				reserves=1
+			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:MLT"
+						levels=1
+						region="STATE_MALTA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary"  "pm_tools_disabled" }
+			}
+			create_building={
 				building="building_fishing_wharf"
 				add_ownership={
 					building={
 						type="building_fishing_wharf"
 						country="c:MLT"
-						levels=1
+						levels=3
 						region="STATE_MALTA"
 					}
 				}
@@ -414,7 +444,33 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:MLT"
+						levels=1
+						region="STATE_MALTA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
 		}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:MLT"
+						levels=1
+						region="STATE_MALTA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts"  }
+			}
 	}
 	s:STATE_UMBRIA={
 		region_state:PAP={
@@ -531,7 +587,8 @@
 					}					
 				}
 				reserves=1
-			}			create_building={
+			}
+			create_building={
 				building="building_trade_center"
 				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
 				add_ownership={
@@ -2877,7 +2934,7 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=2
+						levels=5
 					}
 				}
 				reserves=1
@@ -3019,7 +3076,7 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=1
+						levels=3
 					}
 				}
 				reserves=1
@@ -3043,7 +3100,7 @@
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=5
+						levels=7
 						region="STATE_BEIRA"
 					}
 				}
@@ -3061,13 +3118,7 @@
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
-						region="STATE_ESTREMADURA"
-					}
-					building={
-						type="building_financial_district"
-						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_BEIRA"
 					}
 				}
@@ -3094,7 +3145,7 @@
 						type="building_financial_district"
 						country="c:BRZ"
 						levels=1
-						region="STATE_ESTREMADURA"
+						region="STATE_BEIRA"
 					}
 				}
 				reserves=1
@@ -3558,7 +3609,7 @@
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=1
+						levels=3
 					}
 				}
 				reserves=1
