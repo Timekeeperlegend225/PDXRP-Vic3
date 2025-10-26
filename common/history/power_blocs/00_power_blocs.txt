@@ -144,4 +144,26 @@
 			}
 		}
 	}
-}
+	c:IRE = {
+		create_power_bloc = {
+			name = Celtic_Coalition
+			
+			map_color = { 21 82 28 }
+			
+			founding_date = 1830.3.17
+			identity = identity_military_treaty_organization
+			principle = principle_defensive_cooperation_1
+			
+			member = c:SCO
+			member = c:WLS
+			member = c:IDI
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_food_standardization_1
+			}
+		}
+	}
