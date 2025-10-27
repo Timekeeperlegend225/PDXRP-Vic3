@@ -63,7 +63,7 @@
 					limit = { "scope:t.gdp_ownership_ratio(prev)" > 0 }
 					set_variable = {
 						name = other_gdp_ownership_var
-						value = "this.gdp_ownership_ratio(this)"
+						value = "this.gdp_ownership_ratio(prev)"
 					}
 					change_variable = {
 						name = other_gdp_ownership_var

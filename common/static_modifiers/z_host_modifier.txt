@@ -410,7 +410,6 @@ gm_army_debuff = {
 
 started_player = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_construction_add = 10
 }
 
 GM_target = {

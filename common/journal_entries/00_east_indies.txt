@@ -86,19 +86,63 @@
     }
 
 	fail = {
-		OR = {
-			NOT = {
-				exists = c:GBR
-			}
-			trigger_if = {
-				limit = {
+		AND = {
+			OR = {
+				NOT = {
 					exists = c:GBR
 				}
-				NOT = {
-					is_subject_of = c:GBR
+				trigger_if = {
+					limit = {
+						exists = c:GBR
+					}
+					NOT = {
+						is_subject_of = c:GBR
+					}
 				}
+				is_subject_type = subject_type_colony
 			}
-			is_subject_type = subject_type_colony
+			OR = {
+				NOT = {
+					exists = c:IRE
+				}
+				trigger_if = {
+					limit = {
+						exists = c:IRE
+					}
+					NOT = {
+						is_subject_of = c:IRE
+					}
+				}
+				is_subject_type = subject_type_colony
+			}
+			OR = {
+				NOT = {
+					exists = c:BRZ
+				}
+				trigger_if = {
+					limit = {
+						exists = c:BRZ
+					}
+					NOT = {
+						is_subject_of = c:BRZ
+					}
+				}
+				is_subject_type = subject_type_colony
+			}
+			OR = {
+				NOT = {
+					exists = c:POR
+				}
+				trigger_if = {
+					limit = {
+						exists = c:POR
+					}
+					NOT = {
+						is_subject_of = c:POR
+					}
+				}
+				is_subject_type = subject_type_colony
+			}
 		}
 	}
 
