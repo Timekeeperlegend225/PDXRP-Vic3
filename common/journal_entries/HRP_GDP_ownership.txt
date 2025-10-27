@@ -32,13 +32,31 @@
 				name = self_gdp_ownership_var
 				value = "this.gdp_ownership_ratio(this)"
 			}
+			set_global_variable = {
+				name = overlord_gdp_ownership_sum_var
+				value = 0
+			}
+			every_overlord_or_above = {
+				save_temporary_scope_as = t
+				if = {
+					limit = { "prev.gdp_ownership_ratio(scope:t)" > 0 }
+					change_global_variable = {
+						name = overlord_gdp_ownership_sum_var
+						add = "prev.gdp_ownership_ratio(scope:t)"
+					}
+				}
+			}
+			change_global_variable = {
+				name = overlord_gdp_ownership_sum_var
+				divide = 2
+			}
 			set_variable = {
 				name = self_gdp_ownership_modifier_temp
 				value = 1
 			}
 			change_variable = {
-				name = self_gdp_ownership_modifier_temp
-				subtract = 0.25
+				name = self_gdp_ownership_var
+				add = global_var:overlord_gdp_ownership_sum_var
 			}
 			change_variable = {
 				name = self_gdp_ownership_modifier_temp
@@ -46,7 +64,7 @@
 			}
 			change_variable = {
 				name = self_gdp_ownership_modifier_temp
-				multiply = 1.33333
+				subtract = 0.25
 			}
 			change_variable = {
 				name = self_gdp_ownership_modifier_temp
@@ -63,7 +81,7 @@
 					limit = { "scope:t.gdp_ownership_ratio(prev)" > 0 }
 					set_variable = {
 						name = other_gdp_ownership_var
-						value = "this.gdp_ownership_ratio(prev)"
+						value = "scope:t.gdp_ownership_ratio(prev)"
 					}
 					change_variable = {
 						name = other_gdp_ownership_var
