@@ -1,0 +1,30 @@
+﻿l_english:
+building_charcoal_burner:0 "Charcoal Plant"
+building_charocal_burner_option:0 "Expand $building_charcoal_burner$"
+
+pmg_base_building_charcoal_burner:0 "Base"
+pm_charcoal_kiln_building_charcoal_burner:0 "Charcoal Kiln"
+pm_combustion_chamber_building_charcoal_burner:0 "Combustion Chamber"
+pm_machine_coal_building_charcoal_burner:0 "Machine Coal"
+
+pmg_refining_building_charcoal_burner:0 "Processing"
+pm_refining_disabled_building_charcoal_burner:0 "Processing Disabled"
+pm_dust_separation_building_charcoal_burner:0 "Dust Separation"
+pm_chemical_refining_building_charcoal_burner:0 "Chemical Processing"
+pm_environmental_refining_building_charcoal_burner:0 "Exological Processing"
+
+pmg_automation_building_charcoal_burner:0 "Automation"
+pm_automation_hand_assembly_building_charcoal_burner:0 "Manual Loading "
+pm_assembly_lines_building_charcoal_burner:0 "Conveyors"
+
+pmg_transportation_building_charcoal_burner:0 "Transportation"
+pm_road_carts_building_charcoal_burner:0 "Road Carts"
+pm_rail_transport_building_charcoal_burner:0 "Rail Transportation"
+pm_rail_bulk_freight_wagon_building_charcoal_burner:0 "Rail Bulk Freight Wagon"
+
+pmg_ownership_capital_building_charcoal_burner:0 "Ownership"
+pm_merchant_guilds_building_charcoal_burner:0 "Merchant Guilds"
+pm_privately_owned_building_charcoal_burner:0 "Privately Owned"
+pm_publicly_traded_building_charcoal_burner:0 "Publicly Traded"
+pm_government_run_building_charcoal_burner:0 "Government Run"
+pm_worker_cooperative_building_charcoal_burner:0 "Worker Cooperative"

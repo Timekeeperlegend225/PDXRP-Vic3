@@ -1,0 +1,5 @@
+﻿l_english:
+ je_HRP_heathen_tax:0 "Heathen Tax"
+ je_HRP_heathen_tax_reason:0 "Since the Heathen tax is still broken in the base game, this journal give you its income" 
+ 
+ HRP_heathen_tax_income:0 "Heathen tax income"

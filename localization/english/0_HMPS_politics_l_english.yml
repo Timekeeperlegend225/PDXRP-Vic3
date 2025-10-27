@@ -1,0 +1,40 @@
+﻿l_english:
+  
+ # Country Names
+ dyn_c_british_united_kingdom:0 "United Kingdom"
+ dyn_c_british_empire:0 "British Empire"
+ dyn_c_british_socialist_republic:0 "Union of Britain"
+ 
+ dyn_c_carlis_spain_revolt:0 "Carlist Spain"
+ 
+ dyn_c_french_kingdom:0 "Kingdom of France"
+ dyn_c_french_empire:0 "French Empire"
+ dyn_c_french_republic:0 "French Republic"
+ dyn_c_french_state:0 "French State"
+ dyn_c_french_commune:0 "French Commune"
+ 
+ dyn_c_austrian_empire:0 "Austrian Empire"
+ 
+ dyn_c_russian_empire:0 "Russian Empire"
+ dyn_c_russian_republic:0 "Russian Federation"
+ 
+ dyn_c_spanish_kingdom:0 "Kingdom of Spain"
+ dyn_c_spanish_republic:0 "Spanish Republic"
+ dyn_c_spanish_state:0 "Spanish State"
+ dyn_c_spanish_commune:0 "United Spanish Socialist Republics"
+ 
+ dyn_c_ottoman_caliphate:0 "Ottoman Caliphate"
+ dyn_c_ottoman_porte:0 "The Sublime Porte"
+ dyn_c_turkish_socialist_republic:0 "Anatolian People's Socialist Republic"
+ 
+ dyn_c_american_union_state:0 "Union State of America"
+ 
+ dyn_c_brazilian_empire:0 "Empire of Brazil"
+ 
+ dyn_c_united_baltic_states:0 "Baltic Governorate"
+ dyn_c_united_baltic_states_adj:0 "Baltic"
+ 
+ #Decrees
+ decree_host_scope:0 "GM Scope"
+ decree_host_scope_desc:0 "This decree signals to the GM decision where to make an effect (such as where to build a university)."
+ 

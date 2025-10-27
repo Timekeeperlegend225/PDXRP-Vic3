@@ -1,0 +1,180 @@
+﻿l_english:
+ TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION: "Available when your [concept_power_bloc_rank] is #v ##5#! or better"
+ TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION: "Available when your [concept_power_bloc_rank] is #v ##3#! or better and you have at least #v 5#! [Concept('concept_power_bloc_member', '$concept_power_bloc_members_short$')]"
+ 
+
+ Pleass_dont_coup:0 "Please don't coup"
+ popular_poetry_modifier:0 "Popular Poetry"
+ booming_press_industry_modifier:0 "Booming Press Industry"
+ good_impression_at_the_bal_modifier:0 "Good Impression at the Bal"
+ slaver_assets_seized_modifier:0 "Slaver Assets Seized"
+ military_subventions_modifier:0 "Millitary Subvention"
+ charter_of_commerce_modifier:0 "Charter of Commerce"
+ rampant_corruption_modifier:0 "Rampant Corruption"
+ exotic_loot_modifier:0 "Exotic Loot"
+ luxurious_glassware_modifier:0 "Luxurious Glassware"
+ abolitionist_literature_modifier:0 "Abolitionist Literature"
+ unpopular_alliance_modifier:0 "Unpopular Alliance"
+ missed_coup_modifier:0 "Missed Coup"
+ alaskan_migration_attraction:0 "Alaskan Migration"
+ incan_bridge_destroyed:0 "Incan Bridge Destroyed"
+ the_jailor_king:0 "The Jailor-king"
+ bastion_of_the_old_order:0 "Bastion of the Old Older"
+ boer_racism:0  "Boer Hatred"
+ british_stock_exchange_boom:0 "London Stock Exchange Boom"
+ napoleon_election_victory:0 "Bonaparte's Return"
+ oriental_catholic:0 "Oriental Catholic"
+ golden_colt_modifier:0 "A Golden Colt"
+ resistance_to_napoleon_modifier:0 "Resistance To Napoleon"
+slaver_momentum_modifier:0 "Slaver Momentum"
+young_italy_resistance_modifier:0 "Young Italy Resistance"
+anti_french_resistance_modifier:0 "Anti French Resistance"
+spanish_healthcare_modifier:0 "Spanish Healthcare"
+paraguay_resistance_modifier:0 "Paraguay Resistance"
+religious_tourism_modifier:0 "Religious Tourism"
+uk_miggration_attraction_modifier:0 "British Migration Campaign"
+uk_miggration_push_modifier:0 "Get Out"
+australia_miggration_attraction_modifier:0 "Australian Migration Campaign"
+arre_greater_success:0 "Strong National Indentity!"
+arre_over_success:0 "Strong National Indentity"
+arre_weak_success:0 "Weak National Indentity"
+arre_some_success:0 "Indentity?"
+brazil_soc_spread:0 "Brazilian Knowledge"
+morocco_lib_modifier:0 "Moroccan Anger"
+unhappy_canada_modifier:0 "Unhappy Canada"
+centralizing_india_modifier:0 "Centralizing India"
+anti_famine_mesure_modifier:0 "Anti Famine Measure"
+not_helping_modifier:0 "Not Helping"
+in_the_end_the_italian_are_not_so_bad_modifier:0 "Like the Italian in the end"
+norwegian_lutherianism_modifier:0 "Norwegian Lutherianism"
+baltic_lutherianism_modifier:0 "Baltic Lutherianism"
+we_are_jacsonian_modifier:0 "We Are Jacksonian"
+SA_more_assimilation_modifier:0 "Assimilate!"
+IDF_strike_modifier:0 "Strike"
+SPA_counterstrike_modifier:0 "Spanish Strikes"
+bolivian_rail_modifier:0 "Bolivian Rail"
+transvaal_mass_migration_modifier:0 "Migration Campaign"
+korea_farmer_clout_modifier:0 "Korea Farmer Clout"
+japan_radicals_modifier:0 "Radical Activism"
+tamed_modifier:0 "Tamed"
+movement_attraction_10:0 "Movement Attraction"
+movement_radicalism_10_attraction_25:0 "Radicalism and Attraction Surge"
+ottoman_angry_landowners_modifier:0 "Angry Ottoman Landowners"
+movement_attraction_15:0 "Movement Attraction"
+pbc_migration_modifier:0 "Migration Incentives"
+pbc_cash_for_migration_modifier:0 "Cash for Migration"
+prestige_20_modifier:0 "Prestige"
+pope_angry_5_modifier:0 "Papal Displeasure"
+pope_angry_8_modifier:0 "Papal Anger"
+aus_ationalist_turmoil_modifier:0 "Austrian Nationalist Turmoil"
+unprotected_hawai_modifier:0 "Unprotected Hawaii"
+carlist_sympathies_modifier:0 "Carlist Sympathies"
+carlist_outrage_modifier:0 "Carlist Outrage"
+dominion_of_eden_modifier:0 "Dominion of Eden"
+chile_home_affair_modifier:0 "Chilean Home Affairs"
+liberian_colonies_modifier:0 "Liberian Colonies"
+not_assimilating_outremer_modifier:0 "Outremer already speak French"
+eugenist_defector_modifier:0 "Eugenist Defector"
+agitating_eugenist_modifier:0 "Agitating Eugenist"
+capitalist_banned_to_india_modifier:0 "Capitalists Banished to India"
+victorian_monarchy_modifier:0 "Victorian Monarchy"
+suffrage_compromise_modifier:0 "Suffrage Compromise"
+exiled_capitalists_modifier:0 "Exiled Capitalists"
+brazilian_migration_attraction_modifier:0 "Brazilian Migration Drive"
+french_failure_modifier:0 "French Fiasco"
+ethiopia_science_modifer:0 "Ethiopian Scientific Progress"
+prestige_50_modifier:0 "Prestige"
+
+
+ 
+ bolivian: "Confederal"
+ colombian: "Gran Colombian"
+ 
+  RULER_TITLE_SUPREME_PROTECTOR: "Supreme Protector"
+  gov_technate_presidential: "Technocratic Dictatorship"
+  completed_pan_national_project_tt: "We have successfully completed any of the #bold Gran Colombia#!, or #bold Bolivar's Ambition#! [Concept('concept_journal_entry', '$concept_journal_entries$')]"
+  
+  
+   missionaries_enough_time_tt: "[GetReligion('oriental_catholic').GetName] missionaries have been active in our country for at least #bold several years#!"
+
+  modifier_taiping_hiring_bonus: "Rebelling Armies"
+
+  CHI_missionaries.1.t: "Missionary Activity in [SCOPE.sState('evangelisation_state').GetName]"
+  CHI_missionaries.1.d: "[GetReligion('oriental_catholic').GetName] missionary activity in [SCOPE.sState('evangelisation_state').GetName] has begun to find new ears, as foreigners exercise their rights to access the region."
+  CHI_missionaries.1.f: "A deacon by any measure, given how ill-carved his rosary sat around his neck. Still, it was one made by his own hand and his pride and joy on many adventures. He gripped it tightly as he stepped onto the paths of [SCOPE.sState('evangelisation_state').GetNameNoFormatting]. God willing, he thought, even one receptive ear would be a welcome addition to Jesus' flock."
+  CHI_missionaries.1.a: "Voices from a distant world."
+  CHI_missionaries.1.b: "They should leave their preaching with their opium."
+
+  CHI_missionaries.2.t: "Border Violation in [SCOPE.sState('forbidden_state').GetName]"
+  CHI_missionaries.2.d: "A group of [GetReligion('oriental_catholic').GetName] missionaries hailing from [SCOPE.sCountry('missionary_country').GetName] have been caught several miles past the border of [SCOPE.sState('forbidden_state').GetName] province, which foreigners are forbidden to access."
+  CHI_missionaries.2.f: ""That's the thirteenth one we've caught in as many weeks. This one is the first [SCOPE.sCountry('missionary_country').GetAdjectiveNoFormatting] that's come for a while."\n\n"Wait... look at these papers. This one's protected. What can we do?"\n\n"Does it matter? Just a lost Christian who cannot read. Our law applies; his does not.""
+  CHI_missionaries.2.a: "Bring them to the border, and have them executed."
+  CHI_missionaries.2.b: "Enforce the Sixth Clause of our law against superstition."
+  CHI_missionaries.2.c: "Open the province to limited travel."
+
+  deport_to_central_asia_tt: "The missionaries will deported to [SCOPE.sState('deportation_state').GetName] to serve as slaves"
+
+  CHI_missionaries.3.t: "The [SCOPE.sState('missionary_schools_state').GetName] Missionary School"
+  CHI_missionaries.3.d: "[GetReligion('oriental_catholic').GetName] missionaries have opened several charity schools in [SCOPE.sState('missionary_schools_state').GetName], offering education in Western religious and scientific practice."
+  CHI_missionaries.3.f: ""St. Jude's, I'll call it. If no other shall answer prayers in the Orient, then let it reach the one who will search this far for prayers."\n\n"And this Saint Jude? Who is he? I thought he was the one who betrayed your Jesus."\n\n"No, the other Jude. But he is known to aid desperate causes. And this school, against all odds, stands all the same.""
+  CHI_missionaries.3.a: "They are welcome to operate in the region."
+  CHI_missionaries.3.b: "Forbid our citizens from attending."
+
+  CHI_missionaries.4.t: "Missionary Hospital Opens in [SCOPE.sState('missionary_hospitals_state').GetCityHubName]"
+  CHI_missionaries.4.d: "[GetReligion('oriental_catholic').GetName] missionaries have opened a charity hospital in [SCOPE.sState('missionary_hospitals_state').GetCityHubName], spreading their gospel whilst offering free treatment to the sick and wounded."
+  CHI_missionaries.4.f: "#bold God Welcomes All to His House of Healing! #!\n\nNew hospital in [SCOPE.sState('missionary_hospitals_state').GetNameNoFormatting] for those most in need. Jesus welcomes all.\n\n#italic And he called to him his twelve disciples and gave them authority over unclean spirits, to cast them out, and to heal every disease and every affliction. (Matthew 10:1) #!"
+  CHI_missionaries.4.a: "They are welcome to operate in the region."
+  CHI_missionaries.4.b: "Halt this unauthorized construction."
+  
+  
+ JAC:0 "Jacobin France"
+ JAC_ADJ:0 "Jacobin"
+ 
+ ideology_edenist:0 "Edenist"
+ ideology_edenist_desc:0 "Edenism is an ideology that combines aspects of German utopianism, christian piety, and reactionary anti-industrialism to try and rebuild the biblical Garden of Eden on Earth."
+ 
+ ideology_bonapartist:0 "Old Bonapartist"
+ ideology_neo_bonapartist:0 "Neo Bonapartist"
+ 
+ ideology_eugenist:0 "Eugenist"
+ ideology_eugenist_desc:0 "This character believe in an society were everyone is evaluated by its potential to improve the future of humankind"
+ 
+ ideology_victorian_idealist:0 "Victorian Idealist"
+ ideology_victorian_idealist_desc:0 "Victoria believes in a hierarchy in which the government takes care of their subjects as long as they understand their place in society.
+ 
+ 
+ building_statue_of_liberty:0 "Statue of Justice"
+ pm_default_building_statue_of_liberty:0 "Statue of Justice"
+ 
+ 
+ decree_promote_national_values_SA:0 "Promote National Values"
+ decree_promote_national_values_SA_desc:0 "Increase cultural assimilation and religious conversion rates"
+ 
+ tuvan:0 "Franco-Japanese"
+ sara:0 "Outremer"
+ 
+ig_trait_heavenly_mission:0 "Heavenly Mission"
+ig_trait_heavenly_mission_desc:0 "Has there ever been a word so true and a mission as important as ours? Verily, we are the Light of the World and it is on us to enlighten those who are blind."
+
+yeeehaw_modifier:0 "Go West, Young Man"
+
+
+ PAT:0 "Patagonia"
+ PAT_ADJ:0 "Patagonian"
+ 
+ LIB:0 "United States of Africa"
+ LIB_ADJ:0 "African"
+ 
+ 
+ country_institution_cost_institution_home_affairs_mult: "@bur![Nbsp][concept_bureaucracy] Cost of [GetInstitutionType('institution_home_affairs').GetName]"
+ country_institution_cost_institution_home_affairs_mult_desc: "An increase or reduction to the @bur![Nbsp][concept_bureaucracy] cost of bringing [GetInstitutionType('institution_home_affairs').GetName] to the citizens"
+ 
+ gov_kaiser:0 "Bundesreich"
+ gov_kaiser_desc:2 "A centralised confederation of German states, where the power is heavily relegated to democratic institutions, with the [Concept('concept_ruler','$RULER_TITLE_KAISER$')] or [Concept('concept_ruler','$RULER_TITLE_KAISERINE$')] of Austria serving as a ceremonial Head of State..\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ 
+ 
+ RULER_TITLE_KAISER:0 "Kaiser"
+ RULER_TITLE_KAISERINE:0 "Kaiserin"
+ 
+ RULER_TITLE_VICEROY: "Director"
+ 
