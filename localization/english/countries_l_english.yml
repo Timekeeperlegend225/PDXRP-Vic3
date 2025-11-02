@@ -1655,11 +1655,3 @@
 
  dyn_c_illyria: "Illyria"
  dyn_c_illyria_adj: "Illyrian"
-
- IDI: "Irish Dominion of India"
- IDI_ADJ: "Irish Indian"
-
- CDI: "Company of India"
- CDI_ADJ: "Luso Indian"
- 
- dyn_c_maltaknights: "Sovereign Military Order of Malta"
