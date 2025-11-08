@@ -31,10 +31,7 @@
 			if = {
 				limit = {
 					owner = {
-						or = {
-							country_has_state_religion = rel:protestant
-							country_has_state_religion = rel:catholic
-						}
+						country_has_state_religion = rel:protestant
 						NOT = {
 							or = { 
 								c:BIC ?= this
