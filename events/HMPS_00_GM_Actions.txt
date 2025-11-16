@@ -143,15 +143,15 @@ gm_actions.1 = {
 		}
 	}
 	
-	#HRP
-	option = {
-		name = gm_actions.50.t
-		trigger_event = {
-			id = gm_actions.50
-			days = 0
-			popup = yes
-		}
-	}
+#	#HRP
+#	option = {
+#		name = gm_actions.50.t
+#		trigger_event = {
+#			id = gm_actions.50
+#			days = 0
+#			popup = yes
+#		}
+#	}
 	
 	#Laws
 	option = {
@@ -5035,10 +5035,10 @@ gm_actions.402 = {
 	}
 	
 	option = { 
-		name =ideology_eugenist
+		name =ideology_fascist
 		default_option = yes
 		scope:target_character = {
-			set_ideology = ideology:ideology_eugenist
+			set_ideology = ideology:ideology_fascist
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -5048,36 +5048,10 @@ gm_actions.402 = {
 	}
 	
 	option = { 
-		name =ideology_prozelyte_corporatist
+		name =ideology_integralist
 		default_option = yes
 		scope:target_character = {
-			set_ideology = ideology:ideology_prozelyte_corporatist
-		}
-		trigger_event = {
-			id = gm_actions.40
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = { 
-		name =ideology_national_syndicalist
-		default_option = yes
-		scope:target_character = {
-			set_ideology = ideology:ideology_national_syndicalist
-		}
-		trigger_event = {
-			id = gm_actions.40
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = { 
-		name =ideology_anti_western
-		default_option = yes
-		scope:target_character = {
-			set_ideology = ideology:ideology_anti_western
+			set_ideology = ideology:ideology_integralist
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -5512,6 +5486,19 @@ gm_actions.405 = {
 			popup = yes
 		}
 	}
+	
+	option = { 
+		name =ideology_humanitarian_royalist
+		default_option = yes
+		scope:target_character = {
+			set_ideology = ideology:ideology_humanitarian_royalist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 gm_actions.406 = {
@@ -5591,10 +5578,10 @@ gm_actions.406 = {
 	}
 	
 	option = { 
-		name =ideology_maximism
+		name =ideology_communist
 		default_option = yes
 		scope:target_character = {
-			set_ideology = ideology:ideology_maximism
+			set_ideology = ideology:ideology_communist
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -5604,10 +5591,10 @@ gm_actions.406 = {
 	}
 	
 	option = { 
-		name =ideology_làngist
+		name =ideology_vanguardist
 		default_option = yes
 		scope:target_character = {
-			set_ideology = ideology:ideology_làngist
+			set_ideology = ideology:ideology_vanguardist
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -5621,19 +5608,6 @@ gm_actions.406 = {
 		default_option = yes
 		scope:target_character = {
 			set_ideology = ideology:ideology_anarchist
-		}
-		trigger_event = {
-			id = gm_actions.40
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = { 
-		name =ideology_communalism
-		default_option = yes
-		scope:target_character = {
-			set_ideology = ideology:ideology_communalism
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -5672,19 +5646,6 @@ gm_actions.406 = {
 		default_option = yes
 		scope:target_character = {
 			set_ideology = ideology:ideology_modernizer_leader
-		}
-		trigger_event = {
-			id = gm_actions.40
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = { 
-		name =ideology_eugenist
-		default_option = yes
-		scope:target_character = {
-			set_ideology = ideology:ideology_eugenist
 		}
 		trigger_event = {
 			id = gm_actions.40
@@ -7472,122 +7433,6 @@ gm_actions.84 = {
 	}
 	
 	option = {
-		name = movement_eugenist
-		scope:recipient = {
-			if = {
-				limit = {
-					scope:recipient = {
-						NOT = {
-							any_political_movement = {
-								is_political_movement_type = movement_eugenist
-							}
-						}
-					}
-				}
-				create_political_movement = { type = movement_eugenist }
-			}
-			every_political_movement = {
-				limit = {
-					is_political_movement_type = movement_eugenist
-				}
-				save_scope_as = relevant_movement
-			}
-		}
-		trigger_event = {
-			id = gm_actions.830
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = movement_prozelyte_corportatist
-		scope:recipient = {
-			if = {
-				limit = {
-					scope:recipient = {
-						NOT = {
-							any_political_movement = {
-								is_political_movement_type = movement_prozelyte_corportatist
-							}
-						}
-					}
-				}
-				create_political_movement = { type = movement_prozelyte_corportatist }
-			}
-			every_political_movement = {
-				limit = {
-					is_political_movement_type = movement_prozelyte_corportatist
-				}
-				save_scope_as = relevant_movement
-			}
-		}
-		trigger_event = {
-			id = gm_actions.830
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = movement_national_syndicalist
-		scope:recipient = {
-			if = {
-				limit = {
-					scope:recipient = {
-						NOT = {
-							any_political_movement = {
-								is_political_movement_type = movement_national_syndicalist
-							}
-						}
-					}
-				}
-				create_political_movement = { type = movement_national_syndicalist }
-			}
-			every_political_movement = {
-				limit = {
-					is_political_movement_type = movement_national_syndicalist
-				}
-				save_scope_as = relevant_movement
-			}
-		}
-		trigger_event = {
-			id = gm_actions.830
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = movement_anti_western
-		scope:recipient = {
-			if = {
-				limit = {
-					scope:recipient = {
-						NOT = {
-							any_political_movement = {
-								is_political_movement_type = movement_anti_western
-							}
-						}
-					}
-				}
-				create_political_movement = { type = movement_anti_western }
-			}
-			every_political_movement = {
-				limit = {
-					is_political_movement_type = movement_anti_western
-				}
-				save_scope_as = relevant_movement
-			}
-		}
-		trigger_event = {
-			id = gm_actions.830
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
 		name = movement_corporatist
 		scope:recipient = {
 			if = {
@@ -8045,93 +7890,6 @@ gm_actions.86 = {
 			every_political_movement = {
 				limit = {
 					is_political_movement_type = movement_communist
-				}
-				save_scope_as = relevant_movement
-			}
-		}
-		trigger_event = {
-			id = gm_actions.830
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = movement_làngist
-		scope:recipient = {
-			if = {
-				limit = {
-					scope:recipient = {
-						NOT = {
-							any_political_movement = {
-								is_political_movement_type = movement_làngist
-							}
-						}
-					}
-				}
-				create_political_movement = { type = movement_làngist }
-			}
-			every_political_movement = {
-				limit = {
-					is_political_movement_type = movement_làngist
-				}
-				save_scope_as = relevant_movement
-			}
-		}
-		trigger_event = {
-			id = gm_actions.830
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = movement_communalist
-		scope:recipient = {
-			if = {
-				limit = {
-					scope:recipient = {
-						NOT = {
-							any_political_movement = {
-								is_political_movement_type = movement_communalist
-							}
-						}
-					}
-				}
-				create_political_movement = { type = movement_communalist }
-			}
-			every_political_movement = {
-				limit = {
-					is_political_movement_type = movement_communalist
-				}
-				save_scope_as = relevant_movement
-			}
-		}
-		trigger_event = {
-			id = gm_actions.830
-			days = 0
-			popup = yes
-		}
-	}
-	
-	option = {
-		name = movement_edenist_name
-		scope:recipient = {
-			if = {
-				limit = {
-					scope:recipient = {
-						NOT = {
-							any_political_movement = {
-								is_political_movement_type = movement_edenist_name
-							}
-						}
-					}
-				}
-				create_political_movement = { type = movement_edenist_name }
-			}
-			every_political_movement = {
-				limit = {
-					is_political_movement_type = movement_edenist_name
 				}
 				save_scope_as = relevant_movement
 			}
