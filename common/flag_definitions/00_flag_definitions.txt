@@ -11504,4 +11504,25 @@ IDI = {
 			}
 		}
 	}
+	
+	flag_definition = {
+		coa = IDI_german
+		allow_overlord_canton = no
+		priority = 100
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					is_subject_type = subject_type_chartered_company
+					is_subject_type = subject_type_colony
+					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_protectorate
+				}
+				AND = {
+					c:IDI ?= this
+					c:GER ?= this.overlord
+				}
+			}
+		}
+	}		
 }

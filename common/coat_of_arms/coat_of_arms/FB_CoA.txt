@@ -18,6 +18,16 @@ IDI_dominion = {
 	}
 }
 
+IDI_german = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+	
+	textured_emblem = {
+		texture = "IDI_German.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
 IDI_free = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"

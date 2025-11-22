@@ -4547,3 +4547,49 @@ MLT = {
 	}
 }
 
+IDI = {
+	dynamic_country_name = {
+		name = IDI
+		adjective = IDI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			scope:actor ?= {
+				c:IDI ?= this
+				c:IRE ?= this.overlord
+			}
+		}
+	}
+	
+	dynamic_country_name = {
+		name = IDI_german
+		adjective = IDI_german_ADJ
+		
+		is_main_tag_only = yes
+		priority = 20
+		
+		trigger = {
+			scope:actor ?= {
+				c:IDI ?= this
+				c:GER ?= this.overlord
+			}
+		}
+	}
+	
+	dynamic_country_name = {
+		name = IDI_free
+		adjective = IDI_ADJ
+		
+		is_main_tag_only = yes
+		priority = 50
+		
+		trigger = {
+			scope:actor ?= {
+				is_subject = no
+			}
+		}
+	}
+}
+	

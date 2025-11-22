@@ -1,0 +1,9 @@
+german_india = {
+	color = "feldgrau"
+
+	possible = {
+		exists = c:IDI
+		THIS = c:IDI
+		this.overlord = c:GER
+	}
+}
