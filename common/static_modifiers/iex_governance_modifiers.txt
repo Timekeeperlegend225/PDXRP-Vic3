@@ -1,0 +1,19 @@
+﻿
+
+iex_is_subject_modifier = {
+	country_tech_spread_add = 25
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+}
+
+agreeable_to_imposition = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_law_enactment_success_add = 0.3
+	country_law_enactment_time_mult = -0.25
+	political_movement_radicalism_add = 0.25
+}
+
+
+modifier_has_annexed_another_subject = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_liberty_desire_add = 0.05
+}

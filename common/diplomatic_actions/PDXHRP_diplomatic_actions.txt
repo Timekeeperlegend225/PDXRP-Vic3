@@ -1,0 +1,260 @@
+player_diplomatic_backlash = {
+	groups = {
+		general
+	}
+	requires_approval = yes
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	show_confirmation_box = no
+	is_hostile = yes
+	
+	texture = "gfx/interface/icons/generic_icons/disapproval_icon.dds"
+	
+	selectable = {
+		is_player = yes
+	}
+	potential = {
+		NOT = {
+			is_country_type = decentralized
+		}
+		scope:target_country = {
+			NOT = {
+				is_country_type = decentralized
+			}
+			is_player = yes
+		}
+		has_diplomatic_relevance = scope:target_country
+	}
+	possible = {
+		always = yes
+		custom_tooltip = {
+			text = DIPLO_ACTION_RELATIONS_COLD_OR_LESS_NOT
+			scope:target_country.relations:root > relations_threshold:cold
+		}
+	}
+	accept_effect = {
+		change_relations = {
+			country = scope:target_country
+			value = {
+				add = relations_threshold:cold
+				subtract = scope:target_country.relations:root
+			}
+		}
+	}
+	ai = {
+		will_propose = {
+			always = no
+		}
+		accept_score = {
+			value = -1000
+		}
+	}
+}
+
+player_diplomatic_support = {
+	groups = {
+		general
+	}
+	requires_approval = yes
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	show_confirmation_box = no
+	is_hostile = no
+	
+	texture = "gfx/interface/icons/generic_icons/approval_icon.dds"
+
+	selectable = {
+		is_player = yes
+	}
+	potential = {
+		NOT = {
+			is_country_type = decentralized
+		}
+		scope:target_country = {
+			NOT = {
+				is_country_type = decentralized
+			}
+			is_player = yes
+		}
+		has_diplomatic_relevance = scope:target_country
+	}
+	possible = {
+		always = yes
+		custom_tooltip = {
+			text = DIPLO_ACTION_RELATIONS_CORDIAL_OR_GREATER
+			scope:target_country.relations:root < relations_threshold:amicable
+		}
+	}
+	accept_effect = {
+		change_relations = {
+			country = scope:target_country
+			value = {
+				add = relations_threshold:amicable
+				subtract = scope:target_country.relations:root
+			}
+		}
+	}
+	ai = {
+		will_propose = {
+			always = no
+		}
+		accept_score = {
+			value = -1000
+		}
+	}
+}
+
+player_non_aggression_pact = {
+	groups = {
+		general
+	}
+	requires_approval = yes
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	show_confirmation_box = no
+	is_hostile = no
+	can_use_obligations = yes
+	
+	texture = "gfx/interface/icons/generic_icons/truce.dds"
+	
+	selectable = {
+		NOT = { is_country_type = decentralized }
+		is_revolutionary = no
+		is_player = yes
+	}
+	potential = {
+		NOT = {
+			is_country_type = decentralized
+		}
+		scope:target_country = {
+			NOT = {
+				is_country_type = decentralized
+			}
+		is_player = yes
+		}
+		has_diplomatic_relevance = scope:target_country
+	}
+	possible = {
+		scope:target_country = {
+			NOT = {
+				has_diplomatic_pact = {
+					who = root
+					type = alliance
+				}
+			}					
+		}					
+	}
+	accept_effect = {
+		create_bidirectional_truce = {
+			country = scope:target_country
+			months = 1200
+		}
+		add_lobby_appeasement_from_diplomacy_bidirectional = { 
+			FIRST = root
+			SECOND = scope:target_country 
+			PRO_AMOUNT = 3
+			ANTI_AMOUNT = -3
+			FACTOR = appeasement_defensive_pact_formed
+		}
+	}
+	pact = {
+		cost = 50
+		
+		relations_progress_per_day = 1 # At 100, +1 relations
+		relations_improvement_max = 40
+
+		requirement_to_maintain = {
+			trigger = {
+				has_diplomatic_relevance = scope:target_country
+			}
+		}		
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = "DIPLOMATIC_PACT_REQUIREMENT_NOT_DECENTRALIZED"
+					NOT = { is_country_type = decentralized }
+					scope:target_country = {
+						NOT = { is_country_type = decentralized }
+					}				
+				}
+			}
+		}		
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = "DIPLOMATIC_PACT_REQUIREMENT_DIPLOMATIC_AUTONOMY"
+					aggressive_diplomatic_plays_permitted = yes
+					scope:target_country = { aggressive_diplomatic_plays_permitted = yes }					
+				}
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = DIPLO_ACTION_RELATIONS_CORDIAL_OR_GREATER
+					scope:target_country.relations:root >= relations_threshold:cordial
+				}	
+			}
+			
+			show_about_to_break_warning = {
+				scope:target_country.relations:root < 23 # this is: cordial + 3
+				scope:target_country.relations_change_rate:root < 0
+			}		
+		}	
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
+					NOT = { has_war_with = scope:target_country }
+				}			
+			}
+		}
+		
+		actor_can_break = {
+			NOT = { is_diplomatic_play_ally_of = scope:target_country }
+		}
+	
+		target_can_break = {
+			NOT = { is_diplomatic_play_ally_of = scope:target_country }
+		}	
+
+		manual_break_effect = {
+			change_relations = { country = scope:target_country value = -30 }
+			create_bidirectional_truce = { country = scope:target_country months = 12 }
+			add_lobby_appeasement_from_diplomacy_bidirectional = { 
+				FIRST = root
+				SECOND = scope:target_country 
+				PRO_AMOUNT = -3
+				ANTI_AMOUNT = 3
+				FACTOR = appeasement_defensive_pact_broken
+			}
+			change_infamy = 30
+			}
+		}
+		
+		auto_break_effect = {
+			end_truce = { country = scope:target_country }
+			create_bidirectional_truce = { country = scope:target_country months = 12 }	
+			if = {
+				limit = { 
+					NOR = { 
+						is_subject_of = scope:target_country 
+						scope:target_country = { is_subject_of = root }
+					}
+				}
+				
+				add_lobby_appeasement_from_diplomacy_bidirectional = { 
+					FIRST = root
+					SECOND = scope:target_country 
+					PRO_AMOUNT = -3
+					ANTI_AMOUNT = 3
+					FACTOR = appeasement_defensive_pact_broken
+				}				
+			}				
+		}		
+	}
+}
