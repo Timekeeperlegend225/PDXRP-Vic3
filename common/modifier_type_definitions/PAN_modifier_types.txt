@@ -1,0 +1,170 @@
+﻿REPLACE_OR_CREATE:state_harvest_condition_pan_plague_impact_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_resistance_debug={
+	decimals=2
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_vaccination={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_maximum_vaccination={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_weekly_vaccination={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_urbanization_impact={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_plague_chance={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_plague_chance_market={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_plague_chance_country={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_capitalists_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_bureaucrats_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_clergymen_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_engineers_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_officers_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_shopkeepers_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:goods_output_vaccine_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:goods_input_vaccine_add={
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_building_pan_vaccination_center_max_level_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:reasearch_toward_counter_measures_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:reasearch_toward_a_cure_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

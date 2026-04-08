@@ -61,13 +61,13 @@ mappie_mobilitybad= {
 
 mappie_mobilitygood= {
 	icon = gfx/interface/icons/decree/decree_promote_social_mobility.dds
-	state_turmoil_effects_mult = 0.1
+	state_education_access_add = 0.1
 	state_pop_qualifications_mult = 0.1
 }
 
 mappie_mobilitygreat= {
 	icon = gfx/interface/icons/decree/decree_promote_social_mobility.dds
-	state_turmoil_effects_mult = 0.15
+	state_education_access_add = 0.15
 	state_pop_qualifications_mult = 0.15
 }
 

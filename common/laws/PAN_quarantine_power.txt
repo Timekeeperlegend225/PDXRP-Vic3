@@ -1,0 +1,107 @@
+﻿law_no_quarantine_power = {
+	group = lawgroup_quarantine_power
+	icon = "gfx/interface/icons/law_icons/no_home_affairs.dds"
+
+	progressiveness = 0
+
+	# AI shouldn't try to abolish institutions
+	ai_will_do = {
+		always = no
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+}
+
+law_limited_quarantine_power = {
+	group = lawgroup_quarantine_power
+	icon = "gfx/interface/icons/law_icons/migration_controls.dds"
+
+	progressiveness = 0
+
+	is_visible = {
+		has_technology_researched = plague_counter_measures
+	}
+
+	unlocking_technologies = {
+		plague_counter_measures
+	}
+
+	modifier = {
+		country_legitimacy_base_add = -2
+		state_radicals_from_political_movements_mult = 0.05
+	}
+
+	on_enact = {
+		custom_tooltip = unlock_limited_quarantine_decision
+	}
+
+	# Don't return to national guard we have something more advanced
+	ai_will_do = {
+		NOT = {
+			has_law_or_variant = law_type:law_extensive_quarantine_power
+		}
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+
+		if = {
+			limit = {
+				has_journal_entry = je_hawaii
+			}
+			add = 10000
+		}
+	}
+}
+
+law_extensive_quarantine_power = {
+	group = lawgroup_quarantine_power
+	icon = "gfx/interface/icons/law_icons/closed_borders.dds"
+
+	progressiveness = -25
+
+	is_visible = {
+		has_technology_researched = plague_counter_measures
+	}
+
+	unlocking_technologies = {
+		plague_counter_measures
+	}
+
+	modifier = {
+		country_legitimacy_base_add = -5
+		state_radicals_from_political_movements_mult = 0.10
+	}
+
+	on_enact = {
+		custom_tooltip = unlock_extensive_quarantine_decision
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+
+		if = {
+			limit = {
+				has_journal_entry = je_hawaii
+			}
+			add = 10000
+		}
+	}
+}

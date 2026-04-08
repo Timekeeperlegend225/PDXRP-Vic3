@@ -1,0 +1,58 @@
+﻿plague_resistance = {
+	icon = gfx/interface/icons/institution_icons/health_service.dds
+	state_harvest_condition_pan_plague_impact_mult = -1
+}
+
+plague_resistance_debug = {
+	icon = gfx/interface/icons/institution_icons/health_service.dds
+	state_resistance_debug = 1
+}
+
+plague_vaccination_debug = {
+	icon = gfx/interface/icons/goods_icons/unused/pharmaceuticals.dds
+	state_vaccination = 1
+}
+
+urbanization_effect_mod = {
+	icon = gfx/interface/icons/invention_icons/urbanization.dds
+	state_harvest_condition_pan_plague_impact_mult = 1
+	state_building_pan_vaccination_center_max_level_add = 8
+}
+
+quarantine_mod1 = {
+	icon = gfx/interface/icons/invention_icons/urbanization.dds
+	country_legitimacy_base_add = -10
+	building_throughput_add = -0.15
+	state_working_adult_ratio_add = -0.05
+	state_dependent_wage_mult = -0.05
+	state_harvest_condition_pan_plague_impact_mult = -0.10
+	state_radicals_from_political_movements_mult = 0.05
+	state_urbanization_impact = -0.10
+}
+
+quarantine_mod2 = {
+	icon = gfx/interface/icons/invention_icons/urbanization.dds
+	country_legitimacy_base_add = -20
+	building_throughput_add = -0.30
+	state_working_adult_ratio_add = -0.10
+	state_dependent_wage_mult = -0.10
+	state_harvest_condition_pan_plague_impact_mult = -0.20
+	state_radicals_from_political_movements_mult = 0.10
+	state_urbanization_impact = -0.20
+}
+
+installing_quarantine_mod1 = {
+	icon = gfx/interface/icons/invention_icons/urbanization.dds
+	building_throughput_add = 0.10
+	state_working_adult_ratio_add = 0.02
+	state_dependent_wage_mult = 0.02
+	state_harvest_condition_pan_plague_impact_mult = 0.10
+}
+
+installing_quarantine_mod2 = {
+	icon = gfx/interface/icons/invention_icons/urbanization.dds
+	building_throughput_add = 0.20
+	state_working_adult_ratio_add = 0.05
+	state_dependent_wage_mult = 0.05
+	state_harvest_condition_pan_plague_impact_mult = 0.20
+}

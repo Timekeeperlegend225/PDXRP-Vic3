@@ -1,0 +1,15 @@
+﻿####################
+# Original: STAPLE #
+
+vaccine = {
+	texture = "gfx/interface/icons/goods_icons/unused/pharmaceuticals.dds"
+	cost = 40
+	category = industrial
+	
+	prestige_factor = 30
+	
+	traded_quantity = 1
+	convoy_cost_multiplier = 0.25
+	
+	consumption_tax_cost = 200
+}

@@ -1,0 +1,90 @@
+﻿REPLACE_OR_CREATE:building_pan_research_center = {
+
+	building_group = bg_monuments
+	expandable = no
+	downsizeable = no
+	unique = yes
+
+	city_type = city
+
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		plague_studies
+	}
+
+	production_method_groups = {
+		pmg_pan_research_center
+	}
+
+	icon = "gfx/interface/icons/building_icons/building_university.dds"
+
+	required_construction = construction_cost_very_high
+
+	potential = {
+		is_capital = yes
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
+	ai_value = {
+		value = 100000
+	}
+}
+
+REPLACE_OR_CREATE:building_pan_pharmaceuticals_industry = {
+
+	icon = "gfx/interface/icons/building_icons/skyscraper.dds"
+
+	building_group = bg_light_industry
+
+	city_type = city
+
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		plague_vaccination
+	}
+
+	production_method_groups = {
+		pmg_pan_pharmaceuticals_industry
+	}
+
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+
+	ai_value = {
+		value = 100
+	}
+}
+
+REPLACE_OR_CREATE:building_pan_vaccination_center = {
+
+	icon = "gfx/interface/icons/building_icons/building_company_regional_hq.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
+	building_group = bg_government
+
+	has_max_level = yes
+	
+	city_type = city
+
+	levels_per_mesh = 50
+
+	unlocking_technologies = {
+		plague_vaccination
+	}
+
+	production_method_groups = {
+		pmg_pan_vaccination_center
+	}
+
+	required_construction = construction_cost_medium
+
+
+	ai_value = {
+		value = 100
+	}
+}

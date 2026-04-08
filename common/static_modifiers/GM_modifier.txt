@@ -17,7 +17,3 @@ GM_working_on_state_mod = {
 GM_target_state_mod = {
 	icon = gfx/interface/icons/commander_order_icons/has_target.dds
 }
-
-GM_target_character_mod = {
-	icon = gfx/interface/icons/commander_order_icons/has_target.dds
-}

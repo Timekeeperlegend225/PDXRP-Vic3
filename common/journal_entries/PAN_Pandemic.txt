@@ -1,0 +1,435 @@
+﻿REPLACE_OR_CREATE:pan_pandemic_journal = {
+	icon = "gfx/interface/icons/harvest_condition_icons/plague.dds"
+
+	group = je_group_global_international_situations
+	
+	
+	should_be_involved = {
+		always = yes
+	}
+	
+	immediate = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			### Setup national urbanization impact
+			
+			every_country = {
+			set_global_variable = { 
+				name = state_urbanization_impact_var 
+				value = 1
+			}
+			if = {
+				limit = {
+					OR = {
+						has_law = law_type:law_traditionalism
+						has_law = law_type:law_agrarianism
+					}
+				}
+				change_global_variable = { 
+					name = state_urbanization_impact_var 
+					subtract = 0.10
+				}
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_industry_banned
+				}
+				change_global_variable = { 
+					name = state_urbanization_impact_var 
+					subtract = 0.20
+				}
+			}
+			if = {
+				limit = {
+					has_modifier = quarantine_mod1
+				}
+				change_global_variable = { 
+					name = state_urbanization_impact_var 
+					multiply = 0.90
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = quarantine_mod2
+				}
+				change_global_variable = { 
+					name = state_urbanization_impact_var
+					multiply = 0.80
+				}
+			}
+			remove_modifier = plague_vaccination_debug
+			add_modifier = {
+				name = plague_vaccination_debug
+				multiplier = global_var:state_urbanization_impact_var
+			}
+			
+				every_scope_state = {
+					
+				### Vaccination 
+				
+					set_variable = { 
+						name = max_vaccination_var 
+						value = 0
+					}
+					set_variable = { 
+						name = weekly_vaccination_var 
+						value = 0
+					}
+					if = {
+						limit = {
+							any_scope_building = {
+								is_building_type = building_pan_vaccination_center
+							}
+						}
+						random_scope_building = {
+							limit = { 
+								is_building_type = building_pan_vaccination_center
+							}
+							save_scope_as = vaccination_center_var
+						}
+						change_variable = { 
+							name = max_vaccination_var 
+							add = scope:vaccination_center_var.level
+						}
+						change_variable = { 
+							name = max_vaccination_var 
+							multiply = 50
+						}
+						change_variable = { 
+							name = weekly_vaccination_var 
+							add = scope:vaccination_center_var.level
+						}
+						change_variable = { 
+							name = weekly_vaccination_var 
+							multiply = scope:vaccination_center_var.occupancy
+						}
+						if = {
+							limit = {
+								any_scope_building = {
+									is_building_type = building_pan_vaccination_center
+									building_has_goods_shortage = yes
+								}
+							}
+							change_variable = { 
+								name = weekly_vaccination_var 
+								multiply = 0.5
+							}
+						}
+					}
+					change_variable = { 
+						name = weekly_vaccination_var 
+						multiply = 0.5
+					}
+					change_variable = { 
+						name = vaccination_var 
+						add = var:weekly_vaccination_var
+					}
+					clamp_variable = {
+						name = vaccination_var
+						min = 0
+						max = var:max_vaccination_var
+					}
+					set_global_variable = { 
+						name = vaccination_debug_var
+						value = var:vaccination_var
+					}
+					remove_modifier = plague_vaccination_debug
+					add_modifier = {
+						name = plague_vaccination_debug
+						multiplier = var:vaccination_var
+					}
+					
+					### Urbanization
+					
+					set_variable = { 
+						name = urbanization_var 
+						value = total_urbanization
+					}
+					change_variable = { 
+						name = urbanization_var 
+						multiply = global_var:state_urbanization_impact_var
+					}
+					set_variable = { 
+						name = resistance_var_effect_var_div 
+						value = 20000
+					}
+					change_variable = { 
+						name = resistance_var_effect_var_div 
+						add = var:urbanization_var
+					}
+					change_variable = { 
+						name = urbanization_var 
+						divide = var:resistance_var_effect_var_div
+					}
+					change_variable = { 
+						name = urbanization_var 
+						multiply = 4
+					}
+					set_global_variable = { 
+						name = urbanization__var_temp
+						value = var:urbanization_var
+					}
+					remove_modifier = urbanization_effect_mod
+					add_modifier = {
+						name = urbanization_effect_mod
+						multiplier = global_var:urbanization__var_temp
+					}
+					if = {
+						limit = {	
+							state_region = {
+								has_harvest_condition = pan_plague
+							}
+						}
+						change_variable = {
+							name = resistance_var
+							add = 1
+						}
+						change_variable = {
+							name = resistance_var
+							add = var:urbanization_var
+						}
+					}
+					else = {
+						change_variable = {
+							name = resistance_var
+							subtract = 1
+						}
+					}
+					clamp_variable = {
+						name = resistance_var
+						min = var:vaccination_var
+						max = 1000
+					}
+					set_variable = { 
+						name = resistance_var_effect_var_div 
+						value = 1500
+					}
+					change_variable = { 
+						name = resistance_var_effect_var_div 
+						add = var:resistance_var
+					}
+					set_global_variable = { 
+						name = resistance_var_effect_var
+						value = var:resistance_var
+					}
+					change_global_variable = { 
+						name = resistance_var_effect_var 
+						divide = var:resistance_var_effect_var_div
+					}
+					set_global_variable = { 
+						name = resistance_var_temp
+						value = var:resistance_var
+					}
+					remove_modifier = plague_resistance
+					add_modifier = {
+						name = plague_resistance
+						multiplier = {
+							add = global_var:resistance_var_effect_var
+							multiply = 2
+						}
+					}
+					remove_modifier = plague_resistance_debug
+					add_modifier = {
+						name = plague_resistance_debug
+						multiplier = global_var:resistance_var_temp
+					}
+				}
+			}
+			every_state_region = {
+				set_global_variable = { 
+					name = average_sr_res_var_temp
+					value = 0
+				}
+				set_global_variable = { 
+					name = sr_population_var
+					value = 0
+				}
+				set_global_variable = { 
+					name = sr_urbanization_var
+					value = 0
+				}
+				set_global_variable = { 
+					name = sr_trade_var
+					value = 0
+				}
+				every_scope_state = {
+					change_global_variable = { 
+						name = sr_population_var 
+						add = state_population
+					}
+				}
+				every_scope_state = {
+					set_global_variable = { 
+						name = weight_local_res_var_temp 
+						value = var:resistance_var
+					}
+					set_global_variable = { 
+						name = s_population_share_var 
+						value = state_population
+					}
+					change_global_variable = { 
+						name = s_population_share_var 
+						divide = global_var:sr_population_var
+					}
+					change_global_variable = { 
+						name = weight_local_res_var_temp 
+						multiply = global_var:s_population_share_var
+					}
+					change_global_variable = { 
+						name = average_sr_res_var_temp 
+						add = global_var:weight_local_res_var_temp
+					}
+					change_global_variable = { 
+						name = sr_urbanization_var 
+						add = total_urbanization
+					}
+					change_global_variable = { 
+						name = sr_trade_var 
+						add = state_trade
+					}
+				}
+				set_variable = { 
+					name = average_sr_res_var
+					value = global_var:average_sr_res_var_temp
+				}
+				change_variable = { 
+					name = average_sr_res_var
+					divide = 500
+				}
+				set_variable = { 
+					name = total_sr_urban_var
+					value = global_var:sr_urbanization_var
+				}
+				set_variable = { 
+					name = resistance_var_effect_var_div 
+					value = 20000
+				}
+				change_variable = { 
+					name = resistance_var_effect_var_div 
+					add = var:total_sr_urban_var
+				}
+				change_variable = { 
+					name = total_sr_urban_var 
+					divide = var:resistance_var_effect_var_div
+				}
+				set_variable = { 
+					name = total_sr_trade_var
+					value = global_var:state_trade
+				}
+				set_variable = { 
+					name = resistance_var_effect_var_div 
+					value = 4000
+				}
+				change_variable = { 
+					name = resistance_var_effect_var_div 
+					add = var:total_sr_trade_var
+				}
+				change_variable = { 
+					name = total_sr_trade_var 
+					divide = var:resistance_var_effect_var_div
+				}
+			}
+			set_global_variable = { 
+				name = global_plague_counter_measure_var
+				value = 0
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_technology_researched = plague_counter_measures
+					}
+					change_global_variable = {
+						name = global_plague_counter_measure_var
+						add = 0.01
+					}
+				}
+			
+			}
+		}
+	}
+
+    on_yearly_pulse = {
+		effect = {
+			change_global_variable = { 
+				name = plague_intesity_var
+				add = 0.1
+			}	
+		}
+    }
+
+	should_be_pinned_by_default = yes
+}
+
+REPLACE_OR_CREATE:pan_research_journal = {
+	icon = "gfx/interface/icons/invention_icons/medical_degrees.dds"
+
+	group = je_group_crises
+
+	is_shown_when_inactive = {
+		has_journal_entry = pan_pandemic_journal
+	}
+
+	possible = {
+		has_technology_researched = plague_studies
+	}
+	
+	immediate = {
+	}
+
+	scripted_progress_bar = pan_research_bar1
+	scripted_progress_bar = pan_research_bar2
+
+	on_weekly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					capital = {
+						any_scope_building = {
+							is_building_type = building_pan_research_center
+						}
+					}
+				}
+				capital = {
+					random_scope_building = {
+						limit = {
+							is_building_type = building_pan_research_center
+						}
+						save_scope_as = research_center_scope
+					}
+				}
+				set_variable = { 
+					name = research_center_occupancy
+					value = scope:research_center_scope.occupancy
+				}
+			}
+			pan_research_bar1_progress = yes 
+			pan_research_bar2_progress = yes 
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_progress(pan_research_bar1)" >= 500
+					}
+					NOT = {
+						has_technology_researched = plague_counter_measures
+					}
+				}
+                add_technology_researched = plague_counter_measures
+			}
+			if = {
+				limit = {
+					scope:journal_entry = { 
+						"scripted_bar_progress(pan_research_bar2)" >= 1000
+					}
+					NOT = {
+						has_technology_researched = plague_vaccination
+					}
+				}
+                add_technology_researched = plague_vaccination
+			}
+		}
+	}
+
+	should_be_pinned_by_default = yes
+}

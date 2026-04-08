@@ -1,0 +1,3 @@
+﻿NPolitics = {
+	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.0001 # If I put it at 0, it become +300%
+}

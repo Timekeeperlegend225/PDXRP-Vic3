@@ -1,0 +1,53 @@
+﻿REPLACE_OR_CREATE:plague_studies = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/triage.dds"
+	category = society
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		pharmaceuticals
+	}
+
+	ai_weight = {
+		value = 2
+	}
+}
+
+REPLACE_OR_CREATE:plague_counter_measures = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/modern_nursing.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+	}
+
+	unlocking_technologies = {
+		plague_studies
+	}
+
+	ai_weight = {
+		value = 2
+	}
+}
+
+REPLACE_OR_CREATE:plague_vaccination = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/antibiotics.dds"
+	category = society
+	can_research = no
+
+	modifier = {
+		state_building_pan_vaccination_center_max_level_add = 2
+	}
+
+	unlocking_technologies = {
+		plague_counter_measures
+	}
+
+	ai_weight = {
+		value = 2
+	}
+}

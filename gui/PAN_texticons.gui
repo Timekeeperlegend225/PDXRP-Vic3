@@ -1,0 +1,8 @@
+texticon = {
+  icon = pan_plague
+  iconsize = {
+    offset = { 0 30 }
+    texture = "gfx/interface/icons/harvest_condition_icons/plague.dds"
+    fontsize = 150
+  }
+}

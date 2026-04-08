@@ -1,0 +1,170 @@
+﻿pm_pan_basic_research = {
+	texture = "gfx/interface/icons/production_method_icons/analytical_philosophy_department.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 1
+			reasearch_toward_counter_measures_add = 1
+			reasearch_toward_a_cure_add = 0.5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 10
+			goods_input_glass_add = 5
+			goods_input_liquor_add = 5
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1000
+			building_employment_laborers_add = 1000
+			building_employment_academics_add = 1000
+		}
+	}
+}
+
+pm_pan_plague_prevention = {
+	texture = "gfx/interface/icons/production_method_icons/unused/newspapers.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		plague_counter_measures
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 1
+			state_plague_chance = -0.10
+			reasearch_toward_a_cure_add = 1
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 20
+			goods_input_glass_add = 5
+			goods_input_liquor_add = 5
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 2000
+			building_employment_laborers_add = 2000
+			building_employment_academics_add = 1000
+			building_employment_bureaucrats_add = 1000
+		}
+	}
+}
+
+pm_pan_plague_treatment = {
+	texture = "gfx/interface/icons/mobilization_options/basic_medical_aid.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		plague_counter_measures
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 1
+			state_harvest_condition_pan_plague_impact_mult = -0.1
+			reasearch_toward_a_cure_add = 1
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 10
+			goods_input_glass_add = 10
+			goods_input_liquor_add = 10
+			goods_input_fabric_add = 10
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 3000
+			building_employment_laborers_add = 1000
+			building_employment_academics_add = 1500
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_pan_advanced_plagues_studies = {
+	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = {
+		plague_counter_measures
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 1
+			reasearch_toward_a_cure_add = 2
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 20
+			goods_input_glass_add = 10
+			goods_input_liquor_add = 10
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 2000
+			building_employment_laborers_add = 2000
+			building_employment_academics_add = 2000
+		}
+	}
+}
+
+pm_pan_pharmaceuticals_industry_bacic_vaccine = {
+	texture = "gfx/interface/icons/production_method_icons/pharmacies.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 5
+			goods_input_glass_add = 10
+			goods_input_liquor_add = 10
+			
+			goods_output_vaccine_add = 30
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 500
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 2000
+			building_employment_academics_add = 1000
+		}
+	}
+}
+
+pm_pan_vaccination_center_base = {
+	texture = "gfx/interface/icons/production_method_icons/field_hospitals.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 2
+			goods_input_fabric_add = 5
+			goods_input_liquor_add = 2
+			goods_input_vaccine_add = 5
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 800
+			building_employment_laborers_add = 1000
+			building_employment_academics_add = 100
+			building_employment_bureaucrats_add = 100
+		}
+	}
+
+	state_modifiers = {
+		unscaled = {
+			state_maximum_vaccination = 50
+		}
+		workforce_scaled = {
+			state_weekly_vaccination = 0.5
+		}
+	}
+}

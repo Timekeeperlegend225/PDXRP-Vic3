@@ -1,0 +1,29 @@
+﻿pmg_pan_research_center = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_pan_basic_research
+		pm_pan_plague_prevention
+		pm_pan_plague_treatment
+		pm_pan_advanced_plagues_studies	
+	}
+}
+
+pmg_pan_pharmaceuticals_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_pan_pharmaceuticals_industry_bacic_vaccine
+	}
+}
+
+pmg_pan_vaccination_center = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_pan_vaccination_center_base
+	}
+}

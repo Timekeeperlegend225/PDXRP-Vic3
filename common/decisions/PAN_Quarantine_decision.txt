@@ -1,0 +1,87 @@
+﻿PAN_limited_quarantine = {
+	is_shown = {
+		always = yes
+		NOT = { has_modifier = quarantine_mod1 }
+		NOT = { has_modifier = quarantine_mod2 }
+	}
+	
+	possible = {
+		OR = {
+			has_law = law_type:law_limited_quarantine_power
+			has_law = law_type:law_extensive_quarantine_power
+		}
+	}
+
+	when_taken = {
+		add_modifier = {
+			name = quarantine_mod1
+		}
+		add_modifier = {
+			name = installing_quarantine_mod1        
+			months = 6
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+PAN_extensive_quarantine = {
+	is_shown = {
+		always = yes
+		NOT = { has_modifier = quarantine_mod1 }
+		NOT = { has_modifier = quarantine_mod2 }
+	}
+	
+	possible = {
+		has_law = law_type:law_extensive_quarantine_power
+	}
+
+	when_taken = {
+		add_modifier = {
+			name = quarantine_mod2
+		}
+		add_modifier = {
+			name = installing_quarantine_mod2  
+			months = 12
+			is_decaying = yes
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+PAN_end_quarantine = {
+	is_shown = {
+		OR = {
+			has_modifier = quarantine_mod1
+			has_modifier = quarantine_mod2
+		}
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				has_modifier = quarantine_mod1
+			}
+			remove_modifier = quarantine_mod1
+		}
+		else_if = {
+			limit = {
+				has_modifier = quarantine_mod2
+			}
+			remove_modifier = quarantine_mod2
+		}
+		if = {
+			limit = {
+				has_modifier = installing_quarantine_mod
+			}
+			remove_modifier = installing_quarantine_mod
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}

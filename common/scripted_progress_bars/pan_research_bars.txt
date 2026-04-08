@@ -1,0 +1,145 @@
+﻿pan_research_bar1 = {
+	name = "pan_research_bar1_bar"
+	desc = "pan_research_bar1_desc"
+
+	default = yes
+
+	weekly_progress = {
+		if = {
+			limit = {
+				capital = {
+					any_scope_building = {
+						has_active_production_method = pm_pan_basic_research
+					}
+				}
+			}
+			add = {
+				desc = basic_plague_studie_progress
+				value = var:research_center_occupancy
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_technology_researched = plague_counter_measures
+				}
+			}
+			add = {
+				desc = counter_measure_spread_progress
+				value = global_var:global_plague_counter_measure_var
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 500
+
+}
+
+pan_research_bar2 = {
+	name = "pan_research_bar2_bar"
+	desc = "pan_research_bar2_desc"
+
+	default_green = yes
+
+	weekly_progress = {
+		if = {
+			limit = {
+				capital = {
+					any_scope_building = {
+						has_active_production_method = pm_pan_basic_research
+					}
+				}
+			}
+			add = {
+				desc = basic_plague_studie_progress
+				add = var:research_center_occupancy
+				divide = 2
+			}
+		}
+		else_if = {
+			limit = {
+				capital = {
+					any_scope_building = {
+						OR = {
+							has_active_production_method = pm_pan_plague_prevention
+							has_active_production_method = pm_pan_plague_treatment
+						}
+					}
+				}
+			}
+			add = {
+				desc = basic_plague_studie_progress
+				add = var:research_center_occupancy
+			}
+		}
+		else_if = {
+			limit = {
+				capital = {
+					any_scope_building = {
+						has_active_production_method = pm_pan_advanced_plagues_studies
+					}
+				}
+			}
+			add = {
+				desc = basic_plague_studie_progress
+				add = var:research_center_occupancy
+				multiply = 2
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_technology_researched = plague_counter_measures
+				}
+			}
+			add = {
+				desc = counter_measure_spread_progress
+				value = global_var:global_plague_counter_measure_var
+				divide = 10
+			}
+		}
+		if = {
+			limit = {
+				has_technology_researched = plague_counter_measures
+			}
+			add = {
+				desc = "From having Counter Measure"
+				value = 0.5
+			}
+		}
+		if = {
+			limit = {
+				has_technology_researched = quinine
+			}
+			add = {
+				desc = "From Quinine"
+				value = 0.2
+			}
+		}
+		if = {
+			limit = {
+				has_technology_researched = malaria_prevention
+			}
+			add = {
+				desc = "From Malaria Prevention"
+				value = 0.3
+			}
+		}
+		if = {
+			limit = {
+				has_technology_researched = antibiotics
+			}
+			add = {
+				desc = "From Antibiotics"
+				value = 0.5
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 1000
+
+}

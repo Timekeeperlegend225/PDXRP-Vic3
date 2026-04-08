@@ -1,0 +1,26 @@
+﻿l_english:
+ pan_plague: "Plague"
+ pan_plague_desc: "A strange plague has spread in our country, people are dying in mass what can we do ?"
+ 
+
+ state_harvest_condition_pan_plague_impact_mult: "[GetHarvestConditionType('pan_plague').GetName] Impact"
+ state_resistance_debug: "State resistance (debug value)"
+ plague_resistance: "Plague immunity"
+ plague_resistance_debug: "State resistance"
+ 
+ 
+ pan_pandemic_journal:0 "The Global Pandemic"
+ pan_pandemic_journal_reason:0 "Current Plague Intensity is [GetGlobalVariable('plague_intesity_var').GetValue|-1]" 
+ 
+ 
+ pan_research_journal:0 "Fighting the Pandemic"
+ pan_research_journal_reason:0 "We are searching for solution to the pandemicc" 
+ pan_research_bar1_bar:0 "Search for Counter Measure"
+ pan_research_bar1_name:0 "Counter Measure Progress : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ pan_research_bar1_desc: "The progress of our current research on counter measures is #white #b [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]"
+ 
+ pan_research_bar2_bar:0 "Search for a Cure
+ pan_research_bar2_name:0 "Cure : [Country.JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|0]"
+ pan_research_bar2_desc: "The progress of our current research on a Cure is #white #b [JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]"
+ 
+ basic_plague_studie_progress:0 "Progress from the #white Basic Plagues Studies #! in the [GetBuildingType('building_pan_research_center').GetName]"
