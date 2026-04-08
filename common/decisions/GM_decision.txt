@@ -1,0 +1,46 @@
+﻿GM_become_GM = {
+	is_shown = {
+		NOT = { has_global_variable = player_gm }
+		is_player = yes
+	}
+
+	when_taken = {
+		set_global_variable = player_gm
+		add_modifier = {
+			name = GM_game_master
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+GM_Self_Action = {
+	is_shown = {
+		has_modifier = GM_game_master
+		is_ai = no
+	}
+	
+	possible = {
+		NOT = { has_global_variable = GM_taking_action }
+	}
+	
+	when_taken = {
+		set_global_variable = {
+			name = GM_taking_action
+			days = 15
+		}
+		add_modifier = {
+			name = GM_interacted_mod    
+			days = 15
+   		}
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+    }
+	ai_chance = {
+		value = 0
+	}
+}

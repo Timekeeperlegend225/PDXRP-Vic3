@@ -1,0 +1,272 @@
+﻿namespace = money_transfer
+
+money_transfer.1 = {
+	type = country_event
+	placement = ROOT
+	title = money_transfer.1.t
+	desc = money_transfer.1.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 100
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		set_variable = { 
+			name = maximum_transferable_money_var
+			value = credit
+		}
+		change_variable = { 
+			name = maximum_transferable_money_var
+			divide = 2
+		}
+		change_variable = { 
+			name = maximum_transferable_money_var
+			subtract = principal
+		}
+		change_variable = { 
+			name = maximum_transferable_money_var
+			add = gold_reserves
+		}
+		clamp_variable = {
+			name = money_to_transfer_var
+			min = 0
+			max = var:maximum_transferable_money_var
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_variable = money_to_transfer_var
+	}
+	
+	#Reset
+	
+	option = {
+		name = money_transfer.1.a
+		set_variable = { 
+			name = money_to_transfer_var
+			value = 0
+		}
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = money_transfer.1.b
+		change_variable = {
+			name = money_to_transfer_var
+			add = 10000
+		}
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = money_transfer.1.c
+		change_variable = {
+			name = money_to_transfer_var
+			add = 100000
+		}
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = money_transfer.1.d
+		change_variable = {
+			name = money_to_transfer_var
+			add = 1000000
+		}
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = money_transfer.1.e
+		change_variable = {
+			name = money_to_transfer_var
+			subtract = 10000
+		}
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = money_transfer.1.f
+		change_variable = {
+			name = money_to_transfer_var
+			subtract = 100000
+		}
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = money_transfer.1.g
+		change_variable = {
+			name = money_to_transfer_var
+			subtract  = 1000000
+		}
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = money_transfer.1.h
+		change_variable = {
+			name = money_to_transfer_var
+			multiply = 10
+		}
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = money_transfer.1.i
+		trigger_event = {
+			id = money_transfer.2
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+money_transfer.2 = {
+	type = country_event
+	placement = ROOT
+	title = money_transfer.2.t
+	desc = money_transfer.2.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	immediate = {
+		save_scope_as = sender_scope
+	}
+
+	duration = 50
+	
+	trigger = {
+		#triggered by diplo action
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_variable = money_to_transfer_var
+	}
+	
+	option = {
+		name = money_transfer.2.a
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = money_transfer.2.b
+		set_global_variable = { 
+			name = money_to_transfer_global_var_temp
+			value = var:money_to_transfer_var
+		}
+		set_global_variable = { 
+			name = money_to_transfer_global_var_temp_neg
+			value = var:money_to_transfer_var
+		}
+		change_global_variable = {
+			name = money_to_transfer_global_var_temp_neg
+			multiply = -1
+		}
+		save_scope_as = sender_scope
+		scope:target_country = {
+			trigger_event = {
+				id = money_transfer.3
+				days = 0
+				popup = yes
+			}
+		}
+	}
+}
+
+money_transfer.3 = {
+	type = country_event
+	placement = ROOT
+	title = money_transfer.3.t
+	desc = money_transfer.3.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	immediate = {
+		set_variable = { 
+			name = money_to_transfer_var_temp
+			value = global_var:money_to_transfer_global_var_temp
+		}
+		set_variable = { 
+			name = money_to_transfer_var_neg
+			value = global_var:money_to_transfer_global_var_temp_neg
+		}
+	}
+
+	duration = 50
+	
+	trigger = {
+		#triggered by diplo action
+	}
+	
+	option = {
+		name = money_transfer.3.a
+		default_option = yes
+		scope:sender_scope = {
+			remove_variable = money_to_transfer_var
+		}
+	}
+	
+	option = {
+		name = money_transfer.3.b
+		add_treasury = var:money_to_transfer_var_temp
+		set_global_variable = { 
+			name = money_to_transfer_global_var_temp_neg
+			value = var:money_to_transfer_var_neg
+		}
+		scope:sender_scope = {
+			add_treasury = global_var:money_to_transfer_global_var_temp_neg
+			remove_variable = money_to_transfer_var
+		}
+	}
+}

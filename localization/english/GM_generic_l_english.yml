@@ -1,0 +1,35 @@
+﻿l_english:
+ GM_become_GM:0 "Become Game Master"
+ GM_become_GM_desc:0 "If your take this decision when you're not expected to, your line will go down @disapproves!"
+ GM_Self_Action:0 "GM Self-Action"
+ GM_Self_Action_desc:0 "Use GM Tools on yourself."
+ 
+ GM_game_master:0 "Game Master"
+ GM_game_master_desc:0 "This is the Game Master, respect him"
+ 
+ GM_interacted_mod:0 "Worked on by the GM"
+ GM_interacted_mod_desc:0 "The GM is taking action toward this player"
+ 
+ GM_target:0 "Game Master Target"
+ GM_target_desc:0 "The GM is praparing action toward this player"
+ 
+ GM_Interaction_action_notification_name:0 "GM action in your country"
+ GM_Interaction_action_notification_des:0 "The GM is taking action in your country"
+ 
+ GM_Interaction:0 "GM interaction"
+ GM_Interaction_desc:0 "Use the GM tools in this player"
+ GM_Interaction.t:"#white #b Finish your previous action first #! (check your pending events)"
+ 
+ GM_working_on_state_mod:0 "State being worked on"
+ 
+ GM_grant_leadership:0 "Transfer as IG Leader"
+ GM_grant_rulership:0 "Transfer as Ruler"
+ GM_set_as_heir:0 "Transfer as Heir"
+ GM_send_back_as_agitator:0 "Transfer as Agitator"
+ set_as_character_target:0 "Set as character target"
+ GM_send_character:0 "Move character to target"
+ 
+ GM_target_character_mod:0 "Target Character"
+ 
+ 
+ PAUSED:0 "                                               Paused \n #b #R @warning! Please don't touch anything unless Bodi said you can @warning!#!"
