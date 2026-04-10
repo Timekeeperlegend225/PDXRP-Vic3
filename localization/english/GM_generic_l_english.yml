@@ -21,3 +21,16 @@
  GM_Interaction.t:"#white #b Finish your previous action first #! (check your pending events)"
  
  GM_working_on_state_mod:0 "State being worked on"
+ 
+ GM_grant_leadership:0 "Transfer as IG Leader"
+ GM_grant_rulership:0 "Transfer as Ruler"
+ GM_set_as_heir:0 "Transfer as Heir"
+ GM_send_back_as_agitator:0 "Transfer as Agitator"
+ set_as_character_target:0 "Set as character target"
+ GM_send_character:0 "Move character to target"
+ 
+ GM_target_character_mod:0 "Target Character"
+ GM_allow_recognition:0 "GM approve recognition"
+ 
+ 
+ PAUSED:0 "                                               Paused \n #b #R @warning! Please don't touch anything unless Bodi said you can @warning!#!"

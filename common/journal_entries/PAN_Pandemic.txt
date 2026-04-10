@@ -80,7 +80,7 @@
 					if = {
 						limit = {
 							any_scope_building = {
-								is_building_type = building_pan_vaccination_center
+								is_building_type = building_pan_vaccination_center2 #Desactived for now
 							}
 						}
 						random_scope_building = {

@@ -16,7 +16,7 @@ plague_vaccination_debug = {
 urbanization_effect_mod = {
 	icon = gfx/interface/icons/invention_icons/urbanization.dds
 	state_harvest_condition_pan_plague_impact_mult = 1
-	state_building_pan_vaccination_center_max_level_add = 8
+	state_building_pan_vaccination_center_max_level_add = 3
 }
 
 quarantine_mod1 = {

@@ -129,7 +129,7 @@ REPLACE_OR_CREATE:state_shopkeepers_mortality_mult={
 	}
 }
 
-REPLACE_OR_CREATE:goods_output_vaccine_add={
+REPLACE_OR_CREATE:goods_output_drugs_add={
 	decimals=1
 	color=good
 	game_data={
@@ -137,7 +137,7 @@ REPLACE_OR_CREATE:goods_output_vaccine_add={
 	}
 }
 
-REPLACE_OR_CREATE:goods_input_vaccine_add={
+REPLACE_OR_CREATE:goods_input_drugs_add={
 	decimals=1
 	color=bad
 	game_data={

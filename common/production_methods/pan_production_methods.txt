@@ -119,7 +119,7 @@ pm_pan_advanced_plagues_studies = {
 	}
 }
 
-pm_pan_pharmaceuticals_industry_bacic_vaccine = {
+pm_pan_pharmaceuticals_industry_bacic_drugs = {
 	texture = "gfx/interface/icons/production_method_icons/pharmacies.dds"
 
 	building_modifiers = {
@@ -128,7 +128,7 @@ pm_pan_pharmaceuticals_industry_bacic_vaccine = {
 			goods_input_glass_add = 10
 			goods_input_liquor_add = 10
 			
-			goods_output_vaccine_add = 30
+			goods_output_drugs_add = 30
 		}
 
 		level_scaled = {
@@ -148,7 +148,7 @@ pm_pan_vaccination_center_base = {
 			goods_input_tools_add = 2
 			goods_input_fabric_add = 5
 			goods_input_liquor_add = 2
-			goods_input_vaccine_add = 5
+			goods_input_drugs_add = 5
 		}
 
 		level_scaled = {
@@ -164,7 +164,7 @@ pm_pan_vaccination_center_base = {
 			state_maximum_vaccination = 50
 		}
 		workforce_scaled = {
-			state_weekly_vaccination = 0.5
+			state_plague_chance = -0.10
 		}
 	}
 }

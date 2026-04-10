@@ -1,7 +1,7 @@
 ﻿####################
 # Original: STAPLE #
 
-vaccine = {
+drugs = {
 	texture = "gfx/interface/icons/goods_icons/unused/pharmaceuticals.dds"
 	cost = 40
 	category = industrial

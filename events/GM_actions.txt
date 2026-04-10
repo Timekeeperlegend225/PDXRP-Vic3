@@ -83,6 +83,40 @@ gm_actions.1 = {
 	}
 	
 	option = {
+		name = gm_actions.1.c
+		trigger = {
+			scope:GM_interacted_scope = {
+				is_country_type = unrecognized
+				NOT = {
+					has_modifier = GM_allow_recognition
+				}
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			add_modifier = {
+				name = GM_allow_recognition
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.1.d
+		trigger = {
+			scope:GM_interacted_scope = {
+				is_country_type = unrecognized
+				has_modifier = GM_allow_recognition
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_allow_recognition
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
 		name = value_selection.pan.t
 		trigger_event = {
 			id = value_selection.pan

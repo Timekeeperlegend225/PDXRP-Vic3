@@ -15,7 +15,7 @@ pmg_pan_pharmaceuticals_industry = {
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_pan_pharmaceuticals_industry_bacic_vaccine
+		pm_pan_pharmaceuticals_industry_bacic_drugs
 	}
 }
 

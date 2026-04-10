@@ -1,5 +1,5 @@
 texticon = {
-	icon = vaccine
+	icon = drugs
 	iconsize = {
 	texture = "gfx/interface/icons/goods_icons/unused/pharmaceuticals.dds"
 		size = { 25 25 }

@@ -17,3 +17,11 @@ GM_working_on_state_mod = {
 GM_target_state_mod = {
 	icon = gfx/interface/icons/commander_order_icons/has_target.dds
 }
+
+GM_target_character_mod = {
+	icon = gfx/interface/icons/commander_order_icons/has_target.dds
+}
+
+GM_allow_recognition = {
+	icon = gfx/interface/icons/lens_toolbar_icons/request_recognition_obligation.dds
+}

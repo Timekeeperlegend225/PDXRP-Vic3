@@ -10,7 +10,7 @@
  value_selection.pan.k:0 "x10"
  value_selection.pan.l:0 "Positive/Negative"
  value_selection.pan.m:0 "Add [GetGlobalVariable('gm_variable_pan').GetValue|+=]#! progress to the counter measure research of [SCOPE.sCountry('GM_interacted_scope').GetName]"
- value_selection.pan.n:0 "Add [GetGlobalVariable('gm_variable_pan').GetValue|+=]#! progress to the vaccine research of [SCOPE.sCountry('GM_interacted_scope').GetName]"
+ value_selection.pan.n:0 "Add [GetGlobalVariable('gm_variable_pan').GetValue|+=]#! progress to the drugs research of [SCOPE.sCountry('GM_interacted_scope').GetName]"
  value_selection.pan.o:0 "Done"
  value_selection.pan.r:0 "Cancel"
  value_selection.pan.t:0 "Add progress to plague research to a player"
