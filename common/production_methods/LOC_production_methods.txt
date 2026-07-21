@@ -1,0 +1,84 @@
+﻿REPLACE:pm_serfdom = {
+	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
+	unlocking_laws = {
+		law_serfdom
+		law_rural_serfdom
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = 0.5 # 10
+		}
+
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+}
+
+REPLACE:pm_serfdom_building_subsistence_orchard = {
+	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
+	unlocking_laws = {
+		law_serfdom
+		law_rural_serfdom
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fruit_add = 0.33 # 10
+		}
+
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+}
+
+REPLACE:pm_serfdom_building_subsistence_pasture = {
+	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
+	unlocking_laws = {
+		law_serfdom
+		law_rural_serfdom
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_meat_add = 0.33 # 10
+		}
+
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+}
+
+REPLACE:pm_serfdom_building_subsistence_fishing_village = {
+	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
+	unlocking_laws = {
+		law_serfdom
+		law_rural_serfdom
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fish_add = 0.5 # 10
+		}
+
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+}
+
+REPLACE:pm_serfdom_building_subsistence_rice_farm = {
+	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
+	unlocking_laws = {
+		law_serfdom
+		law_rural_serfdom
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = 1 # 20
+		}
+
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+}

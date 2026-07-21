@@ -1,0 +1,1434 @@
+﻿REPLACE_OR_CREATE:je_tbe_lack_of_control = {
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	group = je_group_internal_affairs
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	is_shown_when_inactive = {
+		any_scope_state = {
+			OR = {
+				has_modifier = TBE_unknow_population
+				has_modifier = TBE_unidentified_population
+				has_modifier = TBE_unreached_population
+				has_modifier = TBE_abysmal_infrastructure
+				has_modifier = TBE_overloaded_infrastructure
+				has_modifier = TBE_lacking_infrastructure
+				has_modifier = TBE_backwar_agriculture
+				has_modifier = TBE_exploitative_agriculture
+				has_modifier = TBE_unequal_agriculture
+				has_modifier = TBE_subpar_agriculture
+			}
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+	
+	immediate = {
+		set_global_variable = {
+			name = lack_of_control_var
+			value = 0
+		}
+		set_global_variable = {
+			name = lack_of_control_count
+			value = 0
+		}
+		set_global_variable = {
+			name = lack_of_control_count2
+			value = 0
+		}
+		every_scope_state = {
+			change_global_variable = {
+				name = lack_of_control_count2
+				add = 1
+			}
+		}
+		set_variable = {
+			name = 25_states_var
+			value = global_var:lack_of_control_count2
+		}
+		change_variable = {
+			name = 25_states_var
+			divide = 4
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_serfdom
+			}
+			change_global_variable = {
+				name = lack_of_control_var
+				add = 1
+			}
+		}
+		
+		##### Unknow population
+		
+		every_scope_state = {
+			limit = {
+				OR = {
+					is_in_geographic_region = geographic_region_india
+					is_in_geographic_region = geographic_region_china
+				}
+				has_modifier = TBE_unknow_population
+			}
+			change_global_variable = {
+				name = lack_of_control_count
+				add = 1
+			}
+		}
+		set_variable = {
+			name = national_unknow_population_share_var
+			value = global_var:lack_of_control_count
+		}
+		if = {
+			limit = {
+				var:national_unknow_population_share_var > var:25_states_var
+			}
+			change_global_variable = {
+				name = lack_of_control_var
+				add = 3
+			}
+			set_variable = {
+				name = loc_pop_var
+				value = 3
+			}
+		}
+		set_global_variable = {
+			name = lack_of_control_count
+			value = 0
+		}
+		
+		##### Abysmal infrastructure
+		
+		every_scope_state = {
+			limit = {
+				OR = {
+					is_in_geographic_region = geographic_region_india
+					is_in_geographic_region = geographic_region_china
+				}
+				has_modifier = TBE_abysmal_infrastructure
+			}
+			change_global_variable = {
+				name = lack_of_control_count
+				add = 1
+			}
+		}
+		set_variable = {
+			name = national_abysmal_infrastructure_share_var
+			value = global_var:lack_of_control_count
+		}
+		if = {
+			limit = {
+				var:national_abysmal_infrastructure_share_var > var:25_states_var
+			}
+			change_global_variable = {
+				name = lack_of_control_var
+				add = 3
+			}
+			set_variable = {
+				name = loc_infra_var
+				value = 3
+			}
+		}
+		set_global_variable = {
+			name = lack_of_control_count
+			value = 0
+		}
+		
+		##### Backwardgriculture
+		
+		every_scope_state = {
+			limit = {
+				OR = {
+					is_in_geographic_region = geographic_region_india
+					is_in_geographic_region = geographic_region_china
+				}
+				has_modifier = TBE_backwar_agriculture
+			}
+			change_global_variable = {
+				name = lack_of_control_count
+				add = 1
+			}
+		}
+		set_variable = {
+			name = national_backward_agriculture_share_var
+			value = global_var:lack_of_control_count
+		}
+		if = {
+			limit = {
+				var:national_backward_agriculture_share_var > var:25_states_var
+			}
+			change_global_variable = {
+				name = lack_of_control_var
+				add = 3
+			}
+			set_variable = {
+				name = loc_agri_var
+				value = 3
+			}
+		}
+		set_global_variable = {
+			name = lack_of_control_count
+			value = 0
+		}
+		
+		##### exploitativegriculture
+		
+		every_scope_state = {
+			limit = {
+				OR = {
+					is_in_geographic_region = geographic_region_india
+					is_in_geographic_region = geographic_region_china
+				}
+				has_modifier = TBE_exploitative_agriculture
+			}
+			change_global_variable = {
+				name = lack_of_control_count
+				add = 1
+			}
+		}
+		set_variable = {
+			name = national_exploitative_agriculture_share_var
+			value = global_var:lack_of_control_count
+		}
+		if = {
+			limit = {
+				var:national_exploitative_agriculture_share_var > var:25_states_var
+				var:loc_agri_var != 3
+			}
+			change_global_variable = {
+				name = lack_of_control_var
+				add = 3
+			}
+			set_variable = {
+				name = loc_agri_var
+				value = 3
+			}
+		}
+		set_global_variable = {
+			name = lack_of_control_count
+			value = 0
+		}
+		scope:journal_entry = { 
+			remove_modifier = TBE_lack_of_control_national
+			add_modifier = {
+				name = TBE_lack_of_control_national
+				multiplier = global_var:lack_of_control_var
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			set_global_variable = {
+				name = lack_of_control_var
+				value = 0
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			set_global_variable = {
+				name = lack_of_control_count2
+				value = 0
+			}
+			every_scope_state = {
+				change_global_variable = {
+					name = lack_of_control_count2
+					add = 1
+				}
+			}
+			set_variable = {
+				name = 25_states_var
+				value = global_var:lack_of_control_count2
+			}
+			change_variable = {
+				name = 25_states_var
+				divide = 4
+			}
+			if = {
+				limit = {
+					has_law_or_variant = law_type:law_serfdom
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 1
+				}
+			}
+			
+			##### Unreached population
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_unreached_population
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						has_decree = decree_local_censuss
+						institution_investment_level = {
+							institution = institution_home_affairs	
+							value = 1
+						}
+						NOT = {
+							OR = {
+								owner = {
+									has_law_or_variant = law_type:law_serfdom
+								}
+								has_modifier = TBE_abysmal_infrastructure
+								has_modifier = TBE_overloaded_infrastructure
+								has_modifier = TBE_backwar_agriculture
+								has_modifier = TBE_exploitative_agriculture
+							}
+						}
+					}
+					random_scope_building = {
+						limit = { 
+							is_building_type = building_government_administration
+						}
+						set_global_variable = {
+							name = census_from_admin
+							value = level
+						}
+						if = {
+							limit = {
+								has_active_production_method = pm_simple_organization
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 500
+							}
+						}
+						else_if = {
+							limit = {
+								has_active_production_method = pm_horizontal_drawer_cabinets
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 1000
+							}
+						}
+						else_if = {
+							limit = {
+								has_active_production_method = pm_vertical_filing_cabinets
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 2000
+							}
+						}
+						else_if = {
+							limit = {
+								has_active_production_method = pm_switch_boards
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 5000
+							}
+						}
+						if = {
+							limit = {
+								building_has_goods_shortage = yes
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 0.2
+							}
+						}
+					}
+					change_variable = {
+						name = unknow_population_census_var
+						add = 100000
+					}
+					change_variable = {
+						name = unknow_population_census_var
+						add = global_var:census_from_admin
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:unknow_population_census_var
+				}
+				remove_modifier = TBE_census_progress
+				remove_modifier = TBE_census_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_census_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = state_population
+					}
+					add_modifier = {
+						name = TBE_census_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_unreached_population
+					remove_modifier = TBE_census_progress
+					remove_modifier = TBE_census_progress_percent
+				}
+			}
+			set_variable = {
+				name = national_unreached_population_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			##### Unidentified population
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_unidentified_population
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						has_decree = decree_local_census
+						NOT = {
+							OR = {
+								owner = {
+									has_law_or_variant = law_type:law_serfdom
+								}
+								has_modifier = TBE_abysmal_infrastructure
+							}
+						}
+					}
+					random_scope_building = {
+						limit = { 
+							is_building_type = building_government_administration
+						}
+						set_global_variable = {
+							name = census_from_admin
+							value = level
+						}
+						if = {
+							limit = {
+								has_active_production_method = pm_simple_organization
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 500
+							}
+						}
+						else_if = {
+							limit = {
+								has_active_production_method = pm_horizontal_drawer_cabinets
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 1000
+							}
+						}
+						else_if = {
+							limit = {
+								has_active_production_method = pm_vertical_filing_cabinets
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 2000
+							}
+						}
+						else_if = {
+							limit = {
+								has_active_production_method = pm_switch_boards
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 5000
+							}
+						}
+						if = {
+							limit = {
+								building_has_goods_shortage = yes
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 0.2
+							}
+						}
+					}
+					change_variable = {
+						name = unknow_population_census_var
+						add = 100000
+					}
+					change_variable = {
+						name = unknow_population_census_var
+						add = global_var:census_from_admin
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:unknow_population_census_var
+				}
+				remove_modifier = TBE_census_progress
+				remove_modifier = TBE_census_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_census_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = state_population
+					}
+					add_modifier = {
+						name = TBE_census_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_unidentified_population
+					remove_modifier = TBE_census_progress
+					remove_modifier = TBE_census_progress_percent
+					add_modifier = {
+						name = TBE_unreached_population
+					}
+					set_variable = {
+						name = unknow_population_census_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				name = national_unidentified_population_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			##### Unknow population
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_unknow_population
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						has_decree = decree_local_census
+					}
+					random_scope_building = {
+						limit = { 
+							is_building_type = building_government_administration
+						}
+						set_global_variable = {
+							name = census_from_admin
+							value = level
+						}
+						if = {
+							limit = {
+								has_active_production_method = pm_simple_organization
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 500
+							}
+						}
+						else_if = {
+							limit = {
+								has_active_production_method = pm_horizontal_drawer_cabinets
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 1000
+							}
+						}
+						else_if = {
+							limit = {
+								has_active_production_method = pm_vertical_filing_cabinets
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 2000
+							}
+						}
+						else_if = {
+							limit = {
+								has_active_production_method = pm_switch_boards
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = occupancy
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 5000
+							}
+						}
+						if = {
+							limit = {
+								building_has_goods_shortage = yes
+							}
+							change_global_variable = {
+								name = census_from_admin
+								multiply = 0.2
+							}
+						}
+					}
+					change_variable = {
+						name = unknow_population_census_var
+						add = 100000
+					}
+					change_variable = {
+						name = unknow_population_census_var
+						add = global_var:census_from_admin
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:unknow_population_census_var
+				}
+				remove_modifier = TBE_census_progress
+				remove_modifier = TBE_census_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_census_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = state_population
+					}
+					add_modifier = {
+						name = TBE_census_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_unknow_population
+					remove_modifier = TBE_census_progress
+					remove_modifier = TBE_census_progress_percent
+					add_modifier = {
+						name = TBE_unidentified_population
+					}
+					set_variable = {
+						name = unknow_population_census_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				name = national_unknow_population_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			##### Lacking Infrastructure
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_lacking_infrastructure
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						any_scope_building = {
+							has_active_production_method = pm_steel_passenger_carriages
+							occupancy >= 0.8
+							building_has_goods_shortage = no
+						}
+						NOT = {
+							OR = {
+								has_modifier = TBE_unknow_population
+								has_modifier = TBE_backwar_agriculture
+								has_modifier = TBE_exploitative_agriculture
+							}
+						}
+					}
+					change_variable = {
+						name = infrastructure_improvement_var	
+						add = 1
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:infrastructure_improvement_var
+				}
+				remove_modifier = TBE_infra_progress
+				remove_modifier = TBE_infra_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_infra_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = 20
+					}
+					add_modifier = {
+						name = TBE_infra_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_lacking_infrastructure
+					remove_modifier = TBE_infra_progress
+					remove_modifier = TBE_infra_progress_percent
+					set_variable = {
+						name = infrastructure_improvement_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				name = national_lacking_infrastructure_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			##### Overloaded infrastructure
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_overloaded_infrastructure
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						any_scope_building = {
+							is_building_type = building_railway
+							occupancy >= 0.5
+						}
+					}
+					change_variable = {
+						name = infrastructure_improvement_var
+						add = 1
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:infrastructure_improvement_var
+				}
+				remove_modifier = TBE_infra_progress
+				remove_modifier = TBE_infra_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_infra_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = 20
+					}
+					add_modifier = {
+						name = TBE_infra_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_overloaded_infrastructure
+					remove_modifier = TBE_infra_progress
+					remove_modifier = TBE_infra_progress_percent
+					add_modifier = {
+						name = TBE_lacking_infrastructure
+					}
+					set_variable = {
+						name = infrastructure_improvement_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				name = national_overloaded_infrastructure_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			##### Abysmal infrastructure
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_abysmal_infrastructure
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						has_decree = decree_road_maintenance
+					}
+					change_variable = {
+						name = infrastructure_improvement_var
+						add = 1
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:infrastructure_improvement_var
+				}
+				remove_modifier = TBE_infra_progress
+				remove_modifier = TBE_infra_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_infra_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = 50
+					}
+					add_modifier = {
+						name = TBE_infra_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_abysmal_infrastructure
+					remove_modifier = TBE_infra_progress
+					remove_modifier = TBE_infra_progress_percent
+					add_modifier = {
+						name = TBE_overloaded_infrastructure
+					}
+					set_variable = {
+						name = infrastructure_improvement_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				name = national_abysmal_infrastructure_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			##### Subpar agriculture
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_subpar_agriculture
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						any_scope_building = {
+							OR = {
+								has_active_production_method = pm_fertilization
+								has_active_production_method = pm_fertilization_building_rice_farm
+								has_active_production_method = pm_chemical_fertilizer
+								has_active_production_method = pm_chemical_fertilizer_building_rice_farm
+							}
+							OR = {
+								has_active_production_method = pm_tools
+								has_active_production_method = pm_tools_building_rice_farm
+								has_active_production_method = pm_steam_threshers
+								has_active_production_method = pm_steam_threshers_building_rice_farm
+								has_active_production_method = pm_tractors
+								has_active_production_method = pm_compression_ignition_tractors
+							}
+							occupancy >= 0.8
+							building_has_goods_shortage = no
+						}
+						free_arable_land < 20
+						NOT = {
+							OR = {
+								owner = {
+									has_law_or_variant = law_type:law_serfdom
+								}
+								has_modifier = TBE_unknow_population
+								has_modifier = TBE_overloaded_infrastructure
+								has_modifier = TBE_abysmal_infrastructure
+							}
+						}
+					}
+					change_variable = {
+						name = agricultural_improvement_var
+						add = 5
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:agricultural_improvement_var
+				}
+				remove_modifier = TBE_agri_progress
+				remove_modifier = TBE_agri_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_agri_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = arable_land
+					}
+					add_modifier = {
+						name = TBE_agri_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_subpar_agriculture
+					remove_modifier = TBE_agri_progress
+					remove_modifier = TBE_agri_progress_percent
+					set_variable = {
+						name = agricultural_improvement_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				name = national_subpar_agriculture_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			##### Unequal agriculture
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_unequal_agriculture
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						any_scope_building = {
+							OR = {
+								has_active_production_method = pm_soil_enriching_farming
+								has_active_production_method = pm_soil_enriching_farming_building_rice_farm
+								has_active_production_method = pm_fertilization
+								has_active_production_method = pm_fertilization_building_rice_farm
+								has_active_production_method = pm_chemical_fertilizer
+								has_active_production_method = pm_chemical_fertilizer_building_rice_farm
+							}
+							occupancy >= 0.8
+							building_has_goods_shortage = no
+						}
+						free_arable_land < 80
+						NOT = {
+							OR = {
+								owner = {
+									has_law_or_variant = law_type:law_serfdom
+								}
+								has_modifier = TBE_abysmal_infrastructure
+							}
+						}
+					}
+					change_variable = {
+						name = agricultural_improvement_var
+						add = 5
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:agricultural_improvement_var
+				}
+				remove_modifier = TBE_agri_progress
+				remove_modifier = TBE_agri_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_agri_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = arable_land
+					}
+					add_modifier = {
+						name = TBE_agri_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_unequal_agriculture
+					remove_modifier = TBE_agri_progress
+					remove_modifier = TBE_agri_progress_percent
+					add_modifier = {
+						name = TBE_subpar_agriculture
+					}
+					set_variable = {
+						name = agricultural_improvement_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				name = national_unequal_agriculture_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			##### Backwardgriculture
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_backwar_agriculture
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						has_decree = decree_encourage_agricultural_industry
+						owner = {
+							has_technology_researched = intensive_agriculture
+						}
+						NOT = {
+							owner = {
+								has_law_or_variant = law_type:law_serfdom
+							}
+						}
+					}
+					change_variable = {
+						name = agricultural_improvement_var
+						add = 5
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:agricultural_improvement_var
+				}
+				remove_modifier = TBE_agri_progress
+				remove_modifier = TBE_agri_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_agri_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = arable_land
+					}
+					add_modifier = {
+						name = TBE_agri_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_backwar_agriculture
+					remove_modifier = TBE_agri_progress
+					remove_modifier = TBE_agri_progress_percent
+					add_modifier = {
+						name = TBE_unequal_agriculture
+					}
+					set_variable = {
+						name = agricultural_improvement_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				name = national_backward_agriculture_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			##### exploitativegriculture
+			
+			every_scope_state = {
+				limit = {
+					OR = {
+						is_in_geographic_region = geographic_region_india
+						is_in_geographic_region = geographic_region_china
+					}
+					has_modifier = TBE_exploitative_agriculture
+				}
+				change_global_variable = {
+					name = lack_of_control_count
+					add = 1
+				}
+				if = {
+					limit = {
+						has_decree = decree_encourage_agricultural_industry
+						NOT = {
+							owner = {
+								has_law_or_variant = law_type:law_serfdom
+							}
+						}
+					}
+					change_variable = {
+						name = agricultural_improvement_var
+						add = 5
+					}
+				}
+				set_global_variable = {
+					name = unknow_population_census_var_percent
+					value = var:agricultural_improvement_var
+				}
+				remove_modifier = TBE_agri_progress
+				remove_modifier = TBE_agri_progress_percent
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent > 0
+					}
+					add_modifier = {
+						name = TBE_agri_progress
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+					change_global_variable = {
+						name = unknow_population_census_var_percent
+						divide = arable_land
+					}
+					add_modifier = {
+						name = TBE_agri_progress_percent
+						multiplier = global_var:unknow_population_census_var_percent
+					}
+				}
+				if = {
+					limit = {
+						global_var:unknow_population_census_var_percent >= 1
+					}
+					remove_modifier = TBE_exploitative_agriculture
+					remove_modifier = TBE_agri_progress
+					remove_modifier = TBE_agri_progress_percent
+					add_modifier = {
+						name = TBE_unequal_agriculture
+					}
+					set_variable = {
+						name = agricultural_improvement_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				name = national_exploitative_agriculture_share_var
+				value = global_var:lack_of_control_count
+			}
+			set_global_variable = {
+				name = lack_of_control_count
+				value = 0
+			}
+			
+			
+			set_variable = {
+				name = loc_pop_var
+				value = 0
+			}
+			if = {
+				limit = {
+					var:national_unknow_population_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 3
+				}
+				set_variable = {
+					name = loc_pop_var
+					value = 3
+				}
+			}
+			else_if = {
+				limit = {
+					var:national_unidentified_population_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 2
+				}
+				set_variable = {
+					name = loc_pop_var
+					value = 2
+				}
+			}
+			else_if = {
+				limit = {
+					var:national_unreached_population_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 1
+				}
+				set_variable = {
+					name = loc_pop_var
+					value = 1
+				}
+			}
+			
+			
+			set_variable = {
+				name = loc_infra_var
+				value = 0
+			}
+			if = {
+				limit = {
+					var:national_abysmal_infrastructure_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 3
+				}
+				set_variable = {
+					name = loc_infra_var
+					value = 3
+				}
+			}
+			else_if = {
+				limit = {
+					var:national_overloaded_infrastructure_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 2
+				}
+				set_variable = {
+					name = loc_infra_var
+					value = 2
+				}
+			}
+			else_if = {
+				limit = {
+					var:national_lacking_infrastructure_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 1
+				}
+				set_variable = {
+					name = loc_infra_var
+					value = 1
+				}
+			}
+			
+			set_variable = {
+				name = loc_agri_var
+				value = 0
+			}
+			if = {
+				limit = {
+					var:national_backward_agriculture_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 3
+				}
+				set_variable = {
+					name = loc_agri_var
+					value = 4
+				}
+			}
+			else_if = {
+				limit = {
+					var:national_exploitative_agriculture_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 3
+				}
+				set_variable = {
+					name = loc_agri_var
+					value = 3
+				}
+			}
+			else_if = {
+				limit = {
+					var:national_unequal_agriculture_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 2
+				}
+				set_variable = {
+					name = loc_agri_var
+					value = 2
+				}
+			}
+			else_if = {
+				limit = {
+					var:national_subpar_agriculture_share_var > var:25_states_var
+				}
+				change_global_variable = {
+					name = lack_of_control_var
+					add = 1
+				}
+				set_variable = {
+					name = loc_agri_var
+					value = 1
+				}
+			}
+			
+			scope:journal_entry = { 
+				remove_modifier = TBE_lack_of_control_national
+				add_modifier = {
+					name = TBE_lack_of_control_national
+					multiplier = global_var:lack_of_control_var
+				}
+			}
+		}
+	}
+}

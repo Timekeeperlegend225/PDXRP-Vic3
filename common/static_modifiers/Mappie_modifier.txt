@@ -1,0 +1,41 @@
+gm_headofgovernment = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	character_prominence_add = 10
+	character_loyalty_add = 10
+}
+
+gm_leaderofopposition = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	character_prominence_add = 10
+	character_loyalty_add = -10
+}
+
+gm_leaderofarmedforces = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	character_prominence_add = 10
+}
+
+gm_minister = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	character_prominence_add = 5
+}
+
+gm_prominentcitizen = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	character_prominence_add = 5
+}
+
+gm_igincabinet = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	interest_group_pol_str_mult = 0.03
+}
+
+gm_igprominentcharacter = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	interest_group_pop_attraction_mult = 0.10
+}
+
+gm_igapproval = {
+	icon = gfx/interface/icons/generic_icons/prestige.dds
+	interest_group_approval_add = 1
+}

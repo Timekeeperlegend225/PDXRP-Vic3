@@ -1,0 +1,484 @@
+﻿unknow_population_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_unknow_population_share_var > 0
+		}
+
+		localization_key = unknow_populationy_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+unknow_population_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_pop_var = 3
+		}
+
+		localization_key = malus_25_3_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+unidentified_population_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_unidentified_population_share_var > 0
+		}
+
+		localization_key = unidentified_populationy_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+unidentified_population_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_pop_var = 2
+		}
+
+		localization_key = malus_25_2_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+unreached_population_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_unreached_population_share_var > 0
+		}
+
+		localization_key = unreached_populationy_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+unreached_population_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_pop_var = 1
+		}
+
+		localization_key = malus_25_1_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+abysmal_infrastructure_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_abysmal_infrastructure_share_var > 0
+		}
+
+		localization_key = abysmal_infrastructure_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+abysmal_infrastructure_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_infra_var = 3
+		}
+
+		localization_key = malus_25_3_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+overloaded_infrastructure_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_overloaded_infrastructure_share_var > 0
+		}
+
+		localization_key = overloaded_infrastructure_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+overloaded_infrastructure_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_infra_var = 2
+		}
+
+		localization_key = malus_25_2_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+lacking_infrastructure_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_lacking_infrastructure_share_var > 0
+		}
+
+		localization_key = lacking_infrastructure_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+lacking_infrastructure_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_infra_var = 1
+		}
+
+		localization_key = malus_25_1_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+backward_agriculture_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_backward_agriculture_share_var > 0
+		}
+
+		localization_key = backward_agriculture_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+backward_agriculture_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_agri_var = 4
+		}
+
+		localization_key = malus_25_3_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+exploitative_agriculture_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_exploitative_agriculture_share_var > 0
+		}
+
+		localization_key = exploitative_agriculture_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+exploitative_agriculture_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_agri_var = 3
+		}
+
+		localization_key = malus_25_3_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+unequal_agriculture_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_unequal_agriculture_share_var > 0
+		}
+
+		localization_key = unequal_agriculture_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+unequal_agriculture_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_agri_var = 2
+		}
+
+		localization_key = malus_25_2_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+subpar_agriculture_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:national_subpar_agriculture_share_var > 0
+		}
+
+		localization_key = subpar_agriculture_yes_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+subpar_agriculture_percent_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			var:loc_agri_var = 1
+		}
+
+		localization_key = malus_25_1_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}
+
+central_archive_checkbox = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			has_technology_researched = central_archives
+		}
+		localization_key = checkbox_ticked
+	}
+	text = {
+		localization_key = checkbox_unticked
+	}
+}
+
+identification_documents_checkbox = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			has_technology_researched = identification_documents
+		}
+		localization_key = checkbox_ticked
+	}
+	text = {
+		localization_key = checkbox_unticked
+	}
+}
+
+central_planning_checkbox = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			has_technology_researched = central_planning
+		}
+		localization_key = checkbox_ticked
+	}
+	text = {
+		localization_key = checkbox_unticked
+	}
+}
+
+mechanized_farming_checkbox = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			has_technology_researched = mechanized_farming
+		}
+		localization_key = checkbox_ticked
+	}
+	text = {
+		localization_key = checkbox_unticked
+	}
+}
+
+intensive_agriculture_checkbox = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			has_technology_researched = intensive_agriculture
+		}
+		localization_key = checkbox_ticked
+	}
+	text = {
+		localization_key = checkbox_unticked
+	}
+}
+
+no_serfdom_checkbox = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			NOT = {
+				has_law_or_variant = law_type:law_serfdom
+			}
+		}
+		localization_key = checkbox_ticked
+	}
+	text = {
+		localization_key = checkbox_unticked
+	}
+}
+
+home_affairs_institution_3_checkbox = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			institution_investment_level = {
+				institution = institution_home_affairs
+				value > 3
+			}
+		}
+		localization_key = checkbox_ticked
+	}
+	text = {
+		localization_key = checkbox_unticked
+	}
+}
+
+chinese_or_not_serfdom_loc = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			has_law = law_type:law_rural_serfdom
+		}
+		localization_key = chinese_serfdom_loc
+	}
+	text = {
+		localization_key = no_chinese_serfdom_loc
+	}
+}
+
+serfdom_lack_of_control_loc = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			has_law_or_variant = law_type:law_serfdom
+		}
+		localization_key = serfdom_lack_of_control_yes_loc
+	}
+	text = {
+		localization_key = void_loc
+	}
+}
+
+threshing_machine_checkbox = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			has_technology_researched = threshing_machine
+		}
+		localization_key = checkbox_ticked
+	}
+	text = {
+		localization_key = checkbox_unticked
+	}
+}

@@ -1,0 +1,74 @@
+﻿REPLACE_OR_CREATE:state_census_progress={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_montly_census_progress={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_census_progress_percent={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_infra_progress={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_montly_infra_progress={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_census_infra_percent={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_agri_progress={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_montly_agri_progress={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_census_agri_percent={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
