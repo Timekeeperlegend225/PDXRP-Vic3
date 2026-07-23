@@ -1458,6 +1458,8 @@ POPS = {
 				religion = animist
 				size = 6000
 			}
+		}
+		region_state:GBR = {
 			create_pop = {
 				culture = french
 				size = 2088
@@ -1477,7 +1479,7 @@ POPS = {
 		}
 	}
 	s:STATE_ORISSA = {
-		region_state:MRT = {
+		region_state:BIC = {
 			create_pop = {
 				culture = oriya
 				size = 35625
@@ -1541,7 +1543,7 @@ POPS = {
 		}
 	}
 	s:STATE_CIRCARS = {
-		region_state:FIC = {
+		region_state:BIC = {
 			create_pop = {
 				culture = telegu
 				size = 2295020
@@ -1753,7 +1755,7 @@ POPS = {
 		}
 	}
 	s:STATE_MADRAS = {
-		region_state:FIC = {
+		region_state:FRA = {
 			create_pop = {
 				culture = tamil
 				size = 182284
@@ -1772,6 +1774,23 @@ POPS = {
 				religion = catholic
 				size = 27773
 			}
+		}
+		region_state:DEN = {
+			create_pop = {
+				culture = tamil
+				size = 30102
+			}
+			create_pop = {
+				culture = tamil
+				religion = sunni
+				size = 4010
+			}
+			create_pop = {
+				culture = danish
+				size = 201
+			}
+		}
+		region_state:BIC = {
 			create_pop = {
 				culture = tamil
 				size = 7168370
@@ -1782,16 +1801,16 @@ POPS = {
 				size = 61145
 			}
 			create_pop = {
-				culture = french
+				culture = british
 				size = 2500
 				pop_type = bureaucrats
 			}
 			create_pop = {
-				culture = french
+				culture = british
 				size = 15890
 			}
 			create_pop = {
-				culture = french
+				culture = scottish
 				size = 6123
 				pop_type = bureaucrats
 			}
@@ -1818,21 +1837,6 @@ POPS = {
 				pop_type = slaves
 				culture = kannada
 				size = 34002
-			}
-		}
-		region_state:DEN = {
-			create_pop = {
-				culture = tamil
-				size = 30102
-			}
-			create_pop = {
-				culture = tamil
-				religion = sunni
-				size = 4010
-			}
-			create_pop = {
-				culture = danish
-				size = 201
 			}
 		}
 		region_state:PUD = {
@@ -2252,7 +2256,7 @@ POPS = {
 		}
 	}
 	s:STATE_AGRA = {
-		region_state:AWA = {
+		region_state:MRT = {
 			create_pop = {
 				culture = hindustani
 				size = 1794s2075

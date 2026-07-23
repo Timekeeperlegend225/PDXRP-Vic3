@@ -341,10 +341,6 @@
 			country = c:JAI
 			type = vassal
 		}
-		create_diplomatic_pact = {
-			country = c:MYB
-			type = vassal
-		}
 	}
 	c:BIC ?= {
 		create_diplomatic_pact = {
@@ -365,6 +361,14 @@
 		}
 		create_diplomatic_pact = {
 			country = c:JEY
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:PUD
+			type = puppet
+		}
+		create_diplomatic_pact = {
+			country = c:MYB
 			type = puppet
 		}
 	}
@@ -426,6 +430,10 @@
 		create_diplomatic_pact = {
 			country = c:ARB
 			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:KAL
+			type = tributary
 		}
 	}
 

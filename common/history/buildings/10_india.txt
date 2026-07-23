@@ -820,7 +820,7 @@
 		}
 	}
 	s:STATE_AGRA= {
-		region_state:AWA = {
+		region_state:MRT = {
 			create_building = {
 				building = "building_taj_mahal"
 				level=1
@@ -829,7 +829,7 @@
 				building = "building_government_administration"
 				add_ownership = {
 					country= {
-						country = "c:AWA"
+						country = "c:MRT"
 						levels = 3
 					}
 				}
@@ -842,7 +842,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:AWA"
+						country="c:MRT"
 						levels=1
 						region="STATE_AGRA"
 					}
@@ -854,7 +854,7 @@
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:AWA"
+						country = "c:MRT"
 						levels = 3
 						region = "STATE_AWADH"
 					}
@@ -867,7 +867,7 @@
 				add_ownership = {
 					building = {
 						type = "building_logging_camp"
-						country = "c:AWA"
+						country = "c:MRT"
 						levels = 2
 						region = "STATE_AGRA"
 					}
@@ -880,7 +880,7 @@
 				add_ownership = {
 					building = {
 						type = "building_financial_district"
-						country = "c:AWA"
+						country = "c:MRT"
 						levels = 1
 						region = "STATE_AGRA"
 					}
@@ -893,7 +893,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:AWA"
+						country="c:MRT"
 						levels=1
 						region="STATE_AGRA"
 					}
@@ -906,7 +906,7 @@
 				add_ownership = {
 					building = {
 						type = "building_textile_mill"
-						country = "c:AWA"
+						country = "c:MRT"
 						levels = 2
 						region = "STATE_AGRA"
 					}
@@ -919,7 +919,7 @@
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:AWA"
+						country = "c:MRT"
 						levels = 4
 						region = "STATE_AGRA"
 					}
@@ -2061,13 +2061,13 @@
 				activate_production_methods = { "default_building_sugar_plantation" "pm_road_carts" }
 			}
 		}
-		region_state:MRT = {
+		region_state:BIC = {
 			create_building = {
 				building = "building_sugar_plantation"
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:MRT"
+						country = "c:BIC"
 						levels = 1
 						region = "STATE_ORISSA"
 					}
@@ -2079,7 +2079,7 @@
 				building = "building_port"
 				add_ownership = {
 					country= {
-						country = "c:MRT"
+						country = "c:BIC"
 						levels = 1
 					}
 				}
@@ -2091,7 +2091,7 @@
 				add_ownership = {
 					building = {
 						type = "building_logging_camp"
-						country = "c:MRT"
+						country = "c:BIC"
 						levels = 4
 						region = "STATE_ORISSA"
 					}
@@ -2117,12 +2117,12 @@
 				activate_production_methods = { "pm_simple_forestry"  "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
 			}
 		}
-		region_state:FIC = {
+		region_state:BIC = {
 			create_building = {
 				building = "building_government_administration"
 				add_ownership = {
 					country= {
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 5
 					}
 				}
@@ -2135,7 +2135,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:FIC"
+						country="c:BIC"
 						levels=1
 						region="STATE_MADRAS"
 					}
@@ -2146,7 +2146,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					country= {
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 1
 					}
 				}
@@ -2158,7 +2158,7 @@
 				add_ownership = {
 					building = {
 						type = "building_textile_mill"
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 5
 						region = "STATE_CIRCARS"
 					}
@@ -2171,7 +2171,7 @@
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 1
 						region = "STATE_CIRCARS"
 					}
@@ -2190,7 +2190,7 @@
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 1
 						region = "STATE_CIRCARS"
 					}
@@ -2222,7 +2222,7 @@
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 1
 						region = "STATE_CIRCARS"
 					}
@@ -2240,7 +2240,7 @@
 				building = "building_port"
 				add_ownership = {
 					country= {
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 1
 					}
 				}
@@ -2381,7 +2381,7 @@
 						levels = 1
 					}
 					country= {
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 1
 					}
 				}
@@ -2439,15 +2439,15 @@
 		}
 	}
 	s:STATE_MADRAS= {
-		region_state:FIC= {
+		region_state:BIC= {
 			create_building = {
 				building = "building_dye_plantation"
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:FRA"
+						country = "c:GBR"
 						levels = 1
-						region = "STATE_ILE_DE_FRANCE"
+						region = "STATE_HOME_COUNTIES"
 					}
 				}
 				reserves = 1
@@ -2457,12 +2457,12 @@
 				building = "building_port"
 				add_ownership = {
 					country= {
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 1
 					}
 					building={
 						type="building_financial_district"
-						country="c:FIC"
+						country="c:BIC"
 						levels=2
 						region="STATE_MADRAS"
 					}
@@ -2474,7 +2474,7 @@
 				building = "building_government_administration"
 				add_ownership = {
 					country= {
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 8
 					}
 				}
@@ -2487,7 +2487,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:FIC"
+						country="c:BIC"
 						levels=1
 						region="STATE_MADRAS"
 					}
@@ -2498,7 +2498,7 @@
 				building = "building_construction_sector"
 				add_ownership = {
 					country= {
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 1
 					}
 				}
@@ -2510,15 +2510,15 @@
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 2
 						region = "STATE_MADRAS"
 					}
 					building = {
 						type = "building_manor_house"
-						country = "c:FRA"
+						country = "c:GBR"
 						levels = 3
-						region = "STATE_ILE_DE_FRANCE"
+						region = "STATE_HOME_COUNTIES"
 					}
 				}
 				reserves = 1
@@ -2529,7 +2529,7 @@
 				add_ownership = {
 					building = {
 						type = "building_textile_mill"
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 4
 						region = "STATE_MADRAS"
 					}
@@ -2541,7 +2541,7 @@
 				building = "building_arms_industry"
 				add_ownership = {
 					country= {
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 2
 					}
 				}
@@ -2553,7 +2553,7 @@
 				add_ownership = {
 					building={
 						type="building_financial_district"
-						country="c:FIC"
+						country="c:BIC"
 						levels=2
 						region="STATE_MADRAS"
 					}
@@ -2566,13 +2566,13 @@
 				add_ownership = {
 					building = {
 						type = "building_logging_camp"
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 2
 						region = "STATE_MADRAS"
 					}
 					building={
 						type="building_financial_district"
-						country="c:FIC"
+						country="c:BIC"
 						levels=2
 						region="STATE_MADRAS"
 					}
@@ -2585,7 +2585,7 @@
 				add_ownership = {
 					building = {
 						type = "building_fishing_wharf"
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 2
 						region = "STATE_MADRAS"
 					}
@@ -2598,9 +2598,9 @@
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:FRA"
+						country = "c:GBR"
 						levels = 6
-						region = "STATE_ILE_DE_FRANCE"
+						region = "STATE_HOME_COUNTIES"
 					}
 				}
 				reserves = 1
@@ -2610,7 +2610,7 @@
 				building = "building_port"
 				add_ownership = {
 					country= {
-						country = "c:FIC"
+						country = "c:BIC"
 						levels = 1
 					}
 				}
