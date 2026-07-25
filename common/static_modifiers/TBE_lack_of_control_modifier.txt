@@ -88,8 +88,8 @@ TBE_exploitative_agriculture = {
 	building_minimum_incorporated_subsistence_employment_add = 0.25
 	state_minimum_incorporated_subsistence_arable_land_add = 0.35
 	state_market_access_price_impact = -0.06
-	building_peasants_standard_of_living_add = -0.5
-	building_group_bg_plantations_standard_of_living_add = -0.5
+	building_peasants_standard_of_living_add = -0.3
+	building_group_bg_plantations_standard_of_living_add = -0.3
 }
 
 TBE_unequal_agriculture = {
@@ -97,8 +97,8 @@ TBE_unequal_agriculture = {
 	building_minimum_incorporated_subsistence_employment_add = 0.20
 	state_minimum_incorporated_subsistence_arable_land_add = 0.30
 	state_market_access_price_impact = -0.04
-	building_peasants_standard_of_living_add = -0.3
-	building_group_bg_plantations_standard_of_living_add = -0.3
+	building_peasants_standard_of_living_add = -0.1
+	building_group_bg_plantations_standard_of_living_add = -0.1
 }
 
 TBE_subpar_agriculture = {

@@ -51,14 +51,6 @@ principle_group_vassalization = {
 	}
 }
 
-principle_group_advanced_research = {
-	levels = {
-		principle_advanced_research_1
-		principle_advanced_research_2
-		principle_advanced_research_3
-	}
-}
-
 principle_group_defensive_cooperation = {
 	primary_for_identity = identity_military_treaty_organization
 

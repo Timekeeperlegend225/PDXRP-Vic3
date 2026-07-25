@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:MOA ?= {
+		create_character = {
+			template = MOA_honore_v
+		}	
+
+		create_character = {
+			template = MOA_charles_III
+		}
+	}
+}

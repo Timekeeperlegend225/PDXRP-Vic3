@@ -1,0 +1,35 @@
+﻿REPLACE_OR_CREATE:pm_base_casino = {
+	texture = "gfx/interface/icons/production_method_icons/unused/stock_exchange.dds"
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_influence_add = 1000
+			ship_interest_gain_mult = 10
+			country_minting_add = 10000
+			country_gold_reserve_limit_mult = 256
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_aristocrats_add = 200
+			building_employment_capitalists_add = 200
+			building_employment_clerks_add = 200
+			building_employment_shopkeepers_add = 200
+			building_employment_laborers_add = 200
+		}
+		
+		workforce_scaled = {
+			goods_output_fruit_add = 1
+			goods_output_services_add = 20
+			goods_output_fine_art_add = 5
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_weekly_trades_add = 1
+			state_trade_capacity_add = 50
+		}
+	}
+}

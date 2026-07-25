@@ -1,0 +1,70 @@
+### Monaco character template file ###
+
+# Monaco - MOA
+
+### Royals
+
+MOA_honore_v = { ## Only present since Charles III is 17 at game start. Dies in one year.
+	first_name = Honore
+	last_name = Gabriel_Grimaldi
+	historical = yes
+	ruler = yes
+	birth_date = 1778.05.13
+	culture = primary_culture
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_authoritarian
+	traits = {
+		sickly
+		expensive_tastes
+		imperious
+		reserved
+	}
+}
+
+## Traditional heir died before game (alt-history), throne passes to brother's son
+
+MOA_charles_III = {
+	first_name = Charles
+	last_name = Honore_Grimaldi
+	historical = yes
+	heir = yes
+	birth_date = 1818.12.08
+	culture = primary_culture
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_market_liberal
+	traits = {
+		meticulous
+		innovative
+	}
+}
+
+MOA_albert = {
+	first_name = Albert
+	last_name = Charles_Grimaldi
+	historical = yes
+	heir = yes
+	birth_date = 1848.11.13
+	interest_group = ig_intelligentsia # Focused primarily on his studies and research
+	ideology = ideology_reformer # Historically was forced to bring in a constitution by protest, but we can abstract
+	traits = {
+		erudite
+		hedonist # Was seen with prostitute, had marriage annulled
+		romantic # Technically his wife, but close enough
+		literary
+	}
+}
+
+MOA_louis_II = {
+	first_name = Louis
+	last_name = Antoine_Grimaldi
+	historical = yes
+	heir = yes
+	birth_date = 1870.07.12
+	interest_group = ig_armed_forces
+	ideology = ideology_integralist # Supported the Vichy Regime, closest we have to fascist monarchist
+	traits = {
+		direct # Was decisive in removing corrupt casino leaders
+		inept # Was completely indecisive with the country itself
+		brave # Received the Legion of Honor
+	}
+}

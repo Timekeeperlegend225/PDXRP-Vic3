@@ -145,3 +145,7 @@ gm_ig_attraction = {
 	icon = gfx/interface/icons/generic_icons/popularity.dds
 	interest_group_pop_attraction_mult = 0.01
 }
+
+gm_warapproval = {
+	icon = gfx/interface/icons/ig_icons/armed_forces.dds
+}

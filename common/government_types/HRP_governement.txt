@@ -1,0 +1,38 @@
+﻿REPLACE:gov_prince = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_PRINCE"
+	female_ruler = "" # Empty on purpose
+
+	male_heir = "RULER_TITLE_HEIR_APPARENT"
+	female_heir = "" # Empty on purpose
+
+	possible = {
+		has_law = law_type:law_monarchy
+		OR = {
+			AND = { exists = c:SER c:SER ?= ROOT }
+			AND = { exists = c:WAL c:WAL ?= ROOT }
+			AND = { exists = c:MOL c:MOL ?= ROOT }
+			AND = { exists = c:MOA c:MOA ?= ROOT }
+			AND = {
+				exists = c:BUL
+				c:BUL ?= ROOT
+				NOT = {
+					Ruler ?= {
+						has_template = BUL_ferdinand_i
+					}
+				}
+			}
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+		is_domain_alliance_gov = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}

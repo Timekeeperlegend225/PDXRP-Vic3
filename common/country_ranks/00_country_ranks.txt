@@ -43,6 +43,7 @@ great_power = {
 		state_migration_pull_mult = 0.20
 		country_leverage_resistance_add = 1000
 		country_free_charters_add = 1
+		country_tech_spread_mult = -0.10
 	}
 }
 
@@ -75,6 +76,7 @@ major_power = {
 		country_support_independence_weekly_liberty_desire_add = 0.1
 		state_migration_pull_mult = 0.05
 		country_leverage_resistance_add = 750
+		country_tech_spread_mult = -0.05
 	}
 }
 
@@ -148,7 +150,7 @@ unrecognized_major_power = {
 	modifier = {
 		country_influence_add = 750
 		country_diplomatic_play_maneuvers_add = 75
-		country_tech_spread_mult = -0.15
+		country_tech_spread_mult = -0.10
 		country_loan_interest_rate_mult = 0.5
 		country_agitator_slots_add = 2
 		country_support_independence_weekly_liberty_desire_add = 0.1
@@ -178,7 +180,7 @@ unrecognized_regional_power = {
 	modifier = {
 		country_influence_add = 600
 		country_diplomatic_play_maneuvers_add = 60
-		country_tech_spread_mult = -0.20
+		country_tech_spread_mult = -0.10
 		country_loan_interest_rate_mult = 0.75
 		state_migration_pull_mult = -0.25
 		country_agitator_slots_add = 1
@@ -205,7 +207,7 @@ unrecognized_power = {
 	modifier = {
 		country_influence_add = 500
 		country_diplomatic_play_maneuvers_add = 50
-		country_tech_spread_mult = -0.25
+		country_tech_spread_mult = -0.10
 		country_loan_interest_rate_mult = 1.0
 		country_agitator_slots_add = 1
 		country_support_independence_weekly_liberty_desire_add = 0.01

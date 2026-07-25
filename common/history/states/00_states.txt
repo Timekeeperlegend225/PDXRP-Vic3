@@ -75,7 +75,7 @@ STATES = {
 		}
 
 		create_state = {
-			country = c:MNC
+			country = c:MOA
 			owned_provinces = { x54728A }
 		}
 
@@ -8187,15 +8187,7 @@ STATES = {
 	s:STATE_WESTPHALIA = {
 		create_state = {
 			country = c:PRU
-			owned_provinces = { x1DD141 xA08061 x218061 x418021 x4101A0 x910095 }
-		}
-		create_state = {
-			country = c:LIP
-			owned_provinces = { x9F0060 }
-		}
-		create_state = {
-			country = c:SCM
-			owned_provinces = { x1BA4F6 }
+			owned_provinces = { x1DD141 xA08061 x218061 x418021 x4101A0 x910095 x9F0060 x1BA4F6 }
 		}
 
 		add_homeland = cu:north_german
@@ -8203,11 +8195,7 @@ STATES = {
 	s:STATE_ANHALT = {
 		create_state = {
 			country = c:PRU
-			owned_provinces = { xA080E0 x12694A x618061 xCF5D8E x34386E xCBA4A5 xE0C0A0 xA51232 x3C9B93 }
-		}
-		create_state = {
-			country = c:ANH
-			owned_provinces = { x8A448C xED8F7B }
+			owned_provinces = { xA080E0 x12694A x618061 xCF5D8E x34386E xCBA4A5 xE0C0A0 xA51232 x3C9B93 x8A448C xED8F7B }
 		}
 
 		add_homeland = cu:north_german
@@ -8357,24 +8345,8 @@ STATES = {
 	}
 	s:STATE_SAXONY = {
 		create_state = {
-			country = c:SAX
-			owned_provinces = { x169073 x795368 x917939 xAFDFBF x43CE26 x31E0C0 }
-		}
-		create_state = {
-			country = c:MEI
-			owned_provinces = { x5141A0 xD0C021 }
-		}
-		create_state = {
-			country = c:WEI
-			owned_provinces = { xC00A37 }
-		}
-		create_state = {
-			country = c:COB
-			owned_provinces = { x66FE0A }
-		}
-		create_state = {
-			country = c:SCW
-			owned_provinces = { x51C021 }
+			country = c:PRU
+			owned_provinces = { x169073 x795368 x917939 xAFDFBF x43CE26 x31E0C0 x5141A0 xD0C021 xC00A37 x66FE0A x51C021 }
 		}
 
 		add_homeland = cu:north_german
@@ -8386,12 +8358,8 @@ STATES = {
 			owned_provinces = { x2180E0 }
 		}
 		create_state = {
-			country = c:BRA
-			owned_provinces = { xA61E6E x43D537 }
-		}
-		create_state = {
 			country = c:PRU
-			owned_provinces = { x4C16EA xA001E0 }
+			owned_provinces = { x4C16EA xA001E0 xA61E6E x43D537 }
 		}
 
 		add_homeland = cu:north_german
@@ -8508,12 +8476,8 @@ STATES = {
 	}
 	s:STATE_MECKLENBURG = {
 		create_state = {
-			country = c:MEC
-			owned_provinces = { xD8F441 xE080A0 x4545BE x12E54F x24CA48 }
-		}
-		create_state = {
-			country = c:MST
-			owned_provinces = { xE041A0 xD9A469 }
+			country = c:PRU
+			owned_provinces = { xD8F441 xE080A0 x4545BE x12E54F x24CA48 xE041A0 xD9A469 }
 		}
 
 		add_homeland = cu:north_german

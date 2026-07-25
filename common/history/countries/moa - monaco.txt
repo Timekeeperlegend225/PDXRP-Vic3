@@ -1,0 +1,42 @@
+COUNTRIES = {
+	c:MOA ?= {
+		effect_starting_technology_tier_1_tech = yes
+
+		set_tax_level = medium
+		
+		add_taxed_goods = g:wine
+		add_taxed_goods = g:liquor
+		
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_consumption_based_taxation
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_free_trade
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_no_colonial_affairs
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_diplomatic_navy
+		activate_law = law_type:law_poor_laws
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_combination_acts
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_tourism_city
+
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 3
+		}
+
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 1
+		}
+	}
+}
