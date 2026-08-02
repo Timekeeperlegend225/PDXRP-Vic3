@@ -20,6 +20,7 @@ REPLACE_OR_CREATE:company_ubs = {
 	potential = {
 		country_has_primary_culture = cu:alemannic
 		country_has_primary_culture = cu:francoprovencal
+		has_interest_marker_in_region = sr:region_central_europe
 	}	
 
 	possible = { 
@@ -254,7 +255,7 @@ REPLACE_OR_CREATE:company_fn_herstal = {
 # Doosan Group
 REPLACE_OR_CREATE:company_doosan = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/doosan.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
 	flavored_company = yes
 
@@ -282,6 +283,7 @@ REPLACE_OR_CREATE:company_doosan = {
 
 	potential = {
 		country_has_primary_culture = cu:korean
+		has_interest_marker_in_region = sr:region_northeast_asia
 	}
 
 	possible = {
@@ -331,8 +333,222 @@ REPLACE_OR_CREATE:company_doosan = {
 	}
 }
 
+# Industrias Peñoles, SAB de CV
+REPLACE_OR_CREATE:company_penoles = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/penoles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
+	flavored_company = yes
 
+	preferred_headquarters = { STATE_MEXICO }
+
+	building_types = {
+		building_gold_mine
+		building_lead_mine
+	}
+
+	extension_building_types = {
+		building_sulfur_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_america
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MEXICO
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_lead_mine
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_minting_mult = 0.1
+		state_migration_pull_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+					is_building_type = building_lead_mine
+				level >= 3
+			}
+		}
+	}
+	
+	ai_construction_targets = {
+		building_lead_mine = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_MEXICO
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# El Puerto de Liverpool, S.A.B. de C.V.
+REPLACE_OR_CREATE:company_puertoliverpool = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/puertoliverpool.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_MEXICO }
+
+	building_types = {
+		building_textile_mill
+		building_furniture_manufactory
+	}
+
+	extension_building_types = {
+		building_cotton_plantation
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_clothes
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_clothes_complete_tt
+			has_variable = prestige_good_generic_clothes_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_america
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MEXICO
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mill
+					is_building_type = building_furniture_manufactory
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.05
+		state_migration_pull_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mill
+					is_building_type = building_furniture_manufactory
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	ai_construction_targets = {
+		building_textile_mill = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_MEXICO
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# CEMEX S.A.B. de C.V.
+REPLACE_OR_CREATE:company_cemex = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/cemex.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_RIO_GRANDE }
+
+	building_types = {
+		building_tooling_workshop
+		building_glassworks
+	}
+
+	extension_building_types = {
+		building_synthetics_plant
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_tools
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_tools_complete_tt
+			has_variable = prestige_good_generic_tools_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_america
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_RIO_GRANDE
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tooling_workshop
+					is_building_type = building_glassworks
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+		building_construction_sector_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tooling_workshop
+					is_building_type = building_glassworks
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	ai_construction_targets = {
+		building_tooling_workshop = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_RIO_GRANDE
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
 
 # Jose Cuervo
 REPLACE_OR_CREATE:company_jose_cuervo = {

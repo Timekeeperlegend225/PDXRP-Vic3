@@ -1207,13 +1207,13 @@ REPLACE:company_rheinmetall = {
 	preferred_headquarters = { STATE_RUHR STATE_NORTH_RHINE }
 
 	building_types = {
-		building_artillery_foundry
-		building_munition_plants
+		building_tooling_workshop
+		building_munition_plant
 		building_explosives_factory
 	}
 
 	extension_building_types = {
-		building_motor_industry
+		building_automotive_industry
 		building_steel_mill
 	}
 
@@ -1236,26 +1236,28 @@ REPLACE:company_rheinmetall = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
 				OR = {
-					state_region = s:STATE_RUHR
-					state_region = s:STATE_NORTH_RHINE
+					# state_region = s:STATE_RUHR
+					# state_region = s:STATE_NORTH_RHINE
+					state_region = s:STATE_SAXONY
 				}
 			}
 		}
 	}
 
 	possible = {
-		has_technology_researched = automatic_machine_guns
+		has_technology_researched = handcranked_machine_gun
 		any_scope_state = {
 			OR = {
-				state_region = s:STATE_RUHR
-				state_region = s:STATE_NORTH_RHINE
+				# state_region = s:STATE_RUHR
+				# state_region = s:STATE_NORTH_RHINE
+				state_region = s:STATE_SAXONY
 			}
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
 					is_building_type = building_arms_industry
-					is_building_type = building_artillery_foundry
-					is_building_type = building_munition_plants
+					is_building_type = building_tooling_workshop
+					is_building_type = building_munition_plant
 				}
 				level >= 5
 			}
@@ -1269,7 +1271,7 @@ REPLACE:company_rheinmetall = {
 	}
 
 	ai_will_do = {
-		has_technology_researched = automatic_machine_guns
+		has_technology_researched = handcranked_machine_gun
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_RUHR
@@ -1300,7 +1302,7 @@ REPLACE:company_rheinmetall = {
 				is_incorporated = yes
 			}
 		}
-		building_artillery_foundry = {
+		building_tooling_workshop = {
 			level = 5
 			state_trigger = {
 				OR = {
@@ -1308,6 +1310,89 @@ REPLACE:company_rheinmetall = {
 					state_region = s:STATE_NORTH_RHINE
 				}
 				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Königliche Porzellan-Manufaktur Meissen
+REPLACE:company_konigliche_porzellan_manufaktur_meissen = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_konigliche_porzellan_manufaktur_meissen.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	category = bureaucrat_owned
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_SAXONY }
+
+	building_types = {
+		building_glassworks
+		building_iron_mine
+		building_coal_mine
+	}
+
+	extension_building_types = {
+		building_lead_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_meissen_porcelain
+	}
+
+	potential = {
+		has_dlc_feature = mp1_content
+		has_interest_marker_in_region = sr:region_central_europe
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			s:STATE_RHINELAND = {
+				any_scope_state = {
+					owner = root
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = chemical_bleaching
+		any_scope_state = {
+			state_region = s:STATE_RHINELAND
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_glassworks
+					is_building_type = building_coal_mine
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+		building_art_academy_throughput_add = 0.05
+		building_synthetics_plant_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = chemical_bleaching
+		any_scope_state = {
+			state_region = s:STATE_SAXONY
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_glassworks = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SAXONY
 			}
 		}
 	}
@@ -2310,6 +2395,420 @@ REPLACE:company_east_india_company = {
 					region = sr:region_central_india
 					region = sr:region_punjab
 				}
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Norsk Hydroelektrisk Kvælstofaktieselskap
+REPLACE:company_norsk_hydro = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_norsk_hydro.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_WESTERN_NORWAY }
+
+	building_types = {
+		building_chemical_plant
+		building_power_plant
+	}
+
+	extension_building_types = {
+		building_sulfur_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_fertilizer
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_fertilizer_complete_tt
+			has_variable = prestige_good_generic_fertilizer_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_northern_europe
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			s:STATE_WESTERN_NORWAY = {
+				any_scope_state = {
+					owner = root
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_WESTERN_NORWAY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_chemical_plant
+				level >= 5
+			}
+			any_scope_building = {
+				is_building_type = building_power_plant
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_agriculture_throughput_add = 0.1
+		country_production_tech_spread_mult = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_WESTERN_NORWAY
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_chemical_plant = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_WESTERN_NORWAY
+			}
+		}
+		building_power_plant = {
+			level = 1
+			state_trigger = {
+				state_region = s:STATE_WESTERN_NORWAY
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# A.P. Møller (later Mærsk)
+REPLACE:company_ap_moller = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ap_moller.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ZEALAND }
+
+	building_types = {
+		building_port
+		building_logging_camp
+	}
+
+	extension_building_types = {
+		building_shipyard
+		building_steel_mill
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_merchant_marine
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_merchant_marine_complete_tt
+			has_variable = prestige_good_generic_merchant_marine_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_northern_europe
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ZEALAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyard
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_ship_group_supply_ships_construction_efficiency_add = 0.2
+		interest_group_ig_industrialists_pop_attraction_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_ZEALAND
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_shipyard = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Chr. Hansens teknisk-kemiske Laboratorium A/S
+REPLACE:company_chr_hansens = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/denmark_chr_hansens_teknisk_kemiske_laboratorium.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ZEALAND }
+
+	building_types = {
+		building_food_industry
+		building_livestock_ranch
+	}
+
+	extension_building_types = {
+		building_synthetics_plant
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_groceries
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_groceries_complete_tt
+			has_variable = prestige_good_generic_groceries_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_northern_europe
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ZEALAND
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_food_industry
+					is_building_type = building_chemical_plant
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_livestock_ranch_throughput_add = 0.1
+		building_fishing_wharf_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_ZEALAND
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+		building_chemical_plant = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Aker Mek
+REPLACE:company_aker_mek = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_aker_mek.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_EASTERN_NORWAY }
+
+	building_types = {
+		building_shipyard
+		building_motor_industry
+		building_tooling_workshop
+	}
+
+	extension_building_types = {
+		building_whaling_station
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_tools
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_tools_complete_tt
+			has_variable = prestige_good_generic_tools_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_northern_europe
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = gantry_cranes
+		any_scope_state = {
+			state_region = s:STATE_EASTERN_NORWAY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyard
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_ship_group_supply_ships_construction_efficiency_add = 0.15
+		building_fishing_wharf_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = gantry_cranes
+		any_scope_state = {
+			state_region = s:STATE_EASTERN_NORWAY
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_shipyard = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Sir W G Armstrong Whitworth & Co Ltd
+REPLACE:company_armstrong_whitworth = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_armstrong_whitworth.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_YORKSHIRE }
+
+	building_types = {
+		building_shipyard
+		building_motor_industry
+		building_munition_plant
+	}
+
+	possible_prestige_goods = {
+		prestige_good_clyde_built_liners
+	}
+
+	extension_building_types = {
+		building_automotive_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_western_europe
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_YORKSHIRE
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = ironclad_tech
+		has_technology_researched = gantry_cranes
+		any_scope_state = {
+			state_region = s:STATE_YORKSHIRE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyard
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		ship_ship_type_aircraft_carrier_hull_damage_mult = 0.075
+		ship_armor_mult = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = ironclad_tech
+		has_technology_researched = gantry_cranes
+		any_scope_state = {
+			state_region = s:STATE_YORKSHIRE
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_shipyard = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_YORKSHIRE
 			}
 		}
 	}
