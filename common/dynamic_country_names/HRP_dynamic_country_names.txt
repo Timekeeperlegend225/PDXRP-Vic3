@@ -1,0 +1,20 @@
+﻿DEN = { # Sumatra
+	dynamic_country_name = {
+		name = dyn_c_denmark_norway
+		adjective = DEN_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					owns_entire_state_region = STATE_EASTERN_NORWAY
+					owns_entire_state_region = STATE_NORTHERN_NORWAY
+					owns_entire_state_region = STATE_EASTERN_NORWAY
+				}
+			}
+		}
+	}
+}

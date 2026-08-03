@@ -1,6 +1,10 @@
 ﻿GM_become_GM = {
 	is_shown = {
-		NOT = { has_global_variable = player_gm }
+		NOT = { 
+			any_country = {
+				has_global_variable = GM_game_master
+			}
+		}
 		is_player = yes
 	}
 

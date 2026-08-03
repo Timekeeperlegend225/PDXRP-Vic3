@@ -1,0 +1,69 @@
+overlord_veto = {
+    groups = { overlord }
+    texture = "gfx/interface/icons/diplomatic_action_icons/force_regime_change.dds"
+
+    requires_approval = no
+    show_confirmation_box = no
+    show_effect_in_tooltip = yes
+    show_in_lens = yes
+
+
+    potential = {
+        is_player = yes
+        scope:target_country = {
+            is_subject_of = root
+        }
+    }
+
+    possible = {
+        is_player = yes
+        scope:target_country = {
+            is_subject_of = root
+        }
+    }
+
+    accept_effect = {
+		custom_tooltip = {
+        text = overlord_veto_tooltip
+		}
+        scope:target_country = {
+            set_variable = overlord_veto
+        }
+    }
+
+    pact = {
+        cost = 0
+
+        # Auto-drops if the subject relationship ends
+        requirement_to_maintain = {
+            trigger = {
+                scope:target_country = {
+                    is_subject_of = root
+                }
+            }
+        }
+
+        actor_can_break = { always = yes }  # Overlord lifts veto
+        target_can_break = { always = no }  # Subject cannot lift it themselves
+
+        manual_break_effect = {
+		custom_tooltip = {
+        text = overlord_veto_end_tooltip
+		}
+            scope:target_country = {
+                remove_variable = overlord_veto
+            }
+        }
+
+        auto_break_effect = {
+            scope:target_country = {
+                remove_variable = overlord_veto
+            }
+        }
+    }
+
+    ai = {
+        will_propose = { always = no }
+        will_break = { always = no }
+    }
+}
