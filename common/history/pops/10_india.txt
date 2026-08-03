@@ -1007,8 +1007,6 @@ POPS = {
 				culture = telegu
 				size = 19201
 			}
-		}
-		region_state:BIC = {
 			create_pop = {
 				culture = bundeli
 				size = 281175
@@ -1656,8 +1654,6 @@ POPS = {
 				culture = tamil
 				size = 40023
 			}
-		}
-		region_state:BIC = {
 			create_pop = {
 				culture = kannada # tulu
 				size = 184548
@@ -2285,8 +2281,6 @@ POPS = {
 				culture = armenian
 				size = 451
 			}
-		}
-		region_state:NEP = {
 			create_pop = {
 				culture = pahari
 				size = 173599

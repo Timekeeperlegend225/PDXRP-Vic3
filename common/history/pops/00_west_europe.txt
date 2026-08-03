@@ -92,7 +92,7 @@
 		}
 	}
 	s:STATE_WESTERN_NORWAY = {
-		region_state:NOR = {
+		region_state:DEN = {
 			create_pop = {
 				culture = norwegian
 				size = 546800
@@ -100,7 +100,7 @@
 		}
 	}
 	s:STATE_NORTHERN_NORWAY = {
-		region_state:NOR = {
+		region_state:DEN = {
 			create_pop = {
 				culture = norwegian
 				size = 284860
@@ -116,7 +116,7 @@
 		}
 	}
 	s:STATE_EASTERN_NORWAY = {
-		region_state:NOR = {
+		region_state:DEN = {
 			create_pop = {
 				culture = norwegian
 				size = 345800
@@ -1498,7 +1498,7 @@
 		}
 	}
 	s:STATE_RHINELAND = {
-		region_state:PRU = {
+		region_state:RHE = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -1512,8 +1512,6 @@
 				culture = north_german
 				size = 323992
 			}
-		}
-		region_state:BAV = {
 			create_pop = {
 				culture = south_german
 				size = 251600
@@ -1530,7 +1528,7 @@
 		}
 	}
 	s:STATE_NORTH_RHINE = {
-		region_state:PRU = {
+		region_state:RHE = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -1552,7 +1550,7 @@
 	}
 
 	s:STATE_RUHR = {
-		region_state:PRU = {
+		region_state:RHE = {
 			create_pop = {
 				culture = north_german
 				religion = catholic
@@ -1620,7 +1618,7 @@
 				size = 2000
 			}
 		}
-		region_state:SCH = {
+		region_state:DEN = {
 			create_pop = {
 				culture = north_german
 				size = 200000
@@ -1646,8 +1644,6 @@
 				culture = alemannic
 				size = 189173
 			}
-		}
-		region_state:HOH = {
 			create_pop = {
 				culture = south_german
 				religion = protestant
