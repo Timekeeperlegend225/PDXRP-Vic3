@@ -1,0 +1,56 @@
+namespace = overlord_veto
+
+overlord_veto.2 = {
+    type = country_event
+    is_triggered_only = yes
+	title = overlord_veto.2.t
+    desc = overlord_veto.2.d
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"	
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+	duration = 2
+	
+	option = {
+		name = overlord_veto.2.confirm
+		default_option = yes	
+	}
+}
+
+overlord_veto.1 = {
+    type = country_event
+    is_triggered_only = yes
+
+    title = overlord_veto.1.t
+    desc = overlord_veto.1.d
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"	
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+	duration = 2
+
+    option = {
+        name = overlord_veto.1.allow #Allow to Proceed as Normal
+        default_option = yes
+		custom_tooltip = {
+        text = overlord_veto_allow_tooltip
+		}
+    }		
+
+    option = {
+        name = overlord_veto.1.veto #Veto their law
+		
+		custom_tooltip = {
+			text = overlord_veto_veto_tooltip
+		}
+		
+        scope:veto_subject = {
+            cancel_enactment = yes
+			add_liberty_desire = 5
+				trigger_event = {
+					id = overlord_veto.2
+				}
+        }
+    }
+}
+

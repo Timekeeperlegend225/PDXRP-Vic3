@@ -1,3 +1,9 @@
 ﻿l_english:
  MRT:0 "Maratha Empire"
  MRT_ADJ:0 "Marathi"
+ MOA:0 "Monaco"
+ MOA_ADJ:0 "Monégasque"
+ 
+ dyn_c_denmark_norway:0 "Denmark-Norway"
+
+ CENTRAL_EUROPE: "Central Europe"

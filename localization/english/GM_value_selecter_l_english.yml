@@ -38,7 +38,7 @@
  value_selection.2.l:0 "Radicals in state"
  value_selection.2.m:0 "Loyalist in states"
  value_selection.2.n:0 "Loyalists Country wide"
- value_selection.2.o:0 "Radicals Country wider"
+ value_selection.2.o:0 "Radicals Country wide"
  value_selection.2.r:0 "Cancel"
  value_selection.2.t:0 "Radicals and Loyalist"
  value_selection.2.u:0 "Variable value is [GetGlobalVariable('gm_variable_radicals').GetValue|=%]#! \n Selected country is [SCOPE.sCountry('GM_interacted_scope').GetName]"

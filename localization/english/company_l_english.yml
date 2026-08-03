@@ -18,9 +18,6 @@ company_sumitomo: "Sumitomo"
 company_shueisha: "Shueisha"
 company_carlsberg: "Carlsberg Group"
 company_correosecuador: "Correos del Ecuador"
-company_penoles: "Peñoles Industries"
-company_puertoliverpool: "El Puerto de Liverpool"
-company_cemex: "Cemex"
 
 # Fallback names if dynamic naming fails
 company_basic_agriculture_3: "Super Agricultural Corporation"
