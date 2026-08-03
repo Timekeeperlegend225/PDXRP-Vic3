@@ -1,0 +1,470 @@
+# GORA UI+ — Improved Parliament Graph: panel widget types
+# ─────────────────────────────────────────────────────────────────────────────
+# `parliament_item` is the single entry point — drop it into the politics
+# panel's Opposition column (see zz_gora_politics_panel_reform_government.gui)
+# and the whole subsystem renders from country variables populated by
+# common/scripted_effects/gora_ipg_seat_allocation.txt.
+#
+# Three sub-widgets back the three tabs; only the visible one renders.
+# Per-seat hemicycle layouts (`ipg_seats_*`) live in the auto-generated
+# ipg_seat_layout.gui — that file is shipped manually by the mod author
+# (see plan Faz 4E).
+#
+# View state is held in two VariableSystem keys:
+#   ipg_parl_collapsed   (presence -> panel is collapsed to a header row)
+#   ipg_parl_view        (value: 'power' | 'alignment' | 'electoral')
+# ─────────────────────────────────────────────────────────────────────────────
+
+types politics_panel_types
+{
+	# ─── Top-level container: header + three tab buttons + selected view ──
+	type parliament_item = vbox {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = preferred
+		spacing = 6
+
+		# Collapsed state: a single bar with an "Expand" button
+		hbox = {
+			size = { 100% 34 }
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = preferred
+			spacing = 8
+			visible = "[GetVariableSystem.Exists('ipg_parl_collapsed')]"
+			using = entry_bg_fancy
+
+			textbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				text = "ipg_panel_title"
+				using = fontsize_medium
+				align = left|nobaseline
+				margin_left = 12
+			}
+
+			button = {
+				size = { 110 28 }
+				using = default_button
+				onclick = "[GetVariableSystem.Toggle('ipg_parl_collapsed')]"
+				text = "ipg_expand"
+				using = fontsize_medium
+			}
+		}
+
+		# Expanded state: tab strip + selected view
+		vbox = {
+			size = { 100% 270 }
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = preferred
+			spacing = 6
+			visible = "[Not(GetVariableSystem.Exists('ipg_parl_collapsed'))]"
+
+			# Tab strip
+			hbox = {
+				spacing = 8
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = preferred
+
+				widget = {
+					size = { 0 1 }
+					layoutpolicy_horizontal = expanding
+				}
+
+				# Party Structure tab (default view).
+				# Always enabled — the chart is clout-based, not tied to actual
+				# elections, so franchise / party existence is not a meaningful gate.
+				widget = {
+					size = { 200 30 }
+
+					# Active state: variable unset (default) OR explicitly 'electoral'.
+					button = {
+						size = { 200 30 }
+						using = default_button_primary
+						enabled = no
+						visible = "[Or(Not(GetVariableSystem.Exists('ipg_parl_view')), GetVariableSystem.HasValue('ipg_parl_view', 'electoral'))]"
+						text = "ipg_view_electoral"
+						using = fontsize_medium
+					}
+					# Inactive (clickable): variable set to something else.
+					button = {
+						size = { 200 30 }
+						using = default_button
+						visible = "[And(GetVariableSystem.Exists('ipg_parl_view'), Not(GetVariableSystem.HasValue('ipg_parl_view', 'electoral')))]"
+						onclick = "[GetVariableSystem.Set('ipg_parl_view', 'electoral')]"
+						text = "ipg_view_electoral"
+						using = fontsize_medium
+					}
+				}
+
+				# Power Structure tab
+				widget = {
+					size = { 200 30 }
+
+					button = {
+						size = { 200 30 }
+						using = default_button_primary
+						enabled = no
+						visible = "[GetVariableSystem.HasValue('ipg_parl_view', 'power')]"
+						text = "ipg_view_power"
+						using = fontsize_medium
+					}
+					button = {
+						size = { 200 30 }
+						using = default_button
+						visible = "[Not(GetVariableSystem.HasValue('ipg_parl_view', 'power'))]"
+						onclick = "[GetVariableSystem.Set('ipg_parl_view', 'power')]"
+						text = "ipg_view_power"
+						using = fontsize_medium
+					}
+				}
+
+				# Political Alignment tab
+				widget = {
+					size = { 200 30 }
+
+					button = {
+						size = { 200 30 }
+						using = default_button_primary
+						enabled = no
+						visible = "[GetVariableSystem.HasValue('ipg_parl_view', 'alignment')]"
+						text = "ipg_view_alignment"
+						using = fontsize_medium
+					}
+					button = {
+						size = { 200 30 }
+						using = default_button
+						visible = "[Not(GetVariableSystem.HasValue('ipg_parl_view', 'alignment'))]"
+						onclick = "[GetVariableSystem.Set('ipg_parl_view', 'alignment')]"
+						text = "ipg_view_alignment"
+						using = fontsize_medium
+					}
+				}
+
+				# Collapse button on the right
+				widget = {
+					size = { 110 30 }
+
+					button = {
+						size = { 110 30 }
+						using = default_button
+						onclick = "[GetVariableSystem.Toggle('ipg_parl_collapsed')]"
+						text = "ipg_collapse"
+						using = fontsize_medium
+					}
+				}
+			}
+
+			# Selected sub-view (only one visible at a time).
+			# Party Structure (electoral) is the default: visible when the
+			# variable is unset OR explicitly 'electoral'.
+			ipg_view_electoral = {
+				visible = "[Or(Not(GetVariableSystem.Exists('ipg_parl_view')), GetVariableSystem.HasValue('ipg_parl_view', 'electoral'))]"
+			}
+			ipg_view_power = {
+				visible = "[GetVariableSystem.HasValue('ipg_parl_view', 'power')]"
+			}
+			ipg_view_alignment = {
+				visible = "[GetVariableSystem.HasValue('ipg_parl_view', 'alignment')]"
+			}
+		}
+	}
+
+
+	# ─── View 1: Power Structure ─────────────────────────────────────────
+	type ipg_view_power = widget {
+		size = { 100% 230 }
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = preferred
+		using = tooltip_below
+		using = entry_bg_fancy
+		tooltip = "ipg_tooltip_power"
+
+		textbox = {
+			autoresize = yes
+			text = "ipg_view_power"
+			using = fontsize_large
+			align = left|nobaseline
+			position = { 18 12 }
+		}
+		# Inline description with constrained width + multiline wrap. The
+		# hemicycle's left curve leaves ~180px empty at y=40..70, so 200x60
+		# keeps the text safely outside the chart even when it wraps to two
+		# or three lines.
+		textbox = {
+			size = { 200 60 }
+			multiline = yes
+			autoresize = no
+			text = "ipg_power_desc"
+			using = fontsize_small
+			align = left|nobaseline
+			position = { 18 40 }
+			alpha = 0.8
+		}
+
+		hbox = {
+			size = { 100% 230 }
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = preferred
+
+			widget = { size = { 0 1 } layoutpolicy_horizontal = expanding }
+
+			widget = {
+				size = { 600 230 }
+
+				# 12 ranked IGs — each instance binds to a single IG via datacontext.
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_1_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_1_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_2_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_2_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_3_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_3_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_4_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_4_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_5_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_5_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_6_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_6_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_7_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_7_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_8_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_8_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_9_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_9_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_10_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_10_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_11_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_11_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_power = {
+					visible = "[Country.MakeScope.Var('ipg_power_rank_12_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_power_rank_12_ig').GetInterestGroup]"
+				}
+			}
+
+			widget = { size = { 0 1 } layoutpolicy_horizontal = expanding }
+		}
+	}
+
+
+	# ─── View 2: Political Alignment ─────────────────────────────────────
+	type ipg_view_alignment = widget {
+		size = { 100% 230 }
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = preferred
+		using = tooltip_below
+		using = entry_bg_fancy
+		tooltip = "ipg_tooltip_alignment"
+
+		textbox = {
+			autoresize = yes
+			text = "ipg_view_alignment"
+			using = fontsize_large
+			align = left|nobaseline
+			position = { 18 12 }
+		}
+		textbox = {
+			size = { 200 60 }
+			multiline = yes
+			autoresize = no
+			text = "ipg_alignment_desc"
+			using = fontsize_small
+			align = left|nobaseline
+			position = { 18 40 }
+			alpha = 0.8
+		}
+
+		hbox = {
+			size = { 100% 230 }
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = preferred
+
+			widget = { size = { 0 1 } layoutpolicy_horizontal = expanding }
+
+			widget = {
+				size = { 600 230 }
+
+				# 12 ranked IGs by population share
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_1_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_1_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_2_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_2_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_3_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_3_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_4_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_4_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_5_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_5_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_6_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_6_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_7_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_7_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_8_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_8_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_9_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_9_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_10_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_10_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_11_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_11_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_alignment = {
+					visible = "[Country.MakeScope.Var('ipg_alignment_rank_12_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_alignment_rank_12_ig').GetInterestGroup]"
+				}
+
+				# Country-scoped fallback slots
+				ipg_seats_alignment_other = {}
+				ipg_seats_alignment_unaligned = {}
+			}
+
+			widget = { size = { 0 1 } layoutpolicy_horizontal = expanding }
+		}
+	}
+
+
+	# ─── View 3: Electoral Parliament ────────────────────────────────────
+	type ipg_view_electoral = widget {
+		size = { 100% 230 }
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = preferred
+		using = tooltip_below
+		using = entry_bg_fancy
+		tooltip = "ipg_tooltip_electoral"
+
+		textbox = {
+			autoresize = yes
+			text = "ipg_view_electoral"
+			using = fontsize_large
+			align = left|nobaseline
+			position = { 18 12 }
+		}
+		textbox = {
+			size = { 200 60 }
+			multiline = yes
+			autoresize = no
+			text = "ipg_electoral_desc"
+			using = fontsize_small
+			align = left|nobaseline
+			position = { 18 40 }
+			alpha = 0.8
+		}
+
+		hbox = {
+			size = { 100% 230 }
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = preferred
+
+			widget = { size = { 0 1 } layoutpolicy_horizontal = expanding }
+
+			widget = {
+				size = { 600 230 }
+
+				# Up to 8 parties ranked by clout (Party scope, party color)
+				ipg_seats_party_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_party_rank_1_party').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_party_rank_1_party').GetParty]"
+				}
+				ipg_seats_party_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_party_rank_2_party').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_party_rank_2_party').GetParty]"
+				}
+				ipg_seats_party_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_party_rank_3_party').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_party_rank_3_party').GetParty]"
+				}
+				ipg_seats_party_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_party_rank_4_party').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_party_rank_4_party').GetParty]"
+				}
+				ipg_seats_party_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_party_rank_5_party').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_party_rank_5_party').GetParty]"
+				}
+				ipg_seats_party_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_party_rank_6_party').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_party_rank_6_party').GetParty]"
+				}
+				ipg_seats_party_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_party_rank_7_party').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_party_rank_7_party').GetParty]"
+				}
+				ipg_seats_party_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_party_rank_8_party').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_party_rank_8_party').GetParty]"
+				}
+
+				# Up to 6 non-party non-marginal IGs (IG scope, IG color)
+				ipg_seats_ig_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_ig_rank_1_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_ig_rank_1_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_ig_rank_2_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_ig_rank_2_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_ig_rank_3_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_ig_rank_3_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_ig_rank_4_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_ig_rank_4_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_ig_rank_5_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_ig_rank_5_ig').GetInterestGroup]"
+				}
+				ipg_seats_ig_electoral = {
+					visible = "[Country.MakeScope.Var('ipg_electoral_ig_rank_6_ig').IsSet]"
+					datacontext = "[Country.MakeScope.Var('ipg_electoral_ig_rank_6_ig').GetInterestGroup]"
+				}
+
+				# "Other Minor Groups" catch-all (marginals + leftover, grey)
+				ipg_seats_electoral_other = {}
+			}
+
+			widget = { size = { 0 1 } layoutpolicy_horizontal = expanding }
+		}
+	}
+}
