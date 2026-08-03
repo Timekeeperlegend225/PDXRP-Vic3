@@ -1,0 +1,141 @@
+﻿REPLACE:law_tenant_farmers = {
+	group = lawgroup_land_reform
+
+	icon = "gfx/interface/icons/law_icons/tenant_farmers.dds"
+
+	progressiveness = 0
+
+	is_visible = {
+		NOR = {
+			has_law = law_type:law_latifundias
+			has_law = law_type:law_expanded_latifundias
+			has_law = law_type:law_veth-begar
+		}
+	}
+
+	modifier = {
+		interest_group_ig_landowners_pol_str_mult = 0.25
+		state_minimum_incorporated_subsistence_arable_land_add = 0.25
+		#building_minimum_incorporated_subsistence_employment_add = 0.25
+	}
+
+	on_enact = {
+		if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_commercialized_agriculture
+					has_law_or_variant = law_type:law_peasant_proprietorship
+				}
+			}
+			custom_tooltip = farmers_pb_ig_shift_effect_negative_tt
+		}
+		if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_commercialized_agriculture
+					has_law_or_variant = law_type:law_collectivized_agriculture
+				}
+			}
+			custom_tooltip = rural_laborers_tu_ig_shift_effect_negative_tt
+		}
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+
+		# Once the AI gets to a certain society tech level they should try to ditch Serfdom for Tenant Farmers
+		if = {
+			limit = {
+				OR = {
+					has_technology_researched = civilizing_mission
+					has_technology_researched = human_rights
+					has_technology_researched = pan-nationalism
+				}
+				has_law_or_variant = law_type:law_serfdom
+			}
+
+			add = 1000
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_journal_entry = je_meiji_main
+					has_journal_entry = je_great_reforms_serfdom
+				}
+				has_law_or_variant = law_type:law_serfdom
+			}
+			add = 10000 # Top priority for Meiji AI is to get out of Serfdom, likewise for Great Reforms
+		}
+
+		# AI should really try to get out of Serfdom under the right circumstances
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_serfdom
+				NOT = { has_strategy = ai_strategy_reactionary_agenda }
+				OR = {
+					NOT = { has_strategy = ai_strategy_conservative_agenda }
+					any_political_movement = {
+						law_enactment_stance = {
+							law = law_type:law_tenant_farmers
+							value > neutral
+						}
+						political_movement_support >= 0.10
+					}
+				}
+			}
+			add = 1000
+		}
+	}
+}
+
+
+REPLACE_OR_CREATE:law_veth-begar = {
+	group = lawgroup_land_reform
+	parent = law_tenant_farmers # Inherits ideological stances from parent
+
+	icon = "gfx/interface/icons/law_icons/tenant_farmers.dds"
+
+	progressiveness = -25
+
+	is_visible = {
+		any_primary_culture = {
+			OR = {
+				has_discrimination_trait = language_southern_indic
+				has_discrimination_trait = language_northwestern_indic
+			}
+		}
+	}
+
+	can_enact = {
+		always = yes
+	}
+
+	modifier = {
+		interest_group_ig_landowners_pol_str_mult = 0.25
+		state_minimum_incorporated_subsistence_arable_land_add = -0.1
+		building_minimum_incorporated_subsistence_employment_add = -0.1
+	}
+
+	ai_will_do = {
+		always = yes
+	}
+
+	disallowing_laws = {
+		law_council_republic
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+
+		if = {
+			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
+			add = 750
+		}
+	}
+}

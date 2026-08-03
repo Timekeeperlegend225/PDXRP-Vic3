@@ -12,26 +12,8 @@
 	possible = {
 		is_country_type = unrecognized
 		OR = {
-			AND = {
-				OR = {
-					custom_tooltip = {
-						text = is_subject_of_great_power_tt
-						any_overlord_or_above = {
-							country_rank >= rank_value:great_power
-						}
-					}
-					country_rank >= rank_value:unrecognized_major_power
-				}
-				has_technology_researched = colonization
-			}
-			AND = {
-				country_rank >= rank_value:unrecognized_regional_power
-				has_technology_researched = civilizing_mission
-			}
-			AND = {
-				country_rank >= rank_value:unrecognized_power
-				has_technology_researched = international_exchange_standards
-			}
+			has_technology_researched = civilizing_mission
+			has_technology_researched = pan_nationalism
 		}
 	}
 
@@ -43,7 +25,7 @@
 		custom_tooltip = {
 			text = je_earn_recognition_complete_tt
 			scope:journal_entry ?= {
-				"scripted_bar_progress(earn_recognition_progress_bar)" >= 200
+				"scripted_bar_progress(earn_recognition_progress_bar)" >= 500
 			}
 		}
 		has_modifier = GM_allow_recognition

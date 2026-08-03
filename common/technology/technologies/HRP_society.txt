@@ -61,6 +61,25 @@ REPLACE:stock_exchange = {
 	}
 }
 
+REPLACE:organized_sports = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/organized_sports.dds"
+	category = society
+
+	modifier = {
+		country_prestige_mult = 0.1
+		state_working_adult_ratio_add = 0.02
+	}
+
+	unlocking_technologies = {
+		nationalism
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 REPLACE:central_banking = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/central_banking.dds"
@@ -79,6 +98,72 @@ REPLACE:central_banking = {
 
 	ai_weight = {
 		value = 1
+	}
+}
+
+REPLACE:feminism = {
+	# Unlocks Women in the Workplace - Rights of Women Law
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/feminism.dds"
+	category = society
+
+	modifier = {
+		state_working_adult_ratio_add = 0.02
+	}
+
+	on_researched = {
+		if = {
+			limit = {
+				NOT = { has_variable = feminism_researched }
+			}
+			set_variable = feminism_researched
+			custom_tooltip = {
+				text = liberal_and_egalitarian_amended_tt
+				every_interest_group = {
+					limit = {
+						has_ideology = ideology:ideology_liberal
+					}
+					remove_ideology = ideology_liberal
+					add_ideology = ideology_liberal_modern
+				}
+				every_interest_group = {
+					limit = {
+						has_ideology = ideology:ideology_egalitarian
+					}
+					remove_ideology = ideology_egalitarian
+					add_ideology = ideology_egalitarian_modern
+				}
+			}
+		}
+	}
+
+	modifier = {
+		country_institution_social_security_max_investment_add = 1
+	}
+
+	unlocking_technologies = {
+		human_rights
+	}
+
+	ai_weight = {
+		value = 1
+
+		if = {
+			limit = {
+				has_strategy = ai_strategy_egalitarian_agenda
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				OR = {
+					has_strategy = ai_strategy_conservative_agenda
+					has_strategy = ai_strategy_reactionary_agenda
+					has_strategy = ai_strategy_maintain_mandate_of_heaven
+				}
+			}
+			add = -0.5
+		}
 	}
 }
 
@@ -124,6 +209,64 @@ REPLACE:corporate_management = {
 	}
 }
 
+REPLACE:psychoanalysis = {
+	# Should provide additional methods for dealing with negative psychological character traits
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
+	category = society
+
+	modifier = {
+		country_influence_mult = 0.25
+		country_diplomatic_play_maneuvers_mult = 0.25
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+		state_working_adult_ratio_add = 0.02
+	}
+
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE:malaria_prevention = {
+	# Should permit for colonization of state regions with severe malaria
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/malaria_prevention.dds"
+	category = society
+
+	modifier = {
+		country_institution_colonial_affairs_max_investment_add = 1
+		country_institution_health_system_max_investment_add = 1
+		state_colony_growth_speed_mult = 0.25
+	}
+
+	unlocking_technologies = {
+		civilizing_mission
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for colonizers
+		if = {
+			limit = {
+				navy_size >= 25
+				is_country_type = recognized
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_colonial_expansion
+			}
+			add = 1
+		}
+	}
+}
+
 REPLACE:central_planning = {
 	# Unlocks Command Economy - Economic System Law
 	# Unlocks Vertical Filing Cabinets PM in Government Administrations
@@ -147,6 +290,26 @@ REPLACE:central_planning = {
 
 	ai_weight = {
 		value = 1.5 # Important in general
+	}
+}
+
+REPLACE:antibiotics = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/antibiotics.dds"
+	category = society
+
+	modifier = {
+		country_institution_health_system_max_investment_add = 1
+		state_harvest_condition_disease_outbreak_impact_mult = -0.15
+		state_working_adult_ratio_add = 0.02
+	}
+
+	unlocking_technologies = {
+		malaria_prevention
+	}
+
+	ai_weight = {
+		value = 1
 	}
 }
 
@@ -181,6 +344,25 @@ REPLACE:behaviorism = {
 		country_diplomatic_play_maneuvers_mult = 0.5
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 		state_minimum_incorporated_subsistence_arable_land_add = -0.05
+	}
+
+	unlocking_technologies = {
+		psychoanalysis
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE:analytical_philosophy = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/analytical_philosophy.dds"
+	category = society
+
+	modifier = {
+		state_literacy_growth_add = 0.0002
+		state_working_adult_ratio_add = 0.02
 	}
 
 	unlocking_technologies = {

@@ -82,3 +82,21 @@ REPLACE:pm_serfdom_building_subsistence_rice_farm = {
 		}
 	}
 }
+
+REPLACE:pm_serfdom_no = {
+	texture = "gfx/interface/icons/production_method_icons/no_serfdom.dds"
+	unlocking_laws = {
+		law_tenant_farmers
+		law_commercialized_agriculture
+		law_collectivized_agriculture
+		law_latifundias
+		law_expanded_latifundias
+		law_veth-begar
+	}
+
+	building_modifiers = {
+		unscaled = {
+			building_subsistence_output_add = 4
+		}
+	}
+}

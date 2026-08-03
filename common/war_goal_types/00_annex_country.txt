@@ -35,6 +35,17 @@
 			has_strategic_adjacency = scope:target_country
 			has_modifier = gm_warapproval 
 		}
+		OR = {
+			NOR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+				is_subject_type = subject_type_colony
+				is_subject_type = subject_type_crown_land
+			}
+			any_scope_diplomatic_pact = {
+				is_diplomatic_action_type = subject_allow_war
+			}
+		}
 	}
 
 	maneuvers = {

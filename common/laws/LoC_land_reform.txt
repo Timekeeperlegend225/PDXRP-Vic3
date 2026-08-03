@@ -7,11 +7,7 @@
 	progressiveness = -50
 
 	is_visible = {
-		OR = {
-			is_in_geographic_region = geographic_region_india
-			is_in_geographic_region = geographic_region_china
-			THIS = c:NEP
-		}
+		is_in_geographic_region = geographic_region_china
 	}
 
 	disallowing_laws = {

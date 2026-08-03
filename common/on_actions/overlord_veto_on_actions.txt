@@ -1,0 +1,19 @@
+on_law_enactment_started = {
+	effect = {
+        if = {
+            limit = {
+                is_subject = yes
+                NOT = { has_journal_entry = je_law_imposition }
+            }
+
+            save_scope_as = veto_subject
+
+            currently_enacting_law = {
+                save_scope_as = current_law_scope
+            }
+            overlord = {
+				trigger_event = { id = overlord_veto.1 }
+            }
+        }
+    }
+}
