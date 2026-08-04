@@ -1,0 +1,273 @@
+﻿# GORA UI+ — Advanced GDP Tracker: scripted effects
+#
+# Tracks 12 monthly GDP snapshots per country and derives:
+#   - GDPGR_past_month_diff / _rate          — change between two latest months
+#   - GDPGR_past_year_avg_diff / _rate       — average across the rolling year
+#   - GDPGR_rolling_difference / _rate       — current GDP minus same-month-last-year
+#   - gdp_growth_rate                        — annual diff (Jan-to-Jan, classic)
+#   - GDPGR_annl_growth_leaderboard_pos      — leaderboard rank among major powers
+
+# ─── Initialization ───────────────────────────────────────────────────────
+GDPGR_initialize_all = {
+	set_global_variable = { name = GDPGR_year value = year }
+	every_country = {
+		GDPGR_initialize_country = yes
+		# Set leaderboard rank only at game start, not for later-spawned
+		# countries (which the on_country_created hook also calls).
+		set_variable = { name = GDPGR_annl_growth_leaderboard_pos value = 1 }
+	}
+}
+
+GDPGR_initialize_country = {
+	GDPGR_initialize_monthly_records = yes
+	set_variable = { name = GDPGR_past_year_avg_diff value = 0 }
+	set_variable = { name = GDPGR_past_year_avg_rate value = 0 }
+	set_variable = { name = GDPGR_past_month_diff    value = 0 }
+	set_variable = { name = GDPGR_past_month_rate    value = 0 }
+	set_variable = { name = gdp_growth_rate          value = 0 }
+	set_variable = { name = GDPGR_annl_growth_leaderboard_pos value = 0 }
+	set_variable = { name = before_gdp  value = gdp }
+	set_variable = { name = current_gdp value = gdp }
+	GDPGR_initialize_monthly_records   = yes
+	GDPGR_calculate_past_year_averages = yes
+	trigger_event = { id = gora_agdp.3 }
+}
+
+# ─── Monthly snapshot table ───────────────────────────────────────────────
+# Variable lists don't allow duplicate values and there's no array type, so
+# we keep 12 individually-named slots: GDPGR_gdp_month_0 … GDPGR_gdp_month_11.
+GDPGR_initialize_monthly_records = {
+	GDPGR_set_month_gdp_record = { MONTH = 0 }
+	GDPGR_set_month_gdp_record = { MONTH = 1 }
+	GDPGR_set_month_gdp_record = { MONTH = 2 }
+	GDPGR_set_month_gdp_record = { MONTH = 3 }
+	GDPGR_set_month_gdp_record = { MONTH = 4 }
+	GDPGR_set_month_gdp_record = { MONTH = 5 }
+	GDPGR_set_month_gdp_record = { MONTH = 6 }
+	GDPGR_set_month_gdp_record = { MONTH = 7 }
+	GDPGR_set_month_gdp_record = { MONTH = 8 }
+	GDPGR_set_month_gdp_record = { MONTH = 9 }
+	GDPGR_set_month_gdp_record = { MONTH = 10 }
+	GDPGR_set_month_gdp_record = { MONTH = 11 }
+	set_variable = { name = GDPGR_rolling_difference         value = 0 }
+	set_variable = { name = GDPGR_rolling_gdp_growth_rate    value = 0 }
+	set_variable = { name = GDPGR_past_month_diff            value = 0 }
+	set_variable = { name = GDPGR_past_month_rate            value = 0 }
+}
+
+GDPGR_set_month_gdp_record = {
+	set_variable = { name = GDPGR_gdp_month_$MONTH$ value = gdp }
+}
+
+# Read this month's recorded GDP back into local_var:m_gdp.
+# Inputs:  local_var:month  ∈ [0, 11]
+# Outputs: local_var:m_gdp  = gdp recorded that month, or current gdp if unset
+GDPGR_get_gdp_for_month = {
+	set_local_variable = { name = m_gdp value = gdp }
+	GDPGR_read_month_into_local = { MONTH = 0 }
+	GDPGR_read_month_into_local = { MONTH = 1 }
+	GDPGR_read_month_into_local = { MONTH = 2 }
+	GDPGR_read_month_into_local = { MONTH = 3 }
+	GDPGR_read_month_into_local = { MONTH = 4 }
+	GDPGR_read_month_into_local = { MONTH = 5 }
+	GDPGR_read_month_into_local = { MONTH = 6 }
+	GDPGR_read_month_into_local = { MONTH = 7 }
+	GDPGR_read_month_into_local = { MONTH = 8 }
+	GDPGR_read_month_into_local = { MONTH = 9 }
+	GDPGR_read_month_into_local = { MONTH = 10 }
+	GDPGR_read_month_into_local = { MONTH = 11 }
+}
+
+GDPGR_read_month_into_local = {
+	if = {
+		limit = {
+			local_var:month = $MONTH$
+			has_variable = GDPGR_gdp_month_$MONTH$
+		}
+		set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_$MONTH$ }
+	}
+}
+
+# ─── Update routines (month dispatch) ─────────────────────────────────────
+# `month` isn't a "simple assign trigger" so we can't switch on it; the
+# pattern below is the cheapest way to dispatch.
+GDPGR_update_monthly_record = {
+	GDPGR_update_month_if = { MONTH = 0 }
+	GDPGR_update_month_if = { MONTH = 1 }
+	GDPGR_update_month_if = { MONTH = 2 }
+	GDPGR_update_month_if = { MONTH = 3 }
+	GDPGR_update_month_if = { MONTH = 4 }
+	GDPGR_update_month_if = { MONTH = 5 }
+	GDPGR_update_month_if = { MONTH = 6 }
+	GDPGR_update_month_if = { MONTH = 7 }
+	GDPGR_update_month_if = { MONTH = 8 }
+	GDPGR_update_month_if = { MONTH = 9 }
+	GDPGR_update_month_if = { MONTH = 10 }
+	GDPGR_update_month_if = { MONTH = 11 }
+}
+
+GDPGR_update_month_if = {
+	if = {
+		limit = { month = $MONTH$ }
+		GDPGR_set_month_gdp_record = { MONTH = $MONTH$ }
+	}
+}
+
+GDPGR_update_rolling_gdp_growth = {
+	GDPGR_rolling_growth_if = { MONTH = 0 }
+	GDPGR_rolling_growth_if = { MONTH = 1 }
+	GDPGR_rolling_growth_if = { MONTH = 2 }
+	GDPGR_rolling_growth_if = { MONTH = 3 }
+	GDPGR_rolling_growth_if = { MONTH = 4 }
+	GDPGR_rolling_growth_if = { MONTH = 5 }
+	GDPGR_rolling_growth_if = { MONTH = 6 }
+	GDPGR_rolling_growth_if = { MONTH = 7 }
+	GDPGR_rolling_growth_if = { MONTH = 8 }
+	GDPGR_rolling_growth_if = { MONTH = 9 }
+	GDPGR_rolling_growth_if = { MONTH = 10 }
+	GDPGR_rolling_growth_if = { MONTH = 11 }
+}
+
+GDPGR_rolling_growth_if = {
+	if = {
+		limit = { month = $MONTH$ }
+		GDPGR_calculate_rolling_gdp_growth = { MONTH = $MONTH$ }
+	}
+}
+
+# Compares current GDP to the GDP recorded for THIS month a year ago.
+GDPGR_calculate_rolling_gdp_growth = {
+	set_local_variable = { name = month value = $MONTH$ }
+	GDPGR_get_gdp_for_month = yes
+	set_variable = {
+		name = GDPGR_rolling_difference
+		value = {
+			add      = gdp
+			subtract = local_var:m_gdp
+		}
+	}
+	set_variable = {
+		name = GDPGR_rolling_gdp_growth_rate
+		value = {
+			add    = var:GDPGR_rolling_difference
+			divide = { value = gdp min = 1 }
+		}
+	}
+}
+
+# ─── Past-month and past-year averages ────────────────────────────────────
+GDPGR_update_past_month_stats = {
+	# This month's GDP
+	set_local_variable = { name = month value = month }
+	GDPGR_get_gdp_for_month = yes
+	set_local_variable = { name = gdp_new value = local_var:m_gdp }
+
+	# Previous month's GDP (wrap 0 → 11)
+	set_local_variable = {
+		name = month
+		value = {
+			if = {
+				limit = { month = 0 }
+				add = 11
+			}
+			else = {
+				add      = month
+				subtract = 1
+			}
+		}
+	}
+	GDPGR_get_gdp_for_month = yes
+	set_local_variable = { name = gdp_old value = local_var:m_gdp }
+
+	set_variable = {
+		name = GDPGR_past_month_diff
+		value = {
+			add      = local_var:gdp_new
+			subtract = local_var:gdp_old
+		}
+	}
+	set_variable = {
+		name = GDPGR_past_month_rate
+		value = {
+			add      = local_var:gdp_new
+			subtract = local_var:gdp_old
+			divide   = { value = local_var:gdp_old min = 1 }
+		}
+	}
+}
+
+GDPGR_calculate_past_year_averages = {
+	# Latest GDP (this month)
+	set_local_variable = { name = month value = month }
+	GDPGR_get_gdp_for_month = yes
+	set_local_variable = { name = gdp_new value = local_var:m_gdp }
+
+	# 11 months ago (the oldest snapshot still in the table)
+	set_local_variable = {
+		name = month
+		value = {
+			if = { limit = { month = 11 } value = 0 }
+			else = { value = month add = 1 }
+		}
+	}
+	GDPGR_get_gdp_for_month = yes
+	set_local_variable = { name = gdp_old value = local_var:m_gdp }
+
+	set_variable = {
+		name = GDPGR_past_year_avg_diff
+		value = {
+			value = local_var:gdp_new
+			subtract = local_var:gdp_old
+			divide = 12
+		}
+	}
+	set_variable = {
+		name = GDPGR_past_year_avg_rate
+		value = {
+			value = local_var:gdp_new
+			subtract = local_var:gdp_old
+			divide = { value = local_var:gdp_old min = 1 }
+			divide = 12
+		}
+	}
+}
+
+# ─── Annual-growth leaderboard ────────────────────────────────────────────
+# Null scope. Ranks countries by past-year average growth rate, filtering
+# out decentralized tribes, insignificant powers, unrecognized minors,
+# revolutionaries and secessionists (so the rank numbers stay meaningful).
+GDPGR_calculate_annl_growth_leaderboard = {
+	set_local_variable = { name = counter value = 1 }
+	ordered_country = {
+		limit = {
+			has_variable = GDPGR_past_year_avg_rate
+			NOT = { is_country_type = decentralized }
+			NOT = { country_rank   = rank_value:insignificant_power }
+			NOT = { country_rank   = rank_value:unrecognized_power }
+		}
+		order_by = { add = var:GDPGR_past_year_avg_rate }
+		min = 0  # Required, otherwise the iterator silently skips countries.
+		if = {
+			limit = {
+				is_revolutionary = no
+				is_secessionist  = no
+				NOT = {
+					any_enemy_in_diplo_play = {
+						civil_war_origin_country ?= PREV
+					}
+				}
+			}
+			set_variable = {
+				name  = GDPGR_annl_growth_leaderboard_pos
+				value = local_var:counter
+			}
+			set_local_variable = {
+				name  = counter
+				value = { value = local_var:counter add = 1 }
+			}
+		}
+		else = {
+			set_variable = { name = GDPGR_annl_growth_leaderboard_pos value = 0 }
+		}
+	}
+}
