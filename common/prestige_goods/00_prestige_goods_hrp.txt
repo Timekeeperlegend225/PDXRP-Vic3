@@ -1,4 +1,13 @@
-﻿# prestige_goods types
+﻿#############################################################################################################
+# GENERIC PRESTIGE GOODS
+#############################################################################################################
+prestige_good_generic_liquor = {
+	base_good = liquor
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_liquor_prestige.dds"
+}
+
+# prestige_goods types
 
 prestige_good_fine_chocolate = {
 	base_good = groceries
@@ -42,11 +51,3 @@ prestige_good_nokia_telephone = {
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
 }
 
-#############################################################################################################
-# GENERIC PRESTIGE GOODS
-#############################################################################################################
-prestige_good_generic_liquor = {
-	base_good = liquor
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_liquor_prestige.dds"
-}
