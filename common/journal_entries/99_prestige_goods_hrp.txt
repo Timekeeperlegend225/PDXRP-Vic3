@@ -79,11 +79,6 @@
 
     on_monthly_pulse = {
         effect = {
-            rebind_prestige_good_company = {
-                GOODS = prestige_good_generic_liquor
-                UNLOCK_VAR = prestige_good_generic_liquor_var
-                TIMER_VAR = prestige_liquor_timer_var
-            }
             if = {
                 limit = {
                     scope:relevant_company ?= {
@@ -129,5 +124,5 @@
 
     weight = 1000
 
-    should_be_pinned_by_default_uninvolved_or_context = yes
+    should_be_pinned_by_default = yes
 }
