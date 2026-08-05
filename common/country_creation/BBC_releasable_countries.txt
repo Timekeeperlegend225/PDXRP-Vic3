@@ -1,7 +1,0 @@
-RPR = {
-	states = {
-		STATE_WEST_PRUSSIA
-	}
-
-	ai_will_do = { always = no }
-}
