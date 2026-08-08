@@ -956,7 +956,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = bageli
-				size = 172011
+				size = 383186
 			}
 			create_pop = {
 				culture = marathi
@@ -989,7 +989,7 @@ POPS = {
 			create_pop = {
 				culture = gondi
 				religion = animist
-				size = 93020
+				size = 123255
 			}
 			create_pop = {
 				culture = gondi
@@ -1012,26 +1012,12 @@ POPS = {
 				size = 281175
 			}
 			create_pop = {
-				culture = bageli
-				size = 211175
-			}
-			create_pop = {
 				culture = marathi
 				size = 196470
 			}
 			create_pop = {
-				culture = british
-				pop_type = aristocrats
-				size = 96
-			}
-			create_pop = {
 				culture = gondi
-				size = 38235
-			}
-			create_pop = {
-				culture = gondi
-				size = 30235
-				religion = animist
+				size = 68235
 			}
 			create_pop = {
 				culture = hindustani
@@ -1042,7 +1028,7 @@ POPS = {
 		region_state:BAS = {
 			create_pop = {
 				culture = gondi
-				size = 130070
+				size = 100070
 			}
 			create_pop = {
 				culture = chhattisgarhi
@@ -1864,12 +1850,46 @@ POPS = {
 		region_state:HYD = {
 			create_pop = {
 				culture = telegu
-				size = 3038944
+				size = 2438944
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = telegu
-				size = 126622
+				size = 110000
+			}
+			create_pop = {
+				culture = kannada
+				size = 900000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = kannada
+				size = 35000
+			}
+			create_pop = {
+				culture = deccani
+				size = 1200000
+			}
+			create_pop = {
+				culture = deccani
+				religion = shiite
+				size = 412931
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = deccani
+				size = 80000
+			}
+		}
+		region_state:MRT = {
+			create_pop = {
+				culture = telegu
+				size = 600000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = telegu
+				size = 16622
 			}
 			create_pop = {
 				culture = marathi
@@ -1882,26 +1902,21 @@ POPS = {
 			}
 			create_pop = {
 				culture = kannada
-				size = 911683
+				size = 11683
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = kannada
-				size = 37986
+				size = 2986
 			}
 			create_pop = {
 				culture = deccani
-				size = 1716381
-			}
-			create_pop = {
-				culture = deccani
-				religion = shiite
-				size = 412931
+				size = 216381
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = deccani
-				size = 89394
+				size = 9394
 			}
 		}
 	}

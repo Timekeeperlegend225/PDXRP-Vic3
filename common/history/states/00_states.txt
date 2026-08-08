@@ -4260,7 +4260,11 @@ STATES = {
 	s:STATE_HYDERABAD = {
 		create_state = {
 			country = c:HYD
-			owned_provinces = { xC5F1D7 x75599C xD07020 x990C20 x4FCA8A x5E950F xE2709D x782368 xACAC7B xB4928F x90B0A0 x6C4C5A xC90323 x6B578E x9257D2 xD7D0CD x0607C9 xDE9FE5 x0B9150 x293762 x8729D5 x01F273 xE7E1D9 x774B02 x507020 xD0440A x1E32E0 x2B94C1 x25B964 xE3DECE xFFACEF xF189CD x49EAE4 xB08536 xA1516D x67DBD9 x50F020 xFDC9AD x511610 x78A5B6 x5EC767 xB83EA4 x90F0A0 xDF9BF7 xD9F23D }
+			owned_provinces = { xC5F1D7 x75599C xD07020 x990C20 x4FCA8A xDE9FE5 x0B9150 x774B02 x507020 x2B94C1 x25B964 xE3DECE xFFACEF xF189CD x49EAE4 xB08536 xA1516D x67DBD9 x50F020 xFDC9AD x511610 x78A5B6 x5EC767 xB83EA4 x90F0A0 xDF9BF7 xD9F23D }
+		}
+		create_state = {
+			country = c:MRT
+			owned_provinces = { x6C4C5A x0607C9 x6B578E xE2709D x782368 xD7D0CD x5E950F x9257D2 x293762 xD0440A xACAC7B xC90323 xB4928F x1E32E0 xE7E1D9 x8729D5 x01F273 x90B0A0 }
 		}
 		add_homeland = cu:telegu
 	    add_homeland = cu:deccani
@@ -4300,7 +4304,6 @@ STATES = {
 		create_state = {
 			country = c:MRT
 			owned_provinces = { x31D0E0 x9C8D06 xCC1D23 xF87E91 xC7C3FD xB0D060 }
-			state_type = unincorporated
 		}
 		create_state = {
 			country = c:JUN
@@ -4417,7 +4420,6 @@ STATES = {
 		create_state = {
 			country = c:MRT
 			owned_provinces = { x1DC68F x1EA5F8 x45756F x4E70D0 x947B18 xB39D42 xB949B4 xE07020  xE4F817 xE0EFA0 }
-			state_type = unincorporated
 		}
 		create_state = {
 			country = c:PTA
