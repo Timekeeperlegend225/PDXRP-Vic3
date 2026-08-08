@@ -104,12 +104,7 @@ REPLACE_OR_CREATE:law_veth-begar = {
 	progressiveness = -25
 
 	is_visible = {
-		any_primary_culture = {
-			OR = {
-				has_discrimination_trait = language_southern_indic
-				has_discrimination_trait = language_northwestern_indic
-			}
-		}
+		always = no
 	}
 
 	can_enact = {
@@ -117,7 +112,7 @@ REPLACE_OR_CREATE:law_veth-begar = {
 	}
 
 	modifier = {
-		interest_group_ig_landowners_pol_str_mult = 0.25
+		interest_group_ig_landowners_pol_str_mult = 0.20
 		state_minimum_incorporated_subsistence_arable_land_add = -0.1
 		building_minimum_incorporated_subsistence_employment_add = -0.1
 	}

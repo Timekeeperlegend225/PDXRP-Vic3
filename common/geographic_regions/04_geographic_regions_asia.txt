@@ -241,7 +241,7 @@ geographic_region_indian_frontier = {
 		STATE_ARAKAN
 		STATE_CENTRAL_PROVINCES
 		STATE_BUNDELKHAND
-		STATE_BOMBAY
+		STATE_HYDERABAD
 		STATE_AGRA
 	}
 }
@@ -393,5 +393,21 @@ geographic_region_gujarat_bombay_line = {
 	state_regions = {
 		STATE_BOMBAY
 		STATE_GUJARAT
+	}
+}
+
+geographic_region_marathas = {
+	short_key = "marathas"
+
+	state_regions = {
+		STATE_AGRA
+		STATE_BUNDELKHAND
+		STATE_BOMBAY
+		STATE_GUJARAT
+		STATE_CENTRAL_PROVINCES
+		STATE_HYDERABAD
+		STATE_MALWA
+		STATE_RAJPUTANA
+		STATE_DELHI
 	}
 }

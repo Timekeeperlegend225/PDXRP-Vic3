@@ -1,0 +1,142 @@
+﻿REPLACE_OR_CREATE:je_maratha = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_british_india
+
+	immediate = {
+	}
+
+	modifiers_while_active = {
+		mrt_survive
+	}
+
+	complete = {
+		any_province_in_marathas = {
+			OR = {
+				owner = ROOT
+				owner = {
+					is_subject_of = ROOT
+				}
+			}
+			percent >= 0.90
+		}
+		c:BIC = {
+			NOT = {
+				has_journal_entry = je_uneasy_raj
+			}
+		}
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				is_subject = no 
+			}
+			add_loyalists = 0.10
+			add_modifier = {
+				name = mrt_independant_victory           
+				years = 20
+				is_decaying = yes
+			}
+			every_subject_or_below = {
+				save_scope_as = subject_scope
+				c:MRT = {
+					annex = scope:subject_scope
+				}
+			}
+		}
+		else = {
+			add_modifier = {
+				name = mrt_subject_victory           
+				years = 20
+				is_decaying = yes
+			}
+			top_overlord = {
+				add_modifier = {
+					name = mrt_subject_victory_overlord           
+					years = 20
+					is_decaying = yes
+				}			
+			}
+		}
+	}
+
+	fail = {
+		OR = {
+			AND = {
+				any_province_in_marathas = {
+					OR = {
+						owner = ROOT
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					percent <= 0.90
+				}
+				c:BIC = {
+					NOT = {
+						has_journal_entry = je_uneasy_raj
+					}
+				}
+			}
+			is_in_same_power_bloc = c:BIC
+			any_province_in_marathas = {
+				OR = {
+					owner = ROOT
+					owner = {
+						is_subject_of = ROOT
+					}
+				}
+				percent <= 0.25
+			}
+		}
+	}
+	
+	on_fail = {
+		if = {
+			limit = {
+				any_province_in_marathas = {
+					OR = {
+						owner = ROOT
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					percent <= 0.25
+				}
+			}
+			add_radicals = 0.20
+			every_subject_or_below = {
+				make_independent = yes
+			}
+			add_modifier = {
+				name = mrt_collapse           
+				years = 20
+				is_decaying = yes
+			}
+		}
+		else_if = {
+			limit = {
+				is_in_same_power_bloc = c:BIC
+			}
+			add_radicals = 0.10
+			add_modifier = {
+				name = mrt_submition           
+				years = 20
+				is_decaying = yes
+			}
+		}
+		else = {
+			add_modifier = {
+				name = mrt_timeout           
+				years = 20
+				is_decaying = yes
+			}
+		}
+	
+	}
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	weight = 100
+}

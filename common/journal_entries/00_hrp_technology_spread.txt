@@ -1,5 +1,5 @@
 ﻿je_hrp_technology_spread = {
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/alert_icons/has_no_research.dds"
 
 	group = je_group_technology
 
