@@ -85,6 +85,24 @@
 				activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms"  }
 			}
 			create_building={
+				building="building_munition_plant"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:RHE"
+						levels=1
+						region="STATE_BRANDENBURG"
+					}
+					country={
+						country="c:RHE"
+						levels=1
+					}
+				}
+				subsidized=yes
+				reserves=1
+				activate_production_methods={ "pm_percussion_caps" "pm_automation_disabled"  }
+			}
+			create_building={
 				building="building_construction_sector"
 				add_ownership={
 					country={

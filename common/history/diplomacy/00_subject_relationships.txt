@@ -55,8 +55,24 @@
 	}
 	c:PRU ?= {
 		create_diplomatic_pact = {
-			country = c:HOH
-			type = puppet
+			country = c:HEK
+			type = protectorate
+		}
+		create_diplomatic_pact = {
+			country = c:HES
+			type = protectorate
+		}
+		create_diplomatic_pact = {
+			country = c:WLD
+			type = protectorate
+		}
+		create_diplomatic_pact = {
+			country = c:NAS
+			type = protectorate
+		}
+		create_diplomatic_pact = {
+			country = c:FRM
+			type = protectorate
 		}
 	}
 	c:CHI ?= {
@@ -323,6 +339,26 @@
 		}
 		create_diplomatic_pact = {
 			country = c:JAI
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:SUR
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:NAG
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:JOD
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:BIK
+			type = vassal
+		}
+		create_diplomatic_pact = {
+			country = c:KUT
 			type = vassal
 		}
 	}

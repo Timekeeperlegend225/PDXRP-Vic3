@@ -321,8 +321,6 @@ POPS = {
 				religion = hindu # jains
 				size = 5794
 			}
-		}
-		region_state:PTA = {
 			create_pop = {
 				culture = panjabi
 				religion = hindu
@@ -708,7 +706,7 @@ POPS = {
 				size = 16701
 			}
 		}
-		region_state:GWA = {
+		region_state:MRT = {
 			create_pop = {
 				culture = bundeli
 				religion = hindu
@@ -960,7 +958,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = marathi
-				size = 1302500
+				size = 1202500
 			}
 			create_pop = {
 				culture = marathi
@@ -1028,7 +1026,7 @@ POPS = {
 		region_state:BAS = {
 			create_pop = {
 				culture = gondi
-				size = 100070
+				size = 80070
 			}
 			create_pop = {
 				culture = chhattisgarhi
@@ -1047,7 +1045,7 @@ POPS = {
 			create_pop = {
 				culture = gondi
 				religion = animist
-				size = 240301
+				size = 120301
 			}
 			create_pop = {
 				pop_type = slaves
@@ -1065,6 +1063,21 @@ POPS = {
 				pop_type = slaves
 				culture = gondi
 				size = 25070
+			}
+		}
+		region_state:NAG = {
+			create_pop = {
+				culture = marathi
+				size = 100000
+			}
+			create_pop = {
+				culture = gondi
+				size = 20000
+			}
+			create_pop = {
+				culture = gondi
+				religion = animist
+				size = 120000
 			}
 		}
 	}
@@ -1118,7 +1131,7 @@ POPS = {
 				size = 6718
 			}
 		}
-		region_state:JAS = {
+		region_state:MRT = {
 			create_pop = {
 				culture = rajput
 				size = 36079
@@ -1185,6 +1198,15 @@ POPS = {
 				culture = british
 				pop_type = aristocrats
 				size = 213
+			}
+			create_pop = {
+				culture = rajput
+				size = 26010
+			}
+			create_pop = {
+				culture = rajput
+				religion = sunni
+				size = 1769
 			}
 		}
 		region_state:JOD = {
@@ -1312,17 +1334,6 @@ POPS = {
 				culture = rajput
 				religion = sunni
 				size = 2012
-			}
-		}
-		region_state:GWA = {
-			create_pop = {
-				culture = rajput
-				size = 26010
-			}
-			create_pop = {
-				culture = rajput
-				religion = sunni
-				size = 1769
 			}
 		}
 	}
@@ -2207,7 +2218,7 @@ POPS = {
 		region_state:BUN = {
 			create_pop = {
 				culture = bundeli
-				size = 685328
+				size = 585328
 			}
 			create_pop = {
 				culture = hindustani
@@ -2218,7 +2229,7 @@ POPS = {
 		region_state:JHN = {
 			create_pop = {
 				culture = bundeli
-				size = 314352
+				size = 414352
 			}
 			create_pop = {
 				culture = hindustani
@@ -2241,7 +2252,7 @@ POPS = {
 				size = 68764
 			}
 		}
-		region_state:MRT = {
+		region_state:SUR = {
 			create_pop = {
 				culture = chhattisgarhi
 				size = 294705
