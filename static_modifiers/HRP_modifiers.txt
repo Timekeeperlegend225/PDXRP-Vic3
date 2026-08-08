@@ -1,0 +1,42 @@
+﻿mrt_survive = {
+    icon = gfx/interface/icons/invention_icons/mandatory_service.dds
+    battle_defense_owned_province_mult = 0.25
+	building_mobilization_cost_mult = -0.25
+	country_military_tech_spread_mult = 0.10
+	state_pop_support_movement_modernizer_mult = 0.40
+}
+
+mrt_independant_victory = {
+    icon = gfx/interface/icons/invention_icons/nationalism.dds
+	country_legitimacy_base_add = 25
+	country_prestige_add = 100
+	country_society_tech_spread_mult = 0.10
+}
+
+mrt_subject_victory = {
+    icon = gfx/interface/icons/invention_icons/pan_nationalism.dds
+	country_prestige_mult = -0.10
+	country_production_tech_spread_mult = 0.10
+}
+
+mrt_subject_victory_overlord = {
+    icon = gfx/interface/icons/invention_icons/pan_nationalism.dds
+	country_prestige_add = 25
+}
+
+mrt_submition = {
+    icon = gfx/interface/icons/principles_icons/exploitation_of_members.dds
+	country_legitimacy_base_add = -10
+	country_prestige_mult = -0.25
+}
+
+mrt_collapse = {
+    icon = gfx/interface/icons/politics_icons/revolution.dds
+	country_legitimacy_base_add = -25
+	country_prestige_mult = -0.50
+}
+
+mrt_timeout = {
+    icon = gfx/interface/icons/war_goals/humiliation.dds
+	country_prestige_mult = -0.10
+}

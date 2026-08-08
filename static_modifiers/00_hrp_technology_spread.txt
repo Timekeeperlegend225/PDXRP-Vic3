@@ -1,0 +1,4 @@
+﻿modifier_hrp_technology_spread = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_add = 0.5
+}

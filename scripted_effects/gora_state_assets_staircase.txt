@@ -1,0 +1,284 @@
+﻿# GORA UI+ — State Assets: nationally-owned level counter (staircase)
+#
+# Building scope. Counts how many levels of this building are owned by ROOT.
+# Result is written to ROOT.temp_bldg_nat_levels.
+#
+# Why a staircase? Victoria 3's `levels_owned_by_country` is a value-comparison
+# trigger, not a bare value, so we cannot read it directly into a variable.
+# We instead test "value >= N" for each N from 1..200 and increment a counter,
+# which produces the same numeric result. 200 covers every realistic building
+# level (vanilla caps far below that; even with conversion mods 200 is generous).
+#
+# This is the hottest single piece of code in the State Assets system, so we
+# parameterise the per-step logic into a tiny helper effect and call it
+# 200 times. Editing the step body in one place stays trivial.
+
+gora_sa_staircase_step_effect = {
+	if = {
+		limit = { levels_owned_by_country = { target = ROOT value >= $n$ } }
+		ROOT = { change_variable = { name = temp_bldg_nat_levels add = 1 } }
+	}
+}
+
+gora_sa_staircase_nat_levels_effect = {
+	ROOT = { set_variable = { name = temp_bldg_nat_levels value = 0 } }
+
+	gora_sa_staircase_step_effect = { n = 1 }
+	gora_sa_staircase_step_effect = { n = 2 }
+	gora_sa_staircase_step_effect = { n = 3 }
+	gora_sa_staircase_step_effect = { n = 4 }
+	gora_sa_staircase_step_effect = { n = 5 }
+	gora_sa_staircase_step_effect = { n = 6 }
+	gora_sa_staircase_step_effect = { n = 7 }
+	gora_sa_staircase_step_effect = { n = 8 }
+	gora_sa_staircase_step_effect = { n = 9 }
+	gora_sa_staircase_step_effect = { n = 10 }
+	gora_sa_staircase_step_effect = { n = 11 }
+	gora_sa_staircase_step_effect = { n = 12 }
+	gora_sa_staircase_step_effect = { n = 13 }
+	gora_sa_staircase_step_effect = { n = 14 }
+	gora_sa_staircase_step_effect = { n = 15 }
+	gora_sa_staircase_step_effect = { n = 16 }
+	gora_sa_staircase_step_effect = { n = 17 }
+	gora_sa_staircase_step_effect = { n = 18 }
+	gora_sa_staircase_step_effect = { n = 19 }
+	gora_sa_staircase_step_effect = { n = 20 }
+	gora_sa_staircase_step_effect = { n = 21 }
+	gora_sa_staircase_step_effect = { n = 22 }
+	gora_sa_staircase_step_effect = { n = 23 }
+	gora_sa_staircase_step_effect = { n = 24 }
+	gora_sa_staircase_step_effect = { n = 25 }
+	gora_sa_staircase_step_effect = { n = 26 }
+	gora_sa_staircase_step_effect = { n = 27 }
+	gora_sa_staircase_step_effect = { n = 28 }
+	gora_sa_staircase_step_effect = { n = 29 }
+	gora_sa_staircase_step_effect = { n = 30 }
+	gora_sa_staircase_step_effect = { n = 31 }
+	gora_sa_staircase_step_effect = { n = 32 }
+	gora_sa_staircase_step_effect = { n = 33 }
+	gora_sa_staircase_step_effect = { n = 34 }
+	gora_sa_staircase_step_effect = { n = 35 }
+	gora_sa_staircase_step_effect = { n = 36 }
+	gora_sa_staircase_step_effect = { n = 37 }
+	gora_sa_staircase_step_effect = { n = 38 }
+	gora_sa_staircase_step_effect = { n = 39 }
+	gora_sa_staircase_step_effect = { n = 40 }
+	gora_sa_staircase_step_effect = { n = 41 }
+	gora_sa_staircase_step_effect = { n = 42 }
+	gora_sa_staircase_step_effect = { n = 43 }
+	gora_sa_staircase_step_effect = { n = 44 }
+	gora_sa_staircase_step_effect = { n = 45 }
+	gora_sa_staircase_step_effect = { n = 46 }
+	gora_sa_staircase_step_effect = { n = 47 }
+	gora_sa_staircase_step_effect = { n = 48 }
+	gora_sa_staircase_step_effect = { n = 49 }
+	gora_sa_staircase_step_effect = { n = 50 }
+	gora_sa_staircase_step_effect = { n = 51 }
+	gora_sa_staircase_step_effect = { n = 52 }
+	gora_sa_staircase_step_effect = { n = 53 }
+	gora_sa_staircase_step_effect = { n = 54 }
+	gora_sa_staircase_step_effect = { n = 55 }
+	gora_sa_staircase_step_effect = { n = 56 }
+	gora_sa_staircase_step_effect = { n = 57 }
+	gora_sa_staircase_step_effect = { n = 58 }
+	gora_sa_staircase_step_effect = { n = 59 }
+	gora_sa_staircase_step_effect = { n = 60 }
+	gora_sa_staircase_step_effect = { n = 61 }
+	gora_sa_staircase_step_effect = { n = 62 }
+	gora_sa_staircase_step_effect = { n = 63 }
+	gora_sa_staircase_step_effect = { n = 64 }
+	gora_sa_staircase_step_effect = { n = 65 }
+	gora_sa_staircase_step_effect = { n = 66 }
+	gora_sa_staircase_step_effect = { n = 67 }
+	gora_sa_staircase_step_effect = { n = 68 }
+	gora_sa_staircase_step_effect = { n = 69 }
+	gora_sa_staircase_step_effect = { n = 70 }
+	gora_sa_staircase_step_effect = { n = 71 }
+	gora_sa_staircase_step_effect = { n = 72 }
+	gora_sa_staircase_step_effect = { n = 73 }
+	gora_sa_staircase_step_effect = { n = 74 }
+	gora_sa_staircase_step_effect = { n = 75 }
+	gora_sa_staircase_step_effect = { n = 76 }
+	gora_sa_staircase_step_effect = { n = 77 }
+	gora_sa_staircase_step_effect = { n = 78 }
+	gora_sa_staircase_step_effect = { n = 79 }
+	gora_sa_staircase_step_effect = { n = 80 }
+	gora_sa_staircase_step_effect = { n = 81 }
+	gora_sa_staircase_step_effect = { n = 82 }
+	gora_sa_staircase_step_effect = { n = 83 }
+	gora_sa_staircase_step_effect = { n = 84 }
+	gora_sa_staircase_step_effect = { n = 85 }
+	gora_sa_staircase_step_effect = { n = 86 }
+	gora_sa_staircase_step_effect = { n = 87 }
+	gora_sa_staircase_step_effect = { n = 88 }
+	gora_sa_staircase_step_effect = { n = 89 }
+	gora_sa_staircase_step_effect = { n = 90 }
+	gora_sa_staircase_step_effect = { n = 91 }
+	gora_sa_staircase_step_effect = { n = 92 }
+	gora_sa_staircase_step_effect = { n = 93 }
+	gora_sa_staircase_step_effect = { n = 94 }
+	gora_sa_staircase_step_effect = { n = 95 }
+	gora_sa_staircase_step_effect = { n = 96 }
+	gora_sa_staircase_step_effect = { n = 97 }
+	gora_sa_staircase_step_effect = { n = 98 }
+	gora_sa_staircase_step_effect = { n = 99 }
+	gora_sa_staircase_step_effect = { n = 100 }
+	gora_sa_staircase_step_effect = { n = 101 }
+	gora_sa_staircase_step_effect = { n = 102 }
+	gora_sa_staircase_step_effect = { n = 103 }
+	gora_sa_staircase_step_effect = { n = 104 }
+	gora_sa_staircase_step_effect = { n = 105 }
+	gora_sa_staircase_step_effect = { n = 106 }
+	gora_sa_staircase_step_effect = { n = 107 }
+	gora_sa_staircase_step_effect = { n = 108 }
+	gora_sa_staircase_step_effect = { n = 109 }
+	gora_sa_staircase_step_effect = { n = 110 }
+	gora_sa_staircase_step_effect = { n = 111 }
+	gora_sa_staircase_step_effect = { n = 112 }
+	gora_sa_staircase_step_effect = { n = 113 }
+	gora_sa_staircase_step_effect = { n = 114 }
+	gora_sa_staircase_step_effect = { n = 115 }
+	gora_sa_staircase_step_effect = { n = 116 }
+	gora_sa_staircase_step_effect = { n = 117 }
+	gora_sa_staircase_step_effect = { n = 118 }
+	gora_sa_staircase_step_effect = { n = 119 }
+	gora_sa_staircase_step_effect = { n = 120 }
+	gora_sa_staircase_step_effect = { n = 121 }
+	gora_sa_staircase_step_effect = { n = 122 }
+	gora_sa_staircase_step_effect = { n = 123 }
+	gora_sa_staircase_step_effect = { n = 124 }
+	gora_sa_staircase_step_effect = { n = 125 }
+	gora_sa_staircase_step_effect = { n = 126 }
+	gora_sa_staircase_step_effect = { n = 127 }
+	gora_sa_staircase_step_effect = { n = 128 }
+	gora_sa_staircase_step_effect = { n = 129 }
+	gora_sa_staircase_step_effect = { n = 130 }
+	gora_sa_staircase_step_effect = { n = 131 }
+	gora_sa_staircase_step_effect = { n = 132 }
+	gora_sa_staircase_step_effect = { n = 133 }
+	gora_sa_staircase_step_effect = { n = 134 }
+	gora_sa_staircase_step_effect = { n = 135 }
+	gora_sa_staircase_step_effect = { n = 136 }
+	gora_sa_staircase_step_effect = { n = 137 }
+	gora_sa_staircase_step_effect = { n = 138 }
+	gora_sa_staircase_step_effect = { n = 139 }
+	gora_sa_staircase_step_effect = { n = 140 }
+	gora_sa_staircase_step_effect = { n = 141 }
+	gora_sa_staircase_step_effect = { n = 142 }
+	gora_sa_staircase_step_effect = { n = 143 }
+	gora_sa_staircase_step_effect = { n = 144 }
+	gora_sa_staircase_step_effect = { n = 145 }
+	gora_sa_staircase_step_effect = { n = 146 }
+	gora_sa_staircase_step_effect = { n = 147 }
+	gora_sa_staircase_step_effect = { n = 148 }
+	gora_sa_staircase_step_effect = { n = 149 }
+	gora_sa_staircase_step_effect = { n = 150 }
+	gora_sa_staircase_step_effect = { n = 151 }
+	gora_sa_staircase_step_effect = { n = 152 }
+	gora_sa_staircase_step_effect = { n = 153 }
+	gora_sa_staircase_step_effect = { n = 154 }
+	gora_sa_staircase_step_effect = { n = 155 }
+	gora_sa_staircase_step_effect = { n = 156 }
+	gora_sa_staircase_step_effect = { n = 157 }
+	gora_sa_staircase_step_effect = { n = 158 }
+	gora_sa_staircase_step_effect = { n = 159 }
+	gora_sa_staircase_step_effect = { n = 160 }
+	gora_sa_staircase_step_effect = { n = 161 }
+	gora_sa_staircase_step_effect = { n = 162 }
+	gora_sa_staircase_step_effect = { n = 163 }
+	gora_sa_staircase_step_effect = { n = 164 }
+	gora_sa_staircase_step_effect = { n = 165 }
+	gora_sa_staircase_step_effect = { n = 166 }
+	gora_sa_staircase_step_effect = { n = 167 }
+	gora_sa_staircase_step_effect = { n = 168 }
+	gora_sa_staircase_step_effect = { n = 169 }
+	gora_sa_staircase_step_effect = { n = 170 }
+	gora_sa_staircase_step_effect = { n = 171 }
+	gora_sa_staircase_step_effect = { n = 172 }
+	gora_sa_staircase_step_effect = { n = 173 }
+	gora_sa_staircase_step_effect = { n = 174 }
+	gora_sa_staircase_step_effect = { n = 175 }
+	gora_sa_staircase_step_effect = { n = 176 }
+	gora_sa_staircase_step_effect = { n = 177 }
+	gora_sa_staircase_step_effect = { n = 178 }
+	gora_sa_staircase_step_effect = { n = 179 }
+	gora_sa_staircase_step_effect = { n = 180 }
+	gora_sa_staircase_step_effect = { n = 181 }
+	gora_sa_staircase_step_effect = { n = 182 }
+	gora_sa_staircase_step_effect = { n = 183 }
+	gora_sa_staircase_step_effect = { n = 184 }
+	gora_sa_staircase_step_effect = { n = 185 }
+	gora_sa_staircase_step_effect = { n = 186 }
+	gora_sa_staircase_step_effect = { n = 187 }
+	gora_sa_staircase_step_effect = { n = 188 }
+	gora_sa_staircase_step_effect = { n = 189 }
+	gora_sa_staircase_step_effect = { n = 190 }
+	gora_sa_staircase_step_effect = { n = 191 }
+	gora_sa_staircase_step_effect = { n = 192 }
+	gora_sa_staircase_step_effect = { n = 193 }
+	gora_sa_staircase_step_effect = { n = 194 }
+	gora_sa_staircase_step_effect = { n = 195 }
+	gora_sa_staircase_step_effect = { n = 196 }
+	gora_sa_staircase_step_effect = { n = 197 }
+	gora_sa_staircase_step_effect = { n = 198 }
+	gora_sa_staircase_step_effect = { n = 199 }
+	gora_sa_staircase_step_effect = { n = 200 }
+}
+
+# ─── Per-building national value (cost tier × 250 × levels) ───────────────
+# Building scope. Computes ROOT's nationally-owned value for THIS building.
+# Reads ROOT.temp_bldg_nat_levels (must be set first by gora_sa_staircase_nat_levels_effect).
+# Result is written to ROOT.temp_bldg_nat_value.
+gora_sa_compute_nat_value_for_building_effect = {
+	ROOT = { set_variable = { name = temp_bldg_nat_value value = 0 } }
+
+	if = {
+		limit = { is_building_group = bg_trade }
+		ROOT = { set_variable = { name = temp_bldg_nat_value value = 100 } }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_building_group = bg_agriculture
+				is_building_group = bg_ranching
+				is_building_group = bg_plantations
+				is_building_group = bg_logging
+				is_building_group = bg_rubber
+				is_building_group = bg_fishing
+				is_building_group = bg_whaling
+			}
+		}
+		ROOT = { set_variable = { name = temp_bldg_nat_value value = 200 } }
+	}
+	else_if = {
+		# Railway must precede bg_private_infrastructure medium tier.
+		limit = { is_building_type = building_railway }
+		ROOT = { set_variable = { name = temp_bldg_nat_value value = 800 } }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_building_group = bg_mining
+				is_building_group = bg_oil_extraction
+				is_building_group = bg_private_infrastructure
+				is_building_group = bg_arts
+				is_building_group = bg_power
+			}
+		}
+		ROOT = { set_variable = { name = temp_bldg_nat_value value = 400 } }
+	}
+	else_if = {
+		limit = { is_building_group = bg_light_industry }
+		ROOT = { set_variable = { name = temp_bldg_nat_value value = 600 } }
+	}
+	else = {
+		# Heavy industry, military industry, anything else.
+		ROOT = { set_variable = { name = temp_bldg_nat_value value = 800 } }
+	}
+
+	# value = tier * PRIVATIZATION_PER_LEVEL_COST(250) * levels
+	ROOT = {
+		change_variable = { name = temp_bldg_nat_value multiply = 250 }
+		change_variable = { name = temp_bldg_nat_value multiply = var:temp_bldg_nat_levels }
+	}
+}

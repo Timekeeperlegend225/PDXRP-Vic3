@@ -1,0 +1,16 @@
+hrp_technology_spread_multiplier = {
+	value = global_var:top_techs_researched_country_gvar
+	subtract = ROOT.techs_researched
+	if = {
+		limit = {
+			ROOT = { country_rank >= rank_value:great_power }
+		}
+		multiply = 0.5
+	}
+	else_if = {
+		limit = {
+			ROOT = { country_rank >= rank_value:major_power }
+		}
+		multiply = 0.8
+	}
+}

@@ -1,0 +1,57 @@
+﻿REPLACE_OR_CREATE:status_quo = {
+	icon = "gfx/interface/icons/ai_strategy_icons/maintain_power_balance.dds"
+
+	kind = custom
+
+	settings = {
+		require_target_be_part_of_war
+		skip_build_list
+
+		# Validation
+		validate_conflicts_war_goals_holder
+	}
+
+	execution_priority = 50
+
+	contestion_type = control_all_own_states
+
+	target_type = country
+
+	possible = {
+		# trigger to determine if a goal with its target data is listed when selecting a war goal in the diplo play panel
+		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
+		NOT = {
+			scope:target_country = {
+				is_subject_of = root
+			}
+		}
+		is_ai = no
+	}
+
+	valid = {
+		# trigger in addition to some basic validation code-side
+		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
+		NOT = {
+			scope:target_country = {
+				is_subject_of = root
+			}
+		}
+		is_ai = no
+	}
+
+	maneuvers = {
+		value = 0
+	}
+
+	infamy = {
+		value = 0
+	}
+
+	on_enforced = {
+		# script effect on top of the predefined code effect
+	}
+
+	ai = {
+		is_significant_demand = no
+	}
+}

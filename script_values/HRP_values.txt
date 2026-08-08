@@ -1,0 +1,6 @@
+﻿REPLACE:leverage_threshold_to_invite = 1 	# Minimum leverage advantage from power bloc on country to be able to invite the country
+REPLACE:divided_monarchists_upper_bound = 2000 
+REPLACE:construction_cost_canal = 7500
+REPLACE:construction_cost_very_high = 960
+REPLACE:construction_cost_high = 660
+REPLACE:construction_cost_low = 160
