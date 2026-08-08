@@ -14,3 +14,57 @@ REPLACE_OR_CREATE:country_institution_cost_institution_national_bank_mult={
 		ai_value=0
 	}
 }
+
+REPLACE_OR_CREATE:state_capitalists_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_bureaucrats_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_clergymen_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_engineers_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_officers_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:state_shopkeepers_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
