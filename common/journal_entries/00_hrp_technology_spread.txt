@@ -1,0 +1,177 @@
+﻿je_hrp_technology_spread = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	group = je_group_technology
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	
+	is_shown_when_inactive = {
+		always = yes
+	}
+
+	possible = {
+		always = yes
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			ordered_country = {
+				limit = {
+					is_revolutionary = no
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
+				order_by = techs_researched
+				position = 0
+				max = 0.5
+				check_range_bounds = no
+				set_global_variable = {
+					name = top_techs_researched_country_gvar
+					value = techs_researched
+				}
+			}
+			scope:journal_entry = { 
+				remove_modifier = modifier_hrp_technology_spread
+			}
+			if = {
+				limit = {
+					techs_researched < {
+						value = global_var:top_techs_researched_country_gvar
+						subtract = 10
+					}
+				}
+				scope:journal_entry = { 
+					add_modifier = {
+						name = modifier_hrp_technology_spread
+						multiplier = hrp_technology_spread_multiplier
+
+					}
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1880.1.1
+				}
+				if = {
+					limit = {
+						has_technology_researched = trench_works
+						NOT = {
+							has_technology_researched = trench_infantry_ttech
+						}
+					}
+					add_technology_researched = trench_infantry_ttech
+				}
+				if = {
+					limit = {
+						has_technology_researched = pre_dreadnought_tech
+						NOT = {
+							has_technology_researched = pre_dreadnought_ttech
+						}
+					}
+					add_technology_researched = pre_dreadnought_ttech
+				}
+				if = {
+					limit = {
+						has_technology_researched = submarine
+						NOT = {
+							has_technology_researched = submarine_ttech
+						}
+					}
+					add_technology_researched = submarine_ttech
+				}
+				if = {
+					limit = {
+						has_technology_researched = sea_lane_strategies
+						NOT = {
+							has_technology_researched = sea_lane_strategies_ttech
+						}
+					}
+					add_technology_researched = sea_lane_strategies_ttech
+				}
+				if = {
+					limit = {
+						has_technology_researched = landing_craft
+						NOT = {
+							has_technology_researched = landing_craft_ttech
+						}
+					}
+					add_technology_researched = landing_craft_ttech
+				}
+				if = {
+					limit = {
+						game_date >= 1895.1.1
+					}
+					if = {
+						limit = {
+							has_technology_researched = nco_training	
+							NOT = {
+								has_technology_researched = squad_infantry_ttech
+							}
+						}
+						add_technology_researched = squad_infantry_ttech
+					}
+					if = {
+						limit = {
+							has_technology_researched = defense_in_depth	
+							NOT = {
+								has_technology_researched = siege_artillery_ttech
+							}
+						}
+						add_technology_researched = siege_artillery_ttech
+					}
+					if = {
+						limit = {
+							has_technology_researched = destroyer	
+							NOT = {
+								has_technology_researched = destroyer_ttech
+							}
+						}
+						add_technology_researched = destroyer_ttech
+					}
+					if = {
+						limit = {
+							has_technology_researched = dreadnought_tech	
+							NOT = {
+								has_technology_researched = dreadnought_ttech
+							}
+						}
+						add_technology_researched = dreadnought_ttech
+					}
+					if = {
+						limit = {
+							game_date >= 1905.1.1
+						}
+						if = {
+							limit = {
+								has_technology_researched = mobile_armor	
+								NOT = {
+									has_technology_researched = mobile_armor_ttech
+								}
+							}
+							add_technology_researched = mobile_armor_ttech
+						}
+						if = {
+							limit = {
+								has_technology_researched = carrier_tech	
+								NOT = {
+									has_technology_researched = carrier_ttech
+								}
+							}
+							add_technology_researched = carrier_ttech
+						}
+						if = {
+							limit = {
+								has_technology_researched = battleship_tech	
+								NOT = {
+									has_technology_researched = battleship_ttech
+								}
+							}
+							add_technology_researched = battleship_ttech
+						}
+					}
+				}
+			}
+		}
+	}
+}

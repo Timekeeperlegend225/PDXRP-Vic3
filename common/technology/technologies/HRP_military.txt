@@ -201,3 +201,188 @@ REPLACE:battleship_tech = {
 		}
 	}
 }
+
+REPLACE_OR_CREATE:trench_infantry_ttech = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/trench_works.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		trench_works
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:pre_dreadnought_ttech = {
+	# Unlocks Pre-Dreadnoughts
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/pre_dreadnought.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		pre_dreadnought_tech
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:submarine_ttech = {
+	# Unlocks Submarine PM on Naval Bases
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/submarine.dds"
+	can_research = no
+
+	unlocking_technologies = {
+		submarine
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:sea_lane_strategies_ttech = {
+	# Unlocks Sea Lane Strategies PM in Naval Bases
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/sea_lane_strategies.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		sea_lane_strategies
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:landing_craft_ttech = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/landing_craft.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		landing_craft
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:squad_infantry_ttech = {
+	# Unlocks Advanced Officer Training PM in Barracks
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/nco_training.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		nco_training
+	}
+
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+REPLACE_OR_CREATE:siege_artillery_ttech = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/defense_in_depth.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		defense_in_depth
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:destroyer_ttech = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/destroyers.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		destroyer
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:dreadnought_ttech = {
+	# Unlocks Dreadnoughts PM in Naval Bases
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/dreadnought.dds"
+	category = military
+	can_research = no
+
+
+	unlocking_technologies = {
+		dreadnought_tech
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:mobile_armor_ttech = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/mobile_armor.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		mobile_armor
+	}
+
+	ai_weight = {
+		value = 1.5 # Important tech in general
+	}
+}
+
+REPLACE_OR_CREATE:carrier_ttech = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/carrier_tech.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		carrier_tech
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:battleship_ttech = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/battleship_tech.dds"
+	category = military
+	can_research = no
+
+	unlocking_technologies = {
+		battleship_tech
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
