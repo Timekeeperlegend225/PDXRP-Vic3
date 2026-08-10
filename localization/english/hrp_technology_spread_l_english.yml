@@ -1,0 +1,5 @@
+﻿l_english:
+ je_hrp_technology_spread: "Technology Diffusion"
+ je_hrp_technology_spread_reason: "New ideas and innovations are coming from near and far.\n\n#bold Technology Comparison#!\nYour researched technologies: #variable [ROOT.GetCountry.MakeScope.ScriptValue('techs_researched_script')|v0]#!\nTech leader's researched technologies: #variable [GetGlobalVariable('top_techs_researched_country_gvar').GetValue|v0]#!"
+ modifier_hrp_technology_spread: "Technology Diffusion"
+ modifier_hrp_technology_spread_desc: "Technology spread increases by 0.5 for every technology researched by the world's rank #1 power that this country has not researched."

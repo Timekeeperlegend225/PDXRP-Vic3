@@ -1,0 +1,13 @@
+﻿l_english:
+ country_institution_national_bank_max_investment_add:0 "Max $institution_national_bank$ [concept_institution] Investment"
+ country_institution_national_bank_max_investment_add_desc:0 "A bonus or penalty to the maximum investment level of the $institution_national_bank$ [concept_institution]"
+ country_institution_cost_institution_national_bank_mult: "@bur![Nbsp][concept_bureaucracy] Cost of [GetInstitutionType('institution_national_bank').GetName]"
+ country_institution_cost_institution_national_bank_mult_desc: "An increase or reduction to the @bur![Nbsp][concept_bureaucracy] cost of bringing [GetInstitutionType('institution_national_bank').GetName] to the citizens"
+ 
+ institution_national_bank:0 "Economic Affairs"
+ institution_national_bank_desc:0 "The institution in charge of supervising the economy"
+ 
+ law_imperial_traditionalism:0 "Imperial Traditionalism"
+ law_imperial_traditionalism_desc:0 "Pre-industrial subsistence economy with little central control."
+ law_indian_extraction_economy:0 "Indian Extration Economy"
+ law_indian_extraction_economy_desc:0 "A colonial economic system which focuses on maximum extraction of capital for the benefit of the company."

@@ -1,0 +1,21 @@
+﻿l_english:
+ mrt_survive: "The fight for Survival"
+ mrt_independant_victory: "Preserved Independance"
+ mrt_limited_victory: "Limited Victory"
+ mrt_subject_victory_overlord: "Secured India"
+ mrt_submition: "Lost Independance"
+ mrt_collapse: "Collapsing Empire"
+ mrt_timeout: "Continued Decline"
+ 
+ je_maratha: "The Marathas Struggle"
+ je_maratha_reason: "The Marathas Empire has succeded in surviving the third Anglo-Maratha war and preserve an independent Indian Realm but how long will they be able to keep the British East India Company at bay ?"
+ 
+ geographic_region_marathas: "Marathas Empire"
+ 
+ 
+ law_veth-begar: "Veth-Begar"
+ law_veth-begar_desc: "Agricultural land is owned by hereditary elites. Workers are not tied to the land, and may seek alternative employment if they can find it."
+ 
+ law_indian_traditionalism:0 "Indian Traditionalism"
+ law_indian_traditionalism_desc:0 "Pre-industrial subsistence economy with little central control."
+ 
