@@ -1137,14 +1137,6 @@
 				if = {
 					limit = {
 						has_decree = decree_encourage_agricultural_industry
-						owner = {
-							has_technology_researched = intensive_agriculture
-						}
-						NOT = {
-							owner = {
-								has_law_or_variant = law_type:law_serfdom
-							}
-						}
 					}
 					change_variable = {
 						name = agricultural_improvement_var
@@ -1216,11 +1208,6 @@
 				if = {
 					limit = {
 						has_decree = decree_encourage_agricultural_industry
-						NOT = {
-							owner = {
-								has_law_or_variant = law_type:law_serfdom
-							}
-						}
 					}
 					change_variable = {
 						name = agricultural_improvement_var

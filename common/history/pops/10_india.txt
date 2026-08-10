@@ -2416,7 +2416,7 @@ POPS = {
 				size = 4917
 			}
 		}
-		region_state:NEP = {
+		region_state:GAR = {
 			create_pop = {
 				culture = pahari
 				religion = hindu

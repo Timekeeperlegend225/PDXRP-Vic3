@@ -18,7 +18,7 @@
 					is_subject_of = ROOT
 				}
 			}
-			percent >= 0.90
+			percent >= 0.80
 		}
 		c:BIC = {
 			NOT = {
@@ -30,7 +30,15 @@
 	on_complete = {
 		if = {
 			limit = {
-				is_subject = no 
+				any_province_in_marathas = {
+					OR = {
+						owner = ROOT
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					percent >= 0.90
+				}
 			}
 			add_loyalists = 0.10
 			add_modifier = {
@@ -44,6 +52,15 @@
 					annex = scope:subject_scope
 				}
 			}
+			if = {
+				limit = {
+					gdp_ownership_ratio = { 
+						target = c:MRT
+						value > 0.75 
+					}
+					add_loyalists = 0.10
+				}
+			}
 		}
 		else = {
 			add_modifier = {
@@ -51,12 +68,11 @@
 				years = 20
 				is_decaying = yes
 			}
-			top_overlord = {
-				add_modifier = {
-					name = mrt_subject_victory_overlord           
-					years = 20
-					is_decaying = yes
-				}			
+			every_subject_or_below = {
+				save_scope_as = subject_scope
+				c:MRT = {
+					annex = scope:subject_scope
+				}
 			}
 		}
 	}
@@ -71,7 +87,7 @@
 							is_subject_of = ROOT
 						}
 					}
-					percent <= 0.90
+					percent <= 0.80
 				}
 				c:BIC = {
 					NOT = {
@@ -79,7 +95,7 @@
 					}
 				}
 			}
-			is_in_same_power_bloc = c:BIC
+			is_subject = yes
 			any_province_in_marathas = {
 				OR = {
 					owner = ROOT
@@ -117,7 +133,7 @@
 		}
 		else_if = {
 			limit = {
-				is_in_same_power_bloc = c:BIC
+				is_subject = yes
 			}
 			add_radicals = 0.10
 			add_modifier = {
@@ -125,15 +141,23 @@
 				years = 20
 				is_decaying = yes
 			}
+			activate_law = law_type:law_extraction_economy
+			top_overlord = {
+				add_modifier = {
+					name = mrt_subject_victory_overlord           
+					years = 20
+					is_decaying = yes
+				}			
+			}
 		}
 		else = {
+			add_radicals = 0.10
 			add_modifier = {
 				name = mrt_timeout           
 				years = 20
 				is_decaying = yes
 			}
 		}
-	
 	}
 
 	should_be_pinned_by_default_uninvolved_or_context = yes
