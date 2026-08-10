@@ -1,3 +1,0 @@
-﻿l_english:
- # Fallback for keys GORA references from framework mods (kept in sync with CMF).
- com_gui_total_building: "[Building.GetName] size:"
