@@ -79,7 +79,6 @@ REPLACE:law_private_health_insurance = {
 		state_officers_mortality_mult = -0.02
 		state_shopkeepers_mortality_mult = -0.02
 	}
-	}
 
 	ai_enact_weight_modifier = { #Petitions
 		value = 0

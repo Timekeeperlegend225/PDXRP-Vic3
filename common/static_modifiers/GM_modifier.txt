@@ -149,3 +149,7 @@ gm_ig_attraction = {
 gm_warapproval = {
 	icon = gfx/interface/icons/ig_icons/armed_forces.dds
 }
+
+gm_lawapproval = {
+	icon = gfx/interface/icons/diplomatic_treaties_articles_icons/law_commitment_treaties.dds
+}

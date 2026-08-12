@@ -1,0 +1,14 @@
+﻿GLOBAL = {
+	c:GBR ?= {
+		add_treasury = {
+			value = yearly_gross_income
+			multiply = -0.2
+		}
+	}
+	c:RUS ?= {
+		add_treasury = {
+			value = yearly_gross_income
+			multiply = -3.5
+		}
+	}
+}
