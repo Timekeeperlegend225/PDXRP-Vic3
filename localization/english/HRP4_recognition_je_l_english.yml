@@ -1,0 +1,7 @@
+﻿l_english:
+ earning_recognition_subjecthood_tt: "having [GetLawType('law_subjecthood').GetName]"
+ earning_recognition_hereditary_bureaucrats_tt: "having [GetLawType('law_hereditary_bureaucrats').GetName]"
+ earning_recognition_peasant_levies_tt: "having [GetLawType('law_peasant_levies').GetName]"
+ earning_recognition_progress_gdpc_low_tt: "[Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] below top 100"
+ earning_recognition_progress_subject_tt: "being a subject"
+
