@@ -216,46 +216,6 @@
 		scope:fane_gen = {
 			transfer_to_formation = scope:bengal_army
 		}
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_south_india
-			name = Bombay_Army
-			supply_hub = s:STATE_BOMBAY
-
-			# Infantry
-			combat_unit = { # European Regiments
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_BOMBAY
-				count = 3
-			}
-			combat_unit = { # Bombay Native Infantry
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_BOMBAY
-				count = 13
-			}
-			# Cavalry
-			combat_unit = { # Bombay Light Cavalry
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_BOMBAY
-				count = 2
-			}
-			# Artillery
-			combat_unit = { # European Artillery
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_BOMBAY
-				count = 2
-			}
-			save_scope_as = bombay_army
-		}
-
-		create_character = {
-			template = BIC_john_keane
-			save_scope_as = keane_gen
-		}
-
-		scope:keane_gen = {
-			transfer_to_formation = scope:bombay_army
-		}
 
 		create_military_formation = {
 			type = fleet
@@ -266,6 +226,11 @@
 				type = ship_type:ship_type_frigate
 				count = 1
 			}
+		}
+		
+		create_character = {
+			template = BIC_john_keane
+			save_scope_as = keane_gen
 		}
 	}
 	c:HYD ?= {
@@ -345,43 +310,6 @@
 			}
 		}
 	}
-	c:GWA ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_north_india
-			name = GwaliorArmy
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_MALWA
-				count = 20
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_MALWA
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_MALWA
-				count = 4
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_MALWA
-				count = 6
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_MALWA
-				count = 3
-			}
-		}
-	}
 	c:BER ?= {
 		create_military_formation = {
 			type = army
@@ -404,12 +332,6 @@
 				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_GUJARAT
 				count = 5
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_GUJARAT
-				count = 1
 			}
 		}
 		create_military_formation = { # One of very few princely states to operate a navy
@@ -575,37 +497,6 @@
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_CENTRAL_PROVINCES
 				count = 3
-			}
-		}
-	}
-	c:KNO ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_south_india
-			name = KurnoolArmy
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KURNOOL
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_KURNOOL
-				count = 3
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_KURNOOL
-				count = 1
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_KURNOOL
-				count = 1
 			}
 		}
 	}
@@ -861,41 +752,6 @@
 			}
 		}
 	}
-	c:TRA ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_south_india
-			name = TravancoreArmy
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_TRAVANCORE
-				count = 7
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_TRAVANCORE
-				count = 1
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_TRAVANCORE
-				count = 1
-			}
-		}
-		create_military_formation = { # One of very few princely states to operate a navy
-			type = fleet
-			hq_region = sr:region_south_india
-			name = TravancoreNavy
-
-			ship = { # Nothing the size of a frigate
-				type = ship_type:ship_type_frigate
-				count = 1
-			}
-		}
-	}
 	c:SIN ?= {
 		create_military_formation = {
 			type = army
@@ -1000,12 +856,6 @@
 				state_region = s:STATE_RAJPUTANA
 				count = 5
 			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_RAJPUTANA
-				count = 1
-			}
 		}
 	}
 	c:BIK ?= {
@@ -1055,11 +905,6 @@
 				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_RAJPUTANA
 				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_RAJPUTANA
-				count = 1
 			}
 		}
 	}
@@ -1111,12 +956,6 @@
 				state_region = s:STATE_RAJPUTANA
 				count = 2
 			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_RAJPUTANA
-				count = 1
-			}
 		}
 	}
 	c:JAS ?= {
@@ -1160,12 +999,6 @@
 				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_MALWA
 				count = 4
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_MALWA
-				count = 1
 			}
 		}
 	}

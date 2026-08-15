@@ -286,10 +286,6 @@
 			type = vassal
 		}
 		create_diplomatic_pact = {
-			country = c:GWA
-			type = vassal
-		}
-		create_diplomatic_pact = {
 			country = c:DHA
 			type = vassal
 		}

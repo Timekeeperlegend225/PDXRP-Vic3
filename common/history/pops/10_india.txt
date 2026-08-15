@@ -1947,7 +1947,7 @@ POPS = {
 				size = 5681
 			}
 		}
-		region_state:BIC = {
+		region_state:GBR = {
 			create_pop = {
 				culture = marathi
 				size = 80000
@@ -2281,7 +2281,7 @@ POPS = {
 		region_state:MRT = {
 			create_pop = {
 				culture = hindustani
-				size = 1794s2075
+				size = 17962075
 			}
 			create_pop = {
 				culture = hindustani
@@ -2304,16 +2304,12 @@ POPS = {
 				size = 1612
 			}
 			create_pop = {
-				culture = armenian
-				size = 451
-			}
-			create_pop = {
 				culture = pahari
 				size = 173599
 			}
 			create_pop = {
 				culture = hindustani
-				size = 30102
+				size = 10102
 			}
 			create_pop = {
 				culture = hindustani
