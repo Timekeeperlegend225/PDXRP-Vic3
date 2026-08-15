@@ -1,0 +1,43 @@
+on_monthly_pulse= {
+    effect = {
+        every_country = {
+            limit = {
+                OR = {
+                    country_is_in_north_america = yes
+					country_is_in_central_america = yes
+                    country_is_in_south_america = yes
+                }
+            }
+			if = {
+				limit = {
+					country_rank = rank_value:great_power 
+					NOT = { has_modifier = american_migration_gp_attraction }
+				}
+				add_modifier = american_migration_gp_attraction
+				remove_modifier =  american_migration_mp_attraction
+			}
+			else_if = {
+				limit = {
+					country_rank = rank_value:major_power
+					NOT = { has_modifier = american_migration_mp_attraction } 
+				}
+				add_modifier = american_migration_mp_attraction
+				remove_modifier =  american_migration_gp_attraction
+			}
+			else_if = {
+				limit = {   
+					OR = {
+						country_rank = rank_value:minor_power
+						country_rank = rank_value:insignificant_power
+					}   
+					OR = {
+						has_modifier = american_migration_mp_attraction
+						has_modifier =  american_migration_gp_attraction
+					}
+				}
+				remove_modifier =  american_migration_gp_attraction
+				remove_modifier =  american_migration_mp_attraction
+			}
+        }
+    }
+}

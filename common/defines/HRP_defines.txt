@@ -13,7 +13,7 @@ NDiplomacy = {
 }
 
 NPowerBlocs = {
-	MAX_MANDATE_PROGRESS = 1600			
+	MAX_MANDATE_PROGRESS = 2400			
 }
 
 NAI = {

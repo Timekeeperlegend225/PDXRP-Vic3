@@ -465,6 +465,18 @@ power_bloc_insignificant_power_non_leader_members = {
 	}
 }
 
+power_bloc_idependent_power_non_leader_members = {
+	every_power_bloc_member = {
+		if = {
+			limit = {
+				is_power_bloc_leader = no
+				is_subject = no 
+			}
+			add = 1
+		}
+	}
+}
+
 power_bloc_mandate_progress_per_insignificant_power_member = {
 	value = modifier:power_bloc_mandate_progress_per_insignificant_power_member_add
 	multiply = {
@@ -478,6 +490,29 @@ power_bloc_mandate_progress_by_rank = {
 	value = {
 		value = 10
 		desc = "Base Progress"
+	}
+
+	if = {
+		limit = {
+			power_bloc_idependent_power_non_leader_members != 0
+		}
+		add = {
+			value = power_bloc_idependent_power_non_leader_members
+			multiply = 2.5
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_IDEPENDENT_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			power_bloc_idependent_power_non_leader_members > 4
+		}
+		subtract = {
+			value = power_bloc_idependent_power_non_leader_members
+			subtract = 4
+			multiply = 2.5
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_MEMBERS_MAX"
+		}
 	}
 
 	if = {
@@ -563,6 +598,8 @@ power_bloc_mandate_progress_by_rank = {
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_INSIGNIFICANT_POWER_MEMBERS"
 		}
 	}
+	
+	max = 20
 }
 
 ai_power_bloc_identity_score = {

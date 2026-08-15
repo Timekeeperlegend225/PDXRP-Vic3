@@ -68,3 +68,11 @@ REPLACE_OR_CREATE:state_shopkeepers_mortality_mult={
 		ai_value=0
 	}
 }
+
+REPLACE_OR_CREATE:colonial_claim_cooldown={
+	decimals=0
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}

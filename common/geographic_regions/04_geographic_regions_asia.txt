@@ -56,6 +56,15 @@ geographic_region_india = {
 	}
 }
 
+geographic_region_indiashort = {
+	short_key = "indiashort"
+
+	strategic_regions = {
+		sr:region_north_india
+		sr:region_south_india
+	}
+}
+
 geographic_region_east_asia = {
 	short_key = "east_asia"
 

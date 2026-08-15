@@ -1,4 +1,4 @@
-﻿state_trait_malaria = {
+﻿REPLACE:state_trait_malaria = {
     icon = "gfx/interface/icons/state_trait_icons/malaria.dds"
 
 	required_techs_for_colonization = { "quinine" }
@@ -10,7 +10,7 @@
 	}
 }
 
-state_trait_severe_malaria = {
+REPLACE:state_trait_severe_malaria = {
     icon = "gfx/interface/icons/state_trait_icons/severe_malaria.dds"
 
 	required_techs_for_colonization = { "civilizing_mission" }

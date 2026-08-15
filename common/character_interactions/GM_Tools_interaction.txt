@@ -158,3 +158,106 @@ GM_send_character = {
 		transfer_character = scope:owner_scope
 	}
 }
+
+
+
+REPLACE_OR_CREATE:GM_invite_exile = {
+	# icon = ""
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/character_invite"
+
+	# Checks against actor country scope and skips the interaction completely if false, before even looking at any characters
+	should_ai_evaluate = {
+		empty_agitator_slots >= 1
+	}
+
+	potential = {
+		scope:actor ?= {
+			has_modifier = game_master
+		}
+		is_in_exile_pool = yes
+	}
+
+	show_requirements = yes
+
+	# required for AI to evaluate if interaction is possible on characters in exile pool
+	ai_considers_exiles = yes
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		transfer_character = scope:actor
+		set_variable = exile_to_ruler_var
+		add_career_length = {
+			role = agitator
+			months = 60
+			random_range = { 1.0 1.5 } # 60-90 months
+		}
+		custom_tooltip = invite_exile_start_join_movement_effect
+		hidden_effect = {
+			free_from_exile_effect = yes
+		}
+	}
+
+	cooldown = { days = 0 }
+
+	ai_chance = {
+		value = -85
+}
+
+
+
+REPLACE_OR_CREATE:exile_character = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
+
+	potential = {
+		is_in_exile_pool = no
+		is_in_void = no
+		is_ruler_of_own_country = no
+		is_heir_of_own_country = no
+		# Cannot exile pure commanders, we have the retire interaction for that
+		OR = {
+			has_role_of_type = executive
+			has_role_of_type = magnate
+			has_role_of_type = politician
+			has_role_of_type = agitator
+		}
+		trigger_if = {
+			limit = {
+				owner ?= {
+					c:JAP ?= this
+					NOT = {
+						has_variable = japan_restoration_complete
+					}
+				}
+			}
+			custom_tooltip = {
+				text = daimyo_not_tt
+				NOT = {
+					has_variable = daimyo_var
+				}
+			}
+		}
+		owner ?= {
+			has_modifier = game_master
+		}
+	}
+
+	show_requirements = yes
+
+	possible = {
+		is_busy = no
+	}
+
+	effect = {
+		exile_character = yes
+	}
+
+	cooldown = { days = 0 }
+	show_confirmation_box = yes
+
+	ai_chance = {
+		value = 0
+	}
+}
