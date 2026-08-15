@@ -1,4 +1,9 @@
 on_monthly_pulse= {
+    on_actions = {
+    	america_migration_check 
+    }
+}
+america_migration_check = {
     effect = {
         every_country = {
             limit = {
