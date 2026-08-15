@@ -55,21 +55,25 @@
 				}
 			}
 		}
-		OR = {
-			NOR = {
-				is_subject_type = subject_type_puppet
-				is_subject_type = subject_type_vassal
-				is_subject_type = subject_type_colony
-				is_subject_type = subject_type_crown_land
+		trigger_if = {
+			limit = {
+				OR = {
+					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_vassal
+					is_subject_type = subject_type_colony
+					is_subject_type = subject_type_crown_land
+				}
 			}
 			any_scope_diplomatic_pact = {
 				is_diplomatic_action_type = subject_foreign_investment
 			}
 		}
 		trigger_if = {
-			exists = power_bloc
-			exists = scope:other_country.power_bloc
-			power_bloc = scope:other_country.power_bloc
+			limit = {
+				exists = power_bloc
+				exists = scope:other_country.power_bloc
+				power_bloc = scope:other_country.power_bloc
+			}
 			is_power_bloc_leader = yes
 		}
 	}
