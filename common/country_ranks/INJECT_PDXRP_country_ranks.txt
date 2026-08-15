@@ -1,0 +1,62 @@
+﻿
+################
+## RECOGNIZED ##
+################
+
+INJECT:great_power = {
+	modifier = {
+		state_migration_pull_mult = -0.25
+		country_tech_spread_mult = -0.10
+	}
+}
+
+INJECT:major_power = {
+	modifier = {
+		state_migration_pull_mult = -0.10
+		country_tech_spread_mult = -0.05
+	}
+}
+
+INJECT:minor_power = {
+	modifier = {
+
+	}
+}
+
+INJECT:insignificant_power = {
+	modifier = {
+
+	}
+}S
+
+##################
+## UNRECOGNIZED ##
+##################
+
+INJECT:unrecognized_major_power = {
+	modifier = {
+	country_tech_spread_mult = 0.05
+}
+
+INJECT:unrecognized_regional_power = {
+	modifier = {
+	country_tech_spread_mult = 0.10
+	}
+}
+
+
+INJECT:unrecognized_power = {
+	modifier = {
+	country_tech_spread_mult = 0.15
+	}
+
+}
+###################
+## DECENTRALIZED ##
+###################
+
+INJECT:decentralized_power = {
+	modifier = {
+		building_throughput_add = 0.3
+	}
+}

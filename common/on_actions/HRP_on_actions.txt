@@ -1,16 +1,31 @@
-on_monthly_pulse= {
-    on_actions = {
+
+
+on_yearly_pulse_country = {
+	on_actions = {
     	america_migration_check 
     }
+}
+on_game_started = {
+	on_actions = {
+		america_migration_check_game_start
+	}
+}
+
+america_migration_check_game_start= {
+	effect = {
+		every_country = {
+			trigger_event = {
+				on_action = america_migration_check 
+			}
+		}
+	}
 }
 america_migration_check = {
     effect = {
         every_country = {
             limit = {
                 OR = {
-                    country_is_in_north_america = yes
-					country_is_in_central_america = yes
-                    country_is_in_south_america = yes
+                    is_in_geographic_region = geographic_region_americas 
                 }
             }
 			if = {

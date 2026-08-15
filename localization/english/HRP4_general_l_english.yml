@@ -53,3 +53,6 @@
  POWER_BLOC_MANDATE_PROGRESS_FROM_IDEPENDENT_MEMBERS: "#tooltippable #tooltip:[PowerBloc.GetTooltipTag],POWER_BLOC_MANDATE_PROGRESS_FROM_IDEPENDENT_MEMBERS_TOOLTIP From Idenpendent Members#!#!"
  POWER_BLOC_MANDATE_PROGRESS_FROM_IDEPENDENT_MEMBERS_TOOLTIP: "Number of independent members: #b [PowerBloc.MakeScope.ScriptValue('power_bloc_idependent_power_non_leader_members')]\n#!Each members add: #b 2.5"
  POWER_BLOC_MANDATE_PROGRESS_FROM_MEMBERS_MAX: "From Maximum of #b 20"
+ 
+ american_migration_gp_attraction: "New World Great Power"
+ american_migration_mp_attraction: "New World Major Power"
