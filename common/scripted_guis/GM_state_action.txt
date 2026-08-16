@@ -5,7 +5,7 @@ GM_state_action = {
 	}
 	is_shown = {
 		scope:country = {
-			has_modifier = game_master
+			has_modifier = GM_game_master
 		}
 	}
 	is_valid = {
