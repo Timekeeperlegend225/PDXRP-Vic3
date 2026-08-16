@@ -22,6 +22,8 @@ company_penoles: "Peñoles Industries"
 company_puertoliverpool: "El Puerto de Liverpool"
 company_cemex: "Cemex"
 company_imperial_oil: "Imperial Oil"
+company_pyrkal: "Pyrkal"
+company_achaia_clauss: "Achaia Clauss"
 
 # Fallback names if dynamic naming fails
 company_basic_agriculture_3: "Super Agricultural Corporation"
