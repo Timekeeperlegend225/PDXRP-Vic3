@@ -12,7 +12,13 @@
  
  gm_actions.2.t:0 "Transfer GM"
  gm_actions.2.u:0 "Are you sure you want to transfer the GM to [SCOPE.sCountry('GM_interacted_scope').GetName]"
- gm_actions.2.a:0 "Yes"
+ gm_actions.2.a:0 "Yes"ion in [SCOPE.sCountry('GM_interacted_scope').GetName]"
+ 
+ gm_actions.3.t:0 "Generic Modifier Menu"
+ gm_actions.3.u:0 "What type of modifier you want to give to [SCOPE.sCountry('GM_interacted_scope').GetName] ?"
+ 
+ gm_actions.4.t:0 "Instant Action Menu"
+ gm_actions.4.u:0 "What type of Instant Action do you want to do in [SCOPE.sCountry('GM_interacted_scope').GetName] ?"
  
  gm_actions.10.t:0 "Set Diplomatic Pact"
  gm_actions.10.a:0 "Cancel"
