@@ -120,6 +120,15 @@ gm_actions.1 = {
 	}
 	
 	option = {
+		name = gm_actions.5.t
+		trigger_event = {
+			id = gm_actions.5
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
 		name = gm_actions.10.t
 		trigger_event = {
 			id = gm_actions.10
@@ -163,21 +172,6 @@ gm_actions.1 = {
 			add_modifier = {
 				name = GM_allow_recognition
 			}
-			remove_modifier = GM_interacted_mod
-		}
-	}
-	
-	option = {
-		name = gm_actions.1.d
-		trigger = {
-			scope:GM_interacted_scope = {
-				is_country_type = unrecognized
-				has_modifier = GM_allow_recognition
-			}
-		}
-		remove_global_variable = GM_taking_action
-		scope:GM_interacted_scope = {
-			remove_modifier = GM_allow_recognition
 			remove_modifier = GM_interacted_mod
 		}
 	}
@@ -418,6 +412,190 @@ gm_actions.4 = {
 		}
 		trigger_event = {
 			id = value_selection.4
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#GM options
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+}
+
+gm_actions.5 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.5.t
+	desc = gm_actions.5.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+	}
+	
+	trigger = {
+		#triggered by diplo action
+	}
+	
+	#War Approval
+	
+	option = {
+		name = gm_actions.5.a
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_modifier = gm_warapproval
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			add_modifier = {
+				name = gm_warapproval
+			}
+		}
+		trigger_event = {
+			id = gm_actions.5
+			days = 0
+			popup = yes
+		}
+	}
+	
+	
+	#Clean up
+	
+	option = {
+		name = gm_actions.5.aa
+		trigger = {
+			scope:GM_interacted_scope = {
+					has_modifier = gm_warapproval
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_modifier = gm_warapproval
+		}
+		trigger_event = {
+			id = gm_actions.5
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#Law Approval
+	
+	option = {
+		name = gm_actions.5.b
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_modifier = gm_lawapproval
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			add_modifier = {
+				name = gm_lawapproval
+				months = 1
+			}
+		}
+		trigger_event = {
+			id = gm_actions.5
+			days = 0
+			popup = yes
+		}
+	}
+	
+	
+	#Clean up
+	
+	option = {
+		name = gm_actions.5.ba
+		trigger = {
+			scope:GM_interacted_scope = {
+					has_modifier = gm_lawapproval
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_modifier = gm_lawapproval
+		}
+		trigger_event = {
+			id = gm_actions.5
+			days = 0
+			popup = yes
+		}
+	}
+	
+	
+	#Recognition Approval
+	
+	option = {
+		name = gm_actions.5.c
+		trigger = {
+			scope:GM_interacted_scope = {
+				is_country_type = unrecognized
+				NOT = {
+					has_modifier = GM_allow_recognition
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			add_modifier = {
+				name = GM_allow_recognition
+			}
+		}
+		trigger_event = {
+			id = gm_actions.5
+			days = 0
+			popup = yes
+		}
+	}
+	
+	
+	#Clean up
+	
+	option = {
+		name = gm_actions.5.ca
+		trigger = {
+			scope:GM_interacted_scope = {
+					has_modifier = GM_allow_recognition
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_allow_recognition
+		}
+		trigger_event = {
+			id = gm_actions.5
 			days = 0
 			popup = yes
 		}

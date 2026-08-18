@@ -6,7 +6,6 @@
  gm_actions.1.u:0 "Selected country is [SCOPE.sCountry('GM_interacted_scope').GetName] \n Current GM target is [SCOPE.sCountry('scope_GM_target').GetName]"
  gm_actions.1.a:0 "Set [SCOPE.sCountry('GM_interacted_scope').GetName] as the GM Target"
  gm_actions.1.b:0 "Remove [SCOPE.sCountry('GM_interacted_scope').GetName] as the GM Target"
- gm_actions.1.c:0 "Allow [SCOPE.sCountry('GM_interacted_scope').GetName] to become recognized"
  gm_actions.1.d:0 "Disallow [SCOPE.sCountry('GM_interacted_scope').GetName] to become recognized"
  gm_actions.1.e:0 "Trigger election in [SCOPE.sCountry('GM_interacted_scope').GetName]"
  
@@ -19,6 +18,15 @@
  
  gm_actions.4.t:0 "Instant Action Menu"
  gm_actions.4.u:0 "What type of Instant Action do you want to do in [SCOPE.sCountry('GM_interacted_scope').GetName] ?"
+ 
+ gm_actions.5.t:0 "Approval Menu"
+ gm_actions.5.u:0 "What type of Approval do you want to give to [SCOPE.sCountry('GM_interacted_scope').GetName] ?"
+ gm_actions.5.a:0 "Allow [SCOPE.sCountry('GM_interacted_scope').GetName] to start a diplomatic play"
+ gm_actions.5.aa:0 "Remove War Approval"
+ gm_actions.5.b:0 "Allow [SCOPE.sCountry('GM_interacted_scope').GetName] to pass law"
+ gm_actions.5.ba:0 "Remove Law Approval"
+ gm_actions.5.c:0 "Allow [SCOPE.sCountry('GM_interacted_scope').GetName] to become recognized"
+ gm_actions.5.ca:0 "Remove Recogntion Approval"
  
  gm_actions.10.t:0 "Set Diplomatic Pact"
  gm_actions.10.a:0 "Cancel"

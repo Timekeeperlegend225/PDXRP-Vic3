@@ -30,7 +30,12 @@
  GM_send_character:0 "Move character to target"
  
  GM_target_character_mod:0 "Target Character"
- GM_allow_recognition:0 "GM approve recognition"
+ GM_allow_recognition:0 "Recognition Approval"
+ gm_warapproval:0 "War Approval"
+ gm_lawapproval:0 "Law Approval"
  
+ colonial_stake_cooldown_mod: "Colonial Stake in Cooldown"
+ colonial_claim_cooldown: "Years of Colonial Stake Cooldwon"
+ colonial_claim_cooldown_desc: "How many years is the duraction of the [GetDiplomaticActionType('da_stake_colonial_claim').GetName] cooldown"
  
  PAUSED:0 "                                               Paused \n #b #R @warning! Please don't touch anything unless Bodi said you can @warning!#!"
