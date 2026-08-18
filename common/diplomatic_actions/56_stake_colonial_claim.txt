@@ -25,11 +25,8 @@
 	}
 
 	possible = {
-		custom_tooltip = {
-			text = "DA_STAKE_COLONIAL_CLAIM_COOLDOWN"
-			NOT = {
-				has_variable = da_stake_colonial_claim_cooldown
-			}
+		NOT = {
+			has_modifier = colonial_stake_cooldown_mod
 		}
 		OR = {
 			NAND = {
@@ -125,10 +122,59 @@
 			limit = {
 				exists = scope:second_state
 			}
-
-			set_variable = {
-				name = da_stake_colonial_claim_cooldown
-				days = normal_modifier_time
+			if = {
+				limit = {
+					modifier:colonial_claim_cooldown = 12
+				}
+				add_modifier = {
+					name = colonial_stake_cooldown_mod
+					years = 12
+				}
+			}
+			else_if = {
+				limit = {
+					modifier:colonial_claim_cooldown = 10
+				}
+				add_modifier = {
+					name = colonial_stake_cooldown_mod
+					years = 10
+				}
+			}
+			else_if = {
+				limit = {
+					modifier:colonial_claim_cooldown = 8
+				}
+				add_modifier = {
+					name = colonial_stake_cooldown_mod
+					years = 8
+				}
+			}
+			else_if = {
+				limit = {
+					modifier:colonial_claim_cooldown = 6
+				}
+				add_modifier = {
+					name = colonial_stake_cooldown_mod
+					years = 6
+				}
+			}
+			else_if = {
+				limit = {
+					modifier:colonial_claim_cooldown = 4
+				}
+				add_modifier = {
+					name = colonial_stake_cooldown_mod
+					years = 4
+				}
+			}
+			else_if = {
+				limit = {
+					modifier:colonial_claim_cooldown = 2
+				}
+				add_modifier = {
+					name = colonial_stake_cooldown_mod
+					years = 2
+				}
 			}
 			scope:second_state = {
 				state_region = {
@@ -141,7 +187,7 @@
 			set_local_variable = {
 				name = infamy_value
 				value = {
-					add = 5
+					add = 2
 
 					multiply = {
 						#desc = "INFAMY_STATE_POPULATION_FACTOR"
@@ -187,7 +233,7 @@
 
 					min = {
 						#desc = "INFAMY_MINIMUM_VALUE"
-						value = 5
+						value = 0
 					}
 					max = 20
 				}

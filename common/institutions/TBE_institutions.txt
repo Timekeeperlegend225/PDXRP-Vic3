@@ -1,4 +1,10 @@
-﻿REPLACE_OR_CREATE:institution_national_bank = {
+﻿INJECT:institution_colonial_affairs = { 
+	modifier = {
+		colonial_claim_cooldown = -2
+	}
+}
+
+REPLACE_OR_CREATE:institution_national_bank = {
 	icon = "gfx/interface/icons/law_icons/presidential_republic.dds"
 	background_texture = "gfx/interface/illustrations/institutions/social_security.dds"
 	modifier = {
