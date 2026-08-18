@@ -614,7 +614,7 @@
 				add_ownership = {
 					country= {
 						country = "c:MRT"
-						levels = 1
+						levels = 3
 					}
 				}
 				reserves = 1
@@ -626,7 +626,7 @@
 					building = {
 						type = "building_textile_mill"
 						country = "c:MRT"
-						levels = 2
+						levels = 4
 						region = "STATE_DELHI"
 					}
 				}
@@ -665,44 +665,7 @@
 					building = {
 						type = "building_manor_house"
 						country = "c:MRT"
-						levels = 1
-						region = "STATE_DELHI"
-					}
-				}
-				reserves = 1
-				activate_production_methods = { "default_building_cotton_plantation" "pm_road_carts" }
-			}
-			create_building = {
-				building = "building_government_administration"
-				add_ownership = {
-					country= {
-						country = "c:MRT"
-						levels = 1
-					}
-				}
-				reserves = 1
-				activate_production_methods = { "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_secular_bureaucrats" }
-			}
-			create_building = {
-				building = "building_textile_mill"
-				add_ownership = {
-					building = {
-						type = "building_textile_mill"
-						country = "c:MRT"
 						levels = 2
-						region = "STATE_DELHI"
-					}
-				}
-				reserves = 1
-				activate_production_methods = { "pm_handsewn_clothes" "pm_traditional_looms" "pm_craftsman_sewing" }
-			}
-			create_building = {
-				building = "building_cotton_plantation"
-				add_ownership = {
-					building = {
-						type = "building_manor_house"
-						country = "c:MRT"
-						levels = 1
 						region = "STATE_DELHI"
 					}
 				}
@@ -886,7 +849,7 @@
 				add_ownership = {
 					country= {
 						country = "c:MRT"
-						levels = 3
+						levels = 5
 					}
 				}
 				reserves = 1
@@ -1379,6 +1342,17 @@
 			}
 		}
 		region_state:MRT= {
+			create_building = {
+				building = "building_government_administration"
+				add_ownership = {
+					country= {
+						country = "c:MRT"
+						levels = 2
+					}
+				}
+				reserves = 1
+				activate_production_methods = { "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
 			create_building = {
 				building = "building_cotton_plantation"
 				add_ownership = {
@@ -2874,7 +2848,7 @@
 				building = "building_government_administration"
 				add_ownership = {
 					country= {
-						country = "c:BIC"
+						country = "c:MRT"
 						levels = 1
 					}
 				}

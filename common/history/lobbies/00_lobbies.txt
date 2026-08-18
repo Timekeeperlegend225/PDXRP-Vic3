@@ -502,7 +502,7 @@
 			target = c:TUR
 			add_interest_group = ig:ig_armed_forces
 			add_interest_group = ig:ig_intelligentsia
-			}
+		}
 	}
 
 	c:BIC ?= {

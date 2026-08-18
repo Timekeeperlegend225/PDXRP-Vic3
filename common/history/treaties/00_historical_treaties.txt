@@ -1194,4 +1194,67 @@
 			}
 		}
 	}
+
+	create_treaty = {
+		name = treaty_name_of_havana
+		first_country = c:TEX
+		second_country = c:GBR
+
+		is_draft = no
+		entered_into_force_on = 1831.10.12
+		binding_period = { years = 200 } 
+
+		articles_to_create = {
+			{
+				article = money_transfer
+				source_country = c:TEX
+				target_country = c:GBR
+				inputs = {
+					{ quantity = 500 } 
+				}
+			}
+		}
+	}
+
+	create_treaty = {
+		name = treaty_name_of_havana
+		first_country = c:TEX
+		second_country = c:FRA
+
+		is_draft = no
+		entered_into_force_on = 1831.10.12
+		binding_period = { years = 200 } 
+
+		articles_to_create = {
+			{
+				article = money_transfer
+				source_country = c:TEX
+				target_country = c:FRA
+				inputs = {
+					{ quantity = 500 } 
+				}
+			}
+		}
+	}
+
+	create_treaty = {
+		name = treaty_name_of_havana
+		first_country = c:TEX
+		second_country = c:NET
+
+		is_draft = no
+		entered_into_force_on = 1831.10.12
+		binding_period = { years = 200 } 
+
+		articles_to_create = {
+			{
+				article = money_transfer
+				source_country = c:TEX
+				target_country = c:NET
+				inputs = {
+					{ quantity = 500 } 
+				}
+			}
+		}
+	}
 }
