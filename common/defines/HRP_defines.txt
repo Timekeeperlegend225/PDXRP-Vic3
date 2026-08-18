@@ -1,7 +1,7 @@
 ﻿NPolitics = {
 	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.0001 # If I put it at 0, it become +300%
 	
-		= 3		# The base BUR multiplier per population multiple
+	STATE_BUREAUCRACY_POP_BASE_COST	= 3		# The base BUR multiplier per population multiple
 }
 
 NMilitary = {

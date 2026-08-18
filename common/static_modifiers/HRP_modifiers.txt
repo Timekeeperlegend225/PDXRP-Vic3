@@ -7,3 +7,7 @@ american_migration_mp_attraction = {
 	icon = gfx/interface/icons/state_status_icons/mass_migration_target.dds
 	state_migration_pull_mult = 0.15
 }
+
+colonial_stake_cooldown_mod = {
+	icon = gfx/interface/icons/lens_toolbar_icons/da_stake_colonial_claim.dds
+}

@@ -101,6 +101,8 @@ REPLACE:base_values = {
 
 	country_max_unassigned_generals_add = 3
 	country_max_unassigned_admirals_add = 3
+	
+	colonial_claim_cooldown = 12
 }
 
 REPLACE:state_region_devastation = {
