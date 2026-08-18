@@ -6491,7 +6491,7 @@
 					building={
 						type="building_manor_house"
 						country="c:HAM"
-						levels=1
+						levels=2
 						region="STATE_ELBE"
 					}
 				}
