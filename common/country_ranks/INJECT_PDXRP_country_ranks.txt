@@ -7,6 +7,7 @@ INJECT:great_power = {
 	modifier = {
 		state_migration_pull_mult = -0.25
 		country_tech_spread_mult = -0.10
+		country_loan_interest_rate_mult = 0.10
 	}
 }
 
@@ -14,6 +15,7 @@ INJECT:major_power = {
 	modifier = {
 		state_migration_pull_mult = -0.10
 		country_tech_spread_mult = -0.05
+		country_loan_interest_rate_mult = 0.05
 	}
 }
 
@@ -35,28 +37,20 @@ INJECT:insignificant_power = {
 
 INJECT:unrecognized_major_power = {
 	modifier = {
-	country_tech_spread_mult = 0.05
+		country_tech_spread_mult = 0.05
 }
 
 INJECT:unrecognized_regional_power = {
 	modifier = {
-	country_tech_spread_mult = 0.10
+		country_tech_spread_mult = 0.10
+		country_loan_interest_rate_mult = -0.25
 	}
 }
 
 
 INJECT:unrecognized_power = {
 	modifier = {
-	country_tech_spread_mult = 0.15
-	}
-
-}
-###################
-## DECENTRALIZED ##
-###################
-
-INJECT:decentralized_power = {
-	modifier = {
-		building_throughput_add = 0.3
+		country_tech_spread_mult = 0.15
+		country_loan_interest_rate_mult = -0.50
 	}
 }

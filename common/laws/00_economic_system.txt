@@ -843,6 +843,11 @@ law_cooperative_ownership = {
 	institution = institution_national_bank
 	institution_modifier = {
 		state_laborers_investment_pool_contribution_add = 0.01
+		state_clerks_investment_pool_contribution_add = 0.01
+		state_clerks_investment_pool_efficiency_mult = 0.02
+		state_engineers_investment_pool_efficiency_mult = 0.02
+		state_laborers_investment_pool_efficiency_mult = 0.02
+		state_machinists_investment_pool_efficiency_mult = 0.02
 	}
 
 	ai_enact_weight_modifier = { #Petitions

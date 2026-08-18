@@ -1,0 +1,212 @@
+﻿REPLACE:decree_promote_social_mobility = {
+	texture = "gfx/interface/icons/decree/decree_promote_social_mobility.dds"
+
+	state_trigger = {
+		NOT = {
+			AND = {
+				owner ?= {
+					OR = {
+						has_law_or_variant = law_type:law_hindu_caste_enforced
+						has_law_or_variant = law_type:law_hindu_caste_codified
+					}
+				}
+				religion_percent_state = {
+					target = rel:hindu
+					value >= 0.3
+				}
+			}
+		}
+	}
+
+	modifier = {
+		state_education_access_add = 0.15
+		state_pop_qualifications_mult = 0.25
+	}
+
+	cost = 100
+
+	ai_weight = {
+		value = 0
+
+		if = {
+			limit = {
+				literacy_rate < 0.25
+			}
+			add = 75
+		}
+		if = {
+			limit = {
+				literacy_rate < 0.5
+			}
+			add = 75
+		}
+		if = {
+			limit = {
+				literacy_rate < 0.75
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_progressive_agenda
+						has_strategy = ai_strategy_egalitarian_agenda
+					}
+				}
+			}
+			multiply = 1.5
+		}
+
+		# Content overrides
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_lands_of_anarchy
+				}
+				is_capital = yes
+			}
+			add = 1000
+		}
+		if = {
+			limit = {
+				scope:country = { has_journal_entry = je_hawaii }
+			}
+			add = 1000
+		}
+		if = {
+			limit = {
+				scope:country = { has_journal_entry = je_portugal_regeneration_institutions }
+				literacy_rate < 0.5
+			}
+			add = 500
+		}
+	}
+}
+
+REPLACE:decree_greener_grass_campaign = {
+	texture = "gfx/interface/icons/decree/decree_greener_grass_campaign.dds"
+	state_trigger = {
+		is_isolated_from_market = no
+	}
+	modifier = {
+		state_migration_pull_add = 10
+		state_migration_pull_mult = 0.25
+	}
+	unlocking_technologies = {
+		romanticism
+	}
+	cost = 100
+
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				any_scope_building = {
+					is_subsistence_building = yes
+					occupancy < 0.75
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_subsistence_building = yes
+					occupancy < 0.5
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_subsistence_building = yes
+					occupancy < 0.25
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_the_algerian_departements
+				}
+				state_region = {
+					OR = {
+						this = s:STATE_ORAN
+						this = s:STATE_ALGIERS
+						this = s:STATE_CONSTANTINE
+					}
+				}
+				culture_percent_state = {
+					target = cu:french
+					value <= 0.25 # Bit of a buffer since we need 20%
+				}
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				is_incorporated = yes
+				any_scope_building = {
+					is_subsistence_building = yes
+					occupancy < 0.9
+				}
+				scope:country = {
+					OR = {
+						has_journal_entry = je_south_america_migration
+						has_journal_entry = je_central_america_migration
+						has_journal_entry = je_american_west_migration
+					}
+				}
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_taming_the_north
+				}
+				state_region = {
+					this = s:STATE_HOKKAIDO
+				}
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_colonize_korea
+				}
+				is_in_geographic_region = geographic_region_korea
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				is_incorporated = no
+				scope:country = { NOT = { has_law_or_variant = law_type:law_colonial_resettlement } } # Already gives a hefty migration bonus
+			}
+			multiply = 2.0
+		}
+		if = {
+			limit = {
+				state_unemployment_rate >= 0.1
+			}
+			multiply = 0
+		}
+	}
+}

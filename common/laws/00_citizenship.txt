@@ -158,6 +158,7 @@ law_ethnostate = {
 
 	modifier = {
 		country_authority_add = 200
+		country_authority_mult = 0.15
 		country_support_separatism_resistance_mult = -0.5
 		country_support_separatism_strength_mult = 0.5
 
@@ -183,6 +184,9 @@ law_ethnostate = {
 
 		#Fervor
 		country_primary_culture_fervor_from_laws_add = 20
+		
+		country_standard_of_living_full_acceptance_add = 1
+		country_standard_of_living_violent_hostility_add = -1
 	}
 
 	acceptance_modifier = {
@@ -288,6 +292,7 @@ law_national_supremacy = {
 
 	modifier = {
 		country_authority_add = 150
+		country_authority_mult = 0.10
 		country_support_separatism_resistance_mult = -0.25
 		country_support_separatism_strength_mult = 0.25
 
@@ -313,6 +318,8 @@ law_national_supremacy = {
 
 		#Fervor
 		country_primary_culture_fervor_from_laws_add = 15
+		
+		country_standard_of_living_full_acceptance_add = 0.5
 	}
 
 	acceptance_modifier = {
@@ -424,6 +431,7 @@ law_racial_segregation = {
 
 	modifier = {
 		country_authority_add = 100
+		country_authority_mult = 0.05
 
 		#If primary culture, only apply this value
 		country_acceptance_primary_culture_add = 100
