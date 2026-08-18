@@ -42,6 +42,26 @@ REPLACE:currency_standards = {
 	}
 }
 
+REPLACE:banking = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/banking.dds"
+	category = society
+
+	modifier = {
+		country_minting_mult = 0.1
+		country_loan_interest_rate_add = -0.01
+		state_max_trade_advantage_from_capacity_add = 0.05
+	}
+
+	unlocking_technologies = {
+		currency_standards
+	}
+
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
 REPLACE:stock_exchange = {
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/stock_exchanges.dds"
@@ -87,7 +107,7 @@ REPLACE:central_banking = {
 
 	modifier = {
 		country_minting_mult = 0.1
-		country_loan_interest_rate_add = -0.02
+		country_loan_interest_rate_add = -0.01
 		state_max_trade_advantage_from_capacity_add = 0.05
 		country_institution_national_bank_max_investment_add = 1
 	}
@@ -209,28 +229,6 @@ REPLACE:corporate_management = {
 	}
 }
 
-REPLACE:psychoanalysis = {
-	# Should provide additional methods for dealing with negative psychological character traits
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
-	category = society
-
-	modifier = {
-		country_influence_mult = 0.25
-		country_diplomatic_play_maneuvers_mult = 0.25
-		state_bureaucracy_population_base_cost_factor_mult = -0.05
-		state_working_adult_ratio_add = 0.02
-	}
-
-	unlocking_technologies = {
-		philosophical_pragmatism
-	}
-
-	ai_weight = {
-		value = 1
-	}
-}
-
 REPLACE:malaria_prevention = {
 	# Should permit for colonization of state regions with severe malaria
 	era = era_4
@@ -293,6 +291,49 @@ REPLACE:central_planning = {
 	}
 }
 
+REPLACE:international_exchange_standards = {
+	# Should increase trade power maybe
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/international_exchange_standards.dds"
+	category = society
+
+	modifier = {
+		country_minting_mult = 0.1
+		country_loan_interest_rate_add = -0.03
+		state_max_trade_advantage_from_capacity_add = 0.05
+	}
+
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE:psychoanalysis = {
+	# Should provide additional methods for dealing with negative psychological character traits
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
+	category = society
+
+	modifier = {
+		country_influence_mult = 0.25
+		country_diplomatic_play_maneuvers_mult = 0.25
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+		state_working_adult_ratio_add = 0.02
+	}
+
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
 REPLACE:antibiotics = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/antibiotics.dds"
@@ -306,6 +347,24 @@ REPLACE:antibiotics = {
 
 	unlocking_technologies = {
 		malaria_prevention
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE:modern_financial_instruments = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/modern_financial_instruments.dds"
+	category = society
+	modifier = {
+		country_minting_mult = 0.1
+		country_loan_interest_rate_add = -0.03
+		country_government_dividends_efficiency_add = 0.05
+	}
+	unlocking_technologies = {
+		international_exchange_standards
 	}
 
 	ai_weight = {
