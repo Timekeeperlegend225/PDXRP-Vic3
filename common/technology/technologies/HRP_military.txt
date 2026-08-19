@@ -237,6 +237,7 @@ REPLACE_OR_CREATE:submarine_ttech = {
 	# Unlocks Submarine PM on Naval Bases
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/submarine.dds"
+	category = military
 	can_research = no
 
 	unlocking_technologies = {

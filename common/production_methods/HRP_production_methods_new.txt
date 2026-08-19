@@ -24,6 +24,8 @@
 			goods_output_fruit_add = 1
 			goods_output_services_add = 20
 			goods_output_fine_art_add = 5
+			goods_output_grain_add = 10
+			goods_output_groceries_add = 5
 		}
 	}
 	state_modifiers = {
