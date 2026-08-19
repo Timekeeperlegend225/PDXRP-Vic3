@@ -1,0 +1,23 @@
+﻿CHARACTERS = {
+	c:USA ?= {
+
+		create_character = {
+			template = napoleon_ii
+		}
+	}
+	c:SIC ?= {
+
+		create_character = {
+			template = achille_murat
+		}
+
+		create_character = {
+			template = lucien_murat
+		}
+	}
+	c:PRU ?= {
+		create_character = {
+			template = louise_of_mecklenburgstrelitz
+		}
+	}
+}

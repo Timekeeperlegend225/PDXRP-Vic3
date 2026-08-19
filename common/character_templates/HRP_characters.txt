@@ -1,0 +1,77 @@
+napoleon_ii = { 
+	first_name = "Napoleon"
+	last_name = "Bonaparte"
+	historical = yes
+	birth_date = 1811.3.20
+	culture = cu:french
+    religion = rel:catholic
+	dna = dna_emperor_napoleon_02
+	is_general = yes
+	commander_rank = commander_rank_1
+	interest_group = ig_armed_forces
+	ideology = ideology_bonapartist
+	home_region = STATE_ILE_DE_FRANCE
+	traits = {
+		ambitious
+		popular_commander
+		literary
+	}
+	on_created = {
+		set_variable = house_bonaparte
+	}
+}
+
+achille_murat = { 
+	first_name = "Achille"
+	last_name = "Murat"
+	historical = yes
+	birth_date = 1801.1.21
+	ig_leader = yes
+	culture = cu:french
+	interest_group = ig_landowners
+	ideology = ideology_liberal_leader
+	role = character_role_magnate
+	home_region = STATE_APULIA
+	traits = {
+		direct
+		brave
+		alcoholic
+		basic_political_operator
+	}
+}
+
+lucien_murat = { 
+	first_name = "Lucien"
+	last_name = "Murat"
+	historical = yes
+	birth_date = 1803.5.16
+	ig_leader = yes
+	culture = cu:french
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_market_liberal
+	home_region = STATE_APULIA
+	traits = {
+		imperious
+		ambitious
+		expensive_tastes
+		basic_entrepreneur
+	}
+}
+
+louise_of_mecklenburgstrelitz = { 
+	first_name = "Louise"
+	last_name = mecklenburgstrelitz
+	historical = yes
+	birth_date = 1776.5.10
+	female = yes
+	is_agitator = yes
+	interest_group = ig_devout
+	ideology = ideology_humanitarian_royalist
+	home_region = STATE_BRANDENBURG
+	traits = {
+		charismatic
+		pious
+		experienced_diplomat
+		expert_political_operator
+	}
+}

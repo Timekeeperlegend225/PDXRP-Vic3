@@ -15,7 +15,7 @@
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
-				add_principle = principle_colonial_offices_2
+				add_principle = principle_colonial_offices_1
 			}
 		}
 	}
@@ -65,7 +65,7 @@
 
 			map_color = { 219 211 157 }
 
-			founding_date = 1825.12.1 
+			founding_date = 1815.12.1 
 			identity = identity_military_treaty_organization
 			principle = principle_defensive_cooperation_1
 			member = c:MOD
@@ -84,6 +84,28 @@
 			}
 			power_bloc = {
 				add_principle = principle_creative_legislature_1
+			}
+		}
+	}
+
+	c:PRU ?= {
+		create_power_bloc = {
+			name = PRUSSIAN_EMPIRE
+
+			map_color = { 147 130 110 }
+
+			founding_date = 1815.12.1 
+			identity = identity_military_treaty_organization
+			principle = principle_aggressive_coordination_1
+
+			# subjects are automatically part of the bloc
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_military_industry_1
 			}
 		}
 	}

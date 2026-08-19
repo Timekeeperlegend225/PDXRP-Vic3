@@ -2028,7 +2028,11 @@ STATES = {
 	s:STATE_SAVOY = {
 		create_state = {
 			country = c:SAR
-			owned_provinces = { x56B04B xDDDD3B x6B4BA4 xD000E0 }
+			owned_provinces = { x56B04B x6B4BA4 }
+		}
+		create_state = {
+			country = c:FRA
+			owned_provinces = { xDDDD3B xD000E0 }
 		}
 
 		add_homeland = cu:north_italian
