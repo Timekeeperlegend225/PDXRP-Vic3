@@ -1,9 +1,6 @@
 ﻿building_casino = {
-	building_group = bg_monuments
+	building_group = bg_arts
 	icon = "gfx/interface/icons/building_icons/building_casino.dds"
-	expandable = no
-	downsizeable = no
-	unique = yes
 
 	city_gfx_interactions = {
 		clear_size_area = yes
@@ -14,7 +11,7 @@
 		pmg_base_casino
 	}
 
-	required_construction = construction_cost_monument
+	required_construction = construction_cost_very_high
 
 	potential = {
 		state_region = s:STATE_PROVENCE
