@@ -2593,15 +2593,15 @@
 		}
 	}
 	s:STATE_MADRAS= {
-		region_state:BIC= {
+		region_state:FRA= {
 			create_building = {
 				building = "building_dye_plantation"
 				add_ownership = {
 					building = {
 						type = "building_manor_house"
-						country = "c:GBR"
+						country = "c:FRA"
 						levels = 1
-						region = "STATE_HOME_COUNTIES"
+						region = "STATE_ILE_DE_FRANCE"
 					}
 				}
 				reserves = 1
@@ -2611,19 +2611,30 @@
 				building = "building_port"
 				add_ownership = {
 					country= {
-						country = "c:BIC"
+						country = "c:FRA"
 						levels = 1
-					}
-					building={
-						type="building_financial_district"
-						country="c:BIC"
-						levels=2
-						region="STATE_MADRAS"
 					}
 				}
 				reserves = 1
 				activate_production_methods = { "pm_anchorage" }
 			}
+		}
+
+		region_state:DEN={
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:DEN"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+
+		region_state:BIC = {
 			create_building = {
 				building = "building_government_administration"
 				add_ownership = {
@@ -2705,11 +2716,11 @@
 			create_building = {
 				building = "building_iron_mine"
 				add_ownership = {
-					building={
-						type="building_financial_district"
-						country="c:BIC"
-						levels=2
-						region="STATE_MADRAS"
+					building = {
+						type = "building_financial_district"
+						country = "c:GBR"
+						levels = 2
+						region = "STATE_HOME_COUNTIES"
 					}
 				}
 				reserves = 1
@@ -2723,12 +2734,6 @@
 						country = "c:BIC"
 						levels = 2
 						region = "STATE_MADRAS"
-					}
-					building={
-						type="building_financial_district"
-						country="c:BIC"
-						levels=2
-						region="STATE_MADRAS"
 					}
 				}
 				reserves = 1
@@ -2746,6 +2751,19 @@
 				}
 				reserves = 1
 				activate_production_methods = { "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
+			create_building = {
+				building = "building_dye_plantation"
+				add_ownership = {
+					building = {
+						type = "building_manor_house"
+						country = "c:GBR"
+						levels = 10
+						region = "STATE_HOME_COUNTIES"
+					}
+				}
+				reserves = 1
+				activate_production_methods = { "default_building_dye_plantation" "pm_road_carts" }
 			}
 			create_building = {
 				building = "building_tobacco_plantation"
@@ -2770,58 +2788,6 @@
 				}
 				reserves = 1
 				activate_production_methods = { "pm_basic_port" }
-			}
-		}
-		region_state:FRA= {
-			create_building = {
-				building = "building_sugar_plantation"
-				add_ownership = {
-					company = {
-						type=company_french_east_india_company
-						country="c:FRA"
-						levels=10
-					}
-				}
-				reserves = 1
-				activate_production_methods = { "default_building_sugar_plantation" "pm_road_carts" }
-			}
-			create_building = {
-				building = "building_tea_plantation"
-				add_ownership = {
-					company = {
-						type=company_french_east_india_company
-						country="c:FRA"
-						levels=12
-					}
-				}
-				reserves = 1
-				activate_production_methods = { "default_building_tea_plantation" "pm_road_carts" }
-			}
-			create_building = {
-				building = "building_coffee_plantation"
-				add_ownership = {
-					company = {
-						type=company_french_east_india_company
-						country="c:FRA"
-						levels=10
-					}
-				}
-				reserves = 1
-				activate_production_methods = { "coffee_plantation_wet_process_manual" "pm_road_carts" }
-			}
-		}
-
-		region_state:DEN={
-			create_building={
-				building="building_port"
-				add_ownership={
-					country={
-						country="c:DEN"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 	}

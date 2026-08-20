@@ -376,12 +376,12 @@
 		}
 	}
 	s:STATE_WEST_KARELIA={
-		region_state:SWE={
+		region_state:RUS={
 			create_building={
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:SWE"
+						country="c:RUS"
 						levels=1
 					}
 				}
@@ -393,7 +393,7 @@
 				add_ownership={
 					building={
 						type="building_fishing_wharf"
-						country="c:SWE"
+						country="c:RUS"
 						levels=1
 						region="STATE_WEST_KARELIA"
 					}
@@ -406,7 +406,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:SWE"
+						country="c:RUS"
 						levels=1
 						region="STATE_WEST_KARELIA"
 					}
@@ -419,7 +419,7 @@
 				add_ownership={
 					building={
 						type="building_logging_camp"
-						country="c:SWE"
+						country="c:RUS"
 						levels=1
 						region="STATE_WEST_KARELIA"
 					}
@@ -431,7 +431,7 @@
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:SWE"
+						country="c:RUS"
 						levels=1
 					}
 				}

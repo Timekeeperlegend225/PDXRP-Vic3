@@ -7375,7 +7375,7 @@ STATES = {
 	}
 	s:STATE_WEST_KARELIA = {
 		create_state = {
-			country = c:SWE
+			country = c:RUS
 			owned_provinces = {
 				x0A00AC x1E964A x208001 x315CDB x3CFB81 x3EFDA0 x43E91D x63EE78 x65EF3B x664F54 x74C1F3 x85EBD4 x934610 xAB4A30 xAD3FF9 xBB0055 xBC376C xD093D4 xFC48AF
 			}

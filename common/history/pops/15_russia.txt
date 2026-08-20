@@ -360,7 +360,7 @@
 		}
 	}
 	s:STATE_WEST_KARELIA = { #DONE
-		region_state:SWE = {
+		region_state:RUS = {
 			create_pop = {
 				culture = finnish
 				size = 221799

@@ -75,12 +75,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = dixie
-				size = 42224
+				size = 102224
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = afro_american
-				size = 6040
+				size = 26040
 			}
 		}
 	}

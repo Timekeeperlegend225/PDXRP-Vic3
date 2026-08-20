@@ -43,7 +43,7 @@
 			create_pop = {
 				pop_type = slaves
 				culture = afro_american
-				size = 102994
+				size = 82994
 			}
 			create_pop = {
 				pop_type = slaves
@@ -454,7 +454,7 @@
 			}
 			create_pop = {
 				culture = dixie
-				size = 138666
+				size = 128666
 			}
 			create_pop = {
 				culture = north_german
@@ -653,7 +653,7 @@
 		region_state:USA = {
 			create_pop = {
 				culture = dixie
-				size = 172804
+				size = 162804
 			}
 			create_pop = {
 				culture = afro_american
@@ -662,7 +662,7 @@
 			create_pop = {
 				pop_type = slaves
 				culture = afro_american
-				size = 87057
+				size = 86057
 			}
 		}
 	}
@@ -700,7 +700,7 @@
 		region_state:USA = {
 			create_pop = {
 				culture = dixie
-				size = 47996
+				size = 37996
 			}
 			create_pop = {
 				culture = afro_american
@@ -951,7 +951,7 @@
 		region_state:USA = {
 			create_pop = {
 				culture = dixie
-				size = 492500
+				size = 472500
 			}
 			create_pop = {
 				culture = afro_american
@@ -996,7 +996,7 @@
 		region_state:USA = {
 			create_pop = {
 				culture = dixie
-				size = 253836
+				size = 243836
 			}
 			create_pop = {
 				culture = dixie
@@ -1014,7 +1014,7 @@
 			create_pop = {
 				pop_type = slaves
 				culture = afro_american
-				size = 318693
+				size = 315693
 			}
 		}
 	}

@@ -173,7 +173,7 @@
 				add_ownership={
 					country={
 						country="c:TEX"
-						levels=2
+						levels=3
 					}
 				}
 				reserves=1
