@@ -31,3 +31,14 @@ REPLACE:RHE = {
 	religion = catholic
 	capital = STATE_NORTH_RHINE
 }
+
+REPLACE:DEN = {
+	color = hsv{ 1.01  0.8  0.5 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { danish norwegian }
+	capital = STATE_ZEALAND
+}
