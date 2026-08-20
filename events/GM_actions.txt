@@ -4529,7 +4529,7 @@ gm_actions.40 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -4561,7 +4561,7 @@ gm_actions.40 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -4576,7 +4576,7 @@ gm_actions.40 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -4593,7 +4593,7 @@ gm_actions.40 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -4608,7 +4608,7 @@ gm_actions.40 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -4616,7 +4616,7 @@ gm_actions.40 = {
 		name = gm_actions.40.f
 		random_country = {
 			limit = {
-				has_modifier = game_master
+				has_modifier = GM_game_master
 			}
 			save_scope_as = GM
 		}
@@ -4629,7 +4629,7 @@ gm_actions.40 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 }
@@ -4683,7 +4683,7 @@ gm_actions.400 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -4948,7 +4948,7 @@ gm_actions.401 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -5059,7 +5059,7 @@ gm_actions.402 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -5176,7 +5176,7 @@ gm_actions.403 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -5318,7 +5318,7 @@ gm_actions.404 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -5459,7 +5459,7 @@ gm_actions.405 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -5620,7 +5620,7 @@ gm_actions.406 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -5773,7 +5773,7 @@ gm_actions.407 = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifer = GM_interacted_mod
+			remove_modifier = GM_interacted_mod
 		}
 	}
 	
