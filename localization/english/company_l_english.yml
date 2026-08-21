@@ -24,9 +24,6 @@ company_cemex: "Cemex"
 company_imperial_oil: "Imperial Oil"
 company_pyrkal: "Pyrkal"
 company_achaia_clauss: "Achaia Clauss"
-company_gandour: "Gandour"
-company_pirotehnia: "Pirotehnia Armatei"
-company_fowler: "Fowler Potteries"
 
 # Fallback names if dynamic naming fails
 company_basic_agriculture_3: "Super Agricultural Corporation"
