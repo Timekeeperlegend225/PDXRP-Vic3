@@ -40,7 +40,9 @@
 					percent >= 0.90
 				}
 			}
-			add_loyalists = 0.10
+			add_loyalists = {
+				value = 0.10
+			}
 			add_modifier = {
 				name = mrt_independant_victory           
 				years = 20
@@ -58,7 +60,9 @@
 						target = c:MRT
 						value > 0.75 
 					}
-					add_loyalists = 0.10
+				}
+				add_loyalists = {
+					value = 0.10
 				}
 			}
 		}
@@ -121,7 +125,9 @@
 					percent <= 0.25
 				}
 			}
-			add_radicals = 0.20
+			add_radicals = {
+				value = 0.20
+			}
 			every_subject_or_below = {
 				make_independent = yes
 			}
@@ -135,7 +141,9 @@
 			limit = {
 				is_subject = yes
 			}
-			add_radicals = 0.10
+			add_radicals = {
+				value = 0.10
+			}
 			add_modifier = {
 				name = mrt_submition           
 				years = 20
@@ -151,7 +159,9 @@
 			}
 		}
 		else = {
-			add_radicals = 0.10
+			add_radicals = {
+				value = 0.10
+			}
 			add_modifier = {
 				name = mrt_timeout           
 				years = 20

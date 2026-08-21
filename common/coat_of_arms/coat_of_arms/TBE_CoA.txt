@@ -38,3 +38,53 @@ MRT = {
 		color1 = "orange"
 	}
 }
+
+RHE_default = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "RHE_default.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+RHE_monarchy = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "RHE_monarchy.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+RHE_republic = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "RHE_republic.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+RHE_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "RHE_communist.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+RHE_nationalist = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "RHE_nationalist.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}

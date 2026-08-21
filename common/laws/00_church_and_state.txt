@@ -19,8 +19,10 @@ law_state_religion = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_total_separation }
-			NOT = { has_law_or_variant = law_type:law_state_atheism }
+			NOT = { 
+				has_law_or_variant = law_type:law_total_separation
+				has_law_or_variant = law_type:law_state_atheism 
+			}
 		}
 	}
 
@@ -161,8 +163,10 @@ law_millet_system = { # Ottoman Empire
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_total_separation }
-			NOT = { has_law_or_variant = law_type:law_state_atheism }
+			NOT = { 
+				has_law_or_variant = law_type:law_total_separation
+				has_law_or_variant = law_type:law_state_atheism 
+			}
 		}
 	}
 
@@ -280,8 +284,10 @@ law_people_of_the_book = { # Other Muslim states
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_total_separation }
-			NOT = { has_law_or_variant = law_type:law_state_atheism }
+			NOT = { 
+				has_law_or_variant = law_type:law_total_separation
+				has_law_or_variant = law_type:law_state_atheism 
+			}
 		}
 	}
 

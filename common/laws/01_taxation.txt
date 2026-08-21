@@ -57,8 +57,10 @@ law_land_based_taxation = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_proportional_taxation }
-			NOT = { has_law_or_variant = law_type:law_graduated_taxation }
+			NOT = { 
+				has_law_or_variant = law_type:law_proportional_taxation
+				has_law_or_variant = law_type:law_graduated_taxation 
+			}
 		}
 	}
 
@@ -123,8 +125,10 @@ law_per_capita_based_taxation = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_consumption_based_taxation }
-			NOT = { has_law_or_variant = law_type:law_graduated_taxation }
+			NOT = { 
+				has_law_or_variant = law_type:law_consumption_based_taxation
+				has_law_or_variant = law_type:law_graduated_taxation 
+			}
 		}
 	}
 
@@ -219,8 +223,10 @@ law_proportional_taxation = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_consumption_based_taxation }
-			NOT = { has_law_or_variant = law_type:law_land_based_taxation }
+			NOT = { 
+				has_law_or_variant = law_type:law_consumption_based_taxation
+				has_law_or_variant = law_type:law_land_based_taxation 
+			}
 		}
 	}
 
@@ -296,9 +302,11 @@ law_graduated_taxation = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_consumption_based_taxation }
-			NOT = { has_law_or_variant = law_type:law_land_based_taxation }
-			NOT = { has_law_or_variant = law_type:law_per_capita_based_taxation }
+			NOT = { 
+				has_law_or_variant = law_type:law_consumption_based_taxation
+				has_law_or_variant = law_type:law_land_based_taxation
+				has_law_or_variant = law_type:law_per_capita_based_taxation 
+			}
 		}
 	}
 

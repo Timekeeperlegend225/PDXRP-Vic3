@@ -37,34 +37,6 @@
 		}
 	}
 
-	on_activate = {
-		if = {
-			limit = {
-				has_law_or_variant = law_type:law_rural_economy
-			}
-			active_law:lawgroup_economic_system ?= { 
-				every_scope_amendment = {
-					limit = {
-						OR = {
-							type = amendment_type:amendment_rural_tenant
-							type = amendment_type:amendment_rural_comercialized
-							type = amendment_type:amendment_rural_homesteadind
-							type = amendment_type:amendment_rural_collectvized
-						}
-					}
-					remove_amendment = yes
-				}
-			}
-			active_law:lawgroup_economic_system ?= { 
-				add_amendment = {
-					type = amendment_rural_tenant
-					sponsor = ROOT.ig:ig_landowners
-					cooldown = 0
-				}
-			}
-		}
-	}
-
 	modifier = {
 		interest_group_ig_landowners_pol_str_mult = 0.25
 		state_peasants_internal_migration_disallowed_bool = yes

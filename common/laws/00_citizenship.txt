@@ -19,8 +19,10 @@ law_subjecthood = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_ethnostate }
-			NOT = { has_law_or_variant = law_type:law_multicultural }
+			NOT = { 
+				has_law_or_variant = law_type:law_ethnostate
+				has_law_or_variant = law_type:law_multicultural 
+			}
 		}
 	}
 
@@ -141,10 +143,12 @@ law_ethnostate = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_subjecthood }
-			NOT = { has_law_or_variant = law_type:law_racial_segregation }
-			NOT = { has_law_or_variant = law_type:law_cultural_exclusion }
-			NOT = { has_law_or_variant = law_type:law_multicultural }
+			NOT = { 
+				has_law_or_variant = law_type:law_subjecthood
+				has_law_or_variant = law_type:law_racial_segregation
+				has_law_or_variant = law_type:law_cultural_exclusion
+				has_law_or_variant = law_type:law_multicultural 
+			}
 		}
 	}
 
@@ -276,8 +280,10 @@ law_national_supremacy = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_cultural_exclusion }
-			NOT = { has_law_or_variant = law_type:law_multicultural }
+			NOT = { 
+				has_law_or_variant = law_type:law_cultural_exclusion
+				has_law_or_variant = law_type:law_multicultural 
+			}
 		}
 	}
 
@@ -408,8 +414,10 @@ law_racial_segregation = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_ethnostate }
-			NOT = { has_law_or_variant = law_type:law_multicultural }
+			NOT = { 
+				has_law_or_variant = law_type:law_ethnostate
+				has_law_or_variant = law_type:law_multicultural 
+			}
 		}
 	}
 
@@ -541,8 +549,10 @@ law_cultural_exclusion = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_ethnostate }
-			NOT = { has_law_or_variant = law_type:law_national_supremacy }
+			NOT = { 
+				has_law_or_variant = law_type:law_ethnostate
+				has_law_or_variant = law_type:law_national_supremacy 
+			}
 		}
 	}
 

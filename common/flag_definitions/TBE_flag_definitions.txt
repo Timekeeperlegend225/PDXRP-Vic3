@@ -59,3 +59,46 @@ REPLACE_OR_CREATE:MOA = {
 		priority = 1
 	}
 }
+
+REPLACE_OR_CREATE:RHE = { 
+	flag_definition = {
+		coa = RHE_default
+		subject_canton = RHE_default
+		priority = 1
+	}
+	flag_definition = {
+		coa = RHE_monarchy
+		subject_canton = RHE_monarchy
+		priority = 100
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+			}
+		}
+	}
+	flag_definition = {
+		coa = RHE_republic
+		subject_canton = RHE_republic
+		priority = 10
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RHE_communist
+		subject_canton = RHE_communist
+		priority = 10
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RHE_nationalist
+		subject_canton = RHE_nationalist
+		priority = 50
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+}

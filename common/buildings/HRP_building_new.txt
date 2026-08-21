@@ -1,6 +1,7 @@
 ﻿building_casino = {
 	building_group = bg_arts
 	icon = "gfx/interface/icons/building_icons/building_casino.dds"
+	unique = yes
 
 	city_gfx_interactions = {
 		clear_size_area = yes
@@ -11,11 +12,13 @@
 		pmg_base_casino
 	}
 
-	required_construction = construction_cost_very_high
+	required_construction = 2000
 
 	potential = {
 		state_region = s:STATE_PROVENCE
-		this = c:MOA
+		OWNER = {
+			this = c:MOA
+		}
 	}
 
 	ai_value = 10000

@@ -31,10 +31,12 @@
 		}
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_wealth_voting }
-			NOT = { has_law_or_variant = law_type:law_census_voting }
-			NOT = { has_law_or_variant = law_type:law_universal_suffrage }
-			NOT = { has_law_or_variant = law_type:law_anarchy }
+			NOT = { 
+				has_law_or_variant = law_type:law_wealth_voting
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_anarchy 
+			}
 		}
 	}
 
@@ -137,10 +139,12 @@ REPLACE:law_bakufu = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_wealth_voting }
-			NOT = { has_law_or_variant = law_type:law_census_voting }
-			NOT = { has_law_or_variant = law_type:law_universal_suffrage }
-			NOT = { has_law_or_variant = law_type:law_anarchy }
+			NOT = { 
+				has_law_or_variant = law_type:law_wealth_voting
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_anarchy 
+			}
 		}
 	}
 
@@ -226,10 +230,12 @@ REPLACE:law_neo_absolutism = { # Reward for completing the neo-absolutist conten
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_wealth_voting }
-			NOT = { has_law_or_variant = law_type:law_census_voting }
-			NOT = { has_law_or_variant = law_type:law_universal_suffrage }
-			NOT = { has_law_or_variant = law_type:law_anarchy }
+			NOT = { 
+				has_law_or_variant = law_type:law_wealth_voting
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_anarchy 
+			}
 		}
 	}
 
@@ -399,9 +405,11 @@ REPLACE:law_oligarchy = {
 		}
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_census_voting }
-			NOT = { has_law_or_variant = law_type:law_universal_suffrage }
-			NOT = { has_law_or_variant = law_type:law_anarchy }
+			NOT = { 
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_anarchy 
+			}
 		}
 	}
 
@@ -512,9 +520,11 @@ REPLACE:law_organic_regulation = {
 		is_subject = yes
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_census_voting }
-			NOT = { has_law_or_variant = law_type:law_universal_suffrage }
-			NOT = { has_law_or_variant = law_type:law_anarchy }
+			NOT = { 
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_anarchy 
+			}
 		}
 	}
 
@@ -602,9 +612,11 @@ REPLACE:law_elder_council = {
 	can_enact = {
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_census_voting }
-			NOT = { has_law_or_variant = law_type:law_universal_suffrage }
-			NOT = { has_law_or_variant = law_type:law_anarchy }
+			NOT = { 
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_anarchy 
+			}
 		}
 	}
 
@@ -682,8 +694,10 @@ REPLACE:law_landed_voting = {
 		}
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_universal_suffrage }
-			NOT = { has_law_or_variant = law_type:law_anarchy }
+			NOT = { 
+				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_anarchy 
+			}
 		}
 	}
 
@@ -826,8 +840,10 @@ REPLACE:law_wealth_voting = {
 		}
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_autocracy }
-			NOT = { has_law_or_variant = law_type:law_universal_suffrage }
+			NOT = { 
+				has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_universal_suffrage 
+			}
 		}
 	}
 
@@ -972,10 +988,12 @@ REPLACE:law_census_voting = {
 		}
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_autocracy }
-			NOT = { has_law_or_variant = law_type:law_technocracy }
-			NOT = { has_law_or_variant = law_type:law_oligarchy }
-			NOT = { has_law_or_variant = law_type:law_elder_council }
+			NOT = { 
+				has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_technocracy
+				has_law_or_variant = law_type:law_oligarchy
+				has_law_or_variant = law_type:law_elder_council 
+			}
 		}
 	}
 
@@ -1110,11 +1128,13 @@ REPLACE:law_universal_suffrage = {
 		}
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_autocracy }
-			NOT = { has_law_or_variant = law_type:law_technocracy }
-			NOT = { has_law_or_variant = law_type:law_oligarchy }
-			NOT = { has_law_or_variant = law_type:law_elder_council }
-			NOT = { has_law_or_variant = law_type:law_landed_voting }
+			NOT = { 
+				has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_technocracy
+				has_law_or_variant = law_type:law_oligarchy
+				has_law_or_variant = law_type:law_elder_council
+				has_law_or_variant = law_type:law_landed_voting 
+			}
 		}
 	}
 
@@ -1254,11 +1274,13 @@ REPLACE:law_anarchy = {
 		}
 		OR = {
 			has_modifier = gm_lawapproval
-			NOT = { has_law_or_variant = law_type:law_autocracy }
-			NOT = { has_law_or_variant = law_type:law_technocracy }
-			NOT = { has_law_or_variant = law_type:law_oligarchy }
-			NOT = { has_law_or_variant = law_type:law_elder_council }
-			NOT = { has_law_or_variant = law_type:law_landed_voting }
+			NOT = { 
+				has_law_or_variant = law_type:
+				has_law_or_variant = law_type:law_technocracy
+				has_law_or_variant = law_type:law_oligarchy
+				has_law_or_variant = law_type:law_elder_council
+				has_law_or_variant = law_type:law_landed_voting 
+			}
 		}
 	}
 
