@@ -1458,7 +1458,7 @@ principle_shared_canon_3 = {
 		country_radicalism_increases_full_acceptance_mult = -0.10
 		country_qualification_growth_full_acceptance_mult = 0.1
 		country_standard_of_living_full_acceptance_add = 1
-		country_standard_of_living_second_rate_citizen_add = 0.05
+		country_standard_of_living_second_rate_citizen_add = 0.5
 	}
 
 	ai_weight = {
