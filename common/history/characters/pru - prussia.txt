@@ -6,6 +6,10 @@
 		}
 
 		create_character = {
+			template = is_pru_wilhelm_01
+		}
+
+		create_character = {
 			template = PRU_gustav_von_rauch
 		}
 

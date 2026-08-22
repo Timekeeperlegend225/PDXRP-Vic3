@@ -293,3 +293,27 @@ HOH_leopold_von_hohenzollern = {
 		set_variable = house_hohenzollern
 	}
 }
+
+is_pru_wilhelm_01 = {
+	heir = yes
+	culture = cu:north_german
+	first_name = Wilhelm
+	last_name = von_Hohenzollern
+	historical = yes
+	ig_leader = no
+	noble = yes
+	dna = dna_pru_wilhelm_01
+	birth_date = 1797.3.22
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	traits = {
+		romantic
+		popular_commander
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+		# nothing!
+	}
+}
