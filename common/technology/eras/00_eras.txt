@@ -5,26 +5,21 @@ era_1 = { #Pre-1836
 }
 
 era_2 = { #1836-1861
-	technology_cost = 7500 # for progress bonuses, use an approximate third: 3500
-#	technology_cost = 10000 # for progress bonuses, use an approximate third: 3500
+	technology_cost = 10000 # for progress bonuses, use an approximate third: 3500
 }
 
 era_3 = { #1862-1886
-	technology_cost = 10000 # for progress bonuses, use an approximate third: 4150
-#	technology_cost = 20000 # for progress bonuses, use an approximate third: 4150
+	technology_cost = 20000 # for progress bonuses, use an approximate third: 4150
 }
 
 era_4 = { #1887-1911
-	technology_cost = 15000 # for progress bonuses, use an approximate third: 5000
-#	technology_cost = 26000 # for progress bonuses, use an approximate third: 5000
+	technology_cost = 26000 # for progress bonuses, use an approximate third: 5000
 }
 
 era_5 = { #1911-1936
-	technology_cost = 17500 # for progress bonuses, use an approximate third: 5850
-#	technology_cost = 35000 # for progress bonuses, use an approximate third: 5850
+	technology_cost = 35000 # for progress bonuses, use an approximate third: 5850
 }
 
 era_6 = { #1911-1936
-	technology_cost = 20000 # for progress bonuses, use an approximate third: 5850
-#	technology_cost = 45000 # for progress bonuses, use an approximate third: 5850
+	technology_cost = 45000 # for progress bonuses, use an approximate third: 5850
 }
