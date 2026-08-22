@@ -1,7 +1,8 @@
 ﻿building_casino = {
 	building_group = bg_arts
 	icon = "gfx/interface/icons/building_icons/building_casino.dds"
-	unique = yes
+	city_type = city
+	levels_per_mesh = 50
 
 	city_gfx_interactions = {
 		clear_size_area = yes
@@ -13,6 +14,7 @@
 	}
 
 	required_construction = 2000
+	ownership_type = self
 
 	potential = {
 		state_region = s:STATE_PROVENCE

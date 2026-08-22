@@ -4,11 +4,15 @@
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_influence_add = 1000
-			ship_interest_gain_add = 100
 			country_minting_add = 5000
-			country_gold_reserve_limit_mult = 128
-			country_agitator_slots_add = 2
+		}
+		unscaled = {
+			country_influence_add = 5000
+			ship_interest_gain_add = 1000
+			country_gold_reserve_limit_mult = 256
+			country_agitator_slots_add = 10
+			building_self_investment_chance_add = 0.5
+			building_group_bg_arts_allowed_collectivization_add = 1
 		}
 	}
 
@@ -27,6 +31,10 @@
 			goods_output_fine_art_add = 5
 			goods_output_grain_add = 5
 			goods_output_groceries_add = 2.5
+		}
+		unscaled = {
+			building_capitalists_shares_add = 1
+			building_aristocrats_shares_add = 1
 		}
 	}
 	state_modifiers = {

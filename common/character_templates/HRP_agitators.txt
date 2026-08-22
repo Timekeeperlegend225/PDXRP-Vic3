@@ -1,0 +1,56 @@
+agitator_tirpitz = {
+	first_name = Friedrich 
+	last_name = von_tirpitz
+	historical = yes
+	culture = cu:north_german
+	religion = rel:protestant
+	female = no
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_fascist
+	birth_date = 1850.4.20
+	home_region = STATE_HESSE
+	traits = {
+		ambitious
+		firebrand
+		expert_political_operator
+	}
+	agitator_usage = {
+		country_trigger = {
+			country_has_primary_culture = cu:north_german  
+			has_technology_researched = political_agitation
+		}
+        interest_group_trigger = {
+            ig_counts_as_marginal = no
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+		earliest_usage_date = 1870.1.1
+		latest_usage_date = 1920.1.19
+	}
+}
+
+agitator_kugler = {
+	first_name = Lucas 
+	last_name = Kugler
+	historical = yes
+	culture = cu:north_german
+	religion = rel:protestant
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_utopian
+	birth_date = 1821.7.4
+	home_region = STATE_BRANDENBURG
+	traits = {
+		ambitious
+		bandit
+	}
+	agitator_usage = {
+		country_trigger = {
+			is_player = yes 
+		}
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+		earliest_usage_date = 1841.1.1
+		latest_usage_date = 1861.1.19
+	}
+}
