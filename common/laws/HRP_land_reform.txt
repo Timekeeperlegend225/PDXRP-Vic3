@@ -104,7 +104,7 @@ REPLACE_OR_CREATE:law_veth-begar = {
 	progressiveness = -25
 
 	is_visible = {
-		always = no
+		has_law = law_type:law_veth-begar
 	}
 
 	can_enact = {
