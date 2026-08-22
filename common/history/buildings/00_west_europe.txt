@@ -3065,7 +3065,13 @@
 				add_ownership={
 					country={
 						country="c:MOA"
-						levels=2
+						levels=1
+					}
+					building={
+						type="building_casino"
+						country="c:MOA"
+						levels=1
+						region="STATE_PROVENCE"
 					}
 				}
 				reserves=1
