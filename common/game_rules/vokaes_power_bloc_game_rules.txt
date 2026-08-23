@@ -1,0 +1,10 @@
+﻿
+
+vokaes_power_bloc_rule_principle_slots = {
+	default = vokaes_power_bloc_rule_principle_slots_4
+
+	vokaes_power_bloc_rule_principle_slots_4 = {}
+
+
+}
+
