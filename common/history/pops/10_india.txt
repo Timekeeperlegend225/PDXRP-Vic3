@@ -813,7 +813,7 @@ POPS = {
 				size = 7810
 			}
 		}
-		region_state:KAB = {
+		region_state:CHT = {
 			create_pop = {
 				culture = kho # and Shina
 				size = 30210

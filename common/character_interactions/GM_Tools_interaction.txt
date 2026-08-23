@@ -204,11 +204,12 @@ REPLACE_OR_CREATE:GM_invite_exile = {
 
 	ai_chance = {
 		value = -85
+	}
 }
 
 
 
-REPLACE_OR_CREATE:exile_character = {
+REPLACE_OR_CREATE:GM_exile_character = {
 	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
 
 	potential = {
@@ -223,22 +224,6 @@ REPLACE_OR_CREATE:exile_character = {
 			has_role_of_type = politician
 			has_role_of_type = agitator
 		}
-		trigger_if = {
-			limit = {
-				owner ?= {
-					c:JAP ?= this
-					NOT = {
-						has_variable = japan_restoration_complete
-					}
-				}
-			}
-			custom_tooltip = {
-				text = daimyo_not_tt
-				NOT = {
-					has_variable = daimyo_var
-				}
-			}
-		}
 		owner ?= {
 			has_modifier = GM_game_master
 		}
@@ -247,7 +232,7 @@ REPLACE_OR_CREATE:exile_character = {
 	show_requirements = yes
 
 	possible = {
-		is_busy = no
+		always = yes
 	}
 
 	effect = {
