@@ -66,3 +66,6 @@
  carrier_ttech_desc:0 "By designing large ships with a large flat deck and equipping them appropriately, it is possible to create a sea borne airfield."
  battleship_ttech:0 "$ship_type_super_dreadnought$"
  battleship_ttech_desc:0 "By taking the dreadnought design and making all the guns high caliber, as well as some other changes, it is possible to make an even more devastating warship."
+
+ GM_invite_exile: "Invite guest to the Casino"
+ GM_exile_character: "Kick this guy from the Casino"
