@@ -54,3 +54,53 @@ overlord_veto.1 = {
     }
 }
 
+overlord_veto.3 = {
+    type = country_event
+    is_triggered_only = yes
+
+    title = overlord_veto.3.t
+    desc = overlord_veto.3.d
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"	
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+	duration = 2
+
+    option = {
+        name = overlord_veto.3.allow #Allow to Proceed as Normal
+        default_option = yes
+    }		
+
+    option = {
+        name = overlord_veto.3.veto 
+		
+		custom_tooltip = {
+			text = overlord_veto_veto_tooltip
+		}
+		
+        scope:veto_subject = {
+            cancel_enactment = yes
+			trigger_event = {
+				id = overlord_veto.4
+			}
+        }
+    }
+}
+
+overlord_veto.4 = {
+    type = country_event
+    is_triggered_only = yes
+	title = overlord_veto.4.t
+    desc = overlord_veto.4.d
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"	
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+	duration = 4
+	
+	option = {
+		name = overlord_veto.4.confirm
+		default_option = yes	
+	}
+}
+

@@ -3,6 +3,8 @@
  GM_become_GM_desc:0 "If your take this decision when you're not expected to, your line will go down @disapproves!"
  GM_Self_Action:0 "GM Self-Action"
  GM_Self_Action_desc:0 "Use GM Tools on yourself."
+ GM_spy_the_world:0 "GM Spy the world"
+ GM_Self_Action_desc:0 "Get a lot of involvment all over the world"
  
  GM_game_master:0 "Game Master"
  GM_game_master_desc:0 "This is the Game Master, respect him"

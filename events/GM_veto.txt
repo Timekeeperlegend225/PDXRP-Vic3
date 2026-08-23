@@ -1,0 +1,59 @@
+﻿namespace = gm_veto
+
+gm_veto.1 = {
+    type = country_event
+    is_triggered_only = yes
+
+    title = gm_veto.1.t
+    desc = gm_veto.1.d
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"	
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+	duration = 2
+
+	immediate = {
+		random_diplomatic_play = {
+			limit = {
+				initiator_is = scope:actor
+			}
+			save_scope_as = scope_diplo_play
+		}
+	}
+
+    option = {
+        name = gm_veto.1.allow #Allow to Proceed as Normal
+        default_option = yes
+    }		
+
+    option = {
+        name = gm_veto.1.veto 
+		
+        scope:scope_diplo_play = {
+			end_play = yes
+        }
+		
+        scope:actor = {
+			trigger_event = {
+				id = gm_veto.2
+			}
+        }
+    }
+}
+
+gm_veto.2 = {
+    type = country_event
+    is_triggered_only = yes
+	title = gm_veto.2.t
+    desc = gm_veto.2.d
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"	
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+	duration = 2
+	
+	option = {
+		name = gm_veto.2.confirm
+		default_option = yes	
+	}
+}

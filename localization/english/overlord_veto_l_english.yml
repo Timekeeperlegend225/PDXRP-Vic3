@@ -31,3 +31,11 @@
  setting_rule_expanded_veto:0 "Expanded Veto"
  setting_rule_expanded_veto_desc:0 "The overlord may veto or support all laws, including imposed law"
  rule_rule_overlord_veto:0 "Overlord Veto Rule"
+ 
+ overlord_veto.3.t:0 "[SCOPE.sCountry('veto_subject').GetName] seeks to enact [SCOPE.sLaw('current_law_scope').GetName]"
+ overlord_veto.3.d:0 "[SCOPE.sCountry('veto_subject').GetName] has begun the process of enacting [SCOPE.sLaw('current_law_scope').GetName]. As the GM, it falls to us to decide whether this change should proceed.\n\nDo we permit this law to move forward, or do we exercise our authority and block it?"
+ overlord_veto.3.allow:0 "We will permit it."
+ overlord_veto.3.veto:0 "Nope"
+ overlord_veto.4.t:0 "#b #gold Bodi#! said you can't pass [SCOPE.sLaw('current_law_scope').GetName]"
+ overlord_veto.4.d:0 "Our tyrani... benevolent GM prenvented us to pass [SCOPE.sLaw('current_law_scope').GetName]"
+ overlord_veto.4.confirm:0 "He know what is best for us"
