@@ -36,12 +36,6 @@
 			NOT = { has_claim_by = root }
 		}
 		OR = {
-			has_law_or_variant = law_type:law_colonial_resettlement
-			has_law_or_variant = law_type:law_colonial_exploitation
-			has_strategic_adjacency = scope:target_state
-			has_modifier = gm_warapproval 
-		}
-		OR = {
 			NOR = {
 				is_subject_type = subject_type_puppet
 				is_subject_type = subject_type_vassal

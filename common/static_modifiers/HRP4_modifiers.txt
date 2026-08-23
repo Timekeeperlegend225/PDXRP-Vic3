@@ -3,6 +3,7 @@
 	country_military_tech_spread_mult = 0.10
 	state_pop_support_movement_modernizer_mult = 0.40
 	country_diplomatic_play_maneuvers_add = -50
+	building_mobilization_cost_mult = -0.30
 }
 
 mrt_independant_victory = {

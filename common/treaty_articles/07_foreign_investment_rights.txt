@@ -68,14 +68,6 @@
 				is_diplomatic_action_type = subject_foreign_investment
 			}
 		}
-		trigger_if = {
-			limit = {
-				exists = power_bloc
-				exists = scope:other_country.power_bloc
-				power_bloc = scope:other_country.power_bloc
-			}
-			is_power_bloc_leader = yes
-		}
 	}
 
 	can_ratify = {
