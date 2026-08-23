@@ -13,7 +13,8 @@ NDiplomacy = {
 }
 
 NPowerBlocs = {
-	MAX_MANDATE_PROGRESS = 2400			
+	MAX_MANDATE_PROGRESS = 2400	
+	INITIAL_PRINCIPLE_LEVELS = 1	
 }
 
 
