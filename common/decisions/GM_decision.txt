@@ -48,3 +48,168 @@ GM_Self_Action = {
 		value = 0
 	}
 }
+
+GM_spy_the_world = {
+	is_shown = {
+		has_modifier = GM_game_master
+		is_ai = no
+	}
+	
+	possible = {
+		always = yes
+	}
+	
+	when_taken = {
+		add_involvement = {
+			strategic_region = sr:region_nile_basin
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_north_africa
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_west_africa
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_equatorial_africa
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_southern_africa
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_indochina
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_indonesia
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_south_china
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_north_china
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_northeast_asia
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_siberia
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_oceania
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_east_africa
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_east_africa
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_western_europe
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_southern_europe
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_balkans
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_central_europe
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_northern_europe
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_russia
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_eastern_europe
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_canada
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_pacific_coast
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_great_plains
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_atlantic_coast
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_central_america
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_brazil
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_andes
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_la_plata
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_gran_colombia
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_near_east
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_arabia
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_greater_persia
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_central_asia
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_south_india
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_himalayas
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_north_india
+			value = 5000
+		}
+    }
+	ai_chance = {
+		value = 0
+	}
+}

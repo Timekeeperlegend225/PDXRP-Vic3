@@ -51,6 +51,35 @@ agitator_kugler = {
             is_interest_group_type = ig_trade_unions
         }
 		earliest_usage_date = 1841.1.1
-		latest_usage_date = 1861.1.19
+		latest_usage_date = 1871.1.19
+	}
+}
+
+agitator_bedi = {
+	first_name = Bedi 
+	last_name = Ranjit
+	historical = yes
+	culture = cu:panjabi
+	religion = rel:sikh
+	female = no
+	interest_group = ig_trade_unions
+	ideology = ideology_humanitarian
+	birth_date = 1830.5.1
+	home_region = STATE_PUNJAB
+	traits = {
+		brave
+		bandit
+		inspirational_orator
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:PAN ?= this
+			has_technology_researched = organized_sports
+		}
+        interest_group_trigger = {
+            is_interest_group_type = ig_trade_unions
+        }
+		earliest_usage_date = 1850.1.1
+		latest_usage_date = 1880.1.19
 	}
 }

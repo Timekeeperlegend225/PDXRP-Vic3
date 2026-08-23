@@ -15,6 +15,7 @@ napoleon_ii = {
 		ambitious
 		popular_commander
 		literary
+		basic_offensive_planner
 	}
 	on_created = {
 		set_variable = house_bonaparte

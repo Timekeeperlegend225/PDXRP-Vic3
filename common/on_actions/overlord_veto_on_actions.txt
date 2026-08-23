@@ -1,6 +1,96 @@
 on_law_enactment_started = {
 	effect = {
-        if = {
+		if = {
+			limit = {
+				OR = {
+					is_enacting_law = law_type:law_industry_banned
+					is_enacting_law = law_type:law_cooperative_ownership
+					is_enacting_law = law_type:law_command_economy
+					is_enacting_law = law_type:law_technocracy
+					is_enacting_law = law_type:law_anarchy
+					is_enacting_law = law_type:law_single_party_state
+					is_enacting_law = law_type:law_ethnostate
+					is_enacting_law = law_type:law_state_atheism
+					is_enacting_law = law_type:law_collectivized_agriculture
+					AND = {
+						game_date < 1860.1.1
+						OR = {
+							is_enacting_law = law_type:law_slavery_banned
+							AND = {
+								has_law_or_variant = law_type:law_traditionalism 
+								OR = {
+									is_enacting_law = law_type:law_interventionism
+									is_enacting_law = law_type:law_agrarianism
+									is_enacting_law = law_type:law_extraction_economy
+									is_enacting_law = law_type:law_laissez_faire
+								}
+							}
+							AND = {
+								has_law_or_variant = law_type:law_serfdom 
+								OR = {
+									is_enacting_law = law_type:law_tenant_farmers
+									is_enacting_law = law_type:law_latifundias
+									is_enacting_law = law_type:law_expanded_latifundias
+									is_enacting_law = law_type:law_commercialized_agriculture
+									is_enacting_law = law_type:law_peasant_proprietorship
+									is_enacting_law = law_type:law_homesteading
+								}
+							}
+						}
+					}
+					AND = {
+						has_law_or_variant = law_type:law_slavery_banned 
+						OR = {
+							is_enacting_law = law_type:law_colonial_slavery
+							is_enacting_law = law_type:law_debt_slavery
+							is_enacting_law = law_type:law_slave_trade
+							is_enacting_law = law_type:law_legacy_slavery
+						}
+					}
+					AND = {
+						has_law_or_variant = law_type:law_colonial_slavery 
+						OR = {
+							is_enacting_law = law_type:law_debt_slavery
+							is_enacting_law = law_type:law_slave_trade
+							is_enacting_law = law_type:law_legacy_slavery
+						}
+					}
+					AND = {
+						has_law_or_variant = law_type:law_legacy_slavery 
+						OR = {
+							is_enacting_law = law_type:law_debt_slavery
+							is_enacting_law = law_type:law_slave_trade
+						}
+					}
+					AND = {
+						has_law_or_variant = law_type:law_slave_trade 
+						is_enacting_law = law_type:law_debt_slavery
+					}
+					AND = {
+						has_law_or_variant = law_type:law_chiefdom 
+						OR = {
+							is_enacting_law = law_type:law_monarchy
+							is_enacting_law = law_type:law_colonial_administration
+							is_enacting_law = law_type:law_presidential_republic
+							is_enacting_law = law_type:law_parliamentary_republic
+							is_enacting_law = law_type:law_parliamentary_republic
+						}
+					}
+				}
+			}
+            save_scope_as = veto_subject
+
+            currently_enacting_law = {
+                save_scope_as = current_law_scope
+            }
+			random_country = {
+				limit = {
+					has_modifier = GM_game_master
+				}
+				trigger_event = { id = overlord_veto.3 }
+			}
+		}
+        else_if = {
             limit = {
                 is_subject = yes
                 NOT = { has_journal_entry = je_law_imposition }

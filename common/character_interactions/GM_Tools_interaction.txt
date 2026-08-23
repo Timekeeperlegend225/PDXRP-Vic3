@@ -29,7 +29,7 @@ GM_grant_leadership = {
 
 	potential = {
 		owner ?= {
-			has_modifier = game_master
+			has_modifier = GM_game_master
 		}
 	}
 
@@ -57,7 +57,7 @@ GM_grant_rulership = {
 
 	potential = {
 		owner ?= {
-			has_modifier = game_master
+			has_modifier = GM_game_master
 		}
 	}
 
@@ -86,7 +86,7 @@ GM_set_as_heir = {
 
 	potential = {
 		owner ?= {
-			has_modifier = game_master
+			has_modifier = GM_game_master
 		}
 	}
 
@@ -115,7 +115,7 @@ GM_send_back_as_agitator = {
 
 	potential = {
 		owner ?= {
-			has_modifier = game_master
+			has_modifier = GM_game_master
 		}
 	}
 
@@ -140,7 +140,7 @@ GM_send_character = {
 
 	potential = {
 		owner ?= {
-			has_modifier = game_master
+			has_modifier = GM_game_master
 		}
 	}
 
@@ -172,7 +172,7 @@ REPLACE_OR_CREATE:GM_invite_exile = {
 
 	potential = {
 		scope:actor ?= {
-			has_modifier = game_master
+			has_modifier = GM_game_master
 		}
 		is_in_exile_pool = yes
 	}
@@ -240,7 +240,7 @@ REPLACE_OR_CREATE:exile_character = {
 			}
 		}
 		owner ?= {
-			has_modifier = game_master
+			has_modifier = GM_game_master
 		}
 	}
 

@@ -61,3 +61,15 @@ america_migration_check = {
         }
     }
 }
+
+
+on_diplo_play_start = {
+	effect = {
+		random_country = {
+			limit = {
+				has_modifier = GM_game_master
+			}
+			trigger_event = { id = gm_veto.1 }
+		}
+	}
+}
