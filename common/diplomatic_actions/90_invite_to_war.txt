@@ -1,0 +1,241 @@
+invite_to_war = {
+	groups = { general }
+	requires_approval = yes
+	uses_random_approval = yes
+	can_use_obligations = yes
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	show_in_lens = yes
+
+	texture = "gfx/interface/icons/diplomatic_action_icons/invite_to_war.dds"
+
+	selectable = {
+		always = yes
+	}
+
+	potential = {
+		always = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = invite_to_war_requires_war
+			is_at_war = yes
+		}
+		custom_tooltip = {
+			text = invite_to_war_target_not_enemy
+			NOT = {
+				any_scope_war = {
+					any_war_participant = {
+						is_diplomatic_play_enemy_of = root
+						is_in_war_together = scope:target_country
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = invite_to_war_relations_required
+			scope:target_country = {
+				"relations(root)" >= relations_threshold:cordial
+			}
+		}
+		custom_tooltip = {
+			text = invite_to_war_recently_declined
+			scope:target_country = {
+				NOT = {
+					has_variable = invite_to_war_declined_by
+					var:invite_to_war_declined_by ?= root
+				}
+			}
+		}
+	}
+
+	accept_effect = {
+		every_scope_war = {
+			join_war = {
+				target = scope:target_country
+				side = root
+			}
+		}
+		scope:target_country = {
+			change_infamy = 10
+		}
+	}
+
+	decline_effect = {
+		scope:target_country = {
+			set_variable = {
+				name = invite_to_war_declined_by
+				value = root
+				years = 1
+			}
+			create_diplomatic_catalyst = {
+				type = catalyst_declined_war_invite
+				target = root
+			}
+		}
+	}
+
+	ai = {
+		evaluation_chance = {
+			value = 0.001
+			if = {
+				limit = { is_at_war = no }
+				multiply = 0
+			}
+		}
+
+		propose_score = {
+			value = 1
+		}
+
+		will_propose = {
+			# AI almost never initiates this action.
+			always = no
+		}
+
+		accept_score = {
+			add = {
+				desc = INVITE_TO_WAR_ACCEPTANCE_BASE
+				value = -100
+			}
+
+			# Attitude toward the inviter.
+			add = {
+				desc = INVITE_TO_WAR_ACCEPTANCE_ATTITUDE
+				if = {
+					limit = { has_attitude = { who = scope:actor attitude = genial } }
+					value = 60
+				}
+				else_if = {
+					limit = { has_attitude = { who = scope:actor attitude = cooperative } }
+					value = 35
+				}
+				else_if = {
+					limit = { has_attitude = { who = scope:actor attitude = conciliatory } }
+					value = 20
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_attitude = { who = scope:actor attitude = antagonistic }
+							has_attitude = { who = scope:actor attitude = domineering }
+							has_attitude = { who = scope:actor attitude = belligerent }
+						}
+					}
+					value = -100
+				}
+				else = { value = 0 }
+			}
+
+			# Relations are required to be amicable, with a substantial bonus above that floor.
+			add = {
+				desc = DIPLOMATIC_ACCEPTANCE_RELATIONS
+				value = "relations(scope:actor)"
+				multiply = 0.5
+			}
+
+			# Countries that have good relations with our enemies are less willing to help us;
+			# hostile relations with those enemies make the invitation more attractive.
+			add = {
+				desc = INVITE_TO_WAR_ACCEPTANCE_ENEMY_RELATIONS
+				# Neutral relations with the enemies still represent reluctance to fight them.
+				value = -5
+				if = {
+					limit = {
+						scope:actor = {
+							any_scope_war = {
+								any_war_participant = {
+									is_diplomatic_play_enemy_of = scope:actor
+									"relations(root)" >= relations_threshold:cordial
+								}
+							}
+						}
+					}
+					add = -15
+				}
+				if = {
+					limit = {
+						scope:actor = {
+							any_scope_war = {
+								any_war_participant = {
+									is_diplomatic_play_enemy_of = scope:actor
+									"relations(root)" <= relations_threshold:poor
+								}
+							}
+						}
+					}
+					add = 20
+				}
+			}
+
+			# The target is less willing when the inviter is infamous.
+			add = {
+				desc = INVITE_TO_WAR_ACCEPTANCE_ACTOR_INFAMY
+				value = 5
+				subtract = { value = "scope:actor.infamy" multiply = 0.1 }
+				if = {
+					limit = { scope:actor.infamy >= infamy_threshold:pariah }
+					add = -25
+				}
+				else_if = {
+					limit = { scope:actor.infamy >= infamy_threshold:notorious }
+					add = -15
+				}
+				else_if = {
+					limit = { scope:actor.infamy >= infamy_threshold:infamous }
+					add = -5
+				}
+			}
+
+			# High target infamy makes the target reluctant to take on another war.
+			add = {
+				desc = INVITE_TO_WAR_ACCEPTANCE_TARGET_INFAMY
+				value = 5
+				subtract = { value = infamy multiply = 0.1 }
+				if = {
+					limit = { infamy >= infamy_threshold:pariah }
+					add = -20
+				}
+				else_if = {
+					limit = { infamy >= infamy_threshold:notorious }
+					add = -10
+				}
+				else_if = {
+					limit = { infamy >= infamy_threshold:infamous }
+					add = -5
+				}
+			}
+
+			# Compare the inviter's army to the target's army, following vanilla diplomatic-play logic.
+			if = {
+				limit = { "scope:actor.ai_army_comparison(root)" > 0 }
+				add = {
+					desc = DIPLOMATIC_ACCEPTANCE_ARMY_STRENGTH
+					value = "scope:actor.ai_army_comparison(root)"
+					multiply = 0.75
+					max = 50
+				}
+			}
+			else = {
+				add = {
+					desc = DIPLOMATIC_ACCEPTANCE_ARMY_STRENGTH
+					value = "scope:actor.ai_army_comparison(root)"
+					multiply = 0.5
+					min = -75
+				}
+			}
+
+			# A country already fighting alongside the inviter is not asked to join again; this also
+			# rewards a target that has no enemy relationship with the current wars' opponents.
+			if = {
+				limit = { is_in_war_together = scope:actor }
+				add = { desc = INVITE_TO_WAR_ACCEPTANCE_ALREADY_ALLY value = -1000 }
+			}
+		}
+
+		use_obligation_chance = {
+			value = 75
+		}
+	}
+}
