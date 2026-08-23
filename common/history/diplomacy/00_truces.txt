@@ -51,3 +51,12 @@ DIPLOMACY = {
 		}
 	}
 }
+
+DIPLOMACY = {
+	c:GBR ?= {
+		create_bidirectional_truce = {
+			country = c:MRT
+			months = 36
+		}
+	}
+}

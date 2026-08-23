@@ -389,6 +389,15 @@
 				culture = tatar
 				size = 1400
 			}
+			create_pop = {
+				culture = kazak
+				size = 9021
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = persian
+				size = 385
+			}
 		}
 
 		region_state:TRM = {
@@ -527,17 +536,6 @@
 				pop_type = slaves
 				culture = persian
 				size = 2010
-			}
-		}
-		region_state:KZH = {
-			create_pop = {
-				culture = kazak
-				size = 9021
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = persian
-				size = 385
 			}
 		}
 	}
