@@ -1,0 +1,31 @@
+﻿l_english:  
+ money_transfer.1.a:0 "Intialize/Reset the money to transfer to #white 0 @money!"
+ money_transfer.1.b:0 "#white +10K@money!"
+ money_transfer.1.c:0 "#white +100K@money!"
+ money_transfer.1.d:0 "#white +1M@money!"
+ money_transfer.1.e:0 "#white -10K@money!
+ money_transfer.1.f:0 "#white -100K@money!"
+ money_transfer.1.g:0 "#white -1M@money!"
+ money_transfer.1.h:0 "#white x10"
+ money_transfer.1.i:0 "Transfer #white [ROOT.Var('money_to_transfer_var').GetValue|*]#! @money! to [SCOPE.sCountry('target_country').GetName]"
+ money_transfer.1.t:0 "Transfer Money"
+ money_transfer.1.u:0 "Your current transfer sum  #white [ROOT.Var('money_to_transfer_var').GetValue|*]#! \n Your maximum transfer sum #white [ROOT.Var('maximum_transferable_money_var').GetValue|*]#! \n Selected country is [SCOPE.sCountry('target_country').GetName]"
+  
+ transfer_money:0 "Transfer Money"
+ transfer_money_desc:0 "Transfer Money to another country"
+ current_transfer_tooltip:0 "You already are transferring money to someone"
+ transfer_money:0 "Transfer Money"
+ transfer_money_action_notification_name:0 "Money Transfer"
+ transfer_money_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] is about to send you money (maybe ?)"
+ 
+ money_transfer.2.a:0 "Return to the sum selector"
+ money_transfer.2.b:0 "Yes"
+ money_transfer.2.t:0 "Transfer Confirmation"
+ money_transfer.2.u:0 "Are you sure you want to transfer #white [ROOT.Var('money_to_transfer_var').GetValue|*]#! @money! to [SCOPE.sCountry('target_country').GetName] ?"
+ 
+ money_transfer.3.a:0 "Nay (I don't like money@money! or it seem shady)"
+ money_transfer.3.b:0 "Yes (I love money@money!)"
+ money_transfer.3.t:0 "[SCOPE.sCountry('sender_scope').GetName] want to send you [GetGlobalVariable('money_to_transfer_global_var_temp').GetValue|*]#! @money!"
+ money_transfer.3.u:0 "Do you accept ?"
+ 
+ 

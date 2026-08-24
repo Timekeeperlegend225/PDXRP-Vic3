@@ -1,0 +1,5514 @@
+﻿namespace = gm_actions
+
+gm_actions.1 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.1.t
+	desc = gm_actions.1.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	trigger = {
+		#triggered by diplo action
+	}
+	
+	#GM options
+	
+	option = {
+		name = gm_actions.2.t
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_modifier = GM_game_master
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1.a
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = { has_modifier = GM_target }
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:scope_GM_target = {
+			remove_modifier = GM_target
+		}
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+			add_modifier = {
+				name = GM_target
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.1.b
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_modifier = GM_target
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_target
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	#Money
+	
+	option = {
+		name = value_selection.1.t
+		trigger_event = {
+			id = value_selection.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#Radicals
+	
+	option = {
+		name = value_selection.2.t
+		trigger_event = {
+			id = value_selection.2
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#Infamy
+	
+	option = {
+		name = value_selection.3.t
+		trigger_event = {
+			id = value_selection.3
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#War support
+	
+	option = {
+		name = value_selection.4.t
+		trigger = {
+			scope:GM_interacted_scope = {
+				is_at_war = yes
+			}
+		}
+		trigger_event = {
+			id = value_selection.4
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.10.t
+		trigger_event = {
+			id = gm_actions.10
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#Laws
+	
+	option = {
+		name = gm_actions.30.t
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.40.t
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.1.c
+		trigger = {
+			scope:GM_interacted_scope = {
+				is_country_type = unrecognized
+				NOT = {
+					has_modifier = GM_allow_recognition
+				}
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			add_modifier = {
+				name = GM_allow_recognition
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.1.d
+		trigger = {
+			scope:GM_interacted_scope = {
+				is_country_type = unrecognized
+				has_modifier = GM_allow_recognition
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_allow_recognition
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.1.e
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			call_election = {  
+				months = 6
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+}
+
+gm_actions.2 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.2.t
+	desc = gm_actions.2.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+	}
+	
+	trigger = {
+		#triggered by diplo action
+	}
+	
+	#GM options
+	
+	option = {
+		name = gm_actions.2.a
+		remove_global_variable = GM_taking_action
+		remove_modifier = GM_game_master
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+			add_modifier = {
+				name = GM_game_master
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+}
+
+gm_actions.10 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.10.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+	}
+	
+	option = {
+		name = gm_actions.10.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.10.b
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_truce_with = scope:scope_GM_target 
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			create_bidirectional_truce = {
+				country = scope:scope_GM_target
+				months = 60
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.10.c
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_truce_with = scope:scope_GM_target 
+			}
+		}
+		scope:GM_interacted_scope = {
+			end_truce = scope:scope_GM_target  
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.t
+		trigger_event = {
+			id = gm_actions.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.12.t
+		trigger_event = {
+			id = gm_actions.12
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.11 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.11.t
+	desc = gm_actions.11.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.b
+		trigger_event = {
+			id = gm_actions.10
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.c
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = protectorate
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				NOT = {
+					is_country_type = colonial
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			create_diplomatic_pact = {
+				type = protectorate
+				country = scope:scope_GM_target
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.d
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = protectorate
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_diplomatic_pact = {
+				type = protectorate
+				country = scope:scope_GM_target
+			}  
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.e
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = puppet
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				NOT = {
+					is_country_type = colonial
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			create_diplomatic_pact = {
+				type = puppet
+				country = scope:scope_GM_target
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.f
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = puppet
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_diplomatic_pact = {
+				type = puppet
+				country = scope:scope_GM_target
+			}  
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.g
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = tributary
+					}
+				}
+				is_country_type = unrecognized
+			}
+		}
+		scope:GM_interacted_scope = {
+			create_diplomatic_pact = {
+				type = tributary
+				country = scope:scope_GM_target
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.h
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = tributary
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_diplomatic_pact = {
+				type = tributary
+				country = scope:scope_GM_target
+			}  
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.i
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = vassal
+					}
+				}
+				is_country_type = unrecognized
+			}
+		}
+		scope:GM_interacted_scope = {
+			create_diplomatic_pact = {
+				type = vassal
+				country = scope:scope_GM_target
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.j
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = vassal
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_diplomatic_pact = {
+				type = vassal
+				country = scope:scope_GM_target
+			}  
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.k
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = dominion
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				is_country_type = colonial
+			}
+		}
+		scope:GM_interacted_scope = {
+			create_diplomatic_pact = {
+				type = dominion
+				country = scope:scope_GM_target
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.l
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = dominion
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_diplomatic_pact = {
+				type = dominion
+				country = scope:scope_GM_target
+			}  
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.m
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = chartered_company
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				is_country_type = colonial
+			}
+		}
+		scope:GM_interacted_scope = {
+			create_diplomatic_pact = {
+				type = chartered_company
+				country = scope:scope_GM_target
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.n
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = chartered_company
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_diplomatic_pact = {
+				type = chartered_company
+				country = scope:scope_GM_target
+			}  
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.o
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = colony
+					}
+				}
+				NOT = {
+					is_country_type = unrecognized
+				}
+			}
+			scope:scope_GM_target = {
+				is_country_type = colonial
+			}
+		}
+		scope:GM_interacted_scope = {
+			create_diplomatic_pact = {
+				type = colony
+				country = scope:scope_GM_target
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.p
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = colony
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_diplomatic_pact = {
+				type = colony
+				country = scope:scope_GM_target
+			}  
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.q
+		trigger = {
+			scope:GM_interacted_scope = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = scope:scope_GM_target 
+						type = personal_union
+					}
+				}
+				has_law = law_type:law_monarchy
+			}
+			scope:scope_GM_target = {
+				has_law = law_type:law_monarchy
+			}
+		}
+		scope:GM_interacted_scope = {
+			create_diplomatic_pact = {
+				type = personal_union
+				country = scope:scope_GM_target
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.11.r
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_diplomatic_pact = {
+					who = scope:scope_GM_target 
+					type = personal_union
+				}
+			}
+		}
+		scope:GM_interacted_scope = {
+			remove_diplomatic_pact = {
+				type = personal_union
+				country = scope:scope_GM_target
+			}  
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+}
+
+gm_actions.12 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.12.t
+	desc = gm_actions.12.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.12.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.12.b
+		trigger_event = {
+			id = gm_actions.10
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.12.c
+		scope:GM_interacted_scope = {
+			annex = scope:scope_GM_target
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.12.d
+		scope:GM_interacted_scope = {
+			annex_with_incorporation = scope:scope_GM_target
+		}
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+}
+
+gm_actions.30 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.30.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.31.t
+		trigger_event = {
+			id = gm_actions.31
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.32.t
+		trigger_event = {
+			id = gm_actions.32
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_actions.33.t
+		trigger_event = {
+			id = gm_actions.33
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.31 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.31.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_governance_principles
+		trigger_event = {
+			id = gm_actions.310
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_distribution_of_power
+		trigger_event = {
+			id = gm_actions.311
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_citizenship
+		trigger_event = {
+			id = gm_actions.312
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_caste_hegemony
+		trigger = {
+			scope:GM_interacted_scope = {
+				OR = {
+					has_social_hierarchy = british_indian_caste_system
+					has_social_hierarchy = edo_system
+				}
+			}
+		}
+		trigger_event = {
+			id = gm_actions.313
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_church_and_state
+		trigger_event = {
+			id = gm_actions.314
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_bureaucracy
+		trigger_event = {
+			id = gm_actions.315
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_army_model
+		trigger_event = {
+			id = gm_actions.316
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_navy_model
+		trigger_event = {
+			id = gm_actions.317
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_internal_security
+		trigger_event = {
+			id = gm_actions.318
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.310 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_governance_principles
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.31
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_monarchy
+		trigger ={
+			OR = {
+				is_subject = no
+				NOT = { has_government_type = gov_chartered_company }
+			}
+		}
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_monarchy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_colonial_administration
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_colonial_administration
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_presidential_republic
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_presidential_republic
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_parliamentary_republic
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_parliamentary_republic
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_theocracy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_theocracy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_council_republic
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_council_republic
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_corporate_state
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_corporate_state
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_social_monarchy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_social_monarchy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.311 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_distribution_of_power
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_autocracy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_autocracy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_bakufu
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_bakufu
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_neo_absolutism
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_neo_absolutism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_technocracy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_technocracy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_oligarchy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_oligarchy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_organic_regulation
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_organic_regulation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_landed_voting
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_landed_voting
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_wealth_voting
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_wealth_voting
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_census_voting
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_census_voting
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_universal_suffrage
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_universal_suffrage
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_anarchy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_anarchy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_single_party_state
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_single_party_state
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.312 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_citizenship
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_subjecthood
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_subjecthood
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_ethnostate
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_ethnostate
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_national_supremacy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_national_supremacy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_racial_segregation
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_racial_segregation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_cultural_exclusion
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_cultural_exclusion
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_multicultural
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_multicultural
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.313 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_caste_hegemony
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_hindu_caste_enforced
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_social_hierarchy = british_indian_caste_system
+			}
+		}
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_hindu_caste_enforced
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_hindu_caste_codified
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_social_hierarchy = british_indian_caste_system
+			}
+		}
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_hindu_caste_codified
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_hindu_caste_not_enforced
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_social_hierarchy = british_indian_caste_system
+			}
+		}
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_hindu_caste_not_enforced
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_affirmative_action
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_social_hierarchy = british_indian_caste_system
+			}
+		}
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_affirmative_action
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_strict_edo_system
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_social_hierarchy = edo_system
+			}
+		}
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_strict_edo_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_intermediate_edo_system
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_social_hierarchy = edo_system
+			}
+		}
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_intermediate_edo_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_lax_edo_system
+		trigger = {
+			scope:GM_interacted_scope = {
+				has_social_hierarchy = edo_system
+			}
+		}
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_lax_edo_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.314 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_church_and_state
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_state_religion
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_state_religion
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_millet_system
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_millet_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_people_of_the_book
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_people_of_the_book
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_freedom_of_conscience
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_freedom_of_conscience
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_total_separation
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_total_separation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_state_atheism
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_state_atheism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.315 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_bureaucracy
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_hereditary_bureaucrats
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_hereditary_bureaucrats
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_crownland_diets
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_crownland_diets
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_appointed_bureaucrats
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_appointed_bureaucrats
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_elected_bureaucrats
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_elected_bureaucrats
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.316 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_army_model
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_peasant_levies
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_peasant_levies
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_warrior_caste
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_warrior_caste
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_professional_army
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_professional_army
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_national_militia
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_national_militia
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_mass_conscription
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_mass_conscription
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.317 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_navy_model
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_merchant_navy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_merchant_navy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_jeune_ecole
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_jeune_ecole
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_professional_navy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_professional_navy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_diplomatic_navy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_diplomatic_navy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.318 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_internal_security
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_home_affairs
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_no_home_affairs
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_national_guard
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_national_guard
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_secret_police
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_secret_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_shinsengumi
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_shinsengumi
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_guaranteed_liberties
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_guaranteed_liberties
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.32 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.32.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_economic_system
+		trigger_event = {
+			id = gm_actions.320
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_trade_policy
+		trigger_event = {
+			id = gm_actions.321
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_taxation
+		trigger_event = {
+			id = gm_actions.322
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_land_reform
+		trigger_event = {
+			id = gm_actions.323
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_colonization
+		trigger_event = {
+			id = gm_actions.324
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_policing
+		trigger_event = {
+			id = gm_actions.325
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_education_system
+		trigger_event = {
+			id = gm_actions.326
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_health_system
+		trigger_event = {
+			id = gm_actions.327
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.320 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_economic_system
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_traditionalism
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_traditionalism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_interventionism
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_interventionism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_agrarianism
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_agrarianism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_industry_banned
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_industry_banned
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_extraction_economy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_extraction_economy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_laissez_faire
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_laissez_faire
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_cooperative_ownership
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_cooperative_ownership
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_command_economy
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_command_economy
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.321 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_trade_policy
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_mercantilism
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_mercantilism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_protectionism
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_protectionism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_free_trade
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_free_trade
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_isolationism
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_isolationism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_canton_system
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_canton_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_sakoku
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_sakoku
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.322 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_taxation
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_consumption_based_taxation
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_consumption_based_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_land_based_taxation
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_land_based_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_per_capita_based_taxation
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_per_capita_based_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_proportional_taxation
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_proportional_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_graduated_taxation
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_graduated_taxation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.323 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_land_reform
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_serfdom
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_serfdom
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_manorialism
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_manorialism
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_tenant_farmers
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_tenant_farmers
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_latifundias
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_latifundias
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_expanded_latifundias
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_expanded_latifundias
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_commercialized_agriculture
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_commercialized_agriculture
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_peasant_proprietorship
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_peasant_proprietorship
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_homesteading
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_homesteading
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_collectivized_agriculture
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_collectivized_agriculture
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.324 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_colonization
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_colonial_affairs
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_no_colonial_affairs
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_frontier_colonization
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_frontier_colonization
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_colonial_resettlement
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_colonial_resettlement
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_colonial_exploitation
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_colonial_exploitation
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.325 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_policing
+
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_police
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_no_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_local_police
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_local_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_dedicated_police
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_dedicated_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_militarized_police
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_militarized_police
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.326 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_education_system
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_schools
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_no_schools
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_religious_schools
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_religious_schools
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_private_schools
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_private_schools
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_terakoya
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_terakoya
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_public_schools
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_public_schools
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.327 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_health_system
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_health_system
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_no_health_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_charitable_health_system
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_charitable_health_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_private_health_insurance
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_private_health_insurance
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_public_health_insurance
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_public_health_insurance
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.33 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.33.t
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_free_speech
+		trigger_event = {
+			id = gm_actions.330
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_labor_rights
+		trigger_event = {
+			id = gm_actions.331
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_childrens_rights
+		trigger_event = {
+			id = gm_actions.332
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_rights_of_women
+		trigger_event = {
+			id = gm_actions.333
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_welfare
+		trigger_event = {
+			id = gm_actions.334
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_migration
+		trigger_event = {
+			id = gm_actions.335
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_slavery
+		trigger_event = {
+			id = gm_actions.336
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = lawgroup_labour_associations
+		trigger_event = {
+			id = gm_actions.337
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.330 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_free_speech
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_outlawed_dissent
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_outlawed_dissent
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_censorship
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_censorship
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_right_of_assembly
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_right_of_assembly
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_protected_speech
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_protected_speech
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.331 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_labor_rights
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_workers_rights
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_no_workers_rights
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_regulatory_bodies
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_regulatory_bodies
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_worker_protections
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_worker_protections
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.332 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_childrens_rights
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_child_labor_allowed
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_child_labor_allowed
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_restricted_child_labor
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_restricted_child_labor
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_compulsory_primary_school
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_compulsory_primary_school
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.333 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_rights_of_women
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_womens_rights
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_no_womens_rights
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_women_in_the_fields
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_women_in_the_fields
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_women_own_property
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_women_own_property
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_women_in_the_workplace
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_women_in_the_workplace
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_womens_suffrage
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_womens_suffrage
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.334 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_welfare
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_social_security
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_no_social_security
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_chiefs_distribute_aid
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_chiefs_distribute_aid
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_poor_laws
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_poor_laws
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_wage_subsidies
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_wage_subsidies
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_old_age_pension
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_old_age_pension
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.335 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_migration
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_no_migration_controls
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_no_migration_controls
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_migration_controls
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_migration_controls
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_closed_borders
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_closed_borders
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.336 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_slavery
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_slavery_banned
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_slavery_banned
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_colonial_slavery
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_colonial_slavery
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_debt_slavery
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_debt_slavery
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_slave_trade
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_slave_trade
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_legacy_slavery
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_legacy_slavery
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.337 = {
+	type = country_event
+	placement = ROOT
+	title = lawgroup_labour_associations
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	}
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+	}
+	
+	option = {
+		name = gm_actions.cancel
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:GM_interacted_scope = {
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_guild_system
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_guild_system
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_combination_acts
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_combination_acts
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_anti_strike_laws
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_anti_strike_laws
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_right_to_associate
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_right_to_associate
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_corporatized_unions
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_corporatized_unions
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = law_factory_councils
+		scope:GM_interacted_scope = {
+			activate_law = law_type:law_factory_councils
+		}
+		trigger_event = {
+			id = gm_actions.30
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.40 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.40.t
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:scope_target_character
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	option = { #Cancel
+		name = gm_actions.40.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #Change IG
+		name = gm_actions.400.t
+		trigger_event = {
+			id = gm_actions.400
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Change ideology
+		name = gm_actions.401.t
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Kill
+		name = gm_actions.40.b
+		scope:scope_target_character = {
+			kill_character = yes
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #Make ruler
+		name = gm_actions.40.c
+		scope:scope_target_character = {
+			add_character_role = politician
+			set_character_as_ruler = yes
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #Make Heir
+		name = gm_actions.40.d
+		scope:scope_target_character = {
+			add_character_role = politician
+		}
+		scope:GM_interacted_scope = {
+			set_heir = scope:scope_target_character
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #Make IG leader 
+		name = gm_actions.40.e
+		scope:scope_target_character = {
+			add_character_role = politician
+			set_as_interest_group_leader = yes
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #Pull to GM
+		name = gm_actions.40.f
+		random_country = {
+			limit = {
+				has_modifier = game_master
+			}
+			save_scope_as = GM
+		}
+		scope:scope_target_character = {
+			add_character_role = agitator
+			transfer_character = scope:GM
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+}
+
+gm_actions.400 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.400.t
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:scope_target_character
+ 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	#GM options
+	
+	option = {
+		name = gm_actions.400.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ig_armed_forces
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_armed_forces
+			}
+			save_scope_as = relevant_ig
+		}
+		scope:GM_interacted_scope = {
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_armed_forces
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:scope_target_character = { 
+			set_interest_group = scope:relevant_ig
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ig_devout
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_devout
+			}
+			save_scope_as = relevant_ig
+		}
+		scope:GM_interacted_scope = {
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_devout
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:scope_target_character = { 
+			set_interest_group = scope:relevant_ig
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ig_industrialists
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_industrialists
+			}
+			save_scope_as = relevant_ig
+		}
+		scope:GM_interacted_scope = {
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_industrialists
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:scope_target_character = { 
+			set_interest_group = scope:relevant_ig
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ig_intelligentsia
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_intelligentsia
+			}
+			save_scope_as = relevant_ig
+		}
+		scope:GM_interacted_scope = {
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_intelligentsia
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:scope_target_character = { 
+			set_interest_group = scope:relevant_ig
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ig_landowners
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_landowners
+			}
+			save_scope_as = relevant_ig
+		}
+		scope:GM_interacted_scope = {
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_landowners
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:scope_target_character = { 
+			set_interest_group = scope:relevant_ig
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ig_petty_bourgeoisie
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+			save_scope_as = relevant_ig
+		}
+		scope:GM_interacted_scope = {
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_petty_bourgeoisie
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:scope_target_character = { 
+			set_interest_group = scope:relevant_ig
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ig_rural_folk
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_rural_folk
+			}
+			save_scope_as = relevant_ig
+		}
+		scope:GM_interacted_scope = {
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_rural_folk
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:scope_target_character = { 
+			set_interest_group = scope:relevant_ig
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ig_trade_unions
+		ordered_interest_group = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+			}
+			save_scope_as = relevant_ig
+		}
+		scope:GM_interacted_scope = {
+			ordered_interest_group = {
+				limit = {
+					is_interest_group_type = ig_trade_unions
+				}
+				save_scope_as = relevant_ig
+			}
+		}
+		scope:scope_target_character = { 
+			set_interest_group = scope:relevant_ig
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}		
+}
+
+gm_actions.401 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.401.t
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:scope_target_character
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	option = { #Cancel
+		name = gm_actions.401.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.return
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Authoritarian Nationalist
+		name = gm_actions.402.t
+		trigger_event = {
+			id = gm_actions.402
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Conservative
+		name = gm_actions.403.t
+		trigger_event = {
+			id = gm_actions.403
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Reformer
+		name = gm_actions.404.t
+		trigger_event = {
+			id = gm_actions.404
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Liberal
+		name = gm_actions.405.t
+		trigger_event = {
+			id = gm_actions.405
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Socialist
+		name = gm_actions.406.t
+		trigger_event = {
+			id = gm_actions.406
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { #Flavor
+		name = gm_actions.407.t
+		trigger_event = {
+			id = gm_actions.407
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.402 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.402.t
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:scope_target_character
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.402.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { 
+		name = gm_actions.403.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ideology_jingoist_leader
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_jingoist_leader
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ideology_ethno_nationalist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_ethno_nationalist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = ideology_authoritarian
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_authoritarian
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_fascist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_fascist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_integralist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_integralist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.403 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.403.t
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:scope_target_character
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.403.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.403.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_moderate
+		remove_global_variable = GM_taking_action
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_moderate
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_traditionalist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_traditionalist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_traditionalist_minoritarian
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_traditionalist_minoritarian
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_slaver
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_slaver
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_royalist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_royalist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_luddite
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_luddite
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_theocrat
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_theocrat
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.404 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.404.t
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:scope_target_character
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.404.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.404.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_reformer
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_reformer
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_market_liberal
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_market_liberal
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_protectionist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_protectionist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_land_reformer
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_land_reformer
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_utilitarian_leader
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_utilitarian_leader
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_sovereignist_leader
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_sovereignist_leader
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_corporatist_leader
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_corporatist_leader
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.405 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.405.t
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:scope_target_character
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.405.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.405.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_republican_leader
+		default_option = yes
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_republican_leader
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_feminist
+		default_option = yes
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_feminist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_abolitionist
+		default_option = yes
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_abolitionist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_humanitarian
+		default_option = yes
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_humanitarian
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_liberal_leader
+		default_option = yes
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_liberal_leader
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_radical
+		default_option = yes
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_radical
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_pacifist
+		default_option = yes
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_pacifist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_humanitarian_royalist
+		default_option = yes
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_humanitarian_royalist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.406 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.406.t
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:scope_target_character
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.406.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.406.b
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_social_democrat
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_social_democrat
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+		
+	option = { 
+		name = ideology_utopian
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_utopian
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_communist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_communist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_vanguardist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_vanguardist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_anarchist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_anarchist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_positivist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_positivist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_nihilist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_nihilist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	option = { 
+		name = ideology_modernizer_leader
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_modernizer_leader
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+gm_actions.407 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.407.t
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:scope_target_character
+ 
+
+	duration = 1
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			save_scope_as = scope_GM_target
+		}
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+		scope:GM_interacted_scope = {
+			every_scope_character = {
+				limit = {
+					has_modifier = GM_target_character_mod
+				}
+				save_scope_as = scope_target_character
+			}
+		}
+	}
+	
+	option = {
+		name = gm_actions.407.a
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifer = GM_interacted_mod
+		}
+	}
+	
+	option = { #return
+		name = gm_actions.407.b
+		trigger_event = {
+			id = gm_actions.401
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_orleanist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_orleanist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_legitimist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_legitimist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_bonapartist
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_bonapartist
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_despotic_utopian
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_despotic_utopian
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = { 
+		name = ideology_jacksonian_democrat
+		scope:scope_target_character = {
+			set_ideology = ideology:ideology_jacksonian_democrat
+		}
+		trigger_event = {
+			id = gm_actions.40
+			days = 0
+			popup = yes
+		}
+	}
+}

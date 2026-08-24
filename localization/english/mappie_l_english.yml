@@ -1,0 +1,76 @@
+﻿l_english:
+ mappie_trait_peripheral:0 "Peripheral"
+ mappie_trait_peripheral_desc:0 "This character has reached a reputation level of #b #white 1"
+ mappie_trait_noted:0 "Noted"
+ mappie_trait_noted_desc:0 "This character has reached a reputation level of #b #white 2"
+ mappie_trait_established:0 "Established"
+ mappie_trait_established_desc:0 "This character has reached a reputation level of #b #white 3"
+ mappie_trait_respected:0 "Respected"
+ mappie_trait_respected_desc:0 "This character has reached a reputation level of #b #white 4"
+ mappie_trait_prominent:0 "Prominent"
+ mappie_trait_prominent_desc:0 "This character has reached a reputation level of #b #white 5"
+ mappie_trait_powerbreaker:0 "PowerBreaker"
+ mappie_trait_powerbreaker_desc:0 "This character has reached a reputation level of #b #white 6"
+ mappie_trait_emminent:0 "Eminent"
+ mappie_trait_emminent_desc:0 "This character has reached a reputation level of #b #white 7"
+ mappie_trait_paramount:0 "Paramount"
+ mappie_trait_paramount_desc:0 "This character has reached a reputation level of #b #white 8"
+ mappie_trait_kingmaker:0 "Peripheral"
+ mappie_trait_kingmaker_desc:0 "This character has reached a reputation level of #b #white 9"
+ mappie_trait_titan:0 "Titan"
+ mappie_trait_titan_desc:0 "This character has reached a reputation level of #b #white 10"
+ 
+ mappie_migrationbad:0 "Failed Migration Campaign"
+ mappie_migrationgood:0 "Succesful Migration Campaign"
+ mappie_migrationgreat:0 "Wonderful Migration Campaign"
+ 
+ mappie_roadbad:0 "Failed Infrastructure Campaign"
+ mappie_roadgood:0 "Succesful Infrastructure Campaign"
+ mappie_roadgreat:0 "Wonderful Infrastructure Campaign"
+ 
+ mappie_suppressionbad:0 "Failed Order Keeping Campaign"
+ mappie_suppressiongood:0 "Succesful Order Keeping Campaign"
+ mappie_suppressiongreat:0 "Wonderful Order Keeping Campaign"
+ 
+ mappie_mobilitybad:0 "Failed Education Campaign"
+ mappie_mobilitygood:0 "Succesful Education Campaign"
+ mappie_mobilitygreat:0 "Wonderful Education Campaign"
+ 
+ mappie_assimilationbad:0 "Failed Assimilation Campaign"
+ mappie_assimilationgood:0 "Succesful Assimilation Campaign"
+ mappie_assimilationgreat:0 "Wonderful Assimilation Campaign"
+ 
+ mappie_manufacturingbad:0 "Failed Manifacture Promotion Campaign"
+ mappie_manufacturinggood:0 "Succesful Manifacture Promotion Campaign"
+ mappie_manuifacturinggreat:0 "Wonderful Manifacture Promotion Campaign"
+ 
+ mappie_resourcebad:0 "Failed Extraction Promotion Campaign"
+ mappie_resourcegood:0 "Succesful Extraction Promotion Campaign"
+ mappie_resourcegreat:0 "Wonderful Extraction Promotion Campaign"
+ 
+ mappie_agriculturebad:0 "Failed Agricultural Promotion Campaign"
+ mappie_agriculturegood:0 "Succesful Agricultural Promotion Campaign"
+ mappie_agriculturegreat:0 "Wonderful Agricultural Promotion Campaign"
+ 
+ mappie_enlistmentbad:0 "Failed Enlistment Campaign"
+ mappie_enlistmengood:0 "Succesful Enlistment Campaign"
+ mappie_enlistmentgreat:0 "Wonderful Enlistment Campaign"
+ 
+ mappie_diplomaticbad:0 "Failed Diplomatic Campaign"
+ mappie_diplomaticgood:0 "Succesful Diplomatic Campaign"
+ mappie_diplomaticgreat:0 "Wonderful Diplomatic Campaign"
+ 
+ mappie_bureaucracybad:0 "Failed Bureaucratic Campaign"
+ mappie_bureaucracygood:0 "Succesful Bureaucratic Campaign"
+ mappie_bureaucracygreat:0 "Wonderful Bureaucratic Campaign"
+ 
+ mappie_authoritybad:0 "Failed Affirming Authority Campaign"
+ mappie_authoritygood:0 "Succesful Affirming Authority Campaign"
+ mappie_authoritygreat:0 "Wonderful Affirming Authority Campaign"
+ 
+ mappie_powerblocbad:0 "Failed Power Bloc Support Campaign"
+ mappie_powerblocgood:0 "Succesful  Power Bloc Support Campaign"
+ mappie_powerblocgreat:0 "Wonderful  Power Bloc Support Campaign"
+ 
+ gm_headofgovernment: "Head of Government"
+ gm_leaderofopposition: "Leader of Opposition"
