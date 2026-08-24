@@ -1,0 +1,42 @@
+﻿REPLACE_OR_CREATE:GM_Interaction = {
+	groups= {
+		general
+	}
+	requires_approval = no
+	potential = {
+		has_modifier = GM_game_master
+		is_ai = no
+	}
+	
+    possible = {
+		custom_tooltip = {
+			text = GM_Interaction.t
+			NOT = { has_global_variable = GM_taking_action }
+		}
+		has_modifier = GM_game_master
+	}
+	
+    accept_effect = {
+		set_global_variable = {
+			name = GM_taking_action
+			days = 15
+		}
+		scope:target = {
+			add_modifier = {
+				name = GM_interacted_mod    
+				days = 15
+			}
+		}
+		trigger_event = {
+			id = gm_actions.1
+			days = 0
+			popup = yes
+		}
+    }
+	
+    ai = {
+        will_propose = {
+            always = no
+        }
+    }
+}

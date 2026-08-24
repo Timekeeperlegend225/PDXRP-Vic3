@@ -1,0 +1,10 @@
+﻿REPLACE:PLC = {
+	color = { 219  31  62 }
+
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { polish lithuanian }
+	capital = STATE_GREATER_POLAND
+}

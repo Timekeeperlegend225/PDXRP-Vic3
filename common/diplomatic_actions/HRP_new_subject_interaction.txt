@@ -1,0 +1,129 @@
+REPLACE_OR_CREATE:subject_foreign_investment = {
+	groups = {
+		overlord
+	}
+	requires_approval = no
+	
+	texture = "gfx/interface/icons/diplomatic_treaties_articles_icons/foreign_investment_agreement_treaties.dds"
+	
+	potential = {
+		scope:target_country.overlord = root
+	}
+	
+	possible = {
+		scope:target_country = {
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+				is_subject_type = subject_type_colony
+				is_subject_type = subject_type_crown_land
+			}
+		}
+	}
+
+	accept_effect = {
+		custom_tooltip = {
+			text = subject_foreign_investment_tooltip
+		}
+	}
+
+	pact = {
+		cost = 0
+
+		actor_can_break = {
+			always = yes
+		}
+
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+
+		manual_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = { is_subject_of = root }
+					add_liberty_desire = 10
+				}
+			}
+		}
+	}
+	accept_effect = {
+	}
+	ai = {
+		will_propose = {
+			always = no
+		}
+		accept_score = {
+			value = -1000
+		}
+	}
+}
+
+REPLACE_OR_CREATE:subject_allow_war = {
+	groups = {
+		overlord
+	}
+	requires_approval = no
+	
+	texture = "gfx/interface/icons/diplomatic_action_icons/enforce_military_access.dds"
+	
+	potential = {
+		scope:target_country.overlord = root
+	}
+	
+	possible = {
+		scope:target_country = {
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+				is_subject_type = subject_type_colony
+				is_subject_type = subject_type_crown_land
+			}
+		}
+	}
+
+	accept_effect = {
+		custom_tooltip = {
+			text = subject_allow_war_tooltip
+		}
+	}
+
+	pact = {
+		cost = 0
+
+		actor_can_break = {
+			always = yes
+		}
+
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+
+		manual_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = { is_subject_of = root }
+					add_liberty_desire = 10
+				}
+			}
+		}
+	}
+	accept_effect = {
+	}
+	ai = {
+		will_propose = {
+			always = no
+		}
+		accept_score = {
+			value = -1000
+		}
+	}
+}

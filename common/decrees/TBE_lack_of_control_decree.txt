@@ -1,0 +1,39 @@
+﻿decree_local_census = {
+	texture = "gfx/interface/icons/law_icons/census_voting.dds"
+	modifier = {
+		state_bureaucracy_population_base_cost_factor_mult = 0.40
+		state_montly_census_progress = 100000
+	}
+	country_trigger = {
+		any_scope_state = {
+			OR = {
+				has_modifier = TBE_unknow_population
+				has_modifier = TBE_unidentified_population
+				has_modifier = TBE_unreached_population
+			}
+		}
+	}
+	
+	state_trigger = {
+		OR = {
+			has_modifier = TBE_unknow_population
+			AND = {
+				has_modifier = TBE_unidentified_population
+				owner = {
+					has_technology_researched = central_archives
+				}	
+			}
+			AND = {
+				has_modifier = TBE_unreached_population
+				owner = {
+					has_technology_researched = identification_documents
+				}	
+			}
+		}
+	}
+	
+	cost = 25
+
+	ai_weight = {
+		value = 100
+}

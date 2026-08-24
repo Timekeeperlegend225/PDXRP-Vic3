@@ -1,0 +1,49 @@
+﻿REPLACE_OR_CREATE:transfer_money = {
+	groups= {
+		general
+	}
+	requires_approval = no
+	potential = {
+		is_ai = no
+	}
+	
+    possible = {
+		in_default = no
+		NOT = {
+			has_modifier = declared_bankruptcy
+		}
+		scope:target_country = {
+			OR = { 
+				is_subject_type = subject_type_protectorate
+				is_subject_type = subject_type_tributary
+				is_subject = no 
+				is_subject_of = root
+			}
+			is_at_war = no
+		}
+		custom_tooltip = {
+			text = current_transfer_tooltip
+			NOT = {
+				has_variable = money_to_transfer_var
+			}
+		}
+	}
+	
+    accept_effect = {
+		set_variable = { 
+			name = money_to_transfer_var
+			value = 0
+		}
+		trigger_event = {
+			id = money_transfer.1
+			days = 0
+			popup = yes
+		}
+    }
+	
+    ai = {
+        will_propose = {
+            always = no
+        }
+    }
+}

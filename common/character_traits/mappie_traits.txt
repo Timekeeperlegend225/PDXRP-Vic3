@@ -1,0 +1,317 @@
+﻿mappie_trait_peripheral = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/inexperienced.dds"
+
+	character_modifier = {
+		character_prominence_add = 10
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}
+
+mappie_trait_noted = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/elder.dds"
+
+	character_modifier = {
+		character_prominence_add = 20
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}
+
+mappie_trait_established = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/imposing.dds"
+
+	character_modifier = {
+		character_prominence_add = 30
+	}
+
+	command_modifier = {
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}
+
+mappie_trait_respected = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/honorable.dds"
+
+	character_modifier = {
+		character_prominence_add = 40
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}
+
+mappie_trait_prominent = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/special_character_traits/special_character_maurras_popularity.dds"
+
+	character_modifier = {
+		character_prominence_add = 50
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}
+
+mappie_trait_powerbreaker = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/special_character_traits/special_character_curly_haired_orpheus.dds"
+
+	character_modifier = {
+		character_prominence_add = 60
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}
+
+mappie_trait_emminent = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/special_character_traits/special_character_el_excelentisimo.dds"
+
+	character_modifier = {
+		character_prominence_add = 70
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}
+
+mappie_trait_paramount = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/special_character_traits/special_character_napoleonic_return.dds"
+
+	character_modifier = {
+		character_prominence_add = 80
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}
+
+mappie_trait_kingmaker = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/special_character_traits/special_character_restitutor_orbis.dds"
+
+	character_modifier = {
+		character_prominence_add = 90
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}
+
+mappie_trait_titan = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/special_character_traits/special_character_great_reformer.dds"
+
+	character_modifier = {
+		character_prominence_add = 100
+	}
+
+	command_modifier = {
+
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	executive_modifier = {
+
+	}
+
+	possible = {
+
+	}
+
+	interest_group_modifier = {
+	}
+
+	weight = 0
+}

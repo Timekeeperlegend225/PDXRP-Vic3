@@ -1,0 +1,20 @@
+﻿buying_slave_liberty= {
+    icon = gfx/interface/icons/lens_toolbar_icons/transfer_money.dds
+    country_expenses_add = 500
+}
+
+money_for_the_landowner= {
+    icon = gfx/interface/icons/ig_icons/landowners.dds
+	interest_group_ig_landowners_pol_str_mult = 0.10
+}
+
+sold_prussia= {
+    icon = gfx/interface/icons/ig_icons/landowners.dds
+	interest_group_ig_landowners_approval_add = -3
+}
+
+dont_delete_your_ships_pls = {
+	icon = gfx/interface/icons/state_status_icons/ship_construction.dds
+	country_ship_construction_add = 1
+	country_ship_construction_progress_max_add = 1
+}
