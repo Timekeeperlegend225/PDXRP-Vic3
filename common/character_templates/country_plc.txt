@@ -1,0 +1,43 @@
+﻿PLC_stanislaw_i = {
+	first_name = Stanislaw
+	last_name = "Grabowski"
+	historical = yes
+	culture = primary_culture
+	ruler = yes
+	birth_date = 1780.8.29 # reigned from 1833–1845, birth date unknown
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	home_region = STATE_GREATER_POLAND
+	traits = {
+		brave
+	}
+}
+PLC_stanislaw_ii = {
+	first_name = Stanislaw
+	last_name = Grabowski
+	historical = yes
+	culture = primary_culture
+	heir = yes
+	birth_date = 1821.3.24
+	interest_group = ig_landowners
+	ideology = ideology_liberal_leader
+	home_region = STATE_GREATER_POLAND
+	traits = {
+		brave
+	}
+}
+PLC_general = {
+	first_name = Henryk
+	last_name = Dembinski
+	historical = yes
+	is_general = yes
+	culture = primary_culture
+	birth_date = 1791.7.12
+	interest_group = ig_landowners
+	commander_rank = commander_rank_3
+	ideology = ideology_royalist
+	traits = {
+		surveyor
+		basic_defensive_strategist
+	}
+}
