@@ -1,0 +1,11 @@
+﻿CHARACTERS = {
+	c:PLC ?= {
+		create_character = {
+			template = PLC_stanislaw_i
+		}	
+
+		create_character = {
+			template = PLC_stanislaw_ii
+		}
+	}
+}

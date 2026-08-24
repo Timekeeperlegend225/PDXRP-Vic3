@@ -1,0 +1,16 @@
+﻿GLOBAL = {
+	every_state = {
+		set_variable = { 
+			name = resistance_var 
+			value = 0
+		}
+		set_variable = { 
+			name = vaccination_var 
+			value = 0
+		}
+	}
+	set_global_variable = { 
+		name = plague_intesity_var
+		value = 0
+	}
+}

@@ -1,0 +1,45 @@
+﻿GLOBAL = {
+	every_state = {
+		limit = {
+			OR = {
+				is_in_geographic_region = geographic_region_india
+				is_in_geographic_region = geographic_region_china
+			}
+		}
+		add_modifier = { 
+			name = TBE_unknow_population 
+		}
+		add_modifier = { 
+			name = TBE_abysmal_infrastructure 
+		}
+		if = {
+			limit = {
+				owner = {
+					any_primary_culture = {
+						has_discrimination_trait_group = heritage_group_european
+					}
+				}
+			}
+			add_modifier = { 
+				name = TBE_exploitative_agriculture 
+			}
+		}
+		else = {
+			add_modifier = { 
+				name = TBE_backwar_agriculture 
+			}
+		}
+		set_variable = {
+			name = unknow_population_census_var
+			value = 0
+		}
+		set_variable = {
+			name = infrastructure_improvement_var
+			value = 0
+		}
+		set_variable = {
+			name = agricultural_improvement_var
+			value = 0
+		}
+	}
+}
