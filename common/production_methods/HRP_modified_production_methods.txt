@@ -1,0 +1,20 @@
+REPLACE:pm_telephones = {
+	texture = "gfx/interface/icons/production_method_icons/telephones.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_iron_add = 20
+			goods_input_rubber_add = 5
+			goods_input_lead_add = 20
+			goods_input_tools_add = 10
+
+			goods_output_telephones_add = 60
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 2000
+			building_employment_engineers_add = 1000
+		}
+	}
+}
