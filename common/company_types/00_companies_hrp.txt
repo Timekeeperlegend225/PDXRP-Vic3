@@ -262,6 +262,91 @@ REPLACE_OR_CREATE:company_fn_herstal = {
 	}
 }
 
+# Samsung
+REPLACE_OR_CREATE:company_samsung = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/samsung.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_SEOUL }
+
+	building_types = {
+		building_fishing_wharf
+		building_food_industry
+		building_textile_mill
+	}
+
+	extension_building_types = {
+		building_electrics_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_fish
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_fish_complete_tt
+			has_variable = prestige_good_generic_fish_var
+		}
+	}
+
+	potential = {
+		country_has_primary_culture = cu:korean
+		has_interest_marker_in_region = sr:region_northeast_asia
+	}
+
+	possible = {
+		has_technology_researched = gantry_cranes
+		any_scope_state = {
+			state_region = s:STATE_SEOUL
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_fishing_wharf
+					is_building_type = building_food_industry
+					is_building_type = building_textile_mill
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_trade_advantage_mult = 0.1
+		state_capitalists_investment_pool_efficiency_mult = 0.05
+		interest_group_ig_industrialists_pol_str_mult = 0.15
+	}
+
+	ai_will_do = {
+		has_technology_researched = gantry_cranes
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_fishing_wharf
+					is_building_type = building_food_industry
+					is_building_type = building_textile_mill
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	ai_construction_targets = {
+		building_textile_mill = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Doosan Group
 REPLACE_OR_CREATE:company_doosan = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/doosan.dds"
@@ -1677,4 +1762,142 @@ REPLACE_OR_CREATE:company_fowler = {
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
+}
+
+# Petroleum Development Oman
+REPLACE_OR_CREATE:company_pdo = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/pdo.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_OMAN }
+
+	building_types = {
+		building_oil_rig
+		building_port
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	potential = {
+		country_has_primary_culture = cu:bedouin
+		has_interest_marker_in_region = sr:region_arabia
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			state_region = s:STATE_OMAN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_pop_qualifications_mult = 0.1
+		country_production_tech_spread_mult = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			state_region = s:STATE_OMAN
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_OMAN
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Tanganyika Breweries Ltd.
+REPLACE_OR_CREATE:company_tanganyika_breweries = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/tangyanika_breweries.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_TANGANYIKA }
+
+	building_types = { #27
+		building_food_industry
+		building_vineyard
+	}
+	
+	extension_building_types = {
+		building_millet_farm
+		building_motor_industry
+		building_glassworks
+		building_banana_plantation
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_east_africa
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_generic_liquor
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_liquor_complete_tt
+			has_variable = prestige_good_generic_liquor_var
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_TANGANYIKA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_food_industry
+					is_building_type = building_vineyard
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_millet_farm_throughput_add = 0.1
+		state_food_security_add = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_TANGANYIKA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_TANGANYIKA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
 }
