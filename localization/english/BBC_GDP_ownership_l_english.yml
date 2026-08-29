@@ -1,6 +1,6 @@
 ﻿l_english:
  je_GDP_ownership:0 "GDP Ownership"
- je_GDP_ownership_reason:0 "We effectively own [ROOT.Var('self_gdp_ownership_var').GetValue|v1%]#! #default_text of our GDP (Our own GDP ownership + half of our overlord GDP ownership) \n We own the equivalent of #white #b [ROOT.Var('foreign_gdp_ownership_var_temp1').GetValue|v1%]#! #default_text of our GDP in other countries" 
+ je_GDP_ownership_reason:0 "We effectively own [ROOT.Var('self_gdp_ownership_var').GetValue|v1%]#! #default_text of our GDP (Our own GDP ownership + half of our overlord GDP ownership) \n We effectivelyown the equivalent of #white #b [ROOT.Var('foreign_gdp_ownership_var_temp1').GetValue|v1%]#! #default_text of our GDP in other countries (Only half of the GDP owned in our subjects is counted)" 
  je_GDP_ownership_on_completion_header: "If we own less than #white #b 75% #default_text than our GDP we'll get a negative modifier scalling up to at #white #b 0% \n [GetStaticModifier('low_ownership_modifier').GetDesc]" 
  je_GDP_ownership_on_fail_header: "If we own more than #white #b 30% #default_text than our GDP in other countries we'll get a modifier scalling up to at #white #b 200% \n [GetStaticModifier('high_foreign_modifier').GetDesc]"
  

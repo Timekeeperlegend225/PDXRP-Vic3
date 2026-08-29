@@ -38,6 +38,25 @@ gm_veto.1 = {
 				id = gm_veto.2
 			}
         }
+    }		
+
+    option = {
+        name = gm_veto.1.b 
+		trigger = {
+			scope:actor = {
+				is_revolutionary = yes
+			}
+		}
+		
+        scope:scope_diplo_play = {
+			end_play = yes
+        }
+		
+        scope:actor = {
+			civil_war_origin_country = {
+				annex_with_incorporation = scope:actor
+			}
+        }
     }
 }
 

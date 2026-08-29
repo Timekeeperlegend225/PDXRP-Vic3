@@ -4,7 +4,7 @@
  GM_Self_Action:0 "GM Self-Action"
  GM_Self_Action_desc:0 "Use GM Tools on yourself."
  GM_spy_the_world:0 "GM Spy the world"
- GM_Self_Action_desc:0 "Get a lot of involvment all over the world"
+ GM_spy_the_world_desc:0 "Get a lot of involvment all over the world"
  
  GM_game_master:0 "Game Master"
  GM_game_master_desc:0 "This is the Game Master, respect him"
@@ -37,7 +37,7 @@
  gm_lawapproval:0 "Law Approval"
  
  colonial_stake_cooldown_mod: "Colonial Stake in Cooldown"
- colonial_claim_cooldown: "Years of Colonial Stake Cooldwon"
+ colonial_claim_cooldown: "Years of Colonial Stake Cooldown"
  colonial_claim_cooldown_desc: "How many years is the duraction of the [GetDiplomaticActionType('da_stake_colonial_claim').GetName] cooldown"
  
  PAUSED:0 "                                               Paused \n #b #R @warning! Please don't touch anything unless Bodi said you can @warning!#!"

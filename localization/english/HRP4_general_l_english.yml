@@ -50,7 +50,7 @@
  host_power_bloc_embassy_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] is no longer hosting the [TARGET_COUNTRY.GetPowerBloc.GetName] advisors."
  
  
- POWER_BLOC_MANDATE_PROGRESS_FROM_IDEPENDENT_MEMBERS: "#tooltippable #tooltip:[PowerBloc.GetTooltipTag],POWER_BLOC_MANDATE_PROGRESS_FROM_IDEPENDENT_MEMBERS_TOOLTIP From Idenpendent Members#!#!"
+ POWER_BLOC_MANDATE_PROGRESS_FROM_IDEPENDENT_MEMBERS: "#tooltippable #tooltip:[PowerBloc.GetTooltipTag],POWER_BLOC_MANDATE_PROGRESS_FROM_IDEPENDENT_MEMBERS_TOOLTIP From Independent Members#!#!"
  POWER_BLOC_MANDATE_PROGRESS_FROM_IDEPENDENT_MEMBERS_TOOLTIP: "Number of independent members: #b [PowerBloc.MakeScope.ScriptValue('power_bloc_idependent_power_non_leader_members')]\n#!Each members add: #b 2.5"
  POWER_BLOC_MANDATE_PROGRESS_FROM_MEMBERS_MAX: "From Maximum of #b 20"
  
@@ -73,3 +73,5 @@
  pm_base_casino: "The House Always Wins"
  
  von_tirpitz: "Von Tirpitz"
+ von_kabian: "Von Kabian"
+ Lang: "Làng"
