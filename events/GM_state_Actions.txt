@@ -133,6 +133,30 @@ gm_state_actions.1 = {
 		}
 	}
 	
+	option = {
+		name = gm_state_actions.1.g
+		trigger = {
+			scope:scope_target_state  = {
+				has_modifier = recently_conquered_state
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:scope_target_state = {
+			remove_modifier = recently_conquered_state
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+	# Loyalist, Radicals
+	option = {
+		name = value_selection.4100.t
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
 	# Devastation
 	option = {
 		name = gm_state_actions.3.t
@@ -140,6 +164,66 @@ gm_state_actions.1 = {
 			id = gm_state_actions.3
 			days = 0
 			popup = yes
+		}
+	}
+	
+	option = {
+		name = gm_state_actions.1.h
+		remove_global_variable = GM_taking_action
+		scope:scope_target_state = {
+			owner = {
+				save_scope_as = scope_origin_country
+				add_modifier = {
+					name = test1
+				}
+				create_country = {
+					origin = scope:scope_origin_country
+					state = scope:scope_target_state
+					on_created = {
+						activate_law = law_type:law_universal_suffrage
+						activate_law = law_type:law_parliamentary_republic
+						activate_law = law_type:law_national_militia
+						add_modifier = {
+							name = test2
+						}
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					has_modifier = test1
+				}
+				save_scope_as = scope_origin_country
+			}
+			random_country = {
+				limit = {
+					has_modifier = test2
+				}
+				save_scope_as = scope_revolter
+				create_diplomatic_play = {
+					target_country = scope:scope_origin_country
+					type = dp_regime_change
+					war = yes
+					add_war_goal = {
+						holder = scope:scope_origin_country
+						target_country = scope:scope_revolter
+						type = annex_country
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_modifier = test1
+				}
+				remove_modifier = test1
+			}
+			every_country = {
+				limit = {
+					has_modifier = test2
+				}
+				remove_modifier = test2
+			}
+			remove_modifier = GM_working_on_state_mod
 		}
 	}
 }

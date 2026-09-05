@@ -22,6 +22,9 @@
  GM_Interaction_desc:0 "Use the GM tools in this player"
  GM_Interaction.t:"#white #b Finish your previous action first #! (check your pending events)"
  
+ GM_Target:0 "Set as the GM Target"
+ GM_Target_desc:0 "Will make this country the GM Target for different GM tools and remove all other GM target from other countries"
+ 
  GM_working_on_state_mod:0 "State being worked on"
  
  GM_grant_leadership:0 "Transfer as IG Leader"
@@ -69,3 +72,5 @@
 
  GM_invite_exile: "Invite guest to the Casino"
  GM_exile_character: "Kick this guy from the Casino"
+ 
+ is_player_loc: "(#b #gold It's a player)"

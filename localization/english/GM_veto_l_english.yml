@@ -1,5 +1,5 @@
 ﻿l_english:
- gm_veto.1.t:0 "[SCOPE.sCountry('actor').GetName] try to start the [SCOPE.sDiplomaticPlay('scope_diplo_play').GetWarOutcomeString]"
+ gm_veto.1.t:0 "[SCOPE.sCountry('actor').GetName] [ROOT.GetCountry.GetCustom('actor_is_player_or_not_loc')] try to start the [SCOPE.sDiplomaticPlay('scope_diplo_play').GetWarOutcomeString]"
  gm_veto.1.d:0 "[SCOPE.sCountry('actor').GetName] has begun the [SCOPE.sDiplomaticPlay('scope_diplo_play').GetWarOutcomeString]. As the gm, it falls to us to decide whether this war should proceed.\n\nDo we permit this diplo play, or do we exercise our authority and block it?"
  gm_veto.1.allow:0 "We will permit it."
  gm_veto.1.veto:0 "Nope"

@@ -57,24 +57,24 @@ gm_actions.1 = {
 		}
 	}
 	
-	option = {
-		name = gm_actions.1.a
-		trigger = {
-			scope:GM_interacted_scope = {
-				NOT = { has_modifier = GM_target }
-			}
-		}
-		remove_global_variable = GM_taking_action
-		scope:scope_GM_target = {
-			remove_modifier = GM_target
-		}
-		scope:GM_interacted_scope = {
-			remove_modifier = GM_interacted_mod
-			add_modifier = {
-				name = GM_target
-			}
-		}
-	}
+#	option = {
+#		name = gm_actions.1.a
+#		trigger = {
+#			scope:GM_interacted_scope = {
+#				NOT = { has_modifier = GM_target }
+#			}
+#		}
+#		remove_global_variable = GM_taking_action
+#		scope:scope_GM_target = {
+#			remove_modifier = GM_target
+#		}
+#		scope:GM_interacted_scope = {
+#			remove_modifier = GM_interacted_mod
+#			add_modifier = {
+#				name = GM_target
+#			}
+#		}
+#	}
 	
 	option = {
 		name = gm_actions.1.b
@@ -154,25 +154,6 @@ gm_actions.1 = {
 			id = gm_actions.8
 			days = 0
 			popup = yes
-		}
-	}
-	
-	option = {
-		name = gm_actions.1.c
-		trigger = {
-			scope:GM_interacted_scope = {
-				is_country_type = unrecognized
-				NOT = {
-					has_modifier = GM_allow_recognition
-				}
-			}
-		}
-		remove_global_variable = GM_taking_action
-		scope:GM_interacted_scope = {
-			add_modifier = {
-				name = GM_allow_recognition
-			}
-			remove_modifier = GM_interacted_mod
 		}
 	}
 	
@@ -496,19 +477,19 @@ gm_actions.4 = {
 	
 	#War support
 	
-	option = {
-		name = value_selection.43.t
-		trigger = {
-			scope:GM_interacted_scope = {
-				is_at_war = yes
-			}
-		}
-		trigger_event = {
-			id = value_selection.43
-			days = 0
-			popup = yes
-		}
-	}
+#	option = {
+#		name = value_selection.43.t
+#		trigger = {
+#			scope:GM_interacted_scope = {
+#				is_at_war = yes
+#			}
+#		}
+#		trigger_event = {
+#			id = value_selection.43
+#			days = 0
+#			popup = yes
+#		}
+#	}
 	
 	#Election
 	

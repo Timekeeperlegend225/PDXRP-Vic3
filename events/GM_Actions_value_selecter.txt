@@ -363,12 +363,194 @@ value_selection.41 = {
 				value = global_var:gm_variable_radicals
 			}
 		}
-		remove_global_variable = GM_taking_action
+		trigger_event = {
+			id = value_selection.41
+			days = 0
+			popup = yes
+		}
+	}
+}
+
+#Radicals/loyalists
+
+value_selection.4100 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.4100.t
+	desc = value_selection.4100.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
 		random_country = {
 			limit = {
 				has_modifier = GM_interacted_mod
 			}
-			remove_modifier = GM_interacted_mod
+			save_scope_as = GM_interacted_scope
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.4100.a
+		default_option = yes
+		trigger_event = {
+			id = gm_state_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.r
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:scope_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.4100.b
+		set_global_variable = {
+			name = gm_variable_radicals
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.d
+		change_global_variable = {
+			name = gm_variable_radicals
+			add = 0.01
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.e
+		change_global_variable = {
+			name = gm_variable_radicals
+			add = 0.05
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.f
+		change_global_variable = {
+			name = gm_variable_radicals
+			add = 0.20
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.h
+		change_global_variable = {
+			name = gm_variable_radicals
+			subtract = 0.01
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.i
+		change_global_variable = {
+			name = gm_variable_radicals
+			subtract = 0.05
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.j
+		change_global_variable = {
+			name = gm_variable_radicals
+			subtract  = 0.20
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.k
+		change_global_variable = {
+			name = gm_variable_radicals
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.n
+		scope:scope_target_state = {
+			add_loyalists_in_state = {
+				value = global_var:gm_variable_radicals
+			}
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.4100.o
+		scope:scope_target_state = {
+			add_radicals_in_state = {
+				value = global_var:gm_variable_radicals
+			}
+		}
+		trigger_event = {
+			id = value_selection.4100
+			days = 0
+			popup = yes
 		}
 	}
 }

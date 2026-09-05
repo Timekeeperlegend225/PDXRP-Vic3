@@ -10,6 +10,9 @@
  gm_state_actions.1.d:0 "Incorporate [SCOPE.sState('scope_target_state').GetName]"
  gm_state_actions.1.e:0 "Unincorporate [SCOPE.sState('scope_target_state').GetName]"
  gm_state_actions.1.f:0 "Annex [SCOPE.sState('scope_target_state').GetName] to [SCOPE.sCountry('scope_GM_target').GetName]"
+ gm_state_actions.1.g:0 "Remove the #b #white $recently_conquered_state$#! modifier in [SCOPE.sCountry('scope_GM_target').GetName]"
+ gm_state_actions.1.g:0 "Start a radical revolt in [SCOPE.sCountry('scope_GM_target').GetName]"
+ recently_conquered_state_tt: "[GetStaticModifier('recently_conquered_state').GetDesc]" 
  
  gm_state_actions.3.t:0 "Add/Remove devastation"
  gm_state_actions.3.a:0 "Cancel"
