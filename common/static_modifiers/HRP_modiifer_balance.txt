@@ -103,6 +103,9 @@ REPLACE:base_values = {
 	country_max_unassigned_admirals_add = 3
 	
 	colonial_claim_cooldown = 12
+	
+	country_fervor_target_ashkenazi_add = 50
+	country_fervor_target_sephardic_add = 50
 }
 
 REPLACE:state_region_devastation = {
@@ -148,4 +151,29 @@ REPLACE:outmoded_bureaucracy = {
 	country_bureaucracy_mult = -0.20
 	state_tax_capacity_mult = -0.25
 	state_tax_waste_add = 0.25
+}
+
+REPLACE:modifier_european_potato_famine = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_rye_farm_throughput_add = -0.3
+	building_wheat_farm_throughput_add = -0.15
+	state_harvest_condition_disease_outbreak_impact_mult = 0.5
+	state_standard_of_living_add = -1
+	state_food_security_add = -0.20
+	country_mass_migration_attraction_mult = -0.20
+	state_migration_pull_add = -20
+	state_migration_pull_mult = -0.20 
+}
+
+REPLACE:modifier_european_potato_famine_relief = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_rye_farm_throughput_add = -0.15
+	building_wheat_farm_throughput_add = -0.10
+	state_harvest_condition_disease_outbreak_impact_mult = 0.25
+	state_import_advantage_mult = 0.10
+	state_standard_of_living_add = -0.5
+	state_food_security_add = -0.10
+	country_mass_migration_attraction_mult = -0.10
+	state_migration_pull_add = -10
+	state_migration_pull_mult = -0.10 
 }

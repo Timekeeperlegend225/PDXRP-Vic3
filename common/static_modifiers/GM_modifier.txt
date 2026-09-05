@@ -33,7 +33,7 @@ gm_prestige_add = {
 
 gm_prestige_mult = {
 	icon = gfx/interface/icons/generic_icons/prestige.dds
-	country_prestige_mult = 0.01
+	country_prestige_mult = 1
 }
 
 gm_admin_add = {
@@ -43,7 +43,7 @@ gm_admin_add = {
 
 gm_admin_mult = {
 	icon = gfx/interface/icons/topbar/bureaucracy_icon.dds
-	country_bureaucracy_mult = 0.01
+	country_bureaucracy_mult = 1
 }
 
 gm_legitimacy = {
@@ -58,7 +58,7 @@ gm_admin_add = {
 
 gm_admin_mult = {
 	icon = gfx/interface/icons/topbar/bureaucracy_icon.dds
-	country_bureaucracy_mult = 0.01
+	country_bureaucracy_mult = 1
 }
 
 gm_authority_add = {
@@ -68,7 +68,7 @@ gm_authority_add = {
 
 gm_authority_mult = {
 	icon = gfx/interface/icons/topbar/authority_icon.dds
-	country_authority_mult = 0.01
+	country_authority_mult = 1
 }
 
 gm_influence_add = {
@@ -78,37 +78,37 @@ gm_influence_add = {
 
 gm_influence_mult = {
 	icon = gfx/interface/icons/topbar/influence_icon.dds
-	country_influence_mult = 0.01
+	country_influence_mult = 1
 }
 
 gm_enactment_chance = {
 	icon = gfx/interface/icons/generic_icons/prestige.dds
-	country_law_enactment_success_add = 0.01
+	country_law_enactment_success_add = 1
 }
 
 gm_enactment_time = {
 	icon = gfx/interface/icons/generic_icons/prestige.dds
-	country_law_enactment_time_mult = 0.01
+	country_law_enactment_speed_mult = 1
 }
 
 gm_enactment_stall = {
 	icon = gfx/interface/icons/generic_icons/prestige.dds
-	country_law_enactment_stall_mult = 0.01
+	country_law_enactment_stall_mult = 1
 }
 
 gm_birthrate = {
 	icon = gfx/interface/icons/generic_icons/population_loyalist.dds
-	state_birth_rate_mult = 0.01
+	state_birth_rate_mult = 1
 }
 
 gm_mortality = {
 	icon = gfx/interface/icons/military_icons/attrition.dds
-	state_mortality_mult = 0.01
+	state_mortality_mult = 1
 }
 
 gm_mass_migration = {
 	icon = gfx/interface/icons/state_status_icons/mass_migration_target.dds
-	country_mass_migration_attraction_mult = 0.01
+	country_mass_migration_attraction_mult = 1
 }
 
 gm_prominence = {
@@ -132,18 +132,18 @@ gm_popularity = {
 }
 
 gm_ig_clout = {
-	icon = gfx/interface/icons/generic_icons/popularity.dds
-	interest_group_pol_str_mult = 0.01
+	icon = gfx/interface/icons/generic_icons/prominence.dds
+	interest_group_pol_str_mult = 1
 }
 
 gm_ig_approval = {
-	icon = gfx/interface/icons/generic_icons/popularity.dds
+	icon = gfx/interface/icons/generic_icons/approval_icon.dds
 	interest_group_approval_add = 1
 }
 
 gm_ig_attraction = {
 	icon = gfx/interface/icons/generic_icons/popularity.dds
-	interest_group_pop_attraction_mult = 0.01
+	interest_group_pop_attraction_mult = 1
 }
 
 gm_warapproval = {
@@ -152,4 +152,57 @@ gm_warapproval = {
 
 gm_lawapproval = {
 	icon = gfx/interface/icons/diplomatic_treaties_articles_icons/law_commitment_treaties.dds
+}
+
+gm_general_spreadprecent = {
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	country_tech_spread_mult = 1
+}
+
+gm_general_spreadflat = {
+	icon = gfx/interface/icons/central_identity_pillars_icons/unused/research_conglomerate.dds
+	country_tech_spread_add = 1
+}
+
+gm_general_rspeed = {
+	icon = gfx/interface/icons/generic_icons/innovation.dds
+	country_tech_research_speed_mult = 1
+}
+
+gm_general_prod_spreadprecent = {
+	icon = gfx/interface/icons/central_identity_pillars_icons/unused/industrial_sector.dds
+	country_production_tech_spread_mult = 1
+}
+
+gm_general_prod_rspeed = {
+	icon = gfx/interface/icons/invention_icons/compression_ignition.dds
+	country_production_tech_research_speed_mult = 1
+}
+
+gm_general_mil_spreadprecent = {
+	icon = gfx/interface/icons/central_identity_pillars_icons/military_treaty_organization.dds
+	country_military_tech_spread_mult = 1
+}
+
+gm_general_mil_rspeed = {
+	icon = gfx/interface/icons/invention_icons/mobile_armor.dds
+	country_military_tech_research_speed_mult = 1
+}
+
+gm_general_soc_spreadprecent = {
+	icon = gfx/interface/icons/central_identity_pillars_icons/cultural.dds
+	country_society_tech_spread_mult = 1
+}
+
+gm_general_soc_rspeed = {
+	icon = gfx/interface/icons/invention_icons/analytical_philosophy.dds
+	country_society_tech_research_speed_mult = 1
+}
+
+test1 = {
+	icon = gfx/interface/icons/invention_icons/analytical_philosophy.dds
+}
+
+test2 = {
+	icon = gfx/interface/icons/invention_icons/analytical_philosophy.dds
 }

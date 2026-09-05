@@ -27,10 +27,10 @@ high_foreign_modifier= {
 	state_aristocrats_investment_pool_efficiency_mult = -0.05
 	state_bureaucrats_investment_pool_efficiency_mult = -0.05
 	country_influence_mult = 1
-	country_prestige_add = 100
+	country_prestige_add = 80
 	country_prestige_mult = 0.05
 	country_treaty_leverage_generation_mult = 0.25
 	country_gold_reserve_limit_mult = 2
 	interest_group_ig_industrialists_pop_attraction_mult = 0.30
-	state_trade_advantage_mult = 0.25
+	state_trade_advantage_mult = 0.10
 }
