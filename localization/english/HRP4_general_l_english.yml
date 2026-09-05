@@ -6,7 +6,7 @@
  subject_foreign_investment: "Allow Foreign Investments"
  subject_foreign_investment_desc: "Allow other nations to invest in [concept_subject]"
  subject_foreign_investment_action_notification_name: "[INITIATOR_COUNTRY.GetName] allowed other country to invest in us"
- subject_foreign_investment_action_notification_desc: "[INITIATOR_COUNTRY.GetName] allowed other country to invest in us. We can now signe new treaty"
+ subject_foreign_investment_action_notification_desc: "[INITIATOR_COUNTRY.GetName] allowed other country to invest in us. We can now sign investment treaties."
  subject_foreign_investment_action_propose_name: "$subject_foreign_investment$"
  subject_foreign_investment_action_break_name: "Prevent Foreign Investment"
  subject_foreign_investment_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] has permitted other nation to invest in [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."

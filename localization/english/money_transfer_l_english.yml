@@ -1,9 +1,9 @@
 ﻿l_english:  
- money_transfer.1.a:0 "Intialize/Reset the money to transfer to #white 0 @money!"
+ money_transfer.1.a:0 "Initialize/Reset the money to transfer to #white 0 @money!"
  money_transfer.1.b:0 "#white +10K@money!"
  money_transfer.1.c:0 "#white +100K@money!"
  money_transfer.1.d:0 "#white +1M@money!"
- money_transfer.1.e:0 "#white -10K@money!
+ money_transfer.1.e:0 "#white -10K@money!"
  money_transfer.1.f:0 "#white -100K@money!"
  money_transfer.1.g:0 "#white -1M@money!"
  money_transfer.1.h:0 "#white x10"
@@ -24,8 +24,8 @@
  money_transfer.2.u:0 "Are you sure you want to transfer #white [ROOT.Var('money_to_transfer_var').GetValue|*]#! @money! to [SCOPE.sCountry('target_country').GetName] ?"
  
  money_transfer.3.a:0 "Nay (I don't like money@money! or it seem shady)"
- money_transfer.3.b:0 "Yes (I love money@money!)"
- money_transfer.3.t:0 "[SCOPE.sCountry('sender_scope').GetName] want to send you [GetGlobalVariable('money_to_transfer_global_var_temp').GetValue|*]#! @money!"
- money_transfer.3.u:0 "Do you accept ?"
+ money_transfer.3.b:0 "Yay (I love money@money!)"
+ money_transfer.3.t:0 "[SCOPE.sCountry('sender_scope').GetName] wants to send you [GetGlobalVariable('money_to_transfer_global_var_temp').GetValue|*]#! @money!"
+ money_transfer.3.u:0 "Do you accept?"
  
  

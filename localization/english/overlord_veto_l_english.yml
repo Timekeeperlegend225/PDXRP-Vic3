@@ -37,5 +37,5 @@
  overlord_veto.3.allow:0 "We will permit it."
  overlord_veto.3.veto:0 "Nope"
  overlord_veto.4.t:0 "#b #gold Bodi#! said you can't pass [SCOPE.sLaw('current_law_scope').GetName]"
- overlord_veto.4.d:0 "Our tyrani... benevolent GM prenvented us to pass [SCOPE.sLaw('current_law_scope').GetName]"
- overlord_veto.4.confirm:0 "He know what is best for us"
+ overlord_veto.4.d:0 "Our tyrani... benevolent GM prevented us from passing [SCOPE.sLaw('current_law_scope').GetName]"
+ overlord_veto.4.confirm:0 "He knows what is best for us"
