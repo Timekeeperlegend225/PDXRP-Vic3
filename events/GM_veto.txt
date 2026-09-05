@@ -72,8 +72,7 @@ gm_veto.2 = {
 	duration = 2
 	
 	option = {
-		name = gm_veto.2.confirm		
-		change_infamy = -10
+		name = gm_veto.2.confirm
 		default_option = yes	
 	}
 }
