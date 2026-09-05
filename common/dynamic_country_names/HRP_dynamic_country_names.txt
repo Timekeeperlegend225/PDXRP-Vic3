@@ -18,3 +18,23 @@
 		}
 	}
 }
+
+GBR = { 
+	dynamic_country_name = {
+		name = GBR_chartists
+		adjective = GBR_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				owns_entire_state_region = STATE_WALES
+				NOT = {
+					owns_entire_state_region = STATE_HOME_COUNTIES
+				}
+			}
+		}
+	}
+}

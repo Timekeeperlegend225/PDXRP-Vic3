@@ -1,0 +1,17 @@
+﻿actor_is_player_or_not_loc = {
+	type = country
+	random_valid = no
+
+	text = {
+		trigger = {
+			scope:actor = {
+				is_player = yes
+			}
+		}
+		localization_key = is_player_loc
+	}
+
+	text = {
+		localization_key = void_loc
+	}
+}

@@ -40,3 +40,46 @@
         }
     }
 }
+
+REPLACE_OR_CREATE:GM_Target = {
+	groups= {
+		general
+	}
+	texture =gfx/interface/icons/commander_order_icons/has_target.dds
+	requires_approval = no
+	potential = {
+		has_modifier = GM_game_master
+		is_ai = no
+		scope:target = {
+			NOT = { has_modifier = GM_target }
+		}
+	}
+	
+    possible = {
+		custom_tooltip = {
+			text = GM_Interaction.t
+			NOT = { has_global_variable = GM_taking_action }
+		}
+		has_modifier = GM_game_master
+	}
+	
+    accept_effect = {
+		scope:target = {
+			add_modifier = {
+				name = GM_target    
+			}
+		}
+		every_country = {
+			limit = {
+				has_modifier = GM_target
+			}
+			remove_modifier = GM_target
+		}
+    }
+	
+    ai = {
+        will_propose = {
+            always = no
+        }
+    }
+}

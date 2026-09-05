@@ -1,0 +1,24 @@
+﻿hrp_amendment_economic_expectation_2 = {
+	parent = law_interventionism
+
+	modifier = {
+		state_radicals_and_loyalists_from_sol_change_mult = 0.10
+		state_lower_strata_expected_sol_add = 1
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		always = no
+	}
+
+	ai_will_revoke = {
+		always = yes
+	}
+
+	can_repeal = {
+		loyalist_fraction > radical_fraction
+	}
+}

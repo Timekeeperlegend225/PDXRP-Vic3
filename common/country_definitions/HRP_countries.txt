@@ -42,3 +42,14 @@ REPLACE:DEN = {
 	cultures = { danish norwegian }
 	capital = STATE_ZEALAND
 }
+
+REPLACE:GBR = {
+	color = {196 46 47}
+
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { british scottish }
+	capital = STATE_HOME_COUNTIES
+}

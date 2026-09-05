@@ -89,6 +89,17 @@
 						name = other_gdp_ownership_var
 						multiply = scope:t.gdp
 					}
+					if = {
+						limit = {
+							any_overlord_or_above = {
+								this = ROOT
+							}
+						}
+						change_variable = {
+							name = other_gdp_ownership_var
+							divide = 2
+						}
+					}
 					change_global_variable = {
 						name = foreign_gdp_ownership_var
 						add = var:other_gdp_ownership_var
