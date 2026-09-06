@@ -1033,34 +1033,6 @@ fascism_progress_bar = {
 				value = 5
 			}
 		}
-
-		### From Revanchism
-		if = {
-			limit = {
-				any_state = {
-					OR = {
-						has_claim_by = ROOT
-						is_homeland_of_country_cultures = ROOT
-					}
-					NOT = { owner = ROOT }
-				}
-			}
-			add = {
-				desc = "fascism_progress_from_state_claims_tt"
-				owner = {
-					every_state = {
-						limit = {
-							OR = {
-								has_claim_by = ROOT
-								is_homeland_of_country_cultures = ROOT
-							}
-							NOT = { owner = ROOT }
-						}
-						add = 0.1
-					}
-				}
-			}
-		}
 	}
 
 	start_value = 25
