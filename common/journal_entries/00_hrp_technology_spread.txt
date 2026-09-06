@@ -15,6 +15,16 @@
 
 	on_monthly_pulse = {
 		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_variable = hrp_technology_statistics_updated
+					}
+				}
+				set_global_variable = {
+					name = hrp_technology_statistics_updated
+					months = 1
+				}
 			ordered_country = {
 				limit = {
 					is_revolutionary = no
@@ -30,6 +40,93 @@
 					name = top_techs_researched_country_gvar
 					value = techs_researched
 				}
+				set_global_variable = {
+					name = top_techs_researched_country_scope_gvar
+					value = THIS
+				}
+			}
+			set_global_variable = {
+				name = great_power_techs_total_gvar
+				value = 0
+			}
+			set_global_variable = {
+				name = great_power_techs_count_gvar
+				value = 0
+			}
+			set_global_variable = {
+				name = major_power_techs_total_gvar
+				value = 0
+			}
+			set_global_variable = {
+				name = major_power_techs_count_gvar
+				value = 0
+			}
+			every_country = {
+				limit = {
+					is_revolutionary = no
+					NOT = {
+						is_country_type = decentralized
+					}
+				}
+				if = {
+					limit = {
+						country_rank = rank_value:great_power
+					}
+					change_global_variable = {
+						name = great_power_techs_total_gvar
+						add = techs_researched
+					}
+					change_global_variable = {
+						name = great_power_techs_count_gvar
+						add = 1
+					}
+				}
+				else_if = {
+					limit = {
+						country_rank = rank_value:major_power
+					}
+					change_global_variable = {
+						name = major_power_techs_total_gvar
+						add = techs_researched
+					}
+					change_global_variable = {
+						name = major_power_techs_count_gvar
+						add = 1
+					}
+				}
+			}
+			set_global_variable = {
+				name = great_power_average_techs_gvar
+				value = 0
+			}
+			set_global_variable = {
+				name = major_power_average_techs_gvar
+				value = 0
+			}
+			if = {
+				limit = {
+					global_var:great_power_techs_count_gvar > 0
+				}
+				set_global_variable = {
+					name = great_power_average_techs_gvar
+					value = {
+						value = global_var:great_power_techs_total_gvar
+						divide = global_var:great_power_techs_count_gvar
+					}
+				}
+			}
+			if = {
+				limit = {
+					global_var:major_power_techs_count_gvar > 0
+				}
+				set_global_variable = {
+					name = major_power_average_techs_gvar
+					value = {
+						value = global_var:major_power_techs_total_gvar
+						divide = global_var:major_power_techs_count_gvar
+					}
+				}
+			}
 			}
 			scope:journal_entry = { 
 				remove_modifier = modifier_hrp_technology_spread
