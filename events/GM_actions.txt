@@ -281,6 +281,28 @@ gm_actions.3 = {
 		}
 	}
 	
+	#Authority
+	
+	option = {
+		name = value_selection.34.t
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	#Influence
+	
+	option = {
+		name = value_selection.35.t
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
 	option = {
 		name = value_selection.32.t
 		trigger_event = {
@@ -5051,64 +5073,64 @@ gm_actions.81 = {
 	}
 	
 	option = { #Authoritarian Nationalist
-		name = gm_actions.82.t
+		name = gm_actions.810.t
 		trigger_event = {
-			id = gm_actions.82
+			id = gm_actions.810
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = { #Conservative
-		name = gm_actions.83.t
+		name = gm_actions.811.t
 		trigger_event = {
-			id = gm_actions.83
+			id = gm_actions.811
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = { #Reformer
-		name = gm_actions.84.t
+		name = gm_actions.812.t
 		trigger_event = {
-			id = gm_actions.84
+			id = gm_actions.812
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = { #Liberal
-		name = gm_actions.85.t
+		name = gm_actions.813.t
 		trigger_event = {
-			id = gm_actions.85
+			id = gm_actions.813
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = { #Socialist
-		name = gm_actions.86.t
+		name = gm_actions.814.t
 		trigger_event = {
-			id = gm_actions.86
+			id = gm_actions.814
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = { #Flavor
-		name = gm_actions.87.t
+		name = gm_actions.815.t
 		trigger_event = {
-			id = gm_actions.87
+			id = gm_actions.815
 			days = 0
 			popup = yes
 		}
 	}
 }
 
-gm_actions.82 = {
+gm_actions.810 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.82.t
+	title = gm_actions.810.t
 
 	gui_window = event_window_1char_tabloid
 
@@ -5141,7 +5163,7 @@ gm_actions.82 = {
 	}
 	
 	option = {
-		name = gm_actions.82.a
+		name = gm_actions.810.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		random_country = {
@@ -5153,7 +5175,7 @@ gm_actions.82 = {
 	}
 	
 	option = { 
-		name = gm_actions.83.b
+		name = gm_actions.811.b
 		trigger_event = {
 			id = gm_actions.81
 			days = 0
@@ -5222,10 +5244,10 @@ gm_actions.82 = {
 	}
 }
 
-gm_actions.83 = {
+gm_actions.811 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.83.t
+	title = gm_actions.811.t
 
 	gui_window = event_window_1char_tabloid
 
@@ -5258,7 +5280,7 @@ gm_actions.83 = {
 	}
 	
 	option = {
-		name = gm_actions.83.a
+		name = gm_actions.811.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		random_country = {
@@ -5270,7 +5292,7 @@ gm_actions.83 = {
 	}
 	
 	option = { #return
-		name = gm_actions.83.b
+		name = gm_actions.811.b
 		trigger_event = {
 			id = gm_actions.81
 			days = 0
@@ -5364,10 +5386,10 @@ gm_actions.83 = {
 	}
 }
 
-gm_actions.84 = {
+gm_actions.812 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.84.t
+	title = gm_actions.812.t
 
 	gui_window = event_window_1char_tabloid
 
@@ -5400,7 +5422,7 @@ gm_actions.84 = {
 	}
 	
 	option = {
-		name = gm_actions.84.a
+		name = gm_actions.812.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		random_country = {
@@ -5412,7 +5434,7 @@ gm_actions.84 = {
 	}
 	
 	option = { #return
-		name = gm_actions.84.b
+		name = gm_actions.812.b
 		trigger_event = {
 			id = gm_actions.81
 			days = 0
@@ -5505,10 +5527,10 @@ gm_actions.84 = {
 	}
 }
 
-gm_actions.85 = {
+gm_actions.813 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.85.t
+	title = gm_actions.813.t
 
 	gui_window = event_window_1char_tabloid
 
@@ -5541,7 +5563,7 @@ gm_actions.85 = {
 	}
 	
 	option = {
-		name = gm_actions.85.a
+		name = gm_actions.813.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		random_country = {
@@ -5553,7 +5575,7 @@ gm_actions.85 = {
 	}
 	
 	option = { #return
-		name = gm_actions.85.b
+		name = gm_actions.813.b
 		trigger_event = {
 			id = gm_actions.81
 			days = 0
@@ -5666,10 +5688,10 @@ gm_actions.85 = {
 	}
 }
 
-gm_actions.86 = {
+gm_actions.814 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.86.t
+	title = gm_actions.814.t
 
 	gui_window = event_window_1char_tabloid
 
@@ -5702,7 +5724,7 @@ gm_actions.86 = {
 	}
 	
 	option = {
-		name = gm_actions.86.a
+		name = gm_actions.814.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		random_country = {
@@ -5714,7 +5736,7 @@ gm_actions.86 = {
 	}
 	
 	option = { #return
-		name = gm_actions.86.b
+		name = gm_actions.814.b
 		default_option = yes
 		trigger_event = {
 			id = gm_actions.81
@@ -5819,10 +5841,10 @@ gm_actions.86 = {
 	}
 }
 
-gm_actions.87 = {
+gm_actions.815 = {
 	type = country_event
 	placement = ROOT
-	title = gm_actions.87.t
+	title = gm_actions.815.t
 
 	gui_window = event_window_1char_tabloid
 
@@ -5855,7 +5877,7 @@ gm_actions.87 = {
 	}
 	
 	option = {
-		name = gm_actions.87.a
+		name = gm_actions.815.a
 		default_option = yes
 		remove_global_variable = GM_taking_action
 		random_country = {
@@ -5867,7 +5889,7 @@ gm_actions.87 = {
 	}
 	
 	option = { #return
-		name = gm_actions.87.b
+		name = gm_actions.815.b
 		trigger_event = {
 			id = gm_actions.81
 			days = 0

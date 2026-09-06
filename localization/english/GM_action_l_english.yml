@@ -83,30 +83,30 @@
  gm_actions.81.t:0 "Change Character Ideology"
  gm_actions.81.a:0 "Cancel"
  
- gm_actions.82.t:0 "Nationalist and Authoritarian"
+ gm_actions.810.t:0 "Nationalist and Authoritarian"
+ gm_actions.810.a:0 "Cancel"
+ gm_actions.810.b:0 "Return"
+ 
+ gm_actions.811.t:0 "Moderate Conservative"
+ gm_actions.811.a:0 "Cancel"
+ gm_actions.811.b:0 "Return"
+ 
+ gm_actions.812.t:0 "Economical and Reformer"
+ gm_actions.812.a:0 "Cancel"
+ gm_actions.812.b:0 "Return"
+ 
+ gm_actions.813.t:0 "Liberals"
+ gm_actions.813.a:0 "Cancel"
+ gm_actions.813.b:0 "Return"
+ 
+ gm_actions.814.t:0 "Socialist and Technocrats"
+ gm_actions.814.a:0 "Cancel"
+ gm_actions.814.b:0 "Return"
+ 
+ gm_actions.815.t:0 "Country Specifics"
+ gm_actions.815.a:0 "Cancel"
+ gm_actions.815.b:0 "Return"
+ 
+ gm_actions.82.t:0 "Change trait"
  gm_actions.82.a:0 "Cancel"
  gm_actions.82.b:0 "Return"
- 
- gm_actions.83.t:0 "Moderate Conservative"
- gm_actions.83.a:0 "Cancel"
- gm_actions.83.b:0 "Return"
- 
- gm_actions.84.t:0 "Economical and Reformer"
- gm_actions.84.a:0 "Cancel"
- gm_actions.84.b:0 "Return"
- 
- gm_actions.85.t:0 "Liberals"
- gm_actions.85.a:0 "Cancel"
- gm_actions.85.b:0 "Return"
- 
- gm_actions.86.t:0 "Socialist and Technocrats"
- gm_actions.86.a:0 "Cancel"
- gm_actions.86.b:0 "Return"
- 
- gm_actions.87.t:0 "Country Specifics"
- gm_actions.87.a:0 "Cancel"
- gm_actions.87.b:0 "Return"
- 
- gm_actions.88.t:0 "Change trait"
- gm_actions.88.a:0 "Cancel"
- gm_actions.88.b:0 "Return"

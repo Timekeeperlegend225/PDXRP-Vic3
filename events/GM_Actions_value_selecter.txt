@@ -1856,6 +1856,472 @@ value_selection.33 = {
 	}
 }
 
+#Authority
+
+value_selection.34 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.34.t
+	desc = value_selection.34.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.1.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.3
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.r
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.34.b
+		set_global_variable = {
+			name = gm_variable_auth
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.d
+		change_global_variable = {
+			name = gm_variable_auth
+			add = 1
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.e
+		change_global_variable = {
+			name = gm_variable_auth
+			add = 5
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.f
+		change_global_variable = {
+			name = gm_variable_auth
+			add = 20
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.h
+		change_global_variable = {
+			name = gm_variable_auth
+			subtract = 1
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.i
+		change_global_variable = {
+			name = gm_variable_auth
+			subtract = 5
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.j
+		change_global_variable = {
+			name = gm_variable_auth
+			subtract  = 20
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.k
+		change_global_variable = {
+			name = gm_variable_auth
+			multiply = 10
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.l
+		change_global_variable = {
+			name = gm_variable_auth
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.m
+		scope:GM_interacted_scope = {
+			remove_modifier = gm_authority_add
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.n
+		scope:GM_interacted_scope = {
+			add_modifier = {
+				name = gm_authority_add
+				multiplier = global_var:gm_variable_auth
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = value_selection.34.o
+		scope:GM_interacted_scope = {
+			remove_modifier = gm_authority_mult
+		}
+		trigger_event = {
+			id = value_selection.34
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.34.p
+		scope:GM_interacted_scope = {
+			add_modifier = {
+				name = gm_authority_mult
+				multiplier = {
+					add = global_var:gm_variable_auth
+					divide = 100
+				}
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+}
+
+#Influence
+
+value_selection.35 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.35.t
+	desc = value_selection.35.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.1.a
+		default_option = yes
+		trigger_event = {
+			id = gm_actions.3
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.1.r
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.35.b
+		set_global_variable = {
+			name = gm_variable_inf
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.d
+		change_global_variable = {
+			name = gm_variable_inf
+			add = 1
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.e
+		change_global_variable = {
+			name = gm_variable_inf
+			add = 5
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.f
+		change_global_variable = {
+			name = gm_variable_inf
+			add = 20
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.h
+		change_global_variable = {
+			name = gm_variable_inf
+			subtract = 1
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.i
+		change_global_variable = {
+			name = gm_variable_inf
+			subtract = 5
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.j
+		change_global_variable = {
+			name = gm_variable_inf
+			subtract  = 20
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.k
+		change_global_variable = {
+			name = gm_variable_inf
+			multiply = 10
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.l
+		change_global_variable = {
+			name = gm_variable_inf
+			multiply = -1
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.m
+		scope:GM_interacted_scope = {
+			remove_modifier = gm_influence_add
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.n
+		scope:GM_interacted_scope = {
+			add_modifier = {
+				name = gm_influence_add
+				multiplier = global_var:gm_variable_inf
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = value_selection.35.o
+		scope:GM_interacted_scope = {
+			remove_modifier = gm_influence_mult
+		}
+		trigger_event = {
+			id = value_selection.35
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.35.p
+		scope:GM_interacted_scope = {
+			add_modifier = {
+				name = gm_influence_mult
+				multiplier = {
+					add = global_var:gm_variable_inf
+					divide = 100
+				}
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+}
+
 #Tech
 
 value_selection.300 = {
