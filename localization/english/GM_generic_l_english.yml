@@ -74,3 +74,22 @@
  GM_exile_character: "Kick this guy from the Casino"
  
  is_player_loc: "(#b #gold It's a player)"
+ 
+ gm_prestige_add: "Prestige"
+ gm_prestige_mult: "Prestige"
+ gm_admin_add: "Bureaucracy"
+ gm_admin_mult: "Bureaucracy"
+ gm_legitimacy: "Legitimacy"
+ gm_authority_add: "Authority"
+ gm_authority_mult: "Authority"
+ gm_influence_add: "Influence"
+ gm_influence_mult: "Influence"
+ gm_enactment_chance: "Enactment Chance"
+ gm_enactment_time: "Enactment Seed"
+ gm_enactment_stall: "Enactment Stall"
+ gm_prominence: "Prominence"
+ gm_loyalty: "Loyalty"
+ gm_health: "Health"
+ gm_popularity: "Popularity"
+ gm_maneuver: "Maneuvers"
+ 

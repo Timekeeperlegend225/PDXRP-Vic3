@@ -10,3 +10,20 @@
  PRUSSIAN_EMPIRE: "Prussian Empire"
  
  GBR:0 "United Kingdom"
+ 
+ 
+ gov_fra_consulate_republic:0 "Consulate Republic"
+ gov_fra_consulate_republic_desc:2 "This is a [concept_government_type] where the [concept_country] is ruled by the two [Concept('concept_ruler','$RULER_TITLE_CONSUL$')].\nThe [Concept('concept_ruler','$RULER_TITLE_CONSUL$')] are designed directly by the constitution"
+ RULER_TITLE_CONSUL:0 "Consul"
+ 
+ 
+ generic_revolt_legitimist: "Legitimist Revolt"
+ generic_revolt_legitimist_adj: "Legitimist"
+ 
+ zillian_republic: "Zellian Republic"
+ zillian_republic_adj: "Zellian"
+ 
+ NIA:0 "Nian"
+ NIA_ADJ:0 "Nianes"
+ 
+ BAV_WUR: "Bavaria-Wurttemberg"

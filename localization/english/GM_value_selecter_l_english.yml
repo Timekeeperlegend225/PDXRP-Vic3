@@ -192,6 +192,22 @@
  value_selection.35.t:0 "Influence @inf! Modifier"
  value_selection.35.u:0 "Variable value is [GetGlobalVariable('gm_variable_inf').GetValue|+=]#!"
  
+ value_selection.36.a:0 "Return"
+ value_selection.36.b:0 "Reset the value to 0"
+ value_selection.36.d:0 "+1"
+ value_selection.36.e:0 "+5"
+ value_selection.36.f:0 "+20"
+ value_selection.36.h:0 "-1
+ value_selection.36.i:0 "-5"
+ value_selection.36.j:0 "-20"
+ value_selection.36.k:0 "x10"
+ value_selection.36.l:0 "Positive/Negative"
+ value_selection.36.m:0 "Remove existing Maneuvers @maneuvers! modifier"
+ value_selection.36.n:0 "Maneuvers @maneuvers! Bonus"
+ value_selection.36.r:0 "Cancel"
+ value_selection.36.t:0 "Maneuvers @maneuvers! Modifier"
+ value_selection.36.u:0 "Variable value is [GetGlobalVariable('gm_variable_maneuvers').GetValue|+=]#!"
+ 
  value_selection.300.a:0 "Return"
  value_selection.300.b:0 "Reset the value to 0"
  value_selection.300.d:0 "+1%"

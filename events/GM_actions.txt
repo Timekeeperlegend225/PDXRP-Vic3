@@ -303,6 +303,17 @@ gm_actions.3 = {
 		}
 	}
 	
+	#Maneuver
+	
+	option = {
+		name = value_selection.36.t
+		trigger_event = {
+			id = value_selection.36
+			days = 0
+			popup = yes
+		}
+	}
+	
 	option = {
 		name = value_selection.32.t
 		trigger_event = {
@@ -499,19 +510,19 @@ gm_actions.4 = {
 	
 	#War support
 	
-#	option = {
-#		name = value_selection.43.t
-#		trigger = {
-#			scope:GM_interacted_scope = {
-#				is_at_war = yes
-#			}
-#		}
-#		trigger_event = {
-#			id = value_selection.43
-#			days = 0
-#			popup = yes
-#		}
-#	}
+	option = {
+		name = value_selection.43.t
+		trigger = {
+			scope:GM_interacted_scope = {
+				is_at_war = yes
+		}
+		}
+		trigger_event = {
+			id = value_selection.43
+			days = 0
+			popup = yes
+		}
+	}
 	
 	#Election
 	
