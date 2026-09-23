@@ -1,0 +1,24 @@
+﻿REPLACE:legitimist_france = {
+	color = "legitimist_white"
+
+	possible = {
+		country_has_monarchy_law = yes
+		OR = {
+			AND = {
+				c:FRA ?= THIS
+				has_variable = legitimist_restoration_var
+				has_variable = one_true_french_dynasty
+			}
+			AND = {
+				c:PRC ?= THIS
+			}
+			AND = {
+				OR = {
+					is_revolutionary = yes
+					is_secessionist = yes
+				}
+				var:civil_war_type_var ?= movement_type:movement_legitimist
+			}
+		}
+	}
+}

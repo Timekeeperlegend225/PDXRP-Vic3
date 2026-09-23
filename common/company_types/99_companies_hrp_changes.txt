@@ -228,6 +228,7 @@ REPLACE:company_ottoman_tobacco_regie = {
 
 	building_types = {
 		building_tobacco_plantation
+		building_tea_plantation
 	}
 
 	extension_building_types = {

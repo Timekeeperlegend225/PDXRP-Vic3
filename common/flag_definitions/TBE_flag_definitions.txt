@@ -102,3 +102,51 @@ REPLACE_OR_CREATE:RHE = {
 		}
 	}
 }
+
+REPLACE_OR_CREATE:PRC = { 
+	flag_definition = {
+		coa = FRA_bourbon
+		subject_canton = FRA_bourbon
+		priority = 200
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = FRA_subject
+		trigger = {
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:HAM = { 
+	flag_definition = {
+		coa = GER_modern
+		allow_overlord_canton = no
+		subject_canton = GER_modern
+		scope:actor ?= {
+			has_law_or_variant = law_type:law_parliamentary_republic
+			has_law_or_variant = law_type:law_universal_suffrage
+		}
+		priority = 1000
+	}
+}
+
+REPLACE_OR_CREATE:NIA = { 
+	flag_definition = {
+		coa = NIA
+		allow_overlord_canton = no
+		priority = 1000
+	}
+}
+
+REPLACE_OR_CREATE:BAV = { 
+	flag_definition = {
+		coa = BAV_WUR
+		allow_overlord_canton = no
+		priority = 10000
+		exists = scope:actor
+		scope:actor ?= {
+			owns_entire_state_region = STATE_WURTTEMBERG
+		}
+	}
+}

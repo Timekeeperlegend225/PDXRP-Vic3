@@ -38,3 +38,53 @@ GBR = {
 		}
 	}
 }
+
+PRC = { 
+	dynamic_country_name = {
+		name = generic_revolt_legitimist
+		adjective = generic_revolt_legitimist_adj
+
+		priority = 1000
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				country_has_monarchy_law = yes
+			}
+		}
+	}
+}
+
+HAM = { 
+	dynamic_country_name = {
+		name = zillian_republic
+		adjective = zillian_republic_adj
+
+		priority = 1000
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law_or_variant = law_type:law_parliamentary_republic
+				has_law_or_variant = law_type:law_universal_suffrage
+			}
+		}
+	}
+}
+
+BAV = { 
+	dynamic_country_name = {
+		name = BAV_WUR
+		adjective = BAV_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+					owns_entire_state_region = STATE_WURTTEMBERG
+			}
+		}
+	}
+}

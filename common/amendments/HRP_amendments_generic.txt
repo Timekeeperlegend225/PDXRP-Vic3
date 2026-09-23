@@ -22,3 +22,116 @@
 		loyalist_fraction > radical_fraction
 	}
 }
+
+hrp_napoleonic_senate = {
+	parent = law_single_party_state
+
+	modifier = {
+		country_officers_voting_power_add = 50
+		country_soldiers_voting_power_add = 25
+		country_bureaucrats_voting_power_add = 25
+		country_clergymen_voting_power_add = 10
+		country_clerks_voting_power_add = 25
+		country_authority_add = 100
+		country_legitimacy_headofstate_add = 30
+		country_legitimacy_govt_total_votes_add = -40
+		country_electoral_confidence_impact_mult = -0.10
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		always = no
+	}
+
+	ai_will_revoke = {
+		always = yes
+	}
+
+	can_repeal = {
+		always = no
+	}
+}
+
+hrp_militaristic_republic = {
+	parent = law_professional_army
+
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 1
+		country_officers_voting_power_add = 20
+		country_soldiers_voting_power_add = 10	
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		always = no
+	}
+
+	ai_will_revoke = {
+		always = yes
+	}
+
+	can_repeal = {
+		always = no
+	}
+}
+
+hrp_french_compromise = {
+	parent = law_universal_suffrage
+
+	modifier = {
+		country_bureaucrats_voting_power_add = 15
+		country_academics_voting_power_add = 15
+		country_shopkeepers_voting_power_add = 15
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		always = no
+	}
+
+	ai_will_revoke = {
+		always = yes
+	}
+
+	can_repeal = {
+		always = no
+	}
+}
+
+hrp_experimental_corporatist_cooperative = {
+	parent = law_interventionism
+
+	modifier = {
+		building_group_bg_manufacturing_allowed_collectivization_add = 0.05
+		building_group_bg_extraction_allowed_collectivization_add = 0.05
+		building_group_bg_power_allowed_collectivization_add = 0.05
+		building_group_bg_private_infrastructure_allowed_collectivization_add = 0.05
+		building_group_bg_arts_allowed_collectivization_add = 0.05
+		building_self_investment_chance_add = 0.05
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		always = no
+	}
+
+	ai_will_revoke = {
+		always = yes
+	}
+
+	can_repeal = {
+		always = no
+	}
+}

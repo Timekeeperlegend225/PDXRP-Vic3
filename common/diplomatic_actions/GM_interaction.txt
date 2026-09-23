@@ -64,16 +64,16 @@ REPLACE_OR_CREATE:GM_Target = {
 	}
 	
     accept_effect = {
-		scope:target = {
-			add_modifier = {
-				name = GM_target    
-			}
-		}
 		every_country = {
 			limit = {
 				has_modifier = GM_target
 			}
 			remove_modifier = GM_target
+		}
+		scope:target = {
+			add_modifier = {
+				name = GM_target    
+			}
 		}
     }
 	

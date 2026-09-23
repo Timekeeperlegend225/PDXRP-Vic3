@@ -36,3 +36,131 @@
 		post_change_to_hereditary = yes
 	}
 }
+
+gov_fra_consulate_republic = {
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_CONSUL"
+	female_ruler = "RULER_TITLE_CONSUL" # Empty on purpose
+
+	male_heir = "RULER_TITLE_CONSUL"
+	female_heir = "RULER_TITLE_CONSUL" # Empty on purpose
+
+	possible = {
+		OR = {
+			has_law_or_variant = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_corporate_state
+		}
+		country_has_primary_culture = cu:french
+		active_law:lawgroup_distribution_of_power ?= { 
+			has_amendment = amendment_type:hrp_napoleonic_senate
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+REPLACE:gov_french_2nd_republic_presidential = {
+	transfer_of_power = presidential_elective
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_PRESIDENT"
+	female_ruler = "RULER_TITLE_PRESIDENT"
+
+	possible = {
+		has_law_or_variant = law_type:law_presidential_republic
+		country_has_primary_culture = cu:french
+		has_variable = fra_republic_counter
+		var:fra_republic_counter ?= 2
+		NOT = { 
+			active_law:lawgroup_distribution_of_power ?= { # Autocracy
+				has_amendment = amendment_type:hrp_napoleonic_senate
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_presidential_elective = yes
+	}
+}
+
+REPLACE:gov_french_3rd_republic_presidential = {
+	transfer_of_power = presidential_elective
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_PRESIDENT"
+	female_ruler = "RULER_TITLE_PRESIDENT"
+
+	possible = {
+		has_law_or_variant = law_type:law_presidential_republic
+		country_has_primary_culture = cu:french
+		has_variable = fra_republic_counter
+		var:fra_republic_counter ?= 3
+		NOT = { 
+			active_law:lawgroup_distribution_of_power ?= { # Autocracy
+				has_amendment = amendment_type:hrp_napoleonic_senate
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_presidential_elective = yes
+	}
+}
+
+REPLACE:gov_presidential_democracy = {
+	transfer_of_power = presidential_elective
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_PRESIDENT"
+	female_ruler = "RULER_TITLE_PRESIDENT"
+
+	possible = {
+		has_law_or_variant = law_type:law_presidential_republic
+		country_has_voting_franchise = yes
+		NOR = {
+			has_law_or_variant = law_type:law_single_party_state
+			has_law_or_variant = law_type:law_technocracy
+			AND = {
+				country_has_primary_culture = cu:brazilian
+				has_law_or_variant = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_landed_voting
+				OR = {
+					has_law_or_variant = law_type:law_tenant_farmers
+					has_law_or_variant = law_type:law_serfdom
+				}
+			}
+		}
+		NOT = { 
+			active_law:lawgroup_distribution_of_power ?= { # Autocracy
+				has_amendment = amendment_type:hrp_napoleonic_senate
+			}
+		}
+		NAND = {
+			is_involved_in_journal_entry = je_peru_bolivia
+			has_variable = pbc_member
+		}
+		NAND = {
+			c:EZO ?= this
+			has_variable = ezo_republic_var
+		}
+	}
+
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_presidential_elective = yes
+	}
+}

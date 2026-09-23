@@ -53,3 +53,11 @@ REPLACE:GBR = {
 	cultures = { british scottish }
 	capital = STATE_HOME_COUNTIES
 }
+
+REPLACE_OR_CREATE:NIA = { #Hunan
+	color = { 255 0 0 }
+	country_type = unrecognized
+	tier = kingdom
+	cultures = { han }
+	capital = STATE_HUNAN
+}
