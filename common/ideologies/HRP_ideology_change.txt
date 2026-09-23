@@ -579,7 +579,7 @@ REPLACE:ideology_bonapartist = { # Average Progressiveness - 29
 	}
 
 	lawgroup_distribution_of_power = { # Napoleon III was an advocate for universal suffrage. Even if this was opportunistic, it's more accurate to say this than the alternative.
-		law_autocracy = disapprove
+		law_autocracy = approve
 		law_oligarchy = disapprove
 		law_landed_voting = neutral
 		law_wealth_voting = neutral
@@ -676,6 +676,11 @@ REPLACE:ideology_bonapartist = { # Average Progressiveness - 29
 			limit = {
 				owner = {
 					NOT = { country_has_monarchy_law = yes }
+					NOT = { 
+						active_law:lawgroup_distribution_of_power ?= { # Autocracy
+							has_amendment = amendment_type:hrp_napoleonic_senate
+						}
+					}
 				}
 				ig_approval > 0
 			}

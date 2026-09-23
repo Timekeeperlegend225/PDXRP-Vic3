@@ -91,3 +91,11 @@ REPLACE_OR_CREATE:state_laborers_education_access_add = {
 	}
 }
 
+REPLACE_OR_CREATE:country_institution_colonial_affairs_max_investment_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+

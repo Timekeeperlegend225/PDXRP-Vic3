@@ -361,6 +361,9 @@ REPLACE:movement_orleanist = {
 				}
 				has_variable = one_true_french_dynasty
 			}
+			active_law:lawgroup_distribution_of_power ?= { # Autocracy
+				has_amendment = amendment_type:hrp_napoleonic_senate
+			}
 		}
 	}
 

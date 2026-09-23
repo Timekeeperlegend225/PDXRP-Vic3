@@ -841,8 +841,7 @@ REPLACE:law_wealth_voting = {
 		OR = {
 			has_modifier = gm_lawapproval
 			NOT = { 
-				has_law_or_variant = law_type:law_autocracy
-				has_law_or_variant = law_type:law_universal_suffrage 
+				has_law_or_variant = law_type:law_autocracy 
 			}
 		}
 	}

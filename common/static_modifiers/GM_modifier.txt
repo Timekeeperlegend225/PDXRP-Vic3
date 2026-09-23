@@ -51,16 +51,6 @@ gm_legitimacy = {
 	country_legitimacy_base_add = 1
 }
 
-gm_admin_add = {
-	icon = gfx/interface/icons/topbar/bureaucracy_icon.dds
-	country_bureaucracy_add = 1
-}
-
-gm_admin_mult = {
-	icon = gfx/interface/icons/topbar/bureaucracy_icon.dds
-	country_bureaucracy_mult = 1
-}
-
 gm_authority_add = {
 	icon = gfx/interface/icons/topbar/authority_icon.dds
 	country_authority_add = 1
@@ -197,6 +187,11 @@ gm_general_soc_spreadprecent = {
 gm_general_soc_rspeed = {
 	icon = gfx/interface/icons/invention_icons/analytical_philosophy.dds
 	country_society_tech_research_speed_mult = 1
+}
+
+gm_maneuver = {
+	icon = gfx/interface/icons/generic_icons/maneuvers.dds
+	country_diplomatic_play_maneuvers_add = 1
 }
 
 test1 = {

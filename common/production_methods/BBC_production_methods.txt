@@ -9,12 +9,6 @@
 		principle_internal_trade_3
 	}
 
-	country_modifiers = {
-		workforce_scaled = {
-			country_influence_add = 0.5
-		}
-	}
-
 	building_modifiers = {
 		level_scaled = {
 			building_employment_clerks_add = 800

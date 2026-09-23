@@ -48,7 +48,7 @@ mappie_nationalcensus = {
 
 mappie_consolidateauthority = {
 	icon = gfx/interface/icons/topbar/authority_icon.dds
-	country_authority_mult = 0.02
+	country_authority_mult = 0.20
 }
 
 mappie_diplocampaign = {

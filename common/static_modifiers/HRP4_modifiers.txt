@@ -2,7 +2,6 @@
     icon = gfx/interface/icons/invention_icons/mandatory_service.dds
 	country_military_tech_spread_mult = 0.10
 	state_pop_support_movement_modernizer_mult = 0.40
-	country_diplomatic_play_maneuvers_add = -50
 	building_mobilization_cost_mult = -0.30
 }
 
@@ -44,4 +43,159 @@ mrt_timeout = {
 bic_no_overextension = {
     icon = gfx/interface/icons/alert_icons/secession.dds
 	country_diplomatic_play_maneuvers_add = -50
+}
+
+springtim_idea_spread = {
+    icon = gfx/interface/icons/invention_icons/democracy.dds
+	country_society_tech_research_speed_mult = 0.5
+	country_military_goods_cost_mult = -0.20
+}
+
+legitimist_revolted = {
+    icon = gfx/interface/icons/invention_icons/democracy.dds
+	political_movement_pop_attraction_mult = -0.5
+	political_movement_radicalism_add = -0.5
+}
+
+danish_food_help = {
+    icon = gfx/interface/icons/goods_icons/unused/food.dds
+	state_food_security_add = 0.10
+}
+
+sicilian_revolution = {
+    icon = gfx/interface/icons/invention_icons/nationalism.dds
+	interest_group_ig_armed_forces_pol_str_mult = 1
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = 1
+	interest_group_ig_armed_forces_pop_attraction_mult = 1
+	interest_group_ig_landowners_pol_str_mult = -0.9
+}
+
+mrt_annexing_subject = {
+    icon = gfx/interface/icons/topbar/authority_icon.dds
+	country_authority_cost_add = 200
+}
+
+unpious_revolutionaries = {
+    icon = gfx/interface/icons/topbar/authority_icon.dds
+	interest_group_ig_devout_approval_add = -10
+}
+
+be_relevant = {
+    icon = gfx/interface/icons/topbar/authority_icon.dds
+	political_movement_pop_attraction_mult = 1
+	political_movement_radicalism_add = 0.25
+}
+
+mex_crackdown = {
+    icon = gfx/interface/icons/topbar/authority_icon.dds
+	political_movement_radicalism_add = -0.10
+}
+
+catholic_resistance = {
+    icon = gfx/interface/icons/topbar/authority_icon.dds
+	political_movement_pop_attraction_mult = 0.20
+}
+
+bad_zulficar_no = {
+    icon = gfx/interface/icons/topbar/authority_icon.dds
+	political_movement_pop_attraction_mult = 0.13
+}
+
+REPLACE:taiping_land_socialization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	interest_group_ig_landowners_pol_str_mult = -0.50
+	country_peasants_pol_str_mult = 0.10
+	country_aristocrats_pol_str_mult = -0.50
+	political_movement_radicalism_add = -0.25
+	state_conversion_mult = 0.20
+	country_manchu_cultural_acceptance_add = -50
+}
+
+nian_land_socialization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	interest_group_ig_landowners_pol_str_mult = -0.90
+	country_peasants_pol_str_mult = 0.50
+	country_aristocrats_pol_str_mult = -0.90
+	state_aristocrats_mortality_mult = 0.80
+	political_movement_radicalism_add = -0.25
+	state_conversion_mult = 0.10
+	country_manchu_cultural_acceptance_add = -50
+}
+
+han_popular_support = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	building_minimum_incorporated_subsistence_employment_add = -0.20
+	state_minimum_incorporated_subsistence_arable_land_add = -0.20
+	state_peasants_education_access_add = 0.15
+	state_laborers_education_access_add = 0.06
+	state_tax_capacity_mult = 0.20
+	state_infrastructure_from_population_add = 0.20
+	state_infrastructure_from_population_max_add = 10
+	state_market_access_price_impact = 0.25
+	state_construction_mult = 0.20
+	state_building_construction_sector_max_level_add = 8
+	building_group_bg_manufacturing_throughput_add = 0.05
+	building_group_bg_extraction_throughput_add = 0.05
+	unit_supply_consumption_mult = -0.50
+	state_sell_orders_small_arms_add = 5
+	state_sell_orders_ammunition_add = 1
+	country_bureaucracy_mult = 0.05
+}
+
+a_land_war_in_china = {
+	icon = gfx/interface/icons/politics_icons/revolution.dds
+	battle_defense_owned_province_mult = 0.1
+	building_training_rate_add = 10
+	building_training_rate_mult = 0.1
+	military_formation_organization_gain_add = 2
+}
+
+self_strenghening_movement = {
+	icon = gfx/interface/icons/ig_icons/intelligensia.dds
+	interest_group_ig_intelligentsia_pol_str_mult = 1
+}
+
+diplomatic_blunder = {
+    icon = gfx/interface/icons/acceptance_icons/acceptance_tier4.dds
+	country_prestige_add = -20
+}
+
+anti_positivist_church = {
+    icon = gfx/interface/icons/ig_icons/devout.dds
+	political_movement_pop_attraction_mult = -0.20
+	political_movement_radicalism_add = 0.30
+}
+
+positivist_dynamism = {
+    icon = gfx/interface/icons/ideology_icons/positivist.dds
+	political_movement_pop_attraction_mult = 0.25
+}
+
+paris_miracle = {
+    icon = gfx/interface/icons/ig_icons/devout.dds
+	interest_group_ig_devout_pop_attraction_mult = 0.30
+	state_pop_support_movement_legitimist_mult = -0.10
+}
+
+slow_parliamentary_debate = {
+    icon = gfx/interface/icons/generic_icons/clock.dds
+	country_law_enactment_speed_mult = -0.10
+}
+
+REPLACE:taiping_taiping_rebellion = { #This is temporary
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_war_support_casualties_mult = -0.75
+	state_radicalism_increases_violent_hostility_mult = 0.05
+	state_radicalism_increases_cultural_erasure_mult = 0.05
+	state_radicalism_increases_open_prejudice_mult = 0.05
+}
+
+religious_army_against_total_separation = { 
+    icon = gfx/interface/icons/ig_icons/devout.dds
+	interest_group_ig_armed_forces_approval_add = -10
+}
+
+testtest = {
+    icon = gfx/interface/icons/ig_icons/devout.dds
+	tax_per_capita_add = -0.2
 }
