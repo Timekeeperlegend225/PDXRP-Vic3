@@ -1,6 +1,7 @@
 ﻿# Capital Ships
 ship_type_ship_of_the_line = {
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 50
 
@@ -94,6 +95,7 @@ ship_type_ship_of_the_line = {
 ship_type_monitor = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_coastal_defense
 
     modification_construction_cost = 60
 
@@ -185,6 +187,7 @@ ship_type_monitor = {
 ship_type_early_ironclad = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 100
 
@@ -278,6 +281,7 @@ ship_type_early_ironclad = {
 ship_type_coastal_defense_ship = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_coastal_defense
 
     modification_construction_cost = 75
 
@@ -373,6 +377,7 @@ ship_type_coastal_defense_ship = {
 ship_type_modern_ironclad = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 125
 
@@ -470,6 +475,7 @@ ship_type_modern_ironclad = {
 ship_type_pre_dreadnought = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 200
 
@@ -583,6 +589,7 @@ ship_type_dreadnought = {
     }
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 250
 
@@ -684,6 +691,7 @@ ship_type_dreadnought = {
 ship_type_super_dreadnought = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 300
 
@@ -798,6 +806,7 @@ ship_type_super_dreadnought = {
 ship_type_frigate = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 20
 
@@ -883,6 +892,7 @@ ship_type_frigate = {
 ship_type_iron_frigate = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 25
 
@@ -966,8 +976,81 @@ ship_type_iron_frigate = {
     }
 }
 
+ship_type_early_troop_ship = {
+    ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_transports
+
+    modification_construction_cost = 15
+
+    is_obsolete = {
+        has_technology_researched = ironclad_tech
+    }
+
+    is_very_obsolete = {
+        has_technology_researched = monitor_tech
+    }
+
+    modifier = {
+        ship_construction_progress_max_add = 15
+        ship_hit_points_max_add = 750
+        ship_crew_max_add = 150
+        ship_movement_speed_add = 3.0
+        ship_supply_capacity_add = 35
+        ship_armor_add = 3
+        ship_vulnerability_add = 25
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 5
+        ship_visibility_add = 10
+        ship_detection_add = 5
+        ship_carrying_capacity_add = 0.85
+        ship_marine_capacity_add = 0.2
+    }
+
+    construction_goods = {
+        goods_input_hardwood_add = 345
+        goods_input_fabric_add = 170
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+        goods_input_hardwood_add = 0.1
+    }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_troop_ship.dds"
+
+    modifications = {
+        ship_mod_slot_armor = {
+            ship_mod_early_troop_ship_armor_light
+            ship_mod_early_troop_ship_armor_medium
+            ship_mod_early_troop_ship_armor_high
+        }
+        ship_mod_slot_guns = {
+            ship_mod_early_troop_ship_guns_light
+            ship_mod_early_troop_ship_guns_medium
+            ship_mod_early_troop_ship_guns_high
+        }
+        ship_mod_slot_propulsion = {
+            ship_mod_early_troop_ship_propulsion_light
+            ship_mod_early_troop_ship_propulsion_medium
+            ship_mod_early_troop_ship_propulsion_high
+        }
+        ship_mod_slot_range = {
+            ship_mod_early_troop_ship_range_light
+            ship_mod_early_troop_ship_range_medium
+            ship_mod_early_troop_ship_range_high
+        }
+    }
+
+    default_modifications = {
+        ship_mod_slot_armor = ship_mod_early_troop_ship_armor_light
+        ship_mod_slot_propulsion = ship_mod_early_troop_ship_propulsion_light
+    }
+}
+
 ship_type_troop_ship = {
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_transports
 
     modification_construction_cost = 25
 
@@ -1038,6 +1121,7 @@ ship_type_troop_ship = {
 ship_type_protected_cruiser = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 70
 
@@ -1130,6 +1214,7 @@ ship_type_protected_cruiser = {
 ship_type_armored_cruiser = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 60
 
@@ -1221,6 +1306,7 @@ ship_type_armored_cruiser = {
 ship_type_light_cruiser = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 80
 
@@ -1305,6 +1391,7 @@ ship_type_light_cruiser = {
 ship_type_seaplane_tender = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_carriers
 
     modification_construction_cost = 110
 
@@ -1386,6 +1473,7 @@ ship_type_seaplane_tender = {
 ship_type_aircraft_carrier = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_carriers
 
     modification_construction_cost = 200
 
@@ -1478,6 +1566,7 @@ ship_type_aircraft_carrier = {
 ship_type_torpedo_boat = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
 
     modification_construction_cost = 30
 
@@ -1563,6 +1652,7 @@ ship_type_torpedo_boat = {
 ship_type_torpedo_boat_destroyer = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
 
     modification_construction_cost = 50
 
@@ -1648,6 +1738,7 @@ ship_type_torpedo_boat_destroyer = {
 ship_type_submarine = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
 
     modification_construction_cost = 80
 
@@ -1721,6 +1812,7 @@ ship_type_submarine = {
 ship_type_destroyer = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
 
     modification_construction_cost = 80
 
@@ -1805,6 +1897,7 @@ ship_type_destroyer = {
 
 ship_type_supply_ship = {
     ship_group = ship_group_supply_ships
+    ai_ship_category = ai_ship_category_transports
 
     base_construction_cost = 25
 
