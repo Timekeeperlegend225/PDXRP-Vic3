@@ -498,8 +498,13 @@ conservative_party = {
 				}
 			}
 		}
-		# unions can never be conservative
-		NOT = { is_interest_group_type = ig_trade_unions }
+		# Trade Unions may join the US Democrats.
+		OR = {
+			NOT = { is_interest_group_type = ig_trade_unions }
+			owner = {
+				c:USA ?= THIS
+			}
+		}
 	}
 
 	# Root - IG considering joining
@@ -508,6 +513,23 @@ conservative_party = {
 		value = {
 			value = -5
 			desc = "base_value"
+		}
+		if = {
+			limit = {
+				owner = {
+					c:USA ?= THIS
+				}
+				OR = {
+					is_interest_group_type = ig_landowners
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			add = {
+				value = 6
+				desc = "usa_two_party_system"
+			}
 		}
 		if = {
 			limit = {
@@ -1030,7 +1052,16 @@ conservative_party = {
 		}
 		else_if = {
 			limit = {
-				scope:number >= 3
+				OR = {
+					AND = {
+						scope:number >= 3
+						owner = { NOT = { c:USA ?= THIS } }
+					}
+					AND = {
+						scope:number >= 4
+						owner = { c:USA ?= THIS }
+					}
+				}
 			}
 			multiply = {
 				value = 0.0
