@@ -163,9 +163,6 @@
 					this = c:HUN
 				}
 			}
-			c:AUS ?= {
-				annex_with_incorporation = prev
-			}
 		}
 		custom_tooltip = {
 			text = danubian_tradition_traits_tt
