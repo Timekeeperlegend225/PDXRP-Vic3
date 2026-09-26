@@ -3368,3 +3368,160 @@ value_selection.303 = {
 		}
 	}
 }
+
+#Building
+
+value_selection.91 = {
+	type = country_event
+	placement = ROOT
+	title = value_selection.91.t
+	desc = value_selection.91.u
+
+	event_image = {
+		texture = "gfx/event_pictures/void.dds"
+	} 
+
+	duration = 1
+	
+	trigger = {
+		#triggered by diplo action
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			save_scope_as = GM_interacted_scope
+		}
+	}
+	
+	#return to GM tool
+	
+	option = {
+		name = value_selection.91.a
+		default_option = yes
+		trigger_event = {
+			id = gm_state_actions.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.91.r
+		default_option = yes
+		remove_global_variable = GM_taking_action
+		scope:scope_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+	
+
+	#Reset
+	
+	option = {
+		name = value_selection.91.b
+		set_global_variable = {
+			name = gm_variable_build
+			value = 0
+		}
+		trigger_event = {
+			id = value_selection.91
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.91.d
+		change_global_variable = {
+			name = gm_variable_build
+			add = 1
+		}
+		trigger_event = {
+			id = value_selection.91
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.91.e
+		change_global_variable = {
+			name = gm_variable_build
+			add = 5
+		}
+		trigger_event = {
+			id = value_selection.91
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.91.f
+		change_global_variable = {
+			name = gm_variable_build
+			add = 10
+		}
+		trigger_event = {
+			id = value_selection.91
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.91.h
+		change_global_variable = {
+			name = gm_variable_build
+			subtract = 1
+		}
+		trigger_event = {
+			id = value_selection.91
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.91.i
+		change_global_variable = {
+			name = gm_variable_build
+			subtract = 5
+		}
+		trigger_event = {
+			id = value_selection.91
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.91.j
+		change_global_variable = {
+			name = gm_variable_build
+			subtract  = 10
+		}
+		trigger_event = {
+			id = value_selection.91
+			days = 0
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = value_selection.91.k
+		scope:scope_target_state = {
+			create_building = {
+				building = building_barrack
+				level = global_var:gm_variable_build
+			}
+		}
+		remove_global_variable = GM_taking_action
+		scope:scope_target_state = {
+			remove_modifier = GM_working_on_state_mod
+		}
+	}
+}

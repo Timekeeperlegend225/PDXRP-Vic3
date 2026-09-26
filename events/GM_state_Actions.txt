@@ -226,6 +226,16 @@ gm_state_actions.1 = {
 			remove_modifier = GM_working_on_state_mod
 		}
 	}
+	
+	# Loyalist, Radicals
+	option = {
+		name = value_selection.91.t
+		trigger_event = {
+			id = value_selection.91
+			days = 0
+			popup = yes
+		}
+	}
 }
 
 gm_state_actions.3 = {

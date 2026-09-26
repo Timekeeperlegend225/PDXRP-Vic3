@@ -272,3 +272,16 @@
  value_selection.303.r:0 "Cancel"
  value_selection.303.t:0 "Society tech bonus"
  value_selection.303.u:0 "Variable value is [GetGlobalVariable('gm_variable_tech').GetValue|+=%]#!"
+ 
+ value_selection.91.a:0 "Return"
+ value_selection.91.b:0 "Intialize/Reset the value to 0"
+ value_selection.91.d:0 "+1"
+ value_selection.91.e:0 "+5"
+ value_selection.91.f:0 "+10"
+ value_selection.91.h:0 "-1
+ value_selection.91.i:0 "-5"
+ value_selection.91.j:0 "-10"
+ value_selection.91.k:0 "Add [GetGlobalVariable('gm_variable_build').GetValue|0=] barrack in [SCOPE.sState('scope_target_state').GetName]"
+ value_selection.91.r:0 "Cancel"
+ value_selection.91.t:0 "Build"
+ value_selection.91.u:0 "Variable value is [GetGlobalVariable('gm_variable_build').GetValue|0=] \n Selected state is [SCOPE.sState('scope_target_state').GetName]"
