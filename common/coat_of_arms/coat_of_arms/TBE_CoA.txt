@@ -119,3 +119,13 @@ BAV_WUR = {
 		instance = { scale = { 0.5 0.5 } position = { 0.75 0.75 } }
 	}
 }
+
+TPG = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	textured_emblem = {		
+		texture = "TPG.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
