@@ -672,6 +672,303 @@
 	default = yes
 
 	monthly_progress = {
+		# PDXRP additional monthly recognition factors. Threshold tiers stack.
+
+		if = {
+			limit = {
+				pdxrp_recognition_foreign_ports > 0
+			}
+			subtract = {
+				desc = "pdxrp_recognition_treaty_ports"
+				value = pdxrp_recognition_foreign_ports
+			}
+		}
+
+		if = {
+			limit = {
+				pdxrp_recognition_tech_gap > 30
+			}
+			subtract = {
+				desc = "pdxrp_recognition_tech_behind_30"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				pdxrp_recognition_tech_gap > 50
+			}
+			subtract = {
+				desc = "pdxrp_recognition_tech_behind_50"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				gdp_ownership_ratio = { target = root value < 0.5 }
+			}
+			subtract = {
+				desc = "pdxrp_recognition_domestic_gdp"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				pop_type_percent_country = { pop_type = peasants percent > 0.5 }
+			}
+			subtract = {
+				desc = "pdxrp_recognition_peasants_50"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				pop_type_percent_country = { pop_type = peasants percent > 0.75 }
+			}
+			subtract = {
+				desc = "pdxrp_recognition_peasants_75"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				pdxrp_recognition_tech_gap <= 20
+			}
+			add = {
+				desc = "pdxrp_recognition_tech_near_20"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				pdxrp_recognition_tech_gap <= 10
+			}
+			add = {
+				desc = "pdxrp_recognition_tech_near_10"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				naval_power_projection > 0
+				pdxrp_recognition_naval_rank <= 20
+			}
+			add = {
+				desc = "pdxrp_recognition_naval_top_20"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				naval_power_projection > 0
+				pdxrp_recognition_naval_rank <= 10
+			}
+			add = {
+				desc = "pdxrp_recognition_naval_top_10"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				army_power_projection > 0
+				pdxrp_recognition_army_rank <= 10
+			}
+			add = {
+				desc = "pdxrp_recognition_army_top_10"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				"goods_production_rank(goods:automobiles)" >= 1
+				"goods_production_rank(goods:automobiles)" <= 3
+			}
+			add = {
+				desc = "pdxrp_recognition_producer_automobiles"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				"goods_production_rank(goods:radios)" >= 1
+				"goods_production_rank(goods:radios)" <= 3
+			}
+			add = {
+				desc = "pdxrp_recognition_producer_radios"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				"goods_production_rank(goods:telephones)" >= 1
+				"goods_production_rank(goods:telephones)" <= 3
+			}
+			add = {
+				desc = "pdxrp_recognition_producer_telephones"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				"goods_production_rank(goods:engines)" >= 1
+				"goods_production_rank(goods:engines)" <= 3
+			}
+			add = {
+				desc = "pdxrp_recognition_producer_engines"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				"goods_production_rank(goods:explosives)" >= 1
+				"goods_production_rank(goods:explosives)" <= 3
+			}
+			add = {
+				desc = "pdxrp_recognition_producer_explosives"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				"goods_production_rank(goods:steamers)" >= 1
+				"goods_production_rank(goods:steamers)" <= 3
+			}
+			add = {
+				desc = "pdxrp_recognition_producer_steamers"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				"goods_production_rank(goods:steel)" >= 1
+				"goods_production_rank(goods:steel)" <= 3
+			}
+			add = {
+				desc = "pdxrp_recognition_producer_steel"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				"goods_production_rank(goods:aeroplanes)" >= 1
+				"goods_production_rank(goods:aeroplanes)" <= 3
+			}
+			add = {
+				desc = "pdxrp_recognition_producer_aeroplanes"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				"goods_production_rank(goods:tanks)" >= 1
+				"goods_production_rank(goods:tanks)" <= 3
+			}
+			add = {
+				desc = "pdxrp_recognition_producer_tanks"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				any_scope_building = { is_building_type = building_skyscraper level >= 1 }
+			}
+			add = {
+				desc = "pdxrp_recognition_skyscraper"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				any_scope_building = { is_building_type = building_urban_center level >= 1 }
+				any_scope_building = {
+					filter = { is_building_type = building_urban_center level >= 1 }
+					percent >= 0.5
+					has_active_production_method = pm_electric_streetlights
+				}
+			}
+			add = {
+				desc = "pdxrp_recognition_electricity"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				has_technology_researched = international_exchange_standards
+			}
+			add = {
+				desc = "pdxrp_recognition_exchange"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				institution_investment_level = { institution = institution_schools value >= 4 }
+				OR = {
+					has_law_or_variant = law_type:law_private_schools
+					has_law_or_variant = law_type:law_public_schools
+				}
+			}
+			add = {
+				desc = "pdxrp_recognition_education"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				institution_investment_level = { institution = institution_health_system value >= 4 }
+				OR = {
+					has_law_or_variant = law_type:law_private_health_insurance
+					has_law_or_variant = law_type:law_public_health_insurance
+				}
+			}
+			add = {
+				desc = "pdxrp_recognition_healthcare"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				institution_investment_level = { institution = institution_social_security value >= 4 }
+			}
+			add = {
+				desc = "pdxrp_recognition_welfare"
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				institution_investment_level = { institution = institution_workplace_safety value >= 4 }
+			}
+			add = {
+				desc = "pdxrp_recognition_workers_rights"
+				value = 1
+			}
+		}
+
 		if = {
 			limit = {
 				# Your absolute GDP is relatively high

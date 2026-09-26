@@ -129,3 +129,51 @@ TPG = {
 		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
 	}
 }
+TEX_Texan_Columbia = { # Texan Columbia
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal_fifth.dds"
+		color1 = "blue"
+		color2 = "red"
+	}
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { position = { 0 0.5} }
+	}
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.5 0.5 } position = { 0.175 0.5 } }
+	}
+}
+TEX_subject_columbia = {
+	# subject, based on Texan subject flag but yellow star and uses tricolor instead of stripes
+
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.4 0.4 } position = { 0.25 0.76 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.5 1.0 } position = { 0.75 0.5 }  }
+	}
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal_fifth.dds"
+		color1 = "blue"
+		color2 = "red"
+		instance = { scale = { 0.5 1.0 } position = { 0.75 0.5 }  }
+	}
+}

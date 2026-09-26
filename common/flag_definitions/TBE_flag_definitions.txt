@@ -150,3 +150,29 @@ REPLACE_OR_CREATE:BAV = {
 		}
 	}
 }
+REPLACE_OR_CREATE:TEX = {
+	flag_definition = {
+		coa = TEX_Texan_Columbia
+		subject_canton = TEX_Bonnie_Blue
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = TEX_subject_columbia
+		priority = 10000
+		trigger = { #owns a part of historic Gran Colombia
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					owns_entire_state_region = STATE_ECUADOR
+					owns_entire_state_region = STATE_ZULIA
+					owns_entire_state_region = STATE_MIRANDA
+					owns_entire_state_region = STATE_BOLIVAR
+					owns_entire_state_region = STATE_ANTIOQUIA
+					owns_entire_state_region = STATE_GUAVIARE
+					owns_entire_state_region = STATE_CUNDINAMARCA
+					owns_entire_state_region = STATE_CAUCA
+					owns_entire_state_region = STATE_PASTAZA
+					owns_entire_state_region = STATE_PANAMA
+				}
+			}
+		}
+	}
+}

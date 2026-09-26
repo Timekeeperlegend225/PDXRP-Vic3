@@ -88,3 +88,29 @@ BAV = {
 		}
 	}
 }
+TEX = {
+	dynamic_country_name = {
+		name = dyn_c_texan_columbia
+		adjective = dyn_c_texan_columbia_adj
+
+		priority = 1000
+
+		trigger = { #owns a part of historic Gran Colombia
+			exists = scope:actor
+			scope:actor ?= {
+				OR = {
+					owns_entire_state_region = STATE_ECUADOR
+					owns_entire_state_region = STATE_ZULIA
+					owns_entire_state_region = STATE_MIRANDA
+					owns_entire_state_region = STATE_BOLIVAR
+					owns_entire_state_region = STATE_ANTIOQUIA
+					owns_entire_state_region = STATE_GUAVIARE
+					owns_entire_state_region = STATE_CUNDINAMARCA
+					owns_entire_state_region = STATE_CAUCA
+					owns_entire_state_region = STATE_PASTAZA
+					owns_entire_state_region = STATE_PANAMA
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+﻿# Evaluated in the country scope used by earn_recognition_progress_bar.
+# min is a lower clamp in script arithmetic: it retains the largest tech count.
+pdxrp_recognition_tech_gap = {
+    value = 0
+    every_country = { min = this.techs_researched }
+    subtract = root.techs_researched
+}
+
+# Competition ranks: one plus the number of countries strictly ahead.
+# The progress conditions also require positive projection.
+pdxrp_recognition_naval_rank = {
+    value = 1
+    every_country = {
+        limit = { naval_power_projection > root.naval_power_projection }
+        add = 1
+    }
+}
+pdxrp_recognition_army_rank = {
+    value = 1
+    every_country = {
+        limit = { army_power_projection > root.army_power_projection }
+        add = 1
+    }
+}
+
+# Match vanilla Opium Wars: a foreign treaty-port state sharing a state region
+# with our country. Iterate foreign states so each port is counted exactly once.
+pdxrp_recognition_foreign_ports = {
+    value = 0
+    every_country = {
+        limit = { NOT = { this = root } }
+        every_scope_state = {
+            limit = {
+                is_treaty_port = yes
+                state_region = { any_scope_state = { owner = root } }
+            }
+            add = 1
+        }
+    }
+}
