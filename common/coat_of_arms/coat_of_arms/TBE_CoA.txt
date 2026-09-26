@@ -177,3 +177,24 @@ TEX_subject_columbia = {
 		instance = { scale = { 0.5 1.0 } position = { 0.75 0.5 }  }
 	}
 }
+
+YUE = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+
+	textured_emblem = {		
+		texture = "YUE.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
+
+
+BIC = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {		
+		texture = "imp_india.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 }  }
+	}
+}
