@@ -1184,6 +1184,51 @@ liberal_party = {
 				}
 			}
 		}
+		if = { #
+			limit = {
+				leader ?= {
+						has_ideology = ideology:ideology_liberal_leader
+				}
+				owner = {
+					any_interest_group = {
+						has_party = yes
+						party = {
+							is_party_type = conservative_party
+						}
+						leader ?= {
+							has_ideology = ideology:ideology_liberal_leader
+						}
+					}
+				}
+				OR = {
+					has_ideology = ideology:ideology_reactionary
+					has_ideology = ideology:ideology_moralist
+				}
+				owner = {
+					NOR = {
+						has_law_or_variant = law_type:law_social_monarchy
+						has_law_or_variant = law_type:law_monarchy
+						has_law_or_variant = law_type:law_theocracy
+					}
+					has_law_or_variant = law_type:law_universal_suffrage
+				}
+			}
+			add = {
+				value = -3
+				desc = "Liberal but Conservative"
+			}
+			if = {
+				limit = {
+					owner = {
+						has_law_or_variant = law_type:law_protected_speech
+					}
+				}
+				add = {
+					value = -3
+					desc = "Liberal but Conservative"
+				}
+			}
+		}
 		if = { # Carlists and Miguelists were against participating in electoral politics for a good while
 			limit = {
 				NOT = { owner = { has_technology_researched = corporatism } }

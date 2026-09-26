@@ -50,3 +50,15 @@ prestige_good_nokia_telephone = {
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
 }
+
+prestige_good_bottled_electricity = {
+	base_good = electricity
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/bottled_electricity.dds"
+}
+
+prestige_good_sangria = {
+	base_good = rubber
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sangria.dds"
+}

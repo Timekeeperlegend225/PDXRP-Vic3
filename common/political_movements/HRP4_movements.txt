@@ -22,6 +22,7 @@
 				has_variable = one_true_french_dynasty
 			}
 		}
+		always = no
 	}
 	creation_weight = {
 		value = 100
@@ -48,16 +49,7 @@
 	}
 
 	disband_trigger = {
-		OR = {
-			has_variable = monarchy_stamped_out_var
-			AND = {
-				OR = {
-					has_variable = bonapartist_restoration_var
-					has_variable = orleanist_restoration_var
-				}
-				has_variable = one_true_french_dynasty
-			}
-		}
+		always = yes
 	}
 
 	character_support_trigger = {

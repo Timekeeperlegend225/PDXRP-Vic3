@@ -579,7 +579,7 @@ REPLACE:ideology_bonapartist = { # Average Progressiveness - 29
 	}
 
 	lawgroup_distribution_of_power = { # Napoleon III was an advocate for universal suffrage. Even if this was opportunistic, it's more accurate to say this than the alternative.
-		law_autocracy = approve
+		law_autocracy = neutral
 		law_oligarchy = disapprove
 		law_landed_voting = neutral
 		law_wealth_voting = neutral
