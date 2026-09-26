@@ -238,7 +238,7 @@ REPLACE:malaria_prevention = {
 	modifier = {
 		country_institution_colonial_affairs_max_investment_add = 1
 		country_institution_health_system_max_investment_add = 1
-		state_colony_growth_speed_mult = 0.25
+		state_colony_growth_speed_mult = 0.50
 	}
 
 	unlocking_technologies = {

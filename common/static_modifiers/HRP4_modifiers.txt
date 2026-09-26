@@ -194,8 +194,3 @@ religious_army_against_total_separation = {
     icon = gfx/interface/icons/ig_icons/devout.dds
 	interest_group_ig_armed_forces_approval_add = -10
 }
-
-testtest = {
-    icon = gfx/interface/icons/ig_icons/devout.dds
-	tax_per_capita_add = -0.2
-}
