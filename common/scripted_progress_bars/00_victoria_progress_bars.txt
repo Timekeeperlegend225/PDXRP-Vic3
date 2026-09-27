@@ -1170,7 +1170,7 @@
 	}
 	start_value = 0
 	min_value = 0
-	max_value = 500
+	max_value = 250
 }
 
 fascism_progress_bar = {

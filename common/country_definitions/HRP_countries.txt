@@ -54,6 +54,15 @@ REPLACE:GBR = {
 	capital = STATE_HOME_COUNTIES
 }
 
+REPLACE:TPG = {
+	color = { 255 248 198 } # FFF8C6
+	country_type = unrecognized
+	tier = empire
+	cultures = { han hakka }
+	religion = protestant
+	capital = STATE_NANJING
+}
+
 REPLACE_OR_CREATE:NIA = { #Hunan
 	color = { 255 0 0 }
 	country_type = unrecognized
