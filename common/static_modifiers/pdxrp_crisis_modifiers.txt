@@ -1,0 +1,92 @@
+# Crisis levels: every value is the level-1 value multiplied by the level.
+# Political Movement Activism uses the game UI key political_movement_radicalism_add.
+pdxrp_crisis_level_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    state_market_access_price_impact = -0.02
+    country_company_throughput_bonus_add = -0.05
+    state_trade_advantage_mult = -0.05
+    country_loan_interest_rate_mult = 0.05
+    state_radicals_from_political_movements_mult = 0.05
+    political_movement_radicalism_add = 0.05
+    state_pop_support_movement_socialist_mult = 0.20
+    state_pop_support_movement_communist_mult = 0.20
+    state_pop_support_movement_labor_mult = 0.20
+    state_pop_support_movement_anarchist_mult = 0.20
+    interest_group_ig_trade_unions_pop_attraction_mult = 0.10
+    interest_group_ig_industrialists_pol_str_mult = -0.10
+    country_society_tech_spread_mult = 0.20
+    state_capitalists_investment_pool_efficiency_mult = -0.10
+}
+
+pdxrp_crisis_level_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    state_market_access_price_impact = -0.04
+    country_company_throughput_bonus_add = -0.10
+    state_trade_advantage_mult = -0.10
+    country_loan_interest_rate_mult = 0.10
+    state_radicals_from_political_movements_mult = 0.10
+    political_movement_radicalism_add = 0.10
+    state_pop_support_movement_socialist_mult = 0.40
+    state_pop_support_movement_communist_mult = 0.40
+    state_pop_support_movement_labor_mult = 0.40
+    state_pop_support_movement_anarchist_mult = 0.40
+    interest_group_ig_trade_unions_pop_attraction_mult = 0.20
+    interest_group_ig_industrialists_pol_str_mult = -0.20
+    country_society_tech_spread_mult = 0.40
+    state_capitalists_investment_pool_efficiency_mult = -0.20
+}
+
+pdxrp_crisis_level_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    state_market_access_price_impact = -0.06
+    country_company_throughput_bonus_add = -0.15
+    state_trade_advantage_mult = -0.15
+    country_loan_interest_rate_mult = 0.15
+    state_radicals_from_political_movements_mult = 0.15
+    political_movement_radicalism_add = 0.15
+    state_pop_support_movement_socialist_mult = 0.60
+    state_pop_support_movement_communist_mult = 0.60
+    state_pop_support_movement_labor_mult = 0.60
+    state_pop_support_movement_anarchist_mult = 0.60
+    interest_group_ig_trade_unions_pop_attraction_mult = 0.30
+    interest_group_ig_industrialists_pol_str_mult = -0.30
+    country_society_tech_spread_mult = 0.60
+    state_capitalists_investment_pool_efficiency_mult = -0.30
+}
+
+pdxrp_crisis_level_4 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    state_market_access_price_impact = -0.08
+    country_company_throughput_bonus_add = -0.20
+    state_trade_advantage_mult = -0.20
+    country_loan_interest_rate_mult = 0.20
+    state_radicals_from_political_movements_mult = 0.20
+    political_movement_radicalism_add = 0.20
+    state_pop_support_movement_socialist_mult = 0.80
+    state_pop_support_movement_communist_mult = 0.80
+    state_pop_support_movement_labor_mult = 0.80
+    state_pop_support_movement_anarchist_mult = 0.80
+    interest_group_ig_trade_unions_pop_attraction_mult = 0.40
+    interest_group_ig_industrialists_pol_str_mult = -0.40
+    country_society_tech_spread_mult = 0.80
+    state_capitalists_investment_pool_efficiency_mult = -0.40
+}
+
+pdxrp_crisis_level_5 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    state_market_access_price_impact = -0.10
+    country_company_throughput_bonus_add = -0.25
+    state_trade_advantage_mult = -0.25
+    country_loan_interest_rate_mult = 0.25
+    state_radicals_from_political_movements_mult = 0.25
+    political_movement_radicalism_add = 0.25
+    state_pop_support_movement_socialist_mult = 1.00
+    state_pop_support_movement_communist_mult = 1.00
+    state_pop_support_movement_labor_mult = 1.00
+    state_pop_support_movement_anarchist_mult = 1.00
+    interest_group_ig_trade_unions_pop_attraction_mult = 0.50
+    interest_group_ig_industrialists_pol_str_mult = -0.50
+    country_society_tech_spread_mult = 1.00
+    state_capitalists_investment_pool_efficiency_mult = -0.50
+}
+

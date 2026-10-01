@@ -1,0 +1,9 @@
+﻿l_english:
+ pdxrp_crisis_level_1:0 "Crisis - Level 1"
+ pdxrp_crisis_level_2:0 "Crisis - Level 2"
+ pdxrp_crisis_level_3:0 "Crisis - Level 3"
+ pdxrp_crisis_level_4:0 "Crisis - Level 4"
+ pdxrp_crisis_level_5:0 "Crisis - Level 5"
+ pdxrp_apply_global_crisis_decision:0 "Apply Global Crisis"
+ pdxrp_apply_global_crisis_decision_desc:0 "Apply the assigned crisis levels to all currently existing countries on the crisis list. Each level multiplies the level-1 effects, which gradually decay over ten years. This decision can be taken once per campaign."
+ pdxrp_apply_global_crisis_decision_tooltip:0 "Apply a ten-year decaying crisis to the listed countries: Level 1 for Taiping, Persia, Bolivia, Morocco, Croatia, Dai Nam, the Baltic Provinces, Serbia and the Ottomans; Level 2 for the East India Company, Australia, South Africa, Korea, Denmark, Bukhara, Alaska, Texas, Canada, the Papal States, Japan, Russia, Mexico and Ryukyu; Level 3 for Brazil, the Dutch East Indies, the Philippines, Cuba, Hawaii, Austria, Sardinia, France, Central America and Hungary; Level 4 for Germany, Spain, Portugal and the United States; Level 5 for the Netherlands and Britain."
