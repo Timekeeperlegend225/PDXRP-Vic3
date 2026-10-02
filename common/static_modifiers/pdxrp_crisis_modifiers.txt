@@ -1,4 +1,9 @@
 # Crisis levels: every value is the level-1 value multiplied by the level.
+pdxrp_british_flood_mapi_relief = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    state_market_access_price_impact = 0.10
+}
+
 # Political Movement Activism uses the game UI key political_movement_radicalism_add.
 pdxrp_crisis_level_1 = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds

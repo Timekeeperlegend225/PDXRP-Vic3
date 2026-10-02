@@ -1,0 +1,189 @@
+pdxrp_apply_global_crisis_decision = {
+    is_shown = {
+        has_modifier = GM_game_master
+        is_player = yes
+        NOT = { has_global_variable = pdxrp_global_crisis_applied }
+    }
+
+    possible = {
+        NOT = { has_global_variable = pdxrp_global_crisis_applied }
+    }
+
+    when_taken = {
+        set_global_variable = pdxrp_global_crisis_applied
+
+        # Economic catch-up, decaying over ten years alongside the crisis.
+        every_country = {
+            limit = {
+                OR = {
+                    c:SPA ?= this
+                    c:PAP ?= this
+                    c:POR ?= this
+                    c:DAI ?= this
+                }
+            }
+            add_modifier = {
+                name = pdxrp_catch_up_level_1
+                years = 10
+                is_decaying = yes
+            }
+        }
+
+        every_country = {
+            limit = {
+                OR = {
+                    c:PER ?= this
+                    c:BUK ?= this
+                    c:ETH ?= this
+                    AND = {
+                        is_subject = no
+                        NOT = { c:USA ?= this }
+                        capital.state_region = {
+                            is_in_geographic_region = geographic_region_americas
+                        }
+                    }
+                }
+            }
+            add_modifier = {
+                name = pdxrp_catch_up_level_2
+                years = 10
+                is_decaying = yes
+            }
+        }
+
+        c:SOK ?= {
+            add_modifier = {
+                name = pdxrp_catch_up_level_3
+                years = 10
+                is_decaying = yes
+            }
+        }
+
+        # Flood relief: Britain-owned England and Wales only, for twelve months.
+        c:GBR ?= {
+            every_scope_state = {
+                limit = {
+                    OR = {
+                        state_region = s:STATE_HOME_COUNTIES
+                        state_region = s:STATE_LANCASHIRE
+                        state_region = s:STATE_WALES
+                        state_region = s:STATE_YORKSHIRE
+                        state_region = s:STATE_MIDLANDS
+                        state_region = s:STATE_EAST_ANGLIA
+                        state_region = s:STATE_WEST_COUNTRY
+                    }
+                }
+                add_modifier = {
+                    name = pdxrp_british_flood_mapi_relief
+                    months = 12
+                }
+            }
+        }
+
+        # Level 1
+        every_country = {
+            limit = {
+                OR = {
+                    c:TPG ?= this
+                    c:PER ?= this
+                    c:BOL ?= this
+                    c:MOR ?= this
+                    c:CRO ?= this
+                    c:DAI ?= this
+                    c:UBD ?= this
+                    c:SER ?= this
+                    c:TUR ?= this
+                }
+            }
+            add_modifier = {
+                name = pdxrp_crisis_level_1
+                years = 10
+                is_decaying = yes
+            }
+        }
+
+        # Level 2
+        every_country = {
+            limit = {
+                OR = {
+                    c:BIC ?= this
+                    c:NSW ?= this # Australia in the campaign save
+                    c:SAF ?= this
+                    c:KOR ?= this
+                    c:SCA ?= this # Denmark formed Scandinavia
+                    c:BUK ?= this
+                    c:ALK ?= this # Alaska / Russian-American Company
+                    c:TEX ?= this
+                    c:CAN ?= this
+                    c:PAP ?= this
+                    c:JAP ?= this
+                    c:RUS ?= this
+                    c:MEX ?= this
+                    c:RYU ?= this
+                    c:BRZ ?= this
+                }
+            }
+            add_modifier = {
+                name = pdxrp_crisis_level_2
+                years = 10
+                is_decaying = yes
+            }
+        }
+
+        # Level 3
+        every_country = {
+            limit = {
+                OR = {
+                    c:POR ?= this
+                    c:DEI ?= this
+                    c:PHI ?= this
+                    c:CUB ?= this
+                    c:HAW ?= this
+                    c:AUS ?= this
+                    c:SAR ?= this
+                    c:FRA ?= this
+                    c:UCA ?= this
+                    c:HUN ?= this
+                }
+            }
+            add_modifier = {
+                name = pdxrp_crisis_level_3
+                years = 10
+                is_decaying = yes
+            }
+        }
+
+        # Level 4
+        every_country = {
+            limit = {
+                OR = {
+                    c:GER ?= this
+                    c:SPA ?= this
+                    c:USA ?= this
+                }
+            }
+            add_modifier = {
+                name = pdxrp_crisis_level_4
+                years = 10
+                is_decaying = yes
+            }
+        }
+
+        # Level 5
+        every_country = {
+            limit = {
+                OR = {
+                    c:UNL ?= this # United Netherlands
+                    c:GBR ?= this
+                }
+            }
+            add_modifier = {
+                name = pdxrp_crisis_level_5
+                years = 10
+                is_decaying = yes
+            }
+        }
+    }
+
+    ai_chance = { value = 0 }
+}

@@ -90,8 +90,17 @@ gm_actions.1 = {
 		}
 	}
 	
-	#Money
+	#Crisis
+
+	option = {
+		name = pdxrp_crisis_tool_open
+		set_variable = { name = pdxrp_crisis_intensity value = 1 }
+		set_variable = { name = pdxrp_crisis_months value = 120 }
+		save_scope_as = pdxrp_crisis_gm
+		trigger_event = { id = pdxrp_crisis_tool.1 days = 0 popup = yes }
+	}
 	
+	#Money
 	option = {
 		name = value_selection.1.t
 		trigger_event = {

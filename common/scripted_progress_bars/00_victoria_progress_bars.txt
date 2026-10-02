@@ -789,8 +789,8 @@
 
 		if = {
 			limit = {
-				"goods_production_rank(goods:automobiles)" >= 1
-				"goods_production_rank(goods:automobiles)" <= 3
+				"goods_production_rank(g:automobiles)" >= 1
+				"goods_production_rank(g:automobiles)" <= 3
 			}
 			add = {
 				desc = "pdxrp_recognition_producer_automobiles"
@@ -800,8 +800,8 @@
 
 		if = {
 			limit = {
-				"goods_production_rank(goods:radios)" >= 1
-				"goods_production_rank(goods:radios)" <= 3
+				"goods_production_rank(g:radios)" >= 1
+				"goods_production_rank(g:radios)" <= 3
 			}
 			add = {
 				desc = "pdxrp_recognition_producer_radios"
@@ -811,8 +811,8 @@
 
 		if = {
 			limit = {
-				"goods_production_rank(goods:telephones)" >= 1
-				"goods_production_rank(goods:telephones)" <= 3
+				"goods_production_rank(g:telephones)" >= 1
+				"goods_production_rank(g:telephones)" <= 3
 			}
 			add = {
 				desc = "pdxrp_recognition_producer_telephones"
@@ -822,8 +822,8 @@
 
 		if = {
 			limit = {
-				"goods_production_rank(goods:engines)" >= 1
-				"goods_production_rank(goods:engines)" <= 3
+				"goods_production_rank(g:engines)" >= 1
+				"goods_production_rank(g:engines)" <= 3
 			}
 			add = {
 				desc = "pdxrp_recognition_producer_engines"
@@ -833,8 +833,8 @@
 
 		if = {
 			limit = {
-				"goods_production_rank(goods:explosives)" >= 1
-				"goods_production_rank(goods:explosives)" <= 3
+				"goods_production_rank(g:explosives)" >= 1
+				"goods_production_rank(g:explosives)" <= 3
 			}
 			add = {
 				desc = "pdxrp_recognition_producer_explosives"
@@ -844,8 +844,8 @@
 
 		if = {
 			limit = {
-				"goods_production_rank(goods:steamers)" >= 1
-				"goods_production_rank(goods:steamers)" <= 3
+				"goods_production_rank(g:steamers)" >= 1
+				"goods_production_rank(g:steamers)" <= 3
 			}
 			add = {
 				desc = "pdxrp_recognition_producer_steamers"
@@ -855,8 +855,8 @@
 
 		if = {
 			limit = {
-				"goods_production_rank(goods:steel)" >= 1
-				"goods_production_rank(goods:steel)" <= 3
+				"goods_production_rank(g:steel)" >= 1
+				"goods_production_rank(g:steel)" <= 3
 			}
 			add = {
 				desc = "pdxrp_recognition_producer_steel"
@@ -866,8 +866,8 @@
 
 		if = {
 			limit = {
-				"goods_production_rank(goods:aeroplanes)" >= 1
-				"goods_production_rank(goods:aeroplanes)" <= 3
+				"goods_production_rank(g:aeroplanes)" >= 1
+				"goods_production_rank(g:aeroplanes)" <= 3
 			}
 			add = {
 				desc = "pdxrp_recognition_producer_aeroplanes"
@@ -877,8 +877,8 @@
 
 		if = {
 			limit = {
-				"goods_production_rank(goods:tanks)" >= 1
-				"goods_production_rank(goods:tanks)" <= 3
+				"goods_production_rank(g:tanks)" >= 1
+				"goods_production_rank(g:tanks)" <= 3
 			}
 			add = {
 				desc = "pdxrp_recognition_producer_tanks"

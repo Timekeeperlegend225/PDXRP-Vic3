@@ -25,7 +25,7 @@
 		custom_tooltip = {
 			text = je_earn_recognition_complete_tt
 			scope:journal_entry ?= {
-				"scripted_bar_progress(earn_recognition_progress_bar)" >= 500
+				"scripted_bar_progress(earn_recognition_progress_bar)" >= 250
 			}
 		}
 		has_modifier = GM_allow_recognition

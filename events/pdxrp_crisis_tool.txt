@@ -1,0 +1,155 @@
+namespace = pdxrp_crisis_tool
+
+pdxrp_crisis_tool.1 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_crisis_tool.1.t
+    desc = pdxrp_crisis_tool.1.d
+    event_image = { texture = "gfx/event_pictures/void.dds" }
+    duration = 1
+
+    option = {
+        name = pdxrp_crisis_tool.level_1
+        set_variable = { name = pdxrp_crisis_intensity value = 1 }
+        trigger_event = { id = pdxrp_crisis_tool.2 days = 0 popup = yes }
+    }
+
+    option = {
+        name = pdxrp_crisis_tool.level_2
+        set_variable = { name = pdxrp_crisis_intensity value = 2 }
+        trigger_event = { id = pdxrp_crisis_tool.2 days = 0 popup = yes }
+    }
+
+    option = {
+        name = pdxrp_crisis_tool.level_3
+        set_variable = { name = pdxrp_crisis_intensity value = 3 }
+        trigger_event = { id = pdxrp_crisis_tool.2 days = 0 popup = yes }
+    }
+
+    option = {
+        name = pdxrp_crisis_tool.level_4
+        set_variable = { name = pdxrp_crisis_intensity value = 4 }
+        trigger_event = { id = pdxrp_crisis_tool.2 days = 0 popup = yes }
+    }
+
+    option = {
+        name = pdxrp_crisis_tool.level_5
+        set_variable = { name = pdxrp_crisis_intensity value = 5 }
+        trigger_event = { id = pdxrp_crisis_tool.2 days = 0 popup = yes }
+    }
+
+    option = {
+        name = gm_actions.cancel
+        default_option = yes
+        remove_variable = pdxrp_crisis_intensity
+        remove_variable = pdxrp_crisis_months
+        remove_global_variable = GM_taking_action
+        scope:GM_interacted_scope = { remove_modifier = GM_interacted_mod }
+    }
+}
+
+pdxrp_crisis_tool.2 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_crisis_tool.2.t
+    desc = pdxrp_crisis_tool.2.d
+    event_image = { texture = "gfx/event_pictures/void.dds" }
+    duration = 1
+
+    option = {
+        name = pdxrp_crisis_tool.add_month
+        change_variable = { name = pdxrp_crisis_months add = 1 }
+        trigger_event = { id = pdxrp_crisis_tool.2 days = 0 popup = yes }
+    }
+
+    option = {
+        name = pdxrp_crisis_tool.add_year
+        change_variable = { name = pdxrp_crisis_months add = 12 }
+        trigger_event = { id = pdxrp_crisis_tool.2 days = 0 popup = yes }
+    }
+
+    option = {
+        name = pdxrp_crisis_tool.subtract_month
+        trigger = { var:pdxrp_crisis_months > 1 }
+        change_variable = { name = pdxrp_crisis_months add = -1 }
+        trigger_event = { id = pdxrp_crisis_tool.2 days = 0 popup = yes }
+    }
+
+    option = {
+        name = pdxrp_crisis_tool.subtract_year
+        trigger = { var:pdxrp_crisis_months > 12 }
+        change_variable = { name = pdxrp_crisis_months add = -12 }
+        trigger_event = { id = pdxrp_crisis_tool.2 days = 0 popup = yes }
+    }
+
+    option = {
+        name = pdxrp_crisis_tool.apply
+        trigger = { var:pdxrp_crisis_months >= 1 }
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_crisis_level_1
+            remove_modifier = pdxrp_crisis_level_2
+            remove_modifier = pdxrp_crisis_level_3
+            remove_modifier = pdxrp_crisis_level_4
+            remove_modifier = pdxrp_crisis_level_5
+            if = {
+                limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 1 } }
+                add_modifier = {
+                    name = pdxrp_crisis_level_1
+                    months = scope:pdxrp_crisis_gm.var:pdxrp_crisis_months
+                    is_decaying = yes
+                }
+            }
+            if = {
+                limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 2 } }
+                add_modifier = {
+                    name = pdxrp_crisis_level_2
+                    months = scope:pdxrp_crisis_gm.var:pdxrp_crisis_months
+                    is_decaying = yes
+                }
+            }
+            if = {
+                limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 3 } }
+                add_modifier = {
+                    name = pdxrp_crisis_level_3
+                    months = scope:pdxrp_crisis_gm.var:pdxrp_crisis_months
+                    is_decaying = yes
+                }
+            }
+            if = {
+                limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 4 } }
+                add_modifier = {
+                    name = pdxrp_crisis_level_4
+                    months = scope:pdxrp_crisis_gm.var:pdxrp_crisis_months
+                    is_decaying = yes
+                }
+            }
+            if = {
+                limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 5 } }
+                add_modifier = {
+                    name = pdxrp_crisis_level_5
+                    months = scope:pdxrp_crisis_gm.var:pdxrp_crisis_months
+                    is_decaying = yes
+                }
+            }
+        }
+        remove_variable = pdxrp_crisis_intensity
+        remove_variable = pdxrp_crisis_months
+        remove_global_variable = GM_taking_action
+        scope:GM_interacted_scope = { remove_modifier = GM_interacted_mod }
+    }
+
+    option = {
+        name = pdxrp_crisis_tool.change_level
+        trigger_event = { id = pdxrp_crisis_tool.1 days = 0 popup = yes }
+    }
+
+    option = {
+        name = gm_actions.cancel
+        default_option = yes
+        remove_variable = pdxrp_crisis_intensity
+        remove_variable = pdxrp_crisis_months
+        remove_global_variable = GM_taking_action
+        scope:GM_interacted_scope = { remove_modifier = GM_interacted_mod }
+    }
+}
+

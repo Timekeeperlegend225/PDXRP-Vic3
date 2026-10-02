@@ -1,0 +1,44 @@
+# Catch-up buffs: levels 2 and 3 directly multiply every level-1 value.
+# 0.01% literacy growth = 0.0001; expected SoL applies to all three strata.
+
+pdxrp_catch_up_level_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_loan_interest_rate_mult = -0.1
+    state_lower_strata_expected_sol_add = -1
+    state_middle_strata_expected_sol_add = -1
+    state_upper_strata_expected_sol_add = -1
+    country_law_enactment_stall_add = -0.1
+    state_literacy_growth_add = 0.0001
+    country_weekly_innovation_add = 10
+    country_authority_add = 100
+    country_minting_mult = 0.1
+    country_minting_add = 2000
+}
+
+pdxrp_catch_up_level_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_loan_interest_rate_mult = -0.2
+    state_lower_strata_expected_sol_add = -2
+    state_middle_strata_expected_sol_add = -2
+    state_upper_strata_expected_sol_add = -2
+    country_law_enactment_stall_add = -0.2
+    state_literacy_growth_add = 0.0002
+    country_weekly_innovation_add = 20
+    country_authority_add = 200
+    country_minting_mult = 0.2
+    country_minting_add = 4000
+}
+
+pdxrp_catch_up_level_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_loan_interest_rate_mult = -0.3
+    state_lower_strata_expected_sol_add = -3
+    state_middle_strata_expected_sol_add = -3
+    state_upper_strata_expected_sol_add = -3
+    country_law_enactment_stall_add = -0.3
+    state_literacy_growth_add = 0.0003
+    country_weekly_innovation_add = 30
+    country_authority_add = 300
+    country_minting_mult = 0.3
+    country_minting_add = 6000
+}

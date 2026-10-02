@@ -1,7 +1,7 @@
 ﻿l_english:
  offer_embassy: "Support Recognition"
  
- earning_recognition_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/500)"
+ earning_recognition_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/250)"
 
  subject_foreign_investment: "Allow Foreign Investments"
  subject_foreign_investment_desc: "Allow other nations to invest in [concept_subject]"
