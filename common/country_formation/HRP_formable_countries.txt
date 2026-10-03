@@ -1,0 +1,15 @@
+﻿REPLACE:UZB = {
+	states = {
+		STATE_UZBEKIA
+		STATE_FERGANA
+		STATE_KHIVA
+	}
+
+	required_states_fraction = 0.66
+
+	ai_will_do = { always = no }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
