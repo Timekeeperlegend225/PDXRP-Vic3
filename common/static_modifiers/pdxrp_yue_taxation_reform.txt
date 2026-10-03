@@ -1,0 +1,5 @@
+﻿pdxrp_yue_taxation_reform = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    state_tax_capacity_mult = 0.10
+    country_bureaucracy_mult = -0.10
+}

@@ -1,0 +1,5 @@
+﻿l_english:
+ pdxrp_boost_french_communists:0 "Strengthen Communism in France"
+ pdxrp_boost_french_communists_desc:0 "Give France's Communist Movement +190% Pop Attraction and +19 percentage points of Activism, and its Trade Unions +47% Pop Attraction. All bonuses decay to zero over 10 years. Creates the Communist Movement if it is absent. Can be taken once."
+ pdxrp_france_communist_movement_boost:0 "French Communist Mobilization"
+ pdxrp_france_trade_unions_boost:0 "French Trade Union Recruitment"

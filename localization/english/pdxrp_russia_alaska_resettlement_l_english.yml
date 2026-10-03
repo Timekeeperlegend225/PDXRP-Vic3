@@ -1,0 +1,3 @@
+﻿l_english:
+ pdxrp_resettle_russian_population_in_alaska:0 "Resettle Russian-Culture Pops in Alaska"
+ pdxrp_resettle_russian_population_in_alaska_desc:0 "Move 1% of each Russian-culture Pop in Russia's states outside Alaska into Alaska. Other cultures are unaffected. Uses Russia's portion of Alaska if present, otherwise the largest existing portion, regardless of owner. Migrants retain their religion and arrive unemployed. Can be taken once."

@@ -1,0 +1,10 @@
+﻿pdxrp_france_communist_movement_boost = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    political_movement_pop_attraction_mult = 1.90
+    political_movement_radicalism_add = 0.19
+}
+
+pdxrp_france_trade_unions_boost = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_pop_attraction_mult = 0.47
+}
