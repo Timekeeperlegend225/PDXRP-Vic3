@@ -1,0 +1,14 @@
+save_edit_usa_migration_penalty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    state_migration_pull_mult = -0.25
+}
+
+save_edit_american_migration_bonus = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    state_migration_pull_mult = 0.25
+}
+
+save_edit_usa_birthrate_penalty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    state_birth_rate_mult = -0.05
+}

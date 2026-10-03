@@ -207,10 +207,6 @@ je_acw_reincorporate = {
 				}
 				count = all
 				is_incorporated = yes
-				loyalist_fraction = {
-					value >= acw_reincorporate_dixie_loyalist_min # defined in event_values
-					culture = cu:dixie
-				}
 			}
 		}
 	}

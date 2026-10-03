@@ -1,0 +1,3 @@
+﻿l_english:
+ save_edit_french_custom_napoleon_heir:0 "Appoint Charles Napoleon as French Heir"
+ save_edit_french_custom_napoleon_heir_desc:0 "Create Charles Napoleon Bonaparte from the custom napoleon_iii template in HRP_characters and appoint him as France's heir, replacing the current heir. If that template already has a character in France, appoint him instead of creating a duplicate. France must be a monarchy, and the date must be on or after his birth on 11 March 1856. This decision can be taken once."

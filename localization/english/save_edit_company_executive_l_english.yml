@@ -1,0 +1,13 @@
+﻿l_english:
+ save_edit_appoint_company_executive: "Appoint Company Executive"
+ save_edit_appoint_company_executive_desc: "Choose a company in this character's country and appoint them as its executive."
+ save_edit_choose_company_tt: "Open a company picker to appoint this character as executive of a company in their country."
+ save_edit_company_executive.1.t: "Choose a Company"
+ save_edit_company_executive.1.d: "Choose which company in [SCOPE.sCharacter('save_edit_executive_candidate').GetCountry.GetName] should be led by [SCOPE.sCharacter('save_edit_executive_candidate').GetFullName]. The appointment replaces the company's current executive. Companies are listed from largest to smallest by owned building levels."
+ save_edit_company_executive.1.more: "More companies"
+ save_edit_company_executive.1.cancel: "Cancel"
+ save_edit_company_executive.1.company_1: "[SCOPE.sCompany('save_edit_company_slot_1').GetName]"
+ save_edit_company_executive.1.company_2: "[SCOPE.sCompany('save_edit_company_slot_2').GetName]"
+ save_edit_company_executive.1.company_3: "[SCOPE.sCompany('save_edit_company_slot_3').GetName]"
+ save_edit_company_executive.1.company_4: "[SCOPE.sCompany('save_edit_company_slot_4').GetName]"
+ save_edit_company_executive.1.company_5: "[SCOPE.sCompany('save_edit_company_slot_5').GetName]"

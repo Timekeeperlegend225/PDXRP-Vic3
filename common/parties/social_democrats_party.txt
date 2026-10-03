@@ -1,4 +1,4 @@
-﻿# Social democrats extremely attracted to this ideology
+# Social democrats extremely attracted to this ideology
 # Attracts weak leftists and liberals
 # Available for Trade Unions pre-Socialism
 
@@ -269,6 +269,24 @@ social_democrat_party = {
 		owner = {
 			country_has_voting_franchise = yes
 			OR = {
+				AND = { # USA Democrat-aligned IGs with socialist leaders
+					c:USA ?= THIS
+					any_interest_group = {
+						OR = {
+							is_interest_group_type = ig_rural_folk
+							is_interest_group_type = ig_intelligentsia
+							is_interest_group_type = ig_trade_unions
+							is_interest_group_type = ig_armed_forces
+						}
+						leader ?= {
+							OR = {
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_vanguardist
+								has_ideology = ideology:ideology_anarchist
+							}
+						}
+					}
+				}
 				py:social_democrat_party ?= {
 					any_member = {}
 				}
@@ -309,6 +327,28 @@ social_democrat_party = {
 		value = {
 			value = -5
 			desc = "base_value"
+		}
+		if = { # USA Democrat-aligned IGs under communist, socialist, or anarchist leaders
+			limit = {
+				owner = { c:USA ?= THIS }
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_intelligentsia
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_armed_forces
+				}
+				leader ?= {
+					OR = {
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_vanguardist
+						has_ideology = ideology:ideology_anarchist
+					}
+				}
+			}
+			add = {
+				value = 20
+				desc = "usa_two_party_system"
+			}
 		}
 		if = {
 			limit = {
@@ -766,6 +806,7 @@ social_democrat_party = {
 		else_if = {
 			limit = {
 				scope:number = 2
+				owner = { NOT = { c:USA ?= THIS } }
 			}
 			multiply = {
 				value = 0.5
@@ -774,7 +815,16 @@ social_democrat_party = {
 		}
 		else_if = {
 			limit = {
-				scope:number >= 3
+				OR = {
+					AND = {
+						scope:number >= 3
+						owner = { NOT = { c:USA ?= THIS } }
+					}
+					AND = {
+						scope:number >= 4
+						owner = { c:USA ?= THIS }
+					}
+				}
 			}
 			multiply = {
 				value = 0.0

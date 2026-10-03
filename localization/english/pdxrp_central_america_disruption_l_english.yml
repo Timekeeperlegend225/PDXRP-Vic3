@@ -1,0 +1,9 @@
+﻿l_english:
+ save_edit_central_america_disruption: "Disrupt Central America"
+ save_edit_central_america_disruption_desc: "Reduce coal mine throughput in Central America's Costa Rica and iron mine throughput in its Guatemala by 20% for three years. Add radicals to 5% of the population in Central American Chiapas and add 5 devastation to every Central American state except San Salvador. This decision can be taken once."
+ pdxrp_costa_rica_coal_disruption: "Costa Rican Coal Mining Disruption"
+ pdxrp_costa_rica_coal_disruption_desc: "Coal mine throughput is reduced by 20% for three years."
+ pdxrp_guatemala_iron_disruption: "Guatemalan Iron Mining Disruption"
+ pdxrp_guatemala_iron_disruption_desc: "Iron mine throughput is reduced by 20% for three years."
+ save_edit_central_america_disruption_repair: "Repair Central American Mine Penalties"
+ save_edit_central_america_disruption_repair_desc: "Restore the coal mining penalty in Central American Costa Rica and the iron mining penalty in its Guatemala, each at -20% throughput for three years from now. No additional radicals or devastation are added. Use this once after restarting the game if the original decision displayed broken modifiers."

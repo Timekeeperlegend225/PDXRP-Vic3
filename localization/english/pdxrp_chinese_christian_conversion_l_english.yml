@@ -1,0 +1,3 @@
+﻿l_english:
+ save_edit_chinese_christian_conversion:0 "Spread Christianity in the Chinese States"
+ save_edit_chinese_christian_conversion_desc:0 "Convert 6% of non-Protestant people in every owned state of TPG, YUE, and NIA to Protestantism. Then convert 10% of non-Catholic people in every Yue state to Catholicism. Also convert 6% of non-Orthodox people in Tarim Basin, Dzungaria, Urga, Uliastai, Southern Heilongjiang, and Southern Jilin to Orthodoxy, and 3% of non-Catholic people in Portuguese Goa to Catholicism. Each effect applies once to its target; absent countries are skipped. Previously applied conversions are not repeated."

@@ -1,0 +1,9 @@
+﻿l_english:
+ save_edit_rebalance_american_migration: "Rebalance Migration in the Americas"
+ save_edit_rebalance_american_migration_desc: "Permanently reduce migration attraction in all USA states by 25% and increase it by 25% in all states of every other currently independent country in North, Central, and South America. Reduce the USA's birthrate by 5% for ten years. This decision can be taken once."
+ save_edit_usa_migration_penalty: "Reduced USA Migration Attraction"
+ save_edit_usa_migration_penalty_desc: "Migration attraction in all states is reduced by 25% permanently."
+ save_edit_american_migration_bonus: "Increased American Migration Attraction"
+ save_edit_american_migration_bonus_desc: "Migration attraction in all states is increased by 25% permanently."
+ save_edit_usa_birthrate_penalty: "Reduced USA Birthrate"
+ save_edit_usa_birthrate_penalty_desc: "Birthrate in all states is reduced by 5% for ten years."

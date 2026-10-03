@@ -1,4 +1,4 @@
-﻿# Bastion of the Intelligenstia, also appeals to Industrialists
+# Bastion of the Intelligenstia, also appeals to Industrialists
 # Can sometimes sway PB and Rural Folk when they have common interests
 
 liberal_party = {
@@ -25,10 +25,9 @@ liberal_party = {
 				}
 			}
 			triggered_desc = {
-				desc = party_republicans
+				desc = party_us_democrats
 				trigger = {
 					c:USA ?= THIS
-					has_global_variable = american_civil_war
 				}
 			}
 			triggered_desc = {
@@ -417,10 +416,15 @@ liberal_party = {
 			NOR = {
 				has_ideology = ideology:ideology_fascist
 				has_ideology = ideology:ideology_integralist
-				has_ideology = ideology:ideology_ethno_nationalist
 				has_ideology = ideology:ideology_communist
 				has_ideology = ideology:ideology_vanguardist
 				has_ideology = ideology:ideology_anarchist
+			}
+		}
+		OR = { # Ethno-nationalist leaders may join the USA Democrats.
+			owner = { c:USA ?= THIS }
+			leader ?= {
+				NOT = { has_ideology = ideology:ideology_ethno_nationalist }
 			}
 		}
 	}
@@ -439,10 +443,10 @@ liberal_party = {
 					c:USA ?= THIS
 				}
 				OR = {
-					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_rural_folk
 					is_interest_group_type = ig_intelligentsia
-					is_interest_group_type = ig_devout
-					is_interest_group_type = ig_industrialists
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_armed_forces
 				}
 			}
 			add = {
@@ -1125,6 +1129,7 @@ liberal_party = {
 		if = {
 			limit = {
 				owner = {
+					NOT = { c:USA ?= THIS } # USA uses the fixed +6 affiliations above.
 					is_in_geographic_region = geographic_region_north_america
 					OR = {
 						country_has_primary_culture = cu:yankee
@@ -1303,6 +1308,7 @@ liberal_party = {
 		else_if = {
 			limit = {
 				scope:number = 2
+				owner = { NOT = { c:USA ?= THIS } }
 			}
 			multiply = {
 				value = 0.5
