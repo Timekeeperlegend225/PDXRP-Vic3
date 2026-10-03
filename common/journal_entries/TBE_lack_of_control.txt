@@ -274,10 +274,12 @@
 				}
 				if = {
 					limit = {
-						has_decree = decree_local_censuss
-						institution_investment_level = {
-							institution = institution_home_affairs	
-							value = 1
+						has_decree = decree_local_census
+						owner = {
+							institution_investment_level = {
+								institution = institution_home_affairs	
+								value >= 1
+							}
 						}
 						NOT = {
 							OR = {

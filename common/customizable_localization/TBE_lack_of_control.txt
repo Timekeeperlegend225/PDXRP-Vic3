@@ -431,7 +431,7 @@ home_affairs_institution_3_checkbox = {
 		trigger = {
 			institution_investment_level = {
 				institution = institution_home_affairs
-				value > 3
+				value => 1
 			}
 		}
 		localization_key = checkbox_ticked
