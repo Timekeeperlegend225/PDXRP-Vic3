@@ -351,18 +351,18 @@ gm_actions.3 = {
 	#Tech
 	
 	option = {
-		name = gm_actions.return
+		name = gm_actions.30.t
 		trigger_event = {
-			id = gm_actions.1
+			id = gm_actions.30
 			days = 0
 			popup = yes
 		}
 	}
 	
 	option = {
-		name = gm_actions.30.t
+		name = gm_actions.return
 		trigger_event = {
-			id = gm_actions.30
+			id = gm_actions.1
 			days = 0
 			popup = yes
 		}
