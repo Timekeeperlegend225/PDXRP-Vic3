@@ -264,40 +264,9 @@ je_cement_the_rightful_dynasty = {
 			name = french_dynastic_primary_progress_var
 			value = 0
 		}
-
-		if = {
-			limit = {
-				any_scope_character = { ### This is load-bearing cursed script. Do NOT change this to ruler = { } ###
-					is_ruler_of_own_country = yes
-					has_variable = legitimist_leader
-				}
-			}
-			set_variable = {
-				name = legitimist_restoration_var
-			}
-		}
-		else_if = {
-			limit = {
-				any_scope_character = {
-					is_ruler_of_own_country = yes
-					has_variable = house_orleans
-				}
-			}
-			set_variable = {
-				name = orleanist_restoration_var
-			}
-		}
-		else_if = {
-			limit = {
-				any_scope_character = {
-					is_ruler_of_own_country = yes
-					has_variable = house_bonaparte
-				}
-			}
 			set_variable = {
 				name = bonapartist_restoration_var
 			}
-		}
 	}
 
 	is_progressing = {

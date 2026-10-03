@@ -1,0 +1,21 @@
+﻿REPLACE:naval_mission_type_privateer = {
+    icon = "gfx/interface/icons/commander_order_icons/piracy_privateering.dds"
+    map_texture = "gfx/map/map_painting/naval_missions_map_patterns/naval_mission_piracy.dds"
+    clicksound = "event:/SFX/UI/NavalBattle/Missions/naval_mission_privateer"
+
+    piracy = yes
+    piracy_import_targets = { hostile }
+    piracy_export_targets = { non_allies }
+    ai_will_cancel_for_transportation = yes
+    experience = 2
+
+    command_modifier = {
+        character_piracy_goods_capacity_mult = 1.0
+        ship_visibility_mult = -0.25
+    }
+
+    potential = {
+        has_dlc_feature = ep2_content
+    }
+}
+
