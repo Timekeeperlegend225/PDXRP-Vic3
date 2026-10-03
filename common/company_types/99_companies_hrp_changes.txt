@@ -4087,6 +4087,7 @@ REPLACE:company_electricidad_de_caracas = {
 	prosperity_modifier = {
 		state_infrastructure_from_population_add = 5
 		state_infrastructure_from_population_max_add = 10
+		country_company_throughput_bonus_add = 0.20
 	}
 
 	ai_will_do = {

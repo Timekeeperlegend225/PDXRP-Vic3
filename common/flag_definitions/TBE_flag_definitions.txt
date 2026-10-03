@@ -231,3 +231,86 @@ REPLACE:BIC = { # British East India Company
 		}
 	}
 }
+
+
+
+REPLACE:RUS = { # Russia
+	flag_definition = {
+		coa = RUS_imperial
+		allow_overlord_canton = yes
+		subject_canton = RUS_imperial
+		priority = 1
+	}
+	flag_definition = {
+		coa = RUS_imperial
+		subject_canton = RUS
+		priority = 20
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RUS_republic
+		subject_canton = RUS_republic
+		priority = 10
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RUS_dictatorship
+		subject_canton = RUS_dictatorship
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RUS_oligarchy
+		subject_canton = RUS_oligarchy
+		priority = 25
+		trigger = {
+			coa_def_oligarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RUS_soviet_union
+		priority = 1500 # need to override the DEFAULT
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RUS_soviet_technocracy
+		priority = 1750 # need to override the DEFAULT
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+			scope:actor ?= {
+				has_law_or_variant = law_type:law_technocracy
+			}
+		}
+	}
+	flag_definition = {
+		coa = RUS_fascist
+		subject_canton = RUS_fascist
+		priority = 1500
+		trigger = {
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RUS_theocracy
+		subject_canton = RUS_theocracy
+		priority = 20
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RUS_nihilist
+		priority = 1500 # need to override the DEFAULT
+		trigger = {
+			coa_def_nihilist_flag_trigger = yes
+		}
+	}
+}
