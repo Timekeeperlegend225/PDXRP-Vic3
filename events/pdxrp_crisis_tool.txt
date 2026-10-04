@@ -60,6 +60,11 @@ pdxrp_crisis_tool.2 = {
         name = pdxrp_crisis_tool.apply2
         trigger = { var:pdxrp_crisis_months >= 1 }
         scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_crisis_level_1
+            remove_modifier = pdxrp_crisis_level_2
+            remove_modifier = pdxrp_crisis_level_3
+            remove_modifier = pdxrp_crisis_level_4
+            remove_modifier = pdxrp_crisis_level_5
             if = {
                 limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 1 } }
                 add_modifier = {
@@ -100,11 +105,6 @@ pdxrp_crisis_tool.2 = {
                     is_decaying = yes
                 }
             }
-            remove_modifier = pdxrp_crisis_level_1
-            remove_modifier = pdxrp_crisis_level_2
-            remove_modifier = pdxrp_crisis_level_3
-            remove_modifier = pdxrp_crisis_level_4
-            remove_modifier = pdxrp_crisis_level_5
         }
         remove_variable = pdxrp_crisis_intensity
         remove_variable = pdxrp_crisis_months
@@ -116,6 +116,11 @@ pdxrp_crisis_tool.2 = {
         name = pdxrp_crisis_tool.apply4
         trigger = { var:pdxrp_crisis_months >= 1 }
         scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_crisis_level_1
+            remove_modifier = pdxrp_crisis_level_2
+            remove_modifier = pdxrp_crisis_level_3
+            remove_modifier = pdxrp_crisis_level_4
+            remove_modifier = pdxrp_crisis_level_5
             if = {
                 limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 1 } }
                 add_modifier = {
@@ -156,11 +161,6 @@ pdxrp_crisis_tool.2 = {
                     is_decaying = yes
                 }
             }
-            remove_modifier = pdxrp_crisis_level_1
-            remove_modifier = pdxrp_crisis_level_2
-            remove_modifier = pdxrp_crisis_level_3
-            remove_modifier = pdxrp_crisis_level_4
-            remove_modifier = pdxrp_crisis_level_5
         }
         remove_variable = pdxrp_crisis_intensity
         remove_variable = pdxrp_crisis_months
@@ -172,6 +172,11 @@ pdxrp_crisis_tool.2 = {
         name = pdxrp_crisis_tool.apply6
         trigger = { var:pdxrp_crisis_months >= 1 }
         scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_crisis_level_1
+            remove_modifier = pdxrp_crisis_level_2
+            remove_modifier = pdxrp_crisis_level_3
+            remove_modifier = pdxrp_crisis_level_4
+            remove_modifier = pdxrp_crisis_level_5
             if = {
                 limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 1 } }
                 add_modifier = {
@@ -212,11 +217,6 @@ pdxrp_crisis_tool.2 = {
                     is_decaying = yes
                 }
             }
-            remove_modifier = pdxrp_crisis_level_1
-            remove_modifier = pdxrp_crisis_level_2
-            remove_modifier = pdxrp_crisis_level_3
-            remove_modifier = pdxrp_crisis_level_4
-            remove_modifier = pdxrp_crisis_level_5
         }
         remove_variable = pdxrp_crisis_intensity
         remove_variable = pdxrp_crisis_months
@@ -228,6 +228,11 @@ pdxrp_crisis_tool.2 = {
         name = pdxrp_crisis_tool.apply8
         trigger = { var:pdxrp_crisis_months >= 1 }
         scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_crisis_level_1
+            remove_modifier = pdxrp_crisis_level_2
+            remove_modifier = pdxrp_crisis_level_3
+            remove_modifier = pdxrp_crisis_level_4
+            remove_modifier = pdxrp_crisis_level_5
             if = {
                 limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 1 } }
                 add_modifier = {
@@ -268,11 +273,6 @@ pdxrp_crisis_tool.2 = {
                     is_decaying = yes
                 }
             }
-            remove_modifier = pdxrp_crisis_level_1
-            remove_modifier = pdxrp_crisis_level_2
-            remove_modifier = pdxrp_crisis_level_3
-            remove_modifier = pdxrp_crisis_level_4
-            remove_modifier = pdxrp_crisis_level_5
         }
         remove_variable = pdxrp_crisis_intensity
         remove_variable = pdxrp_crisis_months
@@ -284,6 +284,11 @@ pdxrp_crisis_tool.2 = {
         name = pdxrp_crisis_tool.apply
         trigger = { var:pdxrp_crisis_months >= 1 }
         scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_crisis_level_1
+            remove_modifier = pdxrp_crisis_level_2
+            remove_modifier = pdxrp_crisis_level_3
+            remove_modifier = pdxrp_crisis_level_4
+            remove_modifier = pdxrp_crisis_level_5
             if = {
                 limit = { scope:pdxrp_crisis_gm = { var:pdxrp_crisis_intensity = 1 } }
                 add_modifier = {
@@ -324,11 +329,6 @@ pdxrp_crisis_tool.2 = {
                     is_decaying = yes
                 }
             }
-            remove_modifier = pdxrp_crisis_level_1
-            remove_modifier = pdxrp_crisis_level_2
-            remove_modifier = pdxrp_crisis_level_3
-            remove_modifier = pdxrp_crisis_level_4
-            remove_modifier = pdxrp_crisis_level_5
         }
         remove_variable = pdxrp_crisis_intensity
         remove_variable = pdxrp_crisis_months
