@@ -1,0 +1,240 @@
+pdxrp_campaign_pop_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    state_birth_rate_mult = 0.05
+    state_migration_pull_mult = 0.10
+    country_mass_migration_attraction_mult = 0.10
+}
+
+pdxrp_campaign_pop_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    state_birth_rate_mult = 0.10
+    state_migration_pull_mult = 0.20
+    country_mass_migration_attraction_mult = 0.20
+}
+
+pdxrp_campaign_pop_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    state_birth_rate_mult = 0.15
+    state_migration_pull_mult = 0.30
+    country_mass_migration_attraction_mult = 0.30
+}
+
+pdxrp_campaign_pop_4 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    state_birth_rate_mult = 0.20
+    state_migration_pull_mult = 0.40
+    country_mass_migration_attraction_mult = 0.40
+}
+
+pdxrp_campaign_pop_5 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    state_birth_rate_mult = 0.25
+    state_migration_pull_mult = 0.50
+    country_mass_migration_attraction_mult = 0.50
+}
+
+pdxrp_campaign_stability_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_legitimacy_base_add = 5
+    state_loyalists_from_political_movements_mult = 0.10
+    country_suppression_attraction_factor = -0.10
+    country_bolster_attraction_factor = 0.15
+    country_influence_mult = 0.20
+    country_authority_add = 50
+}
+
+pdxrp_campaign_stability_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_legitimacy_base_add = 10
+    state_loyalists_from_political_movements_mult = 0.20
+    country_suppression_attraction_factor = -0.20
+    country_bolster_attraction_factor = 0.30
+    country_influence_mult = 0.40
+    country_authority_add = 100
+}
+
+pdxrp_campaign_stability_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_legitimacy_base_add = 15
+    state_loyalists_from_political_movements_mult = 0.30
+    country_suppression_attraction_factor = -0.30
+    country_bolster_attraction_factor = 0.45
+    country_influence_mult = 0.60
+    country_authority_add = 150
+}
+
+pdxrp_campaign_stability_4 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_legitimacy_base_add = 20
+    state_loyalists_from_political_movements_mult = 0.40
+    country_suppression_attraction_factor = -0.40
+    country_bolster_attraction_factor = 0.60
+    country_influence_mult = 0.80
+    country_authority_add = 200
+}
+
+pdxrp_campaign_stability_5 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_legitimacy_base_add = 25
+    state_loyalists_from_political_movements_mult = 0.50
+    country_suppression_attraction_factor = -0.50
+    country_bolster_attraction_factor = 0.75
+    country_influence_mult = 1.00
+    country_authority_add = 250
+}
+
+pdxrp_campaign_eco_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_minting_mult = 0.10
+    country_minting_add = 10000
+    building_throughput_add = 0.10
+    state_construction_mult = 0.05
+    state_academics_investment_pool_efficiency_mult = 0.15
+    state_aristocrats_investment_pool_efficiency_mult = 0.15
+    state_bureaucrats_investment_pool_efficiency_mult = 0.15
+    state_capitalists_investment_pool_efficiency_mult = 0.15
+    state_clergymen_investment_pool_efficiency_mult = 0.15
+    state_clerks_investment_pool_efficiency_mult = 0.15
+    state_engineers_investment_pool_efficiency_mult = 0.15
+    state_farmers_investment_pool_efficiency_mult = 0.15
+    state_laborers_investment_pool_efficiency_mult = 0.15
+    state_machinists_investment_pool_efficiency_mult = 0.15
+    state_officers_investment_pool_efficiency_mult = 0.15
+    state_peasants_investment_pool_efficiency_mult = 0.15
+    state_shopkeepers_investment_pool_efficiency_mult = 0.15
+    state_slaves_investment_pool_efficiency_mult = 0.15
+    state_soldiers_investment_pool_efficiency_mult = 0.15
+}
+
+pdxrp_campaign_eco_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_minting_mult = 0.20
+    country_minting_add = 20000
+    building_throughput_add = 0.20
+    state_construction_mult = 0.10
+    state_academics_investment_pool_efficiency_mult = 0.30
+    state_aristocrats_investment_pool_efficiency_mult = 0.30
+    state_bureaucrats_investment_pool_efficiency_mult = 0.30
+    state_capitalists_investment_pool_efficiency_mult = 0.30
+    state_clergymen_investment_pool_efficiency_mult = 0.30
+    state_clerks_investment_pool_efficiency_mult = 0.30
+    state_engineers_investment_pool_efficiency_mult = 0.30
+    state_farmers_investment_pool_efficiency_mult = 0.30
+    state_laborers_investment_pool_efficiency_mult = 0.30
+    state_machinists_investment_pool_efficiency_mult = 0.30
+    state_officers_investment_pool_efficiency_mult = 0.30
+    state_peasants_investment_pool_efficiency_mult = 0.30
+    state_shopkeepers_investment_pool_efficiency_mult = 0.30
+    state_slaves_investment_pool_efficiency_mult = 0.30
+    state_soldiers_investment_pool_efficiency_mult = 0.30
+}
+
+pdxrp_campaign_eco_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_minting_mult = 0.30
+    country_minting_add = 30000
+    building_throughput_add = 0.30
+    state_construction_mult = 0.15
+    state_academics_investment_pool_efficiency_mult = 0.45
+    state_aristocrats_investment_pool_efficiency_mult = 0.45
+    state_bureaucrats_investment_pool_efficiency_mult = 0.45
+    state_capitalists_investment_pool_efficiency_mult = 0.45
+    state_clergymen_investment_pool_efficiency_mult = 0.45
+    state_clerks_investment_pool_efficiency_mult = 0.45
+    state_engineers_investment_pool_efficiency_mult = 0.45
+    state_farmers_investment_pool_efficiency_mult = 0.45
+    state_laborers_investment_pool_efficiency_mult = 0.45
+    state_machinists_investment_pool_efficiency_mult = 0.45
+    state_officers_investment_pool_efficiency_mult = 0.45
+    state_peasants_investment_pool_efficiency_mult = 0.45
+    state_shopkeepers_investment_pool_efficiency_mult = 0.45
+    state_slaves_investment_pool_efficiency_mult = 0.45
+    state_soldiers_investment_pool_efficiency_mult = 0.45
+}
+
+pdxrp_campaign_eco_4 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_minting_mult = 0.40
+    country_minting_add = 40000
+    building_throughput_add = 0.40
+    state_construction_mult = 0.20
+    state_academics_investment_pool_efficiency_mult = 0.60
+    state_aristocrats_investment_pool_efficiency_mult = 0.60
+    state_bureaucrats_investment_pool_efficiency_mult = 0.60
+    state_capitalists_investment_pool_efficiency_mult = 0.60
+    state_clergymen_investment_pool_efficiency_mult = 0.60
+    state_clerks_investment_pool_efficiency_mult = 0.60
+    state_engineers_investment_pool_efficiency_mult = 0.60
+    state_farmers_investment_pool_efficiency_mult = 0.60
+    state_laborers_investment_pool_efficiency_mult = 0.60
+    state_machinists_investment_pool_efficiency_mult = 0.60
+    state_officers_investment_pool_efficiency_mult = 0.60
+    state_peasants_investment_pool_efficiency_mult = 0.60
+    state_shopkeepers_investment_pool_efficiency_mult = 0.60
+    state_slaves_investment_pool_efficiency_mult = 0.60
+    state_soldiers_investment_pool_efficiency_mult = 0.60
+}
+
+pdxrp_campaign_eco_5 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_minting_mult = 0.50
+    country_minting_add = 50000
+    building_throughput_add = 0.50
+    state_construction_mult = 0.25
+    state_academics_investment_pool_efficiency_mult = 0.75
+    state_aristocrats_investment_pool_efficiency_mult = 0.75
+    state_bureaucrats_investment_pool_efficiency_mult = 0.75
+    state_capitalists_investment_pool_efficiency_mult = 0.75
+    state_clergymen_investment_pool_efficiency_mult = 0.75
+    state_clerks_investment_pool_efficiency_mult = 0.75
+    state_engineers_investment_pool_efficiency_mult = 0.75
+    state_farmers_investment_pool_efficiency_mult = 0.75
+    state_laborers_investment_pool_efficiency_mult = 0.75
+    state_machinists_investment_pool_efficiency_mult = 0.75
+    state_officers_investment_pool_efficiency_mult = 0.75
+    state_peasants_investment_pool_efficiency_mult = 0.75
+    state_shopkeepers_investment_pool_efficiency_mult = 0.75
+    state_slaves_investment_pool_efficiency_mult = 0.75
+    state_soldiers_investment_pool_efficiency_mult = 0.75
+}
+
+pdxrp_campaign_modernization_1 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_bureaucracy_mult = 0.10
+    state_literacy_growth_add = 0.00015
+    country_weekly_innovation_add = 10
+    country_law_enactment_stall_mult = -0.10
+}
+
+pdxrp_campaign_modernization_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_bureaucracy_mult = 0.20
+    state_literacy_growth_add = 0.00030
+    country_weekly_innovation_add = 20
+    country_law_enactment_stall_mult = -0.20
+}
+
+pdxrp_campaign_modernization_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_bureaucracy_mult = 0.30
+    state_literacy_growth_add = 0.00045
+    country_weekly_innovation_add = 30
+    country_law_enactment_stall_mult = -0.30
+}
+
+pdxrp_campaign_modernization_4 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_bureaucracy_mult = 0.40
+    state_literacy_growth_add = 0.00060
+    country_weekly_innovation_add = 40
+    country_law_enactment_stall_mult = -0.40
+}
+
+pdxrp_campaign_modernization_5 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_bureaucracy_mult = 0.50
+    state_literacy_growth_add = 0.00075
+    country_weekly_innovation_add = 50
+    country_law_enactment_stall_mult = -0.50
+}
+
