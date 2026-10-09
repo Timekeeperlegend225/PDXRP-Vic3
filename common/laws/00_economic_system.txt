@@ -825,11 +825,10 @@ law_cooperative_ownership = {
 
 	modifier = {
 		state_shopkeepers_investment_pool_efficiency_mult = 0.25
-		state_farmers_investment_pool_efficiency_mult = 0.25
 		country_private_construction_allocation_mult = 0.35
-		country_government_dividends_reinvestment_add = 1.0
+		country_government_dividends_reinvestment_add = 0.5
 		building_company_worker_dividends_add = 0.75
-		country_free_charters_add = 1
+		country_free_charters_add = 2
 
 		building_group_bg_manufacturing_allowed_collectivization_add = 1.0
 		building_group_bg_extraction_allowed_collectivization_add = 1.0
@@ -838,16 +837,24 @@ law_cooperative_ownership = {
 		building_group_bg_arts_allowed_collectivization_add = 1.0
 
 		country_foreign_collectivization_bool = yes
+		state_shopkeepers_investment_pool_contribution_add = 0.05
+		country_government_dividends_efficiency_add = 0.30
+		building_nationalization_investment_return_add = 1.0
+		country_max_companies_add = 1
 	}
 
 	institution = institution_national_bank
 	institution_modifier = {
-		state_laborers_investment_pool_contribution_add = 0.01
+		state_laborers_investment_pool_contribution_add = 0.03
 		state_clerks_investment_pool_contribution_add = 0.01
 		state_clerks_investment_pool_efficiency_mult = 0.02
 		state_engineers_investment_pool_efficiency_mult = 0.02
-		state_laborers_investment_pool_efficiency_mult = 0.02
-		state_machinists_investment_pool_efficiency_mult = 0.02
+		state_laborers_investment_pool_efficiency_mult = 0.06
+		state_machinists_investment_pool_efficiency_mult = 0.06
+		state_machinists_investment_pool_contribution_add = 0.01
+		state_engineers_investment_pool_contribution_add = 0.01
+		state_shopkeepers_investment_pool_contribution_add = 0.01
+		state_shopkeepers_investment_pool_efficiency_mult = 0.04
 	}
 
 	ai_enact_weight_modifier = { #Petitions
@@ -937,12 +944,13 @@ law_command_economy = {
 		country_government_dividends_efficiency_add = 0.4
 		country_private_construction_allocation_mult = 0.1
 		building_company_government_dividends_add = 0.75
-		country_free_charters_add = 1
+		country_free_charters_add = 2
 
 		country_leverage_resistance_mult = 0.25
 
 		country_disable_non_company_privatization_bool = yes
 		country_institution_cost_institution_national_bank_mult = 0.8
+		country_max_companies_add = 1
 	}
 
 	institution = institution_national_bank

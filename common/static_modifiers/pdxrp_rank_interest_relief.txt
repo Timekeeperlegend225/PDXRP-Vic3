@@ -1,0 +1,9 @@
+pdxrp_major_power_interest_relief = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_loan_interest_rate_mult = -0.20
+}
+
+pdxrp_other_power_interest_relief = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+    country_loan_interest_rate_mult = -0.40
+}

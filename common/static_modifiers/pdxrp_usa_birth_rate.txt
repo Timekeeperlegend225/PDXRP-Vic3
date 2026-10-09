@@ -1,0 +1,4 @@
+pdxrp_usa_reduced_birth_rate = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+    state_birth_rate_mult = -0.20
+}

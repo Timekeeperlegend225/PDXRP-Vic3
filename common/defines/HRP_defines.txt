@@ -15,7 +15,7 @@ NDiplomacy = {
 
 NPowerBlocs = {
 	MAX_MANDATE_PROGRESS = 2400	
-	INITIAL_PRINCIPLE_LEVELS = 4
+	INITIAL_PRINCIPLE_LEVELS = 6 # Starting mandate allowance during power bloc formation (was 4)
 }
 
 
