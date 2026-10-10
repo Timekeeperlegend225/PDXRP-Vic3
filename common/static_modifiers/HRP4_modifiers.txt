@@ -218,3 +218,29 @@ monaco_exhbition = {
 	icon = gfx/interface/icons/principles_icons/companies.dds
 	country_company_throughput_bonus_add = 0.1
 }
+
+FRA_ship_consturction_bonus = {
+	icon = gfx/interface/icons/principles_icons/companies.dds
+	country_ship_construction_add = 8000
+	country_ship_construction_efficiency_add = 1
+	country_ship_construction_goods_cost_mult = -1
+	country_ship_construction_progress_max_add = 10000
+}
+
+MOR_ship_consturction_bonus = {
+	icon = gfx/interface/icons/principles_icons/companies.dds
+	country_ship_construction_add = 1000
+	country_ship_construction_efficiency_add = 0.5
+	country_ship_construction_goods_cost_mult = -1
+	country_ship_construction_progress_max_add = 1000
+}
+
+FRA_monopolies = {
+	icon = gfx/interface/icons/principles_icons/companies.dds
+	country_free_charters_add = 10
+}
+
+african_gold = {
+	icon = gfx/interface/icons/principles_icons/companies.dds
+	country_minting_add = 1000
+}
