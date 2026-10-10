@@ -10,7 +10,6 @@ NMilitary = {
 
 NDiplomacy = {
 	MAX_INFAMY = 200
-	PRESTIGE_FROM_NAVY_COMBAT_POWER = 0.35
 }
 
 NPowerBlocs = {

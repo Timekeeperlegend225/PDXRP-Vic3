@@ -315,42 +315,10 @@ REPLACE:RUS = { # Russia
 	}
 }
 
-REPLACE:PHI = { # Philippines
+REPLACE_OR_CREATE:MGB = { 
 	flag_definition = {
-		coa = PHI
-		subject_canton = PHI
-		allow_overlord_canton = yes
-		coa_with_overlord_canton = PHI_subject
-		priority = 1
-	}
-	flag_definition = {
-		coa = PHI_war
-		subject_canton = PHI_war
-		priority = 2
-		trigger = {
-			OR = {
-				coa_def_independent_trigger = yes
-				coa_def_independence_war_trigger = yes
-			}
-			coa_def_war_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = PHI_dictatorship
-		subject_canton = PHI_dictatorship
-		allow_overlord_canton = yes
-		coa_with_overlord_canton = PHI_subject
-		priority = 20
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = PHI_fascist
-		subject_canton = PHI_fascist
-		priority = 50
-		trigger = {
-			coa_def_fascist_flag_trigger = yes
-		}
+		coa = MGB
+		allow_overlord_canton = no
+		priority = 10000
 	}
 }
