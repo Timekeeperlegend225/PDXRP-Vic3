@@ -222,7 +222,6 @@ monaco_exhbition = {
 FRA_ship_consturction_bonus = {
 	icon = gfx/interface/icons/principles_icons/companies.dds
 	country_ship_construction_add = 8000
-	country_ship_construction_efficiency_add = 1
 	country_ship_construction_goods_cost_mult = -1
 	country_ship_construction_progress_max_add = 10000
 }
@@ -230,7 +229,6 @@ FRA_ship_consturction_bonus = {
 MOR_ship_consturction_bonus = {
 	icon = gfx/interface/icons/principles_icons/companies.dds
 	country_ship_construction_add = 1000
-	country_ship_construction_efficiency_add = 0.5
 	country_ship_construction_goods_cost_mult = -1
 	country_ship_construction_progress_max_add = 1000
 }
