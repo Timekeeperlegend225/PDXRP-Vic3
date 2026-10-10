@@ -1,2 +1,4 @@
 ﻿l_english:
  pdxrp_taiping_religious_tolerance:0 "Religious Tolerance"
+ pdxrp_taiping_religious_tolerance_decision:0 "Grant Taiping Religious Tolerance"
+ pdxrp_taiping_religious_tolerance_decision_desc:0 "Permanently grant Taiping +5 acceptance for religions that share no religious traits with its state religion, including Confucianism. Available while Taiping exists and does not already have Religious Tolerance."

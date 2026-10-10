@@ -437,6 +437,23 @@ liberal_party = {
 			value = -5
 			desc = "base_value"
 		}
+		if = { # USA Trade Unions under non-socialist or moderate socialist leaders
+			limit = {
+				owner = { c:USA ?= THIS }
+				is_interest_group_type = ig_trade_unions
+				leader = {
+					OR = {
+						NOT = { has_socialist_ideology = yes }
+						has_ideology = ideology:ideology_social_democrat
+						has_ideology = ideology:ideology_utopian
+					}
+				}
+			}
+			add = {
+				value = 30
+				desc = pdxrp_usa_trade_unions_liberal_attraction
+			}
+		}
 		if = {
 			limit = {
 				owner = {
@@ -450,7 +467,7 @@ liberal_party = {
 				}
 			}
 			add = {
-				value = 6
+				value = 10
 				desc = "usa_two_party_system"
 			}
 		}
@@ -1129,7 +1146,7 @@ liberal_party = {
 		if = {
 			limit = {
 				owner = {
-					NOT = { c:USA ?= THIS } # USA uses the fixed +6 affiliations above.
+					NOT = { c:USA ?= THIS } # USA uses the fixed +10 affiliations above.
 					is_in_geographic_region = geographic_region_north_america
 					OR = {
 						country_has_primary_culture = cu:yankee

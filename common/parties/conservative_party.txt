@@ -521,7 +521,7 @@ conservative_party = {
 				}
 			}
 			add = {
-				value = 6
+				value = 10
 				desc = "usa_two_party_system"
 			}
 		}
