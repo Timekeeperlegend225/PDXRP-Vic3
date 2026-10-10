@@ -182,6 +182,20 @@ value_selection.1 = {
 			remove_modifier = GM_interacted_mod
 		}
 	}
+	
+	option = {
+		name = value_selection.1.n
+		scope:GM_interacted_scope = {
+			add_investment_pool = global_var:gm_variable_money
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
 }
 
 #Radicals/loyalists
@@ -953,6 +967,25 @@ value_selection.43 = {
 			add_war_war_support = {
 				target = scope:GM_interacted_scope
 				value = global_var:gm_variable_war_support
+			}
+		}
+		remove_global_variable = GM_taking_action
+		random_country = {
+			limit = {
+				has_modifier = GM_interacted_mod
+			}
+			remove_modifier = GM_interacted_mod
+		}
+	}
+	
+	option = {
+		name = value_selection.43.o
+		every_country = {
+			every_scope_war = {
+				add_war_war_support = {
+					target = previous
+					value = global_var:gm_variable_war_support
+				}
 			}
 		}
 		remove_global_variable = GM_taking_action
