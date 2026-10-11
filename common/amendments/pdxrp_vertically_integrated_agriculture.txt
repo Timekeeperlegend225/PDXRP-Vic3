@@ -1,0 +1,55 @@
+REPLACE:amendment_vertically_integrated_agriculture = {
+
+	parent = law_interventionism # TODO PRCAL-35135 change to State Capitalism
+
+	allowed_laws = {
+		law_serfdom
+		law_manorialism
+		law_tenant_farmers
+		law_latifundias
+		law_expanded_latifundias
+		law_commercialized_agriculture
+		law_peasant_proprietorship
+		law_homesteading
+		law_collectivized_agriculture
+		law_rural_serfdom
+		law_veth-begar
+	}
+
+	modifier = {
+		country_capitalists_pol_str_mult = 0.1
+		country_peasants_pol_str_mult = -0.1
+		building_group_bg_agriculture_construction_efficiency_add = 0.05
+		country_financial_districts_buy_farms_likelihood = 0.25
+	}
+
+	possible = {
+		always = yes
+	}
+
+	would_sponsor = {
+		OR = {
+			is_interest_group_type = ig_industrialists
+			has_ideology = ideology:ideology_technocratic
+			leader = {
+				has_ideology = ideology:ideology_positivist
+			}
+		}
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_interventionism
+				value < neutral
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+
+	amendment_activism_multiplier = 0.25
+}
