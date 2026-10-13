@@ -1,0 +1,105 @@
+﻿combat_unit_type_zip_binary_troopers = {
+	group = combat_unit_group_infantry
+	max_manpower = 1000
+	supply_capacity = 80
+
+	upkeep_modifier = { goods_input_grain_add = 1 }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 60
+        unit_morale_loss_add = 4
+        unit_devastation_mult = 0.1
+    }
+
+	unlocking_technologies = { pdxrp_zip_bomb_virtual_arsenal }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = {
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_mechanized.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_mechanized.dds"
+    }
+}
+
+combat_unit_type_zip_file_corruptors = {
+	group = combat_unit_group_artillery
+	max_manpower = 1000
+	supply_capacity = 100
+
+	upkeep_modifier = { goods_input_grain_add = 1 }
+
+    battle_modifier = {
+        unit_offense_add = 70
+        unit_defense_add = 35
+        unit_morale_loss_add = 4
+        unit_kill_rate_add = 0.25
+        unit_morale_damage_mult = 0.15
+        unit_devastation_mult = 0.2
+        unit_naval_invasion_efficiency_mult = -0.25
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_army_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { pdxrp_zip_bomb_virtual_arsenal }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/artillery_heavy_tank.dds"
+    }
+}
+
+combat_unit_type_zip_katla_cultist_magi = {
+	group = combat_unit_group_cavalry
+	max_manpower = 1000
+	supply_capacity = 100
+
+	upkeep_modifier = { goods_input_grain_add = 1 }
+
+    battle_modifier = {
+        unit_offense_add = 45
+        unit_defense_add = 45
+        unit_morale_loss_add = 4
+        unit_devastation_mult = 0.1
+        unit_occupation_mult = 0.3
+        unit_naval_invasion_efficiency_mult = -0.25
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = 0.2
+    }
+
+	unlocking_technologies = { pdxrp_zip_bomb_virtual_arsenal }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/cavalry_light_tank.dds"
+    }
+}

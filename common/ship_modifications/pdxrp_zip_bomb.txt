@@ -1,0 +1,613 @@
+﻿pdxrp_zip_ship_mod_aircraft_carrier_armor_high = {
+	type = ship_mod_slot_armor
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_armor_high.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_armor_heavy"
+
+	modifier = {
+		ship_armor_add = 288
+		ship_hit_points_max_add = 1100
+	}
+
+	
+
+	ai_weight = {
+		value = 3
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_armor_light = {
+	type = ship_mod_slot_armor
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_armor_light.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_armor_light"
+
+	modifier = {
+		ship_armor_add = 59
+		ship_hit_points_max_add = 175
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_armor_medium = {
+	type = ship_mod_slot_armor
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_armor_medium.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_armor_medium"
+
+	modifier = {
+		ship_armor_add = 144
+		ship_hit_points_max_add = 550
+	}
+
+	
+
+	ai_weight = {
+		value = 2
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_guns_high = {
+	type = ship_mod_slot_guns
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_guns_high.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_guns_heavy"
+
+	modifier = {
+		ship_hull_damage_add = 290
+		ship_crew_damage_add = 30
+		ship_critical_hit_chance_add = 0.25
+		ship_vulnerability_add = 56
+	}
+
+	
+
+	ai_weight = {
+		value = 3
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_guns_light = {
+	type = ship_mod_slot_guns
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_guns_light.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_guns_light"
+
+	modifier = {
+		ship_hull_damage_add = 115
+		ship_crew_damage_add = 12
+		ship_critical_hit_chance_add = 0.1
+		ship_vulnerability_add = 6
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_guns_medium = {
+	type = ship_mod_slot_guns
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_guns_medium.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_guns_medium"
+
+	modifier = {
+		ship_hull_damage_add = 200
+		ship_crew_damage_add = 20
+		ship_critical_hit_chance_add = 0.15
+		ship_vulnerability_add = 14
+	}
+
+	
+
+	ai_weight = {
+		value = 2
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_propulsion_high = {
+	type = ship_mod_slot_propulsion
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_propulsion_high.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_heavy"
+
+	modifier = {
+		ship_movement_speed_add = 15
+	}
+
+	
+
+	ai_weight = {
+		value = 3
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_propulsion_light = {
+	type = ship_mod_slot_propulsion
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_propulsion_light.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_light"
+
+	modifier = {
+		ship_movement_speed_add = 10
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_propulsion_medium = {
+	type = ship_mod_slot_propulsion
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_propulsion_medium.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_medium"
+
+	modifier = {
+		ship_movement_speed_add = 12.5
+	}
+
+	
+
+	ai_weight = {
+		value = 2
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_range_high = {
+	type = ship_mod_slot_range
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_range_high.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_range_long"
+
+	modifier = {
+		ship_power_projection_add = 89
+		ship_supply_capacity_add = 225
+		ship_supply_efficiency_add = 0.25
+	}
+
+	
+
+	ai_weight = {
+		value = 3
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_power_projection_doctrine
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_range_light = {
+	type = ship_mod_slot_range
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_range_light.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_range_short"
+
+	modifier = {
+		ship_supply_capacity_add = 45
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_power_projection_doctrine
+	}
+}
+
+pdxrp_zip_ship_mod_aircraft_carrier_range_medium = {
+	type = ship_mod_slot_range
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_aircraft_carrier_range_medium.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_range_medium"
+
+	modifier = {
+		ship_power_projection_add = 44
+		ship_supply_capacity_add = 110
+		ship_supply_efficiency_add = 0.1
+	}
+
+	
+
+	ai_weight = {
+		value = 2
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_power_projection_doctrine
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_armor_high = {
+	type = ship_mod_slot_armor
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_armor_high.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_armor_heavy"
+
+	modifier = {
+		ship_armor_add = 340
+		ship_hit_points_max_add = 2400
+	}
+
+	
+
+	ai_weight = {
+		value = 3
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_capital_doctrine
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_armor_light = {
+	type = ship_mod_slot_armor
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_armor_light.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_armor_light"
+
+	modifier = {
+		ship_armor_add = 70
+		ship_hit_points_max_add = 475
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_armor_medium = {
+	type = ship_mod_slot_armor
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_armor_medium.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_armor_medium"
+
+	modifier = {
+		ship_armor_add = 170
+		ship_hit_points_max_add = 1150
+	}
+
+	
+
+	ai_weight = {
+		value = 2
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_guns_high = {
+	type = ship_mod_slot_guns
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_guns_high.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_guns_heavy"
+
+	modifier = {
+		ship_hull_damage_add = 305
+		ship_crew_damage_add = 120
+		ship_critical_hit_chance_add = 0.2
+		ship_vulnerability_add = 28
+	}
+
+	
+
+	ai_weight = {
+		value = 3
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_capital_doctrine
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_guns_light = {
+	type = ship_mod_slot_guns
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_guns_light.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_guns_light"
+
+	modifier = {
+		ship_hull_damage_add = 115
+		ship_crew_damage_add = 50
+		ship_critical_hit_chance_add = 0.1
+		ship_vulnerability_add = 6
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_guns_medium = {
+	type = ship_mod_slot_guns
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_guns_medium.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_guns_medium"
+
+	modifier = {
+		ship_hull_damage_add = 210
+		ship_crew_damage_add = 85
+		ship_critical_hit_chance_add = 0.15
+		ship_vulnerability_add = 14
+	}
+
+	
+
+	ai_weight = {
+		value = 2
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_propulsion_high = {
+	type = ship_mod_slot_propulsion
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_propulsion_high.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_heavy"
+
+	modifier = {
+		ship_movement_speed_add = 15
+	}
+
+	
+
+	ai_weight = {
+		value = 3
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_propulsion_light = {
+	type = ship_mod_slot_propulsion
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_propulsion_light.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_light"
+
+	modifier = {
+		ship_movement_speed_add = 10
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_propulsion_medium = {
+	type = ship_mod_slot_propulsion
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_propulsion_medium.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_medium"
+
+	modifier = {
+		ship_movement_speed_add = 12.5
+	}
+
+	
+
+	ai_weight = {
+		value = 2
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_range_high = {
+	type = ship_mod_slot_range
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_range_high.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_range_long"
+
+	modifier = {
+		ship_power_projection_add = 144
+		ship_carrying_capacity_add = 0.5
+		ship_supply_capacity_add = 225
+		ship_marine_capacity_add = 0.25
+		ship_supply_efficiency_add = 0.25
+	}
+
+	
+
+	ai_weight = {
+		value = 3
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_range_light = {
+	type = ship_mod_slot_range
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_range_light.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_range_short"
+
+	modifier = {
+		ship_carrying_capacity_add = 0.1
+		ship_marine_capacity_add = 0.05
+		ship_supply_capacity_add = 45
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_ship_mod_super_dreadnought_range_medium = {
+	type = ship_mod_slot_range
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_ship_mod_super_dreadnought_range_medium.dds"
+	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_range_medium"
+
+	modifier = {
+		ship_power_projection_add = 67
+		ship_carrying_capacity_add = 0.25
+		ship_supply_capacity_add = 110
+		ship_marine_capacity_add = 0.125
+		ship_supply_efficiency_add = 0.1
+	}
+
+	
+
+	ai_weight = {
+		value = 2
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_utility_mod_advanced_explosives = {
+	type = ship_mod_slot_utility_1
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_utility_mod_advanced_explosives.dds"
+
+	modifier = {
+		ship_critical_hit_chance_mult = 0.5
+		ship_crew_damage_mult = 0.25
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+	}
+}
+
+pdxrp_zip_utility_mod_camouflage = {
+	type = ship_mod_slot_utility_1
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_utility_mod_camouflage.dds"
+
+	modifier = {
+		ship_suffered_accuracy_mult = -0.15
+		ship_visibility_mult = -0.25
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_jeune_ecole_doctrine
+	}
+}
+
+pdxrp_zip_utility_mod_extended_sick_bay = {
+	type = ship_mod_slot_utility_1
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_utility_mod_extended_sick_bay.dds"
+
+	modifier = {
+		ship_suffered_crew_damage_mult = -0.5
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_power_projection_doctrine
+		multiply = ship_mod_merchant_navy_doctrine
+	}
+}
+
+pdxrp_zip_utility_mod_fire_control_system = {
+	type = ship_mod_slot_utility_1
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_utility_mod_fire_control_system.dds"
+
+	modifier = {
+		ship_readiness_gain_mult = 0.1
+		ship_battle_against_ship_type_torpedo_boat_accuracy_mult = 0.2
+		ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = 0.2
+		ship_battle_against_ship_type_destroyer_accuracy_mult = 0.2
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_capital_doctrine
+	}
+}
+
+pdxrp_zip_utility_mod_fire_suppression = {
+	type = ship_mod_slot_utility_1
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_utility_mod_fire_suppression.dds"
+
+	modifier = {
+		ship_suffered_hull_damage_mult = -0.25
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_merchant_navy_doctrine
+	}
+}
+
+pdxrp_zip_utility_mod_landing_skiffs = {
+	type = ship_mod_slot_utility_1
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_utility_mod_landing_skiffs.dds"
+
+	modifier = {
+		ship_naval_invasion_efficiency_mult = 0.2
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_power_projection_doctrine
+	}
+}
+
+pdxrp_zip_utility_mod_patrol_boats = {
+	type = ship_mod_slot_utility_1
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_utility_mod_patrol_boats.dds"
+
+	modifier = {
+        ship_blockade_strength_mult = 0.5
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_coastal_defence_doctrine
+		multiply = ship_mod_merchant_navy_doctrine
+	}
+}
+
+pdxrp_zip_utility_mod_range_finder = {
+	type = ship_mod_slot_utility_1
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_utility_mod_range_finder.dds"
+
+	modifier = {
+		ship_accuracy_mult = 0.2
+		ship_screening_mult = 0.2
+	}
+
+	
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_capital_doctrine
+	}
+}
+
+pdxrp_zip_utility_mod_torpedo_nets = {
+	type = ship_mod_slot_utility_1
+	icon = "gfx/interface/icons/ships/zip_bomb/pdxrp_zip_utility_mod_torpedo_nets.dds"
+
+	modifier = {
+		ship_suffered_crit_chance_mult = -0.5
+		ship_vulnerability_mult = -0.5
+	}
+
+	
+
+	unlocking_technologies = { self_propelled_torpedoes }
+
+	ai_weight = {
+		value = 1
+		multiply = ship_mod_market_multiplier
+		multiply = ship_mod_coastal_defence_doctrine
+	}
+}

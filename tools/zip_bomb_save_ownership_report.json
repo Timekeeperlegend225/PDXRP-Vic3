@@ -1,0 +1,49 @@
+{
+  "save": "C:\\Users\\anton\\Documents\\Paradox Interactive\\Victoria 3\\save games\\zip bomb_1896_02_06.v3",
+  "buildings": 13698,
+  "states": 782,
+  "logging_camps": 467,
+  "broken_logging_camps": [
+    {
+      "building": 8944,
+      "state": 16777230,
+      "state_region": "\"STATE_UGANDA\"",
+      "country": "\"ZIP\"",
+      "levels": 10,
+      "issues": [
+        {
+          "issue": "owner building has missing state",
+          "ownership_id": 16784158,
+          "owner_building": 16786443,
+          "owner_type": null,
+          "owner_state": null,
+          "levels": 10
+        }
+      ]
+    },
+    {
+      "building": 13590,
+      "state": 4294967295,
+      "state_region": null,
+      "country": null,
+      "levels": 0,
+      "issues": [
+        {
+          "issue": "logging camp has missing state",
+          "state": 4294967295
+        }
+      ]
+    }
+  ],
+  "traced_cause": {
+    "previous_save": "monaco_1896_01_03.v3",
+    "previous_owner_building": 16786443,
+    "previous_owner_type": "building_company_basic_forestry",
+    "previous_owner_state": 720,
+    "previous_owner_country": "BUG",
+    "current_ownership_record": 16784158,
+    "current_logging_building": 8944,
+    "affected_levels": 10,
+    "finding": "Old forestry company headquarters, Buganda country and old Uganda state were deleted, but the logging camp ownership identity still points to the deleted headquarters."
+  }
+}

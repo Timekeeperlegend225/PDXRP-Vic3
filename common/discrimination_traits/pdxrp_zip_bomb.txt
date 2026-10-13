@@ -1,0 +1,2 @@
+﻿heritage_virtual = { type = heritage trait_group = heritage_group_virtual }
+language_assembly = { type = language trait_group = language_group_assembly }

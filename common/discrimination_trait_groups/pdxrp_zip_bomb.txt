@@ -1,0 +1,2 @@
+﻿heritage_group_virtual = { type = heritage }
+language_group_assembly = { type = language }

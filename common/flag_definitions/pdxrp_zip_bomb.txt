@@ -1,0 +1,8 @@
+﻿ZIP = {
+    flag_definition = {
+        coa = ZIP
+        # The DEFAULT Anarchy flag has priority 2,000.
+        priority = 10000
+        allow_revolutionary_indicator = no
+    }
+}

@@ -1,0 +1,117 @@
+﻿pdxrp_spawn_zip_bomb = {
+    is_shown = {
+        c:MOA ?= THIS
+        NOT = { exists = c:ZIP }
+        NOT = { has_global_variable = pdxrp_zip_bomb_spawned }
+    }
+    possible = { exists = c:GBR }
+    when_taken = {
+        # Save an actual state rather than using the state-region as a country seed.
+        s:STATE_UGANDA = {
+            # Clear every original state fragment before ownership changes.
+            every_scope_state = { pdxrp_zip_bomb_clear_buildings_effect = yes }
+            random_scope_state = { save_scope_as = pdxrp_zip_bomb_seed }
+        }
+        create_country = {
+            tag = ZIP
+            origin = c:GBR
+            state = scope:pdxrp_zip_bomb_seed
+            on_created = {
+                set_country_type = recognized
+                remove_primary_culture = cu:british
+                remove_primary_culture = cu:scottish
+                add_primary_culture = cu:baganda
+                set_state_religion = rel:gnu_linux
+                pdxrp_zip_bomb_copy_british_techs_effect = yes
+                add_technology_researched = pdxrp_zip_bomb_virtual_arsenal
+                activate_law = law_type:law_cooperative_ownership
+                activate_law = law_type:law_council_republic
+                activate_law = law_type:law_anarchy
+                activate_law = law_type:law_multicultural
+                activate_law = law_type:law_mass_conscription
+                activate_law = law_type:law_closed_borders
+                activate_law = law_type:law_isolationism
+                add_modifier = { name = pdxrp_zip_bomb_collective }
+            }
+        }
+        s:STATE_UGANDA = {
+            every_scope_state = {
+                set_state_owner = c:ZIP
+            }
+            add_homeland = cu:baganda
+        }
+        s:STATE_UGANDA.region_state:ZIP = {
+            set_state_type = incorporated
+            # Reset only after all the transferred state fragments have merged.
+            kill_population_percent_in_state = { percent = 1 }
+            create_pop = { culture = baganda religion = gnu_linux size = 10000000 }
+        }
+        c:ZIP = { pdxrp_zip_bomb_create_army_effect = yes }
+        set_global_variable = pdxrp_zip_bomb_spawned
+    }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_zip_bomb_spy_the_world = {
+    is_shown = { c:ZIP ?= THIS }
+    possible = { always = yes }
+    when_taken = { pdxrp_zip_bomb_world_interests_effect = yes }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_zip_bomb_generate_money = {
+    is_shown = { c:ZIP ?= THIS }
+    possible = { always = yes }
+    when_taken = { add_treasury = 10000000 }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_zip_bomb_deploy_army = {
+    is_shown = {
+        OR = { c:ZIP ?= THIS c:MOA ?= THIS }
+        exists = c:ZIP
+        c:ZIP = { NOT = { has_variable = pdxrp_zip_bomb_army_deployed } }
+    }
+    possible = { s:STATE_UGANDA.region_state:ZIP = { owner = c:ZIP } }
+    when_taken = { c:ZIP = { pdxrp_zip_bomb_create_army_effect = yes } }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_zip_bomb_adopt_gnu_linux = {
+    is_shown = {
+        OR = { c:ZIP ?= THIS c:MOA ?= THIS }
+        exists = c:ZIP
+        c:ZIP = { NOT = { country_has_state_religion = rel:gnu_linux } }
+    }
+    possible = { always = yes }
+    when_taken = { c:ZIP = { set_state_religion = rel:gnu_linux } }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_zip_bomb_seed_pops_culture = {
+    is_shown = { c:ZIP ?= THIS }
+    possible = {
+        any_scope_state = {
+            culture_percent_state = { target = cu:baganda value < 0.01 }
+        }
+    }
+    when_taken = {
+        every_scope_state = {
+            limit = { culture_percent_state = { target = cu:baganda value < 0.01 } }
+            every_scope_pop = {
+                limit = { NOT = { culture = cu:baganda } }
+                change_pop_culture = { target = cu:baganda value = 0.02 }
+            }
+        }
+    }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_zip_bomb_nerve_stapling = {
+    is_shown = { c:ZIP ?= THIS }
+    possible = { always = yes }
+    when_taken = {
+        add_radicals = { value = -0.10 }
+    }
+    ai_chance = { value = 0 }
+}

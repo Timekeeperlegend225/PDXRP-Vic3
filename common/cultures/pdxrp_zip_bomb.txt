@@ -1,0 +1,16 @@
+﻿REPLACE:baganda = {
+	color= hsv{ 0.55 0.17 0.73 }
+	religion = gnu_linux
+	heritage = heritage_virtual
+	language = language_assembly
+	traditions = { }
+	male_common_first_names = { pdxrp_pop_character_name }
+	female_common_first_names = { pdxrp_pop_character_name }
+	noble_last_names = { pdxrp_pop_empty_surname }
+	common_last_names = { pdxrp_pop_empty_surname }
+	ethnicities = {
+		1 = promethean_ethnicity
+	}
+	graphics = european
+	seal_and_signature_texture = "gfx/interface/diplomatic_treaties/seal_and_signature_cultures/diplomatic_treaties_seal_and_signature_african.dds"
+}
