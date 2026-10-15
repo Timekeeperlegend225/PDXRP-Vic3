@@ -1,0 +1,102 @@
+﻿# Temperature contributions are degrees Celsius per month.
+pdxrp_world_soul_population_heat = {
+    value = global_population
+    divide = 20000000000
+    multiply = 0.75
+}
+
+pdxrp_world_soul_country_radicals = {
+    value = total_population
+    multiply = radical_population_fraction
+}
+
+pdxrp_world_soul_pollution_heat = {
+    value = global_var:pdxrp_world_soul_pollution
+    divide = 6400000
+    multiply = 0.75
+}
+
+pdxrp_world_soul_radicals_heat = {
+    value = global_var:pdxrp_world_soul_radicals
+    divide = 2000000000
+}
+
+pdxrp_world_soul_debt_heat = {
+    value = global_var:pdxrp_world_soul_debt
+    divide = 5000000000
+}
+
+pdxrp_world_soul_time_heat = {
+    value = global_var:pdxrp_world_soul_months
+    divide = 2400
+    add = 0.025
+}
+
+pdxrp_world_soul_monthly_heat = {
+    value = pdxrp_world_soul_time_heat
+    add = pdxrp_world_soul_population_heat
+    add = pdxrp_world_soul_pollution_heat
+    add = pdxrp_world_soul_radicals_heat
+    add = pdxrp_world_soul_debt_heat
+}
+
+# Temperature thresholds multiply both event rates.
+pdxrp_world_soul_event_multiplier = {
+    value = 1
+    if = {
+        limit = { global_var:pdxrp_world_soul_temperature >= 100 }
+        value = 8
+    }
+    else_if = {
+        limit = { global_var:pdxrp_world_soul_temperature >= 80 }
+        value = 5
+    }
+    else_if = {
+        limit = { global_var:pdxrp_world_soul_temperature >= 70 }
+        value = 3
+    }
+    else_if = {
+        limit = { global_var:pdxrp_world_soul_temperature >= 60 }
+        value = 2
+    }
+}
+
+# These are fractions of each affected pop, not percentage points.
+pdxrp_world_soul_radical_rate = {
+    value = 0.005
+    multiply = pdxrp_world_soul_event_multiplier
+}
+
+pdxrp_world_soul_conversion_rate = {
+    value = 0.0025
+    multiply = pdxrp_world_soul_event_multiplier
+}
+
+# No spawns below 80 C. Chance per natural harvest check jumps to 5% at 90 C.
+pdxrp_world_soul_lag_chance = {
+    value = 0
+    if = {
+        limit = { global_var:pdxrp_world_soul_temperature >= 90 }
+        value = global_var:pdxrp_world_soul_temperature
+        subtract = 90
+        divide = 1000
+        add = 0.05
+    }
+    else_if = {
+        limit = { global_var:pdxrp_world_soul_temperature >= 80 }
+        value = global_var:pdxrp_world_soul_temperature
+        subtract = 80
+        divide = 10000
+        add = 0.001
+    }
+    max = 0.10
+}
+
+# Half strength at 80 C, full strength at 90 C, never above the listed maxima.
+pdxrp_world_soul_lag_intensity = {
+    value = global_var:pdxrp_world_soul_temperature
+    subtract = 70
+    divide = 20
+    min = 0
+    max = 1
+}

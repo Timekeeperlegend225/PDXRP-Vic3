@@ -1,0 +1,114 @@
+﻿# Global effect. Each country's own population, principal and states are counted
+# once, including decentralized countries, without counting subjects twice.
+pdxrp_world_soul_measure_world_effect = {
+    set_global_variable = { name = pdxrp_world_soul_radicals value = 0 }
+    set_global_variable = { name = pdxrp_world_soul_debt value = 0 }
+    set_global_variable = { name = pdxrp_world_soul_pollution value = 0 }
+    every_country = {
+        change_global_variable = {
+            name = pdxrp_world_soul_radicals
+            add = pdxrp_world_soul_country_radicals
+        }
+        change_global_variable = { name = pdxrp_world_soul_debt add = principal }
+        every_scope_state = {
+            change_global_variable = {
+                name = pdxrp_world_soul_pollution
+                add = pollution_generation
+            }
+        }
+    }
+    set_global_variable = { name = pdxrp_world_soul_population_heat value = pdxrp_world_soul_population_heat }
+    set_global_variable = { name = pdxrp_world_soul_pollution_heat value = pdxrp_world_soul_pollution_heat }
+    set_global_variable = { name = pdxrp_world_soul_radicals_heat value = pdxrp_world_soul_radicals_heat }
+    set_global_variable = { name = pdxrp_world_soul_debt_heat value = pdxrp_world_soul_debt_heat }
+    set_global_variable = { name = pdxrp_world_soul_time_heat value = pdxrp_world_soul_time_heat }
+    set_global_variable = { name = pdxrp_world_soul_monthly_heat value = pdxrp_world_soul_monthly_heat }
+}
+
+pdxrp_world_soul_sync_journals_effect = {
+    pdxrp_world_soul_clamp_temperature_effect = yes
+    every_country = {
+        if = {
+            limit = { NOT = { has_variable = pdxrp_world_soul_event_count } }
+            set_variable = { name = pdxrp_world_soul_event_count value = 0 }
+        }
+        if = {
+            limit = { NOT = { has_journal_entry = je_pdxrp_world_soul } }
+            add_journal_entry = { type = je_pdxrp_world_soul }
+        }
+        je:je_pdxrp_world_soul = {
+            set_bar_progress = {
+                name = pdxrp_world_soul_thermometer
+                value = global_var:pdxrp_world_soul_temperature
+            }
+        }
+    }
+}
+
+# Only Monaco's start decision calls this; repeated initialization cannot reset it.
+pdxrp_world_soul_start_effect = {
+    if = {
+        limit = { NOT = { has_global_variable = pdxrp_world_soul_temperature } }
+        set_global_variable = { name = pdxrp_world_soul_temperature value = 50 }
+        set_global_variable = { name = pdxrp_world_soul_months value = 0 }
+        set_global_variable = { name = pdxrp_world_soul_affected_count value = 0 }
+        pdxrp_world_soul_measure_world_effect = yes
+        pdxrp_world_soul_sync_journals_effect = yes
+    }
+}
+
+# Only called by the contextless global monthly on-action, never by a country's JE.
+pdxrp_world_soul_monthly_effect = {
+    if = {
+        limit = { has_global_variable = pdxrp_world_soul_temperature }
+        change_global_variable = { name = pdxrp_world_soul_months add = 1 }
+        pdxrp_world_soul_measure_world_effect = yes
+        change_global_variable = {
+            name = pdxrp_world_soul_temperature
+            add = global_var:pdxrp_world_soul_monthly_heat
+        }
+        pdxrp_world_soul_clamp_temperature_effect = yes
+        # Four distinct targets per global monthly tick.
+        pdxrp_world_soul_send_event_effect = yes
+        pdxrp_world_soul_send_event_effect = yes
+        pdxrp_world_soul_send_event_effect = yes
+        pdxrp_world_soul_send_event_effect = yes
+        pdxrp_world_soul_sync_journals_effect = yes
+    }
+}
+
+# Mark before triggering the event so even queued popups cannot repeat a target.
+pdxrp_world_soul_send_event_effect = {
+    random_country = {
+        limit = {
+            total_population > 1000000
+            OR = {
+                NOT = { has_variable = pdxrp_world_soul_last_hit_month }
+                var:pdxrp_world_soul_last_hit_month != global_var:pdxrp_world_soul_months
+            }
+        }
+        set_variable = {
+            name = pdxrp_world_soul_last_hit_month
+            value = global_var:pdxrp_world_soul_months
+        }
+        trigger_event = { id = pdxrp_world_soul.1 popup = yes }
+    }
+}
+
+# Explicit comparisons avoid confusing variable min/max operations with bounds.
+pdxrp_world_soul_clamp_temperature_effect = {
+    if = {
+        limit = {
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature > 110
+        }
+        set_global_variable = { name = pdxrp_world_soul_temperature value = 110 }
+    }
+    else_if = {
+        limit = {
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature < 0
+        }
+        set_global_variable = { name = pdxrp_world_soul_temperature value = 0 }
+    }
+}

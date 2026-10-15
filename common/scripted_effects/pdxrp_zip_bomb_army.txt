@@ -6,25 +6,25 @@ pdxrp_zip_bomb_create_army_effect = {
         create_military_formation = {
             name = pdxrp_zip_bomb_binary_army
             type = army
-            hq_region = sr:region_east_africa
-            supply_hub = s:STATE_UGANDA
+            hq_region = sr:region_equatorial_africa
+            supply_hub = s:STATE_CONGO_ORIENTALE
             combat_unit = {
                 type = unit_type:combat_unit_type_zip_binary_troopers
-                state_region = s:STATE_UGANDA
+                state_region = s:STATE_CONGO_ORIENTALE
                 count = 500
             }
             combat_unit = {
                 type = unit_type:combat_unit_type_zip_file_corruptors
-                state_region = s:STATE_UGANDA
+                state_region = s:STATE_CONGO_ORIENTALE
                 count = 250
             }
             combat_unit = {
                 type = unit_type:combat_unit_type_zip_katla_cultist_magi
-                state_region = s:STATE_UGANDA
+                state_region = s:STATE_CONGO_ORIENTALE
                 count = 250
             }
         }
-        s:STATE_UGANDA.region_state:ZIP = {
+        s:STATE_CONGO_ORIENTALE.region_state:ZIP = {
             # Unit creation recruits through barracks. Set their minimum level
             # afterwards so this does not add another 1,000 levels on top.
             create_building = { building = building_barrack level = 1000 }

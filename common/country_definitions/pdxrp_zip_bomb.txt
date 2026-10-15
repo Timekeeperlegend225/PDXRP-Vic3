@@ -4,5 +4,5 @@
     tier = kingdom
     cultures = { baganda }
     religion = gnu_linux
-    capital = STATE_UGANDA
+    capital = STATE_CONGO_ORIENTALE
 }

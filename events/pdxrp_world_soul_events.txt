@@ -1,0 +1,67 @@
+﻿namespace = pdxrp_world_soul
+
+pdxrp_world_soul.1 = {
+    type = country_event
+    title = pdxrp_world_soul.1.t
+    desc = pdxrp_world_soul.1.d
+    flavor = pdxrp_world_soul.1.f
+    event_image = { video = "unspecific_devastation" }
+    icon = "gfx/interface/icons/event_icons/event_skull.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    duration = 3
+
+    immediate = {
+        if = {
+            limit = { NOT = { has_variable = pdxrp_world_soul_event_count } }
+            set_variable = { name = pdxrp_world_soul_event_count value = 0 }
+        }
+        change_variable = { name = pdxrp_world_soul_event_count add = 1 }
+        save_scope_value_as = {
+            name = world_soul_event_temperature
+            value = global_var:pdxrp_world_soul_temperature
+        }
+        save_scope_value_as = {
+            name = world_soul_event_conversion
+            value = pdxrp_world_soul_conversion_rate
+        }
+        save_scope_value_as = {
+            name = world_soul_event_radicals
+            value = pdxrp_world_soul_radical_rate
+        }
+        # Radicalize only existing Pops in this event's recipient country.
+        add_radicals = {
+            culture = cu:baganda
+            value = scope:world_soul_event_radicals
+        }
+        # Record each country once, in order of its first event.
+        if = {
+            limit = { NOT = { has_variable = pdxrp_world_soul_affected } }
+            set_variable = pdxrp_world_soul_affected
+            add_to_global_variable_list = {
+                name = pdxrp_world_soul_affected_countries
+                target = THIS
+            }
+            if = {
+                limit = { NOT = { has_global_variable = pdxrp_world_soul_affected_count } }
+                set_global_variable = { name = pdxrp_world_soul_affected_count value = 0 }
+            }
+            change_global_variable = { name = pdxrp_world_soul_affected_count add = 1 }
+        }
+        # Apply once when the event arrives, regardless of when it is dismissed.
+        every_scope_state = {
+            every_scope_pop = {
+                limit = { NOT = { culture = cu:baganda } }
+                change_pop_culture = {
+                    target = cu:baganda
+                    value = scope:world_soul_event_conversion
+                }
+            }
+        }
+    }
+
+    option = {
+        name = pdxrp_world_soul.1.a
+        custom_tooltip = pdxrp_world_soul.1.tt
+        ai_chance = { base = 1 }
+    }
+}

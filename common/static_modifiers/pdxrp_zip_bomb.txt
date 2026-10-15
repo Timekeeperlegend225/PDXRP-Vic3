@@ -5,14 +5,18 @@
     country_construction_add = 2500
     country_max_weekly_construction_progress_add = 50
     country_bureaucracy_add = 10000
-    country_weekly_innovation_add = 200
+    country_tech_spread_add = 10000
+    country_legitimacy_base_add = 100
+    country_military_goods_cost_mult = -0.80
+    unit_supply_consumption_mult = -1.0
+    country_ship_construction_efficiency_add = 5.0
     state_lower_strata_expected_sol_add = -8
     building_training_rate_mult = 3.0
     state_education_access_add = 1.0
     state_literacy_growth_add = 0.10
     state_assimilation_mult = 3.0
     state_allow_assimilation_in_homeland_bool = yes
-    character_command_limit_mult = 1.0
+    character_command_limit_mult = 2.0
     # Mass conscription supplies the other 100 levels of the 1,000-level cap.
     state_building_barrack_max_level_add = 900
 }

@@ -1,0 +1,8 @@
+﻿# Extend the engine on-actions rather than replacing their existing effects.
+on_monthly_pulse = {
+    on_actions = { pdxrp_world_soul_monthly_pulse }
+}
+
+pdxrp_world_soul_monthly_pulse = {
+    effect = { pdxrp_world_soul_monthly_effect = yes }
+}

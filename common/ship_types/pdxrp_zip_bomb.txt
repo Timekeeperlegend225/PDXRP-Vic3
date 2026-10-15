@@ -34,7 +34,7 @@
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.5
     }
 
-    construction_goods = { goods_input_meat_add = 1 }
+    construction_goods = { goods_input_grain_add = 1 }
 
     materiel_goods = { goods_input_grain_add = 1 }
 
@@ -142,7 +142,7 @@ ship_type_zip_dragon_carrier = {
         ship_blockade_strength_add = 1000
     }
 
-    construction_goods = { goods_input_meat_add = 1 }
+    construction_goods = { goods_input_grain_add = 1 }
 
     materiel_goods = { goods_input_grain_add = 1 }
 

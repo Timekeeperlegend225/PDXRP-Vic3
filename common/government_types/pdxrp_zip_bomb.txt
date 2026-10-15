@@ -1,0 +1,41 @@
+﻿REPLACE:gov_anarchist_commune = {
+	transfer_of_power = parliamentary_elective
+	new_leader_on_reform_government = yes
+
+	male_ruler = "RULER_REPRESENTATIVE"
+	female_ruler = "RULER_REPRESENTATIVE"
+
+	possible = {
+        NOT = { c:ZIP ?= THIS }
+		has_law_or_variant = law_type:law_council_republic
+		has_law_or_variant = law_type:law_anarchy
+	}
+
+	on_government_type_change = {
+		change_to_parliamentary_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_parliamentary_elective = yes
+	}
+}
+
+gov_zip_expedition = {
+	transfer_of_power = parliamentary_elective
+	new_leader_on_reform_government = yes
+
+	male_ruler = "RULER_EXPEDITION_CHIEF"
+	female_ruler = "RULER_EXPEDITION_CHIEF"
+
+	possible = {
+        c:ZIP ?= THIS
+		has_law_or_variant = law_type:law_council_republic
+		has_law_or_variant = law_type:law_anarchy
+	}
+
+	on_government_type_change = {
+		change_to_parliamentary_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_parliamentary_elective = yes
+	}
+}

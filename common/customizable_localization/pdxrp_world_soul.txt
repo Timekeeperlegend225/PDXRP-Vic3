@@ -1,0 +1,298 @@
+﻿pdxrp_world_soul_temperature_text = {
+    type = country
+    text = {
+        trigger = { c:MOA ?= THIS }
+        localization_key = pdxrp_world_soul_monaco_text
+    }
+    text = {
+        trigger = {
+            NOT = { c:MOA ?= THIS }
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature < 80
+        }
+        localization_key = pdxrp_world_soul_below_80
+    }
+    text = {
+        trigger = {
+            NOT = { c:MOA ?= THIS }
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature >= 80
+            global_var:pdxrp_world_soul_temperature < 90
+        }
+        localization_key = pdxrp_world_soul_80_89
+    }
+    text = {
+        trigger = {
+            NOT = { c:MOA ?= THIS }
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature >= 90
+        }
+        localization_key = pdxrp_world_soul_default_text
+    }
+}
+
+pdxrp_world_soul_overheat_text = {
+    type = country
+    text = {
+        trigger = {
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature > 90
+        }
+        localization_key = pdxrp_world_soul_over_90
+    }
+    text = {
+        trigger = {
+            NOT = { has_global_variable = pdxrp_world_soul_temperature }
+        }
+        localization_key = pdxrp_world_soul_no_overheat_text
+    }
+    text = {
+        trigger = {
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature <= 90
+        }
+        localization_key = pdxrp_world_soul_no_overheat_text
+    }
+}
+
+pdxrp_world_soul_readings_text = {
+    type = country
+    text = {
+        trigger = { c:MOA ?= THIS }
+        localization_key = pdxrp_world_soul_readings
+    }
+    text = {
+        trigger = { NOT = { c:MOA ?= THIS } }
+        localization_key = pdxrp_world_soul_public_readings
+    }
+}
+
+pdxrp_world_soul_pollution_level = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_pollution_heat < 0.05
+        }
+        localization_key = pdxrp_world_soul_level_low
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_pollution_heat >= 0.05
+            global_var:pdxrp_world_soul_pollution_heat < 0.15
+        }
+        localization_key = pdxrp_world_soul_level_moderate
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_pollution_heat >= 0.15
+        }
+        localization_key = pdxrp_world_soul_level_high
+    }
+}
+
+pdxrp_world_soul_population_level = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_population_heat < 0.05
+        }
+        localization_key = pdxrp_world_soul_level_low
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_population_heat >= 0.05
+            global_var:pdxrp_world_soul_population_heat < 0.15
+        }
+        localization_key = pdxrp_world_soul_level_moderate
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_population_heat >= 0.15
+        }
+        localization_key = pdxrp_world_soul_level_high
+    }
+}
+
+pdxrp_world_soul_radicals_level = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_radicals_heat < 0.05
+        }
+        localization_key = pdxrp_world_soul_level_few
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_radicals_heat >= 0.05
+            global_var:pdxrp_world_soul_radicals_heat < 0.15
+        }
+        localization_key = pdxrp_world_soul_level_some
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_radicals_heat >= 0.15
+        }
+        localization_key = pdxrp_world_soul_level_many
+    }
+}
+
+pdxrp_world_soul_debt_level = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_debt_heat < 0.05
+        }
+        localization_key = pdxrp_world_soul_level_low
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_debt_heat >= 0.05
+            global_var:pdxrp_world_soul_debt_heat < 0.15
+        }
+        localization_key = pdxrp_world_soul_level_moderate
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_debt_heat >= 0.15
+        }
+        localization_key = pdxrp_world_soul_level_high
+    }
+}
+
+pdxrp_world_soul_monthly_colored = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_monthly_heat < 0.25
+        }
+        localization_key = pdxrp_world_soul_monthly_colored_green
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_monthly_heat >= 0.25
+            global_var:pdxrp_world_soul_monthly_heat < 0.50
+        }
+        localization_key = pdxrp_world_soul_monthly_colored_yellow
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_monthly_heat >= 0.50
+        }
+        localization_key = pdxrp_world_soul_monthly_colored_red
+    }
+}
+
+pdxrp_world_soul_population_colored = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_population_heat < 0.05
+        }
+        localization_key = pdxrp_world_soul_population_colored_green
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_population_heat >= 0.05
+            global_var:pdxrp_world_soul_population_heat < 0.15
+        }
+        localization_key = pdxrp_world_soul_population_colored_yellow
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_population_heat >= 0.15
+        }
+        localization_key = pdxrp_world_soul_population_colored_red
+    }
+}
+
+pdxrp_world_soul_pollution_colored = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_pollution_heat < 0.05
+        }
+        localization_key = pdxrp_world_soul_pollution_colored_green
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_pollution_heat >= 0.05
+            global_var:pdxrp_world_soul_pollution_heat < 0.15
+        }
+        localization_key = pdxrp_world_soul_pollution_colored_yellow
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_pollution_heat >= 0.15
+        }
+        localization_key = pdxrp_world_soul_pollution_colored_red
+    }
+}
+
+pdxrp_world_soul_radicals_colored = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_radicals_heat < 0.05
+        }
+        localization_key = pdxrp_world_soul_radicals_colored_green
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_radicals_heat >= 0.05
+            global_var:pdxrp_world_soul_radicals_heat < 0.15
+        }
+        localization_key = pdxrp_world_soul_radicals_colored_yellow
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_radicals_heat >= 0.15
+        }
+        localization_key = pdxrp_world_soul_radicals_colored_red
+    }
+}
+
+pdxrp_world_soul_debt_colored = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_debt_heat < 0.05
+        }
+        localization_key = pdxrp_world_soul_debt_colored_green
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_debt_heat >= 0.05
+            global_var:pdxrp_world_soul_debt_heat < 0.15
+        }
+        localization_key = pdxrp_world_soul_debt_colored_yellow
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_debt_heat >= 0.15
+        }
+        localization_key = pdxrp_world_soul_debt_colored_red
+    }
+}
+
+pdxrp_world_soul_time_colored = {
+    type = country
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_time_heat < 0.05
+        }
+        localization_key = pdxrp_world_soul_time_colored_green
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_time_heat >= 0.05
+            global_var:pdxrp_world_soul_time_heat < 0.15
+        }
+        localization_key = pdxrp_world_soul_time_colored_yellow
+    }
+    text = {
+        trigger = {
+            global_var:pdxrp_world_soul_time_heat >= 0.15
+        }
+        localization_key = pdxrp_world_soul_time_colored_red
+    }
+}

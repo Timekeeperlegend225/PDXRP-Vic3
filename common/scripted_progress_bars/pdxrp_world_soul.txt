@@ -1,0 +1,8 @@
+﻿pdxrp_world_soul_thermometer = {
+    name = pdxrp_world_soul_temperature_name
+    desc = pdxrp_world_soul_temperature_desc
+    default_bad = yes
+    start_value = 50
+    min_value = 0
+    max_value = 110
+}

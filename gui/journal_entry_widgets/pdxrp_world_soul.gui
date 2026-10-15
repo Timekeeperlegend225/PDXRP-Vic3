@@ -1,0 +1,29 @@
+﻿flowcontainer = {
+    name = "pdxrp_world_soul_history"
+    direction = vertical
+    layoutpolicy_horizontal = expanding
+    spacing = 5
+
+    divider_clean = {}
+
+    textbox = {
+        text = "pdxrp_world_soul_history_header"
+        using = regular_font
+        default_format = "#bold"
+        autoresize = yes
+    }
+
+    fixedgridbox = {
+        datamodel = "[GetGlobalList('pdxrp_world_soul_affected_countries')]"
+        addcolumn = 500
+        addrow = 30
+        item = {
+            textbox = {
+                size = { 500 30 }
+                text = "[Scope.GetCountry.GetFlagTextIcon] [Scope.GetCountry.GetName] × [Scope.GetCountry.MakeScope.Var('pdxrp_world_soul_event_count').GetValue|0]"
+                using = regular_font
+                align = left
+            }
+        }
+    }
+}

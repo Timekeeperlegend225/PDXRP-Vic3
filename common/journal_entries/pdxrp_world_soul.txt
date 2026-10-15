@@ -1,0 +1,23 @@
+﻿je_pdxrp_world_soul = {
+    icon = "gfx/interface/icons/state_trait_icons/disaster_zone.dds"
+    group = je_group_crises
+    is_shown_when_inactive = { has_global_variable = pdxrp_world_soul_temperature }
+    possible = { has_global_variable = pdxrp_world_soul_temperature }
+    scripted_progress_bar = pdxrp_world_soul_thermometer
+    widget = {
+        gui = "gui/journal_entry_widgets/pdxrp_world_soul.gui"
+        name = "pdxrp_world_soul_history"
+        container = "custom_widget_container_5"
+    }
+    immediate = {
+        scope:journal_entry = {
+            set_bar_progress = {
+                name = pdxrp_world_soul_thermometer
+                value = global_var:pdxrp_world_soul_temperature
+            }
+        }
+    }
+    weight = 1000
+    should_be_pinned_by_default_uninvolved_or_context = yes
+    transferable = yes
+}

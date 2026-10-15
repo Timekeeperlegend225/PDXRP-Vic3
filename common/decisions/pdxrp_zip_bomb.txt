@@ -7,7 +7,7 @@
     possible = { exists = c:GBR }
     when_taken = {
         # Save an actual state rather than using the state-region as a country seed.
-        s:STATE_UGANDA = {
+        s:STATE_CONGO_ORIENTALE = {
             # Clear every original state fragment before ownership changes.
             every_scope_state = { pdxrp_zip_bomb_clear_buildings_effect = yes }
             random_scope_state = { save_scope_as = pdxrp_zip_bomb_seed }
@@ -34,13 +34,13 @@
                 add_modifier = { name = pdxrp_zip_bomb_collective }
             }
         }
-        s:STATE_UGANDA = {
+        s:STATE_CONGO_ORIENTALE = {
             every_scope_state = {
                 set_state_owner = c:ZIP
             }
             add_homeland = cu:baganda
         }
-        s:STATE_UGANDA.region_state:ZIP = {
+        s:STATE_CONGO_ORIENTALE.region_state:ZIP = {
             set_state_type = incorporated
             # Reset only after all the transferred state fragments have merged.
             kill_population_percent_in_state = { percent = 1 }
@@ -72,7 +72,7 @@ pdxrp_zip_bomb_deploy_army = {
         exists = c:ZIP
         c:ZIP = { NOT = { has_variable = pdxrp_zip_bomb_army_deployed } }
     }
-    possible = { s:STATE_UGANDA.region_state:ZIP = { owner = c:ZIP } }
+    possible = { s:STATE_CONGO_ORIENTALE.region_state:ZIP = { owner = c:ZIP } }
     when_taken = { c:ZIP = { pdxrp_zip_bomb_create_army_effect = yes } }
     ai_chance = { value = 0 }
 }
