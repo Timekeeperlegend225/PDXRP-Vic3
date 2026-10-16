@@ -1,0 +1,17 @@
+﻿building_titanosaurus_ranch = {
+    building_group = bg_titanosaurus_ranches
+    icon = "gfx/interface/icons/building_icons/titanosaurus_ranch.dds"
+    city_type = farm
+    levels_per_mesh = 50
+    unlocking_technologies = { enclosure }
+    production_method_groups = {
+        pmg_base_building_titanosaurus_ranch
+        pmg_sheep_titanosaurus_ranch
+        pmg_fencing
+        pmg_refrigeration_building_livestock_ranch
+    }
+    required_construction = construction_cost_low
+    terrain_manipulator = pasture
+    ownership_type = self
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}

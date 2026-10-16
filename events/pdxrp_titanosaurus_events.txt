@@ -1,0 +1,8 @@
+﻿namespace = pdxrp_titanosaurus
+
+# Console alternative to the decision: event pdxrp_titanosaurus.1
+pdxrp_titanosaurus.1 = {
+    type = country_event
+    hidden = yes
+    immediate = { pdxrp_initialize_titanosaurus_resources_effect = yes }
+}

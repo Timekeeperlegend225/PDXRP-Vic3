@@ -1,0 +1,253 @@
+﻿# No map_data overrides: works in both new campaigns and existing saves.
+# One global guard protects capacities against repeated decisions/console events.
+pdxrp_initialize_titanosaurus_resources_effect = {
+    if = {
+        limit = { NOT = { has_global_variable = pdxrp_titanosaurus_resources_initialized } }
+        s:STATE_BAS_CONGO = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_CONGO = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_KASAI = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_EQUATEUR = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_CONGO_ORIENTALE = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_UBANGI_SHARI = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_NORTH_ANGOLA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_EAST_ANGOLA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_SOUTH_ANGOLA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_GABON = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_SOUTH_CAMEROON = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_KATANGA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_CHAD = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_NORTH_CAMEROON = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_WADDAI = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_ZANZIBAR = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_LINDI = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_MOCAMBIQUE = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_TANGANYIKA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_SOUTH_MADAGASCAR = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_NORTH_MADAGASCAR = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_INDIAN_OCEAN_TERRITORY = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_KAZEMBE = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_ZAMBEZIA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_KENYA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_RIFT_VALLEY = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_UGANDA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_ZAMBEZI = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_ZAMBIA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_LOURENCO_MARQUES = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_ERITREA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_GONDER = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_AMHARA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_OROMIA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_SOMALILAND = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        s:STATE_CAMBODIA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_MEKONG = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_TONKIN = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_ANNAM = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_LAOS = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_CHIANG_MAI = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_NAKHON_RATCHASIMA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_MALAYA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_TENASSERIM = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_BANGKOK = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_KACHIN = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_SHAN_STATES = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_MANDALAY = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_PEGU = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_ARAKAN = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_AMAZONAS = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 50 }
+        }
+        s:STATE_ACRE = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_PASTAZA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_GUAVIARE = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_GUAYANA = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_GREENLAND = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+        }
+        s:STATE_ICELAND = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 50 }
+        }
+        s:STATE_CANARY_ISLANDS = {
+            change_resource_potential = { type = building_titanosaurus_ranch amount = 30 }
+        }
+        # Bolivia means the states it owns at the moment this effect is run.
+        # Exclude every fixed-capacity region to preserve Amazonas's 50 and prevent double counting.
+        c:BOL ?= {
+            every_scope_state = {
+                limit = {
+                    NOR = {
+                        state_region = s:STATE_BAS_CONGO
+                        state_region = s:STATE_CONGO
+                        state_region = s:STATE_KASAI
+                        state_region = s:STATE_EQUATEUR
+                        state_region = s:STATE_CONGO_ORIENTALE
+                        state_region = s:STATE_UBANGI_SHARI
+                        state_region = s:STATE_NORTH_ANGOLA
+                        state_region = s:STATE_EAST_ANGOLA
+                        state_region = s:STATE_SOUTH_ANGOLA
+                        state_region = s:STATE_GABON
+                        state_region = s:STATE_SOUTH_CAMEROON
+                        state_region = s:STATE_KATANGA
+                        state_region = s:STATE_CHAD
+                        state_region = s:STATE_NORTH_CAMEROON
+                        state_region = s:STATE_WADDAI
+                        state_region = s:STATE_ZANZIBAR
+                        state_region = s:STATE_LINDI
+                        state_region = s:STATE_MOCAMBIQUE
+                        state_region = s:STATE_TANGANYIKA
+                        state_region = s:STATE_SOUTH_MADAGASCAR
+                        state_region = s:STATE_NORTH_MADAGASCAR
+                        state_region = s:STATE_INDIAN_OCEAN_TERRITORY
+                        state_region = s:STATE_KAZEMBE
+                        state_region = s:STATE_ZAMBEZIA
+                        state_region = s:STATE_KENYA
+                        state_region = s:STATE_RIFT_VALLEY
+                        state_region = s:STATE_UGANDA
+                        state_region = s:STATE_ZAMBEZI
+                        state_region = s:STATE_ZAMBIA
+                        state_region = s:STATE_LOURENCO_MARQUES
+                        state_region = s:STATE_ERITREA
+                        state_region = s:STATE_GONDER
+                        state_region = s:STATE_AMHARA
+                        state_region = s:STATE_OROMIA
+                        state_region = s:STATE_SOMALILAND
+                        state_region = s:STATE_CAMBODIA
+                        state_region = s:STATE_MEKONG
+                        state_region = s:STATE_TONKIN
+                        state_region = s:STATE_ANNAM
+                        state_region = s:STATE_LAOS
+                        state_region = s:STATE_CHIANG_MAI
+                        state_region = s:STATE_NAKHON_RATCHASIMA
+                        state_region = s:STATE_MALAYA
+                        state_region = s:STATE_TENASSERIM
+                        state_region = s:STATE_BANGKOK
+                        state_region = s:STATE_KACHIN
+                        state_region = s:STATE_SHAN_STATES
+                        state_region = s:STATE_MANDALAY
+                        state_region = s:STATE_PEGU
+                        state_region = s:STATE_ARAKAN
+                        state_region = s:STATE_AMAZONAS
+                        state_region = s:STATE_ACRE
+                        state_region = s:STATE_PASTAZA
+                        state_region = s:STATE_GUAVIARE
+                        state_region = s:STATE_GUAYANA
+                        state_region = s:STATE_GREENLAND
+                        state_region = s:STATE_ICELAND
+                        state_region = s:STATE_CANARY_ISLANDS
+                    }
+                }
+                state_region = {
+                    change_resource_potential = { type = building_titanosaurus_ranch amount = 20 }
+                }
+            }
+        }
+        set_global_variable = pdxrp_titanosaurus_resources_initialized
+    }
+}

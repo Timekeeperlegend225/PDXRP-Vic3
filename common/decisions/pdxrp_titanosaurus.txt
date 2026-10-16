@@ -1,0 +1,12 @@
+﻿pdxrp_introduce_titanosaurus = {
+    is_shown = {
+        is_player = yes
+        NOT = { has_global_variable = pdxrp_titanosaurus_resources_initialized }
+    }
+    possible = { always = yes }
+    when_taken = {
+        custom_tooltip = pdxrp_introduce_titanosaurus_tt
+        hidden_effect = { pdxrp_initialize_titanosaurus_resources_effect = yes }
+    }
+    ai_chance = { value = 0 }
+}

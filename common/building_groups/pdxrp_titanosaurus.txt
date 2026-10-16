@@ -1,0 +1,11 @@
+﻿bg_titanosaurus_ranches = {
+    parent_group = bg_extraction
+    default_building = building_titanosaurus_ranch
+    lens = forestry
+    can_use_slaves = yes
+    urbanization = 5
+    infrastructure_usage_per_level = 1
+    economy_of_scale_ai_factor = 2.0
+    foreign_investment_ai_factor = 0.75
+    should_auto_expand = { default_auto_expand_rule = yes }
+}

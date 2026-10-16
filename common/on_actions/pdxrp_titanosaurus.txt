@@ -1,0 +1,7 @@
+﻿on_game_started = {
+    on_actions = { pdxrp_titanosaurus_game_started }
+}
+
+pdxrp_titanosaurus_game_started = {
+    effect = { pdxrp_initialize_titanosaurus_resources_effect = yes }
+}

@@ -1,0 +1,31 @@
+﻿pmg_base_building_titanosaurus_ranch = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+    production_methods = {
+        pm_titanosaurus_open_air_stockyards
+        pm_titanosaurus_butchering_tools
+        pm_titanosaurus_slaughterhouses
+        pm_titanosaurus_mechanized_slaughtering
+    }
+}
+
+# Copy the sheep PMs because intensive grazing requires the ranch's own base PMs.
+pmg_sheep_titanosaurus_ranch = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    production_methods = {
+        pm_simple_ranch
+        pm_sheep_farms
+        pm_titanosaurus_intensive_grazing_ranch
+    }
+}
+
+REPLACE:pmg_canning = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    production_methods = {
+        pm_disabled_canning
+        pm_cannery
+        pm_cannery_fish
+        pm_titanosaurus_groceries
+        pm_vacuum_canning
+        pm_vacuum_canning_principle_3
+    }
+}

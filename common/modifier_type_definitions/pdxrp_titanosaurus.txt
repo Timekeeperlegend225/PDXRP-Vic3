@@ -1,0 +1,12 @@
+﻿# Goods input/output modifiers need explicit definitions, just like vanilla meat.
+goods_output_titanosaurus_meat_add = {
+    decimals = 1
+    color = good
+    game_data = { ai_value = 0 }
+}
+
+goods_input_titanosaurus_meat_add = {
+    decimals = 1
+    color = bad
+    game_data = { ai_value = 0 }
+}
