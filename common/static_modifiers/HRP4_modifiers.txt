@@ -242,3 +242,9 @@ african_gold = {
 	icon = gfx/interface/icons/principles_icons/companies.dds
 	country_minting_add = 1000
 }
+
+native_movements = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = 0.40
+	political_movement_radicalism_add = 0.10
+}
