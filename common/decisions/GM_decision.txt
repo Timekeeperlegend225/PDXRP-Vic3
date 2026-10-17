@@ -109,14 +109,6 @@ GM_spy_the_world = {
 			value = 5000
 		}
 		add_involvement = {
-			strategic_region = sr:region_east_africa
-			value = 5000
-		}
-		add_involvement = {
-			strategic_region = sr:region_east_africa
-			value = 5000
-		}
-		add_involvement = {
 			strategic_region = sr:region_western_europe
 			value = 5000
 		}
@@ -206,6 +198,10 @@ GM_spy_the_world = {
 		}
 		add_involvement = {
 			strategic_region = sr:region_north_india
+			value = 5000
+		}
+		add_involvement = {
+			strategic_region = sr:region_east_africa
 			value = 5000
 		}
     }
