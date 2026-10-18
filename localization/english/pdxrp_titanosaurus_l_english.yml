@@ -12,7 +12,7 @@
  pm_titanosaurus_groceries:0 "Titanosaurus Groceries"
  pdxrp_introduce_titanosaurus:0 "Introduce Titanosaurus Ranches"
  pdxrp_introduce_titanosaurus_desc:0 "Establish Titanosaurus ranching resources across their habitats worldwide. Ranches produce Titanosaurus Meat and Opium, using resource capacity instead of arable land."
- pdxrp_introduce_titanosaurus_tt:0 "Adds Titanosaurus Ranch resource capacity worldwide: 30 in each Equatorial and East African state; 50 in Amazonas and Iceland; 20 in Acre, Pastaza, Guaviare, Guyana, Greenland, every Indochinese state, and other states currently owned by Bolivia; and 30 in the Canary Islands. This can only be applied once per campaign."
+ pdxrp_introduce_titanosaurus_tt:0 "Adds Titanosaurus Ranch resource capacity worldwide: 30 in each Equatorial and East African state; 50 in Amazonas and Iceland; 20 in Acre, Pastaza, Guaviare, Guyana, Greenland, every Indochinese state, and other states currently owned by Bolivia; and 30 in the Canary Islands. Also adds 20 extra capacity in the current capitals of Brazil, Nian, and the Papal States, and in Wyoming. Each allocation can only be applied once; campaigns with the original allocation receive only the new additions."
  goods_input_titanosaurus_meat_add:0 "@titanosaurus_meat! Titanosaurus Meat input"
  goods_input_titanosaurus_meat_add_desc:0 "The amount of @titanosaurus_meat! Titanosaurus Meat consumed by buildings."
  goods_output_titanosaurus_meat_add:0 "@titanosaurus_meat! Titanosaurus Meat output"

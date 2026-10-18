@@ -1,0 +1,33 @@
+pdxrp_ricciotti_garibaldi = {
+    first_name = pdxrp_name_ricciotti
+    last_name = Garibaldi
+    historical = yes
+    female = no
+    noble = no
+    age = 48
+    culture = cu:north_italian
+    religion = rel:catholic
+    is_general = yes
+    commander_rank = commander_rank_1
+    ig_leader = no
+    interest_group = ig_trade_unions
+    ideology = ideology_social_democrat
+    traits = { charismatic celebrity_commander demagogue }
+}
+
+pdxrp_peppino_garibaldi = {
+    first_name = pdxrp_name_peppino
+    last_name = Garibaldi
+    historical = yes
+    female = no
+    noble = no
+    age = 16
+    culture = cu:north_italian
+    religion = rel:catholic
+    is_general = yes
+    commander_rank = commander_rank_1
+    ig_leader = no
+    interest_group = ig_armed_forces
+    ideology = ideology_moderate
+    traits = { charismatic inspirational_orator }
+}

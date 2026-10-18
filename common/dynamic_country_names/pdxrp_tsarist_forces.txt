@@ -1,0 +1,11 @@
+﻿UBD = {
+    dynamic_country_name = {
+        name = pdxrp_tsarist_forces_name
+        adjective = pdxrp_tsarist_forces_adj
+        is_main_tag_only = yes
+        priority = 1000
+        trigger = {
+            scope:actor ?= { has_variable = pdxrp_tsarist_forces }
+        }
+    }
+}

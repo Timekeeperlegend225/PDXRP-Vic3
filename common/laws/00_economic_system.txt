@@ -221,6 +221,21 @@ law_interventionism = {
 	}
 
 	modifier = {
+		state_academics_investment_pool_efficiency_mult = 0.10
+		state_aristocrats_investment_pool_efficiency_mult = 0.10
+		state_bureaucrats_investment_pool_efficiency_mult = 0.10
+		state_capitalists_investment_pool_efficiency_mult = 0.10
+		state_clergymen_investment_pool_efficiency_mult = 0.10
+		state_clerks_investment_pool_efficiency_mult = 0.10
+		state_engineers_investment_pool_efficiency_mult = 0.10
+		state_farmers_investment_pool_efficiency_mult = 0.10
+		state_laborers_investment_pool_efficiency_mult = 0.10
+		state_machinists_investment_pool_efficiency_mult = 0.10
+		state_officers_investment_pool_efficiency_mult = 0.10
+		state_peasants_investment_pool_efficiency_mult = 0.10
+		state_shopkeepers_investment_pool_efficiency_mult = 0.10
+		state_slaves_investment_pool_efficiency_mult = 0.10
+		state_soldiers_investment_pool_efficiency_mult = 0.10
 		country_disable_nationalization_without_compensation_bool = yes
 		country_private_construction_allocation_mult = 0.5
 		building_nationalization_investment_return_add = 0.5
@@ -311,7 +326,6 @@ law_agrarianism = {
 		state_aristocrats_investment_pool_efficiency_mult = 0.5
 		state_clergymen_investment_pool_efficiency_mult = 0.5
 		state_farmers_investment_pool_efficiency_mult = 0.5
-		state_capitalists_investment_pool_efficiency_mult = -0.25
 		country_private_construction_allocation_mult = 0.5
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.5
@@ -581,12 +595,12 @@ law_extraction_economy = {
 		building_group_bg_agriculture_throughput_add = 0.1
 		building_group_bg_plantations_throughput_add = 0.1
 		building_group_bg_extraction_throughput_add = 0.1
-		state_shopkeepers_investment_pool_efficiency_mult = -0.5
-		state_bureaucrats_investment_pool_efficiency_mult = -0.5
-		state_capitalists_investment_pool_efficiency_mult = -0.25
-		state_farmers_investment_pool_efficiency_mult = -0.75
-		state_clergymen_investment_pool_efficiency_mult = -0.75
-		state_aristocrats_investment_pool_efficiency_mult = -0.75
+		state_shopkeepers_investment_pool_efficiency_mult = -0.25
+		state_bureaucrats_investment_pool_efficiency_mult = -0.25
+		state_capitalists_investment_pool_efficiency_mult = -0.125
+		state_farmers_investment_pool_efficiency_mult = -0.375
+		state_clergymen_investment_pool_efficiency_mult = -0.375
+		state_aristocrats_investment_pool_efficiency_mult = -0.375
 		country_private_construction_allocation_mult = 0.5
 		building_nationalization_investment_return_add = 0.5
 		country_disable_nationalization_without_compensation_bool = yes
@@ -824,6 +838,9 @@ law_cooperative_ownership = {
 	}
 
 	modifier = {
+		state_mortality_mult = -0.10
+		state_standard_of_living_add = 1
+		state_education_access_add = 0.10
 		state_shopkeepers_investment_pool_efficiency_mult = 0.25
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 0.5
@@ -935,6 +952,8 @@ law_command_economy = {
 	}
 
 	modifier = {
+		building_group_bg_light_industry_throughput_add = 0.10
+		building_group_bg_heavy_industry_throughput_add = 0.10
 		country_disable_investment_pool_bool = yes
 
 		state_bureaucrats_investment_pool_efficiency_mult = 0.25
