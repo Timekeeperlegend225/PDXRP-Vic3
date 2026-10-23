@@ -1,0 +1,7 @@
+﻿l_english:
+ pdxrp_freeze_world_soul_temperature: "GM: Freeze Temperature Rise"
+ pdxrp_freeze_world_soul_temperature_desc: "Pause automatic monthly temperature increases until resumed."
+ pdxrp_freeze_world_soul_temperature_tt: "Stops monthly warming. Existing temperature effects and manual adjustments continue."
+ pdxrp_resume_world_soul_temperature: "GM: Resume Temperature Rise"
+ pdxrp_resume_world_soul_temperature_desc: "Resume automatic monthly temperature increases."
+ pdxrp_resume_world_soul_temperature_tt: "Resume warming without adding missed increases."

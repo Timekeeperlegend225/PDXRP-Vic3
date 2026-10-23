@@ -1,8 +1,8 @@
 ﻿ZIP = {
-    color = { 0 0 0 }
+    color = { 217 119 87 }
     country_type = recognized
     tier = kingdom
     cultures = { baganda }
-    religion = gnu_linux
+    religion = atheist
     capital = STATE_CONGO_ORIENTALE
 }

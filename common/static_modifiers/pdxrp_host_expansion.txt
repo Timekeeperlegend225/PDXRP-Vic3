@@ -1,0 +1,7 @@
+pdxrp_host_offense = { unit_army_offense_add = 10 }
+pdxrp_host_defense = { unit_army_defense_add = 10 }
+pdxrp_host_supply = {
+    country_military_goods_cost_mult = -0.10
+    unit_supply_consumption_mult = -0.10
+}
+pdxrp_expedition_birth_penalty = { state_birth_rate_mult = -0.50 }

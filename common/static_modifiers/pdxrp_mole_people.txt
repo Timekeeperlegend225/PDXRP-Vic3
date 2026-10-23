@@ -1,0 +1,8 @@
+pdxrp_mole_people_blessing = {
+    state_birth_rate_mult = 0.20
+    country_minting_mult = 0.50
+    country_company_throughput_bonus_add = 1.0
+    unit_army_offense_add = 30
+    unit_army_defense_add = 30
+    state_construction_mult = 0.10
+}

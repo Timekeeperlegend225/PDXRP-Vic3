@@ -1,0 +1,45 @@
+movement_pdxrp_pop_minority = {
+    category = movement_category_pdxrp_pop_minority
+    ideology = ideology_pdxrp_pop_minority
+    character_ideologies = { ideology_anarchist }
+    creation_trigger = {
+        any_scope_pop = { culture = cu:baganda }
+        NAND = {
+            has_law_or_variant = law_type:law_multicultural
+            has_law_or_variant = law_type:law_anarchy
+        }
+    }
+    creation_weight = { value = 500 }
+    on_created = { add_movement_enthusiasm_modifier = yes }
+    culture_selection_trigger = { THIS = cu:baganda }
+    culture_selection_weight = { value = 100 }
+    disband_trigger = {
+        OR = {
+            NOT = { any_scope_pop = { culture = cu:baganda } }
+            AND = {
+                has_law_or_variant = law_type:law_multicultural
+                has_law_or_variant = law_type:law_anarchy
+            }
+        }
+    }
+    character_support_trigger = {
+        OR = { culture = cu:baganda has_ideology = ideology:ideology_anarchist }
+    }
+    character_support_weight = { value = 300 }
+    can_pressure_interest_group = { always = yes }
+    pop_support_trigger = { culture = cu:baganda }
+    pop_support_factors = { movement_support_radicalization }
+    pop_support_weight = {
+        value = 100
+        multiply = { value = pop_radical_fraction add = 1 }
+    }
+    revolution = {
+        possible = { political_movement_support >= 0.05 }
+        weight = { value = 100 }
+    }
+    active_law_radicalism_multiplier = 1.5
+    law_enactment_radicalism_multiplier = 1.5
+    additional_radicalism_factors = {
+        add = { value = 0.35 desc = pdxrp_pop_revolutionary_pressure }
+    }
+}

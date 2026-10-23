@@ -1,0 +1,37 @@
+amendment_pdxrp_experiments_twilight = {
+	# Use these stances for PB support and TU/Intelligentsia opposition.
+	parent = law_outlawed_dissent
+
+	allowed_laws = {
+		law_universal_suffrage
+	}
+
+	modifier = {
+		country_electoral_confidence_impact_mult = -0.30
+		country_legitimacy_govt_size_add = 1
+	}
+
+	possible = {
+		c:USA ?= this
+	}
+
+	would_sponsor = {
+		is_interest_group_type = ig_petty_bourgeoisie
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			OR = {
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_intelligentsia
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+
+	amendment_activism_multiplier = 1.0
+}

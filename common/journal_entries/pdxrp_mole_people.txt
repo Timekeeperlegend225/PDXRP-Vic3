@@ -1,0 +1,26 @@
+je_pdxrp_mole_people = {
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+    group = je_group_crises
+
+    is_shown_when_inactive = {
+        has_global_variable = pdxrp_mole_people_announced
+        NOT = { has_global_variable = pdxrp_mole_people_resolved }
+    }
+    possible = {
+        has_global_variable = pdxrp_mole_people_announced
+        NOT = { has_global_variable = pdxrp_mole_people_resolved }
+    }
+    should_be_pinned_by_default_uninvolved_or_context = yes
+    can_revolution_inherit = yes
+    weight = 1000
+
+    scripted_button = pdxrp_mole_people_donate_one
+    scripted_button = pdxrp_mole_people_donate_five
+
+    complete = { has_global_variable = pdxrp_mole_people_resolved }
+
+    timeout = 365
+    on_timeout = {
+        pdxrp_mole_people_resolve_collection = yes
+    }
+}

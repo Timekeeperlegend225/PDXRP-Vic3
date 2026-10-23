@@ -1,0 +1,35 @@
+pdxrp_freeze_world_soul_temperature = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+        has_global_variable = pdxrp_world_soul_temperature
+        NOT = { has_global_variable = pdxrp_world_soul_temperature_frozen }
+    }
+    possible = { always = yes }
+    when_taken = {
+        custom_tooltip = pdxrp_freeze_world_soul_temperature_tt
+        hidden_effect = {
+            set_global_variable = pdxrp_world_soul_temperature_frozen
+            set_global_variable = { name = pdxrp_world_soul_monthly_heat value = 0 }
+        }
+    }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_resume_world_soul_temperature = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+        has_global_variable = pdxrp_world_soul_temperature
+        has_global_variable = pdxrp_world_soul_temperature_frozen
+    }
+    possible = { always = yes }
+    when_taken = {
+        custom_tooltip = pdxrp_resume_world_soul_temperature_tt
+        hidden_effect = {
+            remove_global_variable = pdxrp_world_soul_temperature_frozen
+            set_global_variable = { name = pdxrp_world_soul_monthly_heat value = pdxrp_world_soul_monthly_heat }
+        }
+    }
+    ai_chance = { value = 0 }
+}

@@ -1,0 +1,29 @@
+pdxrp_the_end = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+        NOT = { has_global_variable = pdxrp_the_end_started }
+    }
+    possible = { NOT = { has_global_variable = pdxrp_the_end_started } }
+    when_taken = {
+        hidden_effect = { pdxrp_the_end_spawn_effect = yes }
+    }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_the_end_increase_speed = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+        has_global_variable = pdxrp_the_end_started
+        exists = c:WST
+    }
+    possible = { exists = c:WST }
+    when_taken = {
+        c:WST = {
+            pdxrp_the_end_initialize_speed_effect = yes
+            change_variable = { name = pdxrp_the_end_speed_multiplier multiply = 2 }
+        }
+    }
+    ai_chance = { value = 0 }
+}

@@ -1,0 +1,27 @@
+principle_pdxrp_pop_integration_1 = {
+    icon = "gfx/interface/icons/principles_icons/construction.dds"
+    background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
+    member_modifier = {
+        state_assimilation_mult = 5
+        state_allow_assimilation_in_homeland_bool = yes
+    }
+    ai_weight = { value = 0 }
+}
+principle_pdxrp_pop_integration_2 = {
+    icon = "gfx/interface/icons/principles_icons/construction.dds"
+    background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
+    member_modifier = {
+        state_assimilation_mult = 7.5
+        state_allow_assimilation_in_homeland_bool = yes
+    }
+    ai_weight = { value = 0 }
+}
+principle_pdxrp_pop_integration_3 = {
+    icon = "gfx/interface/icons/principles_icons/construction.dds"
+    background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
+    member_modifier = {
+        state_assimilation_mult = 10
+        state_allow_assimilation_in_homeland_bool = yes
+    }
+    ai_weight = { value = 0 }
+}

@@ -1,0 +1,3 @@
+pdxrp_reduced_naval_prestige = {
+    country_prestige_from_navy_power_projection_mult = -0.50
+}

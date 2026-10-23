@@ -1,0 +1,56 @@
+# Called by the announcement event and repair action. Guard the
+# initialization so country popups and existing saves never reset donations.
+pdxrp_mole_people_initialize_collection = {
+    set_global_variable = pdxrp_mole_people_announced
+    if = {
+        limit = {
+            NOT = { has_global_variable = pdxrp_mole_people_resolved }
+        }
+        if = {
+            limit = { NOT = { has_global_variable = pdxrp_mole_people_fund } }
+            set_global_variable = { name = pdxrp_mole_people_fund value = 0 }
+            every_country = {
+                set_variable = { name = pdxrp_mole_people_donated value = 0 }
+            }
+        }
+        set_global_variable = pdxrp_mole_people_fund_open
+    }
+}
+
+# Give each country its own visible journal, sharing the same global fund.
+# No journal immediate effect calls this, so enrollment cannot recurse.
+pdxrp_mole_people_start_collection = {
+    pdxrp_mole_people_initialize_collection = yes
+    if = {
+        limit = { NOT = { has_global_variable = pdxrp_mole_people_resolved } }
+        every_country = {
+            limit = { NOT = { has_journal_entry = je_pdxrp_mole_people } }
+            add_journal_entry = { type = je_pdxrp_mole_people }
+        }
+    }
+}
+
+# The first country's one-year timer pays everyone exactly once. Other journals
+# then complete using the shared resolved flag, without paying rewards again.
+pdxrp_mole_people_resolve_collection = {
+    if = {
+        limit = { NOT = { has_global_variable = pdxrp_mole_people_resolved } }
+        set_global_variable = pdxrp_mole_people_resolved
+        remove_global_variable = pdxrp_mole_people_fund_open
+        if = {
+            limit = { global_var:pdxrp_mole_people_fund >= 10000000 }
+            every_country = {
+                set_variable = {
+                    name = pdxrp_mole_people_reward_scale
+                    value = pdxrp_mole_people_reward_scale
+                }
+                add_modifier = {
+                    name = pdxrp_mole_people_blessing
+                    multiplier = var:pdxrp_mole_people_reward_scale
+                    years = 5
+                    is_decaying = yes
+                }
+            }
+        }
+    }
+}

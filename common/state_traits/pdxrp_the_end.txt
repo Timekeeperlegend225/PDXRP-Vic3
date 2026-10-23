@@ -1,0 +1,9 @@
+state_trait_pdxrp_wasteland = {
+    icon = "gfx/interface/icons/state_trait_icons/severe_malaria.dds"
+    # Deliberately exceeds normal additive colonial bonuses, so -100% cannot be
+    # cancelled by institutions, principles, companies or homeland bonuses.
+    # No disabling technology; applies to homeland and non-homeland colonization.
+    modifier = {
+        state_colony_growth_speed_mult = -1000
+    }
+}

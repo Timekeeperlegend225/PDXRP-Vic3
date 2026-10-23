@@ -1,0 +1,20 @@
+pm_pdxrp_il_panoptico = {
+    texture = "gfx/interface/icons/production_method_icons/skyscraper_bureaucratic_nexus.dds"
+    unlocking_technologies = { pdxrp_mexico_panoptico }
+
+    country_modifiers = {
+        workforce_scaled = {
+            country_institution_cost_institution_police_mult = -0.50
+            country_institution_cost_institution_home_affairs_mult = -0.50
+            country_authority_mult = 0.10
+        }
+    }
+    building_modifiers = {
+        workforce_scaled = { goods_input_paper_add = 25 }
+        level_scaled = {
+            building_employment_laborers_add = 200
+            building_employment_clerks_add = 500
+            building_employment_bureaucrats_add = 300
+        }
+    }
+}

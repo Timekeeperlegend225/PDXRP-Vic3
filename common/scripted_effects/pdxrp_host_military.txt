@@ -1,0 +1,57 @@
+pdxrp_host_offense_up_effect = {
+    if = {
+        limit = { NOT = { has_variable = pdxrp_host_offense_steps } }
+        set_variable = { name = pdxrp_host_offense_steps value = 0 }
+    }
+    change_variable = { name = pdxrp_host_offense_steps add = 1 }
+    remove_modifier = pdxrp_host_offense
+    if = {
+        limit = { NOT = { var:pdxrp_host_offense_steps = 0 } }
+        add_modifier = { name = pdxrp_host_offense multiplier = var:pdxrp_host_offense_steps }
+    }
+}
+pdxrp_host_offense_down_effect = {
+    if = {
+        limit = { NOT = { has_variable = pdxrp_host_offense_steps } }
+        set_variable = { name = pdxrp_host_offense_steps value = 0 }
+    }
+    change_variable = { name = pdxrp_host_offense_steps add = -1 }
+    remove_modifier = pdxrp_host_offense
+    if = {
+        limit = { NOT = { var:pdxrp_host_offense_steps = 0 } }
+        add_modifier = { name = pdxrp_host_offense multiplier = var:pdxrp_host_offense_steps }
+    }
+}
+pdxrp_host_defense_up_effect = {
+    if = {
+        limit = { NOT = { has_variable = pdxrp_host_defense_steps } }
+        set_variable = { name = pdxrp_host_defense_steps value = 0 }
+    }
+    change_variable = { name = pdxrp_host_defense_steps add = 1 }
+    remove_modifier = pdxrp_host_defense
+    if = {
+        limit = { NOT = { var:pdxrp_host_defense_steps = 0 } }
+        add_modifier = { name = pdxrp_host_defense multiplier = var:pdxrp_host_defense_steps }
+    }
+}
+pdxrp_host_defense_down_effect = {
+    if = {
+        limit = { NOT = { has_variable = pdxrp_host_defense_steps } }
+        set_variable = { name = pdxrp_host_defense_steps value = 0 }
+    }
+    change_variable = { name = pdxrp_host_defense_steps add = -1 }
+    remove_modifier = pdxrp_host_defense
+    if = {
+        limit = { NOT = { var:pdxrp_host_defense_steps = 0 } }
+        add_modifier = { name = pdxrp_host_defense multiplier = var:pdxrp_host_defense_steps }
+    }
+}
+pdxrp_host_supply_down_effect = {
+    if = {
+        limit = { NOT = { has_variable = pdxrp_host_supply_steps } }
+        set_variable = { name = pdxrp_host_supply_steps value = 0 }
+    }
+    change_variable = { name = pdxrp_host_supply_steps add = 1 }
+    remove_modifier = pdxrp_host_supply
+    add_modifier = { name = pdxrp_host_supply multiplier = var:pdxrp_host_supply_steps }
+}

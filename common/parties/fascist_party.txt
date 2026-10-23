@@ -3,6 +3,13 @@
 	name = {
 		first_valid = {
 			triggered_desc = {
+				desc = pdxrp_party_mexico_pdh
+				trigger = {
+					c:MEX ?= THIS
+					has_variable = pdxrp_mexico_pdh_party_name
+				}
+			}
+			triggered_desc = {
 				desc = party_austrian_nazi_party
 				trigger = {
 					c:AUS ?= THIS

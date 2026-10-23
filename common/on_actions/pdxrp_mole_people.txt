@@ -1,0 +1,34 @@
+on_monthly_pulse_country = {
+    on_actions = { pdxrp_mole_people_enroll_players }
+}
+
+# Repair an already-announced collection and enroll players who join later.
+pdxrp_mole_people_enroll_players = {
+    effect = {
+        if = {
+            limit = {
+                is_player = yes
+                has_global_variable = pdxrp_mole_people_announced
+                NOT = { has_global_variable = pdxrp_mole_people_resolved }
+                NOT = { has_journal_entry = je_pdxrp_mole_people }
+            }
+            pdxrp_mole_people_start_collection = yes
+        }
+    }
+}
+
+on_game_started_after_lobby = {
+    on_actions = { pdxrp_mole_people_repair_after_lobby }
+}
+
+pdxrp_mole_people_repair_after_lobby = {
+    effect = {
+        if = {
+            limit = {
+                has_global_variable = pdxrp_mole_people_announced
+                NOT = { has_global_variable = pdxrp_mole_people_resolved }
+            }
+            pdxrp_mole_people_start_collection = yes
+        }
+    }
+}

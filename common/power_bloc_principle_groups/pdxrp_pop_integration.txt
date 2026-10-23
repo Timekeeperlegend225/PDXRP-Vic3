@@ -1,0 +1,7 @@
+principle_group_pdxrp_pop_integration = {
+    levels = {
+        principle_pdxrp_pop_integration_1
+        principle_pdxrp_pop_integration_2
+        principle_pdxrp_pop_integration_3
+    }
+}

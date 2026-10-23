@@ -1,0 +1,410 @@
+namespace = pdxrp_host
+
+pdxrp_host.10 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_host_eco
+    desc = pdxrp_host_target_desc
+    event_image = { texture = "gfx/event_pictures/void.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_host_back
+        trigger_event = { id = pdxrp_host.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_clear
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_eco_1
+            remove_modifier = pdxrp_campaign_eco_2
+            remove_modifier = pdxrp_campaign_eco_3
+            remove_modifier = pdxrp_campaign_eco_4
+            remove_modifier = pdxrp_campaign_eco_5
+        }
+        trigger_event = { id = pdxrp_host.10 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_eco_1
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_eco_1
+            remove_modifier = pdxrp_campaign_eco_2
+            remove_modifier = pdxrp_campaign_eco_3
+            remove_modifier = pdxrp_campaign_eco_4
+            remove_modifier = pdxrp_campaign_eco_5
+            add_modifier = { name = pdxrp_campaign_eco_1 }
+        }
+        trigger_event = { id = pdxrp_host.10 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_eco_2
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_eco_1
+            remove_modifier = pdxrp_campaign_eco_2
+            remove_modifier = pdxrp_campaign_eco_3
+            remove_modifier = pdxrp_campaign_eco_4
+            remove_modifier = pdxrp_campaign_eco_5
+            add_modifier = { name = pdxrp_campaign_eco_2 }
+        }
+        trigger_event = { id = pdxrp_host.10 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_eco_3
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_eco_1
+            remove_modifier = pdxrp_campaign_eco_2
+            remove_modifier = pdxrp_campaign_eco_3
+            remove_modifier = pdxrp_campaign_eco_4
+            remove_modifier = pdxrp_campaign_eco_5
+            add_modifier = { name = pdxrp_campaign_eco_3 }
+        }
+        trigger_event = { id = pdxrp_host.10 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_eco_4
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_eco_1
+            remove_modifier = pdxrp_campaign_eco_2
+            remove_modifier = pdxrp_campaign_eco_3
+            remove_modifier = pdxrp_campaign_eco_4
+            remove_modifier = pdxrp_campaign_eco_5
+            add_modifier = { name = pdxrp_campaign_eco_4 }
+        }
+        trigger_event = { id = pdxrp_host.10 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_eco_5
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_eco_1
+            remove_modifier = pdxrp_campaign_eco_2
+            remove_modifier = pdxrp_campaign_eco_3
+            remove_modifier = pdxrp_campaign_eco_4
+            remove_modifier = pdxrp_campaign_eco_5
+            add_modifier = { name = pdxrp_campaign_eco_5 }
+        }
+        trigger_event = { id = pdxrp_host.10 days = 0 popup = yes }
+    }
+
+}
+
+pdxrp_host.11 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_host_pop
+    desc = pdxrp_host_target_desc
+    event_image = { texture = "gfx/event_pictures/void.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_host_back
+        trigger_event = { id = pdxrp_host.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_clear
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_pop_1
+            remove_modifier = pdxrp_campaign_pop_2
+            remove_modifier = pdxrp_campaign_pop_3
+            remove_modifier = pdxrp_campaign_pop_4
+            remove_modifier = pdxrp_campaign_pop_5
+        }
+        trigger_event = { id = pdxrp_host.11 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_pop_1
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_pop_1
+            remove_modifier = pdxrp_campaign_pop_2
+            remove_modifier = pdxrp_campaign_pop_3
+            remove_modifier = pdxrp_campaign_pop_4
+            remove_modifier = pdxrp_campaign_pop_5
+            add_modifier = { name = pdxrp_campaign_pop_1 }
+        }
+        trigger_event = { id = pdxrp_host.11 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_pop_2
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_pop_1
+            remove_modifier = pdxrp_campaign_pop_2
+            remove_modifier = pdxrp_campaign_pop_3
+            remove_modifier = pdxrp_campaign_pop_4
+            remove_modifier = pdxrp_campaign_pop_5
+            add_modifier = { name = pdxrp_campaign_pop_2 }
+        }
+        trigger_event = { id = pdxrp_host.11 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_pop_3
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_pop_1
+            remove_modifier = pdxrp_campaign_pop_2
+            remove_modifier = pdxrp_campaign_pop_3
+            remove_modifier = pdxrp_campaign_pop_4
+            remove_modifier = pdxrp_campaign_pop_5
+            add_modifier = { name = pdxrp_campaign_pop_3 }
+        }
+        trigger_event = { id = pdxrp_host.11 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_pop_4
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_pop_1
+            remove_modifier = pdxrp_campaign_pop_2
+            remove_modifier = pdxrp_campaign_pop_3
+            remove_modifier = pdxrp_campaign_pop_4
+            remove_modifier = pdxrp_campaign_pop_5
+            add_modifier = { name = pdxrp_campaign_pop_4 }
+        }
+        trigger_event = { id = pdxrp_host.11 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_pop_5
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_pop_1
+            remove_modifier = pdxrp_campaign_pop_2
+            remove_modifier = pdxrp_campaign_pop_3
+            remove_modifier = pdxrp_campaign_pop_4
+            remove_modifier = pdxrp_campaign_pop_5
+            add_modifier = { name = pdxrp_campaign_pop_5 }
+        }
+        trigger_event = { id = pdxrp_host.11 days = 0 popup = yes }
+    }
+
+}
+
+pdxrp_host.12 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_host_stability
+    desc = pdxrp_host_target_desc
+    event_image = { texture = "gfx/event_pictures/void.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_host_back
+        trigger_event = { id = pdxrp_host.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_clear
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_stability_1
+            remove_modifier = pdxrp_campaign_stability_2
+            remove_modifier = pdxrp_campaign_stability_3
+            remove_modifier = pdxrp_campaign_stability_4
+            remove_modifier = pdxrp_campaign_stability_5
+        }
+        trigger_event = { id = pdxrp_host.12 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_stability_1
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_stability_1
+            remove_modifier = pdxrp_campaign_stability_2
+            remove_modifier = pdxrp_campaign_stability_3
+            remove_modifier = pdxrp_campaign_stability_4
+            remove_modifier = pdxrp_campaign_stability_5
+            add_modifier = { name = pdxrp_campaign_stability_1 }
+        }
+        trigger_event = { id = pdxrp_host.12 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_stability_2
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_stability_1
+            remove_modifier = pdxrp_campaign_stability_2
+            remove_modifier = pdxrp_campaign_stability_3
+            remove_modifier = pdxrp_campaign_stability_4
+            remove_modifier = pdxrp_campaign_stability_5
+            add_modifier = { name = pdxrp_campaign_stability_2 }
+        }
+        trigger_event = { id = pdxrp_host.12 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_stability_3
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_stability_1
+            remove_modifier = pdxrp_campaign_stability_2
+            remove_modifier = pdxrp_campaign_stability_3
+            remove_modifier = pdxrp_campaign_stability_4
+            remove_modifier = pdxrp_campaign_stability_5
+            add_modifier = { name = pdxrp_campaign_stability_3 }
+        }
+        trigger_event = { id = pdxrp_host.12 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_stability_4
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_stability_1
+            remove_modifier = pdxrp_campaign_stability_2
+            remove_modifier = pdxrp_campaign_stability_3
+            remove_modifier = pdxrp_campaign_stability_4
+            remove_modifier = pdxrp_campaign_stability_5
+            add_modifier = { name = pdxrp_campaign_stability_4 }
+        }
+        trigger_event = { id = pdxrp_host.12 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_stability_5
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_stability_1
+            remove_modifier = pdxrp_campaign_stability_2
+            remove_modifier = pdxrp_campaign_stability_3
+            remove_modifier = pdxrp_campaign_stability_4
+            remove_modifier = pdxrp_campaign_stability_5
+            add_modifier = { name = pdxrp_campaign_stability_5 }
+        }
+        trigger_event = { id = pdxrp_host.12 days = 0 popup = yes }
+    }
+
+}
+
+pdxrp_host.13 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_host_modernization
+    desc = pdxrp_host_target_desc
+    event_image = { texture = "gfx/event_pictures/void.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_host_back
+        trigger_event = { id = pdxrp_host.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_clear
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_modernization_1
+            remove_modifier = pdxrp_campaign_modernization_2
+            remove_modifier = pdxrp_campaign_modernization_3
+            remove_modifier = pdxrp_campaign_modernization_4
+            remove_modifier = pdxrp_campaign_modernization_5
+        }
+        trigger_event = { id = pdxrp_host.13 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_modernization_1
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_modernization_1
+            remove_modifier = pdxrp_campaign_modernization_2
+            remove_modifier = pdxrp_campaign_modernization_3
+            remove_modifier = pdxrp_campaign_modernization_4
+            remove_modifier = pdxrp_campaign_modernization_5
+            add_modifier = { name = pdxrp_campaign_modernization_1 }
+        }
+        trigger_event = { id = pdxrp_host.13 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_modernization_2
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_modernization_1
+            remove_modifier = pdxrp_campaign_modernization_2
+            remove_modifier = pdxrp_campaign_modernization_3
+            remove_modifier = pdxrp_campaign_modernization_4
+            remove_modifier = pdxrp_campaign_modernization_5
+            add_modifier = { name = pdxrp_campaign_modernization_2 }
+        }
+        trigger_event = { id = pdxrp_host.13 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_modernization_3
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_modernization_1
+            remove_modifier = pdxrp_campaign_modernization_2
+            remove_modifier = pdxrp_campaign_modernization_3
+            remove_modifier = pdxrp_campaign_modernization_4
+            remove_modifier = pdxrp_campaign_modernization_5
+            add_modifier = { name = pdxrp_campaign_modernization_3 }
+        }
+        trigger_event = { id = pdxrp_host.13 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_modernization_4
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_modernization_1
+            remove_modifier = pdxrp_campaign_modernization_2
+            remove_modifier = pdxrp_campaign_modernization_3
+            remove_modifier = pdxrp_campaign_modernization_4
+            remove_modifier = pdxrp_campaign_modernization_5
+            add_modifier = { name = pdxrp_campaign_modernization_4 }
+        }
+        trigger_event = { id = pdxrp_host.13 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_modernization_5
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_campaign_modernization_1
+            remove_modifier = pdxrp_campaign_modernization_2
+            remove_modifier = pdxrp_campaign_modernization_3
+            remove_modifier = pdxrp_campaign_modernization_4
+            remove_modifier = pdxrp_campaign_modernization_5
+            add_modifier = { name = pdxrp_campaign_modernization_5 }
+        }
+        trigger_event = { id = pdxrp_host.13 days = 0 popup = yes }
+    }
+
+}
+
+pdxrp_host.1 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_host_boosts
+    desc = pdxrp_host_target_desc
+    event_image = { texture = "gfx/event_pictures/void.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_host_back
+        trigger_event = { id = gm_actions.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_eco
+        trigger_event = { id = pdxrp_host.10 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_pop
+        trigger_event = { id = pdxrp_host.11 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_stability
+        trigger_event = { id = pdxrp_host.12 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_modernization
+        trigger_event = { id = pdxrp_host.13 days = 0 popup = yes }
+    }
+
+}
+
+pdxrp_host.2 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_host_military
+    desc = pdxrp_host_target_desc
+    event_image = { texture = "gfx/event_pictures/void.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_host_back
+        trigger_event = { id = gm_actions.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_offense_up
+        scope:GM_interacted_scope = { pdxrp_host_offense_up_effect = yes }
+        trigger_event = { id = pdxrp_host.2 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_offense_down
+        scope:GM_interacted_scope = { pdxrp_host_offense_down_effect = yes }
+        trigger_event = { id = pdxrp_host.2 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_defense_up
+        scope:GM_interacted_scope = { pdxrp_host_defense_up_effect = yes }
+        trigger_event = { id = pdxrp_host.2 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_defense_down
+        scope:GM_interacted_scope = { pdxrp_host_defense_down_effect = yes }
+        trigger_event = { id = pdxrp_host.2 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_supply_down
+        scope:GM_interacted_scope = { pdxrp_host_supply_down_effect = yes }
+        trigger_event = { id = pdxrp_host.2 days = 0 popup = yes }
+    }
+
+}

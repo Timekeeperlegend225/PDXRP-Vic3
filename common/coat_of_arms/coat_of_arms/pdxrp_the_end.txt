@@ -1,0 +1,4 @@
+WST = {
+    pattern = "pattern_solid.tga"
+    color1 = "black"
+}

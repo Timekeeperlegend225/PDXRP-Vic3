@@ -1,0 +1,14 @@
+on_monthly_pulse_country = {
+    on_actions = { pdxrp_mexico_unlock_panoptico }
+}
+pdxrp_mexico_unlock_panoptico = {
+    effect = {
+        if = {
+            limit = {
+                c:MEX ?= this
+                NOT = { has_technology_researched = pdxrp_mexico_panoptico }
+            }
+            add_technology_researched = pdxrp_mexico_panoptico
+        }
+    }
+}

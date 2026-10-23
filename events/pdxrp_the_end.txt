@@ -1,0 +1,71 @@
+namespace = pdxrp_the_end
+
+# Notification only: dismissing it does not control when the crisis starts.
+pdxrp_the_end.1 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_the_end.1.t
+    desc = pdxrp_the_end.1.d
+    flavor = pdxrp_the_end.1.f
+    event_image = { texture = "gfx/event_pictures/pdxrp_the_end_ozymandias.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_the_end.1.a
+        default_option = yes
+    }
+}
+
+# One country-scoped, self-scheduling loop; runs once every seven game days.
+pdxrp_the_end.2 = {
+    type = country_event
+    hidden = yes
+    immediate = {
+        if = {
+            limit = {
+                c:WST ?= THIS
+                has_global_variable = pdxrp_the_end_started
+            }
+            # Migrate Wasteland countries created before the decentralized-type correction.
+            if = {
+                limit = { NOT = { is_country_type = decentralized } }
+                set_country_type = decentralized
+            }
+            pdxrp_the_end_initialize_speed_effect = yes
+            # Choose the week's base quota once, then multiply by the GM-set speed.
+            random_list = {
+                1 = { set_variable = { name = pdxrp_the_end_weekly_quota value = 2 } }
+                1 = { set_variable = { name = pdxrp_the_end_weekly_quota value = 3 } }
+                1 = { set_variable = { name = pdxrp_the_end_weekly_quota value = 4 } }
+            }
+            change_variable = {
+                name = pdxrp_the_end_weekly_quota
+                multiply = var:pdxrp_the_end_speed_multiplier
+            }
+            while = {
+                limit = {
+                    var:pdxrp_the_end_weekly_quota > 0
+                    any_state_region = {
+                        any_scope_state = { NOT = { owner = c:WST } }
+                    }
+                }
+                # Always decrement; stop early when the world has no eligible states left.
+                change_variable = { name = pdxrp_the_end_weekly_quota subtract = 1 }
+                pdxrp_the_end_annex_one_effect = yes
+            }
+            remove_variable = pdxrp_the_end_weekly_quota
+            # Clear unexpected new pops/buildings in previously consumed regions too.
+            every_scope_state = {
+                # Backfill the region trait for Wasteland saves created before this patch.
+                state_region = { pdxrp_the_end_colonization_barrier_effect = yes }
+                kill_population_percent_in_state = { percent = 1 }
+                pdxrp_the_end_clear_buildings_effect = yes
+                set_state_type = incorporated
+            }
+            if = {
+                limit = { NOT = { exists = ruler } }
+                pdxrp_the_end_shadow_effect = yes
+            }
+            trigger_event = { id = pdxrp_the_end.2 days = 7 }
+        }
+    }
+}

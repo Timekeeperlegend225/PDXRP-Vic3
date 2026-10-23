@@ -1,0 +1,8 @@
+WST = {
+    color = { 0 0 0 }
+    country_type = decentralized
+    tier = kingdom
+    cultures = { british }
+    religion = atheist
+    capital = STATE_HOME_COUNTIES
+}

@@ -1,4 +1,4 @@
-﻿hrp_amendment_economic_expectation_2 = {
+hrp_amendment_economic_expectation_2 = {
 	parent = law_interventionism
 
 	modifier = {
@@ -173,6 +173,85 @@ REPLACE:amendment_racialized_subjecthood = {
 	can_repeal = { # For the tooltip
 		NOT = {
 			has_law = law_type:law_colonial_administration
+		}
+	}
+
+	amendment_activism_multiplier = 0.5
+}
+
+amendment_switchboard_democracy = {
+
+	# Also prevent stacking when enacted through law negotiations instead of the decision.
+	on_activate = {
+		every_law = {
+			every_scope_amendment = {
+				limit = { type = amendment_type:pdxrp_texas_popular_mandate }
+				remove_amendment = yes
+			}
+		}
+	}
+
+	parent = law_technocracy
+
+	allowed_laws = {
+		law_presidential_republic
+	}
+
+	modifier = {
+		country_legitimacy_base_add = 20
+		country_legitimacy_govt_size_add = 1
+		country_legitimacy_ideological_incoherence_mult = -0.5
+		country_must_have_movement_to_enact_laws_bool = yes
+		country_loyalists_from_legitimacy_mult = 1
+		country_radicals_from_legitimacy_mult = 1
+		political_movement_pop_attraction_mult = 1
+		political_movement_radicalism_add = 0.20
+	}
+
+	possible = {
+		c:TEX ?= this
+	}
+
+	would_sponsor = {
+		ROOT = {
+			OR = {
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_intelligentsia
+				AND = {
+					exists = scope:approval
+					scope:approval > 0
+				}
+			}
+		}
+	}
+
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_universal_suffrage
+				value < neutral
+			}
+			law_stance = {
+				law = law_type:law_technocracy
+				value < neutral
+			}
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = law_type:law_universal_suffrage
+				value < neutral
+			}
+			law_stance = {
+				law = law_type:law_technocracy
+				value < neutral
+			}
 		}
 	}
 

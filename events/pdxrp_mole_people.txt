@@ -1,0 +1,19 @@
+namespace = pdxrp_mole_people
+
+pdxrp_mole_people.1 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_mole_people.1.t
+    desc = pdxrp_mole_people.1.d
+    event_image = { texture = "gfx/event_pictures/pdxrp_mole_people.dds" }
+    duration = 30
+
+    immediate = {
+        pdxrp_mole_people_start_collection = yes
+    }
+
+    option = {
+        name = pdxrp_mole_people.1.a
+        default_option = yes
+    }
+}

@@ -1,6 +1,12 @@
 ﻿# Root = War
 # scope:target_country = target of violate sovereignty
 violate_sovereignty_war_check_rule = {
+	# Wasteland expands through scripted annexation, never through war.
+	custom_tooltip = {
+		text = pdxrp_the_end_cannot_attack_tt
+		scope:target_country = { NOT = { c:WST ?= THIS } }
+	}
+
 	violate_sovereignty_war_check = yes
 }
 
@@ -31,6 +37,13 @@ is_weak_power_bloc = {
 # scope:stakeholder = the stakeholder of the initial war goal, in case it's not the target country
 # scope:state = if the war goal is targeting a state, that. otherwise, empty
 can_start_diplomatic_plays_against = {
+	# Wasteland expands through scripted annexation, never through war.
+	custom_tooltip = {
+		text = pdxrp_the_end_cannot_attack_tt
+		NOT = { c:WST ?= THIS }
+		scope:target_country = { NOT = { c:WST ?= THIS } }
+	}
+
 	# Not allowed to attack subjects of play participants
 	NOT = {
 		scope:target_country.top_overlord ?= {
@@ -84,6 +97,14 @@ can_start_diplomatic_plays_against = {
 # scope:initiator = country that started the play (i.e the attacker)
 # scope:region = strategic region of the initial war goal
 can_join_side_in_diplomatic_play = {
+	# Wasteland expands through scripted annexation, never through war.
+	custom_tooltip = {
+		text = pdxrp_the_end_cannot_attack_tt
+		NOT = { c:WST ?= THIS }
+		scope:target_country = { NOT = { c:WST ?= THIS } }
+		scope:enemy_country = { NOT = { c:WST ?= THIS } }
+	}
+
 	# Might be disallowed by power bloc
 	NOT = {
 		custom_tooltip = {
@@ -228,6 +249,13 @@ can_sign_treaty_with = {
 # root = threatening country
 # scope:other_country = threatened country
 can_threaten_naval_hostilities = {
+	# Wasteland expands through scripted annexation, never through war.
+	custom_tooltip = {
+		text = pdxrp_the_end_cannot_attack_tt
+		NOT = { c:WST ?= THIS }
+		scope:other_country = { NOT = { c:WST ?= THIS } }
+	}
+
 	navy_size >= 10
 
 	custom_tooltip = {

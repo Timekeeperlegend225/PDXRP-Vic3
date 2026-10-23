@@ -1,0 +1,10 @@
+pdxrp_the_end_empty_country = {
+    # Country-side protection; the region trait also affects OTHER colonizers.
+    state_colony_growth_speed_mult = -1000
+    # Prevent construction and the minimum subsistence reserve from repopulating ruins.
+    country_construction_add = -1000000
+    state_construction_mult = -1
+    state_migration_pull_mult = -1
+    state_minimum_incorporated_subsistence_arable_land_add = -1
+    building_minimum_incorporated_subsistence_employment_add = -1
+}

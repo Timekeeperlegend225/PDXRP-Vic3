@@ -1,5 +1,0 @@
-﻿gnu_linux = {
-    icon = "gfx/interface/icons/religion_icons/atheist.dds"
-    heritage = heritage_materialist
-    color = { 0.1 0.1 0.1 }
-}

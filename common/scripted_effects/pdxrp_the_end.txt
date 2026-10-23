@@ -1,0 +1,106 @@
+# State-region scope. A regional trait reaches every current/future colony fragment,
+# regardless of owner. A country-scoped state modifier alone would not do that.
+pdxrp_the_end_colonization_barrier_effect = {
+    if = {
+        limit = { NOT = { has_state_trait = state_trait_pdxrp_wasteland } }
+        add_state_trait = state_trait_pdxrp_wasteland
+    }
+}
+
+# Safe for existing saves: the original Wasteland did not store a speed variable.
+pdxrp_the_end_initialize_speed_effect = {
+    if = {
+        limit = { NOT = { has_variable = pdxrp_the_end_speed_multiplier } }
+        set_variable = { name = pdxrp_the_end_speed_multiplier value = 1 }
+    }
+}
+
+# Country scope: create one enduring ruler, without borrowing any player's character.
+pdxrp_the_end_shadow_effect = {
+    create_character = {
+        first_name = pdxrp_the_end_shadow_name
+        last_name = pdxrp_the_end_shadow_surname
+        culture = cu:british
+        religion = rel:atheist
+        age = 30
+        ruler = yes
+        ideology = ideology_nihilist
+    }
+}
+
+# State-region scope. Transfer ALL fragments; do not keep using states that may merge.
+pdxrp_the_end_consume_region_effect = {
+    save_scope_as = pdxrp_the_end_consumed_region
+    pdxrp_the_end_colonization_barrier_effect = yes
+    # Remove farmland so the engine cannot recreate subsistence farms in the ruins.
+    add_arable_land = {
+        value = arable_land
+        multiply = -1
+    }
+    every_scope_state = {
+        pdxrp_the_end_clear_buildings_effect = yes
+        kill_population_percent_in_state = { percent = 1 }
+    }
+    every_scope_state = {
+        limit = { NOT = { owner = c:WST } }
+        set_state_owner = c:WST
+    }
+    # Resolve the resulting state again after all fragments have merged.
+    every_scope_state = {
+        limit = { owner = c:WST }
+        set_state_type = incorporated
+        kill_population_percent_in_state = { percent = 1 }
+        pdxrp_the_end_clear_buildings_effect = yes
+    }
+}
+
+# Global random selection: no adjacency restriction, and already consumed regions excluded.
+pdxrp_the_end_annex_one_effect = {
+    random_state_region = {
+        limit = {
+            any_scope_state = { NOT = { owner = c:WST } }
+        }
+        pdxrp_the_end_consume_region_effect = yes
+    }
+}
+
+pdxrp_the_end_spawn_effect = {
+    random_state_region = {
+        limit = { any_scope_state = { exists = owner } }
+        save_scope_as = pdxrp_the_end_spawn_region
+        random_scope_state = { save_scope_as = pdxrp_the_end_seed_state }
+    }
+    if = {
+        limit = { exists = scope:pdxrp_the_end_seed_state }
+        # Iceland may already have created WST at 105 C.
+        if = {
+            limit = { NOT = { exists = c:WST } }
+            create_country = {
+                tag = WST
+                state = scope:pdxrp_the_end_seed_state
+                on_created = {
+                    set_country_type = decentralized
+                    pdxrp_the_end_initialize_speed_effect = yes
+                    activate_law = law_type:law_presidential_republic
+                    activate_law = law_type:law_autocracy
+                    activate_law = law_type:law_closed_borders
+                    activate_law = law_type:law_no_colonial_affairs
+                    add_modifier = { name = pdxrp_the_end_empty_country }
+                    pdxrp_the_end_shadow_effect = yes
+                }
+            }
+        }
+        scope:pdxrp_the_end_spawn_region = {
+            pdxrp_the_end_consume_region_effect = yes
+        }
+        set_global_variable = pdxrp_the_end_started
+        c:WST = {
+            pdxrp_the_end_initialize_speed_effect = yes
+            trigger_event = { id = pdxrp_the_end.2 days = 7 }
+        }
+        every_country = {
+            limit = { is_player = yes }
+            trigger_event = { id = pdxrp_the_end.1 days = 0 popup = yes }
+        }
+    }
+}

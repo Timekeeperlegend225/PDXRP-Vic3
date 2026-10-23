@@ -21,7 +21,7 @@
                 remove_primary_culture = cu:british
                 remove_primary_culture = cu:scottish
                 add_primary_culture = cu:baganda
-                set_state_religion = rel:gnu_linux
+                set_state_religion = rel:atheist
                 pdxrp_zip_bomb_copy_british_techs_effect = yes
                 add_technology_researched = pdxrp_zip_bomb_virtual_arsenal
                 activate_law = law_type:law_cooperative_ownership
@@ -32,6 +32,7 @@
                 activate_law = law_type:law_closed_borders
                 activate_law = law_type:law_isolationism
                 add_modifier = { name = pdxrp_zip_bomb_collective }
+                add_modifier = { name = pdxrp_expedition_birth_penalty }
             }
         }
         s:STATE_CONGO_ORIENTALE = {
@@ -44,7 +45,7 @@
             set_state_type = incorporated
             # Reset only after all the transferred state fragments have merged.
             kill_population_percent_in_state = { percent = 1 }
-            create_pop = { culture = baganda religion = gnu_linux size = 10000000 }
+            create_pop = { culture = baganda religion = atheist size = 10000000 }
         }
         c:ZIP = { pdxrp_zip_bomb_create_army_effect = yes }
         set_global_variable = pdxrp_zip_bomb_spawned
@@ -81,10 +82,10 @@ pdxrp_zip_bomb_adopt_gnu_linux = {
     is_shown = {
         OR = { c:ZIP ?= THIS c:MOA ?= THIS }
         exists = c:ZIP
-        c:ZIP = { NOT = { country_has_state_religion = rel:gnu_linux } }
+        c:ZIP = { NOT = { country_has_state_religion = rel:atheist } }
     }
     possible = { always = yes }
-    when_taken = { c:ZIP = { set_state_religion = rel:gnu_linux } }
+    when_taken = { c:ZIP = { set_state_religion = rel:atheist } }
     ai_chance = { value = 0 }
 }
 

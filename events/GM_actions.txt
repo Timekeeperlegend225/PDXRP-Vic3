@@ -1,4 +1,4 @@
-﻿namespace = gm_actions
+namespace = gm_actions
 
 gm_actions.1 = {
 	type = country_event
@@ -39,6 +39,23 @@ gm_actions.1 = {
 		#triggered by diplo action
 	}
 	
+    # Campaign and military tools use the already selected GM_interacted_scope.
+    option = {
+        name = pdxrp_gm_victory_defeat_menu
+        trigger = { exists = scope:GM_interacted_scope }
+        trigger_event = { id = pdxrp_victory_buffs.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_boosts
+        trigger = { exists = scope:GM_interacted_scope }
+        trigger_event = { id = pdxrp_host.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_military
+        trigger = { exists = scope:GM_interacted_scope }
+        trigger_event = { id = pdxrp_host.2 days = 0 popup = yes }
+    }
+
 	#GM options
 	
 	option = {

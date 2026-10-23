@@ -38,6 +38,10 @@ pdxrp_world_soul_monthly_heat = {
     add = pdxrp_world_soul_pollution_heat
     add = pdxrp_world_soul_radicals_heat
     add = pdxrp_world_soul_debt_heat
+    if = {
+        limit = { has_global_variable = pdxrp_world_soul_temperature_frozen }
+        multiply = 0
+    }
 }
 
 # Temperature thresholds multiply both event rates.

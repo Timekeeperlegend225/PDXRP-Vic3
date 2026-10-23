@@ -1,4 +1,9 @@
 ﻿pdxrp_zip_bomb_collective = {
+    unit_army_defense_add = 100
+    unit_army_offense_add = 100
+    unit_occupation_mult = 3.0
+    military_formation_army_movement_speed_mult = 3.0
+    military_formation_fleet_movement_speed_mult = 3.0
     state_food_security_add = 1.0
     state_working_adult_ratio_add = 0.50
     country_minting_add = 10000000
@@ -9,7 +14,10 @@
     country_legitimacy_base_add = 100
     country_military_goods_cost_mult = -0.80
     unit_supply_consumption_mult = -1.0
-    country_ship_construction_efficiency_add = 10.0
+    country_ship_construction_efficiency_add = 6.0
+    # Standard hulls have a base of 25; add 175 for a weekly cap of 200.
+    country_ship_construction_progress_max_add = 175
+    country_supply_ship_construction_progress_max_mult = 3.0
     state_lower_strata_expected_sol_add = -8
     building_training_rate_mult = 3.0
     state_education_access_add = 1.0

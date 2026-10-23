@@ -1,4 +1,4 @@
-﻿REPLACE:gov_prince = {
+REPLACE:gov_prince = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_PRINCE"
@@ -127,6 +127,11 @@ REPLACE:gov_presidential_democracy = {
 	female_ruler = "RULER_TITLE_PRESIDENT"
 
 	possible = {
+		NOT = {
+			active_law:lawgroup_governance_principles ?= {
+				has_amendment = amendment_type:amendment_switchboard_democracy
+			}
+		}
 		has_law_or_variant = law_type:law_presidential_republic
 		country_has_voting_franchise = yes
 		NOR = {
@@ -162,5 +167,84 @@ REPLACE:gov_presidential_democracy = {
 	}
 	on_post_government_type_change = {
 		post_change_to_presidential_elective = yes
+	}
+}
+
+REPLACE:gov_technate_presidential = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_CHIEF_EXECUTIVE"
+	female_ruler = "RULER_TITLE_CHIEF_EXECUTIVE"
+
+	possible = {
+		has_law_or_variant = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_technocracy
+		NAND = {
+			is_involved_in_journal_entry = je_peru_bolivia
+			has_variable = pbc_member
+		}
+		NOT = {
+			active_law:lawgroup_governance_principles ?= {
+				has_amendment = amendment_type:amendment_switchboard_democracy
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
+REPLACE:gov_presidential_oligarchy = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_PRESIDENT"
+	female_ruler = "RULER_TITLE_PRESIDENT"
+
+	possible = {
+		has_law_or_variant = law_type:law_presidential_republic
+		country_has_voting_franchise = no
+		NOT = {
+			coa_fascist_trigger = yes
+		}
+		NAND = {
+			is_involved_in_journal_entry = je_peru_bolivia
+			has_variable = pbc_member
+		}
+		NOT = {
+			active_law:lawgroup_governance_principles ?= {
+				has_amendment = amendment_type:amendment_switchboard_democracy
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
+gov_switchboard_democracy = {
+	transfer_of_power = parliamentary_elective
+	new_leader_on_reform_government = yes
+
+	male_ruler = "RULER_TITLE_SECRETARY_OF_STAFF"
+	female_ruler = "RULER_TITLE_SECRETARY_OF_STAFF"
+
+	possible = {
+		has_law_or_variant = law_type:law_presidential_republic
+		active_law:lawgroup_governance_principles ?= {
+			has_amendment = amendment_type:amendment_switchboard_democracy
+		}
+	}
+
+	on_government_type_change = {
+		change_to_parliamentary_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_parliamentary_elective = yes
 	}
 }

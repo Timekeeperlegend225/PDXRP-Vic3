@@ -1,0 +1,33 @@
+namespace = pdxrp_victory_buffs
+
+pdxrp_victory_buffs.1 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_gm_victory_defeat_menu
+    desc = pdxrp_host_target_desc
+    event_image = { texture = "gfx/event_pictures/void.dds" }
+    duration = 30
+
+    option = {
+        name = pdxrp_fruits_of_victory
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_fruits_of_victory
+            add_modifier = { name = pdxrp_fruits_of_victory years = 10 is_decaying = yes }
+        }
+        trigger_event = { id = pdxrp_victory_buffs.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_gm_defeat_buffs
+        scope:GM_interacted_scope = {
+            remove_modifier = pdxrp_apples_of_defeat
+            remove_modifier = pdxrp_oranges_of_defeat
+            add_modifier = { name = pdxrp_apples_of_defeat years = 10 }
+            add_modifier = { name = pdxrp_oranges_of_defeat years = 10 is_decaying = yes }
+        }
+        trigger_event = { id = pdxrp_victory_buffs.1 days = 0 popup = yes }
+    }
+    option = {
+        name = pdxrp_host_back
+        trigger_event = { id = gm_actions.1 days = 0 popup = yes }
+    }
+}

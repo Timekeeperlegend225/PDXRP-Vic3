@@ -1,0 +1,67 @@
+# Automatically trigger once when the temperature reaches or passes 105 C.
+pdxrp_world_soul_iceland_threshold_effect = {
+    if = {
+        limit = {
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature >= 105
+            NOT = { has_global_variable = pdxrp_world_soul_volcano_announced }
+        }
+        pdxrp_world_soul_volcano_effect = yes
+    }
+}
+
+# Global scope. Shared by the temperature threshold and the GM decision.
+pdxrp_world_soul_volcano_effect = {
+    if = {
+        limit = {
+            NOT = { has_global_variable = pdxrp_world_soul_iceland_triggered }
+        }
+        set_global_variable = pdxrp_world_soul_iceland_triggered
+        if = {
+            limit = { NOT = { exists = c:WST } }
+            s:STATE_ICELAND = {
+                random_scope_state = {
+                    save_scope_as = pdxrp_world_soul_iceland_seed
+                }
+            }
+            if = {
+                limit = { exists = scope:pdxrp_world_soul_iceland_seed }
+                create_country = {
+                    tag = WST
+                    state = scope:pdxrp_world_soul_iceland_seed
+                    on_created = {
+                        set_country_type = decentralized
+                        set_capital = STATE_ICELAND
+                        activate_law = law_type:law_presidential_republic
+                        activate_law = law_type:law_autocracy
+                        activate_law = law_type:law_closed_borders
+                        activate_law = law_type:law_no_colonial_affairs
+                        add_modifier = { name = pdxrp_the_end_empty_country }
+                        pdxrp_the_end_shadow_effect = yes
+                    }
+                }
+            }
+        }
+        if = {
+            limit = { exists = c:WST }
+            s:STATE_ICELAND = {
+                pdxrp_the_end_consume_region_effect = yes
+            }
+        }
+        every_state_region = {
+            start_harvest_condition_with_params = {
+                type = pdxrp_world_soul_plague
+                intensity = 1
+                duration = 180
+            }
+        }
+    }
+    if = {
+        limit = { NOT = { has_global_variable = pdxrp_world_soul_volcano_announced } }
+        set_global_variable = pdxrp_world_soul_volcano_announced
+        every_country = {
+            trigger_event = { id = pdxrp_volcano.1 days = 0 popup = yes }
+        }
+    }
+
+}

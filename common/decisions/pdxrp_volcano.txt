@@ -1,0 +1,14 @@
+pdxrp_trigger_volcano = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+        NOT = { has_global_variable = pdxrp_world_soul_volcano_announced }
+    }
+    possible = {
+        NOT = { has_global_variable = pdxrp_world_soul_volcano_announced }
+    }
+    when_taken = {
+        pdxrp_world_soul_volcano_effect = yes
+    }
+    ai_chance = { value = 0 }
+}

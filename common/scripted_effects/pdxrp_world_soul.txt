@@ -63,9 +63,12 @@ pdxrp_world_soul_monthly_effect = {
         limit = { has_global_variable = pdxrp_world_soul_temperature }
         change_global_variable = { name = pdxrp_world_soul_months add = 1 }
         pdxrp_world_soul_measure_world_effect = yes
-        change_global_variable = {
-            name = pdxrp_world_soul_temperature
-            add = global_var:pdxrp_world_soul_monthly_heat
+        if = {
+            limit = { NOT = { has_global_variable = pdxrp_world_soul_temperature_frozen } }
+            change_global_variable = {
+                name = pdxrp_world_soul_temperature
+                add = global_var:pdxrp_world_soul_monthly_heat
+            }
         }
         pdxrp_world_soul_clamp_temperature_effect = yes
         # Four distinct targets per global monthly tick.
@@ -111,4 +114,5 @@ pdxrp_world_soul_clamp_temperature_effect = {
         }
         set_global_variable = { name = pdxrp_world_soul_temperature value = 0 }
     }
+    pdxrp_world_soul_iceland_threshold_effect = yes
 }

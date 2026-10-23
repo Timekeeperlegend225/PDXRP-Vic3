@@ -1,0 +1,9 @@
+pdxrp_fruits_of_victory = {
+    # Effects to be added later. Decays over ten years.
+}
+pdxrp_apples_of_defeat = {
+    # Effects to be added later. Lasts ten years at full strength.
+}
+pdxrp_oranges_of_defeat = {
+    # Effects to be added later. Decays over ten years.
+}

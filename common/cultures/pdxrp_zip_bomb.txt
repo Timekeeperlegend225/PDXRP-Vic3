@@ -1,6 +1,6 @@
 ﻿REPLACE:baganda = {
 	color= hsv{ 0.55 0.17 0.73 }
-	religion = gnu_linux
+	religion = atheist
 	heritage = heritage_virtual
 	language = language_assembly
 	traditions = { }

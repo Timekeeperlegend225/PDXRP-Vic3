@@ -1,0 +1,9 @@
+REPLACE:MGB = {
+    color = { 20 40 100 }
+
+    country_type = unrecognized
+    tier = empire
+
+    cultures = { maghrebi berber bidan }
+    capital = STATE_TUNISIA
+}

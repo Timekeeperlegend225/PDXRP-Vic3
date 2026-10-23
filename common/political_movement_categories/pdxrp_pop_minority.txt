@@ -1,0 +1,8 @@
+movement_category_pdxrp_pop_minority = {
+    icon = "gfx/interface/icons/political_movement_icons/movement_cultural.dds"
+    cultural_identity = yes
+    minimum_support_is_within_identity = yes
+    minimum_support_to_create = 0.20
+    minimum_support_to_maintain = 0.10
+    sorting_order = 3
+}

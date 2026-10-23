@@ -13,13 +13,13 @@ era_3 = { #1862-1886
 }
 
 era_4 = { #1887-1911
-	technology_cost = 14000 # for progress bonuses, use an approximate third: 4667
+	technology_cost = 12000 # for progress bonuses, use an approximate third: 4000
 }
 
 era_5 = { #1911-1936
-	technology_cost = 18000 # for progress bonuses, use an approximate third: 6000
+	technology_cost = 16000 # for progress bonuses, use an approximate third: 5333
 }
 
 era_6 = { #1911-1936
-	technology_cost = 21000 # for progress bonuses, use an approximate third: 7000
+	technology_cost = 19000 # for progress bonuses, use an approximate third: 6333
 }
