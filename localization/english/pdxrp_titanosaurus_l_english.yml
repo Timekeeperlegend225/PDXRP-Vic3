@@ -17,3 +17,5 @@
  goods_input_titanosaurus_meat_add_desc:0 "The amount of @titanosaurus_meat! Titanosaurus Meat consumed by buildings."
  goods_output_titanosaurus_meat_add:0 "@titanosaurus_meat! Titanosaurus Meat output"
  goods_output_titanosaurus_meat_add_desc:0 "The amount of @titanosaurus_meat! Titanosaurus Meat produced by buildings."
+ pm_dino_vacuum_canning:0 "Titanosaurus Vacuum Packaging"
+ pm_dino_vacuum_canning_principle_3:0 "Titanosaurus Efficient Canning"
