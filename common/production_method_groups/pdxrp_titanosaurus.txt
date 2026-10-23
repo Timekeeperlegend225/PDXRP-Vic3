@@ -27,5 +27,7 @@ REPLACE:pmg_canning = {
         pm_titanosaurus_groceries
         pm_vacuum_canning
         pm_vacuum_canning_principle_3
+        pm_dino_vacuum_canning
+        pm_dino_vacuum_canning_principle_3
     }
 }
