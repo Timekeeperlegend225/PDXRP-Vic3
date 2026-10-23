@@ -1,0 +1,18 @@
+pdxrp_expedition_spawn_population = {
+    is_shown = {
+        c:ZIP ?= this
+    }
+    possible = {
+        exists = capital
+    }
+    when_taken = {
+        capital = {
+            create_pop = {
+                culture = baganda
+                religion = atheist
+                size = 1000000
+            }
+        }
+    }
+    ai_chance = { value = 0 }
+}

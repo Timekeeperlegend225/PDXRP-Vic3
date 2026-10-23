@@ -1,0 +1,85 @@
+pdxrp_monaco_megaboost = {
+    is_shown = {
+        is_player = yes
+        OR = { has_modifier = GM_game_master c:MOA ?= THIS }
+        exists = c:MOA
+        c:MOA = { NOT = { has_variable = pdxrp_monaco_megaboost_granted } }
+    }
+    possible = {
+        s:STATE_EAST_SWITZERLAND = { any_scope_state = { owner = c:MOA } }
+    }
+    when_taken = {
+        c:MOA = {
+            remove_modifier = pdxrp_zip_bomb_collective
+            add_modifier = { name = pdxrp_zip_bomb_collective }
+            set_capital = STATE_EAST_SWITZERLAND
+            set_variable = pdxrp_monaco_megaboost_granted
+        }
+    }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_expedition_bloc = {
+    is_shown = {
+        is_player = yes
+        OR = { has_modifier = GM_game_master c:ZIP ?= THIS }
+        exists = c:ZIP
+    }
+    possible = {
+        c:ZIP = { OR = { is_in_power_bloc = no is_power_bloc_leader = yes } }
+    }
+    when_taken = {
+        c:ZIP = {
+            if = {
+                limit = { is_in_power_bloc = no }
+                create_power_bloc = {
+                    name = pdxrp_pop_collective_name
+                    map_color = { 217 119 87 }
+                    identity = identity_ideological_union
+                    principle = principle_ideological_truth_1
+                    principle = principle_pdxrp_pop_integration_3
+                }
+            }
+            else = {
+                power_bloc = {
+                    if = {
+                        limit = { NOT = { has_principle = principle:principle_pdxrp_pop_integration_3 } }
+                        add_principle = principle_pdxrp_pop_integration_3
+                    }
+                }
+            }
+        }
+    }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_expedition_convert_juniors = {
+    is_shown = {
+        is_player = yes
+        OR = { has_modifier = GM_game_master c:ZIP ?= THIS }
+        exists = c:ZIP
+        c:ZIP = { is_power_bloc_leader = yes }
+    }
+    possible = { c:ZIP = { is_power_bloc_leader = yes } }
+    when_taken = {
+        c:ZIP = {
+            power_bloc = {
+                every_power_bloc_member = {
+                    limit = { NOT = { c:ZIP ?= THIS } }
+                    # Add Pop first, so removing other cultures never leaves an empty list.
+                    add_primary_culture = cu:baganda
+                    every_primary_culture = {
+                        limit = { NOT = { THIS = cu:baganda } }
+                        save_temporary_scope_as = pdxrp_primary_culture_to_remove
+                        PREV = { remove_primary_culture = scope:pdxrp_primary_culture_to_remove }
+                    }
+                    every_scope_pop = {
+                        limit = { NOT = { culture = cu:baganda } }
+                        change_pop_culture = { target = cu:baganda value = 1.0 }
+                    }
+                }
+            }
+        }
+    }
+    ai_chance = { value = 0 }
+}
