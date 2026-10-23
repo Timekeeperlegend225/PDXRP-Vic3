@@ -1,0 +1,39 @@
+pdxrp_announce_mole_people = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+        NOT = { has_global_variable = pdxrp_mole_people_announced }
+    }
+
+    possible = {
+        NOT = { has_global_variable = pdxrp_mole_people_announced }
+    }
+
+    when_taken = {
+        pdxrp_mole_people_start_collection = yes
+        every_country = {
+            trigger_event = { id = pdxrp_mole_people.1 days = 0 popup = yes }
+        }
+    }
+
+    ai_chance = { value = 0 }
+}
+
+pdxrp_restore_mole_people_collection = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+        has_global_variable = pdxrp_mole_people_announced
+        NOT = { has_global_variable = pdxrp_mole_people_resolved }
+    }
+    possible = {
+        any_country = {
+            is_player = yes
+            NOT = { has_journal_entry = je_pdxrp_mole_people }
+        }
+    }
+    when_taken = {
+        pdxrp_mole_people_start_collection = yes
+    }
+    ai_chance = { value = 0 }
+}
