@@ -1,5 +1,6 @@
 pdxrp_monaco_megaboost = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_host_transferred_to_egypt }
         is_player = yes
         OR = { has_modifier = GM_game_master c:MOA ?= THIS }
         exists = c:MOA
@@ -66,7 +67,6 @@ pdxrp_expedition_convert_juniors = {
             power_bloc = {
                 every_power_bloc_member = {
                     limit = { NOT = { c:ZIP ?= THIS } }
-                    # Add Pop first, so removing other cultures never leaves an empty list.
                     add_primary_culture = cu:baganda
                     every_primary_culture = {
                         limit = { NOT = { THIS = cu:baganda } }

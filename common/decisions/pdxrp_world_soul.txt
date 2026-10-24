@@ -1,6 +1,6 @@
 ﻿pdxrp_start_world_soul = {
     is_shown = {
-        c:MOA ?= THIS
+        pdxrp_is_campaign_host = yes
         NOT = { has_global_variable = pdxrp_world_soul_temperature }
     }
     possible = { always = yes }
@@ -13,7 +13,7 @@
 
 pdxrp_open_chrome = {
     is_shown = {
-        c:MOA ?= THIS
+        pdxrp_is_campaign_host = yes
         has_global_variable = pdxrp_world_soul_temperature
     }
     possible = { always = yes }
@@ -30,7 +30,7 @@ pdxrp_open_chrome = {
 
 pdxrp_open_window = {
     is_shown = {
-        c:MOA ?= THIS
+        pdxrp_is_campaign_host = yes
         has_global_variable = pdxrp_world_soul_temperature
     }
     possible = { global_var:pdxrp_world_soul_temperature > 0 }

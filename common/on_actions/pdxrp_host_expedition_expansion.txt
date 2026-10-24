@@ -3,10 +3,9 @@ on_monthly_pulse_country = {
 }
 pdxrp_host_expedition_maintenance = {
     effect = {
-        # Reattach the updated shared megaboost once for existing ZIP/Monaco saves.
         if = {
             limit = {
-                OR = { c:ZIP ?= THIS c:MOA ?= THIS }
+                OR = { c:ZIP ?= THIS pdxrp_is_campaign_host = yes }
                 has_modifier = pdxrp_zip_bomb_collective
                 NOT = { has_variable = pdxrp_expedition_ship_efficiency_600_refreshed }
             }

@@ -1,0 +1,20 @@
+pdxrp_transfer_host_to_egypt = {
+    is_shown = {
+        is_player = yes
+        OR = { has_modifier = GM_game_master c:MOA ?= this }
+        NOT = { has_global_variable = pdxrp_host_transferred_to_egypt }
+    }
+    possible = {
+        exists = c:MOA
+        exists = c:EGY
+        OR = {
+            exists = c:SWI
+            exists = s:STATE_EAST_SWITZERLAND.region_state:MOA
+            exists = s:STATE_WEST_SWITZERLAND.region_state:MOA
+        }
+    }
+    when_taken = {
+        pdxrp_transfer_host_to_egypt_effect = yes
+    }
+    ai_chance = { value = 0 }
+}

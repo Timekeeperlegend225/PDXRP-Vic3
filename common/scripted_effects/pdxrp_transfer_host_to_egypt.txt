@@ -1,0 +1,126 @@
+pdxrp_transfer_host_to_egypt_effect = {
+    set_global_variable = pdxrp_host_transferred_to_egypt
+    set_global_variable = player_gm
+    c:EGY = {
+        if = {
+            limit = { NOT = { has_modifier = GM_game_master } }
+            add_modifier = { name = GM_game_master }
+        }
+        if = {
+            limit = { c:MOA = { has_modifier = pdxrp_zip_bomb_collective } }
+            remove_modifier = pdxrp_zip_bomb_collective
+            add_modifier = { name = pdxrp_zip_bomb_collective }
+            set_variable = pdxrp_monaco_megaboost_granted
+        }
+        if = {
+            limit = { c:MOA = { has_modifier = gm_legitimacy } }
+            add_modifier = { name = gm_legitimacy multiplier = 125 }
+        }
+    }
+    if = {
+        limit = { c:MOA = { has_variable = pdxrp_host_offense_steps } }
+        c:EGY = {
+            if = {
+                limit = { NOT = { has_variable = pdxrp_host_offense_steps } }
+                set_variable = { name = pdxrp_host_offense_steps value = 0 }
+            }
+            change_variable = { name = pdxrp_host_offense_steps add = c:MOA.var:pdxrp_host_offense_steps }
+            remove_modifier = pdxrp_host_offense
+            if = {
+                limit = { NOT = { var:pdxrp_host_offense_steps = 0 } }
+                add_modifier = { name = pdxrp_host_offense multiplier = var:pdxrp_host_offense_steps }
+            }
+        }
+        c:MOA = {
+            remove_modifier = pdxrp_host_offense
+            remove_variable = pdxrp_host_offense_steps
+        }
+    }
+    if = {
+        limit = { c:MOA = { has_variable = pdxrp_host_defense_steps } }
+        c:EGY = {
+            if = {
+                limit = { NOT = { has_variable = pdxrp_host_defense_steps } }
+                set_variable = { name = pdxrp_host_defense_steps value = 0 }
+            }
+            change_variable = { name = pdxrp_host_defense_steps add = c:MOA.var:pdxrp_host_defense_steps }
+            remove_modifier = pdxrp_host_defense
+            if = {
+                limit = { NOT = { var:pdxrp_host_defense_steps = 0 } }
+                add_modifier = { name = pdxrp_host_defense multiplier = var:pdxrp_host_defense_steps }
+            }
+        }
+        c:MOA = {
+            remove_modifier = pdxrp_host_defense
+            remove_variable = pdxrp_host_defense_steps
+        }
+    }
+    if = {
+        limit = { c:MOA = { has_variable = pdxrp_host_supply_steps } }
+        c:EGY = {
+            if = {
+                limit = { NOT = { has_variable = pdxrp_host_supply_steps } }
+                set_variable = { name = pdxrp_host_supply_steps value = 0 }
+            }
+            change_variable = { name = pdxrp_host_supply_steps add = c:MOA.var:pdxrp_host_supply_steps }
+            remove_modifier = pdxrp_host_supply
+            if = {
+                limit = { NOT = { var:pdxrp_host_supply_steps = 0 } }
+                add_modifier = { name = pdxrp_host_supply multiplier = var:pdxrp_host_supply_steps }
+            }
+        }
+        c:MOA = {
+            remove_modifier = pdxrp_host_supply
+            remove_variable = pdxrp_host_supply_steps
+        }
+    }
+    c:MOA = {
+        remove_modifier = GM_game_master
+        remove_modifier = pdxrp_zip_bomb_collective
+        remove_modifier = gm_legitimacy
+        if = {
+            limit = { exists = s:STATE_PROVENCE.region_state:MOA }
+            set_capital = STATE_PROVENCE
+        }
+        if = {
+            limit = { NOT = { exists = c:SWI } }
+            if = {
+                limit = { exists = s:STATE_EAST_SWITZERLAND.region_state:MOA }
+                create_country = {
+                    tag = SWI
+                    origin = this
+                    state = s:STATE_EAST_SWITZERLAND.region_state:MOA
+                    on_created = { }
+                }
+            }
+            else_if = {
+                limit = { exists = s:STATE_WEST_SWITZERLAND.region_state:MOA }
+                create_country = {
+                    tag = SWI
+                    origin = this
+                    state = s:STATE_WEST_SWITZERLAND.region_state:MOA
+                    on_created = { }
+                }
+            }
+        }
+    }
+    s:STATE_EAST_SWITZERLAND.region_state:MOA ?= { set_state_owner = c:SWI }
+    s:STATE_WEST_SWITZERLAND.region_state:MOA ?= { set_state_owner = c:SWI }
+    c:SWI = {
+        make_independent = yes
+        remove_modifier = GM_game_master
+        remove_modifier = pdxrp_zip_bomb_collective
+        remove_modifier = gm_legitimacy
+        remove_modifier = pdxrp_host_offense
+        remove_variable = pdxrp_host_offense_steps
+        remove_modifier = pdxrp_host_defense
+        remove_variable = pdxrp_host_defense_steps
+        remove_modifier = pdxrp_host_supply
+        remove_variable = pdxrp_host_supply_steps
+        every_scope_state = { set_state_type = incorporated }
+    }
+    if = {
+        limit = { has_global_variable = pdxrp_world_soul_temperature }
+        pdxrp_world_soul_sync_journals_effect = yes
+    }
+}

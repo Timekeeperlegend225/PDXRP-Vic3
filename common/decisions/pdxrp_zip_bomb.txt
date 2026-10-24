@@ -1,14 +1,12 @@
 ﻿pdxrp_spawn_zip_bomb = {
     is_shown = {
-        c:MOA ?= THIS
+        pdxrp_is_campaign_host = yes
         NOT = { exists = c:ZIP }
         NOT = { has_global_variable = pdxrp_zip_bomb_spawned }
     }
     possible = { exists = c:GBR }
     when_taken = {
-        # Save an actual state rather than using the state-region as a country seed.
         s:STATE_CONGO_ORIENTALE = {
-            # Clear every original state fragment before ownership changes.
             every_scope_state = { pdxrp_zip_bomb_clear_buildings_effect = yes }
             random_scope_state = { save_scope_as = pdxrp_zip_bomb_seed }
         }
@@ -43,7 +41,6 @@
         }
         s:STATE_CONGO_ORIENTALE.region_state:ZIP = {
             set_state_type = incorporated
-            # Reset only after all the transferred state fragments have merged.
             kill_population_percent_in_state = { percent = 1 }
             create_pop = { culture = baganda religion = atheist size = 10000000 }
         }
@@ -69,7 +66,7 @@ pdxrp_zip_bomb_generate_money = {
 
 pdxrp_zip_bomb_deploy_army = {
     is_shown = {
-        OR = { c:ZIP ?= THIS c:MOA ?= THIS }
+        OR = { c:ZIP ?= THIS pdxrp_is_campaign_host = yes }
         exists = c:ZIP
         c:ZIP = { NOT = { has_variable = pdxrp_zip_bomb_army_deployed } }
     }
@@ -80,7 +77,7 @@ pdxrp_zip_bomb_deploy_army = {
 
 pdxrp_zip_bomb_adopt_gnu_linux = {
     is_shown = {
-        OR = { c:ZIP ?= THIS c:MOA ?= THIS }
+        OR = { c:ZIP ?= THIS pdxrp_is_campaign_host = yes }
         exists = c:ZIP
         c:ZIP = { NOT = { country_has_state_religion = rel:atheist } }
     }

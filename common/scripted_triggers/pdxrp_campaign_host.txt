@@ -1,0 +1,12 @@
+pdxrp_is_campaign_host = {
+    OR = {
+        AND = {
+            NOT = { has_global_variable = pdxrp_host_transferred_to_egypt }
+            c:MOA ?= this
+        }
+        AND = {
+            has_global_variable = pdxrp_host_transferred_to_egypt
+            c:EGY ?= this
+        }
+    }
+}
