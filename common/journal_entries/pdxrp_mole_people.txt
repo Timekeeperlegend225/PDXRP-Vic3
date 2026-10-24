@@ -17,10 +17,18 @@ je_pdxrp_mole_people = {
     scripted_button = pdxrp_mole_people_donate_one
     scripted_button = pdxrp_mole_people_donate_five
 
-    complete = { has_global_variable = pdxrp_mole_people_resolved }
+    complete = {
+        OR = {
+            has_global_variable = pdxrp_mole_people_resolved
+            global_var:pdxrp_mole_people_fund >= 100000000
+        }
+    }
+    on_complete = {
+        hidden_effect = { pdxrp_mole_people_resolve_collection = yes }
+    }
 
     timeout = 365
     on_timeout = {
-        pdxrp_mole_people_resolve_collection = yes
+        hidden_effect = { pdxrp_mole_people_resolve_collection = yes }
     }
 }

@@ -39,7 +39,7 @@ pdxrp_host_expedition_maintenance = {
                     has_law_or_variant = law_type:law_anarchy
                 }
             }
-            create_political_movement = { type = movement_pdxrp_pop_minority culture = cu:baganda }
+            create_political_movement = { type = movement_pdxrp_pop_minority }
         }
     }
 }

@@ -1,3 +1,14 @@
+# Announce worldwide once, whether triggered by temperature or by the GM.
+pdxrp_mole_people_announce_effect = {
+    if = {
+        limit = { NOT = { has_global_variable = pdxrp_mole_people_announced } }
+        pdxrp_mole_people_start_collection = yes
+        every_country = {
+            trigger_event = { id = pdxrp_mole_people.1 days = 0 popup = yes }
+        }
+    }
+}
+
 # Called by the announcement event and repair action. Guard the
 # initialization so country popups and existing saves never reset donations.
 pdxrp_mole_people_initialize_collection = {
@@ -50,6 +61,16 @@ pdxrp_mole_people_resolve_collection = {
                     years = 5
                     is_decaying = yes
                 }
+                if = {
+                    limit = { is_player = yes }
+                    trigger_event = { id = pdxrp_mole_people.2 days = 0 popup = yes }
+                }
+            }
+        }
+        else = {
+            every_country = {
+                limit = { is_player = yes }
+                trigger_event = { id = pdxrp_mole_people.3 days = 0 popup = yes }
             }
         }
     }

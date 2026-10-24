@@ -1,0 +1,14 @@
+namespace = pdxrp_plague
+
+pdxrp_plague.1 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_plague.1.t
+    desc = pdxrp_plague.1.d
+    event_image = { texture = "gfx/event_pictures/pdxrp_plague.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_plague.1.a
+        default_option = yes
+    }
+}

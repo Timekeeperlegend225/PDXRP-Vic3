@@ -1,19 +1,30 @@
 movement_pdxrp_pop_minority = {
     category = movement_category_pdxrp_pop_minority
+    can_have_slave_supporters = yes
     ideology = ideology_pdxrp_pop_minority
     character_ideologies = { ideology_anarchist }
     creation_trigger = {
-        any_scope_pop = { culture = cu:baganda }
-        NAND = {
-            has_law_or_variant = law_type:law_multicultural
-            has_law_or_variant = law_type:law_anarchy
+        OR = {
+            AND = {
+                is_player = yes
+                has_variable = pdxrp_host_spawned_pop_movement
+            }
+            AND = {
+                any_scope_pop = { culture = cu:baganda }
+                NAND = {
+                    has_law_or_variant = law_type:law_multicultural
+                    has_law_or_variant = law_type:law_anarchy
+                }
+            }
         }
     }
     creation_weight = { value = 500 }
     on_created = { add_movement_enthusiasm_modifier = yes }
-    culture_selection_trigger = { THIS = cu:baganda }
-    culture_selection_weight = { value = 100 }
     disband_trigger = {
+        NAND = {
+            is_player = yes
+            has_variable = pdxrp_host_spawned_pop_movement
+        }
         OR = {
             NOT = { any_scope_pop = { culture = cu:baganda } }
             AND = {
@@ -27,11 +38,10 @@ movement_pdxrp_pop_minority = {
     }
     character_support_weight = { value = 300 }
     can_pressure_interest_group = { always = yes }
-    pop_support_trigger = { culture = cu:baganda }
-    pop_support_factors = { movement_support_radicalization }
+    pop_support_trigger = { always = yes }
     pop_support_weight = {
-        value = 100
-        multiply = { value = pop_radical_fraction add = 1 }
+        # Equal overwhelming attraction for every culture and radical fraction.
+        value = 1000000
     }
     revolution = {
         possible = { political_movement_support >= 0.05 }

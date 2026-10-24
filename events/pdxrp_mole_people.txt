@@ -17,3 +17,39 @@ pdxrp_mole_people.1 = {
         default_option = yes
     }
 }
+
+# Rewards were already applied by the shared resolver. Tooltip only: clicking
+# this option must not apply the modifier again or restart its decay timer.
+pdxrp_mole_people.2 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_mole_people.2.t
+    desc = pdxrp_mole_people.2.d
+    event_image = { texture = "gfx/event_pictures/pdxrp_mole_people.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_mole_people.2.a
+        default_option = yes
+        show_as_tooltip = {
+            add_modifier = {
+                name = pdxrp_mole_people_blessing
+                multiplier = var:pdxrp_mole_people_reward_scale
+                years = 5
+                is_decaying = yes
+            }
+        }
+    }
+}
+
+pdxrp_mole_people.3 = {
+    type = country_event
+    placement = ROOT
+    title = pdxrp_mole_people.3.t
+    desc = pdxrp_mole_people.3.d
+    event_image = { texture = "gfx/event_pictures/pdxrp_mole_people.dds" }
+    duration = 30
+    option = {
+        name = pdxrp_mole_people.1.a
+        default_option = yes
+    }
+}

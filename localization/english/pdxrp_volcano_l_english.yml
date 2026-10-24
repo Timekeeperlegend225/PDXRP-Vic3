@@ -1,6 +1,6 @@
 ﻿l_english:
  pdxrp_trigger_volcano: "GM: Trigger Iceland Volcano"
- pdxrp_trigger_volcano_desc: "Trigger the eruption and notify all countries. Iceland becomes Wasteland; global harvest penalties last six months."
+ pdxrp_trigger_volcano_desc: "Trigger the eruption and notify all countries. Iceland becomes Wasteland and its population is killed."
  pdxrp_volcano.1.t: "Icelandic Eruption"
- pdxrp_volcano.1.d: "Iceland has become Wasteland, killing its population. For six months worldwide: +100% mortality, -1 Standard of Living and -60% agricultural throughput."
+ pdxrp_volcano.1.d: "Iceland has become Wasteland, killing its population."
  pdxrp_volcano.1.a: "OK"

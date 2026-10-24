@@ -10,10 +10,7 @@ pdxrp_announce_mole_people = {
     }
 
     when_taken = {
-        pdxrp_mole_people_start_collection = yes
-        every_country = {
-            trigger_event = { id = pdxrp_mole_people.1 days = 0 popup = yes }
-        }
+        pdxrp_mole_people_announce_effect = yes
     }
 
     ai_chance = { value = 0 }

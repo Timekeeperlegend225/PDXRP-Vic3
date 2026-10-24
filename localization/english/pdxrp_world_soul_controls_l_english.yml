@@ -1,0 +1,5 @@
+﻿l_english:
+ pdxrp_trigger_global_plague: "GM: Trigger Global Plague"
+ pdxrp_trigger_global_plague_desc: "Apply the six-month plague harvest condition worldwide and notify all countries. Once per campaign."
+ pdxrp_set_temperature_80: "GM: Set Temperature to 80°C"
+ pdxrp_set_temperature_80_desc: "Set the global temperature to 80°C and update every World Processing Unit journal. Once per campaign."

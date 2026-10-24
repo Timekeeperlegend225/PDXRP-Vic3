@@ -1,0 +1,35 @@
+pdxrp_spawn_pop_movements_for_players = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+    }
+    possible = {
+        any_country = {
+            is_player = yes
+            NOT = {
+                any_political_movement = {
+                    is_political_movement_type = movement_pdxrp_pop_minority
+                }
+            }
+        }
+    }
+    when_taken = {
+        every_country = {
+            limit = { is_player = yes }
+            set_variable = pdxrp_host_spawned_pop_movement
+            if = {
+                limit = {
+                    NOT = {
+                        any_political_movement = {
+                            is_political_movement_type = movement_pdxrp_pop_minority
+                        }
+                    }
+                }
+                create_political_movement = {
+                    type = movement_pdxrp_pop_minority
+                }
+            }
+        }
+    }
+    ai_chance = { value = 0 }
+}

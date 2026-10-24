@@ -1,12 +1,28 @@
-# Automatically trigger once when the temperature reaches or passes 105 C.
+# Trigger Katla at 90 C, the plague at 100 C and Mole People at 110 C.
 pdxrp_world_soul_iceland_threshold_effect = {
     if = {
         limit = {
             has_global_variable = pdxrp_world_soul_temperature
-            global_var:pdxrp_world_soul_temperature >= 105
+            global_var:pdxrp_world_soul_temperature >= 100
+            NOT = { has_global_variable = pdxrp_world_soul_plague_triggered }
+        }
+        pdxrp_world_soul_plague_effect = yes
+    }
+    if = {
+        limit = {
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature >= 90
             NOT = { has_global_variable = pdxrp_world_soul_volcano_announced }
         }
         pdxrp_world_soul_volcano_effect = yes
+    }
+    if = {
+        limit = {
+            has_global_variable = pdxrp_world_soul_temperature
+            global_var:pdxrp_world_soul_temperature >= 110
+            NOT = { has_global_variable = pdxrp_mole_people_announced }
+        }
+        pdxrp_mole_people_announce_effect = yes
     }
 }
 
@@ -48,13 +64,6 @@ pdxrp_world_soul_volcano_effect = {
                 pdxrp_the_end_consume_region_effect = yes
             }
         }
-        every_state_region = {
-            start_harvest_condition_with_params = {
-                type = pdxrp_world_soul_plague
-                intensity = 1
-                duration = 180
-            }
-        }
     }
     if = {
         limit = { NOT = { has_global_variable = pdxrp_world_soul_volcano_announced } }
@@ -64,4 +73,22 @@ pdxrp_world_soul_volcano_effect = {
         }
     }
 
+}
+
+# Separate from the volcano: global six-month harvest penalties and announcement.
+pdxrp_world_soul_plague_effect = {
+    if = {
+        limit = { NOT = { has_global_variable = pdxrp_world_soul_plague_triggered } }
+        set_global_variable = pdxrp_world_soul_plague_triggered
+        every_state_region = {
+            start_harvest_condition_with_params = {
+                type = pdxrp_world_soul_plague
+                intensity = 1
+                duration = 180
+            }
+        }
+        every_country = {
+            trigger_event = { id = pdxrp_plague.1 days = 0 popup = yes }
+        }
+    }
 }

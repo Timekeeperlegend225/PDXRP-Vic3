@@ -1,0 +1,3 @@
+﻿l_english:
+ pdxrp_spawn_pop_movements_for_players: "GM: Spawn Pop Movements in Player Countries"
+ pdxrp_spawn_pop_movements_for_players_desc: "Create the Pop Minority Movement in every player country, including countries without Pops. Existing movements are skipped. Demands Multiculturalism and Anarchy; all pops can support it, with extremely high attraction regardless of culture or radicalism. Repeatable."

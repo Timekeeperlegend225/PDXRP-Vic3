@@ -6,12 +6,9 @@ pdxrp_mole_people_personal_donation = {
     }
 }
 
-# Country scope. The worldwide fund determines the base strength; rank at
-# payout determines the country multiplier. India/China take precedence.
-pdxrp_mole_people_reward_scale = {
-    value = global_var:pdxrp_mole_people_fund
-    divide = 100000000
-    max = 1
+# Country scope. India/China use the GP multiplier regardless of rank.
+pdxrp_mole_people_rank_scale = {
+    value = 1
     if = {
         limit = {
             OR = {
@@ -21,20 +18,27 @@ pdxrp_mole_people_reward_scale = {
                 c:CHI ?= this
             }
         }
-        multiply = 0.2
+        value = 0.2
     }
     else_if = {
         limit = { country_rank = rank_value:major_power }
-        multiply = 0.5
+        value = 0.5
     }
-    # Non-donors receive half of the reward remaining after rank scaling.
+}
+
+pdxrp_mole_people_participation_scale = {
+    value = 1
     if = {
-        limit = {
-            NOT = {
-                has_variable = pdxrp_mole_people_donated
-                var:pdxrp_mole_people_donated > 0
-            }
-        }
-        multiply = 0.5
+        limit = { pdxrp_mole_people_personal_donation <= 0 }
+        value = 0.5
     }
+}
+
+# Apply rank and participation independently, so both reductions always stack.
+pdxrp_mole_people_reward_scale = {
+    value = global_var:pdxrp_mole_people_fund
+    divide = 100000000
+    max = 1
+    multiply = pdxrp_mole_people_rank_scale
+    multiply = pdxrp_mole_people_participation_scale
 }

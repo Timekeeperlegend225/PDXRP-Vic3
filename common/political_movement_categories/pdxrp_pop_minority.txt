@@ -1,8 +1,10 @@
 movement_category_pdxrp_pop_minority = {
     icon = "gfx/interface/icons/political_movement_icons/movement_cultural.dds"
-    cultural_identity = yes
-    minimum_support_is_within_identity = yes
+    cultural_identity = no
+    minimum_support_is_within_identity = no
     minimum_support_to_create = 0.20
-    minimum_support_to_maintain = 0.10
+    # Host-spawned movements remain while supporters join.
+    # Normal disappearance is still controlled by the movement's disband trigger.
+    minimum_support_to_maintain = 0
     sorting_order = 3
 }

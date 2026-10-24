@@ -1,0 +1,32 @@
+pdxrp_trigger_global_plague = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+        NOT = { has_global_variable = pdxrp_world_soul_plague_triggered }
+    }
+    possible = {
+        NOT = { has_global_variable = pdxrp_world_soul_plague_triggered }
+    }
+    when_taken = {
+        pdxrp_world_soul_plague_effect = yes
+    }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_set_temperature_80 = {
+    is_shown = {
+        is_player = yes
+        has_modifier = GM_game_master
+        has_global_variable = pdxrp_world_soul_temperature
+        NOT = { has_global_variable = pdxrp_temperature_80_used }
+    }
+    possible = {
+        NOT = { has_global_variable = pdxrp_temperature_80_used }
+    }
+    when_taken = {
+        set_global_variable = pdxrp_temperature_80_used
+        set_global_variable = { name = pdxrp_world_soul_temperature value = 80 }
+        pdxrp_world_soul_sync_journals_effect = yes
+    }
+    ai_chance = { value = 0 }
+}

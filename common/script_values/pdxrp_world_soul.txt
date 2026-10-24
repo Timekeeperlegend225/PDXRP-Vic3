@@ -28,8 +28,18 @@ pdxrp_world_soul_debt_heat = {
 
 pdxrp_world_soul_time_heat = {
     value = global_var:pdxrp_world_soul_months
-    divide = 2400
-    add = 0.025
+    divide = 1200
+    add = 0.05
+}
+
+# Inertia removes 0.3% of the current temperature from each month's rise.
+pdxrp_world_soul_inertia_heat = {
+    value = 0
+    if = {
+        limit = { has_global_variable = pdxrp_world_soul_temperature }
+        value = global_var:pdxrp_world_soul_temperature
+        multiply = 0.003
+    }
 }
 
 pdxrp_world_soul_monthly_heat = {
@@ -38,6 +48,8 @@ pdxrp_world_soul_monthly_heat = {
     add = pdxrp_world_soul_pollution_heat
     add = pdxrp_world_soul_radicals_heat
     add = pdxrp_world_soul_debt_heat
+    subtract = pdxrp_world_soul_inertia_heat
+    min = 0
     if = {
         limit = { has_global_variable = pdxrp_world_soul_temperature_frozen }
         multiply = 0

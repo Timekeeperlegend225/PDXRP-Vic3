@@ -4,7 +4,6 @@ pdxrp_mole_people_donate_one = {
     visible = { has_global_variable = pdxrp_mole_people_fund_open }
     possible = {
         has_global_variable = pdxrp_mole_people_fund_open
-        gold_reserves >= 1000000
     }
     effect = {
         add_treasury = -1000000
@@ -24,7 +23,6 @@ pdxrp_mole_people_donate_five = {
     visible = { has_global_variable = pdxrp_mole_people_fund_open }
     possible = {
         has_global_variable = pdxrp_mole_people_fund_open
-        gold_reserves >= 5000000
     }
     effect = {
         add_treasury = -5000000
