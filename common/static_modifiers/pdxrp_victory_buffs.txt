@@ -1,9 +1,35 @@
 pdxrp_fruits_of_victory = {
     # Effects to be added later. Decays over ten years.
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_mult = 0.2
+    country_legitimacy_base_add = 20
+    state_loyalists_from_political_movements_mult = 0.50
+    country_bolster_attraction_factor = 0.50
+    country_influence_mult = 1.00
+    country_authority_add = 200
+	state_birth_rate_mult = 0.10
+    state_migration_pull_mult = 0.10
+    country_mass_migration_attraction_mult = 0.10
+	country_society_tech_spread_mult = 0.20
 }
 pdxrp_apples_of_defeat = {
     # Effects to be added later. Lasts ten years at full strength.
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_military_tech_spread_mult = 0.50
+	country_military_tech_research_speed_mult = 0.50 
+	state_birth_rate_mult = 0.20
+	unit_supply_consumption_mult = -0.2
+	building_training_rate_mult = 0.1
+	country_loan_interest_rate_mult = -0.10
 }
 pdxrp_oranges_of_defeat = {
     # Effects to be added later. Decays over ten years.
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_prestige_mult = -0.2
+	country_military_tech_spread_mult = -0.50
+	country_military_tech_research_speed_mult = -0.50 
+	state_birth_rate_mult = -0.20
+	unit_supply_consumption_mult = 0.2
+	building_training_rate_mult = -0.1
+	country_loan_interest_rate_mult = 0.10
 }
