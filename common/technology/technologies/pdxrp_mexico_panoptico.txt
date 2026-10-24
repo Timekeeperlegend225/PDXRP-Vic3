@@ -1,0 +1,8 @@
+# Script-only unlock: production methods cannot directly test a country tag.
+pdxrp_mexico_panoptico = {
+    era = era_1
+    category = society
+    texture = "gfx/interface/icons/invention_icons/standing_army.dds"
+    can_research = no
+    ai_weight = { value = 0 }
+}
