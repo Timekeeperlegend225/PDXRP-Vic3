@@ -1,0 +1,5 @@
+﻿l_english:
+ pdxrp_claim_game_master: "Become a Game Master"
+ pdxrp_claim_game_master_desc: "Give Game Master status to your country."
+ pdxrp_monaco_remove_other_game_masters: "Revoke All Other Game Masters"
+ pdxrp_monaco_remove_other_game_masters_desc: "Remove Game Master status from every country except your current country."

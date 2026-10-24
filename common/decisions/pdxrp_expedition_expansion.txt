@@ -2,7 +2,7 @@ pdxrp_monaco_megaboost = {
     is_shown = {
         NOT = { has_global_variable = pdxrp_host_transferred_to_egypt }
         is_player = yes
-        OR = { has_modifier = GM_game_master c:MOA ?= THIS }
+        has_modifier = GM_game_master
         exists = c:MOA
         c:MOA = { NOT = { has_variable = pdxrp_monaco_megaboost_granted } }
     }
