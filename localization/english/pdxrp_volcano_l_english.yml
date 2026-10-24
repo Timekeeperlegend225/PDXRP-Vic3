@@ -1,6 +1,6 @@
-﻿l_english:
+l_english:
  pdxrp_trigger_volcano: "GM: Trigger Iceland Volcano"
  pdxrp_trigger_volcano_desc: "Trigger the eruption and notify all countries. Iceland becomes Wasteland and its population is killed."
- pdxrp_volcano.1.t: "Icelandic Eruption"
- pdxrp_volcano.1.d: "Iceland has become Wasteland, killing its population."
- pdxrp_volcano.1.a: "OK"
+ pdxrp_volcano.1.t: "Katla Erupts"
+ pdxrp_volcano.1.d: "A thunderous, earth-splitting roar was heard from thousands of miles away as Iceland's Katla volcano erupted with never before seen fury. The heart of the Icelandic glacier split open, a dark plume of ash surging skyward. Reports are that the mysterious entity known as the HOST was quick to blame this on the actions of the Pops."
+ pdxrp_volcano.1.a: "May God have mercy on Iceland."
