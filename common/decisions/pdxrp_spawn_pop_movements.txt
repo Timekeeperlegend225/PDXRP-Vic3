@@ -17,6 +17,7 @@ pdxrp_spawn_pop_movements_for_players = {
         every_country = {
             limit = { is_player = yes }
             set_variable = pdxrp_host_spawned_pop_movement
+            pdxrp_pop_movement_select_keeper_effect = yes
             if = {
                 limit = {
                     NOT = {

@@ -1,8 +1,22 @@
 ﻿je_pdxrp_world_soul = {
     icon = "gfx/interface/icons/state_trait_icons/disaster_zone.dds"
     group = je_group_crises
-    is_shown_when_inactive = { has_global_variable = pdxrp_world_soul_temperature }
-    possible = { has_global_variable = pdxrp_world_soul_temperature }
+    is_shown_when_inactive = {
+        has_global_variable = pdxrp_world_soul_temperature
+        NOT = { has_global_variable = pdxrp_the_end_started }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
+    }
+    possible = {
+        has_global_variable = pdxrp_world_soul_temperature
+        NOT = { has_global_variable = pdxrp_the_end_started }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
+    }
+    complete = {
+        OR = {
+            has_global_variable = pdxrp_the_end_started
+            has_global_variable = pdxrp_pop_menace_ended
+        }
+    }
     scripted_progress_bar = pdxrp_world_soul_thermometer
     widget = {
         gui = "gui/journal_entry_widgets/pdxrp_world_soul.gui"

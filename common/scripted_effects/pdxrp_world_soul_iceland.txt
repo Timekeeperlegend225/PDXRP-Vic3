@@ -47,6 +47,7 @@ pdxrp_world_soul_volcano_effect = {
                     state = scope:pdxrp_world_soul_iceland_seed
                     on_created = {
                         set_country_type = decentralized
+                        pdxrp_the_end_initialize_speed_effect = yes
                         set_capital = STATE_ICELAND
                         activate_law = law_type:law_presidential_republic
                         activate_law = law_type:law_autocracy

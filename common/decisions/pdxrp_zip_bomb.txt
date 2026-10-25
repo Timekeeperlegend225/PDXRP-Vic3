@@ -1,5 +1,6 @@
 ﻿pdxrp_spawn_zip_bomb = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         pdxrp_is_campaign_host = yes
         NOT = { exists = c:ZIP }
         NOT = { has_global_variable = pdxrp_zip_bomb_spawned }
@@ -51,14 +52,16 @@
 }
 
 pdxrp_zip_bomb_spy_the_world = {
-    is_shown = { c:ZIP ?= THIS }
+    is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended } c:ZIP ?= THIS }
     possible = { always = yes }
     when_taken = { pdxrp_zip_bomb_world_interests_effect = yes }
     ai_chance = { value = 0 }
 }
 
 pdxrp_zip_bomb_generate_money = {
-    is_shown = { c:ZIP ?= THIS }
+    is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended } c:ZIP ?= THIS }
     possible = { always = yes }
     when_taken = { add_treasury = 10000000 }
     ai_chance = { value = 0 }
@@ -66,6 +69,7 @@ pdxrp_zip_bomb_generate_money = {
 
 pdxrp_zip_bomb_deploy_army = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         OR = { c:ZIP ?= THIS pdxrp_is_campaign_host = yes }
         exists = c:ZIP
         c:ZIP = { NOT = { has_variable = pdxrp_zip_bomb_army_deployed } }
@@ -77,6 +81,7 @@ pdxrp_zip_bomb_deploy_army = {
 
 pdxrp_zip_bomb_adopt_gnu_linux = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         OR = { c:ZIP ?= THIS pdxrp_is_campaign_host = yes }
         exists = c:ZIP
         c:ZIP = { NOT = { country_has_state_religion = rel:atheist } }
@@ -87,7 +92,8 @@ pdxrp_zip_bomb_adopt_gnu_linux = {
 }
 
 pdxrp_zip_bomb_seed_pops_culture = {
-    is_shown = { c:ZIP ?= THIS }
+    is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended } c:ZIP ?= THIS }
     possible = {
         any_scope_state = {
             culture_percent_state = { target = cu:baganda value < 0.01 }
@@ -106,7 +112,8 @@ pdxrp_zip_bomb_seed_pops_culture = {
 }
 
 pdxrp_zip_bomb_nerve_stapling = {
-    is_shown = { c:ZIP ?= THIS }
+    is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended } c:ZIP ?= THIS }
     possible = { always = yes }
     when_taken = {
         add_radicals = { value = -0.10 }

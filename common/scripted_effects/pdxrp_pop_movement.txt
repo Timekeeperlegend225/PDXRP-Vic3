@@ -1,0 +1,23 @@
+# Country scope. Preserve one existing movement and let duplicate instances disband.
+pdxrp_pop_movement_select_keeper_effect = {
+    if = {
+        limit = {
+            any_political_movement = { is_political_movement_type = movement_pdxrp_pop_minority }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_political_movement = {
+                        is_political_movement_type = movement_pdxrp_pop_minority
+                        has_variable = pdxrp_pop_movement_keeper
+                    }
+                }
+            }
+            random_political_movement = {
+                limit = { is_political_movement_type = movement_pdxrp_pop_minority }
+                set_variable = pdxrp_pop_movement_keeper
+            }
+        }
+        set_variable = pdxrp_pop_movement_keeper_selected
+    }
+}

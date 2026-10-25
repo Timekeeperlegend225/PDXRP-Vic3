@@ -1,0 +1,20 @@
+pdxrp_end_pop_menace = {
+    is_shown = {
+        is_player = yes
+        pdxrp_is_campaign_host = yes
+        NOT = { c:ZIP ?= THIS }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
+        OR = {
+            exists = c:ZIP
+            has_global_variable = pdxrp_zip_bomb_spawned
+            has_global_variable = pdxrp_world_soul_temperature
+        }
+    }
+    # The host judges the outcome; conquest, humiliation and regime change are not prerequisites.
+    possible = { NOT = { has_global_variable = pdxrp_pop_menace_ended } }
+    when_taken = {
+        custom_tooltip = pdxrp_end_pop_menace_tt
+        hidden_effect = { pdxrp_end_pop_menace_effect = yes }
+    }
+    ai_chance = { value = 0 }
+}

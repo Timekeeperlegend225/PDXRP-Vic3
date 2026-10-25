@@ -16,6 +16,7 @@ pdxrp_the_end_increase_speed = {
         is_player = yes
         has_modifier = GM_game_master
         has_global_variable = pdxrp_the_end_started
+        NOT = { has_global_variable = pdxrp_the_end_stopped }
         exists = c:WST
     }
     possible = { exists = c:WST }
@@ -23,6 +24,24 @@ pdxrp_the_end_increase_speed = {
         c:WST = {
             pdxrp_the_end_initialize_speed_effect = yes
             change_variable = { name = pdxrp_the_end_speed_multiplier multiply = 2 }
+        }
+    }
+    ai_chance = { value = 0 }
+}
+
+pdxrp_the_end_decrease_speed = {
+    is_shown = {
+        is_player = yes
+        pdxrp_is_campaign_host = yes
+        has_global_variable = pdxrp_the_end_started
+        NOT = { has_global_variable = pdxrp_the_end_stopped }
+        exists = c:WST
+    }
+    possible = { exists = c:WST }
+    when_taken = {
+        c:WST = {
+            pdxrp_the_end_initialize_speed_effect = yes
+            change_variable = { name = pdxrp_the_end_speed_multiplier multiply = 0.5 }
         }
     }
     ai_chance = { value = 0 }

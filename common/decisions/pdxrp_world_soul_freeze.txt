@@ -1,5 +1,7 @@
 pdxrp_freeze_world_soul_temperature = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_the_end_started }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         is_player = yes
         has_modifier = GM_game_master
         has_global_variable = pdxrp_world_soul_temperature
@@ -18,6 +20,8 @@ pdxrp_freeze_world_soul_temperature = {
 
 pdxrp_resume_world_soul_temperature = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_the_end_started }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         is_player = yes
         has_modifier = GM_game_master
         has_global_variable = pdxrp_world_soul_temperature

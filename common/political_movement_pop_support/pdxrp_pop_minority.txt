@@ -1,0 +1,4 @@
+movement_support_pdxrp_pop_culture = {
+    name = pdxrp_pop_culture_attraction
+    visible = { always = yes }
+}

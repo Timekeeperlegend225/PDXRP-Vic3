@@ -1,5 +1,7 @@
 pdxrp_trigger_global_plague = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_the_end_started }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         is_player = yes
         has_modifier = GM_game_master
         NOT = { has_global_variable = pdxrp_world_soul_plague_triggered }
@@ -15,6 +17,8 @@ pdxrp_trigger_global_plague = {
 
 pdxrp_set_temperature_80 = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_the_end_started }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         is_player = yes
         has_modifier = GM_game_master
         has_global_variable = pdxrp_world_soul_temperature

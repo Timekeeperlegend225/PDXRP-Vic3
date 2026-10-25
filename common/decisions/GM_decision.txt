@@ -1,25 +1,4 @@
-﻿GM_become_GM = {
-	is_shown = {
-		NOT = { 
-			any_country = {
-				has_modifier = GM_game_master
-			}
-		}
-		is_player = yes
-	}
-
-	when_taken = {
-		set_global_variable = player_gm
-		add_modifier = {
-			name = GM_game_master
-		}
-	}
-	ai_chance = {
-		value = 0
-	}
-}
-
-GM_Self_Action = {
+﻿GM_Self_Action = {
 	is_shown = {
 		has_modifier = GM_game_master
 		is_ai = no

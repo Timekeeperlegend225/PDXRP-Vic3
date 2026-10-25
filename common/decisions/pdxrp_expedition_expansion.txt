@@ -1,5 +1,6 @@
 pdxrp_monaco_megaboost = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         NOT = { has_global_variable = pdxrp_host_transferred_to_egypt }
         is_player = yes
         has_modifier = GM_game_master
@@ -22,6 +23,7 @@ pdxrp_monaco_megaboost = {
 
 pdxrp_expedition_bloc = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         is_player = yes
         OR = { has_modifier = GM_game_master c:ZIP ?= THIS }
         exists = c:ZIP
@@ -56,6 +58,7 @@ pdxrp_expedition_bloc = {
 
 pdxrp_expedition_convert_juniors = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         is_player = yes
         OR = { has_modifier = GM_game_master c:ZIP ?= THIS }
         exists = c:ZIP

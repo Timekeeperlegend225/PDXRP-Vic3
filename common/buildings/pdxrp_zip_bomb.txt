@@ -6,7 +6,7 @@
     required_construction = 500
     ownership_type = self
     production_method_groups = { pmg_zip_data_center }
-    potential = { owner = { OR = { c:ZIP ?= THIS pdxrp_is_campaign_host = yes } } }
+    potential = { NOT = { has_global_variable = pdxrp_pop_menace_ended } owner = { OR = { c:ZIP ?= THIS pdxrp_is_campaign_host = yes } } }
     ai_value = 1000
     background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 }

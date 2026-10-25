@@ -7,11 +7,6 @@ pdxrp_transfer_host_to_egypt = {
     possible = {
         exists = c:MOA
         exists = c:EGY
-        OR = {
-            exists = c:SWI
-            exists = s:STATE_EAST_SWITZERLAND.region_state:MOA
-            exists = s:STATE_WEST_SWITZERLAND.region_state:MOA
-        }
     }
     when_taken = {
         pdxrp_transfer_host_to_egypt_effect = yes

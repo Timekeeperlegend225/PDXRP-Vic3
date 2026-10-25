@@ -4,6 +4,7 @@ movement_pdxrp_pop_minority = {
     ideology = ideology_pdxrp_pop_minority
     character_ideologies = { ideology_anarchist }
     creation_trigger = {
+        NOT = { any_political_movement = { is_political_movement_type = movement_pdxrp_pop_minority } }
         OR = {
             AND = {
                 is_player = yes
@@ -19,29 +20,48 @@ movement_pdxrp_pop_minority = {
         }
     }
     creation_weight = { value = 500 }
-    on_created = { add_movement_enthusiasm_modifier = yes }
+    on_created = {
+        add_movement_enthusiasm_modifier = yes
+        owner = { pdxrp_pop_movement_select_keeper_effect = yes }
+    }
     disband_trigger = {
-        NAND = {
-            is_player = yes
-            has_variable = pdxrp_host_spawned_pop_movement
-        }
         OR = {
-            NOT = { any_scope_pop = { culture = cu:baganda } }
+            # Existing duplicate instances retire after a keeper has been selected.
             AND = {
-                has_law_or_variant = law_type:law_multicultural
-                has_law_or_variant = law_type:law_anarchy
+                has_variable = pdxrp_pop_movement_keeper_selected
+                scope:political_movement ?= {
+                    NOT = { has_variable = pdxrp_pop_movement_keeper }
+                }
+            }
+            AND = {
+                NAND = {
+                    is_player = yes
+                    has_variable = pdxrp_host_spawned_pop_movement
+                }
+                OR = {
+                    NOT = { any_scope_pop = { culture = cu:baganda } }
+                    AND = {
+                        has_law_or_variant = law_type:law_multicultural
+                        has_law_or_variant = law_type:law_anarchy
+                    }
+                }
             }
         }
     }
     character_support_trigger = {
-        OR = { culture = cu:baganda has_ideology = ideology:ideology_anarchist }
+        culture = cu:baganda
     }
     character_support_weight = { value = 300 }
     can_pressure_interest_group = { always = yes }
-    pop_support_trigger = { always = yes }
+    pop_support_trigger = { culture = cu:baganda }
+    pop_support_factors = { movement_support_pdxrp_pop_culture }
     pop_support_weight = {
-        # Equal overwhelming attraction for every culture and radical fraction.
-        value = 1000000
+        # Only Pop culture is eligible; keep the existing attraction strength.
+        value = 0
+        add = {
+            value = 1000000
+            desc = pdxrp_pop_culture_attraction
+        }
     }
     revolution = {
         possible = { political_movement_support >= 0.05 }

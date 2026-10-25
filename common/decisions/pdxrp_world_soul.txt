@@ -1,5 +1,7 @@
 ﻿pdxrp_start_world_soul = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_the_end_started }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         pdxrp_is_campaign_host = yes
         NOT = { has_global_variable = pdxrp_world_soul_temperature }
     }
@@ -13,6 +15,8 @@
 
 pdxrp_open_chrome = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_the_end_started }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         pdxrp_is_campaign_host = yes
         has_global_variable = pdxrp_world_soul_temperature
     }
@@ -30,6 +34,8 @@ pdxrp_open_chrome = {
 
 pdxrp_open_window = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_the_end_started }
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         pdxrp_is_campaign_host = yes
         has_global_variable = pdxrp_world_soul_temperature
     }

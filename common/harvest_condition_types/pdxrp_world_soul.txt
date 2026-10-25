@@ -1,5 +1,6 @@
 ﻿pdxrp_lag_spikes = {
     trigger = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         has_global_variable = pdxrp_world_soul_temperature
         global_var:pdxrp_world_soul_temperature >= 80
     }

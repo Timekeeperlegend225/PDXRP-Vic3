@@ -24,6 +24,7 @@ pdxrp_the_end.2 = {
             limit = {
                 c:WST ?= THIS
                 has_global_variable = pdxrp_the_end_started
+                NOT = { has_global_variable = pdxrp_the_end_stopped }
             }
             # Migrate Wasteland countries created before the decentralized-type correction.
             if = {
@@ -41,15 +42,20 @@ pdxrp_the_end.2 = {
                 name = pdxrp_the_end_weekly_quota
                 multiply = var:pdxrp_the_end_speed_multiplier
             }
+            # Carry fractional quotas forward so halving below normal speed works.
+            change_variable = {
+                name = pdxrp_the_end_spread_remainder
+                add = var:pdxrp_the_end_weekly_quota
+            }
             while = {
                 limit = {
-                    var:pdxrp_the_end_weekly_quota > 0
+                    var:pdxrp_the_end_spread_remainder >= 1
                     any_state_region = {
                         any_scope_state = { NOT = { owner = c:WST } }
                     }
                 }
                 # Always decrement; stop early when the world has no eligible states left.
-                change_variable = { name = pdxrp_the_end_weekly_quota subtract = 1 }
+                change_variable = { name = pdxrp_the_end_spread_remainder subtract = 1 }
                 pdxrp_the_end_annex_one_effect = yes
             }
             remove_variable = pdxrp_the_end_weekly_quota

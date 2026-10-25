@@ -15,3 +15,5 @@
  pdxrp_the_end_cannot_attack_tt: "The Wasteland cannot participate in diplomatic plays or be targeted by sovereignty violations or naval hostility threats."
  state_trait_pdxrp_wasteland: "Wasteland"
  state_trait_pdxrp_wasteland_desc: "Prevents colonial growth in this state region."
+ pdxrp_the_end_decrease_speed: "The End: Decrease Speed"
+ pdxrp_the_end_decrease_speed_desc: "Halve the rate at which the Wasteland consumes states. Repeatable. Fractions carry over to later weeks."

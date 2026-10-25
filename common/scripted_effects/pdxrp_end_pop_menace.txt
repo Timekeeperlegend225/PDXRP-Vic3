@@ -1,0 +1,28 @@
+# Global cleanup, also safe after the Expedition has been fully annexed.
+pdxrp_end_pop_menace_effect = {
+    set_global_variable = pdxrp_pop_menace_ended
+    every_country = {
+        remove_modifier = pdxrp_zip_bomb_collective
+        remove_modifier = pdxrp_host_offense
+        remove_modifier = pdxrp_host_defense
+        remove_modifier = pdxrp_host_supply
+        remove_variable = pdxrp_host_offense_steps
+        remove_variable = pdxrp_host_defense_steps
+        remove_variable = pdxrp_host_supply_steps
+        every_scope_state = { remove_building = building_zip_data_center }
+    }
+    if = {
+        limit = { exists = c:ZIP }
+        c:ZIP = {
+            every_scope_state = {
+                remove_building = building_barracks
+                kill_population_percent_in_state = {
+                    percent = 1
+                    culture = cu:baganda
+                }
+            }
+            remove_modifier = pdxrp_expedition_birth_penalty
+        }
+        annex = c:ZIP
+    }
+}

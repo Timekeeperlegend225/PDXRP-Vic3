@@ -9,6 +9,17 @@ pdxrp_the_end_colonization_barrier_effect = {
 
 # Safe for existing saves: the original Wasteland did not store a speed variable.
 pdxrp_the_end_initialize_speed_effect = {
+    # Also migrate Wasteland countries in existing saves to Pop culture.
+    add_primary_culture = cu:baganda
+    every_primary_culture = {
+        limit = { NOT = { this = cu:baganda } }
+        save_scope_as = pdxrp_wasteland_old_culture
+        PREV = { remove_primary_culture = scope:pdxrp_wasteland_old_culture }
+    }
+    if = {
+        limit = { NOT = { has_variable = pdxrp_the_end_spread_remainder } }
+        set_variable = { name = pdxrp_the_end_spread_remainder value = 0 }
+    }
     if = {
         limit = { NOT = { has_variable = pdxrp_the_end_speed_multiplier } }
         set_variable = { name = pdxrp_the_end_speed_multiplier value = 1 }
@@ -20,7 +31,7 @@ pdxrp_the_end_shadow_effect = {
     create_character = {
         first_name = pdxrp_the_end_shadow_name
         last_name = pdxrp_the_end_shadow_surname
-        culture = cu:british
+        culture = cu:baganda
         religion = rel:atheist
         age = 30
         ruler = yes

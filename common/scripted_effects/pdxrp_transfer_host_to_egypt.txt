@@ -106,7 +106,7 @@ pdxrp_transfer_host_to_egypt_effect = {
     }
     s:STATE_EAST_SWITZERLAND.region_state:MOA ?= { set_state_owner = c:SWI }
     s:STATE_WEST_SWITZERLAND.region_state:MOA ?= { set_state_owner = c:SWI }
-    c:SWI = {
+    c:SWI ?= {
         make_independent = yes
         remove_modifier = GM_game_master
         remove_modifier = pdxrp_zip_bomb_collective

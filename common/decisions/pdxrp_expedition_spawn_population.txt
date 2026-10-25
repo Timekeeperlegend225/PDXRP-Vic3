@@ -1,5 +1,6 @@
 pdxrp_expedition_spawn_population = {
     is_shown = {
+        NOT = { has_global_variable = pdxrp_pop_menace_ended }
         c:ZIP ?= this
     }
     possible = {

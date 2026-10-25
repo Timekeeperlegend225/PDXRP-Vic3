@@ -1,0 +1,3 @@
+﻿l_english:
+ pdxrp_transfer_host_to_egypt: "Transfer Game Master to Egypt"
+ pdxrp_transfer_host_to_egypt_desc: "Move Game Master status and Monaco's host boosts to Egypt. Return Monaco's Swiss territory to Switzerland if available. Requires Monaco and Egypt to exist."
