@@ -1,18 +1,3 @@
-pdxrp_claim_game_master = {
-    is_shown = {
-        is_player = yes
-        NOT = { has_modifier = GM_game_master }
-    }
-    possible = {
-        NOT = { has_modifier = GM_game_master }
-    }
-    when_taken = {
-        set_global_variable = player_gm
-        add_modifier = { name = GM_game_master }
-    }
-    ai_chance = { value = 0 }
-}
-
 pdxrp_monaco_remove_other_game_masters = {
     is_shown = {
         is_player = yes
